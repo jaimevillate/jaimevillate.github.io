@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à computação quântica - página 7</title>
+<link rel="stylesheet" href="../../css/villate-org.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+</head>
+<body>
+<aside>
+<a href="./index.html">Índice</a>
+<a href="./slide01.html">1</a>
+<a href="./slide02.html">2</a>
+<a href="./slide03.html">3</a>
+<a href="./slide04.html">4</a>
+<a href="./slide05.html">5</a>
+<a href="./slide06.html">6</a>
+<span class="current">7</span>
+<a href="./slide08.html">8</a>
+<a href="./slide09.html">9</a>
+<a href="./slide10.html">10</a>
+<a href="./slide11.html">11</a>
+<a href="./slide12.html">12</a>
+<a href="./slide13.html">13</a>
+<a href="./slide14.html">14</a>
+<a href="./slide15.html">15</a>
+<a href="./slide16.html">16</a>
+</aside>
+<header>
+<h1 id="title" class="center">Introdução à computação quântica</h1>
+<p class="center">
+Jaime Villate. Faculdade de Engenharia da Universidade do Porto
+</p>
+</header>
+<section>
+<h2 class="center">7. Qbits</h2>
+<p>
+Um <b>qbit</b> (<i>quantum bit</i>) é um sistema físico com apenas
+dois estados próprios, $|0\rangle$ e $|1\rangle$. O estado geral do
+qbit é uma sobreposição dos dois estados próprios:
+</p>
+\begin{displaymath}
+|\otherPsi\rangle = \otherPsi_1|0\rangle + \otherPsi_2|1\rangle
+\end{displaymath}
+<p>
+em que $\otherPsi_1$ e $\otherPsi_2$ são dois números complexos
+quaisquer, sujeitos unicamente à condição de normalização:
+</p>
+\begin{displaymath}
+|\otherPsi_1|^2 + |\otherPsi_2|^2 = 1
+\end{displaymath}
+<p>
+Os números reais $|\otherPsi_1|^2$ e $|\otherPsi_2|^2$ são as
+probabilidades do estado ser um dos estados próprios $|0\rangle$ ou
+$|1\rangle$.
+</p>
+<div>
+<h3>Representação matricial</h3>
+<p>
+As operações nos estados dos qbits podem ser feitas na representação
+matricial em que cada estado próprio é representado por uma matriz de
+uma coluna e duas linas:
+</p>
+\begin{displaymath}
+|0\rangle = \begin{bmatrix}1\\ 0\end{bmatrix} \qquad\qquad
+|1\rangle = \begin{bmatrix}0\\ 1\end{bmatrix}
+\end{displaymath}
+<p>
+Como tal, o estado de um qbit é uma matriz coluna com dois números complexos:
+</p>
+\begin{displaymath}
+|\otherPsi\rangle = \otherPsi_1\begin{bmatrix}1\\ 0\end{bmatrix} +
+\otherPsi_2\begin{bmatrix}0\\ 1\end{bmatrix} =
+\begin{bmatrix}\otherPsi_1\\ \otherPsi_2\end{bmatrix}
+\end{displaymath}
+<p>
+O &quot;bra&quot; correspondente ao &quot;ket&quot; $|\otherPsi\rangle$ é
+uma matriz com uma linha e dois colunas:
+</p>
+\begin{displaymath}
+\langle\otherPsi| = \begin{bmatrix}\otherPsi_1^* &\otherPsi_2^* \end{bmatrix}
+\end{displaymath}
+</div>
+<div>
+<h3>Produto escalar</h3>
+<p>
+O produto escalar entre dois estados
+$|\otherPsi\rangle=\otherPsi_1|0\rangle+\otherPsi_2|1\rangle$ e
+$|\otherPhi\rangle=\otherPhi_1|0\rangle+\otherPhi_2|1\rangle$,
+representado por $\langle\otherPsi|\otherPhi\rangle$, é um número
+complexo. Na representação matricial, obtém-se usando o produto entre
+matrizes:
+</p>
+\begin{displaymath}
+\langle\otherPsi|\otherPhi\rangle =
+\begin{bmatrix}\otherPsi_1^* &\otherPsi_2^* \end{bmatrix}
+\begin{bmatrix}\otherPhi_1\\ \otherPhi_2\end{bmatrix} =
+\otherPsi_1^*\otherPhi_1 + \otherPsi_2^*\otherPhi_2 =
+\langle\otherPhi|\otherPsi\rangle^*
+\end{displaymath}
+<p>
+A condição de normalização implica que o produto escalar de qualquer
+estado com si próprio deverá ser igual a 1:
+</p>
+\begin{displaymath}
+\langle\otherPsi|\otherPsi\rangle = |\otherPsi_1|^2 + |\otherPsi_2|^2 = 1
+\qquad
+\langle\otherPhi|\otherPhi\rangle = |\otherPhi_1|^2 + |\otherPhi_2|^2 = 1
+\end{displaymath}
+</div>
+<div>
+<h3>Operadores</h3>
+<p>
+No caso de um cbit, mostraram-se na secção anterior os 4 possíveis
+operadores, $f_0$, $f_1$, $f_2$ e $f_3$. No caso dos qbits, há un
+número infinito de possíveis operadores. Na representação matricial,
+os operadores $\hat{U}$ são as matrizes quadradas com duas colunas
+e duas linhas:
+</p>
+\begin{displaymath}
+\hat{U} = \begin{bmatrix}u_{11} & u_{12} \\ u_{21} & u_{22}\end{bmatrix}
+\end{displaymath}
+<p>
+onde os quatro números complexos $u_{ij}$ devem verificar as seguintes
+condições, que fazem com que a matriz de $\hat{U}$ seja unitária:
+</p>
+\begin{displaymath}
+\hat{U}^\dagger\hat{U} =
+\begin{bmatrix}u_{11}^* & u_{21}^* \\ u_{12}^* & u_{22}^*\end{bmatrix}
+\begin{bmatrix}u_{11} & u_{12} \\ u_{21} & u_{22}\end{bmatrix} =
+\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} \quad\Longleftrightarrow\quad
+\begin{cases}
+|u_{11}|^2+|u_{21}|^2 = 1\\
+|u_{12}|^2+|u_{22}|^2 = 1\\
+u_{11}^*u_{12} + u_{21}^*u_{22} = 0\\
+u_{11}u_{12}^* + u_{21}u_{22}^* = 0
+\end{cases}
+\end{displaymath}
+<p>
+Ou seja, cada coluna na matriz de $\hat{U}$ deve representar um
+possível estado e o produto escalar entre os estados correspondentes
+às duas colunas deverá ser nulo.
+</p>
+<p>
+Quando o operador atua no estado $|\otherPsi\rangle$ do qbit, o resultado é
+outro estado $|\otherPhi\rangle$:
+</p>
+\begin{displaymath}
+|\otherPhi\rangle= \hat{U}|\otherPsi\rangle =
+\begin{bmatrix}u_{11} & u_{12} \\ u_{21} & u_{22}\end{bmatrix}
+\begin{bmatrix}\otherPsi_1 \\\otherPsi_2 \end{bmatrix}
+= \begin{bmatrix}u_{11}\otherPsi_1+u_{12}\otherPsi_2 \\
+u_{21}\otherPsi_1+u_{22}\otherPsi_2\end{bmatrix}
+\end{displaymath}
+<p>
+A ação do operador $\hat{U}$ também costuma representar-se de forma
+gráfica com o seguinte diagrama:
+</p>
+<img class="fig center" src="one_qbit_operator.png" alt="one qbit operator"
+     style="width:11.01em">
+<p>
+A linha do lado esquerdo representa o estado inicial (entrada) e a linha do
+lado direito é o estado final (saída), após a ação do operador $\hat{U}$.
+</p>
+<p>
+Nas secções seguintes mostram-se o diagrama e a matriz de alguns operadores
+importantes.
+</p>
+</div>
+<div>
+<h3>X de Pauli</h3>
+<p class="clearfix">
+<img class="fig left" src="X_Pauli.png" alt="X de Pauli"
+     style="width:11.01em;margin: 0.4em 5em 0.4em 5em;">
+$\hat{X} = \begin{bmatrix}0 & 1 \\ 1 & 0 \end{bmatrix}$
+</p>
+</div>
+<div>
+<h3>Y de Pauli</h3>
+<p class="clearfix">
+<img class="fig left" src="Y_Pauli.png" alt="Y de Pauli"
+     style="width:11.01em;margin: 0.4em 5em 0.4em 5em;">
+$\hat{Y} = \begin{bmatrix}0 & -\mathrm{i} \\ \mathrm{i} & 0 \end{bmatrix}$
+</p>
+</div>
+<div>
+<h3>Z de Pauli</h3>
+<p class="clearfix">
+<img class="fig left" src="Z_Pauli.png" alt="Z de Pauli"
+     style="width:11.01em;margin: 0.4em 5em 0.4em 5em;">
+$\hat{Z} = \begin{bmatrix}1 & 0 \\ 0 & -1 \end{bmatrix}$
+</p>
+</div>
+<div>
+<h3>Hadamard</h3>
+<p class="clearfix">
+<img class="fig left" src="Hadamard.png" alt="Hadamard"
+     style="width:11.01em;margin: 0.4em 5em 0.4em 5em;">
+$\hat{H} = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 & 1 \\ 1 & -1 \end{bmatrix}$
+</p>
+<p>
+No caso das 3 matrizes de Pauli, se a entrada for um dos estados
+próprios $|0\rangle$ ou $|1\rangle$, a saída será também um estado
+próprio, multiplicado por uma constante com módulo igual a 1. No caso
+do operador de Hadamard, se a entrada for um dos estados próprios
+$|0\rangle$ ou $|1\rangle$ a saída será uma sobreposição dos dois
+estados próprios, ambos com a mesma probabilidade de 1/2:
+</p>
+\begin{displaymath}
+\hat{H}|0\rangle = \dfrac{1}{\sqrt{2}}\left(|0\rangle+|1\rangle\right)
+\qquad
+\hat{H}|1\rangle = \dfrac{1}{\sqrt{2}}\left(|0\rangle-|1\rangle\right)
+\end{displaymath}
+</div>
+</section>
+<nav>
+<a href="./index.html">Índice</a>
+<a href="./slide06.html">Anterior</a>
+<a href="./slide08.html">Próxima</a>
+</nav>
+<footer>
+<div class="site-map">
+<div class="category">
+<ul>
+<li><a href="../../research.html">Research</a></li>
+<li><a href="../../teaching.html">Teaching</a></li>
+</ul>
+</div>
+<div class="category">
+<ul>
+<li><a href="../../software.html">Software</a></li>
+<li><a href="../../publications/index.html">Publications</a></li>
+</ul>
+</div>
+<div class="category">
+Talks
+</div>
+<div class="category">
+<a href="../../hobbies.html">Other interests</a>
+</div>
+</div>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a><br>
+&copy; 2020, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2020/11/03 11:40:31 UTC</span>
+</footer>
+</body>
+</html>

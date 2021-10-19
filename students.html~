@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Students &mdash; Jaime E. Villate</title>
+<link rel="stylesheet" href="css/villate-org.css">
+</head>
+<body id="top">
+<header>
+<h1>Students</h1>
+<p>
+Jaime E. Villate. University of Porto, Portugal
+</p>
+</header>
+<nav>
+<a href="index.html">Home</a><span>&rarr;</span>
+<a href="research.html">Research</a><span>&rarr;</span>
+<span>Students</span>
+</nav>
+<section>
+<p>Students and postdocs with whom I have worked closely during my
+career.</p>
+<h3>High-School students</h3>
+<ul class="spacious">
+<li>
+Olavo Bacelar, from Escola Secundária Filipa de Vilhena, worked in
+ultracapacitors. 2010&ndash;2011.
+</li>
+<li>
+Nuno Cunha, Sérgio Reis and Gonçalo Tiago, from <i>Colégio Luso
+Francês</i>, worked in a project on hydrogen fuel
+cells. 2009&ndash;2010.
+</li>
+<li>
+Daniel Costa, from Escola Profissional Raul Dória, worked in Website
+design.
+</li>
+</ul>
+<h3>Undergraduate students</h3>
+<ul class="spacious">
+<li>
+Daniel Alexandro Hernández. Student from the Monterrey Technical
+College, Mexico, majoring in Physics Engineering. Spent one semester
+at FEUP working with me in renewal energy sources. 2015.
+</li>
+<li>
+Filipe Daniel R. L. Seabra Figueiredo. Master in Electrical
+Engineering, 2013. <a target="_blank"
+href="theses/Figueiredo-Simulador_de_Circuitos_Quanticos-2013.pdf"><i>Simulador
+de Circuitos Quânticos</i></a>.
+</li>
+<li>
+Miguel Luís da Silva Rentes. Master in Informatics and Computing
+Engineering, 2009. <a target="_blank"
+href="theses/Rentes-Novas_Metodologias_de_Controlo_de_Versoes_de_Software-2009.pdf"><i>Novas
+Metodologias de Controlo de Versões de Software</i></a>.
+</li>
+<li id="fpereira-2008">
+Fernando Joaquim Leite Pereira. Master in Informatics and Computing
+Engineering, 2008. <a target="_blank"
+href="theses/Pereira-Setting_up_a_HTC-BEOWULF_Cluster-2008.pdf"><i>Setting
+up a HTC/Beowulf cluster for distributed radiation transport
+simulations</i></a>. Work conducted at CERN, Switzerland.
+</li>
+<li id="teixeira-2008">
+Daniel Dinis Teixeira. Master in Informatics and Computing
+Engineering, 2008. <a target="_blank"
+href="theses/Teixeira-Upgrading_and_Enhancing_the_LHC_Logging_System-2008.pdf"><i>Upgrading
+and Enhancing the LHC Logging System</i></a>. Work conducted at CERN,
+Switzerland.
+</li>
+<li id="batista-2008">
+Tiago Rodrigues Vieira Batista. Master in Informatics and Computing
+Engineering, 2008. <a target="_blank"
+href="theses/Batista-Generic_Server_Implementation-2008.pdf"><i>Generic
+Server implementation for Computing Resources
+Administration</i></a>. Work conducted at CERN, Switzerland.
+</li>
+<li id="ferreira-2008">
+José Pedro Macedo Alves Ferreira. Master in Informatics and Computing
+Engineering, 2008. <a target="_blank"
+href="theses/Ferreira-Creating_Scientific_Social_Webs-2008.pdf"><i>Creating
+Scientific Social Webs</i></a>. Work conducted at CERN, Switzerland.
+</li>
+<li id="pinto-2008">
+Pedro Nuno da Cunha Vieira Pinto. Master in Informatics and Computing
+Engineering, 2008. <a target="_blank"
+href="theses/Pinto-Software_Improvement_Process_at_CERN-2008.pdf"><i>Software
+Improvement Process at CERN CO-AP</i></a>. Work conducted at CERN,
+Switzerland.
+</li>
+<li id="mpereira-2008">
+Mário Miguel Terra Pinheiro Fernandes Pereira. Master in Informatics
+and Computing Engineering, 2008. <a target="_blank"
+href="theses/Pereira-Applying_PLCS_to_EDMS-2008.pdf"><i>Implementation
+of PLCS in EDMS/ MTF</i></a>. Work conducted at CERN, Switzerland.
+</li>
+<li id="ferreira-2007">
+José Pedro M. Alves Ferreira. B. S. in Informatics and Computing
+Engineering, 2007. <i>Improving the Indico Framework</i>. Senior
+project at CERN, Switzerland.
+</li>
+<li id="pinto-2007">
+Pedro Nuno C. Vieira Pinto. B. S. in Informatics and Computing
+Engineering, 2007. <i>Fixed Displays Framework
+Implementation</i>. Senior project at CERN, Switzerland.
+</li>
+<li id="pereira-2007">
+Mário Miguel T. P. Fernandes Pereira. B. S. in Informatics and
+Computing Engineering, 2007. <i>Applications Development Within
+EDMS/MTF</i>. Senior project at CERN, Switzerland.
+</li>
+<li>
+Paulo Miguel de Almeida Marques. B. S. in Informatics and Computing
+Engineering, 2007. <i>Desenvolvimento de Sistema de Informação
+Open-Source para empresa do Ramo dos Transportes
+Ferroviários</i>. Practical training at <i>Empresa de Manutenção de
+Equipamento Ferroviário, S.A.</i> (EMEF), Porto.
+</li>
+<li>
+Mário Filipe Oliveira Lopez. Held a scholarship to work with my group
+of projet <i>Edukalibre</i>, 2005.
+</li>
+<li>
+Cláudio Emanuel Valério Gomes. B. S. in Informatics and Computing
+Engineering, 2005. <a target="_blank"
+href="theses/Gomes-Blog_com-2005.pdf"><i>Reengenharia da Plataforma de
+Suporte ao Blog.com</i></a>. Practical training at Portugal Mail.
+</li>
+<li id="goncalves-2003">
+Jorge Miguel Pinto Barbosa Gonçalves. B. S. in Informatics and
+Computing Engineering, 2003. <i>Moving OKS Data into an RDBMS</i>,
+project ATLAS-DAQ (CERN). Senior project at FEUP/ FCUL.
+</li>
+<li id="andrade-2003">
+Pedro Manuel R. Sousa Andrade. B. S. in Informatics and Computing
+Engineering, 2003.  <i>Development of GRID Tools for the ATLAS
+Experiment</i>, project ATLAS-DAQ (CERN). Senior project at FEUP/FCUL.
+</li>
+<li id="branco-2003">
+Miguel Sérgio de Oliveira Branco. B. S. in Informatics and Computing
+Engineering, 2003. <i>Development of GRID Tools for the ATLAS
+Experiment</i>, project ATLAS-DAQ.  Senior project at CERN, Geneva,
+Switzerland.
+</li>
+<li id="rocha-2003">
+Ricardo Manuel Brito da Rocha. B. S. in Informatics and Computing
+Engineering, 2003. <a target="_blank"
+href="theses/Rocha-Evaluation_of_Emerging_Grid_Technologies-2003.pdf"><i>Evaluation
+of Emerging Grid Technologies OGSI and the Globus Toolkit 3</i></a>,
+project ATLAS-DAQ. Senior project at CERN, Switzerland.
+</li>
+<li>
+André Assis Guimarães. B. S. in Informatics and Computing Engineering,2002.
+<a target="_blank"
+href="theses/Guimaraes-Concentrador_de_URTs-2002.pdf"><i>Concentrador
+de URTs, Protocolo Comunicações DNP, Protótipo em
+Linux</i></a>. Practical training at EFACEC, Porto.
+</li>
+<li>
+Eduardo Pedro Filipe Ramalho. B. S. in Informatics and
+Computing Engineering, 2002.
+<a target="_blank"
+href="theses/Ramalho-Graficos_de_tendencia-2002.pdf"><i>Gráficos de
+Tendência na EFACEC Sistemas de Electrónica</i></a>. Practical
+training at EFACEC, Porto.
+</li>
+<li>
+Rui Filipe Andrade Pereira. B. S. in Informatics and
+Computing Engineering, 2001.
+<a target="_blank"
+href="theses/Pereira-Business_Binder-2001.pdf"><i>Business Binder na
+Infopulse Portugal</i></a>. Practical training at Infopulse, Porto.
+</li>
+<li>
+Ricardo Pereira Moura. B. S. in Informatics and Computing Engineering, 2001.
+<a target="_blank"
+href="theses/Moura-Gestao_de_Dados_Remotos-2001.pdf"><i>Gestão de
+Dados Remotos Via Web na IBS Portugal</i></a>.  Practical training at
+IBS, Porto.
+</li>
+<li>
+Hugo Ricardo V. Santos Pereira. B. S. in Informatics and Computing
+Engineering, 2001.  <i>Infra-estrutura de Comunicações para o Gerador
+de Portais na Logicalc, Lda.</i>. Practical training at Logicalc,
+Porto.
+</li>
+<li>
+Gonçalo Nuno M. C. Gil Mata. B. S. in Informatics and
+Computing Engineering, 1999.
+<a target="_blank"
+href="theses/Mata-Gestao_e_controle_de_cargas_na_Internet-1999.pdf"><i>Gestão
+e controle de Cargas na Internet na IBS Portugal</i></a>.  Practical
+training at IBS Portugal, Porto.
+</li>
+<li>
+Pedro Miguel C. C. Machete Pereira. B. S. in Informatics and Computing
+Engineering, 1999. <i>Internet Connection - Gestão de Informação de
+Cargas na Cadeia de Transportes</i>.  Practical training at IBS
+Portugal, Porto.
+</li>
+<li>
+Nuno Filipe Gonçalves de Almeida. B. S. in Informatics and Computing
+Engineering, 1999. <i>Configurador/ Preçário para Concessionários e
+Importadores Automóveis via Internet</i>. Practical training at IBS
+Portugal, Porto.
+</li>
+<li id="aparicio-1999">
+Joaquim Jorge Coelho Aparício. B. S. in Chemical Engineering,
+1999. <i>Propriedades físicas de alimentos; base de dados</i>.
+</li>
+<li>
+Cláudia Figueiredo and Nuno Borges Vidal . B. S. in Chemical
+Engineering, 1998. <i>Determinação do volume de discos de maçã usando
+a digitalização de imagens</i>.
+</li>
+<li>
+Júlia Alves Coelho and Paula Cristina Baldaia Gomes. B. S. in Chemical
+Engineering, 1997.<i>Estudo das curvas de secagem de fiambre</i>.
+</li>
+<li>
+Adelaide Antão and Maria Ema Cardoso . B. S. in Chemical Engineering,
+1995. <i>Análise multivariável de vinho do Porto</i>.
+</li>
+<li>
+Domingos Freitas and Paulo Magalhães . B. S. in Chemical Engineering,
+1994. <i>Análise multivariável na caracterização de vinhos do
+Porto</i>.
+</li>
+</ul>
+<h3>Graduate students</h3>
+<ul class="spacious">
+<li>
+Bertil Maria Pires Marques. Ph. D. in Computer Science,
+2015. <a target="_blank"
+href="theses/Marques-E-Learning_no_Ensino_Superior-2015.pdf"><i>Parâmetros
+de Adoção de Tecnologias de E-Learning no Ensino Superior: Um Estudo
+de Caso</i></a>.
+</li>
+<li>
+João António G. S. Marques de Carvalho. <i>Molecular dynamic
+simulation of nanostructures</i>. 2012.
+</li>
+<li>
+Danilo Óscar Henriques Fernandes. M. S. in Multimedia
+Technology, 2009.
+<a target="_blank"
+href="theses/Fernandes-Divulgacao_cientifica_atraves_da_web-2009.pdf"><i>Divulgação
+Científica Utilizando Vídeo e Áudio através da Web</i></a>.
+</li>
+<li>
+Orlando Abel Neves Gonçalves. M. S. in Multimedia Technology,
+2009. <a target="_blank"
+href="theses/Goncalves-A_utilizacao_da_plataforma_Moodle-2009.pdf"><i>A
+utilização da plataforma de e-learning Moodle no ensino/ aprendizagem
+da Matemática do 10º ano</i></a>.
+</li>
+<li>
+Diogo Filipe de Oliveira Alves. <i>Construção de um Bloco de Gestão e
+Requisição de Recursos Didácticos para a Plataforma Moodle</i>. 2007.
+</li>
+<li id="dutra-2006">
+Guilherme de Oliveira Dutra. M. S. in
+Information Management, 2006.
+<a target="_blank"
+href="theses/Dutra-Portal_Colaborativo_para_Gestao_de_Conteudos-2006.pdf"><i>Portal
+Colaborativo para Gestão de Conteúdos e Colaboração</i></a>.
+</li>
+<li>
+Manuel José N. M. Figueira de Sousa. <i>Duas Filosofias de
+Implementação da Plataforma Moodle</i>.  2006.
+</li>
+<li>
+Paulo Aloísio E. R. Silva Augusto. Ph. D. in Chemical Engineering,
+2001. <a target="_blank"
+href="theses/Augusto-Um_novo_Separador_e_Classificador_Magnetico-2001.pdf"><i>Um
+novo Separador e Classificador Magnético</i></a>.
+</li>
+</ul>
+<h3>Postdocs</h3>
+<ul class="spacious">
+<li>
+Frederico André B. Reis Francisco. Small Satellites. From January to
+May 2015.
+</li>
+<li>
+Nuno Costa Martins de Faria. <i>Construção de ferramentas de
+e-learning. baseadas em Software Livre</i>. 2004&mdash;2005.
+</li>
+</ul>
+</section>
+<footer>
+<div class="site-map">
+<div class="category">
+<ul>
+<li>Research</li>
+<li><a href="teaching.html">Teaching</a></li>
+</ul>
+</div>
+<div class="category">
+<ul>
+<li><a href="software.html">Software</a></li>
+<li><a href="publications/index.html">Publications</a></li>
+</ul>
+</div>
+<div class="category">
+<a href="talks/index.html">Talks</a>
+</div>
+<div class="category">
+<a href="hobbies.html">Other interests</a>
+</div>
+</div>
+&copy; 2018, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2020/10/04 11:24:02 UTC</span>
+</footer>
+</body>
+</html>

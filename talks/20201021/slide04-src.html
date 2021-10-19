@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à computação quântica - página 4</title>
+<link rel="stylesheet" href="../../css/villate-org.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+</head>
+<body>
+<aside>
+<a href="./index.html">Índice</a>
+<a href="./slide01.html">1</a>
+<a href="./slide02.html">2</a>
+<a href="./slide03.html">3</a>
+<span class="current">4</span>
+<a href="./slide05.html">5</a>
+<a href="./slide06.html">6</a>
+<a href="./slide07.html">7</a>
+<a href="./slide08.html">8</a>
+<a href="./slide09.html">9</a>
+<a href="./slide10.html">10</a>
+<a href="./slide11.html">11</a>
+<a href="./slide12.html">12</a>
+<a href="./slide13.html">13</a>
+<a href="./slide14.html">14</a>
+<a href="./slide15.html">15</a>
+<a href="./slide16.html">16</a>
+</aside>
+<header>
+<h1 id="title" class="center">Introdução à computação quântica</h1>
+<p class="center">
+Jaime Villate. Faculdade de Engenharia da Universidade do Porto
+</p>
+</header>
+<section>
+<h2 class="center">4. Mecânica quântica</h2>
+<div>
+<h3>Estado de uma partícula</h3>
+<p>
+Função de onda $\otherPsi(\vec{r})$ com valores diferentes em todas as posições
+$\vec{r}$ no espaço.
+</p>
+</div>
+<div>
+<h3>Posição da partícula</h3>
+<p>
+Pode estar em qualquer posição onde $\otherPsi$ seja diferente de zero. O
+estado não permite determinar onde está exatamente. Apenas a probabilidade de
+estar num ponto do espaço.
+</p>
+\begin{displaymath}
+\left|\otherPsi(\vec{r})\right|^2\,\mathrm{d}\vec{r} = \mbox{probabilidade de estar na região } \mathrm{d}\vec{r} \mbox{ na posição } \vec{r}
+\end{displaymath}
+<p>
+Como tal, a função de onda deverá estar &quot;normalizada&quot;
+(norma igual a 1):
+</p>
+\begin{displaymath}
+\int_\text{espaço}\left|\otherPsi(\vec{r})\right|^2\,\mathrm{d}\vec{r}
+= 1
+\end{displaymath}
+</div>
+<div>
+<h3>Equação de Schrödinger</h3>
+<p>
+No caso do átomo de hidrogénio:
+</p>
+\begin{displaymath}
+-\dfrac{\hbar^2}{2\,m}\nabla^2\,\otherPsi + \dfrac{k\,e^2}{|\vec{r}|}\,\otherPsi
+= E\,\otherPsi
+\end{displaymath}
+</div>
+<p>
+$\hbar$ = constante de Planck. $E$ = energia mecânica do eletrão.
+</p>
+<p>
+Outra forma de escrever a equação:
+</p>
+\begin{displaymath}
+\hat{H}\,\otherPsi = E\,\otherPsi \qquad\qquad
+\hat{H} = -\dfrac{\hbar^2}{2\,m}\nabla^2 + \dfrac{k\,e^2}{|\vec{r}|}
+= \mbox{operador hamiltoniano}
+\end{displaymath}
+<p>
+$\hat{H}$ é a energia cinética mais a energia potencial. Comparando
+com a energia cinética na mecânica clássica, conclui-se que na
+mecânica quântica a quantidade de movimento é o operador:
+</p>
+\begin{displaymath}
+\hat{p} = \mathrm{i}\,\hbar\,\vec{\nabla}
+\end{displaymath}
+<p>
+Como tal, a função de onda pode ter valores complexos.
+</p>
+<p>
+Qualquer outro sistema físico com função hamiltoniana clássica $H$
+conduz ao respetivo operador $\hat{H}$ e a uma equação de Schrödinger
+$\hat{H}\,\otherPsi = E\,\otherPsi$.
+</p>
+<p>
+A mecânica quântica tem sido aplicada com grande sucesso em muitos
+sistemas físicos (física atómica, eletromagnetismo, termodinâmica,
+teoria dos gases, &hellip;).
+</section>
+<nav>
+<a href="./index.html">Índice</a>
+<a href="./slide03.html">Anterior</a>
+<a href="./slide05.html">Próxima</a>
+</nav>
+<footer>
+<div class="site-map">
+<div class="category">
+<ul>
+<li><a href="../../research.html">Research</a></li>
+<li><a href="../../teaching.html">Teaching</a></li>
+</ul>
+</div>
+<div class="category">
+<ul>
+<li><a href="../../software.html">Software</a></li>
+<li><a href="../../publications/index.html">Publications</a></li>
+</ul>
+</div>
+<div class="category">
+Talks
+</div>
+<div class="category">
+<a href="../../hobbies.html">Other interests</a>
+</div>
+</div>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a><br>
+&copy; 2020, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2020/10/29 18:25:24 UTC</span>
+</footer>
+</body>
+</html>

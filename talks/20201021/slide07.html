@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à computação quântica - página 7</title>
+<link rel="stylesheet" href="../../css/villate-org.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+</head>
+<body>
+<aside>
+<a href="./index.html">Índice</a>
+<a href="./slide01.html">1</a>
+<a href="./slide02.html">2</a>
+<a href="./slide03.html">3</a>
+<a href="./slide04.html">4</a>
+<a href="./slide05.html">5</a>
+<a href="./slide06.html">6</a>
+<span class="current">7</span>
+<a href="./slide08.html">8</a>
+<a href="./slide09.html">9</a>
+<a href="./slide10.html">10</a>
+<a href="./slide11.html">11</a>
+<a href="./slide12.html">12</a>
+<a href="./slide13.html">13</a>
+<a href="./slide14.html">14</a>
+<a href="./slide15.html">15</a>
+<a href="./slide16.html">16</a>
+</aside>
+<header>
+<h1 id="title" class="center">Introdução à computação quântica</h1>
+<p class="center">
+Jaime Villate. Faculdade de Engenharia da Universidade do Porto
+</p>
+</header>
+<section>
+<h2 class="center">7. Qbits</h2>
+<p>
+Um <b>qbit</b> (<i>quantum bit</i>) é um sistema físico com apenas
+dois estados próprios, <svg height='1.055785em' version='1.1' viewBox='-0.6 -8.36898 13.2614 10.55785' width='1.32614em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq1'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='3.06052' y='0'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.89464' y='0'>〉</text>
+</g>
+</svg>
+ e <svg height='1.055785em' version='1.1' viewBox='-0.6 -8.36898 13.2614 10.55785' width='1.32614em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq2'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='3.06052' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.89464' y='0'>〉</text>
+</g>
+</svg>
+. O estado geral do
+qbit é uma sobreposição dos dois estados próprios:
+</p>
+<div class="center">
+<svg height='1.076225em' version='1.1' viewBox='186.14 71.8303 92.8587 10.76225' width='9.28587em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq3'>
+<text font-family='fourier-ms' font-size='10.9577' x='186.74' y='80.1993'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='189.8' y='80.1993'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='199.03' y='80.1993'>〉<tspan x='205.355'>=</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='215.315' y='80.1993'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='223.947' y='81.9925'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='228.821' y='80.1993'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='231.881' y='80.1993'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='237.715' y='80.1993'>〉<tspan x='243.456'>+</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='252.832' y='80.1993'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='261.463' y='81.9925'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='266.337' y='80.1993'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='269.398' y='80.1993'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='275.232' y='80.1993'>〉</text>
+</g>
+</svg>
+</div>
+<p>
+em que <svg height='1.068554em' version='1.1' viewBox='-0.6 -8.29228 13.423 10.68554' width='1.3423em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq4'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='8.63163' y='1.79326'>1</text>
+</g>
+</svg>
+ e <svg height='1.068554em' version='1.1' viewBox='-0.6 -8.29228 13.8175 10.68554' width='1.38175em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq5'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='8.63163' y='1.79326'>2</text>
+</g>
+</svg>
+ são dois números complexos
+quaisquer, sujeitos unicamente à condição de normalização:
+</p>
+<div class="center">
+<svg height='1.35191em' version='1.1' viewBox='193.688 69.0734 77.8309 13.5191' width='7.78309em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq6'>
+<text font-family='fourier-ms' font-size='10.9577' x='194.288' y='80.1993'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='197.348' y='80.1993'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='205.98' y='81.9925'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='210.853' y='80.1993'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='213.914' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='220.249' y='80.1993'>+<tspan x='229.624'>|</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='232.685' y='80.1993'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='241.316' y='81.9925'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='246.19' y='80.1993'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='249.251' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='256.17' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='266.13' y='80.1993'>1</text>
+</g>
+</svg>
+</div>
+<p>
+Os números reais <svg height='1.29214em' version='1.1' viewBox='-0.6 -10.52812 24.8122 12.9214' width='2.48122em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq7'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='3.06052' y='0'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='11.6922' y='1.79326'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='16.5659' y='0'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='19.6264' y='-4.33971'>2</text>
+</g>
+</svg>
+ e <svg height='1.29214em' version='1.1' viewBox='-0.6 -10.52812 24.8122 12.9214' width='2.48122em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq8'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='3.06052' y='0'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='11.6922' y='1.79326'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='16.5659' y='0'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='19.6264' y='-4.33971'>2</text>
+</g>
+</svg>
+ são as
+probabilidades do estado ser um dos estados próprios <svg height='1.055785em' version='1.1' viewBox='-0.6 -8.36898 13.2614 10.55785' width='1.32614em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq9'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='3.06052' y='0'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.89464' y='0'>〉</text>
+</g>
+</svg>
+ ou
+<svg height='1.055785em' version='1.1' viewBox='-0.6 -8.36898 13.2614 10.55785' width='1.32614em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq10'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='3.06052' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.89464' y='0'>〉</text>
+</g>
+</svg>
+.
+</p>
+<div>
+<h3>Representação matricial</h3>
+<p>
+As operações nos estados dos qbits podem ser feitas na representação
+matricial em que cada estado próprio é representado por uma matriz de
+uma coluna e duas linas:
+</p>
+<div class="center">
+<svg height='2.7509em' version='1.1' viewBox='168.276 67.4299 127.304 27.509' width='12.7304em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq11'>
+<text font-family='fourier-ms' font-size='10.9577' x='168.876' y='84.2919'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='171.937' y='84.2919'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='177.771' y='84.2919'>〉<tspan x='184.096'>=</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='194.056' y='68.4368'></text>
+<text font-family='futr8r' font-size='10.9577' x='199.861' y='76.8617'>1<tspan x='199.861' y='91.3075'>0</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='205.695' y='68.4368'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='254.751' y='84.2919'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='257.812' y='84.2919'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='263.646' y='84.2919'>〉<tspan x='269.972'>=</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='279.931' y='68.4368'></text>
+<text font-family='futr8r' font-size='10.9577' x='285.736' y='76.8617'>0<tspan x='285.736' y='91.3075'>1</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='291.571' y='68.4368'></text>
+</g>
+</svg>
+</div>
+<p>
+Como tal, o estado de um qbit é uma matriz coluna com dois números complexos:
+</p>
+<div class="center">
+<svg height='2.7509em' version='1.1' viewBox='162.141 67.4299 139.574 27.509' width='13.9574em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq12'>
+<text font-family='fourier-ms' font-size='10.9577' x='162.741' y='84.2919'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='165.802' y='84.2919'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='175.031' y='84.2919'>〉<tspan x='181.357'>=</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='191.317' y='84.2919'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='199.948' y='86.0851'>1</text>
+<text font-family='fourier-mex' font-size='10.9987' x='205.991' y='68.4368'></text>
+<text font-family='futr8r' font-size='10.9577' x='211.796' y='76.8617'>1<tspan x='211.796' y='91.3075'>0</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='217.63' y='68.4368'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='224.896' y='84.2919'>+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='234.271' y='84.2919'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='242.903' y='86.0851'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='248.946' y='68.4368'></text>
+<text font-family='futr8r' font-size='10.9577' x='254.751' y='76.8617'>0<tspan x='254.751' y='91.3075'>1</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='260.585' y='68.4368'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='268.435' y='84.2919'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='278.395' y='68.4368'></text>
+<text font-family='fourier-mlit' font-size='10.9577' x='284.2' y='76.8617'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='292.832' y='78.655'>1</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='284.2' y='91.3075'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='292.832' y='93.1008'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='297.705' y='68.4368'></text>
+</g>
+</svg>
+</div>
+<p>
+O &quot;bra&quot; correspondente ao &quot;ket&quot; <svg height='1.055785em' version='1.1' viewBox='-0.6 -8.36898 16.6567 10.55785' width='1.66567em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq13'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='3.06052' y='0'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='12.2899' y='0'>〉</text>
+</g>
+</svg>
+ é
+uma matriz com uma linha e dois colunas:
+</p>
+<div class="center">
+<svg height='1.43357em' version='1.1' viewBox='193.71 69.9916 77.0313 14.3357' width='7.70313em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq14'>
+<text font-family='fourier-ms' font-size='10.9577' x='194.31' y='80.1993'>〈</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='198.59' y='80.1993'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='207.819' y='80.1993'>|<tspan x='212.926'>=</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='222.885' y='70.9435'></text>
+<text font-family='fourier-mlit' font-size='10.9577' x='227.468' y='79.992'>Ψ</text>
+<text font-family='fourier-ms' font-size='8.21825' x='236.698' y='75.6523'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='236.1' y='83.7272'>1</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='252.395' y='79.992'>Ψ</text>
+<text font-family='fourier-ms' font-size='8.21825' x='261.624' y='75.6523'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='261.026' y='83.7272'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='267.359' y='70.9435'></text>
+</g>
+</svg>
+</div>
+</div>
+<div>
+<h3>Produto escalar</h3>
+<p>
+O produto escalar entre dois estados
+<svg height='1.076225em' version='1.1' viewBox='-0.6 -8.36898 92.8587 10.76225' width='9.28587em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq15'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='3.06052' y='0'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='12.2899' y='0'>〉<tspan x='18.6155'>=</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='28.5754' y='0'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='37.207' y='1.79326'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='42.0807' y='0'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='45.1413' y='0'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='50.9754' y='0'>〉<tspan x='56.7165'>+</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='66.0919' y='0'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='74.7236' y='1.79326'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='79.5973' y='0'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='82.6578' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='88.4919' y='0'>〉</text>
+</g>
+</svg>
+ e
+<svg height='1.076225em' version='1.1' viewBox='-0.6 -8.36898 90.6829 10.76225' width='9.06829em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq16'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='3.06052' y='0'>Φ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='11.1661' y='0'>〉<tspan x='17.4917'>=</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='27.4516' y='0'>Φ</text>
+<text font-family='futr8r' font-size='8.21825' x='35.5572' y='1.79326'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='40.4309' y='0'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='43.4915' y='0'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='49.3256' y='0'>〉<tspan x='55.0667'>+</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='64.4422' y='0'>Φ</text>
+<text font-family='futr8r' font-size='8.21825' x='72.5478' y='1.79326'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='77.4215' y='0'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='80.482' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='86.3161' y='0'>〉</text>
+</g>
+</svg>
+,
+representado por <svg height='1.055785em' version='1.1' viewBox='-0.6 -8.36898 29.0422 10.55785' width='2.90422em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq17'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>〈</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='4.27995' y='0'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='13.5093' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='16.5698' y='0'>Φ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='24.6755' y='0'>〉</text>
+</g>
+</svg>
+, é um número
+complexo. Na representação matricial, obtém-se usando o produto entre
+matrizes:
+</p>
+<div class="center">
+<svg height='2.7509em' version='1.1' viewBox='111.926 67.4299 240.848 27.509' width='24.0848em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq18'>
+<text font-family='fourier-ms' font-size='10.9577' x='112.526' y='84.2919'>〈</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='116.806' y='84.2919'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='126.036' y='84.2919'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='129.096' y='84.2919'>Φ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='137.202' y='84.2919'>〉<tspan x='143.527'>=</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='153.487' y='75.0361'></text>
+<text font-family='fourier-mlit' font-size='10.9577' x='158.07' y='84.0846'>Ψ</text>
+<text font-family='fourier-ms' font-size='8.21825' x='167.299' y='79.7449'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='166.702' y='87.8198'>1</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='182.997' y='84.0846'>Ψ</text>
+<text font-family='fourier-ms' font-size='8.21825' x='192.226' y='79.7449'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='191.628' y='87.8198'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='197.96' y='75.0361'><tspan x='203.712' y='68.4368'></tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='209.517' y='76.8617'>Φ</text>
+<text font-family='futr8r' font-size='8.21825' x='217.623' y='78.655'>1</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='209.517' y='91.3075'>Φ</text>
+<text font-family='futr8r' font-size='8.21825' x='217.623' y='93.1008'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='222.496' y='68.4368'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='230.347' y='84.2919'>=</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='240.307' y='84.2919'>Ψ</text>
+<text font-family='fourier-ms' font-size='8.21825' x='249.536' y='79.3544'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='248.939' y='87.4293'>1</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='255.271' y='84.2919'>Φ</text>
+<text font-family='futr8r' font-size='8.21825' x='263.376' y='86.0851'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='269.711' y='84.2919'>+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='279.087' y='84.2919'>Ψ</text>
+<text font-family='fourier-ms' font-size='8.21825' x='288.316' y='79.3544'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='287.718' y='87.4293'>2</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='294.051' y='84.2919'>Φ</text>
+<text font-family='futr8r' font-size='8.21825' x='302.156' y='86.0851'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='309.076' y='84.2919'>=<tspan x='319.035'>〈</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='323.315' y='84.2919'>Φ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='331.421' y='84.2919'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='334.482' y='84.2919'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='343.711' y='84.2919'>〉</text>
+<text font-family='fourier-ms' font-size='8.21825' x='347.991' y='79.3544'>∗</text>
+</g>
+</svg>
+</div>
+<p>
+A condição de normalização implica que o produto escalar de qualquer
+estado com si próprio deverá ser igual a 1:
+</p>
+<div class="center">
+<svg height='1.35191em' version='1.1' viewBox='103.894 69.0734 257.418 13.5191' width='25.7418em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq19'>
+<text font-family='fourier-ms' font-size='10.9577' x='104.494' y='80.1993'>〈</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='108.774' y='80.1993'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='118.003' y='80.1993'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='121.064' y='80.1993'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='130.293' y='80.1993'>〉<tspan x='136.619'>=</tspan>
+<tspan x='146.579'>|</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='149.639' y='80.1993'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='158.271' y='81.9925'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='163.144' y='80.1993'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='166.205' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='172.54' y='80.1993'>+<tspan x='181.915'>|</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='184.976' y='80.1993'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='193.607' y='81.9925'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='198.481' y='80.1993'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='201.542' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='208.461' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='218.421' y='80.1993'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='245.296' y='80.1993'>〈</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='249.576' y='80.1993'>Φ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='257.682' y='80.1993'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='260.742' y='80.1993'>Φ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='268.848' y='80.1993'>〉<tspan x='275.173'>=</tspan>
+<tspan x='285.133'>|</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='288.194' y='80.1993'>Φ</text>
+<text font-family='futr8r' font-size='8.21825' x='296.3' y='81.9925'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='301.173' y='80.1993'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='304.234' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='310.569' y='80.1993'>+<tspan x='319.944'>|</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='323.005' y='80.1993'>Φ</text>
+<text font-family='futr8r' font-size='8.21825' x='331.11' y='81.9925'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='335.984' y='80.1993'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='339.044' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='345.964' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='355.924' y='80.1993'>1</text>
+</g>
+</svg>
+</div>
+</div>
+<div>
+<h3>Operadores</h3>
+<p>
+No caso de um cbit, mostraram-se na secção anterior os 4 possíveis
+operadores, <svg height='1.19823em' version='1.1' viewBox='-0.19343 -8.73059 10.07242 11.9823' width='1.007242em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq20'>
+<text font-family='futri8r' font-size='10.9577' x='1.19552' y='0'>f</text>
+<text font-family='futr8r' font-size='8.21825' x='5.26027' y='1.79326'>0</text>
+</g>
+</svg>
+, <svg height='1.19823em' version='1.1' viewBox='-0.19343 -8.73059 9.64507 11.9823' width='0.964507em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq21'>
+<text font-family='futri8r' font-size='10.9577' x='1.19552' y='0'>f</text>
+<text font-family='futr8r' font-size='8.21825' x='5.26027' y='1.79326'>1</text>
+</g>
+</svg>
+, <svg height='1.19823em' version='1.1' viewBox='-0.19343 -8.73059 10.03955 11.9823' width='1.003955em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq22'>
+<text font-family='futri8r' font-size='10.9577' x='1.19552' y='0'>f</text>
+<text font-family='futr8r' font-size='8.21825' x='5.26027' y='1.79326'>2</text>
+</g>
+</svg>
+ e <svg height='1.19823em' version='1.1' viewBox='-0.19343 -8.73059 9.94093 11.9823' width='0.994093em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq23'>
+<text font-family='futri8r' font-size='10.9577' x='1.19552' y='0'>f</text>
+<text font-family='futr8r' font-size='8.21825' x='5.26027' y='1.79326'>3</text>
+</g>
+</svg>
+. No caso dos qbits, há un
+número infinito de possíveis operadores. Na representação matricial,
+os operadores <svg height='1.16868em' version='1.1' viewBox='-1.197761 -10.9224 11.2263 11.6868' width='1.12263em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq24'>
+<text font-family='futr8r' font-size='10.9577' x='3.4132' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+</g>
+</svg>
+ são as matrizes quadradas com duas colunas
+e duas linhas:
+</p>
+<div class="center">
+<svg height='2.7509em' version='1.1' viewBox='194.012 67.4299 75.234 27.509' width='7.5234em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq25'>
+<text font-family='futr8r' font-size='10.9577' x='198.623' y='81.859'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='194.612' y='84.2919'>U</text>
+<text font-family='fourier-ms' font-size='10.9577' x='206.688' y='84.2919'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='216.648' y='68.4368'></text>
+<text font-family='futri8r' font-size='10.9577' x='222.453' y='76.8617'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='229.614' y='78.655'>1<tspan x='233.99'>1</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='248.826' y='76.8617'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='255.987' y='78.655'>1<tspan x='260.363'>2</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='222.453' y='91.3075'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='229.614' y='93.1008'>2<tspan x='233.99'>1</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='248.826' y='91.3075'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='255.987' y='93.1008'>2<tspan x='260.363'>2</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='265.237' y='68.4368'></text>
+</g>
+</svg>
+</div>
+<p>
+onde os quatro números complexos <svg height='1.048283em' version='1.1' viewBox='-0.6 -6.10075 15.8619 10.48283' width='1.58619em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq26'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>u</text>
+<text font-family='futri8r' font-size='8.21825' x='7.16115' y='1.79326'>i</text>
+<text font-family='futri8r' font-size='8.21825' x='11.6623' y='1.79326'>j</text>
+</g>
+</svg>
+ devem verificar as seguintes
+condições, que fazem com que a matriz de <svg height='1.16868em' version='1.1' viewBox='-1.197761 -10.9224 11.2263 11.6868' width='1.12263em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq27'>
+<text font-family='futr8r' font-size='10.9577' x='3.4132' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+</g>
+</svg>
+ seja unitária:
+</p>
+<div class="center">
+<svg height='6.74119em' version='1.1' viewBox='56.2927 79.7673 340.877 67.4119' width='34.0877em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq28'>
+<text font-family='futr8r' font-size='10.9577' x='60.9037' y='114.038'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='56.8927' y='116.471'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='66.9231' y='111.534'>†</text>
+<text font-family='futr8r' font-size='10.9577' x='74.9948' y='114.038'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='70.9839' y='116.471'>U</text>
+<text font-family='fourier-ms' font-size='10.9577' x='83.0599' y='116.471'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='93.0198' y='100.616'></text>
+<text font-family='futri8r' font-size='10.9577' x='98.8247' y='109.041'>u</text>
+<text font-family='fourier-ms' font-size='8.21825' x='106.225' y='104.701'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='105.986' y='112.776'>1<tspan x='110.361'>1</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='125.198' y='109.041'>u</text>
+<text font-family='fourier-ms' font-size='8.21825' x='132.598' y='104.701'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='132.359' y='112.776'>2<tspan x='136.735'>1</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='98.8247' y='123.487'>u</text>
+<text font-family='fourier-ms' font-size='8.21825' x='106.225' y='119.147'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='105.986' y='127.222'>1<tspan x='110.361'>2</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='125.198' y='123.487'>u</text>
+<text font-family='fourier-ms' font-size='8.21825' x='132.598' y='119.147'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='132.359' y='127.222'>2<tspan x='136.735'>2</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='141.608' y='100.616'><tspan x='148.582' y='100.616'></tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='154.387' y='109.041'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='161.548' y='110.834'>1<tspan x='165.924'>1</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='180.76' y='109.041'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='187.921' y='110.834'>1<tspan x='192.297'>2</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='154.387' y='123.487'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='161.548' y='125.28'>2<tspan x='165.924'>1</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='180.76' y='123.487'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='187.921' y='125.28'>2<tspan x='192.297'>2</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='197.171' y='100.616'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='205.021' y='116.471'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='214.981' y='100.616'></text>
+<text font-family='futr8r' font-size='10.9577' x='220.786' y='109.041'>1<tspan x='236.583'>0</tspan>
+<tspan x='220.786' y='123.487'>0</tspan>
+<tspan x='236.583'>1</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='242.417' y='100.616'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='260.788' y='116.471'>⇐<tspan x='270.033'>⇒</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='293.598' y='80.3673'>⎧<tspan x='293.598' y='90.2771'>⎪</tspan>
+<tspan x='293.598' y='93.5768'>⎪</tspan>
+<tspan x='293.598' y='96.8764'>⎪</tspan>
+<tspan x='293.598' y='100.176'>⎪</tspan>
+<tspan x='293.598' y='103.476'>⎨</tspan>
+<tspan x='293.598' y='123.274'>⎪</tspan>
+<tspan x='293.598' y='126.573'>⎪</tspan>
+<tspan x='293.598' y='129.873'>⎪</tspan>
+<tspan x='293.598' y='133.173'>⎪</tspan>
+<tspan x='293.598' y='136.472'>⎩</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='302.727' y='90.8393'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='305.788' y='90.8393'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='312.949' y='92.6325'>1<tspan x='317.324'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='322.198' y='90.8393'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='325.259' y='86.4995'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='331.593' y='90.8393'>+<tspan x='340.969'>|</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='344.029' y='90.8393'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='351.191' y='92.6325'>2<tspan x='355.566'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='360.44' y='90.8393'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='363.5' y='86.4995'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='370.42' y='90.8393'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='380.38' y='90.8393'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='302.727' y='108.174'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='305.788' y='108.174'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='312.949' y='109.967'>1<tspan x='317.324'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='322.198' y='108.174'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='325.259' y='103.834'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='331.593' y='108.174'>+<tspan x='340.969'>|</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='344.029' y='108.174'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='351.191' y='109.967'>2<tspan x='355.566'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='360.44' y='108.174'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='363.5' y='103.834'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='370.42' y='108.174'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='380.38' y='108.174'>1</text>
+<text font-family='futri8r' font-size='10.9577' x='302.727' y='125.509'>u</text>
+<text font-family='fourier-ms' font-size='8.21825' x='310.127' y='121.169'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='309.888' y='129.244'>1<tspan x='314.264'>1</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='319.137' y='125.509'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='326.299' y='127.302'>1<tspan x='330.674'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='337.009' y='125.509'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='346.385' y='125.509'>u</text>
+<text font-family='fourier-ms' font-size='8.21825' x='353.785' y='121.169'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='353.546' y='129.244'>2<tspan x='357.921'>1</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='362.795' y='125.509'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='369.956' y='127.302'>2<tspan x='374.332'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='381.251' y='125.509'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='391.211' y='125.509'>0</text>
+<text font-family='futri8r' font-size='10.9577' x='302.727' y='142.844'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='309.888' y='144.637'>1<tspan x='314.264'>1</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='319.137' y='142.844'>u</text>
+<text font-family='fourier-ms' font-size='8.21825' x='326.538' y='138.504'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='326.299' y='146.579'>1<tspan x='330.674'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='337.009' y='142.844'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='346.385' y='142.844'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='353.546' y='144.637'>2<tspan x='357.921'>1</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='362.795' y='142.844'>u</text>
+<text font-family='fourier-ms' font-size='8.21825' x='370.195' y='138.504'>∗</text>
+<text font-family='futr8r' font-size='8.21825' x='369.956' y='146.579'>2<tspan x='374.332'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='381.251' y='142.844'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='391.211' y='142.844'>0</text>
+</g>
+</svg>
+</div>
+<p>
+Ou seja, cada coluna na matriz de <svg height='1.16868em' version='1.1' viewBox='-1.197761 -10.9224 11.2263 11.6868' width='1.12263em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq29'>
+<text font-family='futr8r' font-size='10.9577' x='3.4132' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+</g>
+</svg>
+ deve representar um
+possível estado e o produto escalar entre os estados correspondentes
+às duas colunas deverá ser nulo.
+</p>
+<p>
+Quando o operador atua no estado <svg height='1.055785em' version='1.1' viewBox='-0.6 -8.36898 16.6567 10.55785' width='1.66567em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq30'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='3.06052' y='0'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='12.2899' y='0'>〉</text>
+</g>
+</svg>
+ do qbit, o resultado é
+outro estado <svg height='1.055785em' version='1.1' viewBox='-0.6 -8.36898 15.5329 10.55785' width='1.55329em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq31'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='3.06052' y='0'>Φ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='11.1661' y='0'>〉</text>
+</g>
+</svg>
+:
+</p>
+<div class="center">
+<svg height='2.7509em' version='1.1' viewBox='112.315 67.4299 239.225 27.509' width='23.9225em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq32'>
+<text font-family='fourier-ms' font-size='10.9577' x='112.915' y='84.2919'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='115.976' y='84.2919'>Φ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='124.082' y='84.2919'>〉<tspan x='130.407'>=</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='143.78' y='81.859'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='139.769' y='84.2919'>U</text>
+<text font-family='fourier-ms' font-size='10.9577' x='149.8' y='84.2919'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='152.86' y='84.2919'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='162.09' y='84.2919'>〉<tspan x='168.415'>=</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='178.375' y='68.4368'></text>
+<text font-family='futri8r' font-size='10.9577' x='184.18' y='76.8617'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='191.341' y='78.655'>1<tspan x='195.717'>1</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='210.553' y='76.8617'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='217.714' y='78.655'>1<tspan x='222.09'>2</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='184.18' y='91.3075'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='191.341' y='93.1008'>2<tspan x='195.717'>1</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='210.553' y='91.3075'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='217.714' y='93.1008'>2<tspan x='222.09'>2</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='226.964' y='68.4368'><tspan x='233.937' y='68.4368'></tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='239.742' y='76.8617'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='248.374' y='78.655'>1</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='239.742' y='91.3075'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='248.374' y='93.1008'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='253.248' y='68.4368'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='261.098' y='84.2919'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='271.058' y='68.4368'></text>
+<text font-family='futri8r' font-size='10.9577' x='276.863' y='76.8617'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='284.024' y='78.655'>1<tspan x='288.4'>1</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='293.273' y='76.8617'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='301.905' y='78.655'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='308.24' y='76.8617'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='317.615' y='76.8617'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='324.777' y='78.655'>1<tspan x='329.152'>2</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='334.026' y='76.8617'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='342.658' y='78.655'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='276.863' y='91.3075'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='284.024' y='93.1008'>2<tspan x='288.4'>1</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='293.273' y='91.3075'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='301.905' y='93.1008'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='308.24' y='91.3075'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='317.615' y='91.3075'>u</text>
+<text font-family='futr8r' font-size='8.21825' x='324.777' y='93.1008'>2<tspan x='329.152'>2</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='334.026' y='91.3075'>Ψ</text>
+<text font-family='futr8r' font-size='8.21825' x='342.658' y='93.1008'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='347.531' y='68.4368'></text>
+</g>
+</svg>
+</div>
+<p>
+A ação do operador <svg height='1.16868em' version='1.1' viewBox='-1.197761 -10.9224 11.2263 11.6868' width='1.12263em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq33'>
+<text font-family='futr8r' font-size='10.9577' x='3.4132' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+</g>
+</svg>
+ também costuma representar-se de forma
+gráfica com o seguinte diagrama:
+</p>
+<img class="fig center" src="one_qbit_operator.png" alt="one qbit operator"
+     style="width:11.01em">
+<p>
+A linha do lado esquerdo representa o estado inicial (entrada) e a linha do
+lado direito é o estado final (saída), após a ação do operador <svg height='1.16868em' version='1.1' viewBox='-1.197761 -10.9224 11.2263 11.6868' width='1.12263em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq34'>
+<text font-family='futr8r' font-size='10.9577' x='3.4132' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+</g>
+</svg>
+.
+</p>
+<p>
+Nas secções seguintes mostram-se o diagrama e a matriz de alguns operadores
+importantes.
+</p>
+</div>
+<div>
+<h3>X de Pauli</h3>
+<p class="clearfix">
+<img class="fig left" src="X_Pauli.png" alt="X de Pauli"
+     style="width:11.01em;margin: 0.4em 5em 0.4em 5em;">
+<svg height='2.7509em' version='1.1' viewBox='-0.132751 -16.862 52.7413 27.509' width='5.27413em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-1.1992em'>
+<g id='eq35'>
+<text font-family='futr8r' font-size='10.9577' x='2.97683' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0.478206' y='0'>X</text>
+<text font-family='fourier-ms' font-size='10.9577' x='11.2033' y='0'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='21.1632' y='-15.855'></text>
+<text font-family='futr8r' font-size='10.9577' x='26.9681' y='-7.43016'>0<tspan x='42.7648'>1</tspan>
+<tspan x='26.9681' y='7.01565'>1</tspan>
+<tspan x='42.7648'>0</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='48.599' y='-15.855'></text>
+</g>
+</svg>
+
+</p>
+</div>
+<div>
+<h3>Y de Pauli</h3>
+<p class="clearfix">
+<img class="fig left" src="Y_Pauli.png" alt="Y de Pauli"
+     style="width:11.01em;margin: 0.4em 5em 0.4em 5em;">
+<svg height='2.7509em' version='1.1' viewBox='-0.6 -16.862 58.3612 27.509' width='5.83612em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-1.1992em'>
+<g id='eq36'>
+<text font-family='futr8r' font-size='10.9577' x='2.91107' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>Y</text>
+<text font-family='fourier-ms' font-size='10.9577' x='11.0717' y='0'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='21.0317' y='-15.855'></text>
+<text font-family='futr8r' font-size='10.9577' x='26.8366' y='-7.43016'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='42.6333' y='-7.43016'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='50.5477' y='-7.43016'>i<tspan x='28.1517' y='7.01565'>i</tspan>
+<tspan x='45.2754'>0</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='53.7516' y='-15.855'></text>
+</g>
+</svg>
+
+</p>
+</div>
+<div>
+<h3>Z de Pauli</h3>
+<p class="clearfix">
+<img class="fig left" src="Z_Pauli.png" alt="Z de Pauli"
+     style="width:11.01em;margin: 0.4em 5em 0.4em 5em;">
+<svg height='2.7509em' version='1.1' viewBox='-0.121794 -16.862 60.298 27.509' width='6.0298em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-1.1992em'>
+<g id='eq37'>
+<text font-family='futr8r' font-size='10.9577' x='2.80348' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0.478206' y='0'>Z</text>
+<text font-family='fourier-ms' font-size='10.9577' x='10.8566' y='0'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='20.8165' y='-15.855'></text>
+<text font-family='futr8r' font-size='10.9577' x='26.6214' y='-7.43016'>1<tspan x='46.3753'>0</tspan>
+<tspan x='26.6214' y='7.01565'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='42.4182' y='7.01565'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='50.3325' y='7.01565'>1</text>
+<text font-family='fourier-mex' font-size='10.9987' x='56.1666' y='-15.855'></text>
+</g>
+</svg>
+
+</p>
+</div>
+<div>
+<h3>Hadamard</h3>
+<p class="clearfix">
+<img class="fig left" src="Hadamard.png" alt="Hadamard"
+     style="width:11.01em;margin: 0.4em 5em 0.4em 5em;">
+<svg height='2.83849em' version='1.1' viewBox='-0.241348 -16.862 80.1767 28.3849' width='8.01767em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-1.1992em'>
+<g id='eq38'>
+<text font-family='futr8r' font-size='10.9577' x='3.70609' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>H</text>
+<text font-family='fourier-ms' font-size='10.9577' x='12.064' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='27.7983' y='-8.09364'>1</text>
+<rect height='0.637912' width='14.9918' x='23.2195' y='-3.41534'/>
+<text font-family='fourier-ms' font-size='10.9577' x='23.2195' y='0.403562'></text>
+<rect height='0.633625' width='5.83411' x='32.3771' y='-0.230064'/>
+<text font-family='futr8r' font-size='10.9577' x='32.3771' y='9.76265'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='40.5757' y='-15.855'></text>
+<text font-family='futr8r' font-size='10.9577' x='46.3806' y='-7.43016'>1<tspan x='66.1345'>1</tspan>
+<tspan x='46.3806' y='7.01565'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='62.1773' y='7.01565'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='70.0916' y='7.01565'>1</text>
+<text font-family='fourier-mex' font-size='10.9987' x='75.9257' y='-15.855'></text>
+</g>
+</svg>
+
+</p>
+<p>
+No caso das 3 matrizes de Pauli, se a entrada for um dos estados
+próprios <svg height='1.055785em' version='1.1' viewBox='-0.6 -8.36898 13.2614 10.55785' width='1.32614em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq39'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='3.06052' y='0'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.89464' y='0'>〉</text>
+</g>
+</svg>
+ ou <svg height='1.055785em' version='1.1' viewBox='-0.6 -8.36898 13.2614 10.55785' width='1.32614em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq40'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='3.06052' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.89464' y='0'>〉</text>
+</g>
+</svg>
+, a saída será também um estado
+próprio, multiplicado por uma constante com módulo igual a 1. No caso
+do operador de Hadamard, se a entrada for um dos estados próprios
+<svg height='1.055785em' version='1.1' viewBox='-0.6 -8.36898 13.2614 10.55785' width='1.32614em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq41'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='3.06052' y='0'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.89464' y='0'>〉</text>
+</g>
+</svg>
+ ou <svg height='1.055785em' version='1.1' viewBox='-0.6 -8.36898 13.2614 10.55785' width='1.32614em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq42'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='3.06052' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.89464' y='0'>〉</text>
+</g>
+</svg>
+ a saída será uma sobreposição dos dois
+estados próprios, ambos com a mesma probabilidade de 1/2:
+</p>
+<div class="center">
+<svg height='2.76678em' version='1.1' viewBox='123.144 66.0629 219.157 27.6678' width='21.9157em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq43'>
+<text font-family='futr8r' font-size='10.9577' x='127.092' y='79.7748'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='123.744' y='82.2077'>H</text>
+<text font-family='fourier-ms' font-size='10.9577' x='133.404' y='82.2077'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='136.465' y='82.2077'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='142.299' y='82.2077'>〉<tspan x='148.624'>=</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='164.359' y='74.1141'>1</text>
+<rect height='0.637912' width='14.9918' x='159.78' y='78.7924'/>
+<text font-family='fourier-ms' font-size='10.9577' x='159.78' y='82.6113'></text>
+<rect height='0.633625' width='5.83411' x='168.937' y='81.9776'/>
+<text font-family='futr8r' font-size='10.9577' x='168.937' y='91.9704'>2<tspan x='177.136' y='82.3064'>(</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='180.986' y='82.2077'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='184.046' y='82.2077'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='189.88' y='82.2077'>〉<tspan x='195.621'>+</tspan>
+<tspan x='204.997'>|</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='208.057' y='82.2077'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='213.891' y='82.2077'>〉</text>
+<text font-family='futr8r' font-size='10.9577' x='218.171' y='82.3064'>)<tspan x='247.937' y='79.7748'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='244.589' y='82.2077'>H</text>
+<text font-family='fourier-ms' font-size='10.9577' x='254.249' y='82.2077'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='257.31' y='82.2077'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='263.144' y='82.2077'>〉<tspan x='269.469'>=</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='285.204' y='74.1141'>1</text>
+<rect height='0.637912' width='14.9918' x='280.625' y='78.7924'/>
+<text font-family='fourier-ms' font-size='10.9577' x='280.625' y='82.6113'></text>
+<rect height='0.633625' width='5.83411' x='289.783' y='81.9776'/>
+<text font-family='futr8r' font-size='10.9577' x='289.783' y='91.9704'>2<tspan x='297.981' y='82.3064'>(</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='301.831' y='82.2077'>|</text>
+<text font-family='futr8r' font-size='10.9577' x='304.891' y='82.2077'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='310.725' y='82.2077'>〉<tspan x='316.466'>−</tspan>
+<tspan x='325.842'>|</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='328.902' y='82.2077'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='334.736' y='82.2077'>〉</text>
+<text font-family='futr8r' font-size='10.9577' x='339.016' y='82.3064'>)</text>
+</g>
+</svg>
+</div>
+</div>
+</section>
+<nav>
+<a href="./index.html">Índice</a>
+<a href="./slide06.html">Anterior</a>
+<a href="./slide08.html">Próxima</a>
+</nav>
+<footer>
+<div class="site-map">
+<div class="category">
+<ul>
+<li><a href="../../research.html">Research</a></li>
+<li><a href="../../teaching.html">Teaching</a></li>
+</ul>
+</div>
+<div class="category">
+<ul>
+<li><a href="../../software.html">Software</a></li>
+<li><a href="../../publications/index.html">Publications</a></li>
+</ul>
+</div>
+<div class="category">
+Talks
+</div>
+<div class="category">
+<a href="../../hobbies.html">Other interests</a>
+</div>
+</div>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a><br>
+&copy; 2020, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2020/11/03 11:40:31 UTC</span>
+</footer>
+</body>
+</html>

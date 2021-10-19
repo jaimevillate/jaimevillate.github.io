@@ -1,0 +1,29 @@
+100 600 moveto 75 30 box 0.8 0   0 setrgbcolor fill
+175 600 moveto 75 30 box 0   0.4 0 setrgbcolor fill
+
+0 setgray 12 /Times-Roman font 0.8 setlinewidth
+110 610 moveto (N) show 235 610 moveto (S) show
+
+newpath 0.4 0 0.4 setrgbcolor
+175 314.5 dup 628 add exch 3 copy 260.852 270 arc
+currentpoint 180 tip 270 279.148 arc
+-50 80 9.148 180 rsplineto -50 -80 180 350.852 rsplineto stroke
+
+175 314.5 dup neg 604 add exch 3 copy 99.148 90 arcn
+currentpoint 180 tip 90 80.852 arcn
+-50 -80 350.852 180 rsplineto currentpoint 0 tip
+-50 80 180 9.148 rsplineto stroke
+
+40 616 moveto 270 0 rlineto stroke
+175  974 350 250 290 arc stroke
+175  258 350  70 110 arc stroke
+175 1154 534 256 284 arc stroke
+175   78 534  76 104 arc stroke
+
+106.2 653 moveto 30 80 vector
+200 616 moveto 50 180 vector 80 650 moveto 25 120 vector
+ 90 616 moveto 40 180 vector 300 616 moveto 40 180 vector
+310 651 moveto 35 200 vector 175 712 moveto 20 0 vector stroke
+0 setgray
+
+showpage

@@ -1,0 +1,181 @@
+/*
+   Quantum Computing Simulator for Maxima
+   Jaime Villate. University of Porto
+   2021-03-03, version 3
+   GPL License
+*/
+   
+binlist([n]):= block([m:n[1], q, l:[], k],
+  do([m,q]: divide(m, 2), l: cons(q,l), if m=0
+    then (
+      if length(n)>1
+      then (
+        k: length(l),
+        for i:1 thru n[2]-k do l:cons(0,l)),
+      return(l))))$
+
+binlist2dec(l) := block([m:l[1]],
+  for i:2 thru length(l) do m:m*2+l[i],
+  m)$
+   
+tprod([ops]) := lreduce(kronecker_product, ops)$
+
+require_qket(qk,fn) := block([test:true],
+  if not(matrixp(qk)) then test:false,
+  if (test and length(qk[1])#1) then test:false,
+  if test
+    then if length(qk)=1 then test:false
+      elseif apply("+",binlist(length(qk)))#1 then test:false,
+  if test
+    then list_matrix_entries(qk)
+    else error("The argument to", fn, "must be a matrix with one column and",
+                "2^n rows (n>0)"))$
+
+require_qbra(qb,fn) := block([test:true],
+  if not(matrixp(qb)) then test:false,
+  if (test and length(qb)#1) then test:false,
+  if test
+    then if length(qb[1])=1 then test:false
+      elseif apply("+",binlist(length(qb[1])))#1 then test:false,
+  if test
+    then list_matrix_entries(qb)
+    else error("The argument to", fn, "must be a matrix with one row and 2^n",
+                "columns (n>0)"))$
+
+require_2k_elements(l,fn) :=
+  if (length(l)=1 or apply("+",binlist(length(l)))#1)
+  then error(fn, "requires 2^n arguments (n>0)")$
+
+cbra([n]) := block([l: makelist(0,2^length(n))], l[binlist2dec(n)+1]: 1,
+  matrix(l));
+
+cket([n]) := block([l: makelist(0,2^length(n))], l[binlist2dec(n)+1]: 1,
+  transpose(matrix(l)));
+
+qbra([l]) := (require_2k_elements(l,"qbra"),
+  matrix(conjugate(l)/radcan(sqrt(apply("+",map(lambda([z],cabs(z)^2),l))))))$
+
+qket([l]) := (require_2k_elements(l,"qket"),
+  transpose(matrix(l/radcan(sqrt(apply("+",map(lambda([z],cabs(z)^2),l)))))))$
+
+qU([ops]) := block([U:ops[1], n, i, lU],
+  if length(ops)>1 then n:ops[2] else n:1,
+  if length(ops)<3
+    then apply(tprod, makelist(U,n))
+    else (
+      i:ops[3],
+      if i=1 then lU:[] else lU:[ident(2^(i-1))],
+      lU:endcons(U,lU),
+      if i<n then lU: endcons(ident(2^(n-i)),lU),
+      apply(tprod,lU)))$
+
+qX([ops]) := apply(qU,cons(matrix([0,1],[1,0]),ops))$
+
+qY([ops]) := apply(qU,cons(matrix([0,-%i],[%i,0]),ops))$
+
+qZ([ops]) := apply(qU,cons(matrix([1,0],[0,-1]),ops))$
+
+qH([ops]) := apply(qU,cons(matrix([1,1],[1,-1])/sqrt(2),ops))$
+
+qS([ops]) := apply(qU,cons(matrix([1,0],[0,%i]),ops))$
+
+qT([ops]) := apply(qU,cons(matrix([1,0],[0,exp(%i*%pi/4)]),ops))$
+
+qCNOT(n,i,j) := block([l:cons(1, makelist(0,2^n-1)), m],
+  m:transpose(matrix(l)),
+  for k:1 thru 2^n-1 do (
+    l:binlist(k,n),
+    if l[i]=1 then l[j]:1-l[j],
+    m:addcol(m, list_matrix_entries(apply(cket, l)))),
+  m)$
+
+qCU(U,n,i,j) := block([l:cons(1, makelist(0,2^n-1)), m, ck],
+  m:transpose(matrix(l)),
+  for k:1 thru 2^n-1 do (
+    l: binlist(k,n),
+    if l[i]#1
+      then ck:apply(cket, l) 
+      elseif l[j]=0
+        then (
+          ck:U[1][1]*apply(cket, l),
+          l[j]:1,
+          ck:ck+U[2][1]*apply(cket, l))
+        else (
+          ck:U[2][2]*apply(cket, l),
+          l[j]:0,
+          ck:ck+U[1][2]*apply(cket, l)),
+    m:addcol(m, list_matrix_entries(ck))),
+  m)$
+
+qmeasure(qk,i) := block([r:random(1.0), kl, p:0, l:[], bl, n, m, v, test:true],
+  kl:require_qket(qk,"qmeasure"),
+  n:length(kl),
+  m:round(float(log(n)/log(2))),
+  for j:1 thru n do (
+    if not(test) then return(),
+    if constantp(kl[j])
+      then (
+        kl[j]:float(kl[j]),
+        bl:binlist(j-1,m),
+        if bl[i] = 0 then p: p+cabs(kl[j])^2)
+      else test:false),
+  if test
+    then (
+      if r<p then v:0 else (v:1, p: 1-p),
+      for j: 1 thru n do (
+        bl:binlist(j-1,m),
+        if bl[i]=v
+          then l:endcons(radcan(kl[j]/sqrt(p)),l)
+          else l:endcons(0,l)),
+      [v, transpose(matrix(l))])
+    else qk)$
+  
+pqket(qk):=block([kl, n, m, s, g, sg:["-","",""]],
+  kl:require_qket(qk,"pqket"),
+  n:length(kl),
+  m:round(float(log(n)/log(2))),
+  g:1/lreduce('gcd, kl),
+  if atom(g) then g:1,
+  if g=1 then s:"" else s:"(",
+  for i:1 thru n do (
+    kl[i]:kl[i]*g,
+    if kl[i]#0
+      then (
+        if constantp(kl[i]) and atom(kl[i])
+          then
+            if kl[i]^2=1
+              then s:concat(s, sg[(kl[i]+3)/2], printf(false,"|~v,'0b>",m,i-1))
+              elseif kl[i]<0
+                then s:concat(s, sg[3], printf(false,"~a|~v,'0b>",kl[i],m,i-1))
+                else s:concat(s, sg[2], printf(false,"~a|~v,'0b>",kl[i],m,i-1))
+          elseif (not(atom(kl[i])) and op(kl[i])="+")
+            then s:concat(s, sg[2], printf(false,"(~a)|~v,'0b>",kl[i],m,i-1))
+            else s:concat(s, sg[3], printf(false,"~a|~v,'0b>",kl[i],m,i-1))),
+    sg: [" -"," +"," "]),
+  if g # 1 then s: concat(s, printf(false,")/(~a)",g)),
+  s)$
+
+pqbra(qb):=block([bl, n, m, s, g, sg:["-","",""]],
+  bl:require_qbra(qb,"pqbra"),
+  n:length(bl),
+  m:round(float(log(n)/log(2))),
+  g:1/lreduce('gcd, bl),
+  if atom(g) then g:1,
+  if g=1 then s:"" else s:"(",
+  for i:1 thru n do (
+    bl[i]:bl[i]*g,
+    if bl[i]#0
+      then (
+        if constantp(bl[i]) and atom(bl[i])
+          then
+            if bl[i]^2=1
+              then s:concat(s, sg[(bl[i]+3)/2], printf(false,"<~v,'0b|",m,i-1))
+              elseif bl[i]<0
+                then s:concat(s, sg[3], printf(false,"~a<~v,'0b|",bl[i],m,i-1))
+                else s:concat(s, sg[2], printf(false,"~a<~v,'0b|",bl[i],m,i-1))
+          elseif (not(atom(bl[i])) and op(bl[i])="+")
+            then s:concat(s, sg[2], printf(false,"(~a)<~v,'0b|",bl[i],m,i-1))
+            else s:concat(s, sg[3], printf(false,"~a<~v,'0b|",bl[i],m,i-1))),
+    sg: [" -"," +"," "]),
+  if g # 1 then s: concat(s, printf(false,")/(~a)",g)),
+  s)$

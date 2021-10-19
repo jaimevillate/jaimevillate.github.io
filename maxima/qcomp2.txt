@@ -1,0 +1,32 @@
+Alterações na versão 2 de qcomp (extensão para n qbits)
+-------------------------------------------------------
+https://www.fe.up.pt/~villate/maxima/qcomp2.mac
+
+1. As matrizes X, Y, Z e H são agora obtidas usando os operadores
+   X(n,i), Y(n,i), Z(n,i) e H(n,i)
+   o primeiro parámetro de entrada, n, é obrigatório e deverá ser um
+   inteiro positivo que indica o número de qbits em que a matriz atua.
+   O segundo parámetro de entrada, i, é optativo e indica o número do
+   qbit em que essa matriz vai atuar; se for omitido, a matriz atuará
+   em todos os qbits.
+
+2. O operador qbits_matrix(M,[n,i]) funciona como os operadores na
+   alínea anterior, mas aplicando a matriz M (tamanho 2x2), em vez de
+   X, Y, Z ou H. Os parámetros n e i devem ser dados dentro de uma
+   lista; i é optativo.
+
+3. As matrizes CNOT são obtidas com o operador CNOT(n,i,j), onde n é o
+   número de qbits, i, o qbit de controlo e j o qbit que será
+   alterado.
+   
+4. lc(k) foi substituída pela função pket(k), e o resultado mostra-se
+   de forma mais simples. Por exemplo, pket(ket(1,-2,%i,3)) produz:
+   1/sqrt(15)(|00> -2|01> +%i|10> +3|11>)
+
+5. Há duas funções cbra() e pbra(), equivalentes a cket() e pket, para
+   bras em vez de kets.
+
+6. As medições são feitas agora com a função measure(ket,i), onde i é
+   o numero do qbit a ser medido. O resultado é uma lista com o valor
+   da medição e o ket colapsado. O ket dado como entrada à função não
+   é modificado.

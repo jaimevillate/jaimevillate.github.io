@@ -1,0 +1,38 @@
+Alterações na versão 3 de qcomp
+-------------------------------
+https://www.fe.up.pt/~villate/maxima/qcomp3.mac
+
+1. As matrizes e operadores que atuam sobre (ou produzem) bras e kets
+   têm agora nomes a começar por "q": qX, qY, qket, qbra, pqket,
+   qmeasure, ...
+
+2. Foram adicionadas as funções qS() (phase gate) e qT() (pi/8 gate).
+   Estas funções, tal como qX, qY, qZ e qH, podem agora ser usadas sem
+   nenhum argumento, um argumento, n, ou dois argumentos, n e i, em
+   que n é o número de qbits (por omissão, n=1, se não forem dados
+   argumentos), e i é o qbit em que atuará a matriz (em todos os qbits
+   se não for dado o argumento i).
+
+3. qbits_matrix() chama-se agora qU(). O primeiro argumento deve ser
+   uma matriz 2 por 2, unitária, e os restantes argumentos (0, 1 ou 2)
+   seguem separados por vírgulas, e não numa lista com era necessário
+   em qbits_matrix().
+
+4. As funções qbra e qket verificam que a lista dada tenha um número
+   2^n de elementos, onde n é um inteiro negativo, igual au número de
+   qbits e simplificam mais o resultado obtido.
+
+5. Nas funções pqket e pqbra foram corrigidos dois bugs: 1- expressões
+   em que fazia falta usar parênteses. 2- expressões algébricas que
+   não eram apresentadas. O resultado mostra-se agora colocando o
+   fator comum a dividir no fim, em vez de multiplicar pelo seu
+   inverso no início. Nos casos em que há números de vírgula
+   flutuante, não é feita fatorização.
+   
+6. qmeasure foi melhorada. Verifica-se que o argumento seja realmente o
+   estado de n qbits. Se esse estado não tiver numéricos, não é feita
+   nenhuma medição e o resultado será o mesmo estado inicial.
+
+7. Nova função qCU(U,n,i,j), constrói a matriz controlled-U, com uma
+   matriz unitária U, atuando no qbit j , num estado de n qbits, com
+   qbit de controlo i.

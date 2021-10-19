@@ -1,0 +1,48 @@
+0.5 setlinewidth
+170 600 moveto 20 40 cartesian rmoveto 0 -7.5 rmoveto
+currentpoint -110 boost1
+0.05 0.3 0.1 sethsbcolor 0 -40 moveto 2 40 0.66 cylinder
+boost2 0 setgray
+
+170 600 moveto
+40 40 cartesian rlineto currentpoint 0 -20 rlineto 40 220 cartesian rlineto
+closepath gsave 0.1 0.5 0.6 sethsbcolor fill grestore stroke moveto
+80 -20 cartesian rlineto currentpoint 0 -20 rlineto 80 160 cartesian rlineto
+closepath gsave 0.1 0.5 0.65 sethsbcolor fill grestore stroke moveto
+40 220 cartesian rlineto currentpoint 0 -20 rlineto 40 40 cartesian rlineto
+closepath gsave 0.1 0.5 0.8 sethsbcolor fill grestore stroke moveto currentpoint
+80 160 cartesian rlineto 0 -20 rlineto 80 -20 cartesian rlineto closepath
+closepath gsave 0.1 0.5 0.85 sethsbcolor fill grestore stroke moveto
+
+20 40 cartesian rmoveto 0 -10 rmoveto currentpoint 0 2.5 rmoveto
+currentpoint -110 boost1
+0.05 0.3 0.1 sethsbcolor 0 0 moveto 2 40 0.66 cylinder
+boost2 0 setgray
+
+0.8 setlinewidth 0 0.4 0 setrgbcolor
+240 600 moveto 30 160 arrow
+190 580 moveto 30 -20 arrow stroke 0 setgray
+
+0.8 0 0 setrgbcolor
+224 590 moveto 50 90 vector 0 setgray
+
+12 /Times-Roman Font 170 630 moveto (Bobina) show
+285 575 moveto (Eixo) show 232 620 moveto (Momento magnético) show
+
+newpath 400 600 moveto 40 0 rlineto 0 -50 -20 rchord -40 0 rlineto gsave
+closepath 0.52 0.3 0.5 sethsbcolor fill grestore stroke
+newpath 540 600 moveto -40 0 rlineto 0 -50 20 rchord 40 0 rlineto gsave
+closepath 0.52 0.3 0.5 sethsbcolor fill grestore stroke
+470 575 moveto 10 120 cartesian rmoveto 20 210 cartesian rmoveto
+40 30 cartesian rlineto 20 -60 cartesian rlineto 40 210 cartesian rlineto
+closepath gsave 0.1 0.5 0.7 sethsbcolor fill grestore stroke
+420 570 moveto (N) show 510 570 moveto (S) show
+462 600 moveto (N) show 475 550 moveto (S) show
+220 565 moveto (@I) Show
+
+0.8 0 0 setrgbcolor
+470 575 moveto 50 120 vector 0 setgray newpath
+470 575 2 0 360 arc gsave 0.05 0.3 0.8 sethsbcolor fill grestore stroke
+
+showpage
+

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à computação quântica - página 8</title>
+<link rel="stylesheet" href="../../css/villate-org.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+</head>
+<body>
+<aside>
+<a href="./index.html">Índice</a>
+<a href="./slide01.html">1</a>
+<a href="./slide02.html">2</a>
+<a href="./slide03.html">3</a>
+<a href="./slide04.html">4</a>
+<a href="./slide05.html">5</a>
+<a href="./slide06.html">6</a>
+<a href="./slide07.html">7</a>
+<span class="current">8</span>
+<a href="./slide09.html">9</a>
+<a href="./slide10.html">10</a>
+<a href="./slide11.html">11</a>
+<a href="./slide12.html">12</a>
+<a href="./slide13.html">13</a>
+<a href="./slide14.html">14</a>
+<a href="./slide15.html">15</a>
+<a href="./slide16.html">16</a>
+</aside>
+<header>
+<h1 id="title" class="center">Introdução à computação quântica</h1>
+<p class="center">
+Jaime Villate. Faculdade de Engenharia da Universidade do Porto
+</p>
+</header>
+<section>
+<h2 class="center">8. Sistemas com vários qbits</h2>
+<div>
+<h3>2 qbits</h3>
+<p>
+No caso de dois qbits há 4 estados próprios, correspondentes aos 4
+possíveis valores que podem ser representados com 4 cbits. O estado do
+sistema de 2 qbits será qualquer combinação linear desses 4 estados
+próprios:
+</p>
+\begin{displaymath}
+|\otherUpsilon\rangle = \otherUpsilon_1|00\rangle + \otherUpsilon_2|01\rangle +
+\otherUpsilon_3|10\rangle + \otherUpsilon_4|11\rangle
+\end{displaymath}
+<p>
+em que os quatro números complexos $\otherUpsilon_i$ verificam a condição
+de normalização:
+</p>
+\begin{displaymath}
+|\otherUpsilon_1|^2 + |\otherUpsilon_2|^2 + |\otherUpsilon_3|^2 +
+|\otherUpsilon_4|^2 = 1
+\end{displaymath}
+<p>
+Os quatro números reais $|\otherUpsilon_i|^2$ são as probabilidades do
+estado ser um dos quatro estados próprios (valores possíveis de dois
+cbits). Os valores possíveis dos dois cbits podem ser representados por
+matrizes de uma coluna e quatro linhas:
+</p>
+\begin{displaymath}
+|00\rangle =
+\begin{bmatrix}1\\0\\0\\0\end{bmatrix} \qquad |01\rangle =
+\begin{bmatrix}0\\1\\0\\0\end{bmatrix} \qquad |10\rangle =
+\begin{bmatrix}0\\0\\1\\0\end{bmatrix} \qquad |11\rangle =
+\begin{bmatrix}0\\0\\0\\1\end{bmatrix}
+\end{displaymath}
+<p>
+Como tal, o estado do sistema é representado por uma matriz coluna com
+quatro números complexos:
+</p>
+\begin{displaymath}
+|\otherUpsilon\rangle = \begin{bmatrix}\otherUpsilon_1\\\otherUpsilon_2\\
+\otherUpsilon_3\\\otherUpsilon_4\end{bmatrix}
+\end{displaymath}
+</div>
+<div>
+<h3>Produto tensorial</h3>
+<p>
+Um caso particular do estado de 2 qbits é quando o estado do primeiro
+qbit for
+$|\otherPsi\rangle=\otherPsi_1|0\rangle+\otherPsi_2|1\rangle$,
+independente do estado
+$|\otherPhi\rangle=\otherPhi_1|0\rangle+\otherPhi_2|1\rangle$ do
+segundo qbit. Nesse caso, o estado do sistema dos dois qbits é igual
+ao produto tensorial dos dois kets:
+</p>
+\begin{displaymath}
+|\otherPhi\rangle|\otherPsi\rangle =
+\left(\otherPhi_1|0\rangle+\otherPhi_2|1\rangle\right)
+\left(\otherPsi_1|0\rangle+\otherPsi_2|1\rangle\right) =
+\otherPhi_1\otherPsi_1|00\rangle + \otherPhi_1\otherPsi_2|01\rangle +
+\otherPhi_2\otherPsi_1|10\rangle + \otherPhi_2\otherPsi_1|11\rangle
+\end{displaymath}
+<p>
+Observe-se que no produto tensorial entre kets o ket do primeiro qbit
+coloca-se na segunda posição e o segundo na primeira posição. O
+produto tensorial entre dois cbits (estados próprios) obtém se juntado
+os dois cbits num só ket.
+</p>
+<p>
+Na representação matricial, usaremos o operador $\otimes$ para o
+produto tensorial, para distingui-lo do produto matricial. O produto
+tensorial entre matrizes obtém-se multiplicando cada elemento da
+primeira matriz, pela segunda matriz:
+</p>
+\begin{displaymath}
+|\otherPhi\rangle|\otherPsi\rangle =
+\begin{bmatrix}\otherPhi_1\\ \otherPhi_2\end{bmatrix}\otimes
+\begin{bmatrix}\otherPsi_1\\ \otherPsi_2\end{bmatrix} =
+\begin{bmatrix}\otherPhi_1\otherPsi_1\\ \otherPhi_1\otherPsi_2\\
+\otherPhi_2\otherPsi_1\\ \otherPhi_2\otherPsi_2\end{bmatrix}
+\end{displaymath}
+<p>
+Observe-se que as condições de normalização dos kets
+$|\otherPsi\rangle$ e $|\otherPhi\rangle$, implicam a normalização do
+produto tensorial $|\otherPhi\rangle|\otherPsi\rangle$.
+</p>
+\begin{displaymath}
+|\otherPhi_1\otherPsi_1|^2 + |\otherPhi_1\otherPsi_2|^2 +
+|\otherPhi_2\otherPsi_1|^2 + |\otherPhi_2\otherPsi_2|^2 =
+\left(|\otherPhi_1|^2 + |\otherPhi_2|^2\right)
+\left(|\otherPsi_1|^2 + |\otherPsi_2|^2\right) = 1
+\end{displaymath}
+</div>
+<div>
+<h3>Operadores de 2 qbits </h3>
+<p>
+A figura mostra o diagrama de circuito para os operadores de 2
+qubits. A linha de cima representa o primeiro qbit e a linha de baixo
+o segundo. O estado dos qbits de entrada, $|\otherUpsilon\rangle$, é
+multiplicado por um operador unitário $\hat{U}$, produzindo o
+estado dos qbits de saída $|\varphi\rangle$. Na representação
+matricial, $\hat{U}$ é uma matriz complexa, unitária, com 4 linhas
+e quatro colunas.
+</p>
+<p class="clearfix">
+<img class="fig left" src="two_qbit_operator.png" alt="two qbits operator"
+     style="width:11.31em;margin: 0em 5em 0em 5em;">
+<span style="vertical-align: -1.3em">
+$|\varphi\rangle = \hat{U}|\otherUpsilon\rangle$
+</span>
+</p>
+<p>
+Um caso particular é a combinação de dois operadores de 1 qubit, cada um a atuar num dos dois qbits. A matriz correspondente seria o produto tensorial das duas matrices, 2 por 2, desses operadores de 1 qbit.
+</p>
+<p class="clearfix">
+<img class="fig left" src="two_one_qbit_operators.png"
+     alt="two one qbit operators"
+     style="width:10.86em;margin: 0em 5em 0em 5em;">
+<span style="vertical-align: -1.7em">
+$|\varphi\rangle = \left(\hat{F}\otimes\hat{G}\right)|\otherUpsilon\rangle$
+</span>
+</p>
+<p>
+Observe-se a ordem dos operadores no produto tensorial. Primeiro o
+operador que atua no segundo qbit e depois o que atua no primeiro
+qbit.
+</div>
+<div>
+<h3>Não controlado</h3>
+<p>
+O operador mais importante de 2 qubits, porque pode ser usado em
+combinação com operadores de um qbit para obter outros operadores de 2
+qbits, é o chamado <b>controlled-NOT</b> (não controlado), ou
+simplesmente cNOT. Existem dois desses operadores, designados de
+$\hat{C}_{12}$ e $\hat{C}_{21}$. Os diagramas de circuito e
+matrizes desses dois operadores são os seguintes:
+</p>
+<p class="clearfix">
+<img class="fig left" src="C12.png" alt="Controlled-NOT 12"
+     style="width:10.86em;margin: 1em 5em 1em 5em;">
+$\hat{C}_{12}=\begin{bmatrix}1&0&0&0\\0&0&0&1\\0&0&1&0\\0&1&0&0\end{bmatrix}$
+</p>
+<p class="clearfix">
+<img class="fig left" src="C21.png" alt="Controlled-NOT 21"
+     style="width:10.86em;margin: 1em 5em 1em 5em;">
+$\hat{C}_{21}=\begin{bmatrix}1&0&0&0\\0&1&0&0\\0&0&0&1\\0&0&1&0\end{bmatrix}$
+</p>
+<p>
+O efeito de $\hat{C}_{12}$ nos 4 estados próprios $|n_1n_0\rangle$
+($n_1$ e $n_0$ iguais a 0 ou 1) é o seguinte: o primeiro cbit (o
+último algarismo $n_0$) fica igual; o segundo cbit ficará igual se o
+primeiro cbit for igual a 0, mas mudará se o primeiro cbit for igual a
+1. Ou seja, o segundo cbit fica igual ao resultado dum ou exclusivo
+entre os dois cbits. O primeiro cbit, que não muda, diz-se que é o
+cbit de controlo, indicado por um ponto no diagrama. Ou seja,
+$\hat{C}_{12}|n_1n_0\rangle=|(n_0\oplus n_1)n_0\rangle$. No caso
+do operador $\hat{C}_{21}$ o cbit de controlo é o segundo e o seu
+efeito é $\hat{C}_{21}|n_1n_0\rangle=|n_1(n_0\oplus n_1)\rangle$.
+</p>
+</div>
+<div>
+<h3>Vários qbits</h3>
+<p>
+O estado de um sistema de $n$ qbits será uma combinação linear de
+$2^n$ estados próprios, representados pelos cbits com $n$ algarismos
+binários. Pode ser representado por uma matriz complexa de uma coluna
+e $2^n$ linhas. Os operadores que atuam nesses estados são
+representados por matrizes unitárias, quadradas, com $n$ linhas e $n$
+colunas.
+</p>
+</div>
+</section>
+<nav>
+<a href="./index.html">Índice</a>
+<a href="./slide07.html">Anterior</a>
+<a href="./slide09.html">Próxima</a>
+</nav>
+<footer>
+<div class="site-map">
+<div class="category">
+<ul>
+<li><a href="../../research.html">Research</a></li>
+<li><a href="../../teaching.html">Teaching</a></li>
+</ul>
+</div>
+<div class="category">
+<ul>
+<li><a href="../../software.html">Software</a></li>
+<li><a href="../../publications/index.html">Publications</a></li>
+</ul>
+</div>
+<div class="category">
+Talks
+</div>
+<div class="category">
+<a href="../../hobbies.html">Other interests</a>
+</div>
+</div>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a><br>
+&copy; 2020, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2020/11/03 11:49:56 UTC</span>
+</footer>
+</body>
+</html>

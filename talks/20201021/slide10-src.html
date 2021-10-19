@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à computação quântica - página 10</title>
+<link rel="stylesheet" href="../../css/villate-org.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+</head>
+<body>
+<aside>
+<a href="./index.html">Índice</a>
+<a href="./slide01.html">1</a>
+<a href="./slide02.html">2</a>
+<a href="./slide03.html">3</a>
+<a href="./slide04.html">4</a>
+<a href="./slide05.html">5</a>
+<a href="./slide06.html">6</a>
+<a href="./slide07.html">7</a>
+<a href="./slide08.html">8</a>
+<a href="./slide09.html">9</a>
+<span class="current">10</span>
+<a href="./slide11.html">11</a>
+<a href="./slide12.html">12</a>
+<a href="./slide13.html">13</a>
+<a href="./slide14.html">14</a>
+<a href="./slide15.html">15</a>
+<a href="./slide16.html">16</a>
+</aside>
+<header>
+<h1 id="title" class="center">Introdução à computação quântica</h1>
+<p class="center">
+Jaime Villate. Faculdade de Engenharia da Universidade do Porto
+</p>
+</header>
+<section>
+<h2 class="center">10. Entrelaçamento quântico</h2>
+<div>
+<h3>Dois qbits independentes</h3>
+<p>
+Num sistema de dois qbits independentes, o estado do primeiro qbit,
+$|\otherPsi\rangle=\otherPsi_1|0\rangle+\otherPsi_2|1\rangle$, é
+independentemente do estado do segundo qbit,
+$|\otherPhi\rangle=\otherPhi_1|0\rangle+\otherPhi_2|1\rangle$. A
+medição do estado dum dos dois qbits faz colapsar o estado desse qbit,
+mas não altera o estado do outro. O estado do sistema dos dois qbits
+independentes é o produto tensorial desses dois estados:
+</p>
+\begin{displaymath}
+|\otherPhi\rangle|\otherPsi\rangle =
+\begin{bmatrix}\otherPhi_1\\ \otherPhi_2\end{bmatrix}\otimes
+\begin{bmatrix}\otherPsi_1\\ \otherPsi_2\end{bmatrix} =
+\begin{bmatrix}\otherPhi_1\otherPsi_1\\ \otherPhi_1\otherPsi_2\\
+\otherPhi_2\otherPsi_1\\ \otherPhi_2\otherPsi_2\end{bmatrix}
+\end{displaymath}
+<p>
+Observe-se que o produto do primeiro e quarto elementos da matriz é
+igual ao produto do segundo e terceiro elementos. Por exemplo, se o
+estado dum sistema de 2 qbits for:
+</p>
+\begin{displaymath}
+|\otherUpsilon\rangle = \dfrac{1}{\sqrt{15}}
+\begin{bmatrix}-2\,\mathrm{i}\\2\sqrt{2}\,\mathrm{i}\\1\\-\sqrt{2}\end{bmatrix}
+\end{displaymath}
+<p>
+Como o produto do primeiro e quarto elementos da matriz é igual ao
+produto do segundo e terceiro elementos, conclui-se que se trata dum
+sistema de dois qbits independentes. É possível encontrar dois estados
+$|\otherPhi\rangle$ e $|\otherPsi\rangle$ tais que o produto tensorial
+deles será igual a $|\otherUpsilon\rangle$:
+</p>
+\begin{displaymath}
+|\otherPhi\rangle = \dfrac{1}{\sqrt{5}}
+\begin{bmatrix}2\\\mathrm{i}\end{bmatrix} \qquad
+|\otherPsi\rangle = \dfrac{1}{\sqrt{3}}
+\begin{bmatrix}-\mathrm{i}\\\sqrt{2}\,\mathrm{i}\end{bmatrix}
+\end{displaymath}
+</div>
+<div>
+<h3>Estados entrelaçados</h3>
+<p>
+O estado geral do sistema de 2 qbits é:
+</p>
+\begin{displaymath}
+|\otherUpsilon\rangle = \begin{bmatrix}\otherUpsilon_1\\\otherUpsilon_2\\
+\otherUpsilon_3\\\otherUpsilon_4\end{bmatrix}
+\end{displaymath}
+<p>
+Se $\otherUpsilon_1\,\otherUpsilon_4$ não for igual a
+$\otherUpsilon_2\,\otherUpsilon_3$, diz-se que é um estado
+entrelaçado. Os estados dos dois qbits não são independentes. A
+medição do estado dum dos dois qbits altera o estado do segundo qbit.
+</p>
+<p>
+Um exemplo de estado entrelaçado de dois qbits é o seguinte:
+</p>
+\begin{displaymath}
+|\otherUpsilon\rangle = \dfrac{1}{\sqrt{2}}
+\begin{bmatrix}1\\0\\0\\1\end{bmatrix} = \dfrac{1}{\sqrt{2}}
+\left(|00\rangle + |11\rangle\right)
+\end{displaymath}
+<p>
+Se a medição do primeiro qbit conduzir ao resultado $c_1=0$, o estado
+do sistema colapsa para $|00\rangle$ e, como tal, a medição do estado
+do segundo qbit dará necessariamente $c_2=0$. Mas se o resultado da
+primeira medição tivesse sido $c_1=1$, o estado colapsava para
+$|11\rangle$ e a medição do segundo qbit dava o resultado
+$c_2=1$. Observe-se que neste exemplo após ter medido um dos
+qbits é possível concluir qual será o resultado da segunda medição,
+sem ter de ser realizada.
+</p>
+</div>
+</section>
+<nav>
+<a href="./index.html">Índice</a>
+<a href="./slide09.html">Anterior</a>
+<a href="./slide11.html">Próxima</a>
+</nav>
+<footer>
+<div class="site-map">
+<div class="category">
+<ul>
+<li><a href="../../research.html">Research</a></li>
+<li><a href="../../teaching.html">Teaching</a></li>
+</ul>
+</div>
+<div class="category">
+<ul>
+<li><a href="../../software.html">Software</a></li>
+<li><a href="../../publications/index.html">Publications</a></li>
+</ul>
+</div>
+<div class="category">
+Talks
+</div>
+<div class="category">
+<a href="../../hobbies.html">Other interests</a>
+</div>
+</div>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a><br>
+&copy; 2020, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2021/02/03 15:50:32 UTC</span>
+</footer>
+</body>
+</html>

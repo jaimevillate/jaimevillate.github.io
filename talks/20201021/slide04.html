@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à computação quântica - página 4</title>
+<link rel="stylesheet" href="../../css/villate-org.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+</head>
+<body>
+<aside>
+<a href="./index.html">Índice</a>
+<a href="./slide01.html">1</a>
+<a href="./slide02.html">2</a>
+<a href="./slide03.html">3</a>
+<span class="current">4</span>
+<a href="./slide05.html">5</a>
+<a href="./slide06.html">6</a>
+<a href="./slide07.html">7</a>
+<a href="./slide08.html">8</a>
+<a href="./slide09.html">9</a>
+<a href="./slide10.html">10</a>
+<a href="./slide11.html">11</a>
+<a href="./slide12.html">12</a>
+<a href="./slide13.html">13</a>
+<a href="./slide14.html">14</a>
+<a href="./slide15.html">15</a>
+<a href="./slide16.html">16</a>
+</aside>
+<header>
+<h1 id="title" class="center">Introdução à computação quântica</h1>
+<p class="center">
+Jaime Villate. Faculdade de Engenharia da Universidade do Porto
+</p>
+</header>
+<section>
+<h2 class="center">4. Mecânica quântica</h2>
+<div>
+<h3>Estado de uma partícula</h3>
+<p>
+Função de onda <svg height='1.100016em' version='1.1' viewBox='-0.6 -8.99758 22.965 11.00016' width='2.2965em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.1998em'>
+<g id='eq1'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>Ψ</text>
+<text font-family='futr8r' font-size='10.9577' x='9.22938' y='0'>(</text>
+<text font-family='fourier-ml' font-size='10.9577' x='12.0089' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='13.0789' y='0'>r</text>
+<text font-family='futr8r' font-size='10.9577' x='19.0804' y='0'>)</text>
+</g>
+</svg>
+ com valores diferentes em todas as posições
+<svg height='0.972908em' version='1.1' viewBox='-1.67 -8.99758 8.12524 9.72908' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq2'>
+<text font-family='fourier-ml' font-size='10.9577' x='-1.07' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+ no espaço.
+</p>
+</div>
+<div>
+<h3>Posição da partícula</h3>
+<p>
+Pode estar em qualquer posição onde <svg height='0.889228em' version='1.1' viewBox='-0.6 -8.29228 9.83464 8.89228' width='0.983464em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq3'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>Ψ</text>
+</g>
+</svg>
+ seja diferente de zero. O
+estado não permite determinar onde está exatamente. Apenas a probabilidade de
+estar num ponto do espaço.
+</p>
+<div class="center">
+<svg height='1.43777em' version='1.1' viewBox='82.3725 69.0733 301.36 14.3777' width='30.136em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq4'>
+<text font-family='fourier-ms' font-size='10.9577' x='82.9725' y='80.0857'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='86.033' y='80.1993'>Ψ</text>
+<text font-family='futr8r' font-size='10.9577' x='95.2624' y='80.1993'>(</text>
+<text font-family='fourier-ml' font-size='10.9577' x='98.042' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='99.112' y='80.1993'>r</text>
+<text font-family='futr8r' font-size='10.9577' x='105.113' y='80.1993'>)</text>
+<text font-family='fourier-ms' font-size='10.9577' x='108.963' y='80.0857'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='112.024' y='75.2617'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='119.235' y='80.1993'>d</text>
+<text font-family='fourier-ml' font-size='10.9577' x='124.74' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='125.81' y='80.1993'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='133.858' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='143.817' y='80.1993'>p<tspan x='150.5'>r</tspan>
+<tspan x='154.709'>o</tspan>
+<tspan x='161.057'>b</tspan>
+<tspan x='167.632'>a</tspan>
+<tspan x='173.383'>b</tspan>
+<tspan x='179.958'>i</tspan>
+<tspan x='183.162'>l</tspan>
+<tspan x='186.234'>i</tspan>
+<tspan x='189.438'>d</tspan>
+<tspan x='196.014'>a</tspan>
+<tspan x='201.764'>d</tspan>
+<tspan x='208.339'>e</tspan>
+<tspan x='216.469'>d</tspan>
+<tspan x='223.044'>e</tspan>
+<tspan x='231.174'>e</tspan>
+<tspan x='236.829'>s</tspan>
+<tspan x='241.623'>t</tspan>
+<tspan x='245.4'>a</tspan>
+<tspan x='251.151'>r</tspan>
+<tspan x='257.906'>n</tspan>
+<tspan x='264.708'>a</tspan>
+<tspan x='272.933'>r</tspan>
+<tspan x='276.998'>e</tspan>
+<tspan x='282.653'>g</tspan>
+<tspan x='288.367'>i</tspan>
+<tspan x='291.571'>ã</tspan>
+<tspan x='297.322'>o</tspan>
+<tspan x='306.144'>d</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='311.65' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='312.72' y='80.1993'>r</text>
+<text font-family='futr8r' font-size='10.9577' x='321.196' y='80.1993'>n<tspan x='327.998'>a</tspan>
+<tspan x='336.224'>p</tspan>
+<tspan x='342.907'>o</tspan>
+<tspan x='349.255'>s</tspan>
+<tspan x='354.049'>i</tspan>
+<tspan x='357.253'>ç</tspan>
+<tspan x='362.704'>ã</tspan>
+<tspan x='368.455'>o</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='376.208' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='377.278' y='80.1993'>r</text>
+</g>
+</svg>
+</div>
+<p>
+Como tal, a função de onda deverá estar &quot;normalizada&quot;
+(norma igual a 1):
+</p>
+<div class="center">
+<svg height='3.40956em' version='1.1' viewBox='183.242 66.1387 96.3675 34.0956' width='9.63675em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq5'>
+<text font-family='fourier-mex' font-size='10.9987' x='194.126' y='66.7497'></text>
+<text font-family='futr8r' font-size='8.21825' x='183.842' y='97.7441'>e<tspan x='188.083'>s</tspan>
+<tspan x='191.679'>p</tspan>
+<tspan x='196.691'>a</tspan>
+<tspan x='201.004'>ç</tspan>
+<tspan x='205.093'>o</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='213.376' y='81.9301'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='216.437' y='82.0437'>Ψ</text>
+<text font-family='futr8r' font-size='10.9577' x='225.666' y='82.0437'>(</text>
+<text font-family='fourier-ml' font-size='10.9577' x='228.446' y='81.8643'></text>
+<text font-family='futri8r' font-size='10.9577' x='229.516' y='82.0437'>r</text>
+<text font-family='futr8r' font-size='10.9577' x='235.517' y='82.0437'>)</text>
+<text font-family='fourier-ms' font-size='10.9577' x='239.367' y='81.9301'>|</text>
+<text font-family='futr8r' font-size='8.21825' x='242.427' y='77.1061'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='249.639' y='82.0437'>d</text>
+<text font-family='fourier-ml' font-size='10.9577' x='255.144' y='81.8643'></text>
+<text font-family='futri8r' font-size='10.9577' x='256.214' y='82.0437'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='264.261' y='82.0437'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='274.221' y='82.0437'>1</text>
+</g>
+</svg>
+</div>
+</div>
+<div>
+<h3>Equação de Schrödinger</h3>
+<p>
+No caso do átomo de hidrogénio:
+</p>
+<div class="center">
+<svg height='2.89899em' version='1.1' viewBox='170.772 66.0846 124.112 28.9899' width='12.4112em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq6'>
+<text font-family='fourier-ms' font-size='10.9577' x='171.372' y='84.7063'>−<tspan x='183.424' y='76.6127'>ħ</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='190.298' y='72.273'>2</text>
+<rect height='0.637912' width='17.6312' x='180.482' y='81.291'/>
+<text font-family='futr8r' font-size='10.9577' x='180.482' y='92.9075'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='187.485' y='92.9075'>m</text>
+<text font-family='fourier-ms' font-size='10.9577' x='199.309' y='84.7063'>∇</text>
+<text font-family='futr8r' font-size='8.21825' x='207.223' y='79.7688'>2</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='213.266' y='84.7063'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.956' y='84.7063'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='234.527' y='76.6127'>k</text>
+<text font-family='futri8r' font-size='10.9577' x='242.523' y='76.6127'>e</text>
+<text font-family='futr8r' font-size='8.21825' x='248.309' y='72.273'>2</text>
+<rect height='0.637912' width='18.6553' x='234.527' y='81.291'/>
+<text font-family='fourier-ms' font-size='10.9577' x='237.794' y='92.9075'>|</text>
+<text font-family='fourier-ml' font-size='10.9577' x='239.784' y='92.7282'></text>
+<text font-family='futri8r' font-size='10.9577' x='240.854' y='92.9075'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='246.856' y='92.9075'>|</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='255.547' y='84.7063'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='266.822' y='84.7063'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='276.782' y='84.7063'>E</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='285.65' y='84.7063'>Ψ</text>
+</g>
+</svg>
+</div>
+</div>
+<p>
+<svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 7.53353 9.46208' width='0.753353em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0684em'>
+<g id='eq7'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>ħ</text>
+</g>
+</svg>
+ = constante de Planck. <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.7827 8.7827' width='0.87827em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq8'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+</g>
+</svg>
+ = energia mecânica do eletrão.
+</p>
+<p>
+Outra forma de escrever a equação:
+</p>
+<div class="center">
+<svg height='2.89899em' version='1.1' viewBox='75.1809 78.0397 315.686 28.9899' width='31.5686em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq9'>
+<text font-family='futr8r' font-size='10.9577' x='79.1283' y='94.2286'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='75.7809' y='96.6615'>H</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='86.6096' y='96.6615'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='97.8846' y='96.6615'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='107.845' y='96.6615'>E</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='116.713' y='96.6615'>Ψ</text>
+<text font-family='futr8r' font-size='10.9577' x='171.73' y='94.2286'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='168.383' y='96.6615'>H</text>
+<text font-family='fourier-ms' font-size='10.9577' x='180.088' y='96.6615'>=<tspan x='190.048'>−</tspan>
+<tspan x='202.1' y='88.5678'>ħ</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='208.974' y='84.2281'>2</text>
+<rect height='0.637912' width='17.6312' x='199.158' y='93.2462'/>
+<text font-family='futr8r' font-size='10.9577' x='199.158' y='104.863'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='206.161' y='104.863'>m</text>
+<text font-family='fourier-ms' font-size='10.9577' x='217.985' y='96.6615'>∇</text>
+<text font-family='futr8r' font-size='8.21825' x='225.899' y='91.724'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='232.234' y='96.6615'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='242.805' y='88.5678'>k</text>
+<text font-family='futri8r' font-size='10.9577' x='250.8' y='88.5678'>e</text>
+<text font-family='futr8r' font-size='8.21825' x='256.586' y='84.2281'>2</text>
+<rect height='0.637912' width='18.6553' x='242.805' y='93.2462'/>
+<text font-family='fourier-ms' font-size='10.9577' x='246.071' y='104.863'>|</text>
+<text font-family='fourier-ml' font-size='10.9577' x='248.062' y='104.683'></text>
+<text font-family='futri8r' font-size='10.9577' x='249.132' y='104.863'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='255.133' y='104.863'>|<tspan x='264.701' y='96.6615'>=</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='274.661' y='96.6615'>o<tspan x='281.009'>p</tspan>
+<tspan x='287.692'>e</tspan>
+<tspan x='293.347'>r</tspan>
+<tspan x='297.519'>a</tspan>
+<tspan x='303.27'>d</tspan>
+<tspan x='309.845'>o</tspan>
+<tspan x='316.193'>r</tspan>
+<tspan x='322.948'>h</tspan>
+<tspan x='329.619'>a</tspan>
+<tspan x='335.369'>m</tspan>
+<tspan x='345.519'>i</tspan>
+<tspan x='348.723'>l</tspan>
+<tspan x='351.796'>t</tspan>
+<tspan x='355.574'>o</tspan>
+<tspan x='361.922'>n</tspan>
+<tspan x='368.724'>i</tspan>
+<tspan x='371.928'>a</tspan>
+<tspan x='377.679'>n</tspan>
+<tspan x='384.481'>o</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+<svg height='1.15224em' version='1.1' viewBox='-0.241348 -10.9224 10.97424 11.5224' width='1.097424em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq10'>
+<text font-family='futr8r' font-size='10.9577' x='3.70609' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>H</text>
+</g>
+</svg>
+ é a energia cinética mais a energia potencial. Comparando
+com a energia cinética na mecânica clássica, conclui-se que na
+mecânica quântica a quantidade de movimento é o operador:
+</p>
+<div class="center">
+<svg height='1.4467em' version='1.1' viewBox='212.813 68.984 40.3356 14.467' width='4.03356em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq11'>
+<text font-family='futr8r' font-size='10.9577' x='215.954' y='80.0199'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='213.413' y='80.1993'>p</text>
+<text font-family='fourier-ms' font-size='10.9577' x='222.787' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='232.747' y='80.1993'>i</text>
+<text font-family='fourier-ms' font-size='10.9577' x='237.12' y='80.1993'>ħ</text>
+<text font-family='fourier-ml' font-size='10.9577' x='244.452' y='77.8022'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='245.163' y='80.1993'>∇</text>
+</g>
+</svg>
+</div>
+<p>
+Como tal, a função de onda pode ter valores complexos.
+</p>
+<p>
+Qualquer outro sistema físico com função hamiltoniana clássica <svg height='0.87827em' version='1.1' viewBox='-0.241348 -8.1827 10.97424 8.7827' width='1.097424em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq12'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>H</text>
+</g>
+</svg>
+
+conduz ao respetivo operador <svg height='1.15224em' version='1.1' viewBox='-0.241348 -10.9224 10.97424 11.5224' width='1.097424em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq13'>
+<text font-family='futr8r' font-size='10.9577' x='3.70609' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>H</text>
+</g>
+</svg>
+ e a uma equação de Schrödinger
+<svg height='1.15224em' version='1.1' viewBox='-0.241348 -10.9224 50.7663 11.5224' width='5.07663em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq14'>
+<text font-family='futr8r' font-size='10.9577' x='3.70609' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>H</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='11.1873' y='0'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='22.4623' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='32.4223' y='0'>E</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='41.2903' y='0'>Ψ</text>
+</g>
+</svg>
+.
+</p>
+<p>
+A mecânica quântica tem sido aplicada com grande sucesso em muitos
+sistemas físicos (física atómica, eletromagnetismo, termodinâmica,
+teoria dos gases, &hellip;).
+</section>
+<nav>
+<a href="./index.html">Índice</a>
+<a href="./slide03.html">Anterior</a>
+<a href="./slide05.html">Próxima</a>
+</nav>
+<footer>
+<div class="site-map">
+<div class="category">
+<ul>
+<li><a href="../../research.html">Research</a></li>
+<li><a href="../../teaching.html">Teaching</a></li>
+</ul>
+</div>
+<div class="category">
+<ul>
+<li><a href="../../software.html">Software</a></li>
+<li><a href="../../publications/index.html">Publications</a></li>
+</ul>
+</div>
+<div class="category">
+Talks
+</div>
+<div class="category">
+<a href="../../hobbies.html">Other interests</a>
+</div>
+</div>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a><br>
+&copy; 2020, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2020/10/29 18:25:24 UTC</span>
+</footer>
+</body>
+</html>

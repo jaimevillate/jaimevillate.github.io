@@ -1,0 +1,24 @@
+0.1 0.5 0.1 sethsbcolor
+104 600 moveto 4 60 0.2 cylinder
+0.3 setlinewidth newpath
+104 600 4 0 360 arc gsave 0.1 0.5 0.8 sethsbcolor fill grestore stroke
+104 660 4 0 360 arc gsave 0.1 0.5 0.8 sethsbcolor fill grestore stroke
+
+0 0.4 0 setrgbcolor
+104 600 2 0 360 arc fill 102 662 moveto 4 -4 rlineto 0 4 rmoveto
+-4 -4 rlineto 0.8 setlinewidth stroke
+
+0.4 0 0.4 setrgbcolor 0.8 setlinewidth
+44 630 moveto 120 0 rlineto 62 630 180 tip stroke 142 630 189 tip stroke
+104 670 20 0 360 arc stroke 106 689.5 0 tip stroke
+104 709 70 3 copy 225 239 arc currentpoint 149 tip 3 copy 239 299 arc
+currentpoint 209 tip 299 315 arc stroke 
+104 590 20 0 360 arc stroke 106 570.5 0 tip stroke
+104 551 70 3 copy 135 121 arcn currentpoint 211 tip 3 copy 121 61 arcn
+currentpoint 151 tip 61 45 arcn stroke
+
+0 setgray 12 /Times-Roman font
+50 635 moveto (N) show 156 635 moveto (S) show
+
+showpage
+

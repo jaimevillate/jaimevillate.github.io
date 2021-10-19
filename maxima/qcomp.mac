@@ -1,0 +1,46 @@
+/*
+   Quantum Computing Simulator for Maxima
+   Jaime Villate. University of Porto
+   2020-10-21
+   Licença GPL
+*/
+   
+tprod([ops]) := lreduce(kronecker_product, ops)$
+
+I: ident(2)$
+X: matrix([0,1],[1,0])$
+Y: matrix([0,-%i],[%i,0])$
+Z: matrix([1,0],[0,-1])$
+H: matrix([1,1],[1,-1])/sqrt(2)$
+C12: matrix([1,0,0,0],[0,1,0,0],[0,0,0,1],[0,0,1,0])$
+C21: matrix([1,0,0,0],[0,0,0,1],[0,0,1,0],[0,1,0,0])$
+
+bra([x]):=matrix(conjugate(x)/sqrt(apply("+",map(lambda([z],cabs(z)^2),x))))$
+ket([x]):=transpose(matrix(x/sqrt(apply("+",map(lambda([z],cabs(z)^2),x)))))$
+
+m(x):=block([r:random(1.0)], if(r<float(cabs(x[1][1])^2))
+  then (x[1][1]:1, x[2][1]:0, 0)
+  else (x[1][1]:0, x[2][1]:1, 1))$
+
+m1(x):=block([r:random(1.0),u:apply("+",map(lambda([z],cabs(z)^2),[x[1][1],x[2][1]]))],
+  if(r<float(u))
+  then (x[1][1]:radcan(x[1][1]/sqrt(u)),x[2][1]:radcan(x[2][1]/sqrt(u)),x[3][1]:0,x[4][1]:0,0)
+  else (x[1][1]:0,x[2][1]:0,x[3][1]:radcan(x[3][1]/sqrt(1-u)),x[4][1]:radcan(x[4][1]/sqrt(1-u)),1))$
+
+m2(x):=block([r:random(1.0),u:apply("+",map(lambda([z],cabs(z)^2),[x[1][1],x[3][1]]))],
+  if(r<float(u))
+  then (x[1][1]:radcan(x[1][1]/sqrt(u)),x[2][1]:0,x[3][1]:radcan(x[3][1]/sqrt(u)),x[4][1]:0,0)
+  else (x[1][1]:0,x[2][1]:radcan(x[2][1]/sqrt(1-u)),x[3][1]:0,x[4][1]:radcan(x[4][1]/sqrt(1-u)),1))$
+
+cket([n]) := block([m:n[1],u:makelist(0,2^length(n))],
+  for i:2 thru length(n) do m:m*2+n[i],
+  u[m+1]:1,
+  transpose(matrix(u)));
+
+lc(x):=block([n:length(x),m],
+  m:round(float(log(n)/log(2))),
+  for i:1 thru n
+  do if (x[i][1] # 0)
+    then if (x[i][1] = 1)
+      then printf(true," |~v,'0b>~%",m,i-1)
+      else printf(true," ~a |~v,'0b>~%",x[i][1],m,i-1))$

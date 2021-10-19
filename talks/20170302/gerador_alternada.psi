@@ -1,0 +1,153 @@
+/displace {2 copy cos mul 5 4 roll add 4 1 roll sin mul add} def
+
+/isoarc1 {dup 4 1 roll 2 {4 copy} repeat
+3 sqrt div 60 displace 3 2 roll 3 sqrt div 60 120 arc
+330 displace 3 2 roll 3 sqrt mul 120 180 arc
+3 sqrt div 240 displace 3 2 roll 3 sqrt div 180 240 arc} def
+
+/isoarcn1 {dup 4 1 roll 2 {4 copy} repeat
+3 sqrt div 240 displace 3 2 roll 3 sqrt div 240 180 arcn
+330 displace 3 2 roll 3 sqrt mul 180 120 arcn
+3 sqrt div 60 displace 3 2 roll 3 sqrt div 120 60 arcn} def
+
+/isoarc2 {dup 4 1 roll 2 {4 copy} repeat
+3 sqrt div 240 displace 3 2 roll 3 sqrt div 240 300 arc
+150 displace 3 2 roll 3 sqrt mul 300 360 arc
+3 sqrt div 60 displace 3 2 roll 3 sqrt div 0 60 arc} def
+
+/isoarcn2 {dup 4 1 roll 2 {4 copy} repeat
+3 sqrt div 60 displace 3 2 roll 3 sqrt div 60 0 arcn
+150 displace 3 2 roll 3 sqrt mul 360 300 arcn
+3 sqrt div 60 displace 3 2 roll 3 sqrt div 300 240 arcn} def
+
+/Eixo {
+/d exch def
+0.52 0.02 0.1 sethsbcolor
+moveto currentpoint 2.5 3 sqrt div 2.5 rmoveto
+{d 330 cartesian rlineto}{currentpoint 2.5 sub exch 2.5 3 sqrt div sub exch
+2.5 isoarc1}1 0.7 shadetile
+moveto currentpoint -2.5 3 sqrt div -2.5 rmoveto 
+{d 330 cartesian rlineto}{currentpoint 2.5 add exch 2.5 3 sqrt div add exch
+2.5 isoarcn1}1 0.7 shadetile
+0 setgray
+newpath 2 copy 2.5 isoarc1 stroke d 330 displace
+2 copy 2.5 isoarc1 2 copy 2.5 isoarc2 stroke
+gsave 0.52 0.02 0.7 sethsbcolor fill grestore stroke
+} def
+
+/Cabo {
+/d exch def
+0.097 0.95 0.1 sethsbcolor
+moveto currentpoint 1 3 sqrt div 1 rmoveto
+{d 330 cartesian rlineto}{currentpoint 1 sub exch 1 3 sqrt div sub exch
+1 isoarc1}1 0.7 shadetile
+moveto currentpoint -1 3 sqrt div -1 rmoveto 
+{d 330 cartesian rlineto}{currentpoint 1 add exch 1 3 sqrt div add exch
+1 isoarcn1}1 0.7 shadetile
+0 setgray
+newpath 2 copy 1 isoarc1 stroke d 330 displace
+2 copy 1 isoarc1 2 copy 1 isoarc2 stroke
+gsave 0.097 0.95 0.7 sethsbcolor fill grestore stroke
+} def
+
+/Anel {
+newpath 2 copy 15 isoarc1 2 copy 10 330 displace 15 isoarcn1 closepath
+0.6 0.24 0.8 sethsbcolor fill 0.1 Setgray
+moveto currentpoint 15 3 sqrt div 15 rmoveto
+{10 330 cartesian rlineto}{currentpoint 15 sub exch 15 3 sqrt div sub exch
+15 isoarc1}1 0.4 shadetile
+moveto currentpoint -15 3 sqrt div -15 rmoveto 
+{10 330 cartesian rlineto}{currentpoint 15 add exch 15 3 sqrt div add exch
+15 isoarcn1}1 0.4 shadetile
+0 setgray
+newpath 2 copy 15 isoarc1 stroke
+10 330 displace 2 copy 15 isoarc1 2 copy 15 isoarc2
+gsave 0.6 0.24 0.8 sethsbcolor fill grestore stroke
+} def
+
+/Escova {
+10 150 displace moveto currentpoint -5 3 sqrt mul -15 rmoveto
+0 -25 rlineto 10 330 cartesian rlineto currentpoint 0 25 rlineto
+closepath gsave 0.083 0.9 0.5 sethsbcolor fill grestore stroke
+moveto 0 25 rlineto 10 330 displace 2 copy 15
+dup 4 1 roll 4 copy 3 sqrt div 240 displace 3 2 roll 3 sqrt div
+240 300 arc 150 displace 3 2 roll 3 sqrt mul 300 330 arc
+0 -25 rlineto closepath
+gsave 0.083 0.9 0.7 sethsbcolor fill grestore stroke
+} def
+
+/Suporte {
+2 copy 7
+dup 4 1 roll 4 copy 3 sqrt div 60 displace 3 2 roll 3 sqrt div
+60 120 arc 330 displace 3 2 roll 3 sqrt mul 120 180 arc
+0 -35 rlineto 5 330 cartesian rlineto
+5 330 displace 2 copy 7
+dup 4 1 roll 4 copy 330 displace 3 2 roll 3 sqrt mul 180 120 arcn
+3 sqrt div 60 displace 3 2 roll 3 sqrt div 120 60 arcn
+closepath gsave 0.142 0.6 0.7 sethsbcolor fill grestore stroke
+2 copy 7
+dup 4 1 roll 4 copy 3 sqrt div 60 displace 3 2 roll 3 sqrt div
+0 120 arc 330 displace 3 2 roll 3 sqrt mul 120 180 arc
+0 -35 rlineto 14 30 cartesian rlineto closepath
+gsave 0.142 0.6 0.8 sethsbcolor fill grestore stroke
+2 copy 3.5 isoarc1 2 copy 3.5 isoarc2 fill
+} def
+
+% Base
+0.3 setlinewidth
+115 8.66 sub 545 moveto 220 330 cartesian rlineto 80 30 cartesian rlineto
+0 5 rlineto 80 210 cartesian rlineto 220 150 cartesian rlineto closepath
+gsave 0.142 0.6 0.8 sethsbcolor fill grestore stroke
+
+115 8.66 sub 550 moveto 220 330 cartesian rlineto 80 30 cartesian rlineto
+220 150 cartesian rlineto closepath gsave 0.142 0.6 0.95 sethsbcolor fill
+grestore stroke
+0.5 setlinewidth
+
+150 600 Suporte 40 Eixo
+% Bobina
+moveto 0 10 rmoveto 20 210 cartesian rmoveto
+40 30 cartesian rlineto currentpoint 0 -20 rlineto 40 210 cartesian rlineto
+closepath gsave 0.097 0.95 0.5 sethsbcolor fill grestore
+5
+  {0 -2 rmoveto 40 30 cartesian rlineto 0 -2 rmoveto 40 210 cartesian rlineto}
+repeat stroke moveto
+80 -30 cartesian rlineto currentpoint 0 -20 rlineto 80 150 cartesian rlineto
+closepath gsave 0.097 0.95 0.5 sethsbcolor fill grestore
+5
+  {0 -2 rmoveto 80 -30 cartesian rlineto 0 -2 rmoveto 80 150 cartesian rlineto}
+repeat stroke
+gsave
+  0.4 0 0.4 setrgbcolor 1 setlinewidth 2 copy moveto
+  10 150 cartesian rmoveto 80 230 cartesian rmoveto
+  120 50 arrow 20 150 cartesian rmoveto 120 230 cartesian rmoveto
+  120 50 arrow 20 150 cartesian rmoveto 120 230 cartesian rmoveto
+  120 50 arrow 20 150 cartesian rmoveto 120 230 cartesian rmoveto
+  120 50 arrow stroke
+grestore
+moveto
+40 210 cartesian rlineto currentpoint 0 -20 rlineto 40 30 cartesian rlineto
+closepath gsave 0.097 0.95 0.6 sethsbcolor fill grestore
+5
+  {0 -2 rmoveto 40 210 cartesian rlineto 0 -2 rmoveto 40 30 cartesian rlineto}
+repeat stroke moveto currentpoint
+80 150 cartesian rlineto 0 -20 rlineto 80 -30 cartesian rlineto closepath
+closepath gsave 0.097 0.95 0.6 sethsbcolor fill grestore
+5
+  {0 -2 rmoveto 80 150 cartesian rlineto 0 -2 rmoveto 80 -30 cartesian rlineto}
+repeat stroke
+
+15 30 displace 10 270 displace 20 Cabo 20 150 displace 10 30 displace 20 Cabo
+20 150 displace 5 210 displace
+
+20 Eixo Anel Escova 10 330 displace Anel Escova 20 Eixo Suporte 5 Eixo pop pop
+
+1 setlinewidth 171 587 10 isoarcn1 currentpoint 0 tip stroke
+
+12 /Times-Roman Font
+260 465 moveto (Escovas) show 292 546 moveto (Anéis colectores) show
+141 548 moveto (Bobina) show
+262 606 moveto (Campo magnético externo) show
+175 603 moveto ([w]) Show
+
+showpage

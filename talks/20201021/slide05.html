@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à computação quântica - página 5</title>
+<link rel="stylesheet" href="../../css/villate-org.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+</head>
+<body>
+<aside>
+<a href="./index.html">Índice</a>
+<a href="./slide01.html">1</a>
+<a href="./slide02.html">2</a>
+<a href="./slide03.html">3</a>
+<a href="./slide04.html">4</a>
+<span class="current">5</span>
+<a href="./slide06.html">6</a>
+<a href="./slide07.html">7</a>
+<a href="./slide08.html">8</a>
+<a href="./slide09.html">9</a>
+<a href="./slide10.html">10</a>
+<a href="./slide11.html">11</a>
+<a href="./slide12.html">12</a>
+<a href="./slide13.html">13</a>
+<a href="./slide14.html">14</a>
+<a href="./slide15.html">15</a>
+<a href="./slide16.html">16</a>
+</aside>
+<header>
+<h1 id="title" class="center">Introdução à computação quântica</h1>
+<p class="center">
+Jaime Villate. Faculdade de Engenharia da Universidade do Porto
+</p>
+</header>
+<section>
+<h2 class="center">5. Sumário de mecânica quântica</h2>
+<div>
+<h3>Valores e funções próprias</h3>
+<p>
+A equação de Schrödinger
+</p>
+<div class="center">
+<svg height='1.15224em' version='1.1' viewBox='207.625 69.2769 50.7663 11.5224' width='5.07663em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq1'>
+<text font-family='futr8r' font-size='10.9577' x='211.572' y='77.7664'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='208.225' y='80.1993'>H</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='219.053' y='80.1993'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='230.328' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='240.288' y='80.1993'>E</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='249.156' y='80.1993'>Ψ</text>
+</g>
+</svg>
+</div>
+<p>
+é um exemplo de problema de <b>valores próprios</b>
+(<i>eigenvalues</i>). Existem soluções apenas para alguns valores
+reais de <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 11.3324 10.67459' width='1.13324em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+<text font-family='futri8r' font-size='8.21825' x='7.14919' y='1.79326'>i</text>
+</g>
+</svg>
+ (<svg height='0.916622em' version='1.1' viewBox='-0.6 -8.43473 5.17763 9.16622' width='0.517763em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq3'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>i</text>
+</g>
+</svg>
+ = 0, 1, 2, &hellip;), que constituim o espetro de
+niveis de energias do sistema. Cada possível valor da energia <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 11.3324 10.67459' width='1.13324em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq4'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+<text font-family='futri8r' font-size='8.21825' x='7.14919' y='1.79326'>i</text>
+</g>
+</svg>
+
+chama-se valor próprio, do operador <svg height='1.15224em' version='1.1' viewBox='-0.241348 -10.9224 10.97424 11.5224' width='1.097424em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq5'>
+<text font-family='futr8r' font-size='10.9577' x='3.70609' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>H</text>
+</g>
+</svg>
+, e a respetiva função
+(ou funções), <svg height='1.078416em' version='1.1' viewBox='-0.6 -8.29228 12.8149 10.78416' width='1.28149em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq6'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>Ψ</text>
+<text font-family='futri8r' font-size='8.21825' x='8.63163' y='1.79326'>i</text>
+</g>
+</svg>
+ é uma função própria de <svg height='1.15224em' version='1.1' viewBox='-0.241348 -10.9224 10.97424 11.5224' width='1.097424em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq7'>
+<text font-family='futr8r' font-size='10.9577' x='3.70609' y='-2.43288'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>H</text>
+</g>
+</svg>
+.
+</p>
+</div>
+<div>
+<h3>Observáveis</h3>
+</div>
+<div>
+<h3>Domínio da quantidade de movimento</h3>
+</div>
+<div>
+<h3>Representação geral do estado</h3>
+</div>
+</section>
+<nav>
+<a href="./index.html">Índice</a>
+<a href="./slide04.html">Anterior</a>
+<a href="./slide06.html">Próxima</a>
+</nav>
+<footer>
+<div class="site-map">
+<div class="category">
+<ul>
+<li><a href="../../research.html">Research</a></li>
+<li><a href="../../teaching.html">Teaching</a></li>
+</ul>
+</div>
+<div class="category">
+<ul>
+<li><a href="../../software.html">Software</a></li>
+<li><a href="../../publications/index.html">Publications</a></li>
+</ul>
+</div>
+<div class="category">
+Talks
+</div>
+<div class="category">
+<a href="../../hobbies.html">Other interests</a>
+</div>
+</div>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a><br>
+&copy; 2020, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2020/10/29 18:25:34 UTC</span>
+</footer>
+</body>
+</html>

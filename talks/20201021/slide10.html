@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à computação quântica - página 10</title>
+<link rel="stylesheet" href="../../css/villate-org.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+</head>
+<body>
+<aside>
+<a href="./index.html">Índice</a>
+<a href="./slide01.html">1</a>
+<a href="./slide02.html">2</a>
+<a href="./slide03.html">3</a>
+<a href="./slide04.html">4</a>
+<a href="./slide05.html">5</a>
+<a href="./slide06.html">6</a>
+<a href="./slide07.html">7</a>
+<a href="./slide08.html">8</a>
+<a href="./slide09.html">9</a>
+<span class="current">10</span>
+<a href="./slide11.html">11</a>
+<a href="./slide12.html">12</a>
+<a href="./slide13.html">13</a>
+<a href="./slide14.html">14</a>
+<a href="./slide15.html">15</a>
+<a href="./slide16.html">16</a>
+</aside>
+<header>
+<h1 id="title" class="center">Introdução à computação quântica</h1>
+<p class="center">
+Jaime Villate. Faculdade de Engenharia da Universidade do Porto
+</p>
+</header>
+<section>
+<h2 class="center">10. Entrelaçamento quântico</h2>
+<div>
+<h3>Dois qbits independentes</h3>
+<p>
+Num sistema de dois qbits independentes, o estado do primeiro qbit,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.2858708em' height='1.0762247em' viewBox='-0.6 -8.368984 92.858708 10.762247' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq1'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='3.060518' y='0'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.2899' y='0'>〉<tspan x='18.61546'>=</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='28.575391' y='0'>Ψ</text>
+<text font-family='futr8r' font-size='8.218248' x='37.207024' y='1.793263'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='42.080745' y='0'>|</text>
+<text font-family='futr8r' font-size='10.957664' x='45.141263' y='0'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='50.975384' y='0'>〉<tspan x='56.716482'>+</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='66.091949' y='0'>Ψ</text>
+<text font-family='futr8r' font-size='8.218248' x='74.723582' y='1.793263'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='79.597304' y='0'>|</text>
+<text font-family='futr8r' font-size='10.957664' x='82.657822' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='88.491943' y='0'>〉</text>
+</g>
+</svg>
+, é
+independentemente do estado do segundo qbit,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.0682888em' height='1.0762247em' viewBox='-0.6 -8.368984 90.682888 10.762247' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq2'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='3.060518' y='0'>Φ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.166127' y='0'>〉<tspan x='17.491688'>=</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='27.451618' y='0'>Φ</text>
+<text font-family='futr8r' font-size='8.218248' x='35.557227' y='1.793263'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='40.430949' y='0'>|</text>
+<text font-family='futr8r' font-size='10.957664' x='43.491467' y='0'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='49.325588' y='0'>〉<tspan x='55.066686'>+</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='64.442153' y='0'>Φ</text>
+<text font-family='futr8r' font-size='8.218248' x='72.547762' y='1.793263'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='77.421484' y='0'>|</text>
+<text font-family='futr8r' font-size='10.957664' x='80.482002' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='86.316123' y='0'>〉</text>
+</g>
+</svg>
+. A
+medição do estado dum dos dois qbits faz colapsar o estado desse qbit,
+mas não altera o estado do outro. O estado do sistema dos dois qbits
+independentes é o produto tensorial desses dois estados:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='15.5665652em' height='6.0516552em' viewBox='153.667003 66.160662 155.665652 60.516552' class='display'>
+<g id='eq3'>
+<text font-family='fourier-ms' font-size='10.957664' x='154.267003' y='99.542928'>|</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='157.327521' y='99.542928'>Φ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='165.433131' y='99.542928'>〉|</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='172.773596' y='99.542928'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='182.002978' y='99.542928'>〉<tspan x='188.328539'>=</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.998733' x='198.288469' y='83.687879'></text>
+<text font-family='fourier-mlit' font-size='10.957664' x='204.093376' y='92.112768'>Φ</text>
+<text font-family='futr8r' font-size='8.218248' x='212.198986' y='93.906031'>1</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='204.093376' y='106.558581'>Φ</text>
+<text font-family='futr8r' font-size='8.218248' x='212.198986' y='108.351844'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='217.072704' y='83.687879'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='224.33876' y='99.542928'>⊗</text>
+<text font-family='fourier-mex' font-size='10.998733' x='233.714228' y='83.687879'></text>
+<text font-family='fourier-mlit' font-size='10.957664' x='239.519135' y='92.112768'>Ψ</text>
+<text font-family='futr8r' font-size='8.218248' x='248.150768' y='93.906031'>1</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='239.519135' y='106.558581'>Ψ</text>
+<text font-family='futr8r' font-size='8.218248' x='248.150768' y='108.351844'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='253.02449' y='83.687879'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='260.875009' y='99.542928'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='270.83494' y='67.189613'>⎡<tspan x='270.83494' y='86.547593'>⎢</tspan>
+<tspan x='270.83494' y='93.1469'>⎢</tspan>
+<tspan x='270.83494' y='99.746206'>⎢</tspan>
+<tspan x='270.83494' y='106.785437'>⎣</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='278.167443' y='77.666955'>Φ</text>
+<text font-family='futr8r' font-size='8.218248' x='286.273053' y='79.460218'>1</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='291.146775' y='77.666955'>Ψ</text>
+<text font-family='futr8r' font-size='8.218248' x='299.778407' y='79.460218'>1</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='278.167443' y='92.112768'>Φ</text>
+<text font-family='futr8r' font-size='8.218248' x='286.273053' y='93.906031'>1</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='291.146775' y='92.112768'>Ψ</text>
+<text font-family='futr8r' font-size='8.218248' x='299.778407' y='93.906031'>2</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='278.167443' y='106.558581'>Φ</text>
+<text font-family='futr8r' font-size='8.218248' x='286.273053' y='108.351844'>2</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='291.146775' y='106.558581'>Ψ</text>
+<text font-family='futr8r' font-size='8.218248' x='299.778407' y='108.351844'>1</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='278.167443' y='121.004394'>Φ</text>
+<text font-family='futr8r' font-size='8.218248' x='286.273053' y='122.797657'>2</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='291.146775' y='121.004394'>Ψ</text>
+<text font-family='futr8r' font-size='8.218248' x='299.778407' y='122.797657'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='304.652125' y='67.189613'>⎤<tspan x='304.652125' y='86.547593'>⎥</tspan>
+<tspan x='304.652125' y='93.1469'>⎥</tspan>
+<tspan x='304.652125' y='99.746206'>⎥</tspan>
+<tspan x='304.652125' y='106.785437'>⎦</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+Observe-se que o produto do primeiro e quarto elementos da matriz é
+igual ao produto do segundo e terceiro elementos. Por exemplo, se o
+estado dum sistema de 2 qbits for:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.9457941em' height='6.0516552em' viewBox='186.770846 66.160662 89.457941 60.516552' class='display'>
+<g id='eq4'>
+<text font-family='fourier-ms' font-size='10.957664' x='187.370846' y='99.542928'>|</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='190.431363' y='99.542928'>Υ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='198.345681' y='99.542928'>〉<tspan x='204.671242'>=</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='223.322563' y='91.449286'>1</text>
+<rect x='215.826686' y='96.127589' height='.637912' width='20.825864'/>
+<text font-family='fourier-ms' font-size='10.957664' x='215.826686' y='99.94649'></text>
+<rect x='224.984331' y='99.312864' height='.633625' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='224.984331' y='109.275702'>15</text>
+<text font-family='fourier-mex' font-size='10.998733' x='239.01699' y='67.189613'>⎡<tspan x='239.01699' y='86.547593'>⎢</tspan>
+<tspan x='239.01699' y='93.1469'>⎢</tspan>
+<tspan x='239.01699' y='99.746206'>⎢</tspan>
+<tspan x='239.01699' y='106.785437'>⎣</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='249.888225' y='77.152648'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='257.802543' y='77.152648'>2<tspan x='264.80559'>i</tspan>
+<tspan x='246.349493' y='92.112768'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='252.183614' y='82.753684'></text>
+<rect x='261.341259' y='82.120059' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='261.341259' y='92.112768'>2<tspan x='268.344295'>i</tspan>
+<tspan x='256.031828' y='106.558581'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='247.495845' y='121.518701'>−<tspan y='112.159617'></tspan>
+</text>
+<rect x='264.567807' y='111.525991' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='264.567807' y='121.518701'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='271.548257' y='67.189613'>⎤<tspan x='271.548257' y='86.547593'>⎥</tspan>
+<tspan x='271.548257' y='93.1469'>⎥</tspan>
+<tspan x='271.548257' y='99.746206'>⎥</tspan>
+<tspan x='271.548257' y='106.785437'>⎦</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+Como o produto do primeiro e quarto elementos da matriz é igual ao
+produto do segundo e terceiro elementos, conclui-se que se trata dum
+sistema de dois qbits independentes. É possível encontrar dois estados
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5532892em' height='1.0557845em' viewBox='-0.6 -8.368984 15.532892 10.557845' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq5'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='3.060518' y='0'>Φ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.166127' y='0'>〉</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.6656665em' height='1.0557845em' viewBox='-0.6 -8.368984 16.656665 10.557845' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq6'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='3.060518' y='0'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.2899' y='0'>〉</text>
+</g>
+</svg>
+ tais que o produto tensorial
+deles será igual a <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5341601em' height='1.0557845em' viewBox='-0.6 -8.368984 15.341601 10.557845' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq7'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>|</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='3.060518' y='0'>Υ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='10.974836' y='0'>〉</text>
+</g>
+</svg>
+:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16.2563533em' height='2.8384921em' viewBox='150.646394 67.687028 162.563533 28.384921' class='display'>
+<g id='eq8'>
+<text font-family='fourier-ms' font-size='10.957664' x='151.246394' y='84.54903'>|</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='154.306912' y='84.54903'>Φ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='162.412521' y='84.54903'>〉<tspan x='168.738082'>=</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='184.472348' y='76.455388'>1</text>
+<rect x='179.893526' y='81.133691' height='.637912' width='14.991755'/>
+<text font-family='fourier-ms' font-size='10.957664' x='179.893526' y='84.952592'></text>
+<rect x='189.051171' y='84.318966' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='189.051171' y='94.281804'>5</text>
+<text font-family='fourier-mex' font-size='10.998733' x='197.24972' y='68.693981'></text>
+<text font-family='futr8r' font-size='10.957664' x='203.054627' y='77.11887'>2<tspan x='204.369703' y='91.564683'>i</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.998733' x='208.888737' y='68.693981'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='236.903661' y='84.54903'>|</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='239.964179' y='84.54903'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='249.193561' y='84.54903'>〉<tspan x='255.519121'>=</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='271.253388' y='76.455388'>1</text>
+<rect x='266.674565' y='81.133691' height='.637912' width='14.991755'/>
+<text font-family='fourier-ms' font-size='10.957664' x='266.674565' y='84.952592'></text>
+<rect x='275.83221' y='84.318966' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='275.83221' y='94.281804'>3</text>
+<text font-family='fourier-mex' font-size='10.998733' x='284.030759' y='68.693981'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='293.958861' y='76.861717'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='301.873179' y='76.861717'>i</text>
+<text font-family='fourier-ms' font-size='10.957664' x='289.835666' y='82.462753'></text>
+<rect x='298.993311' y='81.829127' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='298.993311' y='91.821836'>2<tspan x='305.996347'>i</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.998733' x='309.20032' y='68.693981'></text>
+</g>
+</svg>
+</div>
+</div>
+<div>
+<h3>Estados entrelaçados</h3>
+<p>
+O estado geral do sistema de 2 qbits é:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.2661388em' height='6.0516552em' viewBox='205.169122 66.160662 52.661388 60.516552' class='display'>
+<g id='eq9'>
+<text font-family='fourier-ms' font-size='10.957664' x='205.769122' y='99.542928'>|</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='208.82964' y='99.542928'>Υ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='216.743958' y='99.542928'>〉<tspan x='223.069518'>=</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.998733' x='233.029448' y='67.189613'>⎡<tspan x='233.029448' y='86.547593'>⎢</tspan>
+<tspan x='233.029448' y='93.1469'>⎢</tspan>
+<tspan x='233.029448' y='99.746206'>⎢</tspan>
+<tspan x='233.029448' y='106.785437'>⎣</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='240.361952' y='77.666955'>Υ</text>
+<text font-family='futr8r' font-size='8.218248' x='248.27627' y='79.460218'>1</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='240.361952' y='92.112768'>Υ</text>
+<text font-family='futr8r' font-size='8.218248' x='248.27627' y='93.906031'>2</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='240.361952' y='106.558581'>Υ</text>
+<text font-family='futr8r' font-size='8.218248' x='248.27627' y='108.351844'>3</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='240.361952' y='121.004394'>Υ</text>
+<text font-family='futr8r' font-size='8.218248' x='248.27627' y='122.797657'>4</text>
+<text font-family='fourier-mex' font-size='10.998733' x='253.14998' y='67.189613'>⎤<tspan x='253.14998' y='86.547593'>⎥</tspan>
+<tspan x='253.14998' y='93.1469'>⎥</tspan>
+<tspan x='253.14998' y='99.746206'>⎥</tspan>
+<tspan x='253.14998' y='106.785437'>⎦</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+Se <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.712288em' height='1.0707459em' viewBox='-0.6 -8.314196 27.12288 10.707459' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq10'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>Υ</text>
+<text font-family='futr8r' font-size='8.218248' x='7.914318' y='1.793263'>1</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='13.956965' y='0'>Υ</text>
+<text font-family='futr8r' font-size='8.218248' x='21.871283' y='1.793263'>4</text>
+</g>
+</svg>
+ não for igual a
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.6958515em' height='1.0806078em' viewBox='-0.6 -8.314196 26.958515 10.806078' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq11'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>Υ</text>
+<text font-family='futr8r' font-size='8.218248' x='7.914318' y='1.793263'>2</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='13.956965' y='0'>Υ</text>
+<text font-family='futr8r' font-size='8.218248' x='21.871283' y='1.793263'>3</text>
+</g>
+</svg>
+, diz-se que é um estado
+entrelaçado. Os estados dos dois qbits não são independentes. A
+medição do estado dum dos dois qbits altera o estado do segundo qbit.
+</p>
+<p>
+Um exemplo de estado entrelaçado de dois qbits é o seguinte:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='15.345661em' height='6.0516552em' viewBox='155.815076 66.160662 153.45661 60.516552' class='display'>
+<g id='eq12'>
+<text font-family='fourier-ms' font-size='10.957664' x='156.415076' y='99.542928'>|</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='159.475594' y='99.542928'>Υ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='167.389912' y='99.542928'>〉<tspan x='173.715472'>=</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='189.449739' y='91.449286'>1</text>
+<rect x='184.870916' y='96.127589' height='.637912' width='14.991755'/>
+<text font-family='fourier-ms' font-size='10.957664' x='184.870916' y='99.94649'></text>
+<rect x='194.028561' y='99.312864' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='194.028561' y='109.305573'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='202.227111' y='67.189613'>⎡<tspan x='202.227111' y='86.547593'>⎢</tspan>
+<tspan x='202.227111' y='93.1469'>⎢</tspan>
+<tspan x='202.227111' y='99.746206'>⎢</tspan>
+<tspan x='202.227111' y='106.785437'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='209.559614' y='77.666955'>1<tspan x='209.559614' y='92.112768'>0</tspan>
+<tspan x='209.559614' y='106.558581'>0</tspan>
+<tspan x='209.559614' y='121.004394'>1</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.998733' x='215.393724' y='67.189613'>⎤<tspan x='215.393724' y='86.547593'>⎥</tspan>
+<tspan x='215.393724' y='93.1469'>⎥</tspan>
+<tspan x='215.393724' y='99.746206'>⎥</tspan>
+<tspan x='215.393724' y='106.785437'>⎦</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='224.77184' y='99.542928'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='240.506107' y='91.449286'>1</text>
+<rect x='235.927284' y='96.127589' height='.637912' width='14.991755'/>
+<text font-family='fourier-ms' font-size='10.957664' x='235.927284' y='99.94649'></text>
+<rect x='245.084929' y='99.312864' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='245.084929' y='109.305573'>2<tspan x='253.283479' y='99.641572'>(</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='257.133026' y='99.542928'>|</text>
+<text font-family='futr8r' font-size='10.957664' x='260.193544' y='99.542928'>00</text>
+<text font-family='fourier-ms' font-size='10.957664' x='271.861786' y='99.542928'>〉<tspan x='277.602883'>+</tspan>
+<tspan x='286.978351'>|</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='290.038869' y='99.542928'>11</text>
+<text font-family='fourier-ms' font-size='10.957664' x='301.707111' y='99.542928'>〉</text>
+<text font-family='futr8r' font-size='10.957664' x='305.987059' y='99.641572'>)</text>
+</g>
+</svg>
+</div>
+<p>
+Se a medição do primeiro qbit conduzir ao resultado <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.8650014em' height='1.0444475em' viewBox='-0.6 -8.051212 28.650014 10.444475' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq13'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='futr8r' font-size='8.218248' x='5.212452' y='1.793263'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.131786' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='22.091717' y='0'>0</text>
+</g>
+</svg>
+, o estado
+do sistema colapsa para <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.9095525em' height='1.0557845em' viewBox='-0.6 -8.368984 19.095525 10.557845' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq14'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>|</text>
+<text font-family='futr8r' font-size='10.957664' x='3.060518' y='0'>00</text>
+<text font-family='fourier-ms' font-size='10.957664' x='14.72876' y='0'>〉</text>
+</g>
+</svg>
+ e, como tal, a medição do estado
+do segundo qbit dará necessariamente <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.8650014em' height='1.0444475em' viewBox='-0.6 -8.051212 28.650014 10.444475' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq15'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='futr8r' font-size='8.218248' x='5.212452' y='1.793263'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.131786' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='22.091717' y='0'>0</text>
+</g>
+</svg>
+. Mas se o resultado da
+primeira medição tivesse sido <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.8080216em' height='1.0444475em' viewBox='-0.6 -8.051212 28.080216 10.444475' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq16'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='futr8r' font-size='8.218248' x='5.212452' y='1.793263'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.131786' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='22.091717' y='0'>1</text>
+</g>
+</svg>
+, o estado colapsava para
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.9095525em' height='1.0557845em' viewBox='-0.6 -8.368984 19.095525 10.557845' class='inline' style='vertical-align:-0.229798em'>
+<g id='eq17'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>|</text>
+<text font-family='futr8r' font-size='10.957664' x='3.060518' y='0'>11</text>
+<text font-family='fourier-ms' font-size='10.957664' x='14.72876' y='0'>〉</text>
+</g>
+</svg>
+ e a medição do segundo qbit dava o resultado
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.8080216em' height='1.0444475em' viewBox='-0.6 -8.051212 28.080216 10.444475' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq18'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='futr8r' font-size='8.218248' x='5.212452' y='1.793263'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.131786' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='22.091717' y='0'>1</text>
+</g>
+</svg>
+. Observe-se que neste exemplo após ter medido um dos
+qbits é possível concluir qual será o resultado da segunda medição,
+sem ter de ser realizada.
+</p>
+</div>
+</section>
+<nav>
+<a href="./index.html">Índice</a>
+<a href="./slide09.html">Anterior</a>
+<a href="./slide11.html">Próxima</a>
+</nav>
+<footer>
+<div class="site-map">
+<div class="category">
+<ul>
+<li><a href="../../research.html">Research</a></li>
+<li><a href="../../teaching.html">Teaching</a></li>
+</ul>
+</div>
+<div class="category">
+<ul>
+<li><a href="../../software.html">Software</a></li>
+<li><a href="../../publications/index.html">Publications</a></li>
+</ul>
+</div>
+<div class="category">
+Talks
+</div>
+<div class="category">
+<a href="../../hobbies.html">Other interests</a>
+</div>
+</div>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a><br>
+&copy; 2020, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2021/02/03 15:50:32 UTC</span>
+</footer>
+</body>
+</html>

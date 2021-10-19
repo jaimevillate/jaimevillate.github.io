@@ -1,0 +1,37 @@
+/ringpath2 {0 0 25 60 30 150 Ellipse 0 0 15 47 150 30 Ellipsen closepath} def
+
+/ring2 {gsave 0.9 Setgray ringpath2 eofill 0.3 Setgray
+    ringpath2 clip newpath
+    {0 0 25 60 0 360 Ellipse} 0.9 0.15 shade2
+    {0 0 15 47 0 360 Ellipse} 0.9 -0.1 shade2
+    grestore} def
+
+0.1 0.5 0.9 sethsbcolor
+140 600 90 boost1 ring boost2
+140 610 90 boost1 ring boost2
+140 620 90 boost1 ring boost2
+140 630 90 boost1 ring boost2
+140 625 90 boost1 ring2 boost2
+
+74 612 moveto 51 37 25 rchord -9 8.82 rlineto -51 -37 -25 rchord closepath
+fill 0.3 Setgray
+74 612 moveto {51 37 25 rchord} dup
+-10 9.82 0.9 0.18 shadetile 65 620.82 moveto
+10 -9.82 0.9 0.28 shadetile
+
+0.2 setlinewidth newpath
+70.1 617 -40 boost1 0 0 6.2 4 0 360 Ellipse gsave
+0.6 Setgray fill grestore stroke boost2
+
+0.8 setlinewidth 0 0.4 0 setrgbcolor
+ 66 611 moveto  23 28 10 rchord currentpoint  42 tip stroke
+180 613 moveto -20 -6 10 rchord currentpoint 190 tip stroke
+180 603 moveto -20 -6 10 rchord currentpoint 190 tip stroke
+180 593 moveto -20 -6 10 rchord currentpoint 190 tip stroke
+180 583 moveto -20 -6 10 rchord currentpoint 190 tip stroke
+
+0 setgray 12 /Times-Italic font
+170 562 moveto (I) show
+12 /Times-Roman font
+138 645 moveto (S) show 138 555 moveto (N) show
+showpage

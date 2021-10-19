@@ -1,0 +1,83 @@
+/*
+   Quantum Computing Simulator for Maxima
+   Jaime Villate. University of Porto
+   2021-02-17, version 2
+   Licença GPL
+*/
+   
+binlist([n]):= block([m: n[1], q, l: [], k],
+  do([m,q]: divide(m,2), l: cons(q,l), if m = 0
+    then (if length(n) > 1
+      then (k: length(l), for i:1 thru n[2]-k do l: cons(0,l)),
+      return(l))))$
+
+binlist2dec(l) := block([m: l[1]], for i:2 thru length(l) do m:m*2+l[i], m)$
+   
+tprod([ops]) := lreduce(kronecker_product, ops)$
+
+cbra([n]) := block([l: makelist(0,2^length(n))], l[binlist2dec(n)+1]: 1,
+  matrix(l));
+
+cket([n]) := block([l: makelist(0,2^length(n))], l[binlist2dec(n)+1]: 1,
+  transpose(matrix(l)));
+
+qbits_matrix(M,ops) := block([n: ops[1], i, lM], if length(ops) = 1
+  then apply(tprod, makelist(M,n))
+  else (i: ops[2], if i = 1 then lM: [] else lM: [ident(2^(i-1))],
+      lM: endcons(M,lM),
+      if i < n then lM: endcons(ident(2^(n-i)),lM),
+      apply(tprod,lM)))$
+
+X([ops]) := qbits_matrix(matrix([0,1],[1,0]),ops)$
+Y([ops]) := qbits_matrix(matrix([0,-%i],[%i,0]),ops)$
+Z([ops]) := qbits_matrix(matrix([1,0],[0,-1]),ops)$
+H([ops]) := qbits_matrix(matrix([1,1],[1,-1])/sqrt(2),ops)$
+CNOT(n,i,j) := block([l: cons(1,makelist(0,2^n-1)), m],
+  m: transpose(matrix(l)),
+  for k: 1 thru 2^n-1 do (l: binlist(k,n),
+    if l[i] = 1 then l[j]: 1-l[j],
+    m: addcol(m,list_matrix_entries(apply(cket,l)))), m)$
+
+bra([l]) := matrix(conjugate(l)/sqrt(apply("+",map(lambda([z],cabs(z)^2),l))))$
+ket([l]) := transpose(matrix(l/sqrt(apply("+",map(lambda([z],cabs(z)^2),l)))))$
+
+measure(k,i) := block([r:random(1.0),kl:list_matrix_entries(k),p:0,l:[],bl,n,m,v],
+  n: length(kl),
+  m: round(float(log(n)/log(2))),
+  for j: 1 thru n do (bl: binlist(j-1,m), if bl[i] = 0 then p: p+cabs(kl[j])^2),
+  if r < p then v: 0 else (v: 1, p: 1-p),
+  for j: 1 thru n do (bl: binlist(j-1,m),
+    if bl[i] = v
+    then l: endcons(radcan(kl[j]/sqrt(p)),l)
+    else l: endcons(0,l)),
+  [v, transpose(matrix(l))])$
+  
+
+pket(k):=block([l:list_matrix_entries(k), n:length(k), m, s, g, sg: ["","",""]],
+  m: round(float(log(n)/log(2))), g: lreduce('gcd, l),
+  if g = 1 then s: "" else s: printf(false,"~a(",g),
+  for i:1 thru n do (l[i]: l[i]/g,
+    if l[i] # 0
+      then (if l[i]^2 = 1
+        then s: concat(s, sg[(l[i]+3)/2], printf(false,"|~v,'0b>",m,i-1))
+         elseif l[i] < 0
+           then s: concat(s, sg[3], printf(false,"~a|~v,'0b>",l[i],m,i-1))
+           else s: concat(s, sg[2], printf(false,"~a|~v,'0b>",l[i],m,i-1)),
+         sg: [" -"," +"," "])),
+  if g # 1 then s: concat(s, ")"), s)$
+
+
+pbra(b):=block([l: list_matrix_entries(b), n, m, s, g, sg: ["","",""]],
+  n: length(l),
+  m: round(float(log(n)/log(2))), g: lreduce('gcd, l),
+  if g = 1 then s: "" else s: printf(false,"~a(",g),
+  for i:1 thru n do (l[i]: l[i]/g,
+    if l[i] # 0
+      then (if l[i]^2 = 1
+        then s: concat(s, sg[(l[i]+3)/2], printf(false,"<~v,'0b|",m,i-1))
+         elseif l[i] < 0
+           then s: concat(s, sg[3], printf(false,"~a<~v,'0b|",l[i],m,i-1))
+           else s: concat(s, sg[2], printf(false,"~a<~v,'0b|",l[i],m,i-1)),
+         sg: [" -"," +"," "])),
+  if g # 1 then s: concat(s, ")"), s)$
+   

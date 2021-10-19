@@ -1,0 +1,280 @@
+/*
+   Quantum Computing Simulator for Maxima
+   Jaime Villate. University of Porto
+   2021-04-25, version 6
+   GPL License
+*/
+
+/* binlist
+   Should be called with one or two arguments, binlist(k) or binlist(k,n),
+   where k and n are natural numbers. With only one argument, a list of
+   binary digits is returned, which are the representation of k in binary.
+   With two arguments, as zeros are included at the beginning in order
+   to return a list with exactly n binary digits. Notice that for the result
+   to represent a possible state of m qubits, n should be equal to 2^m and
+   k should be between 0 and 2^m-1.
+*/
+binlist([n]):= block([m:n[1], q, l:[], k],
+  do([m,q]: divide(m, 2), l: cons(q,l), if m=0
+    then (
+      if length(n)>1
+      then (
+        k: length(l),
+        for i:1 thru n[2]-k do l:cons(0,l)),
+      return(l))))$
+
+/* binlist2dec
+   Given a list with n binary digits, it returns the decimal number it
+   represents.
+*/
+binlist2dec(l) := block([m:l[1]],
+  for i:2 thru length(l) do m:m*2+l[i],
+  m)$
+
+/* tprod
+   Returns the tensor product of n matrices
+*/
+tprod([ops]) := lreduce(kronecker_product, ops)$
+
+/* normalize
+   Returns the normalized version of a quantum state given as a list q
+*/
+normalize(q) := block([p:0],
+  for b in q do p: p+cabs(b)^2,
+  for i:1 thru length(q) do q[i]: rootscontract(radcan(q[i]/sqrt(p))),
+  q)$
+
+/* qubits
+   Returns a list with 2^n elements, representing the state of n qubits.
+   The argument can be a single natural number n, or n binary digits.
+   If given only one natural number, greater than 1, it returns the ground
+   state for a system of n qubits.
+   If given n binary digits (n can be 1), it returns the state of a system
+   of n qubits with those binary values.
+*/
+qubits([b]) := block([l],
+  if (length(b) = 1) and (first(b) > 1)
+  then cons(1, makelist(0,2^first(b)-1))
+  else (
+    l: makelist(0,2^length(b)),
+    l[binlist2dec(b)+1]: 1,
+    l))$
+
+/* gate
+   Applies matrix U, a 2 by 2 matrix, on oe or more qubits on the state
+   q of a system of n qubits. U can be a symbol representing one of the
+   predefined matrices.
+   There must be a second argument, corresponding to the state of a system
+   of n qubits.
+   If no more arguments are given, the matrix will act in all of the qubits.
+   If there are more arguments, they should be one or more different
+   natural numbers, between 1 and n, and the matrix will act in the qubits
+   corresponding to those numbers.
+   It modifies the list q and returns that new list.
+*/
+gate(U,q,[bits]) := block([n: length(q), d],
+  if symbolp(U) then U: qmatrix[U],
+  if length(bits) = 0
+  then bits: makelist(j, j, 1, round(float(log(length(q))/log(2)))),
+  for i in bits do (
+    d: n/2^i,
+    for k:0 thru n-2*d step 2*d do (
+      for l:1 thru d do (
+        [q[k+l],q[k+l+d]]: makelist(U[i].[q[k+l],q[k+l+d]], i, 1, 2)))),
+  q)$
+
+/* gate_matrix
+   Creates the matrix corresponding to the action of a single qbit matrix U
+   acting on one of several of the qubits in a state of n qbits.
+   The first argument must be a 2 by 2 matrix or a symbol representing one
+   of the predefined matrices.
+   There must be a second argument, a natural number, corresponding to the
+   total number of qbits.
+   If no more arguments are given, the matrix will act in all of the qubits.
+   If there are more arguments, they should be one or more different
+   natural numbers, between 1 and n, and the matrix will act in the qubits
+   corresponding to those numbers.
+   It returns a 2^n by 2^n matrix.
+*/
+gate_matrix(U,n,[bits]) := block([lU],
+  if symbolp(U) then U: qmatrix[U],
+  if length(bits) = 0
+  then apply(tprod, makelist(U, n))
+  else (
+    lU: makelist(ident(2), n),
+    for i in bits do lU[i]: U,
+    apply(tprod, lU)))$
+
+/* controlled
+   Two cases.
+   1. Control bit i in the same qubits q of the controlled bit j:
+      controlled(U,q,i,j)
+   2. Control bit i in qubits q and controlled bit j in other qubits w:
+      controlled(U,q,w,i,j)
+   U can be a symbol representing one of the predefined matrices.
+   It modifies the list q (and w if there is w) and returns the
+   modified list q, or w if there is w.
+*/
+controlled(U,q,w,[o]) := block([n, ni, nj, di, dj],
+  if symbolp(U) then U: qmatrix[U],
+  if length(o)=1
+  then (
+    i: w,
+    j: first(o),
+    n: length(q),
+    di: n/2^i,
+    dj: n/2^j,
+    for k:0 thru n-2*dj step 2*dj do (
+      for l:1 thru dj do(
+        if mod(k+l-1,2*di) >= di
+        then
+        [q[k+l],q[k+l+dj]]: makelist(U[i].[q[k+l],q[k+l+dj]], i, 1, 2))),
+    q)
+  else (
+    i: first(o),
+    j: second(o),
+    ni: length(q),
+    nj: length(w),
+    di: ni/2^i,
+    dj: nj/2^j,
+    for k:0 thru nj-2*dj step 2*dj do (
+      for l:1 thru dj do(
+        if mod(k+l-1,2*di) >= di
+        then
+        [w[k+l],w[k+l+dj]]: makelist(U[i].[w[k+l],w[k+l+dj]], i, 1, 2))),
+    w))$
+
+/* cNOT
+   Controlled NOT. Two cases.
+   1. Control bit i in the same qubits q of the controlled bit j:
+      controlled(q,i,j)
+   2. Control bit i in qubits q and controlled bit j in other qubits w:
+      controlled(q,i,w,j)
+   It modifies the list q (and w if there is w) and returns the
+   modified list q, or w if there is w.
+*/
+
+cNOT(q,w,[o]) := block([n, ni, nj, di, dj, u],
+  if length(o)=1
+  then (
+    i: w,
+    j: first(o),
+    n: length(q),
+    di: n/2^i,
+    dj: n/2^j,
+    for k:0 thru n-2*dj step 2*dj do (
+      for l:1 thru dj do(
+        if mod(k+l-1,2*di) >= di
+        then (
+          u: q[k+l],
+          q[k+l]: q[k+l+dj],
+          q[k+l+dj]: u))),
+    q)
+  else (
+    i: first(o),
+    j: second(o),
+    ni: length(q),
+    nj: length(w),
+    di: ni/2^i,
+    dj: nj/2^j,
+    for k:0 thru nj-2*dj step 2*dj do (
+      for l:1 thru dj do(
+        if mod(k+l-1,2*di) >= di
+        then (
+          u: w[k+l],
+          w[k+l]: w[k+l+dj],
+          w[k+l+dj]: u))),
+    w))$
+
+/* qmeasure
+   Measures the value of one or more qubits in a system of n qubits with
+   state q.
+   It requires 1 or more arguments. The first argument must be the state q.
+   If no more arguments are given, all the n qubits will be measured.
+   If more arguments are given, they should be different natural numbers
+   between 1 and n, and the state of those qubits will be measured.
+   It returns a list with the values of the qubits measured (either 0 or 1),
+   in the same order that the were requested or in ascending order if no
+   second argument was given.
+   It modifies the list q, reflecting the collapse of the quantum state
+   after the measurement.
+*/
+qmeasure(q,[bits]) := block([r, p, l:[], bl, n, m, v, result: [],
+  test:true],
+  n: length(q),
+  m: round(float(log(n)/log(2))),
+  if length(bits) = 0 then bits: makelist(j, j, 1, m),
+  for i in bits do (
+    r: random(1.0),
+    p: 0,
+    for j:1 thru n do (
+      if not(test) then return(),
+      if constantp(q[j])
+      then (
+        bl: binlist(j-1,m),
+        if bl[i] = 0 then p: p+cabs(q[j])^2)
+      else test:false),
+    if test
+    then (
+      if r<p then v:0 else (v:1, p: 1-p),
+      for j: 1 thru n do (
+        bl:binlist(j-1,m),
+        if bl[i]=v
+        then (
+          if atom(p)
+          then q[j]: q[j]/sqrt(p)
+          else q[j]: rootscontract(radcan(q[j]/sqrt(p))))
+        else q[j]: 0),
+      result: endcons(v, result))),
+  result)$
+
+/* qdisplay
+   Represents the state q of a system of n qubits as a linear combination
+   of the computational states with n binary digits.
+   It returns an expression including strings and symbols.
+*/
+qdisplay(q):=block([n, m, s, g:1, v, sg: ["-","",""], test:true],
+  n:length(q),
+  m:round(float(log(n)/log(2))),
+  for e in q do
+  /* Find the GCD only where the non-zero components are expressions
+  **** Currently disabled ****
+  if ((imagpart(e) = 0) and atom(e) and (sign(e) # 'zero)) then test: false,
+  if test
+  then g: 1/lreduce('gcd, q)
+  else g: 1, */
+  if (g = 1) and (length(q) > 1) then s: "" else s: "(",
+  for i:1 thru n do (
+    if (g = 1)
+    then v: q[i]
+    else v: q[i]*g,
+    if ((imagpart(v) # 0) or (sign(v) # 'zero))
+    then (
+      if (numberp(v) or ((imagpart(v) = 0) and atom(v) and (sign(v) # 'pnz)))
+      then (
+        if ((imagpart(v^2-1) = 0) and (sign(v^2-1) = 'zero))
+        then s:concat(s, sg[round((v+3)/2)], printf(false,"|~v,'0b>",m,i-1))
+        elseif (sign(v) = 'neg)
+        then s:concat(s, sg[3], printf(false,"~a|~v,'0b>",v,m,i-1))
+        else s:concat(s, sg[2], printf(false,"~a|~v,'0b>",v,m,i-1)))
+      elseif atom(v)
+      then s: concat(s, sg[2], printf(false,"~a|~v,'0b>",v,m,i-1))
+      else s: concat(s, sg[2], printf(false,"(~a)|~v,'0b>",v,m,i-1)),
+      sg: [" -"," +"," "])),
+  if (g # 1)
+  then (
+    if atom(g)
+    then s: concat(s, printf(false,")/~a",g))
+    else s: concat(s, printf(false,")/(~a)",g))),
+  s)$
+
+/*
+   Predefined matrices.
+*/
+qmatrix[I]: matrix([1,0],[0,1])$
+qmatrix[X]: matrix([0,1],[1,0])$
+qmatrix[Y]: matrix([0,-%i],[%i,0])$
+qmatrix[Z]: matrix([1,0],[0,-1])$
+qmatrix[H]: matrix([1,1],[1,-1])/sqrt(2)$
+qmatrix[S]: matrix([1,0],[0,%i])$
+qmatrix[T]: matrix([1,0],[0,exp(%i*%pi/4)])$

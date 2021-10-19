@@ -1,0 +1,98 @@
+QCOMP7
+
+linsert(expr, list, pos)
+   Inserts an expression "expr" into a list "list" at position "pos".
+   The list could be empty and "pos" must be an integer between 1 and the
+   length of "list" plus 1.
+
+binlist([n])
+   Should be called with one or two arguments, binlist(k) or binlist(k,n),
+   where k and n are natural numbers. With only one argument, a list of
+   binary digits is returned, which are the representation of k in binary.
+   With two arguments, zeros are included at the beginning in order
+   to return a list with exactly n binary digits. Notice that for the result
+   to represent a possible state of m qubits, n should be equal to 2^m and
+   k should be between 0 and 2^m-1.
+
+binlist2dec(l)
+   Given a list with n binary digits, it returns the decimal number it
+   represents.
+
+
+tprod([ops])
+   Returns the tensor product of n matrices or n lists
+
+normalize(q)
+   Returns the normalized version of a quantum state given as a list q
+
+qubits([b])
+   Returns a list with 2^n elements, representing the state of n qubits.
+   The argument can be a single natural number n, or n binary digits.
+   If given only one natural number, greater than 1, it returns the ground
+   state for a system of n qubits.
+   If given n binary digits (n can be 1), it returns the state of a system
+   of n qubits with those binary values.
+
+gate(U,q,[bits])
+   Applies matrix U, a 2 by 2 matrix, on oe or more qubits on the state
+   q of a system of n qubits. U can be a symbol representing one of the
+   predefined matrices.
+   There must be a second argument, corresponding to the state of a system
+   of n qubits.
+   If no more arguments are given, the matrix will act in all of the qubits.
+   If there are more arguments, they should be one or more different
+   natural numbers, between 1 and n, and the matrix will act in the qubits
+   corresponding to those numbers.
+   It modifies the list q and returns that new list.
+
+gate_matrix(U,n,[bits])
+   Creates the matrix corresponding to the action of a single qbit matrix U
+   acting on one of several of the qubits in a state of n qbits.
+   The first argument must be a 2 by 2 matrix or a symbol representing one
+   of the predefined matrices.
+   There must be a second argument, a natural number, corresponding to the
+   total number of qbits.
+   If no more arguments are given, the matrix will act in all of the qubits.
+   If there are more arguments, they should be one or more different
+   natural numbers, between 1 and n, and the matrix will act in the qubits
+   corresponding to those numbers.
+   It returns a 2^n by 2^n matrix.
+
+controlled(U,q,i,j)
+   Applies operator U to the j'th qubit, in a state q of m qubits, when
+   the value of the i'th qubit equals 1.
+   U can be a 2 by 2 matrix or a symbol representing one of the predefined
+   matrices.
+   It modifies the list q and returns its modified value.
+
+CNOT(q,i,j)
+   Changes the value of the j'th qubit, in a state q of m qubits, when
+   the value of the i'th qubit equals 1.
+   It modifies the list q and returns its modified value.
+
+toffoli(q,i,j,k)
+   Changes the value of the k'th qubit, in a state q of m qubits, when
+   the value of the i'th snf j'th qubitd equal 1.
+   It modifies the list q and returns its modified value.
+
+qmeasure(q,[bits])
+   Measures the value of one or more qubits in a system of n qubits with
+   state q.
+   It requires 1 or more arguments. The first argument must be the state q.
+   If no more arguments are given, all the n qubits will be measured.
+   If more arguments are given, they should be different natural numbers
+   between 1 and n, and the state of those qubits will be measured.
+   It returns a list with the values of the qubits measured (either 0 or 1),
+   in the same order that the were requested or in ascending order if no
+   second argument was given.
+   It modifies the list q, reflecting the collapse of the quantum state
+   after the measurement.
+
+qdisplay(q)
+   Represents the state q of a system of n qubits as a linear combination
+   of the computational states with n binary digits.
+   It returns an expression including strings and symbols.
+
+Predefined matrices
+-------------------
+I, X, Y, Z, H, S, T, Rx(ang), Ry(ang), Rz(ang)
