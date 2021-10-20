@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercícios Resolvidos de Dinâmica e Sistemas Dinâmicos</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body id="top">
+<aside>
+<span class="current">HTML</span>
+<a href="./probs-sistemas_nao_lineares.pdf" target="_blank">PDF</a>
+</aside>
+<header>
+<h1 id="title">Exercícios Resolvidos de Dinâmica e Sistemas Dinâmicos</h1>
+</header>
+<nav>
+<a href="../index.html">DEF</a><span>&rarr;</span>
+<a href="../ensino.html">Ensino</a><span>&rarr;</span>
+<a href="../textos.html">Material de estudo</a><span>&rarr;</span>
+<a href="./index.html">Dinâmica e Sistemas Dinâmicos</a><span>&rarr;</span>
+<a href="./problemas.html">Exercícios Resolvidos</a><span>&rarr;</span>
+<span>10. Sistemas não lineares</span>
+</nav>
+<div class="content">
+<span class="button">Índice</span>
+<div class="content-items">
+<a href="./index.html">Dinâmica e Sistemas Dinâmicos</a><br>
+<a href="./problemas.html">Exercícios Resolvidos</a>
+<ol class="nested" style="counter-increment: item 9">
+<li><a href="#top">Sistemas não lineares</a>
+<ul class="plain">
+<li><a href="#prob-10.1">Problema 1</a></li>
+<li><a href="#prob-10.4">Problema 4</a></li>
+<li><a href="#prob-10.7">Problema 7</a></li>
+<li><a href="#prob-10.8">Problema 8</a></li>
+<li><a href="#prob-10.10">Problema 10</a></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<section>
+<h2>10. Sistemas não lineares</h2>
+<div class="example" id="prob-10.1">
+<h3>Problema 1</h3>
+<p>
+Uma partícula com massa <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.137967em' height='0.6832239em' viewBox='-0.6 -6.100747 11.37967 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq1'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+</g>
+</svg>
+, desloca-se ao longo do eixo dos <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ sob a
+ação de uma força resultante <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2665982em' height='1.0674586em' viewBox='-0.6 -8.182704 12.665982 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq3'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814454' y='1.793263'>x</text>
+</g>
+</svg>
+ que depende da posição <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq4'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ e da
+componente da velocidade <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2235582em' height='0.859263em' viewBox='-0.360891 -6.100747 12.235582 8.59263' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq5'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='6.623162' y='1.793263'>x</text>
+</g>
+</svg>
+. Para cada um dos casos seguintes
+encontre os pontos de equilíbrio, diga que tipo de ponto equilíbrio é
+cada um (estável ou instável; centro, foco, nó ou ponto de sela) e
+desenhe o retrato de fase mostrando as órbitas mais importantes:
+<br>
+(<i>a</i>) <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.8073338em' height='1.0674586em' viewBox='-0.6 -8.182704 88.073338 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq6'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814454' y='1.793263'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='14.191061' y='0'>=<tspan x='24.150992'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='32.06531' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='44.101499' y='0'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='51.714256' y='0'>(1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='62.859085' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='72.473661' y='0'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='78.857715' y='1.793263'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='84.18871' y='0'>)</text>
+</g>
+</svg>
+
+<br>
+(<i>b</i>) <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.0466616em' height='1.3020004em' viewBox='-0.6 -10.528122 110.466616 13.020004' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq7'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814454' y='1.793263'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='14.191061' y='0'>=<tspan x='24.150992'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='32.06531' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='44.101499' y='0'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='51.714256' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='55.802923' y='0'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='62.246754' y='-4.339714'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='68.581625' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='78.196201' y='0'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='84.580254' y='1.793263'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='91.372399' y='0'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='100.747867' y='0'>1)</text>
+</g>
+</svg>
+
+</p>
+</div>
+<p>
+As equações de evolução são:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.9945269em' height='2.5209062em' viewBox='187.674956 66.260121 89.945269 25.209062' class='display'>
+<g id='eq8'>
+<text font-family='futr8r' font-size='10.957664' x='189.775312' y='82.357131'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='188.274956' y='82.536466'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='196.764392' y='82.536466'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='206.963431' y='82.536466'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='213.347484' y='84.329729'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='243.496894' y='82.357131'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='239.958679' y='82.536466'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='246.342732' y='84.329729'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='253.719333' y='82.536466'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='264.874777' y='74.442824'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='271.68923' y='76.236087'>x</text>
+<rect x='264.874777' y='79.121127' height='.637912' width='12.145449'/>
+<text font-family='futri8r' font-size='10.957664' x='265.633437' y='90.737691'>m</text>
+</g>
+</svg>
+</div>
+<p>
+(<i>a</i>) Nos pontos de equilíbrio, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.0278889em' height='1.0543094em' viewBox='-0.360891 -8.051212 30.278889 10.543094' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq9'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='6.623162' y='1.793263'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.99977' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='23.9597' y='0'>0</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.0654037em' height='1.0674586em' viewBox='-0.6 -8.182704 70.654037 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq10'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='8.153427' y='0'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='15.766183' y='0'>(1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='26.911012' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='36.525589' y='0'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='42.909642' y='1.793263'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='48.240637' y='0'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='54.135808' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='64.095739' y='0'>0</text>
+</g>
+</svg>
+, ou seja,
+existe um único ponto de equilíbrio em <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.591617em' height='1.0674586em' viewBox='-0.6 -8.182704 65.91617 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq11'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='4.088668' y='0'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='10.532498' y='0'>,</text>
+<text font-family='futri8r' font-size='10.957664' x='14.857599' y='0'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='21.241652' y='1.793263'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='26.572647' y='0'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='32.467819' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='42.427749' y='0'>(0</text>
+<text font-family='futr8r' font-size='10.957664' x='52.111429' y='0'>,</text>
+<text font-family='futr8r' font-size='10.957664' x='56.197421' y='0'>0)</text>
+</g>
+</svg>
+. A matriz jacobiana
+é:
+</p>
+<div class="eqnalign">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4870015em' height='1.0674586em' viewBox='-0.6 -8.182704 44.870015 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq12'>
+<text font-family='futb8r' font-size='10.957664' x='0' y='0'>J</text>
+<text font-family='futr8r' font-size='10.957664' x='4.244079' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='8.332747' y='0'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='14.776577' y='0'>,</text>
+<text font-family='futri8r' font-size='10.957664' x='19.101678' y='0'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='25.485731' y='1.793263'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='30.816726' y='0'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='36.711898' y='0'>=</text>
+</g>
+</svg>
+
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16.1372629em' height='5.8148496em' viewBox='-0.6 -32.123844 161.372629 58.148496' class='inline' style='vertical-align:-2.609301em'>
+<g id='eq13'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-29.053662'>⎡<tspan x='0' y='-9.695682'>⎢</tspan>
+<tspan x='0' y='-3.096375'>⎢</tspan>
+<tspan x='0' y='3.942856'>⎣</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='33.030022' y='-23.371342'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='39.318441' y='-23.371342'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='45.702494' y='-21.578079'>x</text>
+<rect x='33.030022' y='-18.693039' height='.637912' width='18.003456'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='35.665631' y='-7.076475'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='41.95405' y='-7.076475'>x</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='112.39114' y='-23.371342'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='118.679559' y='-23.371342'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='125.063612' y='-21.578079'>x</text>
+<rect x='112.39114' y='-18.693039' height='.637912' width='18.003456'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='112.39114' y='-7.076475'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='118.679559' y='-7.076475'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='125.063612' y='-5.283212'>x</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='8.528017' y='7.237903'>∂</text>
+<text font-family='futr8r' font-size='10.957664' x='15.746253' y='7.336547'>(</text>
+<text font-family='fourier-ms' font-size='10.957664' x='19.595801' y='7.237903'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='27.749227' y='7.237903'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='35.361983' y='7.237903'>(1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='46.506813' y='7.237903'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='56.121389' y='7.237903'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='62.505442' y='9.031166'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='67.836437' y='7.237903'>)<tspan y='7.336547'>)</tspan>
+</text>
+<rect x='8.528017' y='11.916206' height='.637912' width='67.00745'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='35.665631' y='23.53277'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='41.95405' y='23.53277'>x</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='87.889135' y='7.237903'>∂</text>
+<text font-family='futr8r' font-size='10.957664' x='95.107371' y='7.336547'>(</text>
+<text font-family='fourier-ms' font-size='10.957664' x='98.956918' y='7.237903'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='107.110345' y='7.237903'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='114.723101' y='7.237903'>(1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='125.867931' y='7.237903'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='135.482507' y='7.237903'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='141.86656' y='9.031166'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='147.197555' y='7.237903'>)<tspan y='7.336547'>)</tspan>
+</text>
+<rect x='87.889135' y='11.916206' height='.637912' width='67.00745'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='112.39114' y='23.53277'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='118.679559' y='23.53277'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='125.063612' y='25.326033'>x</text>
+<text font-family='fourier-mex' font-size='10.998733' x='156.092099' y='-29.053662'>⎤<tspan x='156.092099' y='-9.695682'>⎥</tspan>
+<tspan x='156.092099' y='-3.096375'>⎥</tspan>
+<tspan x='156.092099' y='3.942856'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.2381495em' height='3.4196198em' viewBox='-0.6 -20.20565 82.381495 34.196198' class='inline' style='vertical-align:-1.405215em'>
+<g id='eq14'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='9.95993' y='-19.154702'></text>
+<text font-family='futr8r' font-size='10.957664' x='31.728411' y='-9.422688'>0<tspan x='67.259249'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.375873' y='9.008181'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='24.290191' y='9.008181'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='31.585462' y='9.008181'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='41.200038' y='9.008181'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='47.584091' y='10.801444'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='62.877684' y='9.008181'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='71.031111' y='9.008181'>x</text>
+<text font-family='fourier-mex' font-size='10.998733' x='77.474922' y='-19.154702'></text>
+</g>
+</svg>
+
+</div>
+<p>
+E a matriz da aproximação linear na vizinhança do ponto de equilíbrio é:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.9960472em' height='3.4196198em' viewBox='181.637496 66.138665 99.960472 34.196198' class='display'>
+<g id='eq15'>
+<text font-family='futb8r' font-size='10.957664' x='182.54431' y='86.344315'>A</text>
+<text font-family='fourier-ms' font-size='10.957664' x='191.667382' y='86.344315'>=</text>
+<text font-family='futb8r' font-size='10.957664' x='201.627313' y='86.344315'>J</text>
+<text font-family='futr8r' font-size='10.957664' x='205.871392' y='86.344315'>(0</text>
+<text font-family='futr8r' font-size='10.957664' x='215.555072' y='86.344315'>,</text>
+<text font-family='futr8r' font-size='10.957664' x='219.641064' y='86.344315'>0)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='231.370356' y='86.344315'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='241.330287' y='67.189613'></text>
+<text font-family='futr8r' font-size='10.957664' x='251.70339' y='76.921627'>0<tspan x='271.457285'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='247.746229' y='95.352496'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='255.660547' y='95.352496'>1<tspan x='271.457285'>0</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.998733' x='277.291395' y='67.189613'></text>
+</g>
+</svg>
+</div>
+<p>
+Que tem traço nulo e determinante (positivo) igual a 1. Como tal, o ponto
+de equilíbrio poderá ser centro ou foco (na aproximação linear não há dúvida
+que é centro, mas devido aos termos não lineares um centro pode tornar-se
+foco; deverá ser conferido no retrato de fase). O retrato de fase traça-se
+com o comando:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i1)</span><span class="maxf"> plotdf</span><span class="maxd"> ([</span><span class="maxv">vx</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxv">x</span><span class="maxo">*</span><span class="maxd">(</span><span class="maxn">1</span><span class="maxo">+</span><span class="maxv">vx</span><span class="maxd">)], [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">vx</span><span class="maxd">], [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">5</span><span class="maxd">,</span><span class="maxn">5</span><span class="maxd">], [</span><span class="maxv">vx</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">5</span><span class="maxd">,</span><span class="maxn">5</span><span class="maxd">])</span><span class="maxm">;</span>
+</div><br>
+<img class="fig center" src="img/Retrato_de_fase_y_x+xy.png"
+     alt="Retrato de fase" style="width:18.51em">
+<p>
+E comprova-se que o ponto de equilíbrio é um centro. Qualquer curva de
+evolução com <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2235582em' height='0.859263em' viewBox='-0.360891 -6.100747 12.235582 8.59263' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq16'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='6.623162' y='1.793263'>x</text>
+</g>
+</svg>
+ maior que -1 é um ciclo.
+</p>
+<p>
+(<i>b</i>) Nos pontos de equilíbrio, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.0278889em' height='1.0543094em' viewBox='-0.360891 -8.051212 30.278889 10.543094' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq17'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='6.623162' y='1.793263'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.99977' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='23.9597' y='0'>0</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.025654em' height='1.2530703em' viewBox='-0.6 -10.528122 70.25654 12.530703' class='inline' style='vertical-align:-0.1998em'>
+<g id='eq18'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='8.153427' y='0'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='15.766183' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='19.85485' y='0'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='26.298681' y='-4.339714'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='32.633552' y='0'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='42.00902' y='0'>1)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='53.738312' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='63.698242' y='0'>0</text>
+</g>
+</svg>
+, ou seja,
+existem três pontos de equilíbrio em <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.591617em' height='1.0674586em' viewBox='-0.6 -8.182704 65.91617 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq19'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='4.088668' y='0'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='10.532498' y='0'>,</text>
+<text font-family='futri8r' font-size='10.957664' x='14.857599' y='0'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='21.241652' y='1.793263'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='26.572647' y='0'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='32.467819' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='42.427749' y='0'>(0</text>
+<text font-family='futr8r' font-size='10.957664' x='52.111429' y='0'>,</text>
+<text font-family='futr8r' font-size='10.957664' x='56.197421' y='0'>0)</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.1402738em' height='1.0327734em' viewBox='-0.6 -8.182704 31.402738 10.327734' class='inline' style='vertical-align:-0.216em'>
+<g id='eq20'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>(</text>
+<text font-family='fourier-ms' font-size='10.957664' x='3.849559' y='0'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='11.763876' y='0'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='17.597998' y='0'>,</text>
+<text font-family='futr8r' font-size='10.957664' x='21.68399' y='0'>0)</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.3488421em' height='1.0327734em' viewBox='-0.6 -8.182704 23.488421 10.327734' class='inline' style='vertical-align:-0.216em'>
+<g id='eq21'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>(1</text>
+<text font-family='futr8r' font-size='10.957664' x='9.68368' y='0'>,</text>
+<text font-family='futr8r' font-size='10.957664' x='13.769672' y='0'>0)</text>
+</g>
+</svg>
+.
+A matriz jacobiana é:
+</p>
+<div class="eqnalign">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4870015em' height='1.0674586em' viewBox='-0.6 -8.182704 44.870015 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq22'>
+<text font-family='futb8r' font-size='10.957664' x='0' y='0'>J</text>
+<text font-family='futr8r' font-size='10.957664' x='4.244079' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='8.332747' y='0'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='14.776577' y='0'>,</text>
+<text font-family='futri8r' font-size='10.957664' x='19.101678' y='0'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='25.485731' y='1.793263'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='30.816726' y='0'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='36.711898' y='0'>=</text>
+</g>
+</svg>
+
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20.7830918em' height='6.0598007em' viewBox='-0.6 -33.382266 207.830918 60.598007' class='inline' style='vertical-align:-2.730024em'>
+<g id='eq23'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-32.353315'>⎡<tspan x='0' y='-12.995335'>⎢</tspan>
+<tspan x='0' y='-6.396028'>⎢</tspan>
+<tspan x='0' y='.203278'>⎢</tspan>
+<tspan x='0' y='7.242509'>⎣</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='44.644594' y='-24.562432'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='50.933013' y='-24.562432'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='57.317066' y='-22.769169'>x</text>
+<rect x='44.644594' y='-19.884129' height='.637912' width='18.003456'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='47.280204' y='-8.267565'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='53.568622' y='-8.267565'>x</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='147.234857' y='-24.562432'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='153.523275' y='-24.562432'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='159.907328' y='-22.769169'>x</text>
+<rect x='147.234857' y='-19.884129' height='.637912' width='18.003456'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='147.234857' y='-8.267565'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='153.523275' y='-8.267565'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='159.907328' y='-6.474302'>x</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='8.528017' y='7.690627'>∂</text>
+<text font-family='fourier-mex' font-size='10.998733' x='15.746253' y='-1.565115'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='20.013743' y='7.690627'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='28.16717' y='7.690627'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='35.779926' y='7.690627'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='39.868594' y='7.690627'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='46.312424' y='3.350914'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='52.647295' y='7.690627'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='62.261872' y='7.690627'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='68.645925' y='9.48389'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='75.43807' y='7.690627'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='84.813537' y='7.690627'>1)</text>
+<text font-family='fourier-mex' font-size='10.998733' x='94.497217' y='-1.565115'></text>
+<rect x='8.528017' y='13.107296' height='.637912' width='90.236594'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='47.280204' y='24.72386'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='53.568622' y='24.72386'>x</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='111.11828' y='7.690627'>∂</text>
+<text font-family='fourier-mex' font-size='10.998733' x='118.336515' y='-1.565115'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='122.604005' y='7.690627'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='130.757432' y='7.690627'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='138.370188' y='7.690627'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='142.458856' y='7.690627'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='148.902686' y='3.350914'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='155.237557' y='7.690627'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='164.852134' y='7.690627'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='171.236187' y='9.48389'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='178.028332' y='7.690627'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='187.403799' y='7.690627'>1)</text>
+<text font-family='fourier-mex' font-size='10.998733' x='197.087479' y='-1.565115'></text>
+<rect x='111.11828' y='13.107296' height='.637912' width='90.236594'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='147.234857' y='24.72386'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='153.523275' y='24.72386'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='159.907328' y='26.517123'>x</text>
+<text font-family='fourier-mex' font-size='10.998733' x='202.550388' y='-32.353315'>⎤<tspan x='202.550388' y='-12.995335'>⎥</tspan>
+<tspan x='202.550388' y='-6.396028'>⎥</tspan>
+<tspan x='202.550388' y='.203278'>⎥</tspan>
+<tspan x='202.550388' y='7.242509'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.177779em' height='3.4196198em' viewBox='-0.6 -20.20565 111.77779 34.196198' class='inline' style='vertical-align:-1.405215em'>
+<g id='eq24'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='9.95993' y='-19.154702'></text>
+<text font-family='futr8r' font-size='10.957664' x='46.426559' y='-9.422688'>0<tspan x='96.655543'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.375873' y='9.008181'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='24.290191' y='9.008181'>3</text>
+<text font-family='futri8r' font-size='10.957664' x='31.532347' y='9.008181'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='37.976177' y='4.668467'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='44.311048' y='9.008181'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='53.925625' y='9.008181'>v</text>
+<text font-family='futri8r' font-size='8.218248' x='60.309678' y='10.801444'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='67.101823' y='9.008181'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='76.47729' y='9.008181'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='92.273979' y='9.008181'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='100.427406' y='9.008181'>x</text>
+<text font-family='fourier-mex' font-size='10.998733' x='106.871217' y='-19.154702'></text>
+</g>
+</svg>
+
+</div>
+<p>
+A matriz da aproximação linear na vizinhança do ponto de equilíbrio (0, 0) é:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.6919888em' height='3.4196198em' viewBox='183.157795 66.138665 96.919888 34.196198' class='display'>
+<g id='eq25'>
+<text font-family='futb8r' font-size='10.957664' x='184.06461' y='86.344315'>A</text>
+<text font-family='futr8r' font-size='8.218248' x='191.14207' y='88.137578'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='198.061404' y='86.344315'>=</text>
+<text font-family='futb8r' font-size='10.957664' x='208.021334' y='86.344315'>J</text>
+<text font-family='futr8r' font-size='10.957664' x='212.265414' y='86.344315'>(0</text>
+<text font-family='futr8r' font-size='10.957664' x='221.949093' y='86.344315'>,</text>
+<text font-family='futr8r' font-size='10.957664' x='226.035086' y='86.344315'>0)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='237.764378' y='86.344315'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='247.724308' y='67.189613'></text>
+<text font-family='futr8r' font-size='10.957664' x='254.140251' y='76.921627'>0<tspan x='269.937001'>1</tspan>
+<tspan x='254.140251' y='95.352496'>1</tspan>
+<tspan x='269.937001'>0</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.998733' x='275.77111' y='67.189613'></text>
+</g>
+</svg>
+</div>
+<p>
+Com determinante negativo e, como tal, o ponto (0, 0) é ponto de sela.
+</p>
+<p>
+No ponto de equilíbrio (1, 0) a matriz da aproximação linear é:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.2748501em' height='3.4196198em' viewBox='175.243489 66.138665 112.748501 34.196198' class='display'>
+<g id='eq26'>
+<text font-family='futb8r' font-size='10.957664' x='176.150304' y='86.344315'>A</text>
+<text font-family='futr8r' font-size='8.218248' x='183.227763' y='88.137578'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='190.147098' y='86.344315'>=</text>
+<text font-family='futb8r' font-size='10.957664' x='200.107028' y='86.344315'>J</text>
+<text font-family='futr8r' font-size='10.957664' x='204.351107' y='86.344315'>(1</text>
+<text font-family='futr8r' font-size='10.957664' x='214.034787' y='86.344315'>,</text>
+<text font-family='futr8r' font-size='10.957664' x='218.120779' y='86.344315'>0)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='229.850072' y='86.344315'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='239.810002' y='67.189613'></text>
+<text font-family='futr8r' font-size='10.957664' x='250.183105' y='76.921627'>0<tspan x='273.894162'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='246.225945' y='95.352496'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='254.140262' y='95.352496'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='269.937001' y='95.352496'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='277.851319' y='95.352496'>1</text>
+<text font-family='fourier-mex' font-size='10.998733' x='283.685417' y='67.189613'></text>
+</g>
+</svg>
+</div>
+<p>Com traço <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.0833882em' height='0.8782704em' viewBox='-0.360891 -8.051212 30.833882 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq27'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=<tspan x='17.170174'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='25.084492' y='0'>1</text>
+</g>
+</svg>
+ e determinante <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.6087625em' height='0.9473037em' viewBox='-0.6 -8.730587 26.087625 9.473037' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq28'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>d</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.613227' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='19.573158' y='0'>2</text>
+</g>
+</svg>
+. Como <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8289609em' height='0.9473037em' viewBox='-0.6 -8.730587 8.289609 9.473037' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq29'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>d</text>
+</g>
+</svg>
+ é maior que <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.1458412em' height='1.1292487em' viewBox='-0.360891 -10.528122 21.458412 11.292487' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq30'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='futr8r' font-size='8.218248' x='5.164631' y='-4.339714'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='10.038353' y='0'>/4</text>
+</g>
+</svg>
+, o
+ponto (1, 0) é foco atrativo.
+</p>
+<p>
+No ponto de equilíbrio (-1, 0) a matriz da aproximação linear é:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.2748512em' height='3.4196198em' viewBox='175.243489 66.138665 112.748512 34.196198' class='display'>
+<g id='eq31'>
+<text font-family='futb8r' font-size='10.957664' x='176.150304' y='86.344315'>A</text>
+<text font-family='futr8r' font-size='8.218248' x='183.227763' y='88.137578'>3</text>
+<text font-family='fourier-ms' font-size='10.957664' x='190.147098' y='86.344315'>=</text>
+<text font-family='futb8r' font-size='10.957664' x='200.107028' y='86.344315'>J</text>
+<text font-family='futr8r' font-size='10.957664' x='204.351107' y='86.344315'>(</text>
+<text font-family='fourier-ms' font-size='10.957664' x='208.200666' y='86.344315'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='216.114984' y='86.344315'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='221.949105' y='86.344315'>,</text>
+<text font-family='futr8r' font-size='10.957664' x='226.035097' y='86.344315'>0)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='237.764389' y='86.344315'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='247.72432' y='67.189613'></text>
+<text font-family='futr8r' font-size='10.957664' x='258.097423' y='76.921627'>0<tspan x='277.851319'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='254.140262' y='95.352496'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='262.05458' y='95.352496'>2<tspan x='277.851319'>1</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.998733' x='283.685428' y='67.189613'></text>
+</g>
+</svg>
+</div>
+<p>
+Com traço <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.2919564em' height='0.8782704em' viewBox='-0.360891 -8.051212 22.919564 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq32'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.170174' y='0'>1</text>
+</g>
+</svg>
+ e determinante <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.6087625em' height='0.9473037em' viewBox='-0.6 -8.730587 26.087625 9.473037' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq33'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>d</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.613227' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='19.573158' y='0'>2</text>
+</g>
+</svg>
+. Como <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8289609em' height='0.9473037em' viewBox='-0.6 -8.730587 8.289609 9.473037' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq34'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>d</text>
+</g>
+</svg>
+ é maior que <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.1458412em' height='1.1292487em' viewBox='-0.360891 -10.528122 21.458412 11.292487' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq35'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='futr8r' font-size='8.218248' x='5.164631' y='-4.339714'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='10.038353' y='0'>/4</text>
+</g>
+</svg>
+, o ponto
+(-1, 0) é foco repulsivo.
+</p>
+<p>
+O retrato de fase traça-se com o comando:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i2)</span><span class="maxf"> plotdf</span><span class="maxd"> ([</span><span class="maxv">vx</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxv">x</span><span class="maxo">*</span><span class="maxd">(</span><span class="maxv">x</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxn">1</span><span class="maxo">+</span><span class="maxv">vx</span><span class="maxd">)], [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">vx</span><span class="maxd">], [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">2.5</span><span class="maxd">,</span><span class="maxn">2.5</span><span class="maxd">], [</span><span class="maxv">vx</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">5</span><span class="maxd">])</span><span class="maxm">;</span>
+</div>
+<br>
+<img class="fig center" src="img/Retrato_de_fase_y_x3+xy-x.png"
+     alt="Retrato de fase" style="width:18.33em">
+</section>
+<section>
+<div class="example" id="prob-10.4">
+<h3>Problema 4</h3>
+<p>
+A amplitude de oscilação de um pêndulo decresce, devido à força de
+resistência do ar e ao atrito no eixo. Admita um pêndulo de
+comprimento <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.9000701em' height='0.9462079em' viewBox='-0.6 -8.730587 29.000701 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq36'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>l</text>
+<text font-family='fourier-ms' font-size='10.957664' x='6.648351' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='16.608282' y='0'>50</text>
+</g>
+</svg>
+&thinsp;cm e massa <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.9611425em' height='0.8782704em' viewBox='-0.6 -8.051212 49.611425 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq37'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.673768' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='22.633698' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='28.467819' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='31.384885' y='0'>150</text>
+</g>
+</svg>
+&thinsp;kg, em que o atrito no
+eixo é desprezável mas a resistência do ar não. A equação de movimento
+é a equação <a href="mecanica_lagrangiana.html#eq-8.8">8.8</a>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.970398em' height='2.5756945em' viewBox='177.888946 66.23828 109.70398 25.756945' class='display'>
+<g id='eq38'>
+<text font-family='futr8r' font-size='10.957664' x='180.120812' y='80.103588'>¨</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='178.488946' y='83.062509'>θ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='187.002278' y='83.062509'>=<tspan x='196.962209'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='206.311149' y='74.968867'>g</text>
+<rect x='206.07204' y='79.64717' height='.637912' width='7.137206'/>
+<text font-family='futri8r' font-size='10.957664' x='207.339276' y='91.263733'>l</text>
+<text font-family='futr8r' font-size='10.957664' x='216.742612' y='83.062509'>sin</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='232.712024' y='83.062509'>θ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='240.640901' y='83.062509'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='250.85323' y='74.968867'>C</text>
+<text font-family='futri8r' font-size='10.957664' x='260.570092' y='74.968867'>l</text>
+<rect x='251.211882' y='79.64717' height='.637912' width='13.960937'/>
+<text font-family='futri8r' font-size='10.957664' x='252.878286' y='91.263733'>m</text>
+<text font-family='fourier-ms' font-size='10.957664' x='267.537259' y='83.062509'>|</text>
+<text font-family='futr8r' font-size='10.957664' x='272.229642' y='80.103588'>˙</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='270.597777' y='83.062509'>θ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='277.065497' y='83.062509'>|</text>
+<text font-family='futr8r' font-size='10.957664' x='282.926806' y='80.103588'>˙</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='281.29494' y='83.062509'>θ</text>
+</g>
+</svg>
+</div>
+Se a massa <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.137967em' height='0.6832239em' viewBox='-0.6 -6.100747 11.37967 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq39'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+</g>
+</svg>
+ estiver concentrada numa esfera de raio <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.6422379em' height='0.8782704em' viewBox='-0.6 -8.182704 26.422379 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq40'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.947982' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='19.907912' y='0'>2</text>
+</g>
+</svg>
+&thinsp;cm, a
+expressão para a constante <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.950591em' height='0.9111434em' viewBox='-0.958652 -8.347069 9.50591 9.111434' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq41'>
+<text font-family='futri8r' font-size='10.957664' x='-.358652' y='0'>C</text>
+</g>
+</svg>
+ é dada pela equação&thinsp;<a href="mecanica_vetorial.html#eq-4.14">4.14</a>:
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.1302178em' height='1.3790835em' viewBox='-0.958652 -10.528122 61.302178 13.790835' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq42'>
+<text font-family='futri8r' font-size='10.957664' x='-.358652' y='0'>C</text>
+<text font-family='fourier-ms' font-size='10.957664' x='10.234896' y='0'>=</text>
+<text font-family='fourier-ml' font-size='10.957664' x='20.194827' y='0'>π</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='28.345566' y='0'>ρ</text>
+<text font-family='futri8r' font-size='10.957664' x='36.508266' y='0'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='44.410635' y='-4.339714'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='49.284357' y='0'>/4</text>
+</g>
+</svg>
+, onde <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.4264971em' height='1.1313924em' viewBox='-0.6 -8.051212 34.264971 11.313924' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq43'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ρ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.039386' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='18.999317' y='0'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='24.833438' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='27.750504' y='0'>2</text>
+</g>
+</svg>
+&thinsp;kg/m<sup>3</sup> é a massa
+volúmica do ar. Trace os gráficos de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.9366545em' height='1.0733168em' viewBox='-0.6 -8.730587 19.366545 10.733168' class='inline' style='vertical-align:-0.1998em'>
+<g id='eq44'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>θ</text>
+<text font-family='futr8r' font-size='10.957664' x='6.467728' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='10.556395' y='0'>t</text>
+<text font-family='futr8r' font-size='10.957664' x='15.481917' y='0'>)</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.0956598em' height='1.0185285em' viewBox='-0.6 -8.182704 20.956598 10.185285' class='inline' style='vertical-align:-0.1998em'>
+<g id='eq45'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ω</text>
+<text font-family='futr8r' font-size='10.957664' x='8.057781' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='12.146448' y='0'>t</text>
+<text font-family='futr8r' font-size='10.957664' x='17.07197' y='0'>)</text>
+</g>
+</svg>
+ e da
+curva de evolução no espaço de fase e explique o significado físico da
+solução, para os dois casos seguintes:
+<br>
+(<i>a</i>) O pêndulo parte do repouso com um ângulo inicial
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.0816318em' height='0.9594049em' viewBox='-0.6 -8.8516 40.816318 9.594049' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq46'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>θ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.51334' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='18.473271' y='0'>120</text>
+<text font-family='fourier-ms' font-size='8.218248' x='35.975634' y='-4.339714'>◦</text>
+</g>
+</svg>
+.
+<br>
+(<i>b</i>) O pêndulo é lançado desde <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.4982197em' height='0.9594049em' viewBox='-0.6 -8.8516 34.982197 9.594049' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq47'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>θ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.51334' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='18.473271' y='0'>60</text>
+<text font-family='fourier-ms' font-size='8.218248' x='30.141513' y='-4.339714'>◦</text>
+</g>
+</svg>
+, com
+velocidade angular inicial <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.3276169em' height='0.8782704em' viewBox='-0.6 -8.051212 43.276169 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq48'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ω</text>
+<text font-family='fourier-ms' font-size='10.957664' x='10.103393' y='0'>=<tspan x='20.063324'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='27.977642' y='0'>7</text>
+<text font-family='futr8r' font-size='10.957664' x='33.811763' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='36.728829' y='0'>8</text>
+</g>
+</svg>
+&thinsp;s<sup>&minus;1</sup>.
+</p>
+</div>
+<p>
+(<i>a</i>) Usando o programa <span class="maxf">rk</span>, com intervalos de
+tempo de 0.1, desde <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.3489363em' height='0.8782704em' viewBox='-0.360891 -8.051212 23.489363 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq49'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.170174' y='0'>0</text>
+</g>
+</svg>
+ até <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.9323484em' height='0.8782704em' viewBox='-0.360891 -8.051212 29.323484 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq50'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.170174' y='0'>50</text>
+</g>
+</svg>
+,
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i3)</span><span class="maxd"> [</span><span class="maxv">g</span><span class="maxd">,</span><span class="maxv"> l</span><span class="maxd">,</span><span class="maxv"> m</span><span class="maxd">]</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxn">9.8</span><span class="maxd">,</span><span class="maxn"> 0.5</span><span class="maxd">,</span><span class="maxn"> 0.15</span><span class="maxd">]</span><span class="maxm">$</span><br>
+<span class="maxm">(%i4)</span><span class="maxv"> C</span><span class="maxm">:</span><span class="maxi"> %pi</span><span class="maxo">*</span><span class="maxn">1.2</span><span class="maxo">*</span><span class="maxn">0.02</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo">/</span><span class="maxn">4</span><span class="maxm">$</span><br>
+<span class="maxm">(%i5)</span><span class="maxv"> s</span><span class="maxm">:</span><span class="maxf"> rk</span><span class="maxd"> ([</span><span class="maxv">w</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxv">g</span><span class="maxo">*</span><span class="maxf">sin</span><span class="maxd">(</span><span class="maxv">q</span><span class="maxd">)/</span><span class="maxv">l</span><span class="maxo">-</span><span class="maxv">C</span><span class="maxo">*</span><span class="maxv">l</span><span class="maxo">*</span><span class="maxf">abs</span><span class="maxd">(</span><span class="maxv">w</span><span class="maxd">)</span><span class="maxo">*</span><span class="maxv">w</span><span class="maxd">/</span><span class="maxv">m</span><span class="maxd">], [</span><span class="maxv">q</span><span class="maxd">,</span><span class="maxv">w</span><span class="maxd">], [</span><span class="maxn">2</span><span class="maxo">*</span><span class="maxi">%pi</span><span class="maxo">/</span><span class="maxn">3</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">], [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">50</span><span class="maxd">,</span><span class="maxn">0.1</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i6)</span><span class="maxf"> last</span><span class="maxd"> (</span><span class="maxv">s</span><span class="maxd">)</span><span class="maxm">;</span><br>
+(%o6) &emsp;[ 50.0, 0.408596821360162, 6.193790347574476 ]
+</div>
+<p>
+Executando novamente o programa rk com intervalos de tempo dez vezes menores,
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i7)</span><span class="maxv"> s</span><span class="maxm">:</span><span class="maxf"> rk</span><span class="maxd"> ([</span><span class="maxv">w</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxv">g</span><span class="maxo">*</span><span class="maxf">sin</span><span class="maxd">(</span><span class="maxv">q</span><span class="maxd">)/</span><span class="maxv">l</span><span class="maxo">-</span><span class="maxv">C</span><span class="maxo">*</span><span class="maxv">l</span><span class="maxo">*</span><span class="maxf">abs</span><span class="maxd">(</span><span class="maxv">w</span><span class="maxd">)</span><span class="maxo">*</span><span class="maxv">w</span><span class="maxd">/</span><span class="maxv">m</span><span class="maxd">], [</span><span class="maxv">q</span><span class="maxd">,</span><span class="maxv">w</span><span class="maxd">], [</span><span class="maxn">2</span><span class="maxo">*</span><span class="maxi">%pi</span><span class="maxo">/</span><span class="maxn">3</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">], [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">50</span><span class="maxd">,</span><span class="maxn">0.01</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i8)</span><span class="maxf"> last</span><span class="maxd"> (</span><span class="maxv">s</span><span class="maxd">)</span><span class="maxm">;</span><br>
+(%o8) &emsp;[ 50.0, - 0.8184365726225941, 5.503739362621793 ]
+</div>
+<p>
+Conclui-se que é necessário reduzir ainda mais o valor dos intervalos de
+tempo, para obter uma solução convergente:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i9)</span><span class="maxv"> s</span><span class="maxm">:</span><span class="maxf"> rk</span><span class="maxd"> ([</span><span class="maxv">w</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxv">g</span><span class="maxo">*</span><span class="maxf">sin</span><span class="maxd">(</span><span class="maxv">q</span><span class="maxd">)/</span><span class="maxv">l</span><span class="maxo">-</span><span class="maxv">C</span><span class="maxo">*</span><span class="maxv">l</span><span class="maxo">*</span><span class="maxf">abs</span><span class="maxd">(</span><span class="maxv">w</span><span class="maxd">)</span><span class="maxo">*</span><span class="maxv">w</span><span class="maxd">/</span><span class="maxv">m</span><span class="maxd">], [</span><span class="maxv">q</span><span class="maxd">,</span><span class="maxv">w</span><span class="maxd">], [</span><span class="maxn">2</span><span class="maxo">*</span><span class="maxi">%pi</span><span class="maxo">/</span><span class="maxn">3</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">], [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">50</span><span class="maxd">,</span><span class="maxn">0.005</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i10)</span><span class="maxf"> last</span><span class="maxd"> (</span><span class="maxv">s</span><span class="maxd">)</span><span class="maxm">;</span><br>
+(%o10) &emsp;[ 50.0, - 0.8184437883132009, 5.503721542035767 ]
+</div>
+<p>
+Que é um resultado convergente com 4 algarismos significativos. O gráfico do
+ângulo e da velocidade angular, em função do tempo, obtém-se com o comando:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i11)</span><span class="maxf"> plot2d</span><span class="maxd"> ([[</span><span class="maxk">discrete</span><span class="maxd">,</span><span class="maxf"> makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]],</span><span class="maxv">p</span><span class="maxd">,</span><span class="maxv">s</span><span class="maxd">)], [</span><span class="maxk">discrete</span><span class="maxd">,</span><span class="maxf"> makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]],</span><span class="maxv">p</span><span class="maxd">,</span><span class="maxv">s</span><span class="maxd">)]], [</span><span class="maxk">legend</span><span class="maxd">,</span><span class="maxs"> "angulo"</span><span class="maxd">,</span><span class="maxs"> "vel. angular"</span><span class="maxd">], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs"> "t"</span><span class="maxd">])</span><span class="maxm">;</span>
+</div><br>
+<img class="fig center" src="img/problema_10-4a.png"
+     alt="Ângulo e velocidade angular do pêndulo amortecido"
+     style="width:23.79em">
+<p>
+E a curva de evolução no espaço de fase é o gráfico da velocidade angular em
+função do ângulo, obtido com o seguinte comando:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i12)</span><span class="maxf"> plot2d</span><span class="maxd"> ([</span><span class="maxk">discrete</span><span class="maxd">,</span><span class="maxf"> makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]],</span><span class="maxv">p</span><span class="maxd">,</span><span class="maxv">s</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs"> "angulo"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs"> "vel. angular"</span><span class="maxd">])</span><span class="maxm">;</span>
+</div><br>
+<img class="fig center" src="img/problema_10-4a-2.png"
+     alt="Curva de evolução do pêndulo amortecido"
+     style="width:24.18em">
+<p>
+Os dois gráficos mostram que pêndulo oscila com amplitude que decresce
+lentamente.
+</p>
+<p>
+(<i>b</i>) Usando o programa <span class="maxf">rk</span>, com os mesmos
+intervalos de tempo usados para obter os gráficos na alínea anterior,
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i13)</span><span class="maxv"> s</span><span class="maxm">:</span><span class="maxf"> rk</span><span class="maxd"> ([</span><span class="maxv">w</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxv">g</span><span class="maxo">*</span><span class="maxf">sin</span><span class="maxd">(</span><span class="maxv">q</span><span class="maxd">)</span><span class="maxo">/</span><span class="maxv">l</span><span class="maxo">-</span><span class="maxv">C</span><span class="maxo">*</span><span class="maxv">l</span><span class="maxo">*</span><span class="maxf">abs</span><span class="maxd">(</span><span class="maxv">w</span><span class="maxd">)</span><span class="maxo">*</span><span class="maxv">w</span><span class="maxo">/</span><span class="maxv">m</span><span class="maxd">], [</span><span class="maxv">q</span><span class="maxd">,</span><span class="maxv">w</span><span class="maxd">], [</span><span class="maxi">%pi</span><span class="maxo">/</span><span class="maxn">3</span><span class="maxd">,</span><span class="maxn">-7.8</span><span class="maxd">], [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">50</span><span class="maxd">,</span><span class="maxn">0.005</span><span class="maxd">])</span><span class="maxm">$</span>
+</div>
+<p>
+Os gráficos do ângulo e da velocidade angular, em função do tempo, e da
+curva de evolução no espaço de fase, obtêm-se repetindo os mesmos comandos da
+alínea anterior:
+</p>
+<div class="center">
+<img class="fig" src="img/problema_10-4b.png"
+     alt="Ângulo e velocidade angular do pêndulo amortecido"
+     style="width:22.95em;margin-right:20px;padding-bottom:0.3em">
+<img class="fig" src="img/problema_10-4b-2.png"
+     alt="Curva de evolução do pêndulo amortecido" style="width:24.30em">
+</div>
+<p>
+O pêndulo roda três voltas completas, no sentido horário, e quando passa a
+quarta vez pela posição de equilíbrio estável, começa a oscilar com
+amplitude que decresce lentamente.
+</p>
+</section>
+<section>
+<div class="example" id="prob-10.7">
+<h3>Problema 7</h3>
+<p>
+Para analisar a equação diferencial não linear <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.684109em' height='1.1259614em' viewBox='-0.360891 -10.528122 76.84109 11.259614' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq51'>
+<text font-family='futr8r' font-size='10.957664' x='1.739464' y='-.179335'>¨</text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.144081' y='0'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='19.259013' y='-.179335'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='17.758658' y='0'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='24.202488' y='-4.339714'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='30.537352' y='0'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='39.912819' y='0'>4</text>
+<text font-family='futri8r' font-size='10.957664' x='47.154975' y='0'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='53.598805' y='-4.339714'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='60.51814' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='70.47807' y='0'>4</text>
+</g>
+</svg>
+,
+<br>
+(<i>a</i>) Escreva as equações de evolução do sistema dinâmico
+associado à equação.
+<br>
+(<i>b</i>) Encontre os pontos de equilíbrio do sistema.
+<br>
+(<i>c</i>) Determine a matriz jacobiana.
+<br>
+(<i>d</i>) Caracterize cada um dos pontos de equilíbrio.
+<br>
+(<i>e</i>) Se em <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.3489363em' height='0.8782704em' viewBox='-0.360891 -8.051212 23.489363 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq52'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.170174' y='0'>0</text>
+</g>
+</svg>
+ os valores da variável <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq53'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ e da sua derivada
+são <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.8905114em' height='1.0543094em' viewBox='-0.360891 -8.051212 28.905114 10.543094' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq54'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='6.276459' y='1.793263'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.195793' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='23.155724' y='0'>1</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.8905106em' height='1.0755302em' viewBox='-0.360891 -8.26342 28.905106 10.755302' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq55'>
+<text font-family='futr8r' font-size='10.957664' x='1.739464' y='-.179335'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='6.276459' y='1.793263'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.195786' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='23.155716' y='0'>1</text>
+</g>
+</svg>
+, determine (numericamente) os valores da
+variável e da sua derivada em <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.3445532em' height='0.8782704em' viewBox='-0.360891 -8.051212 23.445532 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq56'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.170174' y='0'>2</text>
+</g>
+</svg>
+.
+</p>
+</div>
+<p>
+(<i>a</i>) Define-se uma segunda variável de estado:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.6293738em' height='0.8994912em' viewBox='219.977589 71.935833 26.293738 8.994912' class='display'>
+<g id='eq57'>
+<text font-family='futri8r' font-size='10.957664' x='220.577589' y='80.199253'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='229.270249' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='240.969643' y='80.019917'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='239.469288' y='80.199253'>x</text>
+</g>
+</svg>
+</div>
+<p>
+e substitui-se na equação do sistema:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.7247532em' height='1.1857379em' viewBox='194.405606 69.073366 77.247532 11.857379' class='display'>
+<g id='eq58'>
+<text font-family='futr8r' font-size='10.957664' x='196.906452' y='80.019917'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='195.005606' y='80.199253'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='203.113796' y='80.199253'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='212.728373' y='80.199253'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='219.37542' y='75.261775'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='225.710292' y='80.199253'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='235.085759' y='80.199253'>4</text>
+<text font-family='futri8r' font-size='10.957664' x='242.327915' y='80.199253'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='248.771745' y='75.261775'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='255.69108' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='265.65101' y='80.199253'>4</text>
+</g>
+</svg>
+</div>
+<p>
+Como tal, as duas equações de evolução &mdash; expressões das derivadas das
+duas variáveis de estado &mdash; são:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12.3407376em' height='1.1857379em' viewBox='171.097762 69.073366 123.407376 11.857379' class='display'>
+<g id='eq59'>
+<text font-family='futr8r' font-size='10.957664' x='173.198118' y='80.019917'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='171.697762' y='80.199253'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='180.187198' y='80.199253'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='190.386237' y='80.199253'>v</text>
+<text font-family='futr8r' font-size='10.957664' x='220.214331' y='80.019917'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='218.313485' y='80.199253'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='227.006137' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='236.966068' y='80.199253'>4</text>
+<text font-family='fourier-ms' font-size='10.957664' x='244.261339' y='80.199253'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='253.875915' y='80.199253'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='260.522963' y='75.261775'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='266.857834' y='80.199253'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='276.233302' y='80.199253'>4</text>
+<text font-family='futri8r' font-size='10.957664' x='283.475457' y='80.199253'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='289.919288' y='75.261775'>2</text>
+</g>
+</svg>
+</div>
+<p>
+(<i>b</i>) Para resolver esta alínea não é necessário ter resolvido a alínea
+anterior. Basta observar que nos pontos de equilíbrio <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq60'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ permanece constante
+e, assim sendo, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.3696138em' height='0.8994912em' viewBox='-0.360891 -8.26342 43.696138 8.994912' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq61'>
+<text font-family='futr8r' font-size='10.957664' x='1.739464' y='-.179335'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.728544' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='20.427939' y='-.179335'>¨</text>
+<text font-family='futri8r' font-size='10.957664' x='18.927583' y='0'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='27.417019' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='37.376949' y='0'>0</text>
+</g>
+</svg>
+. Substituindo na equação do sistema,
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12.6162834em' height='1.2131321em' viewBox='169.521596 69.073366 126.162834 12.131321' class='display'>
+<g id='eq62'>
+<text font-family='futr8r' font-size='10.957664' x='170.121596' y='80.199253'>4</text>
+<text font-family='futri8r' font-size='10.957664' x='177.363752' y='80.199253'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='183.807582' y='75.261775'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='190.726917' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='200.686847' y='80.199253'>4</text>
+<text font-family='fourier-ms' font-size='10.957664' x='229.607672' y='80.199253'>⇒</text>
+<text font-family='futri8r' font-size='10.957664' x='263.93224' y='80.199253'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='272.421683' y='80.199253'>=<tspan x='282.381613'>±</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='290.295931' y='80.199253'>1</text>
+</g>
+</svg>
+</div>
+<p>
+(<i>c</i>) Usando as equações obtidas na alínea (<i>a</i>),
+</p>
+<div class="eqnalign">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.9802014em' height='1.0327734em' viewBox='-0.6 -8.182704 39.802014 10.327734' class='inline' style='vertical-align:-0.216em'>
+<g id='eq63'>
+<text font-family='futb8r' font-size='10.957664' x='0' y='0'>J</text>
+<text font-family='futr8r' font-size='10.957664' x='4.244079' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='8.332747' y='0'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='14.776577' y='0'>,</text>
+<text font-family='futri8r' font-size='10.957664' x='19.101678' y='0'>v</text>
+<text font-family='futr8r' font-size='10.957664' x='25.748726' y='0'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='31.643897' y='0'>=</text>
+</g>
+</svg>
+
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='17.0508292em' height='5.803192em' viewBox='-0.6 -32.061076 170.508292 58.03192' class='inline' style='vertical-align:-2.603001em'>
+<g id='eq64'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-29.053662'>⎡<tspan x='0' y='-9.695682'>⎢</tspan>
+<tspan x='0' y='-3.096375'>⎢</tspan>
+<tspan x='0' y='3.942856'>⎣</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='37.847938' y='-23.308574'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='44.136357' y='-23.308574'>v</text>
+<rect x='37.847938' y='-18.630271' height='.637912' width='12.935455'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='37.949547' y='-7.013707'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='44.237966' y='-7.013707'>x</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='121.776888' y='-23.308574'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='128.065306' y='-23.308574'>v</text>
+<rect x='121.776888' y='-18.630271' height='.637912' width='12.935455'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='121.776888' y='-7.013707'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='128.065306' y='-7.013707'>v</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='8.528017' y='8.944486'>∂</text>
+<text font-family='futr8r' font-size='10.957664' x='14.577327' y='8.944486'>(4</text>
+<text font-family='fourier-ms' font-size='10.957664' x='25.722157' y='8.944486'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='35.336733' y='8.944486'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='41.983781' y='4.604772'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='48.318652' y='8.944486'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='57.69412' y='8.944486'>4</text>
+<text font-family='futri8r' font-size='10.957664' x='64.936276' y='8.944486'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='71.380106' y='4.604772'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='76.253828' y='8.944486'>)</text>
+<rect x='8.528017' y='13.622788' height='.637912' width='71.575282'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='37.949547' y='25.239352'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='44.237966' y='25.239352'>x</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='92.456967' y='8.944486'>∂</text>
+<text font-family='futr8r' font-size='10.957664' x='98.506277' y='8.944486'>(4</text>
+<text font-family='fourier-ms' font-size='10.957664' x='109.651106' y='8.944486'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='119.265682' y='8.944486'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='125.91273' y='4.604772'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='132.247602' y='8.944486'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='141.623069' y='8.944486'>4</text>
+<text font-family='futri8r' font-size='10.957664' x='148.865225' y='8.944486'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='155.309055' y='4.604772'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='160.182777' y='8.944486'>)</text>
+<rect x='92.456967' y='13.622788' height='.637912' width='71.575282'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='121.776888' y='25.239352'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='128.065306' y='25.239352'>v</text>
+<text font-family='fourier-mex' font-size='10.998733' x='165.227762' y='-29.053662'>⎤<tspan x='165.227762' y='-9.695682'>⎥</tspan>
+<tspan x='165.227762' y='-3.096375'>⎥</tspan>
+<tspan x='165.227762' y='3.942856'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.464885em' height='3.4196198em' viewBox='-0.6 -20.20565 74.64885 34.196198' class='inline' style='vertical-align:-1.405215em'>
+<g id='eq65'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='9.95993' y='-19.154702'></text>
+<text font-family='futr8r' font-size='10.957664' x='24.258955' y='-9.422688'>0<tspan x='55.923477'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.375873' y='9.008181'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='24.290191' y='9.008181'>8</text>
+<text font-family='futri8r' font-size='10.957664' x='31.532347' y='9.008181'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='47.938787' y='9.008181'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='55.853104' y='9.008181'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='63.09526' y='9.008181'>v</text>
+<text font-family='fourier-mex' font-size='10.998733' x='69.742277' y='-19.154702'></text>
+</g>
+</svg>
+
+</div>
+<p>
+(Também pode usar-se a função <span class="maxf">jacobian</span> do Maxima,
+para determinar a matriz).
+</p>
+<p>
+(<i>d</i>) Substituindo <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.4437873em' height='0.8782704em' viewBox='-0.360891 -8.051212 24.437873 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq66'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.728552' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='18.688482' y='0'>1</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.5210889em' height='0.8782704em' viewBox='-0.360891 -8.051212 25.210889 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq67'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.931769' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='18.8917' y='0'>0</text>
+</g>
+</svg>
+ na matriz jacobiana obtém-se:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.9662654em' height='2.7508969em' viewBox='192.096836 67.429875 79.662654 27.508969' class='display'>
+<g id='eq68'>
+<text font-family='futb8r' font-size='10.957664' x='192.696836' y='84.291877'>J</text>
+<text font-family='futr8r' font-size='10.957664' x='196.940915' y='84.291877'>(1</text>
+<text font-family='futr8r' font-size='10.957664' x='206.624595' y='84.291877'>,</text>
+<text font-family='futr8r' font-size='10.957664' x='210.710587' y='84.291877'>0)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='222.439879' y='84.291877'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='232.39981' y='68.436828'></text>
+<text font-family='futr8r' font-size='10.957664' x='242.161877' y='76.861717'>0<tspan x='261.915773'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='238.204717' y='91.30753'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='246.119034' y='91.30753'>8<tspan x='261.915773'>0</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.998733' x='267.749882' y='68.436828'></text>
+</g>
+</svg>
+</div>
+<p>
+Como o traço dessa matriz é nulo e o determinante é 8, os valores próprios
+são números imaginários e o ponto <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.4437873em' height='0.8782704em' viewBox='-0.360891 -8.051212 24.437873 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq69'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.728552' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='18.688482' y='0'>1</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.5210889em' height='0.8782704em' viewBox='-0.360891 -8.051212 25.210889 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq70'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.931769' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='18.8917' y='0'>0</text>
+</g>
+</svg>
+ é um centro ou foco
+(o retrato de fase mostra que é centro).
+</p>
+<p>
+Substituindo <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.235219em' height='0.8782704em' viewBox='-0.360891 -8.051212 32.35219 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq71'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.728552' y='0'>=<tspan x='18.688482'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='26.6028' y='0'>1</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.5210889em' height='0.8782704em' viewBox='-0.360891 -8.051212 25.210889 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq72'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.931769' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='18.8917' y='0'>0</text>
+</g>
+</svg>
+ na matriz jacobiana obtém-se:</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.9662665em' height='2.7508969em' viewBox='192.096836 67.429875 79.662665 27.508969' class='display'>
+<g id='eq73'>
+<text font-family='futb8r' font-size='10.957664' x='192.696836' y='84.291877'>J</text>
+<text font-family='futr8r' font-size='10.957664' x='196.940915' y='84.291877'>(</text>
+<text font-family='fourier-ms' font-size='10.957664' x='200.790474' y='84.291877'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='208.704791' y='84.291877'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='214.538912' y='84.291877'>,</text>
+<text font-family='futr8r' font-size='10.957664' x='218.624905' y='84.291877'>0)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='230.354197' y='84.291877'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='240.314127' y='68.436828'></text>
+<text font-family='futr8r' font-size='10.957664' x='246.119034' y='76.861717'>0<tspan x='261.915784'>1</tspan>
+<tspan x='246.119034' y='91.30753'>8</tspan>
+<tspan x='261.915784'>0</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.998733' x='267.749894' y='68.436828'></text>
+</g>
+</svg>
+</div>
+<p>
+Como o traço dessa matriz é nulo e o determinante é -8, os valores próprios
+são reais, com sinais opostos. O ponto <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.235219em' height='0.8782704em' viewBox='-0.360891 -8.051212 32.35219 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq74'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.728552' y='0'>=<tspan x='18.688482'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='26.6028' y='0'>1</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.5210889em' height='0.8782704em' viewBox='-0.360891 -8.051212 25.210889 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq75'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.931769' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='18.8917' y='0'>0</text>
+</g>
+</svg>
+ é então ponto de sela.
+</p>
+<p>
+(<i>e</i>) Usa-se a função <span class="maxf">rk</span> do Maxima várias
+vezes, com valores decrescentes dos intervalos de tempo, até se obterem
+valores convergentes do resultado:</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i14)</span><span class="maxf"> last</span><span class="maxd">(</span><span class="maxf">rk</span><span class="maxd">( [</span><span class="maxv">v</span><span class="maxd">,</span><span class="maxn">4</span><span class="maxo">-</span><span class="maxv">v</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxo">*</span><span class="maxv">x</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxd">], [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">v</span><span class="maxd">], [</span><span class="maxn">1</span><span class="maxd">,</span><span class="maxn">1</span><span class="maxd">], [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">0.1</span><span class="maxd">]))</span><span class="maxm">;</span><br>
+(%o14) &emsp;&emsp;&emsp;[ 2.0, 0.58688, 0.82753 ]<br>
+<span class="maxm">(%i15)</span><span class="maxf"> last</span><span class="maxd">(</span><span class="maxf">rk</span><span class="maxd">( [</span><span class="maxv">v</span><span class="maxd">,</span><span class="maxn">4</span><span class="maxo">-</span><span class="maxv">v</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxo">*</span><span class="maxv">x</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxd">], [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">v</span><span class="maxd">], [</span><span class="maxn">1</span><span class="maxd">,</span><span class="maxn">1</span><span class="maxd">], [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">0.05</span><span class="maxd">]))</span><span class="maxm">;</span><br>
+(%o15) &emsp;&emsp;&emsp;[ 2.0, 0.58687, 0.82768 ]
+</div>
+<p>
+Ou seja, os valores aproximados de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq76'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.8994912em' viewBox='-0.360891 -8.26342 7.402038 8.994912' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq77'>
+<text font-family='futr8r' font-size='10.957664' x='1.739464' y='-.179335'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+, em <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.3445532em' height='0.8782704em' viewBox='-0.360891 -8.051212 23.445532 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq78'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.170174' y='0'>2</text>
+</g>
+</svg>
+, são: 0.5869 e
+0.8277.
+</p>
+</section>
+<section>
+<div class="example" id="prob-10.8">
+<h3>Problema 8</h3>
+<p>
+O sistema dinâmico com equações de evolução:
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='17.8076836em' height='1.4377642em' viewBox='144.087083 69.073366 178.076836 14.377642' class='display'>
+<g id='eq79'>
+<text font-family='futr8r' font-size='10.957664' x='146.187439' y='80.019917'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='144.687083' y='80.199253'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='153.176519' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='163.136449' y='80.199253'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='170.378605' y='80.199253'>x</text>
+<text font-family='futri8r' font-size='10.957664' x='178.589122' y='80.199253'>y</text>
+<text font-family='futr8r' font-size='8.218248' x='184.746015' y='75.261775'>3</text>
+<text font-family='fourier-ms' font-size='10.957664' x='191.080886' y='80.199253'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='200.695463' y='80.199253'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='207.139293' y='75.261775'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='256.169404' y='80.019917'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='254.692957' y='80.199253'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='262.895463' y='80.199253'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='273.453154' y='80.199253'>y</text>
+<text font-family='futr8r' font-size='8.218248' x='279.610047' y='75.261775'>4</text>
+<text font-family='fourier-ms' font-size='10.957664' x='285.944918' y='80.199253'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='295.320386' y='80.199253'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='302.562542' y='80.199253'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='309.006372' y='75.261775'>3</text>
+<text font-family='futri8r' font-size='10.957664' x='315.64678' y='80.199253'>y</text>
+</g>
+</svg>
+</div>
+tem um único ponto de equilíbrio na origem. A matriz jacobiana nesse
+ponto é igual a zero e, portanto, os valores próprios (nulos) não
+podem ser usados para caraterizar o ponto de equilíbrio. Use o
+seguinte método para analisar o retrato de fase do sistema:
+<br>
+(<i>a</i>) Determine o versor na direção da velocidade de fase em
+qualquer ponto do eixo dos <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq80'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ e em qualquer ponto do eixo dos <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq81'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+.
+<br>
+(<i>b</i>) Determine o versor na direção da velocidade de fase em
+qualquer ponto das duas retas <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.5858371em' height='0.9352502em' viewBox='-0.057028 -6.100747 25.858371 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq82'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.800266' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='18.999305' y='0'>x</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.3772689em' height='0.9352502em' viewBox='-0.057028 -6.100747 33.772689 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq83'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.800266' y='0'>=<tspan x='18.760197'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='26.913623' y='0'>x</text>
+</g>
+</svg>
+.
+<br>
+(<i>c</i>) Faça a mão um gráfico mostrando os versores que encontrou
+nas alíneas <i>a</i> e <i>b</i>, em vários pontos nos 4 quadrantes do
+espaço de fase, e trace algumas curvas de evolução seguindo as
+direções da velocidade de fase. Com base nesse gráfico, que tipo de
+ponto de equilíbrio julga que é a origem?
+<br>
+(<i>d</i>) Diga se existem ciclos, órbitas homoclínicas ou
+heteroclínicas e, caso a resposta seja afirmativa, quantas.
+</p>
+</div>
+<p>
+(<i>a</i>) No eixo dos <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq84'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq85'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+ é igual a zero e a velocidade de fase é,
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12.0016018em' height='1.175876em' viewBox='172.998525 69.171985 120.016018 11.75876' class='display'>
+<g id='eq86'>
+<text font-family='fourier-ml' font-size='10.957664' x='173.598525' y='80.019917'></text>
+<text font-family='futri8r' font-size='10.957664' x='173.67027' y='80.199253'>u</text>
+<text font-family='fourier-ms' font-size='10.957664' x='183.116125' y='80.199253'>=<tspan x='193.076056'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='201.229482' y='80.199253'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='207.673312' y='75.261775'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='214.307735' y='80.019917'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='213.955069' y='80.199253'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='230.908766' y='80.199253'>=<tspan x='237.069695'>⇒</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='263.03161' y='80.019917'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='260.634608' y='80.199253'>u</text>
+<text font-family='fourier-ms' font-size='10.957664' x='270.080464' y='80.199253'>=<tspan x='280.040394'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='288.546487' y='80.019917'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='288.193821' y='80.199253'>ı</text>
+</g>
+</svg>
+</div>
+<p>
+No eixo dos <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq87'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq88'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ é igual a zero e a velocidade de fase é,
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.2285972em' height='1.4279023em' viewBox='176.812728 69.171985 112.285972 14.279023' class='display'>
+<g id='eq89'>
+<text font-family='fourier-ml' font-size='10.957664' x='177.412728' y='80.019917'></text>
+<text font-family='futri8r' font-size='10.957664' x='177.484473' y='80.199253'>u</text>
+<text font-family='fourier-ms' font-size='10.957664' x='186.930328' y='80.199253'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='197.488019' y='80.199253'>y</text>
+<text font-family='futr8r' font-size='8.218248' x='203.644912' y='75.261775'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='211.337364' y='80.019917'>ˆ</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='210.883081' y='80.199253'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='228.040018' y='80.199253'>=<tspan x='234.200947'>⇒</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='260.162863' y='80.019917'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='257.765861' y='80.199253'>u</text>
+<text font-family='futri8r' font-size='8.218248' x='264.927006' y='81.992516'>u</text>
+<text font-family='fourier-ms' font-size='10.957664' x='273.02091' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='284.630645' y='80.019917'>ˆ</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='284.176362' y='80.199253'></text>
+</g>
+</svg>
+</div>
+<p>
+(<i>b</i>) Na reta <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq90'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+ = <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq91'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+, a velocidade de fase é,
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.7109828em' height='1.4279023em' viewBox='199.400798 69.171985 67.109828 14.279023' class='display'>
+<g id='eq92'>
+<text font-family='fourier-ml' font-size='10.957664' x='200.000798' y='80.019917'></text>
+<text font-family='futri8r' font-size='10.957664' x='200.072543' y='80.199253'>u</text>
+<text font-family='fourier-ms' font-size='10.957664' x='209.518398' y='80.199253'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='219.717438' y='80.199253'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='226.161268' y='75.261775'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='232.795691' y='80.019917'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='232.443024' y='80.199253'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='238.291713' y='80.199253'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='247.906289' y='80.199253'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='254.350119' y='75.261775'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='262.042571' y='80.019917'>ˆ</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='261.588288' y='80.199253'></text>
+</g>
+</svg>
+</div>
+<p>
+com módulo igual a <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.8095216em' height='1.2354902em' viewBox='-0.6 -10.594628 28.095216 12.354902' class='inline' style='vertical-align:-0.180181em'>
+<g id='eq93'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='-9.359084'></text>
+<rect x='9.157645' y='-9.992709' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='9.157645' y='0'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='16.399789' y='0'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='22.84362' y='-4.339714'>4</text>
+</g>
+</svg>
+ e versor:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13.1979429em' height='3.0046065em' viewBox='166.114276 66.183178 131.979429 30.046065' class='display'>
+<g id='eq94'>
+<text font-family='fourier-ml' font-size='10.957664' x='166.714276' y='84.526987'></text>
+<text font-family='futri8r' font-size='10.957664' x='167.592992' y='84.706323'>e</text>
+<text font-family='futri8r' font-size='8.218248' x='173.176056' y='86.499586'>u</text>
+<text font-family='fourier-ms' font-size='10.957664' x='181.26996' y='84.706323'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='192.664513' y='76.612681'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='199.108343' y='72.272967'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='205.742766' y='76.433346'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='205.3901' y='76.612681'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='211.238788' y='76.612681'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='220.853364' y='76.612681'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='227.297195' y='72.272967'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='234.989646' y='76.433346'>ˆ</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='234.535364' y='76.612681'></text>
+<rect x='192.425404' y='81.290984' height='.637912' width='46.700712'/>
+<text font-family='fourier-ms' font-size='10.957664' x='201.917093' y='85.109885'></text>
+<rect x='211.074738' y='84.476259' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='211.074738' y='94.468968'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='218.316882' y='94.468968'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='224.760713' y='91.013938'>4</text>
+<text font-family='fourier-ms' font-size='10.957664' x='242.367242' y='84.706323'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='258.101509' y='76.612681'>1</text>
+<rect x='253.522686' y='81.290984' height='.637912' width='14.991755'/>
+<text font-family='fourier-ms' font-size='10.957664' x='253.522686' y='85.109885'></text>
+<rect x='262.680331' y='84.476259' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='262.680331' y='94.468968'>2<tspan x='269.709955' y='84.706323'>(</tspan>
+<tspan x='274.151288' y='84.526987'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='273.798622' y='84.706323'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='279.64731' y='84.706323'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='290.672582' y='84.526987'>ˆ</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='290.218299' y='84.706323'></text>
+<text font-family='futr8r' font-size='10.957664' x='294.809078' y='84.706323'>)</text>
+</g>
+</svg>
+</div>
+<p>
+Na reta <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.3772689em' height='0.9352502em' viewBox='-0.057028 -6.100747 33.772689 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq95'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.800266' y='0'>=<tspan x='18.760197'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='26.913623' y='0'>x</text>
+</g>
+</svg>
+,
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20.830843em' height='2.7667773em' viewBox='128.353307 66.062859 208.30843 27.667773' class='display'>
+<g id='eq96'>
+<text font-family='fourier-ml' font-size='10.957664' x='128.953307' y='82.028377'></text>
+<text font-family='futri8r' font-size='10.957664' x='129.025052' y='82.207712'>u</text>
+<text font-family='fourier-ms' font-size='10.957664' x='138.470907' y='82.207712'>=<tspan x='148.430838'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='156.345156' y='82.207712'>3</text>
+<text font-family='futri8r' font-size='10.957664' x='163.587311' y='82.207712'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='170.031142' y='77.270234'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='176.665564' y='82.028377'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='176.312898' y='82.207712'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='182.161586' y='82.207712'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='191.537054' y='82.207712'>3</text>
+<text font-family='futri8r' font-size='10.957664' x='198.779209' y='82.207712'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='205.22304' y='77.270234'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='212.915491' y='82.028377'>ˆ</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='212.461209' y='82.207712'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='229.618146' y='82.207712'>=<tspan x='235.779075'>⇒</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.957664' x='258.465272' y='82.028377'></text>
+<text font-family='futri8r' font-size='10.957664' x='259.343988' y='82.207712'>e</text>
+<text font-family='futri8r' font-size='8.218248' x='264.927052' y='84.000975'>u</text>
+<text font-family='fourier-ms' font-size='10.957664' x='273.020956' y='82.207712'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='288.755223' y='74.114071'>1</text>
+<rect x='284.1764' y='78.792373' height='.637912' width='14.991755'/>
+<text font-family='fourier-ms' font-size='10.957664' x='284.1764' y='82.611274'></text>
+<rect x='293.334045' y='81.977649' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='293.334045' y='91.970358'>2<tspan x='300.363668' y='82.207712'>(</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='304.213227' y='82.207712'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='312.71932' y='82.028377'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='312.366654' y='82.207712'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='318.215342' y='82.207712'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='329.240613' y='82.028377'>ˆ</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='328.786331' y='82.207712'></text>
+<text font-family='futr8r' font-size='10.957664' x='333.377109' y='82.207712'>)</text>
+</g>
+</svg>
+</div>
+<p>
+(<i>c</i>) A figura seguinte mostra os versores encontrados nas duas
+alíneas anteriores e algumas curvas de evolução. Como há curvas que se
+aproximam da origem e curvas que se afastam dele, a origem é ponto de
+sela.
+</p>
+<img class="img-11 center" src="img/Folha_de_Descartes.png"
+     alt="Folha de Descartes" width="468" height="435">
+<p>
+(<i>d</i>) Não existem ciclos nem órbitas heteroclínicas. Existem um número
+infinito de órbitas homoclínicas: todas as curvas de evolução no primeiro e
+terceiro quadrantes são órbitas homoclínicas.
+</p>
+</section>
+<section>
+<div class="example" id="prob-10.10">
+<h3>Problema 10</h3>
+<p>
+Qualquer corpo celeste (planeta, cometa, asteroide, sonda espacial,
+etc) de massa <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.137967em' height='0.6832239em' viewBox='-0.6 -6.100747 11.37967 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq97'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+</g>
+</svg>
+ no sistema solar tem uma energia potencial gravítica
+produzida pelo Sol, que é responsável pelas órbitas elípticas desses
+corpos. A expressão para a energia potencial é,
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.7366152em' height='3.0211376em' viewBox='193.546086 66.095756 77.366152 30.211376' class='display'>
+<g id='eq98'>
+<text font-family='futri8r' font-size='10.957664' x='194.146086' y='82.536466'>U</text>
+<text font-family='fourier-ms' font-size='10.957664' x='206.222078' y='82.536466'>=<tspan x='216.182009'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='231.04359' y='74.442824'>G</text>
+<text font-family='futri8r' font-size='10.957664' x='241.15498' y='74.442824'>M</text>
+<text font-family='futri8r' font-size='10.957664' x='253.573696' y='74.442824'>m</text>
+<rect x='225.29184' y='79.121127' height='.637912' width='45.020398'/>
+<text font-family='fourier-mex' font-size='10.998733' x='225.29184' y='82.948602'></text>
+<rect x='236.290603' y='82.310689' height='.637912' width='34.021635'/>
+<text font-family='futri8r' font-size='10.957664' x='236.529712' y='92.864861'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='242.973542' y='89.40983'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='249.308414' y='92.864861'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='259.281642' y='92.864861'>y</text>
+<text font-family='futr8r' font-size='8.218248' x='265.438535' y='89.40983'>2</text>
+</g>
+</svg>
+</div>
+onde <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.9659317em' height='0.9111434em' viewBox='-0.958652 -8.347069 9.659317 9.111434' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq99'>
+<text font-family='futri8r' font-size='10.957664' x='-.358652' y='0'>G</text>
+</g>
+</svg>
+ é a constante de gravitação universal, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2563098em' height='0.8782704em' viewBox='-0.360891 -8.182704 12.563098 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq100'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>M</text>
+</g>
+</svg>
+ é a massa do Sol,
+e as coordenadas <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq101'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq102'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+ são medidas no plano da órbita do corpo
+celeste, com origem no Sol. Se as distâncias forem medidas em unidades
+astronómicas, UA, e os tempos em anos, o produto <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.2674487em' height='0.9111434em' viewBox='-0.958652 -8.347069 22.674487 9.111434' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq103'>
+<text font-family='futri8r' font-size='10.957664' x='-.358652' y='0'>G</text>
+<text font-family='futri8r' font-size='10.957664' x='9.752738' y='0'>M</text>
+</g>
+</svg>
+ será igual a
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.8001785em' height='1.1292487em' viewBox='-0.6 -10.528122 18.001785 11.292487' class='inline' style='vertical-align:-0.076199em'>
+<g id='eq104'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='5.834121' y='0'>π</text>
+<text font-family='futr8r' font-size='8.218248' x='12.815935' y='-4.339714'>2</text>
+</g>
+</svg>
+.
+<br>
+(<i>a</i>) Encontre as equações de movimento do corpo celeste, em
+unidades de anos para o tempo e UA para as distâncias.
+<br>
+(<i>b</i>) O cometa Halley aproxima-se até uma distância mínima do Sol
+igual a 0.587&thinsp;UA. Nesse ponto, a sua velocidade é máxima, igual a
+11.50&thinsp;UA/ano, e perpendicular à sua distância até o Sol. Determine
+numericamente a órbita do cometa Halley, a partir da posição inicial
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.3082307em' height='0.9400346em' viewBox='-0.6 -8.668854 33.082307 9.400346' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq105'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='5.834121' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='8.751187' y='0'>587<tspan x='28.014251' y='-.179335'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='27.661585' y='0'>ı</text>
+</g>
+</svg>
+, com velocidade inicial <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.4140336em' height='1.1920609em' viewBox='-0.6 -8.668854 34.140336 11.920609' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq106'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>11</text>
+<text font-family='futr8r' font-size='10.957664' x='11.668242' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='14.585308' y='0'>50<tspan x='29.07228' y='-.179335'>ˆ</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='28.617998' y='0'></text>
+</g>
+</svg>
+,
+com intervalos de tempo <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.7226679em' height='0.8925153em' viewBox='-0.6 -8.193661 47.226679 8.925153' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq107'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='9.250627' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.221761' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='26.181692' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='32.015813' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='34.932879' y='0'>05</text>
+</g>
+</svg>
+&thinsp;anos. Trace a órbita desde
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.3489363em' height='0.8782704em' viewBox='-0.360891 -8.051212 23.489363 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq108'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.170174' y='0'>0</text>
+</g>
+</svg>
+ até <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.5157605em' height='0.8782704em' viewBox='-0.360891 -8.051212 35.157605 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq109'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.170174' y='0'>100</text>
+</g>
+</svg>
+&thinsp;anos. Que pode concluir acerca do erro numérico?
+<br>
+(<i>c</i>) Repita o procedimento da alínea anterior com
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.7281467em' height='0.8925153em' viewBox='-0.6 -8.193661 47.281467 8.925153' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq110'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='9.250627' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.221761' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='26.181692' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='32.015813' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='34.932879' y='0'>02</text>
+</g>
+</svg>
+&thinsp;anos e trace a órbita desde <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.3489363em' height='0.8782704em' viewBox='-0.360891 -8.051212 23.489363 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq111'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.170174' y='0'>0</text>
+</g>
+</svg>
+ até
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.5157605em' height='0.8782704em' viewBox='-0.360891 -8.051212 35.157605 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq112'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.170174' y='0'>150</text>
+</g>
+</svg>
+&thinsp;anos. Que pode concluir acerca do erro numérico?
+<br>
+(<i>d</i>) Diga qual é, aproximadamente, a distância máxima que o
+cometa Halley se afasta do Sol, e compare a órbita do cometa com as
+órbitas do planeta mais distante, Neptuno (órbita entre 29.77&thinsp;UA e
+30.44&thinsp;UA) e do planeta mais próximo do Sol, Mercúrio (órbita entre
+0.31&thinsp;UA e 0.39&thinsp;UA. Plutão já não é considerado um planeta).
+</p>
+</div>
+<p>
+(<i>a</i>) Há quatro variáveis de estado: <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq113'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq114'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.8994912em' viewBox='-0.360891 -8.26342 7.402038 8.994912' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq115'>
+<text font-family='futr8r' font-size='10.957664' x='1.739464' y='-.179335'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='1.1515175em' viewBox='-0.057028 -8.26342 7.171927 11.515175' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq116'>
+<text font-family='futr8r' font-size='10.957664' x='2.074207' y='-.179335'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+.
+As expressões das energias cinética e potencial são:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i16)</span><span class="maxv"> Ec</span><span class="maxm">:</span><span class="maxv"> m</span><span class="maxo">*</span><span class="maxd">(</span><span class="maxv">xp</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo"> +</span><span class="maxv"> yp</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxd">)/</span><span class="maxn">2</span><span class="maxm">$</span><br>
+<span class="maxm">(%i17)</span><span class="maxv"> U</span><span class="maxm">:</span><span class="maxn"> -4</span><span class="maxo">*</span><span class="maxi">%pi</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo">*</span><span class="maxv">m</span><span class="maxo">/</span><span class="maxf">sqrt</span><span class="maxd">(</span><span class="maxv">x</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo"> +</span><span class="maxv"> y</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxd">)</span><span class="maxm">$</span><br>
+</div>
+<p>
+Onde xp e yp representam as velocidades generalizadas <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.8994912em' viewBox='-0.360891 -8.26342 7.402038 8.994912' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq117'>
+<text font-family='futr8r' font-size='10.957664' x='1.739464' y='-.179335'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='1.1515175em' viewBox='-0.057028 -8.26342 7.171927 11.515175' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq118'>
+<text font-family='futr8r' font-size='10.957664' x='2.074207' y='-.179335'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+.
+Para aplicar as equações de Lagrange é necessário definir xp e yp como
+derivadas <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq119'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq120'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+ em ordem ao tempo, e definir também xpp e ypp como
+derivadas de xp e yp:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i18)</span><span class="maxf"> gradef</span><span class="maxd"> (</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxv">xp</span><span class="maxd">)</span><span class="maxm">$</span><br>
+<span class="maxm">(%i19)</span><span class="maxf"> gradef</span><span class="maxd"> (</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxv">yp</span><span class="maxd">)</span><span class="maxm">$</span><br>
+<span class="maxm">(%i20)</span><span class="maxf"> gradef</span><span class="maxd"> (</span><span class="maxv">xp</span><span class="maxd">,</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxv">xpp</span><span class="maxd">)</span><span class="maxm">$</span><br>
+<span class="maxm">(%i21)</span><span class="maxf"> gradef</span><span class="maxd"> (</span><span class="maxv">yp</span><span class="maxd">,</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxv">ypp</span><span class="maxd">)</span><span class="maxm">$</span>
+</div>
+<p>
+As duas equações de Lagrange conduzem às duas equações de movimento:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i22)</span><span class="maxf"> diff</span><span class="maxd">(</span><span class="maxf">diff</span><span class="maxd">(</span><span class="maxv">Ec</span><span class="maxd">,</span><span class="maxv">xp</span><span class="maxd">),</span><span class="maxv">t</span><span class="maxd">)</span><span class="maxo"> -</span><span class="maxf"> diff</span><span class="maxd">(</span><span class="maxv">Ec</span><span class="maxd">,</span><span class="maxv">x</span><span class="maxd">)</span><span class="maxo"> +</span><span class="maxf"> diff</span><span class="maxd">(</span><span class="maxv">U</span><span class="maxd">,</span><span class="maxv">x</span><span class="maxd">)</span><span class="maxo"> =</span><span class="maxn"> 0</span><span class="maxm">;</span><br>
+(%o22) &emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.9809939em' height='3.3932629em' viewBox='0.595514 -18.621764 119.809939 33.932629' class='inline' style='vertical-align:-1.536619em'>
+<g id='eq121'>
+<text font-family='futr8r' font-size='10.957664' x='9.74112' y='-8.093642'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='16.744167' y='-8.093642'>π</text>
+<text font-family='futr8r' font-size='8.218248' x='23.72598' y='-12.433355'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='29.768628' y='-8.093642'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='41.804818' y='-8.093642'>x</text>
+<rect x='1.195514' y='-3.415339' height='.637912' width='55.598695'/>
+<text font-family='fourier-mex' font-size='10.998733' x='1.195514' y='1.952335'></text>
+<text font-family='futri8r' font-size='10.957664' x='6.060764' y='11.208077'>y</text>
+<text font-family='futr8r' font-size='8.218248' x='12.217657' y='7.753046'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='18.552529' y='11.208077'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='28.167105' y='11.208077'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='34.610935' y='7.753046'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='39.484657' y='1.952335'></text>
+<text font-family='futr8r' font-size='8.218248' x='43.752128' y='4.973415'>3/2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='59.450872' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='68.82634' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='80.862529' y='0'>x</text>
+<text font-family='futri8r' font-size='10.957664' x='87.545469' y='0'>p</text>
+<text font-family='futri8r' font-size='10.957664' x='95.113094' y='0'>p</text>
+<text font-family='fourier-ms' font-size='10.957664' x='104.487224' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='114.447154' y='0'>0</text>
+</g>
+</svg>
+<br>
+<span class="maxm">(%i23)</span><span class="maxv"> eq1</span><span class="maxm">:</span><span class="maxf"> solve</span><span class="maxd">(</span><span class="maxm">%</span><span class="maxd">,</span><span class="maxv">xpp</span><span class="maxd">)[</span><span class="maxn">1</span><span class="maxd">]</span><span class="maxm">;</span><br>
+(%o23) &emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.9493151em' height='3.3932629em' viewBox='-0.360891 -18.621764 99.493151 33.932629' class='inline' style='vertical-align:-1.536619em'>
+<g id='eq122'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futri8r' font-size='10.957664' x='6.922048' y='0'>p</text>
+<text font-family='futri8r' font-size='10.957664' x='14.489674' y='0'>p</text>
+<text font-family='fourier-ms' font-size='10.957664' x='23.863804' y='0'>=<tspan x='33.823734'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='57.377706' y='-8.093642'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='64.380753' y='-8.093642'>π</text>
+<text font-family='futr8r' font-size='8.218248' x='71.362567' y='-12.433355'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='77.644323' y='-8.093642'>x</text>
+<rect x='42.933565' y='-3.415339' height='.637912' width='55.598695'/>
+<text font-family='fourier-mex' font-size='10.998733' x='42.933565' y='1.952335'></text>
+<text font-family='futri8r' font-size='10.957664' x='47.798816' y='11.208077'>y</text>
+<text font-family='futr8r' font-size='8.218248' x='53.955709' y='7.753046'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='60.290581' y='11.208077'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='69.905157' y='11.208077'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='76.348987' y='7.753046'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='81.222709' y='1.952335'></text>
+<text font-family='futr8r' font-size='8.218248' x='85.49018' y='4.973415'>3/2</text>
+</g>
+</svg>
+<br>
+<span class="maxm">(%i24)</span><span class="maxf"> diff</span><span class="maxd">(</span><span class="maxf">diff</span><span class="maxd">(</span><span class="maxv">Ec</span><span class="maxd">,</span><span class="maxv">yp</span><span class="maxd">),</span><span class="maxv">t</span><span class="maxd">)</span><span class="maxo"> -</span><span class="maxf"> diff</span><span class="maxd">(</span><span class="maxv">Ec</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">)</span><span class="maxo"> +</span><span class="maxf"> diff</span><span class="maxd">(</span><span class="maxv">U</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">)</span><span class="maxo"> =</span><span class="maxn"> 0</span><span class="maxm">;</span><br>
+(%o24) &emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12.1077167em' height='3.3932629em' viewBox='-0.6 -18.621764 121.077167 33.932629' class='inline' style='vertical-align:-1.536619em'>
+<g id='eq123'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='12.394842' y='0'>y</text>
+<text font-family='futri8r' font-size='10.957664' x='18.790843' y='0'>p</text>
+<text font-family='futri8r' font-size='10.957664' x='26.358469' y='0'>p</text>
+<text font-family='fourier-ms' font-size='10.957664' x='35.148136' y='0'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='54.228862' y='-8.093642'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='61.231909' y='-8.093642'>π</text>
+<text font-family='futr8r' font-size='8.218248' x='68.213723' y='-12.433355'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='74.256371' y='-8.093642'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='86.651212' y='-8.093642'>y</text>
+<rect x='45.719117' y='-3.415339' height='.637912' width='55.598695'/>
+<text font-family='fourier-mex' font-size='10.998733' x='45.719117' y='1.952335'></text>
+<text font-family='futri8r' font-size='10.957664' x='50.584368' y='11.208077'>y</text>
+<text font-family='futr8r' font-size='8.218248' x='56.741261' y='7.753046'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='63.076132' y='11.208077'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='72.690709' y='11.208077'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='79.134539' y='7.753046'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='84.008261' y='1.952335'></text>
+<text font-family='futr8r' font-size='8.218248' x='88.275732' y='4.973415'>3/2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='104.558939' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='114.518869' y='0'>0</text>
+</g>
+</svg>
+<br>
+<span class="maxm">(%i25)</span><span class="maxv"> eq2</span><span class="maxm">:</span><span class="maxf"> solve</span><span class="maxd">(</span><span class="maxm">%</span><span class="maxd">,</span><span class="maxv">ypp</span><span class="maxd">)[</span><span class="maxn">1</span><span class="maxd">]</span><span class="maxm">;</span><br>
+(%o25) &emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.9261002em' height='3.3932629em' viewBox='-0.057028 -18.621764 99.261002 33.932629' class='inline' style='vertical-align:-1.536619em'>
+<g id='eq124'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+<text font-family='futri8r' font-size='10.957664' x='6.993762' y='0'>p</text>
+<text font-family='futri8r' font-size='10.957664' x='14.561388' y='0'>p</text>
+<text font-family='fourier-ms' font-size='10.957664' x='23.935518' y='0'>=<tspan x='33.895448'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='57.41356' y='-8.093642'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='64.416607' y='-8.093642'>π</text>
+<text font-family='futr8r' font-size='8.218248' x='71.39842' y='-12.433355'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='78.038829' y='-8.093642'>y</text>
+<rect x='43.00528' y='-3.415339' height='.637912' width='55.598695'/>
+<text font-family='fourier-mex' font-size='10.998733' x='43.00528' y='1.952335'></text>
+<text font-family='futri8r' font-size='10.957664' x='47.870531' y='11.208077'>y</text>
+<text font-family='futr8r' font-size='8.218248' x='54.027423' y='7.753046'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='60.362295' y='11.208077'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='69.976871' y='11.208077'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='76.420702' y='7.753046'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='81.294423' y='1.952335'></text>
+<text font-family='futr8r' font-size='8.218248' x='85.561894' y='4.973415'>3/2</text>
+</g>
+</svg>
+
+</div>
+<p>
+As equações de movimento são:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='18.8391449em' height='3.0301965em' viewBox='138.451874 66.084559 188.391449 30.301965' class='display'>
+<g id='eq125'>
+<text font-family='futr8r' font-size='10.957664' x='140.552229' y='84.526987'>¨</text>
+<text font-family='futri8r' font-size='10.957664' x='139.051874' y='84.706323'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='147.541309' y='84.706323'>=<tspan x='157.50124'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='180.637269' y='76.612681'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='187.640316' y='76.612681'>π</text>
+<text font-family='futr8r' font-size='8.218248' x='194.62213' y='72.272967'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='200.903887' y='76.612681'>x</text>
+<rect x='166.611071' y='81.290984' height='.637912' width='54.76281'/>
+<text font-family='futr8r' font-size='10.957664' x='166.611071' y='93.134769'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='170.699739' y='93.134769'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='177.143569' y='89.679738'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='183.478441' y='93.134769'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='193.451669' y='93.134769'>y</text>
+<text font-family='futr8r' font-size='8.218248' x='199.608562' y='89.679738'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='204.482284' y='93.134769'>)</text>
+<text font-family='futr8r' font-size='8.218248' x='208.331842' y='89.679738'>3/2</text>
+<text font-family='futr8r' font-size='10.957664' x='245.684693' y='84.526987'>¨</text>
+<text font-family='futri8r' font-size='10.957664' x='244.208246' y='84.706323'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='252.410752' y='84.706323'>=<tspan x='262.370682'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='285.470851' y='76.612681'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='292.473898' y='76.612681'>π</text>
+<text font-family='futr8r' font-size='8.218248' x='299.455712' y='72.272967'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='306.09612' y='76.612681'>y</text>
+<rect x='271.480514' y='81.290984' height='.637912' width='54.76281'/>
+<text font-family='futr8r' font-size='10.957664' x='271.480514' y='93.134769'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='275.569181' y='93.134769'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='282.013012' y='89.679738'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='288.347883' y='93.134769'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='298.321111' y='93.134769'>y</text>
+<text font-family='futr8r' font-size='8.218248' x='304.478004' y='89.679738'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='309.351726' y='93.134769'>)</text>
+<text font-family='futr8r' font-size='8.218248' x='313.201285' y='89.679738'>3/2</text>
+</g>
+</svg>
+</div>
+<p>
+(<i>b</i>) Usando as condições iniciais dadas e o intervalo de tempo desde
+0 até 100, com incrementos de 0.05, a solução numérica do problema obtém-se
+com o programa <span class="maxf">rk</span>:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i26)</span><span class="maxv"> o</span><span class="maxm">:</span><span class="maxf"> rk</span><span class="maxd"> ([</span><span class="maxv">xp</span><span class="maxd">,</span><span class="maxv">yp</span><span class="maxd">,</span><span class="maxf">rhs</span><span class="maxd">(</span><span class="maxv">eq1</span><span class="maxd">),</span><span class="maxf">rhs</span><span class="maxd">(</span><span class="maxv">eq2</span><span class="maxd">)], [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">xp</span><span class="maxd">,</span><span class="maxv">yp</span><span class="maxd">], [</span><span class="maxn">0.587</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">11.5</span><span class="maxd">], [</span><span class="maxv">t,0</span><span class="maxd">,</span><span class="maxn">100</span><span class="maxd">,</span><span class="maxn">0.05</span><span class="maxd">])</span><span class="maxm">$</span>
+</div>
+<p>
+onde o é uma lista com várias listas de cinco elementos, com os valores de
+(<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq126'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq127'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq128'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.8994912em' viewBox='-0.360891 -8.26342 7.402038 8.994912' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq129'>
+<text font-family='futr8r' font-size='10.957664' x='1.739464' y='-.179335'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='1.1515175em' viewBox='-0.057028 -8.26342 7.171927 11.515175' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq130'>
+<text font-family='futr8r' font-size='10.957664' x='2.074207' y='-.179335'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+) em diferentes instantes entre 0 e 100.
+Como tal, o gráfico de trajetória do cometa (<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq131'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+ vs <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq132'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+) pode ser obtido
+com o seguinte comando:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i27)</span><span class="maxf"> plot2d</span><span class="maxd"> ([</span><span class="maxk">discrete</span><span class="maxd">,</span><span class="maxf"> makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]],</span><span class="maxv"> p</span><span class="maxd">,</span><span class="maxv"> o</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"x"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"y"</span><span class="maxd">], [</span><span class="maxk">y</span><span class="maxd">,</span><span class="maxn">-10</span><span class="maxd">,</span><span class="maxn">10</span><span class="maxd">],</span><span class="maxk"> same_xy</span><span class="maxd">)</span><span class="maxm">;</span>
+</div>
+<p>
+Usou-se a opção <span class="maxk">same_xy</span> para que a escala nos dois
+eixos seja igual, mostrando a forma real da trajetória. O resultado é o
+gráfico seguinte:
+</p>
+<img class="fig center" src="img/problema_10-10b.png"
+     alt="Órbita do cometa Halley, com erro numérico" style="width:24.51em">
+<p>
+O facto de que o satélite não repete a mesma trajetória, mas aproxima-se
+cada vez mais do Sol, indica que a sua energia mecânica diminui, em vez
+de permanecer constante, como era suposto acontecer. Conclui-se então que
+o intervalo <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.7226679em' height='0.8925153em' viewBox='-0.6 -8.193661 47.226679 8.925153' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq133'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='9.250627' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.221761' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='26.181692' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='32.015813' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='34.932879' y='0'>05</text>
+</g>
+</svg>
+ não é suficientemente pequeno e o resultado
+obtido têm erro numérico muito elevado.
+</p>
+<p>
+(<i>c</i>) Reduzindo o valor dos incrementos de tempo:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i28)</span><span class="maxv"> o</span><span class="maxm">:</span><span class="maxf"> rk</span><span class="maxd"> ([</span><span class="maxv">xp</span><span class="maxd">,</span><span class="maxv">yp</span><span class="maxd">,</span><span class="maxf">rhs</span><span class="maxd">(</span><span class="maxv">eq1</span><span class="maxd">),</span><span class="maxf">rhs</span><span class="maxd">(</span><span class="maxv">eq2</span><span class="maxd">)], [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">xp</span><span class="maxd">,</span><span class="maxv">yp</span><span class="maxd">], [</span><span class="maxn">0.587</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">11.5</span><span class="maxd">], [</span><span class="maxv">t,0</span><span class="maxd">,</span><span class="maxn">100</span><span class="maxd">,</span><span class="maxn">0.02</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i29)</span><span class="maxf"> plot2d</span><span class="maxd"> ([</span><span class="maxk">discrete</span><span class="maxd">,</span><span class="maxf"> makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]],</span><span class="maxv"> p</span><span class="maxd">,</span><span class="maxv"> o</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"x"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"y"</span><span class="maxd">], [</span><span class="maxk">y</span><span class="maxd">,</span><span class="maxn">-10</span><span class="maxd">,</span><span class="maxn">10</span><span class="maxd">],</span><span class="maxk"> same_xy</span><span class="maxd">)</span><span class="maxm">;</span>
+</div>
+<br>
+<img class="fig center" src="img/problema_10-10c.png"
+     alt="Órbita do cometa Halley" style="width:24.51em">
+<p>
+O erro numérico é muito menor, mas o cometa continua a perder energia; seria
+necessário reduzir ainda mais o valor de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5261041em' height='0.8925153em' viewBox='-0.6 -8.193661 15.261041 8.925153' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq134'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='9.250627' y='0'>t</text>
+</g>
+</svg>
+ para diminuir o erro.
+</p>
+<p>
+(<i>d</i>) O comando
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i30)</span><span class="maxf"> plot2d</span><span class="maxd"> ([</span><span class="maxk">discrete</span><span class="maxd">,</span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]],</span><span class="maxv">p</span><span class="maxd">,</span><span class="maxv">o</span><span class="maxd">)])</span><span class="maxm">;</span>
+</div>
+<p>
+Mostra que o cometa está mais afastado do Sol em <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq135'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+ aproximadamente 36 anos.
+Como foram usados incrementos de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq136'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+ iguais a 0.02 = 1/50, 36 anos aparecerá
+na posição 1801 da lista. Observando a lista de valores de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq137'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ nessa parte
+da lista:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i31)</span><span class="maxf"> makelist</span><span class="maxd"> (</span><span class="maxv">o</span><span class="maxd">[</span><span class="maxv">i</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv"> i</span><span class="maxd">,</span><span class="maxn"> 1780</span><span class="maxd">,</span><span class="maxn"> 1820</span><span class="maxd">)</span><span class="maxm">;</span>
+</div>
+<p>
+Conclui-se que o valor mínimo de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq138'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ (distância máxima ao Sol) é
+aproximadamente 34.14 UA. Essa distância máxima é maior do que a órbita
+de Neptuno e a distância mínima, 0.587 UA, está entre as órbitas de Mercúrio
+e Vénus.
+</p>
+</section>
+<div class="bottom">
+<a href="#top"><span class="button">Topo</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../index.html">DEF</a>
+</div>
+<div class="category">
+<a href="../textos.html">Material de estudo</a>
+</div>
+<div class="category">
+<a href="../cursos.html">Cadeiras no Moodle</a>
+</div>
+<div class="category">
+<a href="../faq.html">Perguntas frequentes</a>
+</div>
+</div>
+&copy; 2017&ndash;2021, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Última atualização: 2021/02/15 15:59:49 UTC</span>
+</footer>
+</body>
+</html>

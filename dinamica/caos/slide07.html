@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistemas caóticos &emdash; Atrator de Lorenz</title>
+<link rel="stylesheet" href="../../css/book.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+</head>
+<body>
+<aside>
+<a href="./index.html">Índice</a>
+<a href="./slide01.html">1</a>
+<a href="./slide02.html">2</a>
+<a href="./slide03.html">3</a>
+<a href="./slide04.html">4</a>
+<a href="./slide05.html">5</a>
+<a href="./slide06.html">6</a>
+<span class="current">7</span>
+<a href="./slide08.html">8</a>
+<a href="./slide09.html">9</a>
+<a href="./slide10.html">10</a>
+<a href="./slide11.html">11</a>
+</aside>
+<header>
+<h1 id="title">Sistemas caóticos</h1>
+</header>
+<section id="sec-">
+<h2>Atrator de Lorenz</h2>
+<p>
+Modelo meteorológico para as correntes de convecção do ar em planos
+verticais, produzidas por aquecimento na aresta inferior dos planos
+(Lorenz, 1963).
+</p>
+<div class="center">
+<svg height='5.84076em' version='1.1' viewBox='192.406 83.891 81.4361 58.4076' width='8.14361em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq1'>
+<text font-family='futr8r' font-size='10.9577' x='194.507' y='91.9751'>˙</text>
+<text font-family='futri8r' font-size='10.9577' x='193.006' y='92.1544'>x</text>
+<text font-family='fourier-ms' font-size='10.9577' x='201.496' y='92.1544'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='211.456' y='92.1544'>1<tspan x='217.29'>0</tspan>
+<tspan x='224.293'>(</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='228.74' y='92.1544'>y</text>
+<text font-family='fourier-ms' font-size='10.9577' x='236.358' y='92.1544'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='245.973' y='92.1544'>x</text>
+<text font-family='futr8r' font-size='10.9577' x='252.417' y='92.1544'>)<tspan x='194.842' y='109.41'>˙</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='193.365' y='109.589'>y</text>
+<text font-family='fourier-ms' font-size='10.9577' x='201.568' y='109.589'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='211.528' y='109.589'>2<tspan x='217.362'>8</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='224.604' y='109.589'>x</text>
+<text font-family='fourier-ms' font-size='10.9577' x='232.509' y='109.589'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='242.482' y='109.589'>y</text>
+<text font-family='fourier-ms' font-size='10.9577' x='250.1' y='109.589'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='259.715' y='109.589'>x</text>
+<text font-family='futri8r' font-size='10.9577' x='267.566' y='109.589'>z</text>
+<text font-family='futr8r' font-size='10.9577' x='194.244' y='133.187'>˙</text>
+<text font-family='futri8r' font-size='10.9577' x='193.006' y='133.366'>z</text>
+<text font-family='fourier-ms' font-size='10.9577' x='200.97' y='133.366'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='211.169' y='133.366'>x</text>
+<text font-family='futri8r' font-size='10.9577' x='219.379' y='133.366'>y</text>
+<text font-family='fourier-ms' font-size='10.9577' x='226.997' y='133.366'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='237.568' y='125.272'>8</text>
+<rect height='0.637912' width='5.83411' x='237.568' y='129.951'/>
+<text font-family='futr8r' font-size='10.9577' x='237.568' y='141.567'>3</text>
+<text font-family='futri8r' font-size='10.9577' x='246.006' y='133.366'>z</text>
+</g>
+</svg>
+</div>
+<p>
+<svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.40204 6.83224' width='0.740204em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+</g>
+</svg>
+ = amplitude das correntes. <svg height='0.93525em' version='1.1' viewBox='-0.057028 -6.10075 7.17193 9.3525' width='0.717193em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq3'>
+<text font-family='futri8r' font-size='10.9577' x='0.597761' y='0'>y</text>
+</g>
+</svg>
+ = diferença de temperatura entre as
+correntes ascendente e descendente. <svg height='0.670075em' version='1.1' viewBox='-0.360891 -5.96926 6.87607 6.70075' width='0.687607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq4'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+</g>
+</svg>
+ = desvio da temperatura normal
+no plano.
+</p>
+<img class="fig center" src="atrator_Lorenz.png" alt="atrator de Lorenz"
+     style="width:24.24em">
+<h3>Efeito borboleta</h3>
+<p>
+Uma pequena alteração nas condições iniciais produz grandes
+alterações na evolução do sistema.
+</p>
+<p>
+<a href="Butterfly_1972.pdf">Predictability: Does the Flap
+of a Butterfly's wings in Brazil Set Up a Tornado in
+Texas?</a>, Lorenz, 1972.
+</p>
+</section>
+<nav>
+<a href="./index.html">Índice</a>
+<a href="./slide06.html">Anterior</a>
+<a href="./slide08.html">Seguinte</a>
+</nav>
+<footer>
+&copy; 2016&ndash;2020, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Última atualização: 2020/02/16 17:23:14 UTC</span>
+</footer>
+</body>
+</html>

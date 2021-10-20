@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercícios Resolvidos de Dinâmica e Sistemas Dinâmicos</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body id="top">
+<aside>
+<span class="current">HTML</span>
+<a href="./probs-sistemas_caoticos.pdf" target="_blank">PDF</a>
+</aside>
+<header>
+<h1 id="title">Exercícios Resolvidos de Dinâmica e Sistemas Dinâmicos</h1>
+</header>
+<nav>
+<a href="../index.html">DEF</a><span>&rarr;</span>
+<a href="../ensino.html">Ensino</a><span>&rarr;</span>
+<a href="../textos.html">Material de estudo</a><span>&rarr;</span>
+<a href="./index.html">Dinâmica e Sistemas Dinâmicos</a><span>&rarr;</span>
+<a href="./problemas.html">Exercícios Resolvidos</a><span>&rarr;</span>
+<span>12. Sistemas caóticos</span>
+</nav>
+<div class="content">
+<span class="button">Índice</span>
+<div class="content-items">
+<a href="./index.html">Dinâmica e Sistemas Dinâmicos</a><br>
+<a href="./problemas.html">Exercícios Resolvidos</a>
+<ol class="nested" style="counter-increment: item 11">
+<li><a href="#top">Sistemas caóticos</a>
+</li>
+</ol>
+</div>
+</div>
+<section>
+<h2>12. Sistemas caóticos</h2>
+<div class="example" id="prob-12.3">
+<h3>Problema 3</h3>
+<p>
+O sistema de Rössler é definido pelas seguintes equações de evolução,
+com 3 parâmetros positivos <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7752683em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.752683 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq1'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7686937em' height='0.9462079em' viewBox='-0.6 -8.730587 7.686937 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>b</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6678832em' height='0.6832239em' viewBox='-0.6 -6.100747 6.678832 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq3'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+</g>
+</svg>
+:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.6561109em' height='4.5135242em' viewBox='194.879811 83.891001 76.561109 45.135242' class='display'>
+<g id='eq4'>
+<text font-family='futr8r' font-size='10.957664' x='196.980166' y='91.975085'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='195.479811' y='92.154421'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='203.969246' y='92.154421'>=<tspan x='213.929177'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='222.441255' y='92.154421'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='230.059298' y='92.154421'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='239.673874' y='92.154421'>z</text>
+<text font-family='futr8r' font-size='10.957664' x='197.243187' y='109.409706'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='195.766741' y='109.589041'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='203.969246' y='109.589041'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='214.168285' y='109.589041'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='222.073265' y='109.589041'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='231.448733' y='109.589041'>c</text>
+<text font-family='futri8r' font-size='10.957664' x='238.929986' y='109.589041'>y</text>
+<text font-family='futr8r' font-size='10.957664' x='197.243187' y='126.844326'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='196.005838' y='127.023661'>z</text>
+<text font-family='fourier-ms' font-size='10.957664' x='203.969246' y='127.023661'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='214.168285' y='127.023661'>a</text>
+<text font-family='fourier-ms' font-size='10.957664' x='222.419957' y='127.023661'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='231.795425' y='127.023661'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='235.884092' y='127.023661'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='243.789072' y='127.023661'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='253.16454' y='127.023661'>b</text>
+<text font-family='futr8r' font-size='10.957664' x='259.907256' y='127.023661'>)</text>
+<text font-family='futri8r' font-size='10.957664' x='265.16485' y='127.023661'>z</text>
+</g>
+</svg>
+</div>
+<p>
+Investigue a solução do sistema com <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.5310532em' height='0.8782704em' viewBox='-0.360891 -8.051212 25.310532 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq5'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.075244' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='19.035174' y='0'>2</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.5350388em' height='0.9462079em' viewBox='-0.6 -8.730587 25.350388 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq6'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>b</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.788329' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='18.748259' y='0'>4</text>
+</g>
+</svg>
+ fixos e com os
+seguintes valores de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6678832em' height='0.6832239em' viewBox='-0.6 -6.100747 6.678832 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq7'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+</g>
+</svg>
+: (<i>a</i>) <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.2854272em' height='0.8782704em' viewBox='-0.6 -8.051212 32.854272 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq8'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>3</text>
+</g>
+</svg>
+ (<i>b</i>) <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.8765097em' height='0.8782704em' viewBox='-0.6 -8.051212 38.765097 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq9'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>35</text>
+</g>
+</svg>
+
+(<i>c</i>) <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4599218em' height='0.8782704em' viewBox='-0.6 -8.051212 44.599218 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq10'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>375</text>
+</g>
+</svg>
+ (<i>d</i>) <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4686879em' height='0.8782704em' viewBox='-0.6 -8.051212 44.686879 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq11'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>398</text>
+</g>
+</svg>
+.
+<br>
+Em cada caso use o programa <span class="maxf">rk</span> para obter a solução, com
+incrementos de tempo <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.6755499em' height='0.8925153em' viewBox='-0.6 -8.193661 46.755499 8.925153' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq12'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='9.250627' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.221761' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='26.181692' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='32.015813' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='34.932879' y='0'>01</text>
+</g>
+</svg>
+ e de forma a que sejam feitas
+6000 iterações. Pode usar como valores iniciais <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.1886496em' height='1.1302967em' viewBox='-0.360891 -8.051212 61.886496 11.302967' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq13'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.728552' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='19.286243' y='0'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='27.488748' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='37.687788' y='0'>z</text>
+<text font-family='fourier-ms' font-size='10.957664' x='45.651207' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='55.611137' y='0'>2</text>
+</g>
+</svg>
+. Trace os
+gráficos da curva projetada no plano <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.4290225em' height='0.9352502em' viewBox='-0.360891 -6.100747 14.290225 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq14'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futri8r' font-size='10.957664' x='7.412195' y='0'>y</text>
+</g>
+</svg>
+ e de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq15'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ em função de
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq16'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+. Volte a executar 6000 iterações do programa <span class="maxf">rk</span>, mas agora
+usando como valores iniciais os valores finais obtidos na primeira
+execução do programa (o comando <span class="maxf">rest</span> <span class="maxd">(</span><span class="maxf">last</span>
+<span class="maxd">(</span><span class="maxv">lista</span> <span class="maxd">))</span> extrai o último vetor na lista
+anterior, excluindo o tempo). Trace novamente os mesmos gráficos e
+repita o procedimento até conseguir concluir qual é o conjunto limite
+positivo da curva considerada e se for um ciclo, determine o seu
+período. Em cada alínea diga qual é o conjunto limite, o seu
+período (se for um ciclo) e mostre um gráfico que justifique a sua
+conclusão.
+</p>
+</div>
+<p>
+(<i>a</i>) Os quatro comandos seguintes do Maxima definem uma lista
+com as expressões nos três lados direitos das equações de evolução,
+com os parâmetros <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.5310532em' height='0.8782704em' viewBox='-0.360891 -8.051212 25.310532 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq17'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.075244' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='19.035174' y='0'>2</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.5350388em' height='0.9462079em' viewBox='-0.6 -8.730587 25.350388 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq18'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>b</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.788329' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='18.748259' y='0'>4</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.2854272em' height='0.8782704em' viewBox='-0.6 -8.051212 32.854272 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq19'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>3</text>
+</g>
+</svg>
+. A seguir, usa-se o programa
+<span class="maxf">rk</span> usando a lista anterior para definir a velocidade de fase,
+com variáveis de estado (<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq20'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq21'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.687607em' height='0.6700747em' viewBox='-0.360891 -5.969256 6.87607 6.700747' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq22'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>z</text>
+</g>
+</svg>
+), valores iniciais (2, 2, 2) e
+incrementos de tempo iguais a 0.01. Como o sistema é autónomo, o valor
+inicial de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq23'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+ pode ser qualquer, por exemplo, 0; com esse valor
+inicial, o valor final de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq24'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+ deverá ser 60, para que sejam executadas
+6000 iterações. A solução, na lista <span class="maxv">sol</span>, usa-se para traçar os
+gráficos da sua projeção no plano <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.4290225em' height='0.9352502em' viewBox='-0.360891 -6.100747 14.290225 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq25'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futri8r' font-size='10.957664' x='7.412195' y='0'>y</text>
+</g>
+</svg>
+ e de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq26'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ em função de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq27'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+. A
+seguir aos comandos mostram-se os gráficos obtidos.
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i1) </span><span class="maxv">f</span><span class="maxm">: </span><span class="maxd">[</span><span class="maxo">-</span><span class="maxv">y</span><span class="maxo">-</span><span class="maxv">z</span><span class="maxd">, </span><span class="maxv">x</span><span class="maxo">+</span><span class="maxn">0.3</span><span class="maxo">*</span><span class="maxv">y</span><span class="maxd">, </span><span class="maxn">2</span><span class="maxo">+</span><span class="maxd">(</span><span class="maxv">x</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxd">)</span><span class="maxo">*</span><span class="maxv">z</span><span class="maxd">]</span><span class="maxm">$</span><br>
+<span class="maxm">(%i2) </span><span class="maxv">sol</span><span class="maxm">: </span><span class="maxf">rk</span><span class="maxd">(</span><span class="maxv">f</span><span class="maxd">, [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">z</span><span class="maxd">], [</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">2</span><span class="maxd">], [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">60</span><span class="maxd">,</span><span class="maxn">0.01</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i3) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i4) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"t"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"x"</span><span class="maxd">])</span><span class="maxm">$</span>
+</div>
+<br>
+<img class="fig center" src="img/problema_12-3a-1.png"
+     alt="Problema 12.3 alínea a" style="width:47.67em">
+<p>
+Para saber se a curva de evolução já está próxima do seu conjunto
+limite positivo, convém executar os mesmos comandos anteriores, usando
+agora como valores iniciais os valores finais da última iteração, para
+observar a continuação da curva no próximo intervalo <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.7405185em' height='0.8925153em' viewBox='-0.6 -8.193661 37.405185 8.925153' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq28'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='8.081701' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='15.052835' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='25.012766' y='0'>60</text>
+</g>
+</svg>
+.
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i5) </span><span class="maxv">sol</span><span class="maxm">: </span><span class="maxf">rk</span><span class="maxd">(</span><span class="maxv">f</span><span class="maxd">, [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">z</span><span class="maxd">], </span><span class="maxf">rest</span><span class="maxd">(</span><span class="maxf">last</span><span class="maxd">(</span><span class="maxv">sol</span><span class="maxd">)), [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">60</span><span class="maxd">,</span><span class="maxn">0.01</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i6) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i7) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"t"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"x"</span><span class="maxd">])</span><span class="maxm">$</span>
+</div>
+<br>
+<img class="fig center" src="img/problema_12-3a-2.png"
+     alt="Problema 12.3 alínea a" style="width:47.67em">
+<p>
+Estes últimos gráficos mostram que o sistema entrou num ciclo limite
+atrativo (conjunto limite positivo). O período desse ciclo pode
+obter-se, de forma aproximada, colocando o cursor por cima de dois dos
+valores máximos no gráfico de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.9342648em' height='1.0185285em' viewBox='-0.360891 -8.182704 19.342648 10.185285' class='inline' style='vertical-align:-0.1998em'>
+<g id='eq29'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='6.682939' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='10.771607' y='0'>t</text>
+<text font-family='futr8r' font-size='10.957664' x='15.697129' y='0'>)</text>
+</g>
+</svg>
+ e registando os valores de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq30'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+
+indicados pelo Maxima. Convém usar dois máximos que estejam o mais
+afastados possível no gráfico e dividir pelo número de oscilações
+entre esses dois máximos. No gráfico acima, com 9 oscilações, o valor
+medido para o período é:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='18.5037739em' height='2.522002em' viewBox='140.347141 66.249163 185.037739 25.22002' class='display'>
+<g id='eq31'>
+<text font-family='futri8r' font-size='10.957664' x='140.947141' y='82.536466'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='147.857229' y='84.329729'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='154.776563' y='82.536466'>=</text>
+<text font-family='fourier-ml' font-size='10.957664' x='165.932008' y='74.442824'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='174.013708' y='74.442824'>t</text>
+<rect x='165.932008' y='79.121127' height='.637912' width='13.007207'/>
+<text font-family='futri8r' font-size='10.957664' x='168.73549' y='90.737691'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='182.180341' y='82.536466'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='193.335786' y='74.442824'>56</text>
+<text font-family='futr8r' font-size='10.957664' x='205.004028' y='74.442824'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='207.921094' y='74.442824'>1828</text>
+<text font-family='fourier-ms' font-size='10.957664' x='232.718728' y='74.442824'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='242.094195' y='74.442824'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='247.928316' y='74.442824'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='250.845383' y='74.442824'>634997</text>
+<rect x='193.335786' y='79.121127' height='.637912' width='92.514141'/>
+<text font-family='futr8r' font-size='10.957664' x='236.675809' y='90.737691'>9</text>
+<text font-family='fourier-ms' font-size='10.957664' x='289.091053' y='82.536466'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='299.050983' y='82.536466'>6</text>
+<text font-family='futr8r' font-size='10.957664' x='304.885104' y='82.536466'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='307.80217' y='82.536466'>172</text>
+</g>
+</svg>
+</div>
+<p>
+(<i>b</i>) Com <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.8765097em' height='0.8782704em' viewBox='-0.6 -8.051212 38.765097 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq32'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>35</text>
+</g>
+</svg>
+, repete-se o mesmo procedimento da alínea anterior.
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i8) </span><span class="maxv">f</span><span class="maxm">: </span><span class="maxd">[</span><span class="maxo">-</span><span class="maxv">y</span><span class="maxo">-</span><span class="maxv">z</span><span class="maxd">, </span><span class="maxv">x</span><span class="maxo">+</span><span class="maxn">0.35</span><span class="maxo">*</span><span class="maxv">y</span><span class="maxd">, </span><span class="maxn">2</span><span class="maxo">+</span><span class="maxd">(</span><span class="maxv">x</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxd">)</span><span class="maxo">*</span><span class="maxv">z</span><span class="maxd">]</span><span class="maxm">$</span><br>
+<span class="maxm">(%i9) </span><span class="maxv">sol</span><span class="maxm">: </span><span class="maxf">rk</span><span class="maxd">(</span><span class="maxv">f</span><span class="maxd">, [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">z</span><span class="maxd">], [</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">2</span><span class="maxd">], [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">60</span><span class="maxd">,</span><span class="maxn">0.01</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i10) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i11) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"t"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"x"</span><span class="maxd">])</span><span class="maxm">$</span>
+</div>
+<br>
+<img class="fig center" src="img/problema_12-3b-1.png"
+     alt="Problema 12.3 alínea b" style="width:47.67em">
+<p>
+E mais 6000 iterações a partir dos valores finais das variáveis de
+estado após as primeiras 6000 iterações.
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i12) </span><span class="maxv">sol</span><span class="maxm">: </span><span class="maxf">rk</span><span class="maxd">(</span><span class="maxv">f</span><span class="maxd">, [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">z</span><span class="maxd">], </span><span class="maxf">rest</span><span class="maxd">(</span><span class="maxf">last</span><span class="maxd">(</span><span class="maxv">sol</span><span class="maxd">)), [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">60</span><span class="maxd">,</span><span class="maxn">0.01</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i13) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i14) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"t"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"x"</span><span class="maxd">])</span><span class="maxm">$</span>
+</div>
+<br>
+<img class="fig center" src="img/problema_12-3b-2.png"
+     alt="Problema 12.3 alínea b" style="width:47.67em">
+<p>
+O sistema entrou novamente num ciclo limite atrativo (conjunto limite
+positivo), que dá duas voltas no espaço de fase antes de se
+repetir. No gráfico de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.9342648em' height='1.0185285em' viewBox='-0.360891 -8.182704 19.342648 10.185285' class='inline' style='vertical-align:-0.1998em'>
+<g id='eq33'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='6.682939' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='10.771607' y='0'>t</text>
+<text font-family='futr8r' font-size='10.957664' x='15.697129' y='0'>)</text>
+</g>
+</svg>
+ observam-se 4 oscilações completas, cada
+uma com dois máximos locais e dois mínimos locais. O valor medido para
+o período é:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='17.9115968em' height='2.522002em' viewBox='143.264196 66.249163 179.115968 25.22002' class='display'>
+<g id='eq34'>
+<text font-family='futri8r' font-size='10.957664' x='143.864196' y='82.536466'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='150.774284' y='84.329729'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='157.693618' y='82.536466'>=</text>
+<text font-family='fourier-ml' font-size='10.957664' x='168.849062' y='74.442824'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='176.930763' y='74.442824'>t</text>
+<rect x='168.849062' y='79.121127' height='.637912' width='13.007207'/>
+<text font-family='futri8r' font-size='10.957664' x='171.652545' y='90.737691'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='185.097396' y='82.536466'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='196.25284' y='74.442824'>55</text>
+<text font-family='futr8r' font-size='10.957664' x='207.921083' y='74.442824'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='210.838149' y='74.442824'>4849</text>
+<text font-family='fourier-ms' font-size='10.957664' x='235.635783' y='74.442824'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='245.01125' y='74.442824'>5</text>
+<text font-family='futr8r' font-size='10.957664' x='250.845371' y='74.442824'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='253.762437' y='74.442824'>92202</text>
+<rect x='196.25284' y='79.121127' height='.637912' width='86.680031'/>
+<text font-family='futr8r' font-size='10.957664' x='236.675809' y='90.737691'>4</text>
+<text font-family='fourier-ms' font-size='10.957664' x='286.173998' y='82.536466'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='296.133928' y='82.536466'>12</text>
+<text font-family='futr8r' font-size='10.957664' x='307.80217' y='82.536466'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='310.719237' y='82.536466'>39</text>
+</g>
+</svg>
+</div>
+<p>
+que é aproximadamente o dobro do período <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1701462em' height='1.0575967em' viewBox='-0.6 -8.182704 11.701462 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq35'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='6.910088' y='1.793263'>1</text>
+</g>
+</svg>
+ no ciclo simples obtido
+com <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.2854272em' height='0.8782704em' viewBox='-0.6 -8.051212 32.854272 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq36'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>3</text>
+</g>
+</svg>
+. Diz-se que existe uma bifurcação do sistema entre
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.2854272em' height='0.8782704em' viewBox='-0.6 -8.051212 32.854272 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq37'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>3</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.8765097em' height='0.8782704em' viewBox='-0.6 -8.051212 38.765097 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq38'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>35</text>
+</g>
+</svg>
+, que se manifesta por uma duplicação do período de
+oscilação.
+</p>
+<p>
+(<i>c</i>) Repetem-se novamente os comandos das alíneas anteriores,
+agora com <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4599218em' height='0.8782704em' viewBox='-0.6 -8.051212 44.599218 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq39'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>375</text>
+</g>
+</svg>
+.
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i15) </span><span class="maxv">f</span><span class="maxm">: </span><span class="maxd">[</span><span class="maxo">-</span><span class="maxv">y</span><span class="maxo">-</span><span class="maxv">z</span><span class="maxd">, </span><span class="maxv">x</span><span class="maxo">+</span><span class="maxn">0.375</span><span class="maxo">*</span><span class="maxv">y</span><span class="maxd">, </span><span class="maxn">2</span><span class="maxo">+</span><span class="maxd">(</span><span class="maxv">x</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxd">)</span><span class="maxo">*</span><span class="maxv">z</span><span class="maxd">]</span><span class="maxm">$</span><br>
+<span class="maxm">(%i16) </span><span class="maxv">sol</span><span class="maxm">: </span><span class="maxf">rk</span><span class="maxd">(</span><span class="maxv">f</span><span class="maxd">, [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">z</span><span class="maxd">], [</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">2</span><span class="maxd">], [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">60</span><span class="maxd">,</span><span class="maxn">0.01</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i17) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i18) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"t"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"x"</span><span class="maxd">])</span><span class="maxm">$</span>
+</div>
+<br>
+<img class="fig center" src="img/problema_12-3c-1.png"
+     alt="Problema 12.3 alínea c" style="width:47.67em">
+<p>
+E deixa-se evoluir a solução durante outro intervalo <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.7405185em' height='0.8925153em' viewBox='-0.6 -8.193661 37.405185 8.925153' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq40'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='8.081701' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='15.052835' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='25.012766' y='0'>60</text>
+</g>
+</svg>
+.
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i19) </span><span class="maxv">sol</span><span class="maxm">: </span><span class="maxf">rk</span><span class="maxd">(</span><span class="maxv">f</span><span class="maxd">, [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">z</span><span class="maxd">], </span><span class="maxf">rest</span><span class="maxd">(</span><span class="maxf">last</span><span class="maxd">(</span><span class="maxv">sol</span><span class="maxd">)), [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">60</span><span class="maxd">,</span><span class="maxn">0.01</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i20) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i21) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"t"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"x"</span><span class="maxd">])</span><span class="maxm">$</span>
+</div>
+<br>
+<img class="fig center" src="img/problema_12-3c-2.png"
+     alt="Problema 12.3 alínea c" style="width:47.67em">
+<p>
+O gráfico no plano <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.4290225em' height='0.9352502em' viewBox='-0.360891 -6.100747 14.290225 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq41'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futri8r' font-size='10.957664' x='7.412195' y='0'>y</text>
+</g>
+</svg>
+ mostra que o sistema ainda não entrou no ciclo
+limite, porque a curva não é fechada. Deixaremos evoluir a solução
+durante mais um intervalo <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.7405185em' height='0.8925153em' viewBox='-0.6 -8.193661 37.405185 8.925153' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq42'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='8.081701' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='15.052835' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='25.012766' y='0'>60</text>
+</g>
+</svg>
+.
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i22) </span><span class="maxv">sol</span><span class="maxm">: </span><span class="maxf">rk</span><span class="maxd">(</span><span class="maxv">f</span><span class="maxd">, [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">z</span><span class="maxd">], </span><span class="maxf">rest</span><span class="maxd">(</span><span class="maxf">last</span><span class="maxd">(</span><span class="maxv">sol</span><span class="maxd">)), [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">60</span><span class="maxd">,</span><span class="maxn">0.01</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i23) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i24) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"t"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"x"</span><span class="maxd">])</span><span class="maxm">$</span>
+</div>
+<br>
+<img class="fig center" src="img/problema_12-3c-3.png"
+     alt="Problema 12.3 alínea c" style="width:47.67em">
+<p>
+O sistema já entrou no ciclo limite atrativo que é agora de quarta
+ordem: há 4 máximos locais e 4 mínimos locais em cada oscilação e o
+ciclo dá quatro voltas no espaço de fase antes de se
+repetir. No gráfico de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.9342648em' height='1.0185285em' viewBox='-0.360891 -8.182704 19.342648 10.185285' class='inline' style='vertical-align:-0.1998em'>
+<g id='eq43'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futr8r' font-size='10.957664' x='6.682939' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='10.771607' y='0'>t</text>
+<text font-family='futr8r' font-size='10.957664' x='15.697129' y='0'>)</text>
+</g>
+</svg>
+ observam-se apenas 2 oscilações
+completas e o valor medido para o período é:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='17.8677661em' height='2.522002em' viewBox='143.264196 66.249163 178.677661 25.22002' class='display'>
+<g id='eq44'>
+<text font-family='futri8r' font-size='10.957664' x='143.864196' y='82.536466'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='150.774284' y='84.329729'>4</text>
+<text font-family='fourier-ms' font-size='10.957664' x='157.693618' y='82.536466'>=</text>
+<text font-family='fourier-ml' font-size='10.957664' x='168.849062' y='74.442824'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='176.930763' y='74.442824'>t</text>
+<rect x='168.849062' y='79.121127' height='.637912' width='13.007207'/>
+<text font-family='futri8r' font-size='10.957664' x='171.652545' y='90.737691'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='185.097396' y='82.536466'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='196.25284' y='74.442824'>55</text>
+<text font-family='futr8r' font-size='10.957664' x='207.921083' y='74.442824'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='210.838149' y='74.442824'>4849</text>
+<text font-family='fourier-ms' font-size='10.957664' x='235.635783' y='74.442824'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='245.01125' y='74.442824'>5</text>
+<text font-family='futr8r' font-size='10.957664' x='250.845371' y='74.442824'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='253.762437' y='74.442824'>92202</text>
+<rect x='196.25284' y='79.121127' height='.637912' width='86.680031'/>
+<text font-family='futr8r' font-size='10.957664' x='236.675809' y='90.737691'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='286.173998' y='82.536466'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='296.133928' y='82.536466'>24</text>
+<text font-family='futr8r' font-size='10.957664' x='307.80217' y='82.536466'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='310.719237' y='82.536466'>81</text>
+</g>
+</svg>
+</div>
+<p>
+que é aproximadamente o dobro do período <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2095938em' height='1.0575967em' viewBox='-0.6 -8.182704 12.095938 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq45'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='6.910088' y='1.793263'>2</text>
+</g>
+</svg>
+ no ciclo de segunda
+ordem obtido com <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.8765097em' height='0.8782704em' viewBox='-0.6 -8.051212 38.765097 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq46'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>35</text>
+</g>
+</svg>
+. Existe uma segunda bifurcação do sistema
+entre <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.8765097em' height='0.8782704em' viewBox='-0.6 -8.051212 38.765097 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq47'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>35</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4599218em' height='0.8782704em' viewBox='-0.6 -8.051212 44.599218 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq48'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>375</text>
+</g>
+</svg>
+ que conduz a uma nova duplicação do período
+de oscilação.
+</p>
+<p>
+(<i>d</i>) Repetem-se novamente os comandos das alíneas anteriores,
+agora com <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4686879em' height='0.8782704em' viewBox='-0.6 -8.051212 44.686879 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq49'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>398</text>
+</g>
+</svg>
+.
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i25) </span><span class="maxv">f</span><span class="maxm">: </span><span class="maxd">[</span><span class="maxo">-</span><span class="maxv">y</span><span class="maxo">-</span><span class="maxv">z</span><span class="maxd">, </span><span class="maxv">x</span><span class="maxo">+</span><span class="maxn">0.398</span><span class="maxo">*</span><span class="maxv">y</span><span class="maxd">, </span><span class="maxn">2</span><span class="maxo">+</span><span class="maxd">(</span><span class="maxv">x</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxd">)</span><span class="maxo">*</span><span class="maxv">z</span><span class="maxd">]</span><span class="maxm">$</span><br>
+<span class="maxm">(%i26) </span><span class="maxv">sol</span><span class="maxm">: </span><span class="maxf">rk</span><span class="maxd">(</span><span class="maxv">f</span><span class="maxd">, [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">z</span><span class="maxd">], [</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">2</span><span class="maxd">], [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">60</span><span class="maxd">,</span><span class="maxn">0.01</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i27) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i28) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"t"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"x"</span><span class="maxd">])</span><span class="maxm">$</span>
+</div>
+<br>
+<img class="fig center" src="img/problema_12-3d-1.png"
+     alt="Problema 12.3 alínea d" style="width:47.67em">
+<p>
+E deixa-se evoluir a solução durante outro intervalo <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.7405185em' height='0.8925153em' viewBox='-0.6 -8.193661 37.405185 8.925153' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq50'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='8.081701' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='15.052835' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='25.012766' y='0'>60</text>
+</g>
+</svg>
+.
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i29) </span><span class="maxv">sol</span><span class="maxm">: </span><span class="maxf">rk</span><span class="maxd">(</span><span class="maxv">f</span><span class="maxd">, [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">z</span><span class="maxd">], </span><span class="maxf">rest</span><span class="maxd">(</span><span class="maxf">last</span><span class="maxd">(</span><span class="maxv">sol</span><span class="maxd">)), [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">60</span><span class="maxd">,</span><span class="maxn">0.01</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i30) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i31) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"t"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"x"</span><span class="maxd">])</span><span class="maxm">$</span>
+</div>
+<br>
+<img class="fig center" src="img/problema_12-3d-2.png"
+     alt="Problema 12.3 alínea d" style="width:47.67em">
+<p>
+Continuando com mais intervalos <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.7405185em' height='0.8925153em' viewBox='-0.6 -8.193661 37.405185 8.925153' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq51'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='8.081701' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='15.052835' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='25.012766' y='0'>60</text>
+</g>
+</svg>
+ observa-se que nunca se
+consegue reproduzir o mesmo resultado do intervalo anterior:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i32) </span><span class="maxv">sol</span><span class="maxm">: </span><span class="maxf">rk</span><span class="maxd">(</span><span class="maxv">f</span><span class="maxd">, [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv">y</span><span class="maxd">,</span><span class="maxv">z</span><span class="maxd">], </span><span class="maxf">rest</span><span class="maxd">(</span><span class="maxf">last</span><span class="maxd">(</span><span class="maxv">sol</span><span class="maxd">)), [</span><span class="maxv">t</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn">60</span><span class="maxd">,</span><span class="maxn">0.01</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i33) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i34) </span><span class="maxf">plot2d</span><span class="maxd">([</span><span class="maxk">discrete</span><span class="maxd">, </span><span class="maxf">makelist</span><span class="maxd">([</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]], </span><span class="maxv">p</span><span class="maxd">, </span><span class="maxv">sol</span><span class="maxd">)], [</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"t"</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"x"</span><span class="maxd">])</span><span class="maxm">$</span>
+</div>
+<br>
+<img class="fig center" src="img/problema_12-3d-3.png"
+     alt="Problema 12.3 alínea d" style="width:47.67em">
+<p>
+No aumento de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6678832em' height='0.6832239em' viewBox='-0.6 -6.100747 6.678832 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq52'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+</g>
+</svg>
+ de 0.375 para 0.398 houve infinitas bifurcações. O
+intervalo entre os valores de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6678832em' height='0.6832239em' viewBox='-0.6 -6.100747 6.678832 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq53'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+</g>
+</svg>
+ onde há novas bifurcações é cada vez
+menor, de forma que o período de oscilação aproxima-se de infinito. O
+sistema é caótico quando <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4686879em' height='0.8782704em' viewBox='-0.6 -8.051212 44.686879 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq54'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.72011' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.554231' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='26.471297' y='0'>398</text>
+</g>
+</svg>
+ e os últimos dois gráficos mostram
+duas partes do ciclo limite, que é um atrator estranho.
+</p>
+</section>
+<div class="bottom">
+<a href="#top"><span class="button">Topo</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../index.html">DEF</a>
+</div>
+<div class="category">
+<a href="../textos.html">Material de estudo</a>
+</div>
+<div class="category">
+<a href="../cursos.html">Cadeiras no Moodle</a>
+</div>
+<div class="category">
+<a href="../faq.html">Perguntas frequentes</a>
+</div>
+</div>
+&copy; 2021, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Última atualização: 2021/02/15 16:06:28 UTC</span>
+</footer>
+</body>
+</html>

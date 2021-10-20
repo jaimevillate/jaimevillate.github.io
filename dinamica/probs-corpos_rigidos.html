@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercícios Resolvidos de Dinâmica e Sistemas Dinâmicos</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body id="top">
+<aside>
+<span class="current">HTML</span>
+<a href="./probs-corpos_rigidos.pdf" target="_blank">PDF</a>
+</aside>
+<header>
+<h1 id="title">Exercícios Resolvidos de Dinâmica e Sistemas Dinâmicos</h1>
+</header>
+<nav>
+<a href="../index.html">DEF</a><span>&rarr;</span>
+<a href="../ensino.html">Ensino</a><span>&rarr;</span>
+<a href="../textos.html">Material de estudo</a><span>&rarr;</span>
+<a href="./index.html">Dinâmica e Sistemas Dinâmicos</a><span>&rarr;</span>
+<a href="./problemas.html">Exercícios Resolvidos</a><span>&rarr;</span>
+<span>5. Dinâmica dos corpos rígidos</span>
+</nav>
+<div class="content">
+<span class="button">Índice</span>
+<div class="content-items">
+<a href="./index.html">Dinâmica e Sistemas Dinâmicos</a><br>
+<a href="./problemas.html">Exercícios Resolvidos</a>
+<ol class="nested" style="counter-increment: item 4">
+<li><a href="#top">Dinâmica dos corpos rígidos</a>
+<ul class="plain">
+<li><a href="#prob-5.1">Problema 1</a></li>
+<li><a href="#prob-5.5">Problema 5</a></li>
+<li><a href="#prob-5.7">Problema 7</a></li>
+<li><a href="#prob-5.8">Problema 8</a></li>
+<li><a href="#prob-5.9">Problema 9</a></li>
+<li><a href="#prob-5.10">Problema 10</a></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<section>
+<h2>5. Dinâmica dos corpos rígidos</h2>
+<div id="prob-5.1" class="example clearfix">
+<h3>Problema 1</h3>
+<img class="fig right" src="img/Martelo_a_extrair_um_prego.png"
+     alt="Martelo a extrair um prego" style="width:11.91em">
+<p>
+O martelo na figura apoia-se sobre um bloco de madeira de 40&thinsp;mm de
+espessura, para facilitar a extração do prego. Sabendo que é
+necessária uma força de 200 N (perpendicular ao martelo) para extrair
+o prego, calcule a força sobre o prego e a reação no ponto A. Admita
+que o peso do martelo pode ser desprezado e em A existe suficiente
+atrito para evitar que o martelo escorregue.
+</p>
+</div>
+<img class="fig right" src="img/problema_5-1.png" alt="Problema 5.1"
+     style="width:6.75em;padding-top:2em">
+<p>
+Para extrair o prego sem dobrá-lo, o martelo é usado para produzir uma
+força <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2429123em' height='1.2466164em' viewBox='-0.6 -8.182704 12.429123 12.466164' class='inline' style='vertical-align:-0.425398em'>
+<g id='eq1'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>p</text>
+</g>
+</svg>
+ sobre o prego, que aponta para cima. A reação
+dessa força é a força que o prego exerce sobre o martelo, que tem o
+mesmo módulo <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2429123em' height='1.2466164em' viewBox='-0.6 -8.182704 12.429123 12.466164' class='inline' style='vertical-align:-0.425398em'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>p</text>
+</g>
+</svg>
+, mas aponta para baixo, como se mostra no
+diagrama de corpo livre do martelo ao lado. O peso do martelo foi
+ignorado e a força de reação no ponto A foi dividida nas suas
+componentes <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2665982em' height='1.0674586em' viewBox='-0.6 -8.182704 12.665982 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq3'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814454' y='1.793263'>x</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2721297em' height='1.2564783em' viewBox='-0.6 -8.182704 12.721297 12.564783' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq4'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='7.083442' y='1.793263'>y</text>
+</g>
+</svg>
+ para facilitar os cálculos.
+</p>
+<p>
+Se o prego é extraído lentamente e com velocidade uniforme, as
+acelerações tangencial e normal do martelo são ambas nulas e, como
+tal, o martelo é um sistema em equilíbrio. Assim sendo, a soma dos
+momentos das forças externas, em relação a qualquer ponto, é nula. Em
+relação ao ponto A, unicamente as forças de 200 N e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2429123em' height='1.2466164em' viewBox='-0.6 -8.182704 12.429123 12.466164' class='inline' style='vertical-align:-0.425398em'>
+<g id='eq5'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>p</text>
+</g>
+</svg>
+
+produzem momento e tem-se que
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20.6610585em' height='1.2466164em' viewBox='129.654268 72.016549 206.610585 12.466164' class='display'>
+<g id='eq6'>
+<text font-family='futr8r' font-size='10.957664' x='130.254268' y='80.199253'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='136.088389' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='139.005455' y='80.199253'>04</text>
+<text font-family='futri8r' font-size='10.957664' x='151.842623' y='80.199253'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='158.477745' y='81.992516'>p</text>
+<text font-family='fourier-ms' font-size='10.957664' x='165.449222' y='80.199253'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='174.824689' y='80.199253'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='180.65881' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='183.575877' y='80.199253'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='190.871147' y='80.199253'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='200.246615' y='80.199253'>200</text>
+<text font-family='fourier-ms' font-size='10.957664' x='219.79459' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='229.754521' y='80.199253'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='248.1548' y='80.199253'>=<tspan x='254.315729'>⇒</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='277.880643' y='80.199253'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='284.515765' y='81.992516'>p</text>
+<text font-family='fourier-ms' font-size='10.957664' x='292.071704' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='302.031635' y='80.199253'>1000<tspan x='327.413731'>N</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+A soma das componentes horizontais das forças deve ser nula
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='19.8908818em' height='1.1941246em' viewBox='133.505123 70.749889 198.908818 11.941246' class='display'>
+<g id='eq7'>
+<text font-family='futr8r' font-size='10.957664' x='134.105123' y='80.199253'>200<tspan x='153.945338'>cos</tspan>
+<tspan x='171.708027'>20</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='183.37627' y='75.261775'>◦</text>
+<text font-family='fourier-ms' font-size='10.957664' x='189.460084' y='80.199253'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='198.835551' y='80.199253'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='205.650005' y='81.992516'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='213.026613' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='222.986543' y='80.199253'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='241.386822' y='80.199253'>=<tspan x='247.547751'>⇒</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='271.112665' y='80.199253'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='277.927118' y='81.992516'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='285.303726' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='295.263657' y='80.199253'>187</text>
+<text font-family='futr8r' font-size='10.957664' x='312.76602' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='315.683086' y='80.199253'>9<tspan x='323.56282'>N</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+E a soma das componentes verticais também
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='22.0205204em' height='1.3831443em' viewBox='122.856928 70.749889 220.205204 13.831443' class='display'>
+<g id='eq8'>
+<text font-family='futr8r' font-size='10.957664' x='123.456928' y='80.199253'>200<tspan x='143.297143'>sin</tspan>
+<tspan x='159.266554'>20</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='170.934796' y='75.261775'>◦</text>
+<text font-family='fourier-ms' font-size='10.957664' x='177.01861' y='80.199253'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='186.394078' y='80.199253'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='193.47752' y='81.992516'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='200.054476' y='80.199253'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='209.429943' y='80.199253'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='216.065065' y='81.992516'>p</text>
+<text font-family='fourier-ms' font-size='10.957664' x='223.621005' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='233.580935' y='80.199253'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='251.981214' y='80.199253'>=<tspan x='258.142143'>⇒</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='281.707057' y='80.199253'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='288.790499' y='81.992516'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='295.951917' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='305.911848' y='80.199253'>931</text>
+<text font-family='futr8r' font-size='10.957664' x='323.414211' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='326.331277' y='80.199253'>6<tspan x='334.211011'>N</tspan>
+</text>
+</g>
+</svg>
+</div>
+</section>
+<section>
+<div id="prob-5.5" class="example">
+<h3>Problema 5</h3>
+<p>
+Um tronco uniforme tem forma cilíndrica com 48&thinsp;cm de diâmetro, 3&thinsp;m de
+comprimento, massa de 100&thinsp;kg e está pendurado em posição horizontal,
+por meio de dois cabos de 2&thinsp;m, como mostra a figura. O tronco larga-se
+a partir do repouso na posição em que cada cabo faz um ângulo de
+60&deg; com a horizontal. Determine a tensão e a aceleração angular
+de cada um dos cabos, no preciso instante em que o tronco é largado a
+partir do repouso.
+</p>
+<img class="fig center" src="img/Tronco_pendurado.png"
+     alt="Tronco pendurado" style="width:15.33em">
+</div>
+<img class="fig right" src="img/problema_5-5.png" alt="Problema 5.5"
+     style="width:13.68em;padding-top:2em">
+<p>
+A figura mostra o diagrama de corpo livre do tronco, onde <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1701462em' height='1.3644389em' viewBox='-0.6 -11.251126 11.701462 13.644389' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq9'>
+<text font-family='fourier-ml' font-size='10.957664' x='.424396' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='6.910088' y='1.793263'>1</text>
+</g>
+</svg>
+
+e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2095938em' height='1.3644389em' viewBox='-0.6 -11.251126 12.095938 13.644389' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq10'>
+<text font-family='fourier-ml' font-size='10.957664' x='.424396' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='6.910088' y='1.793263'>2</text>
+</g>
+</svg>
+ são as tensões nos dois cabos e o centro de massa
+encontra-se no centro do tronco. Como o tronco permanece sempre em
+posição horizontal, a sua velocidade angular é nula; o movimento do
+tronco é então translação sem rotação, em que as trajetórias de todos
+os pontos do tronco são arcos de círculo perpendiculares aos dois
+cabos.
+</p>
+<p>
+É conveniente usar o sistema de eixos tangencial e normal indicados no
+diagrama, com a origem no centro de massa. As equações para este
+sistema são 3: a soma das componentes tangenciais das forças externas
+é igual à massa vezes a aceleração tangencial, a soma das componentes
+normais das forças é igual à massa vezes a aceleração normal, que no
+instante inicial é zero, porque a velocidade inicial é nula e a soma
+dos momentos das forças externas em relação à origem (centro de massa)
+é zero. As duas primeiras equações são então
+</p>
+<div class="eqnalign">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.5347909em' height='1.1941246em' viewBox='-0.6 -9.449364 95.347909 11.941246' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq11'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>980<tspan x='19.840215'>cos</tspan>
+<tspan x='37.602905'>60</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='49.271147' y='-4.937478'>◦</text>
+<text font-family='fourier-ms' font-size='10.957664' x='55.939424' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='65.899354' y='0'>100</text>
+<text font-family='futri8r' font-size='10.957664' x='84.809752' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='91.337268' y='1.793263'>t</text>
+</g>
+</svg>
+&emsp;
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.5905228em' height='1.1842627em' viewBox='-0.6 -9.449364 115.905228 11.842627' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq12'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='6.910088' y='1.793263'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.24496' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='22.620427' y='0'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='29.530515' y='1.793263'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='35.865387' y='0'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='45.240854' y='0'>980<tspan x='65.081069'>sin</tspan>
+<tspan x='81.05048'>60</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='92.718722' y='-4.937478'>◦</text>
+<text font-family='fourier-ms' font-size='10.957664' x='99.387' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='109.34693' y='0'>0</text>
+</g>
+</svg>
+
+</div>
+<p>
+E a soma dos momentos em relação à origem é
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='25.3105042em' height='5.2990852em' viewBox='106.335357 79.06609 253.105042 52.990852' class='display'>
+<g id='eq13'>
+<text font-family='fourier-mex' font-size='10.998733' x='106.935357' y='79.952057'>⏐<tspan x='106.935357' y='86.551363'>⏐</tspan>
+<tspan x='106.935357' y='93.15067'>⏐</tspan>
+<tspan x='106.935357' y='99.749976'>⏐</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='123.439431' y='88.816885'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='131.353748' y='88.816885'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='137.187869' y='88.816885'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='140.104936' y='88.816885'>5<tspan x='181.720754'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='187.554875' y='88.816885'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='190.471941' y='88.816885'>24</text>
+<text font-family='futri8r' font-size='10.957664' x='110.601601' y='103.262698'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='117.511689' y='105.055961'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='124.723263' y='103.262698'>cos<tspan x='142.485953'>60</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='154.154195' y='98.922984'>◦</text>
+<text font-family='futri8r' font-size='10.957664' x='168.739465' y='103.262698'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='175.649553' y='105.055961'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='182.861127' y='103.262698'>sin<tspan x='198.830538'>60</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='210.49878' y='98.922984'>◦</text>
+<text font-family='fourier-mex' font-size='10.998733' x='215.121411' y='79.952057'>⏐<tspan x='215.121411' y='86.551363'>⏐</tspan>
+<tspan x='215.121411' y='93.15067'>⏐</tspan>
+<tspan x='215.121411' y='99.749976'>⏐</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='220.248805' y='96.247045'>+</text>
+<text font-family='fourier-mex' font-size='10.998733' x='229.624272' y='79.952057'>⏐<tspan x='229.624272' y='86.551363'>⏐</tspan>
+<tspan x='229.624272' y='93.15067'>⏐</tspan>
+<tspan x='229.624272' y='99.749976'>⏐</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='250.085491' y='88.816885'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='255.919612' y='88.816885'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='258.836678' y='88.816885'>5<tspan x='304.409668'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='310.243789' y='88.816885'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='313.160856' y='88.816885'>24</text>
+<text font-family='futri8r' font-size='10.957664' x='233.290516' y='103.262698'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='240.200604' y='105.055961'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='247.412178' y='103.262698'>cos<tspan x='265.174868'>60</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='276.84311' y='98.922984'>◦</text>
+<text font-family='futri8r' font-size='10.957664' x='291.42838' y='103.262698'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='298.338468' y='105.055961'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='305.550042' y='103.262698'>sin<tspan x='321.519453'>60</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='333.187695' y='98.922984'>◦</text>
+<text font-family='fourier-mex' font-size='10.998733' x='337.810325' y='79.952057'>⏐<tspan x='337.810325' y='86.551363'>⏐</tspan>
+<tspan x='337.810325' y='93.15067'>⏐</tspan>
+<tspan x='337.810325' y='99.749976'>⏐</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='343.522171' y='96.247045'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='353.482101' y='96.247045'>0<tspan x='122.347076' y='129.663679'>(0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='132.030756' y='129.663679'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='134.947822' y='129.663679'>5</text>
+<text font-family='futri8r' font-size='10.957664' x='141.950869' y='129.663679'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='148.860957' y='131.456942'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='155.195829' y='129.663679'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='164.571296' y='129.663679'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='170.405417' y='129.663679'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='173.322483' y='129.663679'>5</text>
+<text font-family='futri8r' font-size='10.957664' x='180.32553' y='129.663679'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='187.235618' y='131.456942'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='192.10934' y='129.663679'>)<tspan x='198.29675'>sin</tspan>
+<tspan x='214.266162'>60</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='225.934404' y='124.726201'>◦</text>
+<text font-family='fourier-ms' font-size='10.957664' x='232.018218' y='129.663679'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='241.393686' y='129.663679'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='247.227807' y='129.663679'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='250.144873' y='129.663679'>24<tspan x='262.982041'>(</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='266.8316' y='129.663679'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='273.741688' y='131.456942'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='280.076559' y='129.663679'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='289.452027' y='129.663679'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='296.362115' y='131.456942'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='301.235836' y='129.663679'>)<tspan x='307.423247'>cos</tspan>
+<tspan x='325.185937'>60</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='336.854179' y='124.726201'>◦</text>
+<text font-family='fourier-ms' font-size='10.957664' x='343.522171' y='129.663679'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='353.482101' y='129.663679'>0</text>
+</g>
+</svg>
+</div>
+<p>
+A solução destas 3 equações é a seguinte
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i1)</span> <span class="maxf">float</span><span class="maxd"> (</span><span class="maxf">solve</span><span class="maxd"> ([</span><span class="maxn">9.8</span><span class="maxo">*</span><span class="maxf">cos</span><span class="maxd">(</span><span class="maxi">%pi</span><span class="maxo">/</span><span class="maxn">3</span><span class="maxd">)</span><span class="maxo">=</span><span class="maxv">at</span><span class="maxd">,</span><span class="maxv"> T1</span><span class="maxo">+</span><span class="maxv">T2</span><span class="maxo">-</span><span class="maxn">980</span><span class="maxo">*</span><span class="maxf">sin</span><span class="maxd">(</span><span class="maxi">%pi</span><span class="maxo">/</span><span class="maxn">3</span><span class="maxd">)</span><span class="maxo"> = </span><span class="maxn">0</span><span class="maxd">, (</span><span class="maxn">0.5</span><span class="maxo">*</span><span class="maxv">T2</span><span class="maxo">-</span><span class="maxn">1.5</span><span class="maxo">*</span><span class="maxv">T1</span><span class="maxd">)</span><span class="maxo">*</span><span class="maxf">sin</span><span class="maxd">(</span><span class="maxi">%pi</span><span class="maxo">/</span><span class="maxn">3</span><span class="maxd">)</span><span class="maxo">-</span><span class="maxn">0.24</span><span class="maxo">*</span><span class="maxd">(</span><span class="maxv">T1</span><span class="maxo">+</span><span class="maxv">T2</span><span class="maxd">)</span><span class="maxo">*</span><span class="maxf">cos</span><span class="maxd">(</span><span class="maxi">%pi</span><span class="maxo">/</span><span class="maxn">3</span><span class="maxd">) = </span><span class="maxn">0</span><span class="maxd">]))</span><span class="maxm">;</span><br>
+(%o1) &emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='17.4372509em' height='1.0327734em' viewBox='-0.6 -8.182704 174.372509 10.327734' class='inline' style='vertical-align:-0.216em'>
+<g id='eq14'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='.098644'>[<tspan x='3.634366' y='.098644'>[</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='9.314345' y='0'>T</text>
+<text font-family='futr8r' font-size='10.957664' x='17.706865' y='0'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='25.586599' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='35.546529' y='0'>695</text>
+<text font-family='futr8r' font-size='10.957664' x='53.048892' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='55.965958' y='0'>3</text>
+<text font-family='futr8r' font-size='10.957664' x='61.80008' y='0'>,</text>
+<text font-family='futri8r' font-size='10.957664' x='67.931684' y='0'>T</text>
+<text font-family='futr8r' font-size='10.957664' x='76.324204' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='84.203938' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='94.163869' y='0'>153</text>
+<text font-family='futr8r' font-size='10.957664' x='111.666232' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='114.583298' y='0'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='120.417419' y='0'>,</text>
+<text font-family='futri8r' font-size='10.957664' x='126.788132' y='0'>a</text>
+<text font-family='futri8r' font-size='10.957664' x='133.817763' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='140.788898' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='150.748828' y='0'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='156.582949' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='159.500016' y='0'>9<tspan x='167.379749' y='.098644'>]</tspan>
+<tspan x='171.013849' y='.098644'>]</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+Os extremos dos dois cabos, nos pontos A e B, têm a mesma aceleração
+tangencial do tronco, igual a 4.9&thinsp;m/s<sup>2</sup>. Assim sendo, a
+aceleração angular dos cabos é igual a essa aceleração tangencial,
+dividida pelo comprimento dos cabos (2&thinsp;m), ou seja
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.281608em' height='1.1890252em' viewBox='196.273845 69.073366 72.81608 11.890252' class='display'>
+<g id='eq15'>
+<text font-family='fourier-mlit' font-size='10.957664' x='196.873845' y='80.199253'>α</text>
+<text font-family='fourier-ms' font-size='10.957664' x='206.606626' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='216.566557' y='80.199253'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='222.400678' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='225.317744' y='80.199253'>45<tspan x='238.154912'>r</tspan>
+<tspan x='242.327261'>ad</tspan>
+<tspan x='254.653011'>/s</tspan>
+</text>
+<text font-family='futr8r' font-size='8.218248' x='264.504074' y='75.261775'>2</text>
+</g>
+</svg>
+</div>
+</section>
+<section>
+<div id="prob-5.7" class="example">
+<h3>Problema 7</h3>
+<p>
+A massa do reboque na figura é 750&thinsp;kg e está ligado no ponto P a uma
+trela de um automóvel. A estrada é horizontal e os dois pneus
+idênticos podem ser considerados como um só, com uma única reação
+normal e força de atrito desprezável; a resistência do ar também será
+desprezada. (<i>a</i>) Calcule a reação normal nos pneus e a força
+vertical no ponto P, quando a velocidade for constante. (<i>b</i>)
+Quando o automóvel estiver a acelerar, com <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.8379027em' height='1.0543094em' viewBox='-0.360891 -8.051212 28.379027 10.543094' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq16'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='1.793263'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.143739' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='22.103669' y='0'>2</text>
+</g>
+</svg>
+&thinsp;m/s<sup>2</sup>,
+a força em P terá componentes horizontal e vertical. Calcule essas
+componentes e a reação normal nos pneus (o momento de inércia das
+rodas e o atrito com a estrada são desprezáveis).
+</p>
+<img class="fig center" src="img/Reboque_atrelado.png"
+     alt="Reboque atrelado" style="width:20.25em">
+</div>
+<img class="fig right" src="img/problema_5-7a.png"
+     alt="Problema 5.7 a" style="width:12.93em;padding-top:2em">
+<p>
+(<i>a</i>) A figura mostra o diagrama de corpo livre do reboque.  Como
+a velocidade é constante, o reboque está em equilíbrio. A reacção
+normal, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.3818842em' height='1.0674586em' viewBox='-0.6 -8.182704 13.818842 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq17'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+<text font-family='futri8r' font-size='8.218248' x='7.400254' y='1.793263'>n</text>
+</g>
+</svg>
+, pode ser calculada somando os momentos em relação ao
+ponto P, que deve ser igual a zero
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20.8320188em' height='1.0575967em' viewBox='128.799472 72.016549 208.320188 10.575967' class='display'>
+<g id='eq18'>
+<text font-family='futr8r' font-size='10.957664' x='129.399472' y='80.199253'>95</text>
+<text font-family='fourier-ms' font-size='10.957664' x='142.528864' y='80.199253'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='151.904331' y='80.199253'>7350</text>
+<text font-family='fourier-ms' font-size='10.957664' x='176.701965' y='80.199253'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='186.077432' y='80.199253'>128</text>
+<text font-family='futri8r' font-size='10.957664' x='204.748721' y='80.199253'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='212.148976' y='81.992516'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='219.79459' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='229.754521' y='80.199253'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='248.1548' y='80.199253'>=<tspan x='254.315729'>⇒</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='277.880643' y='80.199253'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='285.280897' y='81.992516'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='292.926512' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='302.886442' y='80.199253'>5455<tspan x='328.268539'>N</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+E a força em P, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2721297em' height='1.2564783em' viewBox='-0.6 -8.182704 12.721297 12.564783' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq19'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='7.083442' y='1.793263'>y</text>
+</g>
+</svg>
+, encontra-se a partir da soma dos momentos em
+relação ao ponto de contacto entre o pneu e a estrada
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20.6718171em' height='1.2564783em' viewBox='129.600469 72.016549 206.718171 12.564783' class='display'>
+<g id='eq20'>
+<text font-family='futr8r' font-size='10.957664' x='130.200469' y='80.199253'>128</text>
+<text font-family='futri8r' font-size='10.957664' x='148.871758' y='80.199253'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='155.9552' y='81.992516'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='162.532156' y='80.199253'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='171.907623' y='80.199253'>33</text>
+<text font-family='fourier-ms' font-size='10.957664' x='185.037015' y='80.199253'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='194.412482' y='80.199253'>7350</text>
+<text font-family='fourier-ms' font-size='10.957664' x='219.794579' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='229.754509' y='80.199253'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='248.154789' y='80.199253'>=<tspan x='254.315718'>⇒</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='277.880631' y='80.199253'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='284.964074' y='81.992516'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='292.125492' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='302.085422' y='80.199253'>1895<tspan x='327.467519'>N</tspan>
+</text>
+</g>
+</svg>
+</div>
+<img class="fig right" src="img/problema_5-7b.png"
+     alt="Problema 5.7 b" style="width:17.58em;padding-top:2em">
+<p>
+(<i>b</i>) A figura ao lado mostra o diagrama de corpo livre do
+reboque, quando está a acelerar. Como a aceleração é na direcção <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq21'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+
+(horizontal) e o reboque não roda, a soma das componentes <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq22'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ das
+forças deve ser igual a <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.9788873em' height='0.6832239em' viewBox='-0.6 -6.100747 19.788873 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq23'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='12.03619' y='0'>a</text>
+</g>
+</svg>
+, a soma das componentes <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq24'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+ (verticais)
+das forças deve ser nula e a soma dos momentos em relação ao centro de
+massa deve ser nula:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.6541833em' height='4.7434023em' viewBox='174.617005 83.971717 116.541833 47.434023' class='display'>
+<g id='eq25'>
+<text font-family='futri8r' font-size='10.957664' x='175.217005' y='92.154421'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='182.031459' y='93.947684'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='189.408067' y='92.154421'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='199.367997' y='92.154421'>750</text>
+<text font-family='fourier-ms' font-size='10.957664' x='218.33151' y='92.154421'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='227.706978' y='92.154421'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='235.586711' y='92.154421'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='245.546642' y='92.154421'>1500<tspan x='270.928738'>N</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='175.217005' y='109.589041'>R</text>
+<text font-family='futri8r' font-size='8.218248' x='182.61726' y='111.382304'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='190.126712' y='109.589041'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='199.50218' y='109.589041'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='206.585622' y='111.382304'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='213.162577' y='109.589041'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='222.538045' y='109.589041'>7350</text>
+<text font-family='fourier-ms' font-size='10.957664' x='247.920142' y='109.589041'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='257.880072' y='109.589041'>0<tspan x='175.217005' y='127.023661'>33</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='188.054173' y='127.023661'>R</text>
+<text font-family='futri8r' font-size='8.218248' x='195.454428' y='128.816924'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='202.96388' y='127.023661'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='212.339348' y='127.023661'>95</text>
+<text font-family='futri8r' font-size='10.957664' x='225.176515' y='127.023661'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='232.259958' y='128.816924'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='238.836913' y='127.023661'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='248.212381' y='127.023661'>40</text>
+<text font-family='futri8r' font-size='10.957664' x='261.049549' y='127.023661'>F</text>
+<text font-family='futri8r' font-size='8.218248' x='267.864002' y='128.816924'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='275.24061' y='127.023661'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='285.20054' y='127.023661'>0</text>
+</g>
+</svg>
+</div>
+<p>
+A solução da segunda e terceira equações conduz aos valores de reação
+normal e da componete vertical da força em P:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i2)</span> <span class="maxf">float</span><span class="maxd"> (</span><span class="maxf">solve</span><span class="maxd"> ([</span><span class="maxv">Rn</span><span class="maxo">+</span><span class="maxv">Fy</span><span class="maxo">-</span><span class="maxn">7350</span><span class="maxo">=</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxn"> 33</span><span class="maxo">*</span><span class="maxv">Rn</span><span class="maxo">-</span><span class="maxn">95</span><span class="maxo">*</span><span class="maxv">Fy</span><span class="maxo">-</span><span class="maxn">40</span><span class="maxo">*</span><span class="maxn">1500</span><span class="maxo">=</span><span class="maxn">0</span><span class="maxd">]))</span><span class="maxm">;</span><br>
+(%o2) &emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14.5800959em' height='1.4189503em' viewBox='-0.6 -10.207701 145.800959 14.189503' class='inline' style='vertical-align:-0.411607em'>
+<g id='eq26'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-9.255742'><tspan x='4.582821' y='-9.255742'></tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='11.211254' y='0'>R</text>
+<text font-family='futri8r' font-size='10.957664' x='19.113623' y='0'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='28.55949' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='38.51942' y='0'>5923</text>
+<text font-family='futr8r' font-size='10.957664' x='61.855904' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='64.772971' y='0'>8</text>
+<text font-family='futr8r' font-size='10.957664' x='70.607092' y='0'>,</text>
+<text font-family='futri8r' font-size='10.957664' x='76.738696' y='0'>F</text>
+<text font-family='futri8r' font-size='10.957664' x='84.939932' y='0'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='93.142438' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='103.102368' y='0'>1426</text>
+<text font-family='futr8r' font-size='10.957664' x='126.438853' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='129.355919' y='0'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='137.235652' y='-9.255742'><tspan x='141.818279' y='-9.255742'></tspan>
+</text>
+</g>
+</svg>
+
+</div>
+</section>
+<section>
+<div id="prob-5.8" class="example">
+<h3>Problema 8</h3>
+<p>
+O avião na figura, com massa total de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.2234927em' height='1.1160995em' viewBox='-0.6 -10.429503 42.234927 11.160995' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq27'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='5.834121' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='8.751187' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.046458' y='0'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='25.421925' y='0'>10</text>
+<text font-family='futr8r' font-size='8.218248' x='37.090168' y='-4.339714'>5</text>
+</g>
+</svg>
+&thinsp;kg, aterra
+numa pista horizontal. O ponto C representa o centro de gravidade. No
+instante em que a velocidade é de 210&thinsp;km/h (para a
+direita), o piloto liga as turbinas em modo inverso, produzindo a
+força constante <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8618339em' height='0.8782704em' viewBox='-0.6 -8.182704 8.618339 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq28'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+</g>
+</svg>
+ (representada na figura) e após ter precorrido
+580&thinsp;m na pista a velocidade diminui para 70&thinsp;km/h. Durante
+esse percurso, as forças de atrito nos pneus e a resistência do ar
+podem ser ignoradas, em comparação com a força <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8618339em' height='0.8782704em' viewBox='-0.6 -8.182704 8.618339 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq29'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+</g>
+</svg>
+ que é muito
+maior. Calcule a reação normal na roda da frente.
+</p>
+<img class="fig center" src="img/aterragem.png" alt="Avião a aterrar"
+     style="width:30.09em">
+</div>
+<p>
+A figura seguinte mostra o diagrama de corpo livre do avião, onde
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.3422996em' height='1.3644389em' viewBox='-0.360891 -11.251126 13.422996 13.644389' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq30'>
+<text font-family='fourier-ml' font-size='10.957664' x='.992274' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='8.87073' y='1.793263'>1</text>
+</g>
+</svg>
+ é a reação normal na roda da frente e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.3817472em' height='1.3644389em' viewBox='-0.360891 -11.251126 13.817472 13.644389' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq31'>
+<text font-family='fourier-ml' font-size='10.957664' x='.992274' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='8.87073' y='1.793263'>2</text>
+</g>
+</svg>
+ é a soma
+das reações normais nas duas rodas traseiras.
+</p>
+<img class="fig center" src="img/problema_5-8.png"
+     alt="Problema 5.8" style="width:24.09em">
+<p>
+Como o movimento do avião é acelerado mas sem rotação, as expressões
+da soma das componentes horizontais e verticais das forças e da soma
+dos momentos em relação ao centro de massa são:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12.2891051em' height='4.6790185em' viewBox='171.442417 83.971717 122.891051 46.790185' class='display'>
+<g id='eq32'>
+<text font-family='futri8r' font-size='10.957664' x='172.042417' y='92.154421'>R</text>
+<text font-family='fourier-ms' font-size='10.957664' x='181.990399' y='92.154421'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='191.950329' y='92.154421'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='203.986519' y='92.154421'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='210.514035' y='93.947684'>t</text>
+<text font-family='futri8r' font-size='10.957664' x='172.281526' y='110.934019'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='180.913148' y='112.727282'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='187.248019' y='110.934019'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='196.862595' y='110.934019'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='205.494217' y='112.727282'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='211.829088' y='110.934019'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='221.204556' y='110.934019'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='227.038677' y='110.934019'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='229.955743' y='110.934019'>078</text>
+<text font-family='fourier-ms' font-size='10.957664' x='248.919256' y='110.934019'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='258.294723' y='110.934019'>10</text>
+<text font-family='futr8r' font-size='8.218248' x='269.962965' y='105.996541'>6</text>
+<text font-family='fourier-ms' font-size='10.957664' x='276.8823' y='110.934019'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='286.84223' y='110.934019'>0<tspan x='172.042417' y='128.368639'>8</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='177.876538' y='128.368639'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='180.793604' y='128.368639'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='188.03576' y='128.368639'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='196.667382' y='130.161902'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='203.002253' y='128.368639'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='212.377721' y='128.368639'>5</text>
+<text font-family='futr8r' font-size='10.957664' x='218.211842' y='128.368639'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='221.128908' y='128.368639'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='228.371064' y='128.368639'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='237.002685' y='130.161902'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='243.337557' y='128.368639'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='252.713024' y='128.368639'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='258.547145' y='128.368639'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='261.464211' y='128.368639'>6</text>
+<text font-family='futri8r' font-size='10.957664' x='268.467258' y='128.368639'>R</text>
+<text font-family='fourier-ms' font-size='10.957664' x='278.41524' y='128.368639'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='288.37517' y='128.368639'>0</text>
+</g>
+</svg>
+</div>
+<p>
+Como a força <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8618339em' height='0.8782704em' viewBox='-0.6 -8.182704 8.618339 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq33'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+</g>
+</svg>
+ permanece constante, a primeira equação implica que a
+aceleração também é constante e pode integrar-se a equação que
+relaciona a aceleração com a velocidade e a posição
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13.8722429em' height='11.6251659em' viewBox='163.148705 78.17551 138.722429 116.251659' class='display'>
+<g id='eq34'>
+<text font-family='futri8r' font-size='10.957664' x='163.987814' y='94.999739'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='170.51533' y='96.793002'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='175.892443' y='94.999739'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='186.091483' y='94.999739'>v</text>
+<text font-family='futr8r' font-size='10.957664' x='193.934044' y='86.906097'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='200.748498' y='86.906097'>v</text>
+<rect x='193.934044' y='91.5844' height='.637912' width='13.461482'/>
+<text font-family='futr8r' font-size='10.957664' x='194.776877' y='103.200963'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='201.59133' y='103.200963'>s</text>
+<text font-family='futri8r' font-size='10.957664' x='163.987814' y='131.712347'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='170.51533' y='133.50561'>t<tspan x='178.53842' y='114.218638'>580</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.998733' x='177.672162' y='116.418381'></text>
+<text font-family='futr8r' font-size='8.218248' x='178.206535' y='148.169964'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='190.480378' y='131.712347'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='197.294831' y='131.712347'>s</text>
+<text font-family='fourier-ms' font-size='10.957664' x='204.301838' y='131.712347'>=</text>
+<text font-family='futr8r' font-size='8.218248' x='218.803301' y='114.218638'>70/3</text>
+<text font-family='futr8r' font-size='8.218248' x='235.722854' y='114.218638'>.</text>
+<text font-family='futr8r' font-size='8.218248' x='237.910653' y='114.218638'>6</text>
+<text font-family='fourier-mex' font-size='10.998733' x='223.11512' y='116.418381'></text>
+<text font-family='futr8r' font-size='8.218248' x='211.908031' y='148.483789'>210/3</text>
+<text font-family='futr8r' font-size='8.218248' x='233.203174' y='148.483789'>.</text>
+<text font-family='futr8r' font-size='8.218248' x='235.390974' y='148.483789'>6</text>
+<text font-family='futri8r' font-size='10.957664' x='243.528316' y='131.712347'>v</text>
+<text font-family='futr8r' font-size='10.957664' x='251.34429' y='131.712347'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='258.158743' y='131.712347'>v</text>
+<text font-family='futr8r' font-size='10.957664' x='163.748705' y='169.1926'>580</text>
+<text font-family='futri8r' font-size='10.957664' x='182.659103' y='169.1926'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='189.186619' y='170.985863'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='194.563732' y='169.1926'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='220.866977' y='161.098958'>1</text>
+<rect x='205.719177' y='165.777261' height='.637912' width='36.129711'/>
+<text font-family='futr8r' font-size='10.957664' x='205.719177' y='177.393825'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='213.014447' y='177.393825'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='222.389915' y='177.393825'>3</text>
+<text font-family='futr8r' font-size='10.957664' x='228.224036' y='177.393825'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='231.141102' y='177.393825'>6</text>
+<text font-family='futr8r' font-size='8.218248' x='236.975223' y='173.938794'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='244.213328' y='159.936858'></text>
+<text font-family='futr8r' font-size='10.957664' x='248.480817' y='169.1926'>70</text>
+<text font-family='futr8r' font-size='8.218248' x='260.14906' y='164.255122'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='266.483931' y='169.1926'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='275.859399' y='169.1926'>210</text>
+<text font-family='futr8r' font-size='8.218248' x='293.361762' y='164.255122'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='298.235484' y='159.936858'></text>
+<text font-family='futri8r' font-size='10.957664' x='163.987814' y='191.935287'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='170.51533' y='193.72855'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='175.892443' y='191.935287'>=<tspan x='185.852374'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='193.766692' y='191.935287'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='199.600813' y='191.935287'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='202.517879' y='191.935287'>61<tspan x='216.231734'>m/s</tspan>
+</text>
+<text font-family='futr8r' font-size='8.218248' x='236.232734' y='186.997809'>2</text>
+</g>
+</svg>
+</div>
+<p>
+O sinal negativo indica que é no sentido oposto à velocidade.  Como
+tal,
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16.1511069em' height='1.1857379em' viewBox='152.204014 69.073366 161.511069 11.857379' class='display'>
+<g id='eq35'>
+<text font-family='futri8r' font-size='10.957664' x='152.804014' y='80.199253'>R</text>
+<text font-family='fourier-ms' font-size='10.957664' x='162.751996' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='172.711927' y='80.199253'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='178.546048' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='181.463114' y='80.199253'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='188.758385' y='80.199253'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='198.133852' y='80.199253'>10</text>
+<text font-family='futr8r' font-size='8.218248' x='209.802094' y='75.261775'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='216.136966' y='80.199253'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='225.512433' y='80.199253'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='231.346554' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='234.26362' y='80.199253'>61</text>
+<text font-family='fourier-ms' font-size='10.957664' x='247.977475' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='257.937405' y='80.199253'>287</text>
+<text font-family='fourier-ms' font-size='10.957664' x='276.900918' y='80.199253'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='286.276386' y='80.199253'>10</text>
+<text font-family='futr8r' font-size='8.218248' x='297.944628' y='75.261775'>3</text>
+<text font-family='futr8r' font-size='10.957664' x='304.863962' y='80.199253'>N</text>
+</g>
+</svg>
+</div>
+<p>
+Substituindo esse valor na equação da soma dos momentos, pode
+resolver-se o sistema de duas equações para <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.3422996em' height='1.0575967em' viewBox='-0.360891 -8.182704 13.422996 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq36'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='8.87073' y='1.793263'>1</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.3817472em' height='1.0575967em' viewBox='-0.360891 -8.182704 13.817472 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq37'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='8.87073' y='1.793263'>2</text>
+</g>
+</svg>
+. Mas outra
+forma mais direta de obter <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.3422996em' height='1.0575967em' viewBox='-0.360891 -8.182704 13.422996 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq38'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='8.87073' y='1.793263'>1</text>
+</g>
+</svg>
+ consiste em escrever a equação para a
+soma dos momentos em relação ao ponto B:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='28.0133703em' height='3.2298748em' viewBox='92.565887 81.028534 280.133703 32.298748' class='display'>
+<g id='eq39'>
+<text font-family='futr8r' font-size='10.957664' x='93.165887' y='92.154421'>13</text>
+<text font-family='futr8r' font-size='10.957664' x='104.834129' y='92.154421'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='107.751195' y='92.154421'>3</text>
+<text font-family='futri8r' font-size='10.957664' x='114.993351' y='92.154421'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='123.624972' y='93.947684'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='129.959844' y='92.154421'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='139.335311' y='92.154421'>5</text>
+<text font-family='futr8r' font-size='10.957664' x='145.169432' y='92.154421'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='148.086498' y='92.154421'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='155.381769' y='92.154421'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='164.757237' y='92.154421'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='170.591358' y='92.154421'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='173.508424' y='92.154421'>078</text>
+<text font-family='fourier-ms' font-size='10.957664' x='192.471937' y='92.154421'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='201.847404' y='92.154421'>10</text>
+<text font-family='futr8r' font-size='8.218248' x='213.515646' y='87.216943'>6</text>
+<text font-family='fourier-ms' font-size='10.957664' x='219.850518' y='92.154421'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='229.225985' y='92.154421'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='235.060106' y='92.154421'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='237.977173' y='92.154421'>4</text>
+<text font-family='fourier-ms' font-size='10.957664' x='245.272443' y='92.154421'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='254.647911' y='92.154421'>287</text>
+<text font-family='fourier-ms' font-size='10.957664' x='273.611424' y='92.154421'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='282.986891' y='92.154421'>10</text>
+<text font-family='futr8r' font-size='8.218248' x='294.655133' y='87.216943'>3</text>
+<text font-family='fourier-ms' font-size='10.957664' x='301.574468' y='92.154421'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='311.534398' y='92.154421'>3</text>
+<text font-family='fourier-ms' font-size='10.957664' x='318.829669' y='92.154421'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='328.205136' y='92.154421'>287</text>
+<text font-family='fourier-ms' font-size='10.957664' x='347.168649' y='92.154421'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='356.544116' y='92.154421'>10</text>
+<text font-family='futr8r' font-size='8.218248' x='368.212359' y='87.216943'>3</text>
+<text font-family='fourier-ms' font-size='10.957664' x='95.211499' y='110.934019'>=<tspan x='101.372428'>⇒</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='135.696996' y='110.934019'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='144.328618' y='112.727282'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='151.247952' y='110.934019'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='161.207883' y='110.934019'>448</text>
+<text font-family='fourier-ms' font-size='10.957664' x='180.171396' y='110.934019'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='189.546863' y='110.934019'>10</text>
+<text font-family='futr8r' font-size='8.218248' x='201.215105' y='105.996541'>3</text>
+<text font-family='futr8r' font-size='10.957664' x='208.13444' y='110.934019'>N</text>
+</g>
+</svg>
+</div>
+<p>
+Observe-se que a soma dos momentos em relação a um ponto diferente do
+centro de massa não é nula, mas é igual ao momento da força
+resultante, colocada no centro de massa, em relação a esse ponto. Ou
+seja, a equação anterior obteve-se comparando as forças no diagrama de
+corpo livre com o seguinte sistema equivalente:
+</p>
+<img class="fig center" src="img/problema_5-8b.png"
+     alt="Sistema equivalente no problema 5.8" style="width:24.09em">
+<p>
+Como os dois sistemas de forças são equivalentes, o momento em relação
+a qualquer ponto, em particular B, tem de ser igual nos dois sistemas.
+</p>
+</section>
+<section>
+<div id="prob-5.9" class="example">
+<h3>Problema 9</h3>
+<p>
+Um atleta com massa de 91&thinsp;kg puxa um camião numa estrada horizontal,
+com velocidade constante, por meio de uma corda amarrada às suas
+costas.  A figura mostra as posições relativas do centro de gravidade
+do atleta, C, do ponto de apoio do seu pé com o chão, A, e do ponto de
+ligação com a corda, B.
+<br>
+(<i>a</i>) Calcule o módulo da tensão na corda. (<i>b</i>) Faça um
+diagrama com as forças que julga que poderão estar a atuar no camião.
+</p>
+<img class="fig center" src="img/atleta_e_corda.png"
+     alt="Atleta a puxar um camião" style="width:26.58em">
+</div>
+<p>
+(<i>a</i>) As forças externas sobre o atleta são o seu peso, de
+891.8&thinsp;N, a tensão na corda, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.9341545em' height='1.1851126em' viewBox='-0.6 -11.251126 9.341545 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq40'>
+<text font-family='fourier-ml' font-size='10.957664' x='.424396' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+</g>
+</svg>
+, a reação normal do chão,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8618339em' height='1.1851126em' viewBox='-0.6 -11.251126 8.618339 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq41'>
+<text font-family='fourier-ml' font-size='10.957664' x='.478195' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+</g>
+</svg>
+, e a força de atrito estático no chão, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8815577em' height='1.1851126em' viewBox='-0.6 -11.251126 8.815577 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq42'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+</g>
+</svg>
+:
+</p>
+<img class="fig center" src="img/forcas_atleta.png"
+     alt="Forças no atleta" style="width:16.89em">
+<p>
+A soma dos binários em qualquer ponto deve ser nula. Somando as forças
+no ponto A, as forças <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8618339em' height='1.1851126em' viewBox='-0.6 -11.251126 8.618339 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq43'>
+<text font-family='fourier-ml' font-size='10.957664' x='.478195' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8815577em' height='1.1851126em' viewBox='-0.6 -11.251126 8.815577 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq44'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+</g>
+</svg>
+ não produzem nenhum
+binário e a soma dos binários de do peso e de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.9341545em' height='0.8782704em' viewBox='-0.6 -8.182704 9.341545 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq45'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+</g>
+</svg>
+ em A é:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='23.9420572em' height='1.1451945em' viewBox='113.177771 70.749889 239.420572 11.451945' class='display'>
+<g id='eq46'>
+<text font-family='futr8r' font-size='10.957664' x='113.777771' y='80.199253'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='119.611892' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='122.528958' y='80.199253'>52</text>
+<text font-family='fourier-ms' font-size='10.957664' x='135.65835' y='80.199253'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='145.033817' y='80.199253'>891</text>
+<text font-family='futr8r' font-size='10.957664' x='162.53618' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='165.453246' y='80.199253'>8</text>
+<text font-family='fourier-ms' font-size='10.957664' x='172.748517' y='80.199253'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='182.123985' y='80.199253'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='187.958106' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='190.875172' y='80.199253'>19</text>
+<text font-family='futri8r' font-size='10.957664' x='203.71234' y='80.199253'>T</text>
+<text font-family='futr8r' font-size='10.957664' x='213.273786' y='80.199253'>sin<tspan x='228.074272'>(15</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='243.592072' y='75.261775'>◦</text>
+<text font-family='futr8r' font-size='10.957664' x='248.214737' y='80.199253'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='253.525445' y='80.199253'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='262.900913' y='80.199253'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='268.735034' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='271.6521' y='80.199253'>91</text>
+<text font-family='futri8r' font-size='10.957664' x='284.489268' y='80.199253'>T</text>
+<text font-family='futr8r' font-size='10.957664' x='294.050714' y='80.199253'>cos<tspan x='310.644478'>(15</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='326.162279' y='75.261775'>◦</text>
+<text font-family='futr8r' font-size='10.957664' x='330.784943' y='80.199253'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='336.680115' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='346.640045' y='80.199253'>0</text>
+</g>
+</svg>
+</div>
+<p>
+como tal, a tensão na corda é:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20.7171698em' height='2.6348659em' viewBox='129.373628 66.062859 207.171698 26.348659' class='display'>
+<g id='eq47'>
+<text font-family='futri8r' font-size='10.957664' x='129.973628' y='82.207712'>T</text>
+<text font-family='fourier-ms' font-size='10.957664' x='140.411761' y='82.207712'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='194.286904' y='74.114071'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='200.121025' y='74.114071'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='203.038091' y='74.114071'>52</text>
+<text font-family='fourier-ms' font-size='10.957664' x='216.167483' y='74.114071'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='225.542951' y='74.114071'>891</text>
+<text font-family='futr8r' font-size='10.957664' x='243.045314' y='74.114071'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='245.96238' y='74.114071'>8</text>
+<rect x='151.567205' y='78.792373' height='.637912' width='142.948866'/>
+<text font-family='futr8r' font-size='10.957664' x='151.567205' y='90.408937'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='157.401326' y='90.408937'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='160.318392' y='90.408937'>91<tspan x='173.15556'>cos</tspan>
+<tspan x='189.749324'>(15</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='205.267125' y='86.953906'>◦</text>
+<text font-family='futr8r' font-size='10.957664' x='209.889789' y='90.408937'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='215.200498' y='90.408937'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='224.575965' y='90.408937'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='230.410086' y='90.408937'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='233.327153' y='90.408937'>19</text>
+<text font-family='futri8r' font-size='10.957664' x='246.16432' y='90.408937'>T</text>
+<text font-family='futr8r' font-size='10.957664' x='255.725767' y='90.408937'>sin<tspan x='270.526252'>(15</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='286.044053' y='86.953906'>◦</text>
+<text font-family='futr8r' font-size='10.957664' x='290.666717' y='90.408937'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='297.757197' y='82.207712'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='307.717128' y='82.207712'>559<tspan x='327.694204'>N</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+(<i>b</i>) As forças sobre o camião são a tensão na corda, o peso
+total do camião e da sua carga, e as reações normais e forças de
+atrito nos pneus. A direção e sentido dessas forças está indicado no
+diagrama seguinte:
+</p>
+<img class="fig center" src="img/forces_on_a_truck.png"
+     alt="Forças no camião" style="width:21.51em">
+<p>
+O atrito é estático e as forças de atrito apontam na direção oposta ao
+movimento, porque nenhuma das rodas tem tração. A força da resistência
+do ar foi desprezada, porque a velocidade deverá ser muito baixa, mas
+se fosse considerada teria a mesma direção e sentido das forças de
+atrito.
+</p>
+</section>
+<section>
+<div id="prob-5.10" class="example">
+<h3>Problema 10</h3>
+<p>
+O cilindro de 1.5&thinsp;kg na figura desce verticalmente, fazendo acelerar o
+bloco de 5&thinsp;kg sobre a mesa horizontal. A roldana pode ser considerada
+um disco uniforme de massa 0.4&thinsp;kg. O fio faz rodar a roldana, sem
+deslizar sobre a sua superfície. O coeficiente de atrito cinético
+entre o bloco e a mesa é 0.2. Determine o valor da aceleração do bloco
+e do cilindro, desprezando o atrito no eixo da roldana, a massa do fio
+e a resistência do ar.
+</p>
+<img class="fig center" src="img/Bloco_roldana_cilindro.png"
+     alt="Sistema com bloco, roldana e cilindro" style="width:20.22em">
+</div>
+<p>A figura seguinte mostra os diagramas de corpo livre do bloco,
+da roldana e do cilindro:
+</p>
+<img class="fig center" src="img/problema_5-10.png"
+     alt="Problema 5.10" style="width:32.97em">
+<p>
+Há quatro forças a atuar no bloco: o peso, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.8729524em' height='0.9462079em' viewBox='-0.6 -6.210324 18.729524 9.462079' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq48'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='10.867264' y='0'>g</text>
+</g>
+</svg>
+, a reação normal,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.3564076em' height='1.0575967em' viewBox='-0.6 -8.182704 13.564076 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq49'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='7.400254' y='1.793263'>n</text>
+</g>
+</svg>
+, a tensão no fio, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1701462em' height='1.0575967em' viewBox='-0.6 -8.182704 11.701462 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq50'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='6.910088' y='1.793263'>1</text>
+</g>
+</svg>
+, e a força de atrito,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2149702em' height='1.0674586em' viewBox='-0.6 -8.182704 12.149702 10.674586' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq51'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>a</text>
+</g>
+</svg>
+. Como não há aceleração na vertical, a soma das forças
+verticais é nula, ou seja, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.3564076em' height='1.0575967em' viewBox='-0.6 -8.182704 13.564076 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq52'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='7.400254' y='1.793263'>n</text>
+</g>
+</svg>
+ é igual ao peso, igual a 49
+N. Como o atrito é cinético, a força de atrito é igual
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.6058561em' height='1.0575967em' viewBox='-0.6 -8.182704 56.058561 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq53'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='5.834121' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='8.751187' y='0'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='15.754234' y='0'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='23.154488' y='1.793263'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='30.800103' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='40.760034' y='0'>9</text>
+<text font-family='futr8r' font-size='10.957664' x='46.594155' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='49.511221' y='0'>8</text>
+</g>
+</svg>
+ N e a soma das forças horizontais é
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16.9742074em' height='1.0575967em' viewBox='148.135926 72.016549 169.742074 10.575967' class='display'>
+<g id='eq54'>
+<text font-family='futri8r' font-size='10.957664' x='148.735926' y='80.199253'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='155.646014' y='81.992516'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='161.980886' y='80.199253'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='171.356353' y='80.199253'>9</text>
+<text font-family='futr8r' font-size='10.957664' x='177.190474' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='180.10754' y='80.199253'>8</text>
+<text font-family='fourier-ms' font-size='10.957664' x='187.987274' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='197.947205' y='80.199253'>5</text>
+<text font-family='futri8r' font-size='10.957664' x='205.18936' y='80.199253'>a</text>
+<text font-family='fourier-ms' font-size='10.957664' x='224.546041' y='80.199253'>=<tspan x='230.70697'>⇒</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='254.271883' y='80.199253'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='261.181971' y='81.992516'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='268.101306' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='278.061236' y='80.199253'>9</text>
+<text font-family='futr8r' font-size='10.957664' x='283.895357' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='286.812423' y='80.199253'>8</text>
+<text font-family='fourier-ms' font-size='10.957664' x='294.107694' y='80.199253'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='303.483162' y='80.199253'>5</text>
+<text font-family='futri8r' font-size='10.957664' x='310.725317' y='80.199253'>a</text>
+</g>
+</svg>
+</div>
+<p>
+Na roldana atuam 4 forças: o peso, as tensões nos dois lados do fio,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1701462em' height='1.0575967em' viewBox='-0.6 -8.182704 11.701462 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq55'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='6.910088' y='1.793263'>1</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2095938em' height='1.0575967em' viewBox='-0.6 -8.182704 12.095938 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq56'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='6.910088' y='1.793263'>2</text>
+</g>
+</svg>
+, e uma força <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8815577em' height='0.8782704em' viewBox='-0.6 -8.182704 8.815577 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq57'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+</g>
+</svg>
+ no eixo. Se <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.650351em' height='0.6832239em' viewBox='-0.6 -6.100747 6.50351 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq58'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>r</text>
+</g>
+</svg>
+ for o
+raio da roldana, o seu momento de inércia, em relação ao seu eixo, é
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.2510569em' height='1.1292487em' viewBox='-0.6 -10.528122 72.510569 11.292487' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq59'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='11.797081' y='0'>r</text>
+<text font-family='futr8r' font-size='8.218248' x='17.79857' y='-4.339714'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='22.672292' y='0'>/2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='35.609065' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='45.568996' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='51.403117' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='54.320183' y='0'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='61.32323' y='0'>r</text>
+<text font-family='futr8r' font-size='8.218248' x='67.324719' y='-4.339714'>2</text>
+</g>
+</svg>
+. Como o fio não desliza sobre a roldana, então a
+aceleração angular é igual a <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.8351072em' height='0.9111434em' viewBox='-0.360891 -8.347069 18.351072 9.111434' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq60'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futr8r' font-size='10.957664' x='7.029631' y='0'>/</text>
+<text font-family='futri8r' font-size='10.957664' x='12.086671' y='0'>r</text>
+</g>
+</svg>
+, onde <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7752683em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.752683 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq61'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+</g>
+</svg>
+ é a aceleração do bloco e
+do cilindro. A equação de movimento para a roldana é:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.746343em' height='2.3127106em' viewBox='178.745201 66.004864 107.46343 23.127106' class='display'>
+<g id='eq62'>
+<text font-family='futr8r' font-size='10.957664' x='179.345201' y='80.199253'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='183.19476' y='80.199253'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='190.104848' y='81.992516'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='196.43972' y='80.199253'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='205.815187' y='80.199253'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='212.725275' y='81.992516'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='217.598997' y='80.199253'>)</text>
+<text font-family='futri8r' font-size='10.957664' x='222.617482' y='80.199253'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='230.664583' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='240.624514' y='80.199253'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='246.458635' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='249.375701' y='80.199253'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='256.378748' y='80.199253'>r</text>
+<text font-family='futr8r' font-size='8.218248' x='262.380237' y='75.261775'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='268.422884' y='67.643858'></text>
+<text font-family='futri8r' font-size='10.957664' x='274.388976' y='72.105611'>a</text>
+<rect x='274.149867' y='76.783914' height='.637912' width='7.029623'/>
+<text font-family='futri8r' font-size='10.957664' x='274.663946' y='88.400478'>r</text>
+<text font-family='fourier-mex' font-size='10.998733' x='282.375004' y='67.643858'></text>
+</g>
+</svg>
+</div>
+<p>
+E substituindo a expressão já obtida para a tensão <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1701462em' height='1.0575967em' viewBox='-0.6 -8.182704 11.701462 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq63'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='6.910088' y='1.793263'>1</text>
+</g>
+</svg>
+ obtém-se,
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.2957305em' height='1.0575967em' viewBox='196.528262 72.016549 72.957305 10.575967' class='display'>
+<g id='eq64'>
+<text font-family='futri8r' font-size='10.957664' x='197.128262' y='80.199253'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='204.03835' y='81.992516'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='210.957684' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='220.917615' y='80.199253'>9</text>
+<text font-family='futr8r' font-size='10.957664' x='226.751736' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='229.668802' y='80.199253'>8</text>
+<text font-family='fourier-ms' font-size='10.957664' x='236.964073' y='80.199253'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='246.33954' y='80.199253'>5</text>
+<text font-family='futr8r' font-size='10.957664' x='252.173661' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='255.090727' y='80.199253'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='262.332883' y='80.199253'>a</text>
+</g>
+</svg>
+</div>
+<p>
+No cilindro atuam o peso e a tensão <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2095938em' height='1.0575967em' viewBox='-0.6 -8.182704 12.095938 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq65'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='6.910088' y='1.793263'>2</text>
+</g>
+</svg>
+ no fio e a equação de
+movimento é:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.8791426em' height='1.0575967em' viewBox='193.611207 72.016549 78.791426 10.575967' class='display'>
+<g id='eq66'>
+<text font-family='futr8r' font-size='10.957664' x='194.211207' y='80.199253'>14</text>
+<text font-family='futr8r' font-size='10.957664' x='205.879449' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='208.796515' y='80.199253'>7</text>
+<text font-family='fourier-ms' font-size='10.957664' x='216.091786' y='80.199253'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='225.467253' y='80.199253'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='232.377341' y='81.992516'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='239.296676' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='249.256606' y='80.199253'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='255.090727' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='258.007793' y='80.199253'>5</text>
+<text font-family='futri8r' font-size='10.957664' x='265.249949' y='80.199253'>a</text>
+</g>
+</svg>
+</div>
+<p>
+E substituindo a expressão obtida para a tensão <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2095938em' height='1.0575967em' viewBox='-0.6 -8.182704 12.095938 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq67'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='futr8r' font-size='8.218248' x='6.910088' y='1.793263'>2</text>
+</g>
+</svg>
+ obtém-se,
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='18.8636662em' height='2.3127106em' viewBox='138.209816 66.004864 188.636662 23.127106' class='display'>
+<g id='eq68'>
+<text font-family='futr8r' font-size='10.957664' x='138.809816' y='80.199253'>14</text>
+<text font-family='futr8r' font-size='10.957664' x='150.478058' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='153.395124' y='80.199253'>7</text>
+<text font-family='fourier-ms' font-size='10.957664' x='161.274858' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='171.234788' y='80.199253'>9</text>
+<text font-family='futr8r' font-size='10.957664' x='177.068909' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='179.985976' y='80.199253'>8</text>
+<text font-family='fourier-ms' font-size='10.957664' x='187.281246' y='80.199253'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='196.656714' y='80.199253'>6</text>
+<text font-family='futr8r' font-size='10.957664' x='202.490835' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='205.407901' y='80.199253'>7</text>
+<text font-family='futri8r' font-size='10.957664' x='212.650057' y='80.199253'>a</text>
+<text font-family='fourier-ms' font-size='10.957664' x='232.006737' y='80.199253'>=<tspan x='238.167666'>⇒</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='261.971689' y='80.199253'>a</text>
+<text font-family='fourier-ms' font-size='10.957664' x='270.807823' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='280.767754' y='80.199253'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='286.601875' y='80.199253'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='289.518941' y='80.199253'>7313<tspan x='316.096552' y='72.105611'>m</tspan>
+</text>
+<rect x='316.096552' y='76.783914' height='.637912' width='10.149926'/>
+<text font-family='futr8r' font-size='10.957664' x='316.337652' y='88.400478'>s</text>
+<text font-family='futr8r' font-size='8.218248' x='321.131675' y='84.945447'>2</text>
+</g>
+</svg>
+</div>
+</section>
+<div class="bottom">
+<a href="#top"><span class="button">Topo</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../index.html">DEF</a>
+</div>
+<div class="category">
+<a href="../textos.html">Material de estudo</a>
+</div>
+<div class="category">
+<a href="../cursos.html">Cadeiras no Moodle</a>
+</div>
+<div class="category">
+<a href="../faq.html">Perguntas frequentes</a>
+</div>
+</div>
+&copy; 2017&ndash;2021, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Última atualização: 2021/02/15 15:51:36 UTC</span>
+</footer>
+</body>
+</html>
