@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eletricidade, Magnetismo e Circuitos &ndash; Cálculo do campo elétrico</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body id="top">
+<aside>
+<span class="current">HTML</span>
+<a target="_blank" href="./calculo_campo.pdf">PDF</a>
+</aside>
+<header>
+<h1 id="title">B. Cálculo do campo elétrico</h1>
+</header>
+<nav>
+<a href="../index.html">DEF</a><span>&rarr;</span>
+<a href="../ensino.html">Ensino</a><span>&rarr;</span>
+<a href="../textos.html">Material de estudo</a><span>&rarr;</span>
+<a href="./index.html">Eletricidade, Magnetismo e Circuitos</a><span>&rarr;</span>
+<span>B. Cálculo do campo elétrico</span>
+</nav>
+<div class="content">
+<span class="button">Índice</span>
+<div class="content-items">
+<a href="./index.html">Eletricidade, Magnetismo e Circuitos</a><br>
+<a href="#top">Cálculo do campo elétrico</a>
+<ol>
+<li><a href="#sec-B.1">Campo de uma esfera condutora</a></li>
+<li><a href="#sec-B.2">Campo de duas esferas condutoras
+concêntricas</a></li>
+</ol>
+</div>
+</div>
+<section id="sec-B.1">
+<h2>B.1. Campo de uma esfera condutora</h2>
+<p>
+Numa esfera condutora isolada, a carga distribui-se uniformemente na
+superfície. Se o raio da esfera é <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq1'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+ e a carga total <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+, então a
+densidade superficial de carga é constante e igual à carga total dividida
+pela área da superfície da esfera
+</p>
+<div class="eqn" id="eq-B.1">(B.1)</div>
+<div class="center">
+<svg height='2.54063em' version='1.1' viewBox='207.543 66.0958 49.9703 25.4063' width='4.99703em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq3'>
+<text font-family='fourier-mlit' font-size='10.9577' x='208.143' y='82.5365'>σ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='217.828' y='82.5365'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='238.202' y='74.4428'>Q</text>
+<rect height='0.637912' width='27.9299' x='228.983' y='79.1211'/>
+<text font-family='futr8r' font-size='10.9577' x='228.983' y='90.7377'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='235.986' y='90.7377'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='244.137' y='90.7377'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='252.039' y='87.2827'>2</text>
+</g>
+</svg>
+</div>
+<p>
+Para calcular o campo elétrico num ponto P qualquer, que está a uma
+distância <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq4'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+ do centro da esfera, é conveniente definir o eixo dos <svg height='0.670075em' version='1.1' viewBox='-0.360891 -5.96926 6.87607 6.70075' width='0.687607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq5'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+</g>
+</svg>
+
+com origem O no centro da esfera e passando pelo ponto P, como se mostra na
+figura&nbsp;<a href="#fig-B.1">B.1</a>
+</p>
+<figure class="center" id="fig-B.1">
+<img class="fig" src="img/conducting_charged_sphere.png"
+     alt="Esfera condutora com carga" style="width:19.83em">
+<figcaption>
+<b>Figura B.1:</b> Esfera condutora com carga.
+</figcaption>
+</figure>
+<p>
+Divide-se a superfície da esfera em muitos pedaços infinitesimalmente
+pequenos, calcula-se o campo produzido por cada pedaço no ponto P e o
+campo total é a sobreposição de todos esses campos. A
+figura&nbsp;<a href="#fig-B.1">B.1</a> mostra duas partes infinitesimais da superfície
+da esfera, ambas com área <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 15.8223 9.46208' width='1.58223em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq6'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='7.4122' y='0'>A</text>
+</g>
+</svg>
+, em dois pontos que estão à
+mesma distância <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 5.93371 6.83224' width='0.593371em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq7'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+</g>
+</svg>
+ de P, de forma que os segmentos desde esses pontos
+até P estão no mesmo plano com o eixo dos <svg height='0.670075em' version='1.1' viewBox='-0.360891 -5.96926 6.87607 6.70075' width='0.687607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq8'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+</g>
+</svg>
+. Um desses pontos tem
+coordenadas polares (<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq9'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+, <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 6.89799 9.47304' width='0.689799em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq10'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>θ</text>
+</g>
+</svg>
+, <svg height='1.14345em' version='1.1' viewBox='-0.6 -8.1827 8.50876 11.4345' width='0.850876em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq11'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>φ</text>
+</g>
+</svg>
+), e o outro
+(<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq12'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+,<svg height='0.949495em' version='1.1' viewBox='-0.6 -8.73059 24.9694 9.49495' width='2.49694em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq13'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>θ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.92888' y='0'>+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='17.3043' y='0'>π</text>
+</g>
+</svg>
+, <svg height='1.14345em' version='1.1' viewBox='-0.6 -8.1827 8.50876 11.4345' width='0.850876em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq14'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>φ</text>
+</g>
+</svg>
+), onde <svg height='1.14345em' version='1.1' viewBox='-0.6 -8.1827 8.50876 11.4345' width='0.850876em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq15'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>φ</text>
+</g>
+</svg>
+ é o ângulo indicado na
+figura. O ângulo <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 6.89799 9.47304' width='0.689799em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq16'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>θ</text>
+</g>
+</svg>
+ mede-se no plano <svg height='0.93525em' version='1.1' viewBox='-0.360891 -6.10075 14.2902 9.3525' width='1.42902em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq17'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+<text font-family='futri8r' font-size='10.9577' x='7.4122' y='0'>y</text>
+</g>
+</svg>
+, perpendicular ao eixo
+dos <svg height='0.670075em' version='1.1' viewBox='-0.360891 -5.96926 6.87607 6.70075' width='0.687607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq18'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+</g>
+</svg>
+
+</p>
+<p>
+O elemento infinitesimal de área, <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 15.8223 9.46208' width='1.58223em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq19'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='7.4122' y='0'>A</text>
+</g>
+</svg>
+, determina-se
+multiplicando os comprimentos dos dois arcos obtidos quando os dois
+ângulos, <svg height='1.14345em' version='1.1' viewBox='-0.6 -8.1827 8.50876 11.4345' width='0.850876em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq20'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>φ</text>
+</g>
+</svg>
+ e <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 6.89799 9.47304' width='0.689799em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq21'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>θ</text>
+</g>
+</svg>
+, aumentam infinitesimalmente em
+<svg height='1.19823em' version='1.1' viewBox='-0.6 -8.73059 15.0841 11.9823' width='1.50841em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq22'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='6.57534' y='0'>φ</text>
+</g>
+</svg>
+ e <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 13.4733 9.47304' width='1.34733em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq23'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='6.57534' y='0'>θ</text>
+</g>
+</svg>
+. O aumento do ângulo <svg height='1.14345em' version='1.1' viewBox='-0.6 -8.1827 8.50876 11.4345' width='0.850876em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq24'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>φ</text>
+</g>
+</svg>
+
+produz um arco de comprimento <svg height='1.19823em' version='1.1' viewBox='-0.6 -8.73059 24.1554 11.9823' width='2.41554em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq25'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='10.9577' x='9.07129' y='0'>d</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='15.6466' y='0'>φ</text>
+</g>
+</svg>
+, e o aumento do
+ângulo <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 6.89799 9.47304' width='0.689799em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq26'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>θ</text>
+</g>
+</svg>
+ produz um arco que, projetado no plano <svg height='0.93525em' version='1.1' viewBox='-0.360891 -6.10075 14.2902 9.3525' width='1.42902em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq27'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+<text font-family='futri8r' font-size='10.9577' x='7.4122' y='0'>y</text>
+</g>
+</svg>
+, tem raio
+<svg height='1.16865em' version='1.1' viewBox='-0.6 -8.43473 40.4023 11.6865' width='4.04023em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq28'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='10.9577' x='10.2402' y='0'>s<tspan x='15.0342'>i</tspan>
+<tspan x='18.2382'>n</tspan>
+<tspan x='25.0407'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='28.8903' y='0'>φ</text>
+<text font-family='futr8r' font-size='10.9577' x='36.5177' y='0'>)</text>
+</g>
+</svg>
+ e ângulo <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 13.4733 9.47304' width='1.34733em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq29'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='6.57534' y='0'>θ</text>
+</g>
+</svg>
+. Como tal, o elemento
+infinitesimal de área na superfície da esfera é
+</p>
+<div class="eqn" id="eq-B.2">(B.2)</div>
+<div class="center">
+<svg height='1.43776em' version='1.1' viewBox='182.319 69.0734 101.295 14.3776' width='10.1295em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq30'>
+<text font-family='futr8r' font-size='10.9577' x='182.919' y='80.1993'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='190.331' y='80.1993'>A</text>
+<text font-family='fourier-ms' font-size='10.9577' x='199.717' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='209.677' y='80.1993'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='217.579' y='75.2618'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='223.622' y='80.1993'>s<tspan x='228.416'>i</tspan>
+<tspan x='231.62'>n</tspan>
+<tspan x='238.423'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='242.272' y='80.1993'>φ</text>
+<text font-family='futr8r' font-size='10.9577' x='249.9' y='80.1993'>)<tspan x='254.918'>d</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='261.493' y='80.1993'>θ</text>
+<text font-family='futr8r' font-size='10.9577' x='269.13' y='80.1993'>d</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='275.705' y='80.1993'>φ</text>
+</g>
+</svg>
+</div>
+<p>
+A carga infinitesimal nessa região obtém-se multiplicando essa área pela
+carga superficial (equação&nbsp;<a href="#eq-B.1">B.1</a>)
+</p>
+<div class="eqn" id="eq-B.3">(B.3)</div>
+<div class="center">
+<svg height='2.54063em' version='1.1' viewBox='180.955 66.0958 104.022 25.4063' width='10.4022em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq31'>
+<text font-family='futr8r' font-size='10.9577' x='181.555' y='82.5365'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='188.37' y='82.5365'>q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='197.481' y='82.5365'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='210.883' y='74.4428'>Q</text>
+<rect height='0.637912' width='13.9848' x='208.636' y='79.1211'/>
+<text font-family='futr8r' font-size='10.9577' x='208.636' y='90.7377'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='215.639' y='90.7377'>π</text>
+<text font-family='futr8r' font-size='10.9577' x='224.986' y='82.5365'>s<tspan x='229.78'>i</tspan>
+<tspan x='232.984'>n</tspan>
+<tspan x='239.786'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='243.636' y='82.5365'>φ</text>
+<text font-family='futr8r' font-size='10.9577' x='251.263' y='82.5365'>)<tspan x='256.282'>d</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='262.857' y='82.5365'>θ</text>
+<text font-family='futr8r' font-size='10.9577' x='270.494' y='82.5365'>d</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='277.069' y='82.5365'>φ</text>
+</g>
+</svg>
+</div>
+<p>
+Essa carga infinitesimal pode ser considerada uma carga pontual e, assim
+sendo, o módulo do campo que ela produz no ponto P é dado pela expressão
+do campo para uma carga pontual (equação&nbsp;<a href="campo_eletrico.html#eq-1.5">1.5</a>)
+</p>
+<div class="eqn" id="eq-B.4">(B.4)</div>
+<div class="center">
+<svg height='2.57898em' version='1.1' viewBox='170.111 66.2383 125.712 25.7898' width='12.5712em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq32'>
+<text font-family='futr8r' font-size='10.9577' x='170.711' y='83.0625'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='177.286' y='83.0625'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='187.031' y='83.0625'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='204.38' y='74.9689'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='212.376' y='74.9689'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='215.078' y='74.9689'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='224.211' y='74.9689'>|</text>
+<rect height='0.637912' width='35.2796' x='198.186' y='79.6472'/>
+<text font-family='futr8r' font-size='10.9577' x='198.186' y='91.2637'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='205.189' y='91.2637'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='213.34' y='91.2637'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='223.631' y='91.2637'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='228.592' y='87.8087'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='235.83' y='83.0625'>s<tspan x='240.624'>i</tspan>
+<tspan x='243.828'>n</tspan>
+<tspan x='250.631'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='254.48' y='83.0625'>φ</text>
+<text font-family='futr8r' font-size='10.9577' x='262.108' y='83.0625'>)<tspan x='267.126'>d</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='273.702' y='83.0625'>θ</text>
+<text font-family='futr8r' font-size='10.9577' x='281.338' y='83.0625'>d</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='287.914' y='83.0625'>φ</text>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 5.93371 6.83224' width='0.593371em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq33'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+</g>
+</svg>
+ é a distância desde a região infinitesimal na superfície da
+esfera, até o ponto P. Os campos produzidos pelas duas regiões
+infinitesimais mostradas na figura&nbsp;<a href="#fig-B.1">B.1</a> têm o mesmo módulo
+<svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 15.358 9.46208' width='1.5358em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq34'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='6.57534' y='0'>E</text>
+</g>
+</svg>
+ (equação&nbsp;<a href="#eq-B.4">B.4</a>) e fazem o mesmo ângulo <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 8.36631 6.83224' width='0.836631em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq35'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>α</text>
+</g>
+</svg>
+
+em relação ao eixo <svg height='0.670075em' version='1.1' viewBox='-0.360891 -5.96926 6.87607 6.70075' width='0.687607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq36'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+</g>
+</svg>
+, mas nos dois lados opostos do eixo dos
+<svg height='0.670075em' version='1.1' viewBox='-0.360891 -5.96926 6.87607 6.70075' width='0.687607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq37'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+</g>
+</svg>
+. Como tal, as componentes desses dois campos perpendiculares ao
+eixo dos <svg height='0.670075em' version='1.1' viewBox='-0.360891 -5.96926 6.87607 6.70075' width='0.687607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq38'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+</g>
+</svg>
+ anulam-se, ficando apenas a soma das componentes
+paralelas ao eixo dos <svg height='0.670075em' version='1.1' viewBox='-0.360891 -5.96926 6.87607 6.70075' width='0.687607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq39'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+</g>
+</svg>
+.  Conclui-se então que o campo total deverá
+ser na direção do eixo dos <svg height='0.670075em' version='1.1' viewBox='-0.360891 -5.96926 6.87607 6.70075' width='0.687607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq40'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+</g>
+</svg>
+ e para o calcular basta integrar a
+componente <svg height='1.073317em' version='1.1' viewBox='-0.6 -8.73059 48.507 10.73317' width='4.8507em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.1998em'>
+<g id='eq41'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>c<tspan x='5.45156'>o</tspan>
+<tspan x='11.7998'>s</tspan>
+<tspan x='16.5938'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='20.4433' y='0'>α</text>
+<text font-family='futr8r' font-size='10.9577' x='28.1305' y='0'>)<tspan x='33.149'>d</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='39.7243' y='0'>E</text>
+</g>
+</svg>
+, do campo produzido pela região
+infinitesimal no (<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq42'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+, <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 6.89799 9.47304' width='0.689799em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq43'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>θ</text>
+</g>
+</svg>
+, <svg height='1.14345em' version='1.1' viewBox='-0.6 -8.1827 8.50876 11.4345' width='0.850876em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq44'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>φ</text>
+</g>
+</svg>
+), em ordem a <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 6.89799 9.47304' width='0.689799em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq45'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>θ</text>
+</g>
+</svg>
+ e a
+<svg height='1.14345em' version='1.1' viewBox='-0.6 -8.1827 8.50876 11.4345' width='0.850876em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq46'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>φ</text>
+</g>
+</svg>
+, com os limites necessários para incluir todos os pontos da
+superfície:
+</p>
+<div class="eqn" id="eq-B.5">(B.5)</div>
+<div class="center">
+<svg height='4.32576em' version='1.1' viewBox='99.503 67.1844 266.927 43.2576' width='26.6927em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq47'>
+<text font-family='futri8r' font-size='10.9577' x='100.103' y='90.8665'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='109.848' y='90.8665'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='134.691' y='75.5726'></text>
+<text font-family='futr8r' font-size='8.21825' x='117.454' y='107.952'>s<tspan x='121.049'>u</tspan>
+<tspan x='126.052'>p</tspan>
+<tspan x='130.733'>.</tspan>
+<tspan x='135.225'>e</tspan>
+<tspan x='139.466'>s</tspan>
+<tspan x='143.062'>f</tspan>
+<tspan x='145.689'>e</tspan>
+<tspan x='149.93'>r</tspan>
+<tspan x='153.059'>a</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='160.895' y='90.8665'>c<tspan x='166.346'>o</tspan>
+<tspan x='172.694'>s</tspan>
+<tspan x='177.488'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='181.338' y='90.8665'>α</text>
+<text font-family='futr8r' font-size='10.9577' x='189.025' y='90.8665'>)<tspan x='194.044'>d</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='200.619' y='90.8665'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='210.364' y='90.8665'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='222.092' y='82.7729'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='230.087' y='82.7729'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='232.789' y='82.7729'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='241.922' y='82.7729'>|</text>
+<rect height='0.637912' width='24.0365' x='221.519' y='87.4512'/>
+<text font-family='futr8r' font-size='10.9577' x='221.519' y='99.0678'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='228.522' y='99.0678'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='236.673' y='99.0678'>K</text>
+<text font-family='fourier-ml' font-size='8.21825' x='252.731' y='73.3728'>π</text>
+<text font-family='fourier-mex' font-size='10.9987' x='247.92' y='75.5726'></text>
+<text font-family='futr8r' font-size='8.21825' x='248.454' y='107.324'>0<tspan x='261.594' y='73.3728'>2</tspan>
+</text>
+<text font-family='fourier-ml' font-size='8.21825' x='266.847' y='73.3728'>π</text>
+<text font-family='fourier-mex' font-size='10.9987' x='259.409' y='75.5726'></text>
+<text font-family='futr8r' font-size='8.21825' x='259.943' y='107.324'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='272.094' y='82.7729'>c<tspan x='277.545'>o</tspan>
+<tspan x='283.894'>s</tspan>
+<tspan x='288.688'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='292.537' y='82.7729'>α</text>
+<text font-family='futr8r' font-size='10.9577' x='300.224' y='82.7729'>)<tspan x='306.412'>s</tspan>
+<tspan x='311.206'>i</tspan>
+<tspan x='314.41'>n</tspan>
+<tspan x='321.212'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='325.062' y='82.7729'>φ</text>
+<text font-family='futr8r' font-size='10.9577' x='332.689' y='82.7729'>)</text>
+<rect height='0.637912' width='64.4448' x='272.094' y='87.4512'/>
+<text font-family='futri8r' font-size='10.9577' x='299.518' y='99.0678'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='304.48' y='95.6127'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='337.734' y='90.8665'>d</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='344.309' y='90.8665'>θ</text>
+<text font-family='futr8r' font-size='10.9577' x='351.946' y='90.8665'>d</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='358.521' y='90.8665'>φ</text>
+</g>
+</svg>
+</div>
+<p>
+Como <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 5.93371 6.83224' width='0.593371em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq48'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+</g>
+</svg>
+ e <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 8.36631 6.83224' width='0.836631em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq49'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>α</text>
+</g>
+</svg>
+ dependem de <svg height='1.14345em' version='1.1' viewBox='-0.6 -8.1827 8.50876 11.4345' width='0.850876em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq50'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>φ</text>
+</g>
+</svg>
+ mas não dependem de <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 6.89799 9.47304' width='0.689799em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq51'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>θ</text>
+</g>
+</svg>
+, o
+integral em ordem a <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 6.89799 9.47304' width='0.689799em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq52'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>θ</text>
+</g>
+</svg>
+ é simplesmente igual a <svg height='0.881558em' version='1.1' viewBox='-0.6 -8.05121 14.6681 8.81558' width='1.46681em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.076199em'>
+<g id='eq53'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>2</text>
+<text font-family='fourier-ml' font-size='10.9577' x='7.00305' y='0'>π</text>
+</g>
+</svg>
+
+</p>
+<div class="eqn" id="eq-B.6">(B.6)</div>
+<div class="center">
+<svg height='3.93837em' version='1.1' viewBox='163.268 67.321 139.397 39.3837' width='13.9397em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq54'>
+<text font-family='futri8r' font-size='10.9577' x='163.868' y='89.5485'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='173.613' y='89.5485'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='184.768' y='81.4548'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='192.764' y='81.4548'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='195.465' y='81.4548'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='204.599' y='81.4548'>|</text>
+<rect height='0.637912' width='22.8914' x='184.768' y='86.1331'/>
+<text font-family='futr8r' font-size='10.9577' x='188.271' y='97.7497'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='195.274' y='97.7497'>K</text>
+<text font-family='fourier-ml' font-size='8.21825' x='214.836' y='72.0548'>π</text>
+<text font-family='fourier-mex' font-size='10.9987' x='210.024' y='74.2545'></text>
+<text font-family='futr8r' font-size='8.21825' x='210.559' y='106.006'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='222.54' y='81.4548'>c<tspan x='227.992'>o</tspan>
+<tspan x='234.34'>s</tspan>
+<tspan x='239.134'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='242.984' y='81.4548'>α</text>
+<text font-family='futr8r' font-size='10.9577' x='250.671' y='81.4548'>)<tspan x='256.858'>s</tspan>
+<tspan x='261.652'>i</tspan>
+<tspan x='264.856'>n</tspan>
+<tspan x='271.659'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='275.508' y='81.4548'>φ</text>
+<text font-family='futr8r' font-size='10.9577' x='283.136' y='81.4548'>)</text>
+<rect height='0.637912' width='64.4448' x='222.54' y='86.1331'/>
+<text font-family='futri8r' font-size='10.9577' x='249.965' y='97.7497'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='254.926' y='94.2947'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='288.181' y='89.5485'>d</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='294.756' y='89.5485'>φ</text>
+</g>
+</svg>
+</div>
+<p>
+Este integral é mais simples de calcular expressando os dois ângulos
+<svg height='1.14345em' version='1.1' viewBox='-0.6 -8.1827 8.50876 11.4345' width='0.850876em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq55'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>φ</text>
+</g>
+</svg>
+ e <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 8.36631 6.83224' width='0.836631em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq56'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>α</text>
+</g>
+</svg>
+ em função da distância <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 5.93371 6.83224' width='0.593371em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq57'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+</g>
+</svg>
+, usando o teorema do
+cosseno aplicado ao triângulo de lados <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq58'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+, <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq59'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+ e <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 5.93371 6.83224' width='0.593371em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq60'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+</g>
+</svg>
+ na
+figura&nbsp;<a href="#fig-B.1">B.1</a></p>
+<div class="eqn" id="eq-B.7">(B.7)</div>
+<div class="center">
+<svg height='1.31285em' version='1.1' viewBox='171.978 69.0734 121.131 13.1285' width='12.1131em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq61'>
+<text font-family='futri8r' font-size='10.9577' x='172.578' y='80.1993'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='180.48' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='187.399' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='197.598' y='80.1993'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='202.56' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='208.895' y='80.1993'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='218.27' y='80.1993'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='224.272' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='230.607' y='80.1993'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='239.982' y='80.1993'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='247.224' y='80.1993'>s</text>
+<text font-family='futri8r' font-size='10.9577' x='253.355' y='80.1993'>r</text>
+<text font-family='futr8r' font-size='10.9577' x='261.694' y='80.1993'>c<tspan x='267.145'>o</tspan>
+<tspan x='273.494'>s</tspan>
+<tspan x='278.288'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='282.137' y='80.1993'>α</text>
+<text font-family='futr8r' font-size='10.9577' x='289.824' y='80.1993'>)</text>
+</g>
+</svg>
+</div>
+<div class="eqn" id="eq-B.8">(B.8)</div>
+<div class="center">
+<svg height='1.43776em' version='1.1' viewBox='170.896 69.0734 123.534 14.3776' width='12.3534em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq62'>
+<text font-family='futri8r' font-size='10.9577' x='171.496' y='80.1993'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='176.457' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='183.377' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='193.336' y='80.1993'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='201.239' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='207.574' y='80.1993'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='216.949' y='80.1993'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='222.951' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='229.286' y='80.1993'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='238.661' y='80.1993'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='245.664' y='80.1993'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='254.735' y='80.1993'>r</text>
+<text font-family='futr8r' font-size='10.9577' x='263.075' y='80.1993'>c<tspan x='268.526'>o</tspan>
+<tspan x='274.874'>s</tspan>
+<tspan x='279.668'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='283.518' y='80.1993'>φ</text>
+<text font-family='futr8r' font-size='10.9577' x='291.145' y='80.1993'>)</text>
+</g>
+</svg>
+</div>
+<p>
+A expressão para <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 8.36631 6.83224' width='0.836631em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq63'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>α</text>
+</g>
+</svg>
+ obtém-se a partir da equação&nbsp;<a href="#eq-B.7">B.7</a>
+</p>
+<div class="eqn" id="eq-B.9">(B.9)</div>
+<div class="center">
+<svg height='2.75545em' version='1.1' viewBox='181.638 66.0846 101.78 27.5545' width='10.178em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq64'>
+<text font-family='futr8r' font-size='10.9577' x='182.238' y='84.7063'>c<tspan x='187.69'>o</tspan>
+<tspan x='194.038'>s</tspan>
+<tspan x='198.832'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='202.681' y='84.7063'>α</text>
+<text font-family='futr8r' font-size='10.9577' x='210.369' y='84.7063'>)</text>
+<text font-family='fourier-ms' font-size='10.9577' x='216.264' y='84.7063'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='227.658' y='76.6127'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='232.62' y='72.273'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='238.955' y='76.6127'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='248.33' y='76.6127'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='254.332' y='72.273'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='260.666' y='76.6127'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='270.042' y='76.6127'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='277.944' y='72.273'>2</text>
+<rect height='0.637912' width='55.3987' x='227.419' y='81.291'/>
+<text font-family='futr8r' font-size='10.9577' x='245.432' y='92.9075'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='252.674' y='92.9075'>s</text>
+<text font-family='futri8r' font-size='10.9577' x='258.804' y='92.9075'>r</text>
+</g>
+</svg>
+</div>
+<p>
+Lembre-se que <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq65'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+ e <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq66'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+ são constantes para todos os segmentos da
+superfície esférica. A expressão para <svg height='1.19823em' version='1.1' viewBox='-0.6 -8.73059 46.38 11.9823' width='4.638em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq67'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>s<tspan x='4.79402'>i</tspan>
+<tspan x='7.998'>n</tspan>
+<tspan x='14.8005'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='18.65' y='0'>φ</text>
+<text font-family='futr8r' font-size='10.9577' x='26.2774' y='0'>)<tspan x='31.2959'>d</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='37.8713' y='0'>φ</text>
+</g>
+</svg>
+
+obtém-se derivando a equação&nbsp;<a href="#eq-B.8">B.8</a></p>
+<div class="eqn" id="eq-B.10">(B.10)</div>
+<div class="center">
+<svg height='2.31271em' version='1.1' viewBox='188.569 66.0049 88.8851 23.1271' width='8.88851em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq68'>
+<text font-family='futr8r' font-size='10.9577' x='189.169' y='80.1993'>s<tspan x='193.963'>i</tspan>
+<tspan x='197.167'>n</tspan>
+<tspan x='203.97'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='207.819' y='80.1993'>φ</text>
+<text font-family='futr8r' font-size='10.9577' x='215.447' y='80.1993'>)<tspan x='220.465'>d</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='227.041' y='80.1993'>φ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='236.714' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='253.044' y='72.1056'>s</text>
+<rect height='0.637912' width='15.0728' x='247.869' y='76.7839'/>
+<text font-family='futri8r' font-size='10.9577' x='247.869' y='88.4005'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='256.94' y='88.4005'>r</text>
+<text font-family='futr8r' font-size='10.9577' x='265.306' y='80.1993'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='272.121' y='80.1993'>s</text>
+</g>
+</svg>
+</div>
+<p>
+Substituindo as expressões <a href="#eq-B.9">B.9</a> e <a href="#eq-B.10">B.10</a> na
+equação&nbsp;<a href="#eq-B.6">B.6</a> obtém-se</p>
+<div class="eqn" id="eq-B.11">(B.11)</div>
+<div class="center">
+<svg height='4.03446em' version='1.1' viewBox='155.37 67.2037 155.283 40.3446' width='15.5283em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq69'>
+<text font-family='futri8r' font-size='10.9577' x='155.97' y='89.864'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='165.715' y='89.864'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='183.925' y='81.7703'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='191.921' y='81.7703'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='194.623' y='81.7703'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='203.756' y='81.7703'>|</text>
+<rect height='0.637912' width='37.0011' x='176.871' y='86.4486'/>
+<text font-family='futr8r' font-size='10.9577' x='176.871' y='98.0652'>4</text>
+<text font-family='futri8r' font-size='10.9577' x='183.874' y='98.0652'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='193.925' y='98.0652'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='202.997' y='98.0652'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='208.998' y='94.6102'>2</text>
+<text font-family='futri8r' font-size='8.21825' x='218.769' y='71.9292'>s</text>
+<text font-family='futr8r' font-size='6.39197' x='222.248' y='73.3131'>m<tspan x='228.169'>á</tspan>
+<tspan x='231.523'>x</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='219.435' y='74.57'></text>
+<text font-family='futri8r' font-size='8.21825' x='214.379' y='105.564'>s</text>
+<text font-family='futr8r' font-size='6.39197' x='217.858' y='106.948'>m<tspan x='223.779'>i</tspan>
+<tspan x='225.648'>n</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='233.954' y='74.0089'></text>
+<text font-family='futr8r' font-size='10.9577' x='238.87' y='89.864'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='246.166' y='89.864'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='256.737' y='81.7703'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='262.738' y='77.4306'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='269.073' y='81.7703'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='278.448' y='81.7703'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='286.351' y='77.4306'>2</text>
+<rect height='0.637912' width='34.4879' x='256.737' y='86.4486'/>
+<text font-family='futri8r' font-size='10.9577' x='269.183' y='98.0652'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='274.144' y='94.6102'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='292.42' y='74.0089'></text>
+<text font-family='futr8r' font-size='10.9577' x='298.505' y='89.864'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='305.32' y='89.864'>s</text>
+</g>
+</svg>
+</div>
+<p>
+Onde <svg height='0.849401em' version='1.1' viewBox='-0.360891 -6.10075 20.8179 8.49401' width='2.08179em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq70'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='4.87771' y='1.79326'>m<tspan x='12.4902'>i</tspan>
+<tspan x='14.8931'>n</tspan>
+</text>
+</g>
+</svg>
+ e <svg height='0.859263em' version='1.1' viewBox='-0.360891 -6.10075 21.947 8.59263' width='2.1947em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq71'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='4.87771' y='1.79326'>m<tspan x='12.4902'>á</tspan>
+<tspan x='16.803'>x</tspan>
+</text>
+</g>
+</svg>
+ são os valores mínimo e máximo
+da distância <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 5.93371 6.83224' width='0.593371em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq72'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+</g>
+</svg>
+, em <svg height='1.14345em' version='1.1' viewBox='-0.6 -8.1827 26.1912 11.4345' width='2.61912em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq73'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>φ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.673' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='19.6329' y='0'>0</text>
+</g>
+</svg>
+ e <svg height='1.14345em' version='1.1' viewBox='-0.6 -8.1827 27.298 11.4345' width='2.7298em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq74'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>φ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.673' y='0'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='19.6329' y='0'>π</text>
+</g>
+</svg>
+. O resultado do integral é
+</p>
+<div class="eqn" id="eq-B.12">(B.12)</div>
+<div class="center">
+<svg height='2.93149em' version='1.1' viewBox='135.707 66.0846 193.474 29.3149' width='19.3474em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq75'>
+<text font-family='futri8r' font-size='10.9577' x='136.307' y='84.7063'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='146.051' y='84.7063'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='164.262' y='76.6127'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='172.257' y='76.6127'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='174.959' y='76.6127'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='184.093' y='76.6127'>|</text>
+<rect height='0.637912' width='37.0011' x='157.207' y='81.291'/>
+<text font-family='futr8r' font-size='10.9577' x='157.207' y='92.9075'>4</text>
+<text font-family='futri8r' font-size='10.9577' x='164.21' y='92.9075'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='174.261' y='92.9075'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='183.333' y='92.9075'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='189.334' y='89.4525'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='196.572' y='84.805'>(</text>
+<text font-family='futri8r' font-size='10.9577' x='200.661' y='84.7063'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='205.3' y='86.4996'>m<tspan x='212.912'>á</tspan>
+<tspan x='217.225'>x</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.192' y='84.7063'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='232.807' y='84.7063'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='237.445' y='86.4996'>m<tspan x='245.058'>i</tspan>
+<tspan x='247.461'>n</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='253.061' y='84.805'>)</text>
+<text font-family='fourier-mex' font-size='10.9987' x='258.079' y='68.8513'></text>
+<text font-family='futr8r' font-size='10.9577' x='262.996' y='84.7063'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='270.291' y='84.7063'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='285.104' y='76.6127'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='291.105' y='72.273'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='297.44' y='76.6127'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='306.815' y='76.6127'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='314.718' y='72.273'>2</text>
+<rect height='0.637912' width='42.9711' x='280.862' y='81.291'/>
+<text font-family='futri8r' font-size='10.9577' x='281.101' y='92.9075'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='285.74' y='94.7008'>m<tspan x='293.352'>á</tspan>
+<tspan x='297.665'>x</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='303.579' y='92.9075'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='308.218' y='94.7008'>m<tspan x='315.83'>i</tspan>
+<tspan x='318.233'>n</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='325.029' y='68.8513'></text>
+</g>
+</svg>
+</div>
+<p>
+É necessário considerar dois casos diferentes, quando o ponto P está
+dentro ou fora da esfera. Quando o ponto P está dentro da esfera,
+<svg height='1.057597em' version='1.1' viewBox='-0.360891 -8.1827 57.5021 10.57597' width='5.75021em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq76'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='4.87771' y='1.79326'>m<tspan x='12.4902'>í</tspan>
+<tspan x='14.8931'>n</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='22.5387' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='32.4987' y='0'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='41.8622' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='51.2377' y='0'>r</text>
+</g>
+</svg>
+, <svg height='1.067459em' version='1.1' viewBox='-0.360891 -8.1827 58.318 10.67459' width='5.8318em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq77'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='4.87771' y='1.79326'>m<tspan x='12.4902'>á</tspan>
+<tspan x='16.803'>x</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='23.3547' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='33.3146' y='0'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='42.6781' y='0'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='52.0536' y='0'>r</text>
+</g>
+</svg>
+ e, como tal,
+<svg height='1.302em' version='1.1' viewBox='-0.360891 -10.52812 89.5376 13.02' width='8.95376em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq78'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='4.87771' y='1.79326'>m<tspan x='12.4902'>á</tspan>
+<tspan x='16.803'>x</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='22.7171' y='0'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='27.3557' y='1.79326'>m<tspan x='34.9682'>í</tspan>
+<tspan x='37.3711'>n</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='45.0167' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='54.9767' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='62.879' y='-4.33971'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='69.2139' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='78.5894' y='0'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='84.5909' y='-4.33971'>2</text>
+</g>
+</svg>
+ e
+</p>
+<div class="center">
+<svg height='2.93149em' version='1.1' viewBox='159.029 66.0846 147.718 29.3149' width='14.7718em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq79'>
+<text font-family='futr8r' font-size='10.9577' x='159.629' y='84.7063'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='166.924' y='84.7063'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='181.737' y='76.6127'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='187.738' y='72.273'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='194.073' y='76.6127'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='203.449' y='76.6127'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='211.351' y='72.273'>2</text>
+<rect height='0.637912' width='42.9711' x='177.495' y='81.291'/>
+<text font-family='futri8r' font-size='10.9577' x='177.734' y='92.9075'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='182.373' y='94.7008'>m<tspan x='189.985'>á</tspan>
+<tspan x='194.298'>x</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='200.212' y='92.9075'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='204.851' y='94.7008'>m<tspan x='212.463'>i</tspan>
+<tspan x='214.866'>n</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.707' y='84.7063'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='233.667' y='84.7063'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='240.963' y='84.7063'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='251.534' y='76.6127'>d</text>
+<text font-family='futr8r' font-size='8.21825' x='259.101' y='72.273'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='265.436' y='76.6127'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='274.812' y='76.6127'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='282.714' y='72.273'>2</text>
+<rect height='0.637912' width='36.054' x='251.534' y='81.291'/>
+<text font-family='futri8r' font-size='10.9577' x='252.317' y='92.9075'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='260.219' y='89.4525'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='266.554' y='92.9075'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='275.929' y='92.9075'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='281.931' y='89.4525'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='290.829' y='84.7063'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='300.789' y='84.7063'>0</text>
+</g>
+</svg>
+</div>
+<p>
+Ou seja, o campo elétrico em qualquer ponto dentro da esfera é nulo. Fora
+da esfera, <svg height='1.057597em' version='1.1' viewBox='-0.360891 -8.1827 57.716 10.57597' width='5.7716em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq80'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='4.87771' y='1.79326'>m<tspan x='12.4902'>i</tspan>
+<tspan x='14.8931'>n</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='22.5387' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='32.4987' y='0'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='39.9613' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='49.3368' y='0'>R</text>
+</g>
+</svg>
+, <svg height='1.067459em' version='1.1' viewBox='-0.360891 -8.1827 58.532 10.67459' width='5.8532em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq81'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>s</text>
+<text font-family='futr8r' font-size='8.21825' x='4.87771' y='1.79326'>m<tspan x='12.4902'>á</tspan>
+<tspan x='16.803'>x</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='23.3547' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='33.3146' y='0'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='40.7773' y='0'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='50.1527' y='0'>R</text>
+</g>
+</svg>
+ e
+</p>
+<div class="center">
+<svg height='2.91697em' version='1.1' viewBox='140.755 66.0846 183.545 29.1697' width='18.3545em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq82'>
+<text font-family='futri8r' font-size='10.9577' x='141.355' y='84.7063'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='151.1' y='84.7063'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='169.31' y='76.6127'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='177.306' y='76.6127'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='180.008' y='76.6127'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='189.141' y='76.6127'>|</text>
+<rect height='0.637912' width='37.0011' x='162.256' y='81.291'/>
+<text font-family='futr8r' font-size='10.9577' x='162.256' y='92.9075'>4</text>
+<text font-family='futri8r' font-size='10.9577' x='169.259' y='92.9075'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='179.31' y='92.9075'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='188.382' y='92.9075'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='194.383' y='89.4525'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='200.452' y='84.7063'>(<tspan x='204.302'>2</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='211.305' y='84.7063'>R</text>
+<text font-family='futr8r' font-size='10.9577' x='219.207' y='84.7063'>)</text>
+<text font-family='fourier-mex' font-size='10.9987' x='224.226' y='68.8513'></text>
+<text font-family='futr8r' font-size='10.9577' x='229.142' y='84.7063'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='236.437' y='84.7063'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='247.008' y='76.6127'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='253.01' y='72.273'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='259.345' y='76.6127'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='268.72' y='76.6127'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='276.623' y='72.273'>2</text>
+<rect height='0.637912' width='34.4879' x='247.008' y='81.291'/>
+<text font-family='futri8r' font-size='10.9577' x='247.008' y='92.9075'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='253.01' y='89.4525'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='259.345' y='92.9075'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='268.72' y='92.9075'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='276.623' y='89.4525'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='282.692' y='68.8513'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='289.654' y='84.7063'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='300.809' y='76.6127'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='308.805' y='76.6127'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='311.506' y='76.6127'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='320.64' y='76.6127'>|</text>
+<rect height='0.637912' width='22.8914' x='300.809' y='81.291'/>
+<text font-family='futri8r' font-size='10.9577' x='301.792' y='92.9075'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='311.843' y='92.9075'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='317.845' y='89.4525'>2</text>
+</g>
+</svg>
+</div>
+<p>
+Que é o mesmo campo produzido por uma carga pontual <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq83'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+ colocada no centro
+da esfera. Resumindo, o campo da esfera condutora é na direção radial,
+atrativo se <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 27.6976 11.17147' width='2.76976em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq84'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='10.8207' y='0'>&lt;</text>
+<text font-family='futr8r' font-size='10.9577' x='20.7806' y='0'>0</text>
+</g>
+</svg>
+ ou repulsivo se <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 27.6976 11.17147' width='2.76976em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq85'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='10.8207' y='0'>></text>
+<text font-family='futr8r' font-size='10.9577' x='20.7806' y='0'>0</text>
+</g>
+</svg>
+ e com módulo igual a
+</p>
+<div class="eqn" id="eq-B.13">(B.13)</div>
+<div class="center">
+<svg height='4.23149em' version='1.1' viewBox='184.612 66.2383 95.348 42.3149' width='9.5348em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq86'>
+<text font-family='futri8r' font-size='10.9577' x='185.212' y='91.2627'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='194.957' y='91.2627'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='204.917' y='68.3575'>⎧<tspan x='204.917' y='78.2674'>⎨</tspan>
+<tspan x='204.917' y='98.0653'>⎩</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='215.241' y='74.9689'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.236' y='74.9689'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='225.938' y='74.9689'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='235.072' y='74.9689'>|</text>
+<rect height='0.637912' width='22.8914' x='215.241' y='79.6472'/>
+<text font-family='futri8r' font-size='10.9577' x='216.223' y='91.2637'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='226.275' y='91.2637'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='232.277' y='87.8087'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='249.849' y='83.0625'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='253.935' y='83.0625'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='261.982' y='83.0625'>></text>
+<text font-family='futri8r' font-size='10.9577' x='271.942' y='83.0625'>R</text>
+<text font-family='futr8r' font-size='10.9577' x='214.046' y='104.382'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='249.849' y='104.382'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='253.935' y='104.382'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='261.982' y='104.382'>&lt;</text>
+<text font-family='futri8r' font-size='10.9577' x='271.942' y='104.382'>R</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-B.2">
+<h2>B.2. Campo de duas esferas condutoras
+concêntricas</h2>
+<p>
+A figura&nbsp;<a href="#fig-B.2">fig-B.2</a> mostra duas esferas condutoras concêntricas
+isoladas, de raios <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 12.1916 10.57597' width='1.21916em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq87'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>1</text>
+</g>
+</svg>
+ e <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 12.5861 10.57597' width='1.25861em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq88'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2</text>
+</g>
+</svg>
+. A esfera de raio <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 12.1916 10.57597' width='1.21916em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq89'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>1</text>
+</g>
+</svg>
+ tem carga total
+<svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 13.5545 11.17147' width='1.35545em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq90'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>1</text>
+</g>
+</svg>
+, a esfera de raio <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 12.5861 10.57597' width='1.25861em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq91'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2</text>
+</g>
+</svg>
+ tem carga total <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 13.949 11.17147' width='1.3949em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq92'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>2</text>
+</g>
+</svg>
+ e <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 36.8656 10.57597' width='3.68656em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq93'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.3196' y='0'>&lt;</text>
+<text font-family='futri8r' font-size='10.9577' x='24.2795' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='31.6798' y='1.79326'>2</text>
+</g>
+</svg>
+. O campo
+de cada uma das esferas é dado pela expressão obtida na secção anterior
+e o campo total é a soma desses dois campos.
+</p>
+<figure class="center" id="fig-B.2">
+<img class="fig" src="img/E-field_conducting_spheres.png"
+     alt="Esferas condutoras com carga" style="width:16.26em">
+<figcaption>
+<b>Figura B.2:</b> Esferas condutoras concêntricas com carga.
+</figcaption>
+</figure>
+<p>
+No interior da esfera menor, o campo é nulo porque todos os pontos
+nessa região encontram-se no interior das duas esferas e as esferas
+condutoras não produzem campo no seu interior. Nos pontos que estão
+entre as duas esferas, o campo é igual ao campo da esfera menor,
+porque esses pontos estão no interior da esfera maior, onde esta não
+produz nenhum campo. Nos pontos fora das duas esferas, o campo total é
+igual à soma dos campos das duas esferas, ou à sua diferença, segundo
+<svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 13.5545 11.17147' width='1.35545em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq94'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>1</text>
+</g>
+</svg>
+ e <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 13.949 11.17147' width='1.3949em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq95'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>2</text>
+</g>
+</svg>
+ tenham o mesmo sinal ou sinais opostos.
+</p>
+<p>
+A expressão para o módulo do campo total a uma distãncia <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq96'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+ do centro
+das esferas é então
+</p>
+<div class="eqn" id="eq-B.14">(B.14)</div>
+<div class="center">
+<svg height='6.82627em' version='1.1' viewBox='155.978 66.2383 152.213 68.2627' width='15.2213em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq97'>
+<text font-family='futri8r' font-size='10.9577' x='156.578' y='104.012'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='166.322' y='104.012'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='176.282' y='67.9081'>⎧<tspan x='176.282' y='77.818'>⎪</tspan>
+<tspan x='176.282' y='81.1176'>⎪</tspan>
+<tspan x='176.282' y='84.4173'>⎪</tspan>
+<tspan x='176.282' y='87.7169'>⎪</tspan>
+<tspan x='176.282' y='91.0166'>⎨</tspan>
+<tspan x='176.282' y='110.815'>⎪</tspan>
+<tspan x='176.282' y='114.114'>⎪</tspan>
+<tspan x='176.282' y='117.414'>⎪</tspan>
+<tspan x='176.282' y='120.713'>⎪</tspan>
+<tspan x='176.282' y='124.013'>⎩</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='186.607' y='74.9689'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='194.602' y='74.9689'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='197.304' y='74.9689'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='206.067' y='76.7621'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='212.402' y='74.9689'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='221.419' y='74.9689'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='230.182' y='76.7621'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='235.056' y='74.9689'>|</text>
+<rect height='0.637912' width='51.5093' x='186.607' y='79.6472'/>
+<text font-family='futri8r' font-size='10.9577' x='201.898' y='91.2637'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='211.95' y='91.2637'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='217.951' y='87.8087'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='249.832' y='83.0625'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='253.918' y='83.0625'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='261.965' y='83.0625'>></text>
+<text font-family='futri8r' font-size='10.9577' x='271.925' y='83.0625'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='279.325' y='84.8558'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='186.607' y='100.467'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='194.602' y='100.467'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='197.304' y='100.467'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='206.067' y='102.261'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='210.941' y='100.467'>|</text>
+<rect height='0.637912' width='27.3945' x='186.607' y='105.146'/>
+<text font-family='futri8r' font-size='10.9577' x='189.841' y='116.762'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='199.892' y='116.762'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='205.894' y='113.307'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='249.832' y='108.561'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='253.918' y='108.561'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='261.318' y='110.354'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='268.238' y='108.561'>&lt;</text>
+<text font-family='futri8r' font-size='10.9577' x='278.198' y='108.561'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='286.245' y='108.561'>&lt;</text>
+<text font-family='futri8r' font-size='10.9577' x='296.205' y='108.561'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='303.605' y='110.354'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='185.411' y='129.881'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='249.832' y='129.881'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='253.918' y='129.881'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='261.965' y='129.881'>&lt;</text>
+<text font-family='futri8r' font-size='10.9577' x='271.925' y='129.881'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='279.325' y='131.674'>1</text>
+</g>
+</svg>
+</div>
+<p>
+O campo é sempre na direção radial. Entre as duas esferas, o campo
+aponta no sentido radial se <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 13.5545 11.17147' width='1.35545em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq98'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>1</text>
+</g>
+</svg>
+ é positiva, ou no sentido oposto se
+<svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 13.5545 11.17147' width='1.35545em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq99'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>1</text>
+</g>
+</svg>
+ é negativa. Fora das duas esferas, o campo é repulsivo se <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 38.0638 11.17147' width='3.80638em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq100'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.7394' y='0'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='23.7562' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='32.5193' y='1.79326'>2</text>
+</g>
+</svg>
+ é positiva, ou atrativo se <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 38.0638 11.17147' width='3.80638em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq101'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.7394' y='0'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='23.7562' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='32.5193' y='1.79326'>2</text>
+</g>
+</svg>
+ é negativa.
+</p>
+<p>
+As expressões obtidas neste apêndice para o campo da esfera condutora e
+das duas esferas concêntricas podem ser obtidas mais facilmente usando a
+lei de Gauss, como se explica no <a href="fluxo.html">capítulo&nbsp;6</a>. No entanto, o
+método usado neste apêndice é mais geral e permite obter campos de
+distribuições de carga mais complicadas. O problema é que os integrais
+obtidos podem não ter solução analítica, tendo de ser calculados de
+forma numérica.</p>
+</section>
+<div class="bottom">
+<a href="#top"><span class="button">Topo</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../index.html">DEF</a>
+</div>
+<div class="category">
+<a href="../textos.html">Material de estudo</a>
+</div>
+<div class="category">
+<a href="../cursos.html">Cadeiras no Moodle</a>
+</div>
+<div class="category">
+<a href="../faq.html">Perguntas frequentes</a>
+</div>
+</div>
+&copy; 2016 &ndash; 2019, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Última atualização: 2020/10/01 15:49:14 UTC</span>
+</footer>
+</body>
+</html>

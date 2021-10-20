@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vetor de Poynting</title>
+<link rel="stylesheet" href="../../css/book.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+</head>
+<body>
+<aside>
+<a href="./index.html">Índice</a>
+<a href="./slide07.html">&laquo;</a>
+<a href="./slide08.html">8</a>
+<a href="./slide09.html">9</a>
+<a href="./slide10.html">10</a>
+<a href="./slide11.html">11</a>
+<span class="current">12</span>
+<a href="./slide13.html">13</a>
+<a href="./slide14.html">14</a>
+<a href="./slide15.html">15</a>
+<a href="./slide16.html">16</a>
+<a href="./slide17.html">&raquo;</a>
+</aside>
+<header>
+<h1 id="title">História das teorias da Luz</h1>
+</header>
+<section>
+<h2 class="center">Vetor de Poynting</h2>
+<p>
+Energia elétrica convertida em energia mecânica, em cada ponto, por
+unidade de volume (trabalho realizado pela força elétrica):
+</p>
+<div class="center">
+<svg height='1.45138em' version='1.1' viewBox='199.349 68.9481 67.4073 14.5138' width='6.74073em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq1'>
+<text font-family='futr8r' font-size='10.9577' x='199.949' y='80.1993'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='207.454' y='80.1993'>W</text>
+<text font-family='fourier-ms' font-size='10.9577' x='221.921' y='80.1993'>=</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='231.881' y='80.1993'>ρ</text>
+<text font-family='fourier-ml' font-size='10.9577' x='240.122' y='77.7664'></text>
+<text font-family='futri8r' font-size='10.9577' x='240.044' y='80.1993'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='249.204' y='80.1993'>·</text>
+<text font-family='futr8r' font-size='10.9577' x='253.726' y='80.1993'>d</text>
+<text font-family='fourier-ml' font-size='10.9577' x='259.231' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='260.301' y='80.1993'>r</text>
+</g>
+</svg>
+</div>
+<p>
+Potência instantânea fornecida pelo campo, por unidade de volume:
+</p>
+<div class="center">
+<svg height='2.60239em' version='1.1' viewBox='171.852 66.1506 123.125 26.0239' width='12.3125em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.9577' x='172.452' y='83.2418'>P</text>
+<text font-family='fourier-ms' font-size='10.9577' x='182.435' y='83.2418'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='193.591' y='75.1482'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='199.927' y='75.1482'>W</text>
+<rect height='0.637912' width='18.7576' x='193.591' y='79.8265'/>
+<text font-family='futr8r' font-size='10.9577' x='197.1' y='91.4431'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='203.914' y='91.4431'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='215.59' y='83.2418'>=</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='225.55' y='83.2418'>ρ</text>
+<text font-family='fourier-ml' font-size='10.9577' x='233.79' y='80.809'></text>
+<text font-family='futri8r' font-size='10.9577' x='233.712' y='83.2418'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='242.873' y='83.2418'>·</text>
+<text font-family='futr8r' font-size='10.9577' x='248.59' y='75.1482'>d</text>
+<text font-family='fourier-ml' font-size='10.9577' x='254.095' y='74.9689'></text>
+<text font-family='futri8r' font-size='10.9577' x='255.165' y='75.1482'>r</text>
+<rect height='0.637912' width='12.5768' x='248.59' y='79.8265'/>
+<text font-family='futr8r' font-size='10.9577' x='249.008' y='91.4431'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='255.823' y='91.4431'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='264.408' y='83.2418'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='274.445' y='80.809'></text>
+<text font-family='futri8r' font-size='10.9577' x='274.368' y='83.2418'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='283.528' y='83.2418'>·</text>
+<text font-family='fourier-ml' font-size='10.9577' x='287.452' y='80.809'></text>
+<text font-family='futri8r' font-size='10.9577' x='288.767' y='83.2418'>J</text>
+</g>
+</svg>
+</div>
+<p>
+Usando a lei de Ampère-Maxwell:
+</p>
+<div class="center">
+<svg height='3.39762em' version='1.1' viewBox='162.868 66.2597 139.086 33.9762' width='13.9086em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq3'>
+<text font-family='fourier-ml' font-size='10.9577' x='163.546' y='83.9114'></text>
+<text font-family='futri8r' font-size='10.9577' x='163.468' y='86.3443'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='172.628' y='86.3443'>·</text>
+<text font-family='fourier-ml' font-size='10.9577' x='176.552' y='83.9114'></text>
+<text font-family='futri8r' font-size='10.9577' x='177.867' y='86.3443'>J</text>
+<text font-family='fourier-ms' font-size='10.9577' x='184.946' y='86.3443'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='194.984' y='83.9114'></text>
+<text font-family='futri8r' font-size='10.9577' x='194.906' y='86.3443'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='204.066' y='86.3443'>·</text>
+<text font-family='fourier-mex' font-size='10.9987' x='208.588' y='67.1896'></text>
+<text font-family='fourier-ml' font-size='10.9577' x='215.89' y='75.8537'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='216.602' y='78.2507'>∇<tspan x='225.977'>×</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='235.915' y='75.8178'></text>
+<text font-family='futri8r' font-size='10.9577' x='235.353' y='78.2507'>B</text>
+<rect height='0.637912' width='29.6125' x='215.206' y='82.929'/>
+<text font-family='futr8r' font-size='10.9577' x='215.206' y='94.5455'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='222.209' y='94.5455'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='230.36' y='94.5455'>k</text>
+<text font-family='futr8r' font-size='8.21825' x='236.708' y='96.3388'>m</text>
+<text font-family='fourier-ms' font-size='10.9577' x='247.475' y='86.3443'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='266.119' y='78.2507'>1</text>
+<rect height='0.637912' width='21.9802' x='258.046' y='82.929'/>
+<text font-family='futr8r' font-size='10.9577' x='258.046' y='94.5455'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='265.049' y='94.5455'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='273.2' y='94.5455'>k</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='282.417' y='78.2507'>∂</text>
+<text font-family='fourier-ml' font-size='10.9577' x='288.544' y='75.8178'></text>
+<text font-family='futri8r' font-size='10.9577' x='288.467' y='78.2507'>E</text>
+<rect height='0.637912' width='13.7484' x='282.417' y='82.929'/>
+<text font-family='fourier-mlit' font-size='10.9577' x='283.684' y='94.5455'>∂</text>
+<text font-family='futri8r' font-size='10.9577' x='289.973' y='94.5455'>t</text>
+<text font-family='fourier-mex' font-size='10.9987' x='297.361' y='67.1896'></text>
+</g>
+</svg>
+</div>
+<p>
+E como,
+</p>
+<div class="center">
+<svg height='2.82775em' version='1.1' viewBox='94.0419 66.1506 277.003 28.2775' width='27.7003em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq4'>
+<text font-family='fourier-ml' font-size='10.9577' x='94.7196' y='83.0625'></text>
+<text font-family='futri8r' font-size='10.9577' x='94.6419' y='85.4954'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='103.802' y='85.4954'>·</text>
+<text font-family='futr8r' font-size='10.9577' x='108.324' y='85.4954'>(</text>
+<text font-family='fourier-ml' font-size='10.9577' x='111.462' y='83.0984'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='112.173' y='85.4954'>∇<tspan x='121.549'>×</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='131.486' y='83.0625'></text>
+<text font-family='futri8r' font-size='10.9577' x='130.924' y='85.4954'>B</text>
+<text font-family='futr8r' font-size='10.9577' x='138.994' y='85.4954'>)</text>
+<text font-family='fourier-ms' font-size='10.9577' x='144.889' y='85.4954'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='155.411' y='83.0625'></text>
+<text font-family='futri8r' font-size='10.9577' x='154.849' y='85.4954'>B</text>
+<text font-family='fourier-ms' font-size='10.9577' x='164.38' y='85.4954'>·</text>
+<text font-family='futr8r' font-size='10.9577' x='168.902' y='85.4954'>(</text>
+<text font-family='fourier-ml' font-size='10.9577' x='172.04' y='83.0984'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='172.751' y='85.4954'>∇<tspan x='182.127'>×</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='191.58' y='83.0625'></text>
+<text font-family='futri8r' font-size='10.9577' x='191.502' y='85.4954'>E</text>
+<text font-family='futr8r' font-size='10.9577' x='199.201' y='85.4954'>)</text>
+<text font-family='fourier-ms' font-size='10.9577' x='204.512' y='85.4954'>−</text>
+<text font-family='fourier-ml' font-size='10.9577' x='213.176' y='83.0984'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='213.887' y='85.4954'>∇<tspan x='223.263'>·</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='227.785' y='85.4954'>(</text>
+<text font-family='fourier-ml' font-size='10.9577' x='231.712' y='83.0625'></text>
+<text font-family='futri8r' font-size='10.9577' x='231.634' y='85.4954'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='240.794' y='85.4954'>×</text>
+<text font-family='fourier-ml' font-size='10.9577' x='250.732' y='83.0625'></text>
+<text font-family='futri8r' font-size='10.9577' x='250.17' y='85.4954'>B</text>
+<text font-family='futr8r' font-size='10.9577' x='258.24' y='85.4954'>)</text>
+<text font-family='fourier-ms' font-size='10.9577' x='264.135' y='85.4954'>=<tspan x='274.095'>−</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='282.571' y='83.0625'></text>
+<text font-family='futri8r' font-size='10.9577' x='282.009' y='85.4954'>B</text>
+<text font-family='fourier-ms' font-size='10.9577' x='291.54' y='85.4954'>·</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='297.257' y='77.4017'>∂</text>
+<text font-family='fourier-ml' font-size='10.9577' x='303.868' y='74.9689'></text>
+<text font-family='futri8r' font-size='10.9577' x='303.306' y='77.4017'>B</text>
+<rect height='0.637912' width='14.119' x='297.257' y='82.08'/>
+<text font-family='fourier-mlit' font-size='10.9577' x='298.71' y='93.6966'>∂</text>
+<text font-family='futri8r' font-size='10.9577' x='304.998' y='93.6966'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='314.033' y='85.4954'>−</text>
+<text font-family='fourier-ml' font-size='10.9577' x='322.697' y='83.0984'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='323.408' y='85.4954'>∇<tspan x='332.784'>·</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='337.305' y='85.4954'>(</text>
+<text font-family='fourier-ml' font-size='10.9577' x='341.233' y='83.0625'></text>
+<text font-family='futri8r' font-size='10.9577' x='341.155' y='85.4954'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='350.315' y='85.4954'>×</text>
+<text font-family='fourier-ml' font-size='10.9577' x='360.253' y='83.0625'></text>
+<text font-family='futri8r' font-size='10.9577' x='359.691' y='85.4954'>B</text>
+<text font-family='futr8r' font-size='10.9577' x='367.76' y='85.4954'>)</text>
+</g>
+</svg>
+</div>
+<p>
+obtém-se então:
+</p>
+<div class="center">
+<svg height='2.99393em' version='1.1' viewBox='136.226 66.1506 192.436 29.9393' width='19.2436em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq5'>
+<text font-family='fourier-ml' font-size='10.9577' x='136.904' y='83.0625'></text>
+<text font-family='futri8r' font-size='10.9577' x='136.826' y='85.4954'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='145.986' y='85.4954'>·</text>
+<text font-family='fourier-ml' font-size='10.9577' x='149.91' y='83.0625'></text>
+<text font-family='futri8r' font-size='10.9577' x='151.225' y='85.4954'>J</text>
+<text font-family='fourier-ms' font-size='10.9577' x='158.304' y='85.4954'>=<tspan x='168.264'>−</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='176.662' y='75.0047'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='177.374' y='77.4017'>∇<tspan x='186.749'>·</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='191.271' y='77.4017'>(</text>
+<text font-family='fourier-ml' font-size='10.9577' x='195.198' y='74.9689'></text>
+<text font-family='futri8r' font-size='10.9577' x='195.12' y='77.4017'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='204.281' y='77.4017'>×</text>
+<text font-family='fourier-ml' font-size='10.9577' x='214.218' y='74.9689'></text>
+<text font-family='futri8r' font-size='10.9577' x='213.656' y='77.4017'>B</text>
+<text font-family='futr8r' font-size='10.9577' x='221.726' y='77.4017'>)</text>
+<rect height='0.637912' width='48.2017' x='177.374' y='82.08'/>
+<text font-family='futr8r' font-size='10.9577' x='186.668' y='93.6966'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='193.671' y='93.6966'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='201.822' y='93.6966'>k</text>
+<text font-family='futr8r' font-size='8.21825' x='208.17' y='95.4899'>m</text>
+<text font-family='fourier-ms' font-size='10.9577' x='228.232' y='85.4954'>−</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='238.803' y='77.4017'>∂</text>
+<rect height='0.637912' width='11.2139' x='238.803' y='82.08'/>
+<text font-family='fourier-mlit' font-size='10.9577' x='238.803' y='93.6966'>∂</text>
+<text font-family='futri8r' font-size='10.9577' x='245.091' y='93.6966'>t</text>
+<text font-family='fourier-mex' font-size='10.9987' x='252.381' y='69.6403'></text>
+<text font-family='futri8r' font-size='10.9577' x='266.828' y='77.4017'>B</text>
+<text font-family='futr8r' font-size='8.21825' x='274.898' y='73.062'>2</text>
+<rect height='0.637912' width='29.6125' x='258.493' y='82.08'/>
+<text font-family='futr8r' font-size='10.9577' x='258.493' y='93.6966'>8</text>
+<text font-family='fourier-ml' font-size='10.9577' x='265.496' y='93.6966'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='273.647' y='93.6966'>k</text>
+<text font-family='futr8r' font-size='8.21825' x='279.995' y='95.4899'>m</text>
+<text font-family='fourier-ms' font-size='10.9577' x='290.763' y='85.4954'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='306.037' y='77.4017'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='313.736' y='73.062'>2</text>
+<rect height='0.637912' width='21.9802' x='301.334' y='82.08'/>
+<text font-family='futr8r' font-size='10.9577' x='301.334' y='93.6966'>8</text>
+<text font-family='fourier-ml' font-size='10.9577' x='308.337' y='93.6966'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='316.487' y='93.6966'>k</text>
+<text font-family='fourier-mex' font-size='10.9987' x='324.509' y='69.6403'></text>
+</g>
+</svg>
+</div>
+<p>
+Que é o <b>teorema de Poynting</b>:
+</p>
+<div class="center">
+<svg height='3.25843em' version='1.1' viewBox='185.9 66.1497 94.4525 32.5843' width='9.44525em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq6'>
+<rect height='0.3985' width='93.2525' x='186.5' y='66.7497'/>
+<rect height='30.5873' width='0.3985' x='186.5' y='67.1482'/>
+<text font-family='fourier-ml' font-size='10.9577' x='189.175' y='84.0528'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='189.887' y='86.4498'>∇<tspan x='199.262'>·</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='203.587' y='84.0169'></text>
+<text font-family='futri8r' font-size='10.9577' x='203.784' y='86.4498'>S</text>
+<text font-family='fourier-ms' font-size='10.9577' x='212.381' y='86.4498'>=<tspan x='222.341'>−</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='231.451' y='78.3562'>∂</text>
+<text font-family='futri8r' font-size='10.9577' x='237.5' y='78.3562'>u</text>
+<rect height='0.637912' width='13.4495' x='231.451' y='83.0345'/>
+<text font-family='fourier-mlit' font-size='10.9577' x='232.569' y='94.651'>∂</text>
+<text font-family='futri8r' font-size='10.9577' x='238.857' y='94.651'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='247.557' y='86.4498'>−</text>
+<text font-family='fourier-ml' font-size='10.9577' x='257.01' y='84.0169'></text>
+<text font-family='futri8r' font-size='10.9577' x='256.932' y='86.4498'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='266.093' y='86.4498'>·</text>
+<text font-family='fourier-ml' font-size='10.9577' x='270.017' y='84.0169'></text>
+<text font-family='futri8r' font-size='10.9577' x='271.332' y='86.4498'>J</text>
+<rect height='30.5873' width='0.3985' x='279.354' y='67.1482'/>
+<rect height='0.3985' width='93.2525' x='186.5' y='97.7355'/>
+</g>
+</svg>
+</div>
+<p>
+Onde <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 8.25674 6.83224' width='0.825674em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq7'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>u</text>
+</g>
+</svg>
+ é a energia volúmica do campo eletromagnético:
+</p>
+<div class="center">
+<svg height='2.92163em' version='1.1' viewBox='189.217 66.0846 86.6217 29.2163' width='8.66217em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq8'>
+<text font-family='futri8r' font-size='10.9577' x='189.817' y='84.7063'>u</text>
+<text font-family='fourier-ms' font-size='10.9577' x='199.263' y='84.7063'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='215.122' y='76.6127'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='222.821' y='72.273'>2</text>
+<rect height='0.637912' width='21.9802' x='210.419' y='81.291'/>
+<text font-family='futr8r' font-size='10.9577' x='210.419' y='92.9075'>8</text>
+<text font-family='fourier-ml' font-size='10.9577' x='217.422' y='92.9075'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='225.572' y='92.9075'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='235.055' y='84.7063'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='253.961' y='76.6127'>B</text>
+<text font-family='futr8r' font-size='8.21825' x='262.031' y='72.273'>2</text>
+<rect height='0.637912' width='29.6125' x='245.626' y='81.291'/>
+<text font-family='futr8r' font-size='10.9577' x='245.626' y='92.9075'>8</text>
+<text font-family='fourier-ml' font-size='10.9577' x='252.629' y='92.9075'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='260.78' y='92.9075'>k</text>
+<text font-family='futr8r' font-size='8.21825' x='267.128' y='94.7008'>m</text>
+</g>
+</svg>
+</div>
+<p>
+e o <b>vetor de Poynting</b>,
+</p>
+<div class="center">
+<svg height='2.67393em' version='1.1' viewBox='193.161 66.0629 79.1496 26.7393' width='7.91496em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq9'>
+<text font-family='fourier-ml' font-size='10.9577' x='193.761' y='79.7748'></text>
+<text font-family='futri8r' font-size='10.9577' x='193.958' y='82.2077'>S</text>
+<text font-family='fourier-ms' font-size='10.9577' x='202.555' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='225.6' y='74.1141'>1</text>
+<rect height='0.637912' width='29.6125' x='213.711' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='213.711' y='90.4089'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='220.714' y='90.4089'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='228.865' y='90.4089'>k</text>
+<text font-family='futr8r' font-size='8.21825' x='235.213' y='92.2022'>m</text>
+<text font-family='fourier-ml' font-size='10.9577' x='245.765' y='79.7748'></text>
+<text font-family='futri8r' font-size='10.9577' x='245.688' y='82.2077'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='254.848' y='82.2077'>×</text>
+<text font-family='fourier-ml' font-size='10.9577' x='264.785' y='79.7748'></text>
+<text font-family='futri8r' font-size='10.9577' x='264.224' y='82.2077'>B</text>
+</g>
+</svg>
+</div>
+<p>
+representa o transporte de energia eletromagnética no espaço.
+</p>
+</section>
+<nav>
+<a href="./index.html">Conteúdo</a>
+<a href="./slide11.html">Anterior</a>
+<a href="./slide13.html">Seguinte</a>
+</nav>
+<footer>
+&copy; 2017 &ndash; 2019, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Última atualização: 2019/12/16 13:29:22 UTC</span>
+</footer>
+</body>
+</html>

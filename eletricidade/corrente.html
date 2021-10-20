@@ -1,0 +1,2796 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2. Voltagem e corrente</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body id="top">
+<aside>
+<span class="current">HTML</span>
+<a target="_blank" href="./corrente.pdf">PDF</a>
+</aside>
+<header>
+<h1 id="title">2. Voltagem e corrente</h1>
+</header>
+<nav>
+<a href="../index.html">DEF</a><span>&rarr;</span>
+<a href="../ensino.html">Ensino</a><span>&rarr;</span>
+<a href="../textos.html">Material de estudo</a><span>&rarr;</span>
+<a href="./index.html">Eletricidade, Magnetismo e Circuitos</a><span>&rarr;</span>
+<span>2. Voltagem e corrente</span>
+</nav>
+<div class="content">
+<span class="button">Índice</span>
+<div class="content-items">
+<a href="./index.html">Eletricidade, Magnetismo e Circuitos</a>
+<ol class="nested" style="counter-increment: item 1">
+<li><a href="#top">Voltagem e corrente</a>
+<ul class="plain">
+<li><a href="#Introdução">Introdução</a></li>
+</ul>
+<ol class="nested">
+<li><a href="#sec-2.1">Potencial eletrostático</a></li>
+<li><a href="#sec-2.2">Pilhas químicas</a></li>
+<li><a href="#sec-2.3">Força eletromotriz</a></li>
+<li><a href="#sec-2.4">Condutores e semicondutores</a></li>
+<li><a href="#sec-2.5">Corrente elétrica</a></li>
+<li><a href="#sec-2.6">Potência elétrica</a></li>
+<li><a href="#sec-2.7">Voltímetros e amperímetros</a></li>
+</ol>
+<ul class="plain">
+<li><a href="#Perguntas">Perguntas</a></li>
+<li><a href="#Problemas">Problemas</a></li>
+<li><a href="#Respostas">Respostas</a></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<section id="Introdução" class="opening">
+<h2>Introdução</h2>
+<img class="img-8 center" src="img/Alessandro_Volta.jpg"
+     alt="Alessandro Volta" width="390" height="480">
+<p>
+Uma forma simples de sentir o efeito da corrente elétrica consiste em
+colocar uma colher metálica e um pedaço de folha de alumínio em duas
+partes da língua. Estabelecendo contacto entre a colher e a folha de
+alumínio, enquanto estão também em contacto com a língua, sente-se um
+sabor azedo, produzido pela transferência de cargas elétricas entre os
+metais e a língua. Este fenómeno, descoberto no fim do século XVIII,
+foi aproveitado por Alessandro <span id="Volta,&nbsp;Alessandro" class="index">Volta</span>, para
+construír as primeiras pilhas químicas, dando origem ao rápido
+desenvolvimento da tecnologia elétrica. É importante que o metal da
+folha seja diferente do metal da colher, que é geralmente de aço ou
+alguma liga metálica. Na língua existem iões positivos e negativos e
+um dos metais tem maior tendência para atrair os iões negativos e o
+outro os iões positivos, criando-se fluxo de cargas através dos dois
+metais.
+</p>
+</section>
+<section id="sec-2.1">
+<h2>2.1. Potencial eletrostático</h2>
+<p>
+As variáveis (vetoriais) que determinam o estado de uma partícula, são
+a sua posição <svg height='0.972908em' version='1.1' viewBox='-1.67 -8.99758 8.12524 9.72908' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq1'>
+<text font-family='fourier-ml' font-size='10.9577' x='-1.07' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+ e velocidade <svg height='0.972908em' version='1.1' viewBox='-0.928792 -8.99758 8.12524 9.72908' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq2'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.328792' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+</g>
+</svg>
+. As componentes destes
+dois vetores definem um espaço com seis dimensões,
+chamado <b><span id="espaço&nbsp;de&nbsp;fase" class="index">espaço</span> de fase</b>. Uma partícula com massa
+<svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 11.3797 6.83224' width='1.13797em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq3'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>m</text>
+</g>
+</svg>
+ e carga <svg height='0.960453em' version='1.1' viewBox='-0.360891 -6.35277 7.79651 9.60453' width='0.779651em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq4'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>q</text>
+</g>
+</svg>
+, numa região onde existe um campo gravítico <svg height='1.24227em' version='1.1' viewBox='-0.803255 -9.17093 8.30462 12.4227' width='0.830462em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq5'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.203255' y='-0.352681'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>g</text>
+</g>
+</svg>
+
+e um campo elétrico <svg height='1.18511em' version='1.1' viewBox='-0.6 -11.2511 8.7827 11.8511' width='0.87827em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq6'>
+<text font-family='fourier-ml' font-size='10.9577' x='0.0776887' y='-2.43288'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+</g>
+</svg>
+ está sujeita a uma força resultante
+<svg height='1.45029em' version='1.1' viewBox='-0.6 -11.2511 47.0271 14.5029' width='4.70271em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq7'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>m</text>
+<text font-family='fourier-ml' font-size='10.9577' x='11.5938' y='-0.352681'></text>
+<text font-family='futri8r' font-size='10.9577' x='12.0362' y='0'>g</text>
+<text font-family='fourier-ms' font-size='10.9577' x='20.3954' y='0'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='30.01' y='0'>q</text>
+<text font-family='fourier-ml' font-size='10.9577' x='38.3221' y='-2.43288'></text>
+<text font-family='futri8r' font-size='10.9577' x='38.2444' y='0'>E</text>
+</g>
+</svg>
+. A equação de movimento é:
+</p>
+<div class="eqn" id="eq-2.1">(2.1)</div>
+<div class="center">
+<svg height='2.60239em' version='1.1' viewBox='199.862 66.1506 67.6072 26.0239' width='6.76072em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq8'>
+<text font-family='futr8r' font-size='10.9577' x='200.462' y='75.1482'>d</text>
+<text font-family='fourier-ml' font-size='10.9577' x='206.708' y='74.9689'></text>
+<text font-family='futri8r' font-size='10.9577' x='207.276' y='75.1482'>v</text>
+<rect height='0.637912' width='13.4615' x='200.462' y='79.8265'/>
+<text font-family='futr8r' font-size='10.9577' x='201.323' y='91.4431'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='208.137' y='91.4431'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='217.164' y='83.2418'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='226.921' y='82.8892'></text>
+<text font-family='futri8r' font-size='10.9577' x='227.363' y='83.2418'>g</text>
+<text font-family='fourier-ms' font-size='10.9577' x='235.723' y='83.2418'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='248.195' y='75.1482'>q</text>
+<rect height='0.637912' width='10.6281' x='246.294' y='79.8265'/>
+<text font-family='futri8r' font-size='10.9577' x='246.294' y='91.4431'>m</text>
+<text font-family='fourier-ml' font-size='10.9577' x='259.364' y='80.809'></text>
+<text font-family='futri8r' font-size='10.9577' x='259.286' y='83.2418'>E</text>
+</g>
+</svg>
+</div>
+<p>
+em que os campos <svg height='1.24227em' version='1.1' viewBox='-0.803255 -9.17093 8.30462 12.4227' width='0.830462em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq9'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.203255' y='-0.352681'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>g</text>
+</g>
+</svg>
+ e <svg height='1.18511em' version='1.1' viewBox='-0.6 -11.2511 8.7827 11.8511' width='0.87827em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq10'>
+<text font-family='fourier-ml' font-size='10.9577' x='0.0776887' y='-2.43288'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+</g>
+</svg>
+ são funções que dependem da
+posição <svg height='0.972908em' version='1.1' viewBox='-1.67 -8.99758 8.12524 9.72908' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq11'>
+<text font-family='fourier-ml' font-size='10.9577' x='-1.07' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+ e, portanto, a velocidade também será uma função que
+depende da posição. Multiplicando, escalarmente, os dois lados da
+equação de movimento pelo vetor <svg height='0.972908em' version='1.1' viewBox='-0.6 -8.99758 13.6306 9.72908' width='1.36306em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq12'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='fourier-ml' font-size='10.9577' x='5.50534' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='6.57534' y='0'>r</text>
+</g>
+</svg>
+ e lembrando que a
+derivada de <svg height='0.972908em' version='1.1' viewBox='-1.67 -8.99758 8.12524 9.72908' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq13'>
+<text font-family='fourier-ml' font-size='10.9577' x='-1.07' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+ em ordem ao tempo é o vetor velocidade
+<svg height='0.972908em' version='1.1' viewBox='-0.928792 -8.99758 8.12524 9.72908' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq14'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.328792' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+</g>
+</svg>
+, obtém-se a seguinte equação:
+</p>
+<div class="eqn" id="eq-2.2">(2.2)</div>
+<div class="center">
+<svg height='2.33791em' version='1.1' viewBox='179.287 65.7528 107.202 23.3791' width='10.7202em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq15'>
+<text font-family='fourier-ml' font-size='10.9577' x='179.887' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='180.455' y='80.1993'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='188.563' y='80.1993'>·</text>
+<text font-family='futr8r' font-size='10.9577' x='193.085' y='80.1993'>d</text>
+<text font-family='fourier-ml' font-size='10.9577' x='199.332' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='199.899' y='80.1993'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='208.592' y='80.1993'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='218.552' y='67.6439'></text>
+<text font-family='fourier-ml' font-size='10.9577' x='222.88' y='79.8466'></text>
+<text font-family='futri8r' font-size='10.9577' x='223.323' y='80.1993'>g</text>
+<text font-family='fourier-ms' font-size='10.9577' x='231.682' y='80.1993'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='244.154' y='72.1056'>q</text>
+<rect height='0.637912' width='10.6281' x='242.253' y='76.7839'/>
+<text font-family='futri8r' font-size='10.9577' x='242.253' y='88.4005'>m</text>
+<text font-family='fourier-ml' font-size='10.9577' x='255.323' y='77.7664'></text>
+<text font-family='futri8r' font-size='10.9577' x='255.245' y='80.1993'>E</text>
+<text font-family='fourier-mex' font-size='10.9987' x='262.945' y='67.6439'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='268.937' y='80.1993'>·</text>
+<text font-family='futr8r' font-size='10.9577' x='273.459' y='80.1993'>d</text>
+<text font-family='fourier-ml' font-size='10.9577' x='278.964' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='280.034' y='80.1993'>r</text>
+</g>
+</svg>
+</div>
+<p>
+Esta equação permite encontrar a expressão para <svg height='0.972908em' version='1.1' viewBox='-0.928792 -8.99758 8.12524 9.72908' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq16'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.328792' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+</g>
+</svg>
+ em função de
+<svg height='0.972908em' version='1.1' viewBox='-1.67 -8.99758 8.12524 9.72908' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq17'>
+<text font-family='fourier-ml' font-size='10.9577' x='-1.07' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+ a través do procedimento seguinte: integram-se ambos membros
+da equação, desde os valores iniciais (<svg height='1.14895em' version='1.1' viewBox='-1.67 -8.99758 11.3099 11.4895' width='1.13099em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq18'>
+<text font-family='fourier-ml' font-size='10.9577' x='-1.07' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='5.02117' y='1.79326'>0</text>
+</g>
+</svg>
+, <svg height='1.14895em' version='1.1' viewBox='-0.928792 -8.99758 11.9913 11.4895' width='1.19913em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq19'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.328792' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+<text font-family='futr8r' font-size='8.21825' x='6.44383' y='1.79326'>0</text>
+</g>
+</svg>
+) até
+os valores finais (<svg height='0.972908em' version='1.1' viewBox='-1.67 -8.99758 8.12524 9.72908' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq20'>
+<text font-family='fourier-ml' font-size='10.9577' x='-1.07' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+, <svg height='0.972908em' version='1.1' viewBox='-0.928792 -8.99758 8.12524 9.72908' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq21'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.328792' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+</g>
+</svg>
+), obtendo-se,
+</p>
+<div class="eqn" id="eq-2.3">(2.3)</div>
+<div class="center">
+<svg height='4.36467em' version='1.1' viewBox='136.497 67.2503 194.307 43.6467' width='19.4307em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq22'>
+<text font-family='futr8r' font-size='10.9577' x='137.097' y='83.5485'>1</text>
+<rect height='0.637912' width='5.83411' x='137.097' y='88.2268'/>
+<text font-family='futr8r' font-size='10.9577' x='137.097' y='99.8434'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='144.127' y='91.6421'>m</text>
+<text font-family='futri8r' font-size='10.9577' x='156.163' y='91.6421'>v</text>
+<text font-family='futr8r' font-size='8.21825' x='162.81' y='86.7047'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='169.145' y='91.6421'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='179.716' y='83.5485'>1</text>
+<rect height='0.637912' width='5.83411' x='179.716' y='88.2268'/>
+<text font-family='futr8r' font-size='10.9577' x='179.716' y='99.8434'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='186.745' y='91.6421'>m</text>
+<text font-family='futri8r' font-size='10.9577' x='198.782' y='91.6421'>v</text>
+<text font-family='futr8r' font-size='8.21825' x='205.429' y='86.7047'>2<tspan x='204.986' y='94.7796'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='212.348' y='91.6421'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='222.308' y='91.6421'>m</text>
+<text font-family='fourier-ml' font-size='8.21825' x='239.651' y='74.0139'></text>
+<text font-family='futri8r' font-size='8.21825' x='240.453' y='74.1484'>r</text>
+<text font-family='fourier-mex' font-size='10.9987' x='235.274' y='76.3482'></text>
+<text font-family='fourier-ml' font-size='8.21825' x='233.36' y='108.741'></text>
+<text font-family='futri8r' font-size='8.21825' x='234.163' y='108.875'>r</text>
+<text font-family='futr8r' font-size='6.39197' x='237.928' y='110.22'>0</text>
+<text font-family='fourier-ml' font-size='10.9577' x='246.391' y='91.2895'></text>
+<text font-family='futri8r' font-size='10.9577' x='246.834' y='91.6421'>g</text>
+<text font-family='fourier-ms' font-size='10.9577' x='255.193' y='91.6421'>·</text>
+<text font-family='futr8r' font-size='10.9577' x='259.715' y='91.6421'>d</text>
+<text font-family='fourier-ml' font-size='10.9577' x='265.22' y='91.4628'></text>
+<text font-family='futri8r' font-size='10.9577' x='266.29' y='91.6421'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='273.753' y='91.6421'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='283.367' y='91.6421'>q</text>
+<text font-family='fourier-ml' font-size='8.21825' x='297.147' y='74.0139'></text>
+<text font-family='futri8r' font-size='8.21825' x='297.95' y='74.1484'>r</text>
+<text font-family='fourier-mex' font-size='10.9987' x='292.771' y='76.3482'></text>
+<text font-family='fourier-ml' font-size='8.21825' x='290.857' y='108.741'></text>
+<text font-family='futri8r' font-size='8.21825' x='291.659' y='108.875'>r</text>
+<text font-family='futr8r' font-size='6.39197' x='295.425' y='110.22'>0</text>
+<text font-family='fourier-ml' font-size='10.9577' x='304.169' y='89.2093'></text>
+<text font-family='futri8r' font-size='10.9577' x='304.091' y='91.6421'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='313.252' y='91.6421'>·</text>
+<text font-family='futr8r' font-size='10.9577' x='317.773' y='91.6421'>d</text>
+<text font-family='fourier-ml' font-size='10.9577' x='323.279' y='91.4628'></text>
+<text font-family='futri8r' font-size='10.9577' x='324.349' y='91.6421'>r</text>
+</g>
+</svg>
+</div>
+<p>
+A expressão no primeiro membro da equação é o aumento
+da <b>energia <span id="energia!cinética" class="index">cinética</span></b> da partícula; no
+segundo membro, para calcular os dois integrais de linha é necessário
+conhecer as expressões para os campos em função da posição. Se os
+campos fossem quaisquer campos vetoriais arbitrários, seria necessário
+também conhecer de antemão a trajetória da partícula, já que os
+integrais de linha no segundo membro podem produzir diferentes
+resultados para diferentes percursos de integração. No entanto, neste
+caso não é necessário conhecer a trajetória, porque os campos
+gravítico e elétrico são ambos
+<b><span id="campo!conservativo" class="index">campos</span> conservativos</b>, isto é, o
+integral de linha de um desses campos entre dois pontos conduz sempre
+ao mesmo resultado, independentemente do percurso de integração.
+</p>
+<p>
+Por exemplo, a expressão dum campo gravítico uniforme, segundo o eixo
+dos <svg height='0.670075em' version='1.1' viewBox='-0.360891 -5.96926 6.87607 6.70075' width='0.687607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq23'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+</g>
+</svg>
+, é <svg height='1.47002em' version='1.1' viewBox='-0.803255 -11.4484 43.363 14.7002' width='4.3363em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq24'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.203255' y='-0.352681'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>g</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.18282' y='0'>=<tspan x='19.1427'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='27.2962' y='0'>g</text>
+<text font-family='futr8r' font-size='10.9577' x='36.8755' y='-2.95892'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='35.3632' y='0'>k</text>
+</g>
+</svg>
+ e o integral de linha desse campo, ao
+longo de qualquer percurso desde um ponto com coordenada <svg height='0.846114em' version='1.1' viewBox='-0.360891 -5.96926 10.73005 8.46114' width='1.073005em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq25'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+<text font-family='futr8r' font-size='8.21825' x='5.75044' y='1.79326'>0</text>
+</g>
+</svg>
+ até
+outro ponto qualquer com coordenada <svg height='0.670075em' version='1.1' viewBox='-0.360891 -5.96926 6.87607 6.70075' width='0.687607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq26'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+</g>
+</svg>
+, é igual a:
+</p>
+<div class="eqn" id="eq-2.4">(2.4)</div>
+<div class="center">
+<svg height='4.36467em' version='1.1' viewBox='149.61 67.2503 163.953 43.6467' width='16.3953em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq27'>
+<text font-family='fourier-ml' font-size='8.21825' x='156.501' y='74.0139'></text>
+<text font-family='futri8r' font-size='8.21825' x='157.303' y='74.1484'>r</text>
+<text font-family='fourier-mex' font-size='10.9987' x='152.124' y='76.3482'></text>
+<text font-family='fourier-ml' font-size='8.21825' x='150.21' y='108.741'></text>
+<text font-family='futri8r' font-size='8.21825' x='151.013' y='108.875'>r</text>
+<text font-family='futr8r' font-size='6.39197' x='154.778' y='110.22'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='163.445' y='91.6421'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='171.598' y='91.6421'>g</text>
+<text font-family='futr8r' font-size='10.9577' x='181.178' y='88.6832'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='179.665' y='91.6421'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='187.953' y='91.6421'>·</text>
+<text font-family='futr8r' font-size='10.9577' x='192.474' y='91.6421'>d</text>
+<text font-family='fourier-ml' font-size='10.9577' x='197.98' y='91.4628'></text>
+<text font-family='futri8r' font-size='10.9577' x='199.05' y='91.6421'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='207.097' y='91.6421'>=<tspan x='217.057'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='225.21' y='91.6421'>g</text>
+<text font-family='futri8r' font-size='8.21825' x='239.746' y='74.1484'>z</text>
+<text font-family='fourier-mex' font-size='10.9987' x='234.446' y='76.3482'></text>
+<text font-family='futri8r' font-size='8.21825' x='233.241' y='107.343'>z</text>
+<text font-family='futr8r' font-size='6.39197' x='237.374' y='108.688'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='245.767' y='91.6421'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='252.581' y='91.6421'>z</text>
+<text font-family='fourier-ms' font-size='10.9577' x='260.545' y='91.6421'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='270.744' y='91.6421'>g</text>
+<text font-family='futr8r' font-size='10.9577' x='278.811' y='91.6421'>(</text>
+<text font-family='futri8r' font-size='10.9577' x='282.9' y='91.6421'>z</text>
+<text font-family='futr8r' font-size='8.21825' x='288.411' y='93.4354'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='294.746' y='91.6421'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='304.36' y='91.6421'>z</text>
+<text font-family='futr8r' font-size='10.9577' x='310.278' y='91.6421'>)</text>
+</g>
+</svg>
+</div>
+<p>
+Ou seja, o integral dá o mesmo resultado para qualquer percurso entre
+esses pontos e, assim sendo, trata-se de um campo conservativo e a
+energia potencial gravítica de uma partícula de massa <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 11.3797 6.83224' width='1.13797em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq28'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>m</text>
+</g>
+</svg>
+ nesse campo
+é a função <svg height='1.25648em' version='1.1' viewBox='-1.197761 -8.1827 54.0413 12.5648' width='5.40413em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq29'>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+<text font-family='futri8r' font-size='8.21825' x='8.54795' y='1.79326'>g</text>
+<text font-family='fourier-ms' font-size='10.9577' x='16.2653' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='26.2252' y='0'>m</text>
+<text font-family='futri8r' font-size='10.9577' x='38.2614' y='0'>g</text>
+<text font-family='futri8r' font-size='10.9577' x='46.5675' y='0'>z</text>
+</g>
+</svg>
+. O campo gravítico produzido por várias
+partículas não é constante, mas também é conservativo, conduzindo a um
+integral de linha que não depende do percurso seguido e que pode ser
+escrito como a diferença entre os valores de uma função <svg height='1.25648em' version='1.1' viewBox='-1.197761 -8.1827 15.3424 12.5648' width='1.53424em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq30'>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+<text font-family='futri8r' font-size='8.21825' x='8.54795' y='1.79326'>g</text>
+</g>
+</svg>
+ (energia
+potencial gravítica) no ponto inicial e final.
+</p>
+<p>
+No caso do campo elétrico a situação é análoga; os campos
+eletrostáticos (campos elétricos que não variam com o tempo) são
+sempre conservativos e, portanto, para cada campo eletrostático existe
+uma função da posição, <svg height='1.14345em' version='1.1' viewBox='-0.839109 -8.1827 44.0845 11.4345' width='4.40845em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq31'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='10.9577' x='9.00224' y='0'>(</text>
+<text font-family='futri8r' font-size='10.9577' x='13.0909' y='0'>x</text>
+<text font-family='futr8r' font-size='10.9577' x='19.5347' y='0'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='24.2185' y='0'>y</text>
+<text font-family='futr8r' font-size='10.9577' x='29.7178' y='0'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='34.0429' y='0'>z</text>
+<text font-family='futr8r' font-size='10.9577' x='39.9608' y='0'>)</text>
+</g>
+</svg>
+, que permite calcular o integral de
+linha do campo, sem necessidade de conhecer o percurso de integração:
+</p>
+<div class="eqn" id="eq-2.5">(2.5)</div>
+<div class="center">
+<svg height='4.36467em' version='1.1' viewBox='149.621 67.2503 163.931 43.6467' width='16.3931em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq32'>
+<text font-family='fourier-ml' font-size='8.21825' x='156.511' y='74.0139'></text>
+<text font-family='futri8r' font-size='8.21825' x='157.314' y='74.1484'>r</text>
+<text font-family='fourier-mex' font-size='10.9987' x='152.135' y='76.3482'></text>
+<text font-family='fourier-ml' font-size='8.21825' x='150.221' y='108.741'></text>
+<text font-family='futri8r' font-size='8.21825' x='151.023' y='108.875'>r</text>
+<text font-family='futr8r' font-size='6.39197' x='154.789' y='110.22'>0</text>
+<text font-family='fourier-ml' font-size='10.9577' x='163.533' y='89.2093'></text>
+<text font-family='futri8r' font-size='10.9577' x='163.456' y='91.6421'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='172.616' y='91.6421'>·</text>
+<text font-family='futr8r' font-size='10.9577' x='177.138' y='91.6421'>d</text>
+<text font-family='fourier-ml' font-size='10.9577' x='182.643' y='91.4628'></text>
+<text font-family='futri8r' font-size='10.9577' x='183.713' y='91.6421'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='191.76' y='91.6421'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='201.481' y='91.6421'>V</text>
+<text font-family='futr8r' font-size='10.9577' x='210.722' y='91.6421'>(</text>
+<text font-family='futri8r' font-size='10.9577' x='214.811' y='91.6421'>x</text>
+<text font-family='futr8r' font-size='8.21825' x='220.848' y='93.4354'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='225.722' y='91.6421'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='230.406' y='91.6421'>y</text>
+<text font-family='futr8r' font-size='8.21825' x='236.037' y='93.4354'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='240.91' y='91.6421'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='245.235' y='91.6421'>z</text>
+<text font-family='futr8r' font-size='8.21825' x='250.747' y='93.4354'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='255.62' y='91.6421'>)</text>
+<text font-family='fourier-ms' font-size='10.9577' x='260.931' y='91.6421'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='270.067' y='91.6421'>V</text>
+<text font-family='futr8r' font-size='10.9577' x='279.309' y='91.6421'>(</text>
+<text font-family='futri8r' font-size='10.9577' x='283.397' y='91.6421'>x</text>
+<text font-family='futr8r' font-size='10.9577' x='289.841' y='91.6421'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='294.525' y='91.6421'>y</text>
+<text font-family='futr8r' font-size='10.9577' x='300.024' y='91.6421'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='304.35' y='91.6421'>z</text>
+<text font-family='futr8r' font-size='10.9577' x='310.267' y='91.6421'>)</text>
+</g>
+</svg>
+</div>
+<p>
+A função <svg height='0.87827em' version='1.1' viewBox='-0.839109 -8.1827 10.19624 8.7827' width='1.019624em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq33'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+</g>
+</svg>
+ chama-se <b><span id="potencial!eletrostático" class="index">potencial</span>
+eletrostático</b> e a
+<b><span id="energia!potencial&nbsp;eletrostática" class="index">energia</span> potencial
+eletrostática</b> é a expressão:</p>
+<div class="eqn" id="eq-2.6">(2.6)</div>
+<div class="center">
+<svg height='1.83696em' version='1.1' viewBox='207.844 68.5188 50.5637 18.3696' width='5.05637em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq34'>
+<rect height='0.3985' width='49.3637' x='208.444' y='69.1188'/>
+<rect height='16.3726' width='0.3985' x='208.444' y='69.5173'/>
+<text font-family='futri8r' font-size='10.9577' x='211.233' y='80.1993'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='220.2' y='81.9925'>e</text>
+<text font-family='fourier-ms' font-size='10.9577' x='226.985' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='237.184' y='80.1993'>q</text>
+<text font-family='futri8r' font-size='10.9577' x='245.179' y='80.1993'>V</text>
+<rect height='16.3726' width='0.3985' x='257.409' y='69.5173'/>
+<rect height='0.3985' width='49.3637' x='208.444' y='85.8899'/>
+</g>
+</svg>
+</div>
+<p>
+Em função das energias potenciais gravítica e eletrostática, a equação
+<a href="#eq-2.2">2.2</a> é a lei da
+<span id="conservação!da&nbsp;energia&nbsp;mecânica" class="index">conservação</span> da energia mecânica
+da partícula:
+</p>
+<div class="eqn" id="eq-2.7">(2.7)</div>
+<div class="center">
+<svg height='2.49461em' version='1.1' viewBox='143.627 66.0629 179.338 24.9461' width='17.9338em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq35'>
+<text font-family='futr8r' font-size='10.9577' x='144.227' y='74.1141'>1</text>
+<rect height='0.637912' width='5.83411' x='144.227' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='144.227' y='90.4089'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='151.257' y='82.2077'>m</text>
+<text font-family='futri8r' font-size='10.9577' x='163.293' y='82.2077'>v</text>
+<text font-family='futr8r' font-size='8.21825' x='169.94' y='77.2702'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='176.275' y='82.2077'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='185.053' y='82.2077'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='194.019' y='84.001'>e</text>
+<text font-family='fourier-ms' font-size='10.9577' x='200.219' y='82.2077'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='208.997' y='82.2077'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='217.963' y='84.001'>g</text>
+<text font-family='fourier-ms' font-size='10.9577' x='224.793' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='235.949' y='74.1141'>1</text>
+<rect height='0.637912' width='5.83411' x='235.949' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='235.949' y='90.4089'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='242.978' y='82.2077'>m</text>
+<text font-family='futri8r' font-size='10.9577' x='255.014' y='82.2077'>v</text>
+<text font-family='futr8r' font-size='8.21825' x='261.661' y='77.2702'>2<tspan x='261.219' y='85.3452'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='267.996' y='82.2077'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='276.774' y='82.2077'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='285.74' y='84.001'>e<tspan x='289.981'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='296.316' y='82.2077'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='305.094' y='82.2077'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='314.06' y='84.001'>g<tspan x='318.346'>0</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+A unidade SI de potencial elétrico é o <span id="joule&nbsp;(unidade)" class="index">joule</span>
+por coulomb, chamado <span id="volt&nbsp;(unidade)" class="index"><b>volt</b></span> e
+identificado pela letra V.
+</p>
+<div class="eqn" id="eq-2.8">(2.8)</div>
+<div class="center">
+<svg height='1.019624em' version='1.1' viewBox='206.516 71.8522 52.8112 10.19624' width='5.28112em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq36'>
+<text font-family='futr8r' font-size='10.9577' x='207.116' y='80.1993'>1<tspan x='215.425'>V</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='224.44' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='234.4' y='80.1993'>1<tspan x='242.709'>J</tspan>
+<tspan x='246.559'>/</tspan>
+<tspan x='251.616'>C</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+No capítulo sobre carga e força elétrica viu-se que a unidade SI do
+campo elétrico é o N/C, que pode ser escrito como J/(m·C), pelo que o
+N/C é equivalente ao V/m. O campo elétrico pode então ser interpretado
+como a diferença de potencial por unidade de comprimento.
+</p>
+<p>
+Note-se que, como a carga <svg height='0.960453em' version='1.1' viewBox='-0.360891 -6.35277 7.79651 9.60453' width='0.779651em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq37'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>q</text>
+</g>
+</svg>
+ poder ser positiva ou negativa, a
+energia eletrostática <svg height='1.069102em' version='1.1' viewBox='-1.197761 -8.1827 14.1194 10.69102' width='1.41194em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq38'>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='8.36862' y='1.79326'>e</text>
+</g>
+</svg>
+ de uma partícula com carga
+negativa é maior nos pontos onde o potencial for menor, enquanto que
+as partículas com carga positiva têm maior energia nos pontos onde o
+potencial é maior. A equação <a href="#eq-2.7">2.7</a> implica então que, dentro de
+um campo elétrico, as partículas com carga positiva são aceleradas
+para regiões com menor potencial e as partículas com carga negativa
+são aceleradas para a regiões com maior potencial.
+</p>
+<p>
+A lei de conservação da energia mecânica é válida unicamente quando as
+cargas se deslocam no vácuo. As partículas com carga que dentro de um
+material, por exemplo, num condutor ou num gás, estão sujeitas a
+forças dissipativas que fazem diminuir rapidamente a sua energia
+mecânica.
+</p>
+<div id="ex-2.1" class="example">
+<h3>Exemplo 2.1</h3>
+<p>
+Dentro de um tubo de vácuo há duas lâminas condutoras paralelas. Uma
+das lâminas é feita dum material radioativo que emite radiação beta
+(eletrões que saem dos núcleos). Para acelerar as partículas até à
+outra lâmina, liga-se uma diferença de potencial de 150 V entre as
+lâminas. Num dado instante é emitida uma partícula beta com velocidade
+inicial de módulo 300 m/s que é acelerada até a outra lâmina.
+(<i>a</i>) Calcule o módulo da velocidade com que a partícula beta
+atinge a segunda lâmina. (<i>b</i>) Se a distância entre as duas
+lâminas for 5 cm, qual o módulo do campo elétrico médio entre
+elas?
+</p>
+</div>
+<p>
+<b>Resolução</b>. Como a carga das partículas é negativa, são
+aceleradas na direção do potencial mais elevado; assim sendo, a
+diferença de potencial deve ser ligada de forma a que a lâmina
+radioativa tenha menor potencial. As cargas negativas também são
+acelerados no sentido oposto ao campo e, como tal, as linhas de campo
+elétrico apontam para a lâmina radioativa. Admitindo um campo
+constante, as linhas de campo são paralelas entre si.
+</p>
+<img class="fig center" src="img/eic0014-ex_2_1.png"
+     alt="Partícula Beta acelerada num campo elétrico"
+     style="width:12.69em">
+<p>
+(<i>a</i>) O deslocamento da partícula no vácuo implica conservação da
+sua energia mecânica. A carga da partícula beta é a carga do eletrão,
+<svg height='1.12596em' version='1.1' viewBox='-0.6 -10.52812 72.1042 11.2596' width='7.21042em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq39'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='7.91432' y='0'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='13.7484' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='16.6655' y='0'>6<tspan x='22.4996'>0</tspan>
+<tspan x='28.3337'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='35.629' y='0'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='45.0045' y='0'>1<tspan x='50.8386'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='56.6727' y='-4.33971'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='62.6085' y='-4.33971'>1<tspan x='66.9841'>9</tspan>
+</text>
+</g>
+</svg>
+ C e a diferença de potencial de 150 V implica
+uma diferença de energia potencial eletrostática
+</p>
+<div class="eqn" id="eq-2.9">(2.9)</div>
+<div class="center">
+<svg height='1.36342em' version='1.1' viewBox='131.687 69.0734 202.567 13.6342' width='20.2567em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq40'>
+<text font-family='fourier-ml' font-size='10.9577' x='132.287' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='139.532' y='80.1993'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='148.498' y='81.9925'>e</text>
+<text font-family='fourier-ms' font-size='10.9577' x='155.283' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='165.243' y='80.1993'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='171.077' y='80.1993'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='173.994' y='80.1993'>6<tspan x='179.828'>0</tspan>
+<tspan x='185.663'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='192.958' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='202.333' y='80.1993'>1<tspan x='208.167'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='214.002' y='75.2618'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='219.937' y='75.2618'>1<tspan x='224.313'>9</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='230.648' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='240.023' y='80.1993'>1<tspan x='245.857'>5</tspan>
+<tspan x='251.691'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='259.571' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='269.531' y='80.1993'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='275.365' y='80.1993'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='278.282' y='80.1993'>4<tspan x='284.116'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='291.412' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='300.787' y='80.1993'>1<tspan x='306.621'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='312.455' y='75.2618'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='318.391' y='75.2618'>1<tspan x='322.767'>7</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='330.115' y='80.1993'>J</text>
+</g>
+</svg>
+</div>
+<p>
+Pode parecer pouca energia, mas é um valor muito elevado para um
+eletrão que tem massa <svg height='1.12596em' version='1.1' viewBox='-0.6 -10.52812 80.6607 11.2596' width='8.06607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq41'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>m</text>
+<text font-family='fourier-ms' font-size='10.9577' x='12.6738' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='22.6337' y='0'>9</text>
+<text font-family='futr8r' font-size='10.9577' x='28.4678' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='31.3849' y='0'>1<tspan x='37.219'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='44.5143' y='0'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='53.8897' y='0'>1<tspan x='59.7239'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='65.558' y='-4.33971'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='71.4937' y='-4.33971'>3<tspan x='75.8693'>1</tspan>
+</text>
+</g>
+</svg>
+ kg. Para gerar a mesma
+diferença de energia potencial gravítica, <svg height='1.14454em' version='1.1' viewBox='-0.6 -8.19366 33.8921 11.4454' width='3.38921em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq42'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>m</text>
+<text font-family='futri8r' font-size='10.9577' x='12.0362' y='0'>g</text>
+<text font-family='fourier-ml' font-size='10.9577' x='18.9343' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='27.016' y='0'>z</text>
+</g>
+</svg>
+, de
+<svg height='1.12596em' version='1.1' viewBox='-0.6 -10.52812 27.264 11.2596' width='2.7264em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq43'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>1<tspan x='5.83412'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='11.6682' y='-4.33971'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='17.604' y='-4.33971'>1<tspan x='21.9796'>7</tspan>
+</text>
+</g>
+</svg>
+ J entre dois pontos, seria necessário que o eletrão
+descesse uma altura da ordem de <svg height='1.12596em' version='1.1' viewBox='-0.6 -10.52812 21.2297 11.2596' width='2.12297em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq44'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>1<tspan x='5.83412'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='11.6682' y='-4.33971'>1<tspan x='16.0438'>2</tspan>
+</text>
+</g>
+</svg>
+ metros! Como tal, é possível
+ignorar a energia potencial gravítica e considerar que o aumento da
+energia cinética é igual à diminuição da energia potencial
+eletrostática:
+</p>
+<div class="center">
+<svg height='2.49461em' version='1.1' viewBox='161.12 66.0629 144.418 24.9461' width='14.4418em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq45'>
+<text font-family='futr8r' font-size='10.9577' x='161.72' y='74.1141'>1</text>
+<rect height='0.637912' width='5.83411' x='161.72' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='161.72' y='90.4089'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='168.749' y='82.2077'>m</text>
+<text font-family='futri8r' font-size='10.9577' x='180.786' y='82.2077'>v</text>
+<text font-family='futr8r' font-size='8.21825' x='187.433' y='77.2702'>2</text>
+<text font-family='futri8r' font-size='8.21825' x='187.887' y='85.9863'>f</text>
+<text font-family='fourier-ms' font-size='10.9577' x='194.455' y='82.2077'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='205.026' y='74.1141'>1</text>
+<rect height='0.637912' width='5.83411' x='205.026' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='205.026' y='90.4089'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='212.056' y='82.2077'>m</text>
+<text font-family='futri8r' font-size='10.9577' x='224.092' y='82.2077'>v</text>
+<text font-family='futr8r' font-size='8.21825' x='230.739' y='77.2702'>2<tspan x='230.296' y='85.3452'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='237.658' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='247.618' y='82.2077'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='253.452' y='82.2077'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='256.369' y='82.2077'>4<tspan x='262.203'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='269.499' y='82.2077'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='278.874' y='82.2077'>1<tspan x='284.708'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='290.542' y='77.2702'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='296.478' y='77.2702'>1<tspan x='300.854'>7</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+Substituindo os valores da massa e velocidade inicial, obtém-se o
+módulo da velocidade final:
+</p>
+<div class="eqnalign">
+<svg height='3.43942em' version='1.1' viewBox='-0.360891 -22.8802 146.796 34.3942' width='14.6796em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-1.15552em'>
+<g id='eq46'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+<text font-family='futri8r' font-size='8.21825' x='7.34047' y='1.95618'>f</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.4929' y='0'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='24.4528' y='-21.6423'></text>
+<rect height='0.637912' width='110.384' x='35.4516' y='-22.2802'/>
+<text font-family='futr8r' font-size='10.9577' x='36.6471' y='-8.09364'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='43.9424' y='-8.09364'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='53.3179' y='-8.09364'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='59.152' y='-8.09364'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='62.069' y='-8.09364'>4<tspan x='67.9032'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='75.1984' y='-8.09364'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='84.5739' y='-8.09364'>1<tspan x='90.408'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='96.2421' y='-11.5487'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='102.178' y='-11.5487'>1<tspan x='106.553'>7</tspan>
+</text>
+<rect height='0.637912' width='74.78' x='36.6471' y='-3.41534'/>
+<text font-family='futr8r' font-size='10.9577' x='44.9825' y='8.20122'>9</text>
+<text font-family='futr8r' font-size='10.9577' x='50.8166' y='8.20122'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='53.7337' y='8.20122'>1<tspan x='59.5678'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='66.8631' y='8.20122'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='76.2385' y='8.20122'>1<tspan x='82.0727'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='87.9068' y='4.74619'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='93.8425' y='4.74619'>3<tspan x='98.2181'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='114.084' y='0'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='123.459' y='0'>3<tspan x='129.293'>0</tspan>
+<tspan x='135.127'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='140.962' y='-3.45503'>2</text>
+</g>
+</svg>
+
+<svg height='2.31271em' version='1.1' viewBox='-0.6 -14.1944 71.4723 23.1271' width='7.14723em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.889198em'>
+<g id='eq47'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='9.95993' y='0'>7</text>
+<text font-family='futr8r' font-size='10.9577' x='15.7941' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='18.7111' y='0'>2<tspan x='24.5452'>6</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='31.8405' y='0'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='41.216' y='0'>1<tspan x='47.0501'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='52.8842' y='-4.93748'>6</text>
+<text font-family='futr8r' font-size='10.9577' x='60.1224' y='-8.09364'>m</text>
+<rect height='0.637912' width='10.1499' x='60.1224' y='-3.41534'/>
+<text font-family='futr8r' font-size='10.9577' x='62.8003' y='8.20122'>s</text>
+</g>
+</svg>
+
+</div>
+<p>que é um valor elevado, aproximadamente 2.4% da velocidade da
+luz, mas ainda não o suficiente para que seja necessário usar
+equações da mecânica relativista. Note-se também que não é
+necessário saber em que direção foi disparada a partícula.</p>
+<p>(<i>b</i>) O campo elétrico médio calcula-se admitindo que
+o mesmo é uniforme. Seguindo um percurso paralelo às linhas
+de campo, desde a lâmina da direita até à da esquerda, a
+equação <a href="#eq-2.5">2.5</a> permite calcular a
+intensidade do campo:</p>        
+<div class="center">
+<svg height='4.08384em' version='1.1' viewBox='142.52 67.1844 182.369 40.8384' width='18.2369em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq48'>
+<text font-family='futr8r' font-size='8.21825' x='143.12' y='73.3728'>0</text>
+<text font-family='futr8r' font-size='8.21825' x='147.496' y='73.3728'>.</text>
+<text font-family='futr8r' font-size='8.21825' x='149.684' y='73.3728'>0<tspan x='154.059'>5</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='143.348' y='75.5726'></text>
+<text font-family='futr8r' font-size='8.21825' x='143.882' y='107.324'>0</text>
+<text font-family='futri8r' font-size='10.9577' x='157.25' y='90.8665'>E</text>
+<text font-family='futr8r' font-size='10.9577' x='166.118' y='90.8665'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='172.932' y='90.8665'>s</text>
+<text font-family='fourier-ms' font-size='10.9577' x='179.939' y='90.8665'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='189.899' y='90.8665'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='195.734' y='90.8665'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='198.651' y='90.8665'>0<tspan x='204.485'>5</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='211.488' y='90.8665'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='221.233' y='90.8665'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='231.192' y='90.8665'>1<tspan x='237.027'>5</tspan>
+<tspan x='242.861'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='253.215' y='90.8665'>⇒</text>
+<text font-family='futri8r' font-size='10.9577' x='268.734' y='90.8665'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='278.479' y='90.8665'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='288.439' y='90.8665'>3<tspan x='294.273'>0</tspan>
+<tspan x='300.107'>0</tspan>
+<tspan x='305.941'>0</tspan>
+<tspan x='315.73' y='82.7729'>V</tspan>
+</text>
+<rect height='0.637912' width='10.1499' x='314.14' y='87.4512'/>
+<text font-family='futr8r' font-size='10.9577' x='314.14' y='99.0678'>m</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-2.2">
+<h2>2.2. Pilhas químicas</h2>
+<p>
+Uma das descobertas mais importantes na história da eletricidade foi a
+invenção das pilhas químicas, que permitem fornecer a energia
+necessária para manter um fluxo constante de cargas num condutor,
+contrariando as forças dissipativas.
+</p>
+<p>
+O biólogo italiano Luigi <span id="Galvani,&nbsp;Luigi" class="index">Galvani</span> (1737&ndash;1798) fez
+várias experiências com cargas eletrostáticas e órgãos de animais. A
+figura <a href="#fig-2.1">2.1</a> mostra o laboratório de Galvani, com um gerador
+eletrostático usado para produzir descargas elétricas nas patas
+posteriores de uma rã. Enquanto fazia as experiências, Galvani
+descobriu que quando tocava com uma faca na pata da rã, esta
+encolhia-se bruscamente, como se a rã estivesse viva, no instante em
+que era produzida uma descarga elétrica num gerador eletrostático
+próximo dele (figura <a href="#fig-2.1">2.1</a>).
+</p>
+<figure class="center" id="fig-2.1">
+<img class="img-13" src="img/Luigi_Galvani_Experiment.jpg"
+     alt="Laboratório de Luigi Galvani" width="549" height="400">
+<figcaption>
+<b>Figura 2.1:</b> Laboratório de Luigi Galvani.
+</figcaption>
+</figure>
+<p>
+Mais tarde, conseguiu o mesmo efeito sem precisar do gerador
+eletrostático, espetando dois fios de metais diferentes na pata da rã;
+quando juntava os dois fios, a pata encolhia-se. Galvani atribuiu o
+efeito a uma eletricidade de origem animal.
+</p>
+<figure id="fig-2.2">
+<div class="img-6 right">
+<img class="img-20" src="img/VoltaBattery.jpg"
+     alt="Pilha de Volta" width="400" height="572">
+<p class="center">
+<b>Figura 2.2:</b> Pilha de Volta.
+</p>
+</div>
+</figure>
+<p>
+O físico italiano Alessandro Volta (1745&ndash;1827) demonstrou que a origem
+da eletricidade observada por Galvani não eram os organismos vivos. Na
+realidade, o contacto entre dois metais diferentes dentro de qualquer
+solução química produz uma transferência de cargas elétricas, chamada
+<b><span id="corrente" class="index">corrente</span> elétrica</b>, que nos seres vivos
+provoca efeitos como a contração muscular ou o sabor azedo na
+língua. De facto, o sistema nervoso produz transferências de carga
+(correntes) que permitem controlar os movimentos musculares e a
+transferência de cargas entre a língua e os alimentos estimula o
+sistema nervoso dando origem às sensações de sabor.
+</p>
+<p>
+Em 1800 Volta construiu a primeira pilha, colocando alternadamente
+discos de zinco e de cobre, sobrepostos e separados entre si por
+discos de cartão molhado numa solução ácida. Repetindo a mesma
+sequência de discos várias vezes, conseguiu produzir fluxos de carga
+mais elevados e sentir os seus efeitos. Por exemplo, colocando as suas
+mãos dentro de dois recipientes com água salgada, ligados aos dois
+terminais da pilha, o choque elétrico nas suas mãos tornava-se
+doloroso quando a pilha era formada por mais de 20 grupos de discos de
+cobre e zinco. A figura <a href="#fig-2.2">2.2</a> mostra uma das
+pilhas construídas por Volta.
+</p>
+</section>
+<section id="sec-2.3">
+<h2>2.3. Força eletromotriz</h2>
+<p>
+Uma <span id="pilha" class="index">pilha</span> química é constituída por duas barras
+condutoras, chamadas <span id="elétrodo" class="index"><b>elétrodos</b></span>, embebidas
+numa substância com iões (<span id="eletrólito" class="index"><b>eletrólito</b></span>). O
+eletrólito pode ser líquido ou sólido, desde que tenha iões positivos
+e negativos; por exemplo, uma solução de água e sal de mesa (cloreto
+de sódio) em que existem iões de sódio, com carga elétrica positiva, e
+iões de cloro, com carga elétrica negativa.
+</p>
+<p>
+No metal dos elétrodos da pilha existe uma nuvem de eletrões de
+condução e quando se liga outro condutor externo entre eles, os
+eletrões livres podem deslocar-se transportando carga através do
+condutor externo. O deslocamento da nuvem eletrónica da origem a
+acumulação de cargas de sinais opostos nos extremos dos elétrodos que
+estão dentro do eletrólito e os iões de cargas opostas no eletrólito
+deslocam-se em sentidos opostos. Os iões positivos, também chamados
+catiões, são atraídos pelo elétrodo para o qual a nuvem eletrónica foi
+deslocada, combinando-se com os eletrões acumulados nesse elétrodo. Os
+iões negativos, ou aniões, deslocam-se para o outro elétrodo,
+fornecendo os eletrões que estavam em falta devido ao deslocamento da
+nuvem eletrónica. O elétrodo para onde são atraídos os iões positivos
+chama-se <span id="cátodo" class="index"><b>cátodo</b></span>, comumente identificado nas
+pilhas com um sinal positivo e o elétrodo para onde circulam os iões
+negativos do eletrólito chama-se o <span id="ânodo" class="index"><b>ânodo</b></span> e é
+comumente identificado com um sinal negativo.
+</p>
+<p>
+Para manter o movimento da nuvem eletrónica é necessário que existam
+iões de sinais opostos no eletrólito e enquanto esse movimento
+perdura, mais iões desaparecem no eletrólito devido à troca de
+eletrões com os elétrodos. O fluxo de cargas através dos elétrodos e
+do condutor que os liga cessará quando a pilha estiver descarregada,
+isto é, quando a concentração de iões no eletrólito for inferior a um
+valor mínimo.
+</p>
+<p>
+Para garantir o funcionamento de uma pilha também é necessário que num
+dos elétrodos seja mais fácil a passagem de eletrões dos átomos para a
+nuvem de condução, o que se consegue usando dois metais diferentes
+para os dois elétrodos. Quando dois metais diferentes são colocados em
+contacto um com o outro, a nuvem de eletrões de condução tem uma
+tendência para se deslocar do metal mais eletropositivo (o que cede
+com maior facilidade os seus eletrões) para o menos
+eletropositivo. Diferentes materiais condutores podem ser ordenados
+numa <b>série <span id="série!galvânica" class="index">galvânica</span></b>, em que os metais
+mais eletropositivos aparecem no topo da lista e os menos
+eletropositivos na base (a ordem na série depende também do eletrólito
+usado). A tabela <a href="#tab-2.1">2.1</a> mostra a série galvânica para alguns
+condutores, quando o eletrólito é água de mar.
+</p>
+<table class="book center" id="tab-2.1">
+<caption>
+<b>Tabela 2.1:</b> Série galvânica com eletrólito de água de mar.
+</caption>
+<tr><td>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Magnésio&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+</td></tr>
+<tr><td>Zinco</td></tr>
+<tr><td>Alumínio</td></tr>
+<tr><td>Chumbo</td></tr>
+<tr><td>Ferro</td></tr>
+<tr><td>Cobre</td></tr>
+<tr><td>Tungsténio</td></tr>
+<tr><td>Prata</td></tr>
+<tr><td>Ouro</td></tr>
+<tr><td>Platina</td></tr>
+<tr><td>Grafite</td></tr>
+</table>
+<p>
+O uso da tabela pode ilustrar-se no caso concreto da primeira pilha
+construída por Volta que usava eletrólito de água salgada. Os dois
+metais usados para os elétrodos são zinco e cobre e como o zinco está
+acima do cobre na tabela, quer dizer que os eletrões de condução se
+deslocam do zinco para o cobre e os iões positivos do eletrólito são
+atraídos pelo cobre; como tal, o elétrodo de cobre é o cátodo (+) e o
+elétrodo de zinco é o ânodo (<svg height='0.460783em' version='1.1' viewBox='-0.6 -4.00783 8.15812 4.60783' width='0.815812em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq49'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+</g>
+</svg>
+).
+</p>
+<p>
+A corrosão dos metais no ar ou numa solução líquida também está
+relacionada com a transferência de eletrões de condução. Os iões
+negativos de oxigênio passam eletrões para o metal, combinando-se com
+os átomos do metal na superfície para formar um sal. O processo de
+galvanização consiste em colocar na superfície de um objeto metálico
+uma camada de zinco que garante que o movimento dos eletrões de
+condução será do zinco para o outro metal, servindo o zinco como ânodo
+que atrai os iões de oxigênio (aniões); o zinco é oxidado enquanto o
+outro metal (cátodo) permanece protegido da corrosão.
+</p>
+<p>
+O lado esquerdo da figura <a href="#fig-2.3">2.3</a> mostra uma pilha ligada a um
+circuito e o lado direito mostra o diagrama usado para representar
+esquematicamente esse conjunto. A pilha representa-se com duas barras
+paralelas, que lembram os dois discos metálicos na pilha original de
+Volta, separados por uma pequena região (o eletrólito). Usa-se uma
+barra mais comprida para representar o cátodo (elétrodo positivo). As
+setas na figura indicam a direção do movimento dos eletrões de
+condução, que se deslocam no sentido oposto ao campo elétrico
+estabelecido pela pilha através dos condutores.
+</p>
+<figure class="center" id="fig-2.3">
+<img class="fig" src="img/pilha_e_dispositivo.png"
+     alt="Pilha ligada a um dispositivo" style="width:32.22em">
+<figcaption>
+<b>Figura 2.3:</b> Pilha ligada a um dispositivo e representação diagramática do sistema.
+</figcaption>
+</figure>
+<p>
+Se os eletrões de condução fossem completamente livres, seriam
+acelerados pela força elétrica no condutor. No entanto, no circuito e
+nos elétrodos existem forças dissipativas que contrariam o movimento
+dos eletrões de condução. O <span id="trabalho" class="index">trabalho</span> realizado pelas
+
+forças dissipativas é igual à energia fornecida pela pilha, através do
+campo elétrico. Isto é, durante o percurso de cada eletrão de condução
+desde o ânodo até o cátodo, o campo elétrico realiza um trabalho igual
+à diminuição da energia potencial eletrostática
+(<svg height='1.070198em' version='1.1' viewBox='-0.6 -8.19366 21.3642 10.70198' width='2.13642em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq50'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.24483' y='0'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='16.2112' y='1.79326'>e</text>
+</g>
+</svg>
+) desse eletrão entre o ânodo e o cátodo. Como a
+carga dos eletrões é negativa, conclui-se que o potencial no cátodo é
+maior do que no ânodo, e a diferença de potencial entre eles é igual
+a:
+</p>
+<div class="eqn" id="eq-2.10">(2.10)</div>
+<div class="center">
+<svg height='2.522em' version='1.1' viewBox='211.428 66.2492 42.1991 25.22' width='4.21991em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq51'>
+<text font-family='fourier-mlit' font-size='10.9577' x='212.028' y='82.5365'>ε</text>
+<text font-family='fourier-ms' font-size='10.9577' x='219.753' y='82.5365'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='230.908' y='74.4428'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='239.322' y='74.4428'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='248.288' y='76.2361'>e</text>
+<rect height='0.637912' width='22.1193' x='230.908' y='79.1211'/>
+<text font-family='futri8r' font-size='10.9577' x='239.075' y='90.7377'>e</text>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.74458 6.83224' width='0.674458em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq52'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>e</text>
+</g>
+</svg>
+ é a carga elementar (valor absoluto da carga do eletrão). A
+energia <svg height='1.070198em' version='1.1' viewBox='-0.6 -8.19366 21.3642 10.70198' width='2.13642em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq53'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.24483' y='0'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='16.2112' y='1.79326'>e</text>
+</g>
+</svg>
+ fornecida a cada eletrão de condução é
+igual à diferença entre a energia necessária para que um anião no
+eletrólito transfira um eletrão ao ânodo e a energia necessária para
+que o cátodo transfira um eletrão a um catião do eletrólito.
+</p>
+<p>
+Essa diferença de energia tem um valor específico para cada par de
+condutores usados para os elétrodos e para cada eletrólito. Assim
+sendo, a constante <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.41585 6.83224' width='0.641585em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq54'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ε</text>
+</g>
+</svg>
+, com unidades de volt, tem um valor
+típico para cada tipo de pilha, que depende apenas dos metais e do
+eletrólito usado, e chama-se <b>força eletromotriz</b> da pilha, ou
+de forma abreviada, <span id="f.e.m." class="index">f.e.m.</span>  O valor da f.e.m. para a
+maioria das pilhas é entre 1 volt e 4 volt. Na pilha da
+figura <a href="#fig-2.3">2.3</a>, o valor da f.e.m. é de 9 V e é obtido colocando
+no interior da pilha seis pilhas pequenas de 1.5 V, uma a seguir à
+outra, tal como Volta colocou alternadamente vários discos de zinco,
+cartão e cobre para obter maior energia; a figura <a href="#fig-2.4">2.4</a> mostra um
+diagrama que ilustra melhor essas seis pilhas em
+<span id="pilhas!em&nbsp;série" class="index">série</span>.
+</p>
+<figure class="center" id="fig-2.4">
+<img class="fig" src="img/batteries_series.png"
+     alt="Pilhas ligadas em série" style="width:7.62em">
+<figcaption>
+<b>Figura 2.4:</b> Pilhas ligadas em série.
+</figcaption>
+</figure>
+<p>
+A tabela <a href="#tab-2.2">2.2</a> mostra os materiais usados para os elétrodos e
+o eletrólito em vários tipos de pilhas usadas atualmente e os valores
+da f.e.m. obtida em cada caso.
+</p>
+<table  class="spacious borders center" id="tab-2.2">
+<caption>
+<b>Tabela 2.2:</b> Alguns tipos de pilhas usados atualmente.
+</caption>
+<tr>
+<th class="left">Tipo</th><th class="left">cátodo</th>
+<th class="left">ânodo</th><th class="left">eletrólito</th>
+<th class="left">f.e.m.</th>
+</tr>
+<tr>
+<td class="left">seca</td><td class="left">C</td>
+<td class="left">Zn</td><td class="left">MnO<sub>2</sub>/ NH<sub>4</sub>Cl</td>
+<td class="left">1.5 V</td>
+</tr>
+<tr>
+<td class="left">alcalina</td><td class="left">C</td>
+<td class="left">MnO<sub>2</sub></td><td class="left">KOH</td>
+<td class="left">1.5 V</td>
+</tr>
+<tr>
+<td class="left">mercúrio</td><td class="left">HgO</td>
+<td class="left">Zn</td><td class="left">NaOH</td>
+<td class="left">1.35 V</td>
+</tr>
+<tr>
+<td class="left">óxido de prata</td><td class="left">Ag<sub>2</sub>O</td>
+<td class="left">Zn</td><td class="left">NaOH</td>
+<td class="left">1.35 V</td>
+</tr>
+<tr>
+<td class="left">NiCd</td><td class="left">NiO</td>
+<td class="left">Cd</td><td class="left">KOH</td>
+<td class="left">1.2 V</td>
+</tr>
+<tr>
+<td class="left">NiMH</td><td class="left">NiO</td>
+<td class="left">liga metálica</td><td class="left">KOH</td>
+<td class="left">1.2 V</td>
+</tr>
+<tr><td class="left">iões de lítio</td><td class="left">Li<sub>2</sub>O/ Co</td>
+<td class="left">C</td><td class="left">Li</td>
+<td class="left">3.7 V</td>
+</tr>
+</table>
+<p>
+Os tipos de pilhas nas três últimas linhas da tabela <a href="#tab-2.2">2.2</a> são
+<span id="pilha!recarregável" class="index">recarregáveis</span>; ou seja, as reações químicas
+nos elétrodos são reversíveis. Utilizando uma fonte externa para
+contrariar o sentido normal do fluxo das cargas, consegue-se diminuir
+a quantidade dos sais acumulados nos elétrodos, separando-os nos
+metais originais e os iões do eletrólito e aumentando assim a carga
+total dos iões do eletrólito e ficando a pilha num estado semelhante
+ao inicial. Apoś vários ciclos de carga e descarga, parte dos sais
+saem separam-se dos elétrodos e passam para o eletrólito torna-se cada
+vez mais difícil recuperar todo o metal e o eletrólito original,
+ficando a pilha "viciada". No caso das pilhas de iões de lítio, o
+cátodo não é um único bloco sólido, mas são várias partículas em
+suspensão dentro do próprio eletrólito, evitando-se assim que a pilha
+fique viciada e permitindo muitos mais ciclos de carga e
+descarga. Numa pilha não recarregável, a inversão da corrente apenas
+aquece a pilha, com o perigo de queimá-la ou até fazê-la explodir sem
+ser recarregada.
+</p>
+<p>
+Outra caraterística importante de cada pilha, para além da sua f.e.m.,
+é a sua <span id="carga!máxima" class="index">carga</span> máxima, <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 26.0715 11.17147' width='2.60715em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq55'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>m<tspan x='16.0169'>á</tspan>
+<tspan x='20.3298'>x</tspan>
+</text>
+</g>
+</svg>
+, que indica
+a carga total dos iões positivos (igual ao valor absoluto da carga dos
+iões negativos) no eletrólito, no seu estado inicial, com os elétrodos
+completamente limpos de sais. A energia máxima que a pilha poderia
+fornecer, se fosse possível manter o fluxo de cargas nos elétrodos até
+o eletrólito ficar completamente livre de iões, é
+</p>
+<div class="eqn" id="eq-2.11">(2.11)</div>
+<div class="center">
+<svg height='1.117147em' version='1.1' viewBox='197.684 71.8522 69.9638 11.17147' width='6.99638em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq56'>
+<text font-family='futri8r' font-size='10.9577' x='198.284' y='80.1993'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='207.25' y='81.9925'>m<tspan x='214.862'>á</tspan>
+<tspan x='219.175'>x</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='225.727' y='80.1993'>=</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='235.687' y='80.1993'>ε</text>
+<text font-family='futri8r' font-size='10.9577' x='242.176' y='80.1993'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='250.939' y='81.9925'>m<tspan x='258.551'>á</tspan>
+<tspan x='262.864'>x</tspan>
+</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-2.4">
+<h2>2.4. Condutores e semicondutores</h2>
+<p>
+Num condutor sólido existe uma nuvem muito densa de eletrões de
+condução que não estão ligados a nenhum átomo em particular, conforme
+referido no capítulo sobre carga e força elétrica. Os átomos de cobre,
+por exemplo, têm 29 eletrões à volta do núcleo no seu estado neutro;
+28 desses eletrões estão fortemente ligados ao átomo, enquanto que o
+último eletrão se encontra numa órbita mais distante do núcleo e sai
+com facilidade para a nuvem de eletrões de condução.
+</p>
+<p>
+Um pequeno deslocamento da nuvem de eletrões de condução faz acumular
+um excesso de cargas negativas numa região e cargas positivas na
+região oposta. As cargas positivas são átomos com um eletrão a menos
+em relação ao número de protões. Quando se liga um fio condutor aos
+elétrodos de uma pilha, a nuvem eletrónica é atraída pelo elétrodo
+positivo e repelida pelo elétrodo negativo; estabelece-se no condutor
+um fluxo contínuo de eletrões do elétrodo negativo para o positivo.
+</p>
+<p>
+Os <span id="semicondutor"  class="index">semicondutores</span> são materiais que não têm cargas
+de condução, como os isoladores, mas que podem adquirir cargas de
+condução (passando então a ser condutores) através de diversos
+mecanismos: aumento da temperatura, incidência de luz, presença de
+cargas elétricas externas ou existência de impurezas dentro do próprio
+material.
+</p>
+<figure id="fig-2.5">
+<div class="img-5 right">
+<img class="img-20" src="img/cristal_FCC.jpg" alt="Cristal FCC" width="600"
+     height="591">
+<p class="center"><b>Figura 2.5:</b> Cristal FCC.</p>
+</div>
+</figure>
+<p>
+Atualmente os semicondutores são construídos a partir de silício ou
+germânio. Os átomos de silício e de germânio têm 4 eletrões de
+valência. Num cristal de silício ou germânio, os átomos estão
+colocados numa rede uniforme, como na figura <a href="#fig-2.5">2.5</a> e os 4
+eletrões de valência ligam cada átomo aos átomos na sua vizinhança.
+</p>
+<p>
+Já os átomos de arsénio têm 5 eletrões de valência. Se dentro dum
+cristal de silício forem colocados alguns átomos de arsénio, cada um
+deles fica ligado aos átomos de silício na rede, por meio de 4 dos
+seus eletrões de valência e o quinto eletrão de valência fica livre e
+contribui para uma nuvem de eletrões de condução. Obtém-se assim
+um <b><span id="semicondutor!tipo&nbsp;N" class="index">semicondutor</span> tipo N</b>, capaz de
+conduzir cargas através do material, pelo mesmo mecanismo que nos
+condutores (nuvem de eletrões de condução).
+</p>
+<p>
+Os átomos de gálio têm três eletrões de valência. Nos
+<b><span id="semicondutor!tipo&nbsp;P" class="index">semicondutores</span> tipo P</b> existem
+alguns átomos de gálio dentro de um cristal de silício (ou germânio);
+os 3 eletrões de valência de cada átomo de gálio ligam-no à rede,
+ficando uma <span id="buraco" class="index"><b>buraco</b></span> no átomo de silício que tem
+um eletrão de valência que não está ligado a um eletrão de um átomo
+vizinho.
+</p>
+<p>
+Os buracos podem ser utilizados também para transportar carga; os
+eletrões de condução podem deslocar-se para um átomo de gálio na
+vizinhança, onde exista um desses buracos. Se dois extremos de um
+semicondutor do tipo P forem ligados aos elétrodos de uma pilha, os
+buracos na vizinhança do elétrodo negativo são preenchidos com
+eletrões fornecidos por esse elétrodo, e a seguir podem passar
+sucessivamente para outros buracos no cristal. Os eletrões deslocam-se
+no sentido do elétrodo negativo para o positivo, mas deslocam-se
+apenas entre dois buracos vizinhos. Já os buracos percorrem todo o
+percurso desde o elétrodo positivo até ao negativo. É um pouco como a
+circulação de automóveis em hora de ponta, quando há filas compactas;
+cada automóvel consegue apenas deslocar-se uma pequena distância no
+sentido do avanço, mas aparecem buracos na fila, que se deslocam
+rapidamente no sentido oposto.
+</p>
+<p>
+A figura <a href="#fig-2.6">2.6</a> mostra uma forma habitual de representar os
+dois tipos de semicondutores, N e P, de forma esquemática. Os círculos
+representam cargas fixas no cristal, que não se podem deslocar e as
+cargas sem um círculo à volta representam as carga de condução. No
+semicondutor do tipo N as cargas positivas fixas são os átomos de
+arsénio, ou de outro elemento com 5 eletrões de valência, colocados
+dentro do cristal de silício ou outro elemento com 4 eletrões de
+valência e as cargas de condução são os eletrões cedidos por esse
+átomos de arsénio. No semicondutor do tipo P, as cargas fixas são
+átomos de um elemento com 3 eletrões de valência e as cargas livres
+são os buracos que ficam na ligação covalente desses átomos com um dos
+átomos vizinhos, com 4 eletrões de valência.
+</p>
+<figure class="center" id="fig-2.6">
+<img class="fig" src="img/semicondutores.png"
+     alt="Semicondutores de tipo N e P" style="width:21.75em">
+<figcaption>
+<b>Figura 2.6:</b> Os dois tipos de semicondutores.
+</figcaption>
+</figure>
+<p>
+Na figura <a href="#fig-2.7">2.7</a>  estão representadas 3 barras de materiais
+diferentes, ligadas entre dois pontos A e B entre os que existe
+diferença de potencial (<svg height='1.057597em' version='1.1' viewBox='-0.839109 -8.1827 13.6671 10.57597' width='1.36671em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq57'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>A</text>
+</g>
+</svg>
+ maior que <svg height='1.057597em' version='1.1' viewBox='-0.839109 -8.1827 13.2151 10.57597' width='1.32151em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq58'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>B</text>
+</g>
+</svg>
+). No
+primeiro caso, trata-se de um semicondutor de tipo P, em que as cargas
+de condução positiva deslocam-se do ponto A para o ponto B, já que o
+campo elétrico aponta do ponto com maior potencial (A) para o ponto
+com menor potencial (B). No segundo caso, um semicondutor de tipo N ou
+um metal, as cargas de condução negativas deslocam-se de B para A, no
+sentido oposto ao campo elétrico. Finalmente, existem condutores com
+cargas de condução positivas e negativas como, por exemplo, o gás
+ionizado dentro de uma <span id="lâmpada!fluorescente" class="index">lâmpada</span>
+fluorescente.
+</p>
+<figure class="center" id="fig-2.7">
+<img class="fig" src="img/charge_carriers.png"
+     alt="Diferentes tipos de condutores" style="width:32.31em">
+<figcaption>
+<b>Figura 2.7:</b> Três condutores diferentes com diferentes tipos de cargas de condução.
+</figcaption>
+</figure>
+<p>
+Nos três casos ilustrados na figura, a mesma quantidade de energia
+(<svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 27.3863 10.57597' width='2.73863em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq59'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>6</text>
+<text font-family='futri8r' font-size='10.9577' x='7.00305' y='0'>e</text>
+<text font-family='futri8r' font-size='10.9577' x='13.7192' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='20.8444' y='1.79326'>A</text>
+</g>
+</svg>
+) é retirada da região A e a mesma quantidade de
+energia (<svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 26.9343 10.57597' width='2.69343em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq60'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>6</text>
+<text font-family='futri8r' font-size='10.9577' x='7.00305' y='0'>e</text>
+<text font-family='futri8r' font-size='10.9577' x='13.7192' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='20.8444' y='1.79326'>B</text>
+</g>
+</svg>
+) passa para a região B. No caso do
+semicondutor do tipo P, a saída de 6 cargas elementares de A retira
+energia em A e a entrada dessas cargas em B aumenta a energia em B. No
+caso da barra semicondutora do tipo N, a energia das cargas que saem
+de B tem o sinal oposto de <svg height='1.057597em' version='1.1' viewBox='-0.839109 -8.1827 13.2151 10.57597' width='1.32151em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq61'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>B</text>
+</g>
+</svg>
+ e, por isso, faz aumentar a
+energia disponível em B; da mesma forma, a entrada das cargas de
+condução negativas em A faz diminuir a energia disponível em A. No
+terceiro caso da figura, metade da energia é transferida de A para B
+pelas cargas de condução positivas e a outra metade é transferida no
+mesmo sentido pelas cargas de condução negativas.
+</p>
+<p>
+Observe-se que, na figura <a href="#fig-2.7">2.7</a>, a energia potencial
+eletrostática que é retirada do ponto A é maior que a energia que
+passa para o ponto B, porque <svg height='1.057597em' version='1.1' viewBox='-0.839109 -8.1827 37.8414 10.57597' width='3.78414em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq62'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>A</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.6663' y='0'>></text>
+<text font-family='futri8r' font-size='10.9577' x='24.3871' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='31.5124' y='1.79326'>B</text>
+</g>
+</svg>
+. A diferença
+entre essas energias é igual à energia dissipada no condutor; nos dois
+primeiros casos na figura, essa energia é transferida para o condutor
+na forma de calor, aquecendo-o, e no terceiro caso, se o condutor for
+uma lâmpada fluorescente, a parte dessa energia é convertida em luz, e
+a restante é calor que aquece a lâmpada.
+</p>
+<p>
+Existem outros mecanismos de condução de cargas elétricas, como em
+certos <span id="detetor!de&nbsp;incêndios" class="index">detetores</span> de incêndio
+(figura <a href="#fig-2.8">2.8</a>). No interior do detetor existe uma câmara de
+ionização (cilindro preto na figura) onde a passagem de cargas é
+devida à produção de partículas alfa emitidas por uma substância
+radioativa. As partículas alfa são núcleos de hélio, com carga igual a
+duas unidades elementares de carga. As partículas são disparadas para
+fora da substância radioativa, passando pelo ar à volta da substância,
+antes de serem recolhidas num elétrodo no detetor. A presença de fumo
+introduz partículas sólidas no ar, que travam as partículas alfa,
+produzindo uma redução do número de partículas recolhidas no elétrodo,
+e essa redução do fluxo de cargas faz disparar um sinal de alarme.
+</p>
+<figure class="center" id="fig-2.8">
+<img class="img-10" src="img/Smokealarm.jpg" alt="Smokealarm" width="400"
+     height="300">
+<figcaption>
+<b>Figura 2.8:</b> Detetor de incêndios.
+</figcaption>
+</figure>
+</section>
+<section id="sec-2.5">
+<h2>2.5. Corrente elétrica</h2>
+<p>
+A corrente elétrica, representada pela letra <svg height='0.87827em' version='1.1' viewBox='-0.241348 -8.1827 6.2734 8.7827' width='0.62734em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq63'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+</g>
+</svg>
+, é o fluxo das cargas
+de condução dentro de um material. A
+<span id="corrente!intensidade" class="index">intensidade</span> da corrente <svg height='0.87827em' version='1.1' viewBox='-0.241348 -8.1827 6.2734 8.7827' width='0.62734em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq64'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+</g>
+</svg>
+ é a taxa de
+transferência da carga, através de uma secção, por unidade de tempo
+</p>
+<div class="eqn" id="eq-2.12">(2.12)</div>
+<div class="center">
+<svg height='3.25663em' version='1.1' viewBox='211.497 66.1497 43.2568 32.5663' width='4.32568em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq65'>
+<rect height='0.3985' width='42.0568' x='212.097' y='66.7497'/>
+<rect height='30.5693' width='0.3985' x='212.097' y='67.1482'/>
+<text font-family='futri8r' font-size='10.9577' x='215.843' y='86.4319'>I</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.066' y='86.4319'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='234.221' y='78.3382'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='240.438' y='78.3382'>Q</text>
+<rect height='0.637912' width='15.3504' x='234.221' y='83.0165'/>
+<text font-family='futr8r' font-size='10.9577' x='236.026' y='94.6331'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='242.841' y='94.6331'>t</text>
+<rect height='30.5693' width='0.3985' x='253.756' y='67.1482'/>
+<rect height='0.3985' width='42.0568' x='212.097' y='97.7175'/>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='1.1555em' version='1.1' viewBox='-0.6 -8.73059 16.0623 11.555' width='1.60623em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq66'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='6.21669' y='0'>Q</text>
+</g>
+</svg>
+ é o valor absoluto da carga total que passa pela
+secção durante um intervalo de tempo <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 12.8249 9.46208' width='1.28249em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq67'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='6.81445' y='0'>t</text>
+</g>
+</svg>
+. De forma inversa,
+a carga total que passa através de uma secção de um condutor, desde um
+instante <svg height='0.974318em' version='1.1' viewBox='-0.360891 -7.34992 8.90395 9.74318' width='0.890395em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq68'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='4.35169' y='1.79326'>1</text>
+</g>
+</svg>
+ até outro instante <svg height='0.974318em' version='1.1' viewBox='-0.360891 -7.34992 9.29843 9.74318' width='0.929843em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq69'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='4.35169' y='1.79326'>2</text>
+</g>
+</svg>
+, é o integral da corrente <svg height='0.87827em' version='1.1' viewBox='-0.241348 -8.1827 6.2734 8.7827' width='0.62734em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq70'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+</g>
+</svg>
+,
+</p>
+<div class="eqn" id="eq-2.13">(2.13)</div>
+<div class="center">
+<svg height='4.14867em' version='1.1' viewBox='206.456 67.271 52.8658 41.4867' width='5.28658em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq71'>
+<text font-family='futri8r' font-size='10.9577' x='207.056' y='90.7945'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='218.235' y='90.7945'>=</text>
+<text font-family='futri8r' font-size='8.21825' x='232.222' y='72.9335'>t</text>
+<text font-family='futr8r' font-size='6.39197' x='235.306' y='74.2784'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='228.195' y='75.5005'></text>
+<text font-family='futri8r' font-size='8.21825' x='227.514' y='106.813'>t</text>
+<text font-family='futr8r' font-size='6.39197' x='230.599' y='108.158'>1</text>
+<text font-family='futri8r' font-size='10.9577' x='239.875' y='90.7945'>I</text>
+<text font-family='futr8r' font-size='10.9577' x='247.097' y='90.7945'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='253.911' y='90.7945'>t</text>
+</g>
+</svg>
+</div>
+<p>
+No sistema internacional de unidades a unidade usada para medir a
+corrente elétrica é o <span id="ampere&nbsp;(unidade)" class="index">ampere</span>, designado pela
+letra A, que equivale à transferência de uma carga de um coulomb cada
+segundo:
+</p>
+<div class="eqn" id="eq-2.14">(2.14)</div>
+<div class="center">
+<svg height='0.911143em' version='1.1' viewBox='206.467 71.8522 52.9067 9.11143' width='5.29067em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq72'>
+<text font-family='futr8r' font-size='10.9577' x='207.067' y='80.1993'>1<tspan x='214.947'>A</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.974' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='233.934' y='80.1993'>1<tspan x='241.814'>C</tspan>
+<tspan x='249.334'>/</tspan>
+<tspan x='254.391'>s</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+A corrente costuma ser representada vetorialmente por <svg height='1.18511em' version='1.1' viewBox='-1.30537 -11.2511 8.12524 11.8511' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq73'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.70537' y='-2.43288'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+</g>
+</svg>
+, com
+módulo igual á intensidade da corrente, direção igual à direção do
+movimento das cargas de condução e com o mesmo sentido em que é
+transferida energia. Tal como foi referido, nas três barras condutoras
+da figura <a href="#fig-2.7">2.7</a> há transferência de energia do ponto A para o
+ponto B e, portanto, a corrente nos três casos é no sentido de A para
+B, como indica o diagrama da figura <a href="#fig-2.9">2.9</a>. A corrente em
+qualquer condutor ou semicondutor de qualquer tipo segue sempre o
+sentido do campo elétrico, isto é, do ponto com maior potencial para o
+ponto com menor potencial.
+</p>
+<figure class="center" id="fig-2.9">
+<img class="fig" src="img/circuit_with_bar.png"
+     alt="Corrente num condutor" style="width:15.39em">
+<figcaption>
+<b>Figura 2.9:</b> Corrente <svg height='0.87827em' version='1.1' viewBox='-0.241348 -8.1827 6.2734 8.7827' width='0.62734em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq74'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+</g>
+</svg>
+ numa barra condutora.
+</figcaption>
+</figure>
+<p>
+Se o condutor não for retilíneo (figura <a href="#fig-2.10">2.10</a>), as linhas de
+campo elétrico seguem a direção do condutor, desde o ponto onde o
+potencial é maior até onde o potencial é menor. A relação entre o
+campo elétrico no condutor e a diferença de potencial entre os
+extremos é,
+</p>
+<div class="eqn" id="eq-2.15">(2.15)</div>
+<div class="center">
+<svg height='4.11604em' version='1.1' viewBox='192.323 67.3914 80.5378 41.1604' width='8.05378em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq75'>
+<text font-family='futr8r' font-size='8.21825' x='197.824' y='73.6867'>B</text>
+<text font-family='fourier-mex' font-size='10.9987' x='193.057' y='75.8864'></text>
+<text font-family='futr8r' font-size='8.21825' x='193.161' y='107.952'>A</text>
+<text font-family='futri8r' font-size='10.9577' x='204.378' y='91.1804'>E</text>
+<text font-family='futr8r' font-size='10.9577' x='213.246' y='91.1804'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='220.06' y='91.1804'>s</text>
+<text font-family='fourier-ms' font-size='10.9577' x='227.067' y='91.1804'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='236.788' y='91.1804'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='243.913' y='92.9736'>A</text>
+<text font-family='fourier-ms' font-size='10.9577' x='251.109' y='91.1804'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='260.245' y='91.1804'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='267.371' y='92.9736'>B</text>
+</g>
+</svg>
+</div>
+<figure class="center" id="fig-2.10">
+<img class="fig" src="img/E-field_cable_with_current.png"
+     alt="Corrente e campo elétrico num condutor" style="width:14.49em">
+<figcaption>
+<b>Figura 2.10:</b> Campo elétrico num condutor ligado a uma voltagem <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq76'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+
+(<svg height='1.057597em' version='1.1' viewBox='-0.839109 -8.1827 37.8414 10.57597' width='3.78414em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq77'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>A</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.6663' y='0'>></text>
+<text font-family='futri8r' font-size='10.9577' x='24.3871' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='31.5124' y='1.79326'>B</text>
+</g>
+</svg>
+).
+</figcaption>
+</figure>
+<p>
+O módulo do campo campo elétrico poderá ser diferente em diferentes
+partes do percurso no integral de linha do primeiro membro da equação,
+mas usando o teorema do valor médio obtém-se a seguinte relação para o
+valor médio do campo no condutor:
+</p>
+<div class="eqn" id="eq-2.16">(2.16)</div>
+<div class="center">
+<svg height='3.20582em' version='1.1' viewBox='209.668 66.1497 46.9151 32.0582' width='4.69151em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq78'>
+<rect height='0.3985' width='45.7151' x='210.268' y='66.7497'/>
+<rect height='30.0612' width='0.3985' x='210.268' y='67.1482'/>
+<text font-family='futr8r' font-size='10.9577' x='216.202' y='83.4909'>¯</text>
+<text font-family='futri8r' font-size='10.9577' x='213.656' y='85.9238'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.4' y='85.9238'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='234.556' y='77.8301'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='242.159' y='77.8301'>V</text>
+<rect height='0.637912' width='16.8448' x='234.556' y='82.5084'/>
+<text font-family='fourier-ml' font-size='10.9577' x='236.457' y='94.125'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='244.538' y='94.125'>s</text>
+<rect height='30.0612' width='0.3985' x='255.585' y='67.1482'/>
+<rect height='0.3985' width='45.7151' x='210.268' y='97.2094'/>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='0.892515em' version='1.1' viewBox='-0.6 -8.19366 14.0154 8.92515' width='1.40154em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq79'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='8.0817' y='0'>s</text>
+</g>
+</svg>
+ é o comprimento do condutor e <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq80'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ a voltagem
+(diferença de potencial entre os extremos).
+</p>
+<p>
+Como tal, quanto mais comprido for o fio condutor que liga os pontos A
+e B, com potenciais fixos <svg height='1.057597em' version='1.1' viewBox='-0.839109 -8.1827 13.6671 10.57597' width='1.36671em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq81'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>A</text>
+</g>
+</svg>
+ e <svg height='1.057597em' version='1.1' viewBox='-0.839109 -8.1827 13.2151 10.57597' width='1.32151em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq82'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>B</text>
+</g>
+</svg>
+, menor será
+o campo elétrico médio. A intensidade da corrente depende do módulo do
+campo elétrico e da área da secção transversal do fio; quanto maior
+for o módulo do campo, mais rápido é o movimento da nuvem de cargas de
+condução e maior é a corrente; quanto maior for a área da secção
+transversal, mais grosso é o fio e o movimento da nuvem de cargas de
+condução produz então uma corrente maior.
+</p>
+</section>
+<section id="sec-2.6">
+<h2>2.6. Potência elétrica</h2>
+<p>
+Como já foi referido, o transporte de cargas de condução num condutor
+acarreta dissipação de energia, geralmente na forma de calor, fenómeno
+esse designado de <b><span id="efeito!Joule" class="index">efeito</span>
+<span id="Joule,&nbsp;James" class="index">Joule</span></b>. Se num condutor circula corrente
+estacionária <svg height='0.87827em' version='1.1' viewBox='-0.241348 -8.1827 6.2734 8.7827' width='0.62734em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq83'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+</g>
+</svg>
+, durante um intervalo de tempo <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 12.8249 9.46208' width='1.28249em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq84'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='6.81445' y='0'>t</text>
+</g>
+</svg>
+ entra
+uma carga <svg height='1.1555em' version='1.1' viewBox='-0.6 -8.73059 16.0623 11.555' width='1.60623em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq85'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='6.21669' y='0'>Q</text>
+</g>
+</svg>
+ por um extremo do condutor e sai a mesma carga
+pelo extremo oposto. No condutor da figura <a href="#fig-2.11">2.11</a>, o sentido
+da corrente indica que <svg height='1.057597em' version='1.1' viewBox='-0.839109 -8.1827 13.6671 10.57597' width='1.36671em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq86'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>A</text>
+</g>
+</svg>
+ é maior que <svg height='1.057597em' version='1.1' viewBox='-0.839109 -8.1827 13.2151 10.57597' width='1.32151em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq87'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>B</text>
+</g>
+</svg>
+; se
+as cargas de condução são positivas, deslocam-se no sentido da
+corrente, ou seja, entra carga <svg height='1.1555em' version='1.1' viewBox='-0.6 -8.73059 16.0623 11.555' width='1.60623em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq88'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='6.21669' y='0'>Q</text>
+</g>
+</svg>
+ pelo extremo A e sai
+carga <svg height='1.1555em' version='1.1' viewBox='-0.6 -8.73059 16.0623 11.555' width='1.60623em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq89'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='6.21669' y='0'>Q</text>
+</g>
+</svg>
+ pelo extremo B. A energia elétrica da carga que
+entra é <svg height='1.1555em' version='1.1' viewBox='-0.839109 -8.73059 30.091 11.555' width='3.0091em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq90'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>A</text>
+<text font-family='futr8r' font-size='10.9577' x='13.7896' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='20.0063' y='0'>Q</text>
+</g>
+</svg>
+ e a energia da carga que sai é
+<svg height='1.1555em' version='1.1' viewBox='-0.839109 -8.73059 30.1807 11.555' width='3.01807em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq91'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>B</text>
+<text font-family='futr8r' font-size='10.9577' x='13.8793' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='20.096' y='0'>Q</text>
+</g>
+</svg>
+. Ou seja, as cargas perdem energia
+elétrica na passagem pelo condutor.
+</p>
+<figure class="center" id="fig-2.11">
+<img class="fig" src="img/current_and_charge_transfer.png"
+     alt="Carga a entrar e sair num condutor" style="width:15.24em">
+<figcaption>
+<b>Figura 2.11:</b> Cargas que entram e saem num condutor
+com corrente, durante um intervalo <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 12.8249 9.46208' width='1.28249em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq92'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='6.81445' y='0'>t</text>
+</g>
+</svg>
+.
+</figcaption>
+</figure>
+<p>
+A energia elétrica que as cargas de condução perdem na passagem pelo
+condutor, durante o intervalo de tempo <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 12.8249 9.46208' width='1.28249em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq93'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='6.81445' y='0'>t</text>
+</g>
+</svg>
+ é
+</p>
+<div class="eqn" id="eq-2.17">(2.17)</div>
+<div class="center">
+<svg height='1.1555em' version='1.1' viewBox='159.393 71.4687 146.977 11.555' width='14.6977em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq94'>
+<text font-family='futr8r' font-size='10.9577' x='159.993' y='80.1993'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='165.971' y='80.1993'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='174.937' y='81.9925'>e</text>
+<text font-family='fourier-ms' font-size='10.9577' x='181.722' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='191.443' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='198.568' y='81.9925'>A</text>
+<text font-family='futr8r' font-size='10.9577' x='205.472' y='80.1993'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='211.688' y='80.1993'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='222.283' y='80.1993'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='231.42' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='238.545' y='81.9925'>B</text>
+<text font-family='futr8r' font-size='10.9577' x='245.538' y='80.1993'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='251.755' y='80.1993'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='262.934' y='80.1993'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='272.894' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='280.498' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='10.9577' x='290.908' y='80.1993'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='297.125' y='80.1993'>Q</text>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='1.058692em' version='1.1' viewBox='-0.6 -8.19366 65.2837 10.58692' width='6.52837em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq95'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='18.8904' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='28.6113' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='35.7366' y='1.79326'>A</text>
+<text font-family='fourier-ms' font-size='10.9577' x='42.9322' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='52.0686' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='59.1938' y='1.79326'>B</text>
+</g>
+</svg>
+ é a voltagem no condutor. O
+valor instantâneo da potência elétrica, <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.66217 8.7827' width='0.866217em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq96'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>P</text>
+</g>
+</svg>
+, dissipada no condutor,
+obtém-se dividindo <svg height='1.12389em' version='1.1' viewBox='-0.6 -8.73059 20.0969 11.2389' width='2.00969em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq97'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='5.97758' y='0'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='14.944' y='1.79326'>e</text>
+</g>
+</svg>
+ pelo intervalo de tempo
+<svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 12.8249 9.46208' width='1.28249em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq98'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='6.81445' y='0'>t</text>
+</g>
+</svg>
+. O resultado obtido é
+</p>
+<div class="eqn" id="eq-2.18">(2.18)</div>
+<div class="center">
+<svg height='1.56677em' version='1.1' viewBox='207.392 68.5188 51.4673 15.6677' width='5.14673em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq99'>
+<rect height='0.3985' width='50.2673' x='207.992' y='69.1188'/>
+<rect height='13.6707' width='0.3985' x='207.992' y='69.5173'/>
+<text font-family='futri8r' font-size='10.9577' x='211.379' y='80.1993'>P</text>
+<text font-family='fourier-ms' font-size='10.9577' x='221.363' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='231.682' y='80.1993'>I</text>
+<text font-family='fourier-ml' font-size='10.9577' x='238.027' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='245.631' y='80.1993'>V</text>
+<rect height='13.6707' width='0.3985' x='257.861' y='69.5173'/>
+<rect height='0.3985' width='50.2673' x='207.992' y='83.188'/>
+</g>
+</svg>
+</div>
+<p>
+Essa é a potência dissipada em calor num condutor com voltagem
+<svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq100'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ e corrente <svg height='0.87827em' version='1.1' viewBox='-0.241348 -8.1827 6.2734 8.7827' width='0.62734em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq101'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+</g>
+</svg>
+. O resultado foi obtido no caso de um
+condutor com portadores de cargas positivas, mas é o mesmo resultado
+que se obtém para qualquer outro condutor com cargas de condução
+negativas ou cargas de ambos sinais. A partir das definições de volt
+e ampere, pode-se verificar que o produto dessas duas unidades é igual
+a joule sobre segundo, que é a <span id="watt&nbsp;(unidade)" class="index">unidade</span> SI de
+potência, o <span id="Watt,&nbsp;James" class="index">watt</span> (W), igual a
+um joule sobre
+segundo.
+</p>
+<p>
+Para manter a corrente no condutor, é necessário que a mesma potência
+<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.66217 8.7827' width='0.866217em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq102'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>P</text>
+</g>
+</svg>
+, dissipada no condutor, seja fornecida pela bateria que estabelece
+a diferença de potencial <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq103'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+. Assim, a potência fornecida pela
+bateria é também <svg height='0.879366em' version='1.1' viewBox='-0.241348 -8.19366 24.1452 8.79366' width='2.41452em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq104'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+<text font-family='fourier-ml' font-size='10.9577' x='6.70416' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='14.3076' y='0'>V</text>
+</g>
+</svg>
+, em que <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq105'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ é a diferença de
+potencial entre os terminais da bateria. Numa bateria "ideal" essa
+diferença de potencial é igual ao valor da f.e.m. (<svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.41585 6.83224' width='0.641585em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq106'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ε</text>
+</g>
+</svg>
+) e,
+como tal, a potência fornecida por uma bateria ideal é:
+</p>
+<div class="eqn" id="eq-2.19">(2.19)</div>
+<div class="center">
+<svg height='1.067459em' version='1.1' viewBox='214.337 72.0165 37.1156 10.67459' width='3.71156em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq107'>
+<text font-family='futri8r' font-size='10.9577' x='214.937' y='80.1993'>P</text>
+<text font-family='fourier-mlit' font-size='8.21825' x='222.169' y='81.9925'>ε</text>
+<text font-family='fourier-ms' font-size='10.9577' x='228.972' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='239.291' y='80.1993'>I</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='245.636' y='80.1993'>ε</text>
+</g>
+</svg>
+</div>
+<p>
+No próximo capítulo mostra-se que, numa bateria real, <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq108'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ é
+realmente menor que o valor da f.e.m., e diminui em função da
+corrente.
+</p>
+<div id="ex-2.2" class="example">
+<h3>Exemplo 2.2</h3>
+<p>
+Num condutor, ligado a uma pilha ideal com f.e.m. de 1.5 V, circulam
+10<sup>16</sup> eletrões de condução durante 2 segundos. Calcule: (<i>a</i>)
+A corrente média; (<i>b</i>) A energia fornecida pela pilha durante
+esse intervalo; (<i>c</i>) A potência média fornecida pela pilha;
+(<i>d</i>) Se a carga máxima da pilha for 3 A·h e se fosse possível
+manter a mesma corrente média até a pilha descarregar totalmente, quanto
+tempo demoraria a pilha a descarregar?</p>
+</div>
+<p>
+<b>Resolução</b>. (<i>a</i>) A carga transferida é o valor absoluto da
+carga dos 10<sup>16</sup> eletrões:
+</p>
+<div class="center">
+<svg height='1.39503em' version='1.1' viewBox='129.582 69.0734 206.68 13.9503' width='20.668em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq109'>
+<text font-family='fourier-ml' font-size='10.9577' x='130.182' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='137.665' y='80.1993'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='148.845' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='158.805' y='80.1993'>1<tspan x='164.639'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='170.473' y='75.2618'>1<tspan x='174.849'>6</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='181.183' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='190.559' y='80.1993'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='196.393' y='80.1993'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='199.31' y='80.1993'>6<tspan x='205.144'>0</tspan>
+<tspan x='210.978'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='218.274' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='227.649' y='80.1993'>1<tspan x='233.483'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='239.317' y='75.2618'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='245.253' y='75.2618'>1<tspan x='249.629'>9</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='256.548' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='266.508' y='80.1993'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='272.342' y='80.1993'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='275.259' y='80.1993'>6<tspan x='281.093'>0</tspan>
+<tspan x='286.927'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='294.223' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='303.598' y='80.1993'>1<tspan x='309.432'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='315.266' y='75.2618'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='321.202' y='75.2618'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='328.55' y='80.1993'>C</text>
+</g>
+</svg>
+</div>
+<p>
+e a corrente média é:
+</p>
+<div class="center">
+<svg height='2.75545em' version='1.1' viewBox='151.612 66.0846 163.527 27.5545' width='16.3527em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq110'>
+<text font-family='futr8r' font-size='10.9577' x='153.617' y='82.2734'>¯</text>
+<text font-family='futri8r' font-size='10.9577' x='152.212' y='84.7063'>I</text>
+<text font-family='fourier-ms' font-size='10.9577' x='159.434' y='84.7063'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='170.589' y='76.6127'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='178.073' y='76.6127'>Q</text>
+<rect height='0.637912' width='16.6177' x='170.589' y='81.291'/>
+<text font-family='fourier-ml' font-size='10.9577' x='172.395' y='92.9075'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='180.476' y='92.9075'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='190.448' y='84.7063'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='201.604' y='76.6127'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='207.438' y='76.6127'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='210.355' y='76.6127'>6<tspan x='216.189'>0</tspan>
+<tspan x='222.023'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='229.318' y='76.6127'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='238.694' y='76.6127'>1<tspan x='244.528'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='250.362' y='72.273'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='256.298' y='72.273'>3</text>
+<rect height='0.637912' width='59.5678' x='201.604' y='81.291'/>
+<text font-family='futr8r' font-size='10.9577' x='228.471' y='92.9075'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='264.413' y='84.7063'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='274.373' y='84.7063'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='280.207' y='84.7063'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='283.124' y='84.7063'>8<tspan x='288.958'>0</tspan>
+<tspan x='297.267'>m</tspan>
+<tspan x='307.417'>A</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+(<i>b</i>) A energia fornecida pela pilha é igual à energia elétrica
+dissipada no condutor:
+</p>
+<div class="center">
+<svg height='1.39503em' version='1.1' viewBox='125.785 69.0734 214.372 13.9503' width='21.4372em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq111'>
+<text font-family='fourier-ml' font-size='10.9577' x='126.385' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='133.63' y='80.1993'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='142.596' y='81.9925'>e</text>
+<text font-family='fourier-ms' font-size='10.9577' x='149.381' y='80.1993'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='159.341' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='166.825' y='80.1993'>Q</text>
+<text font-family='fourier-ml' font-size='10.9577' x='177.128' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='184.731' y='80.1993'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='196.018' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='205.978' y='80.1993'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='211.812' y='80.1993'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='214.729' y='80.1993'>6<tspan x='220.563'>0</tspan>
+<tspan x='226.397'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='233.693' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='243.068' y='80.1993'>1<tspan x='248.902'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='254.736' y='75.2618'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='260.672' y='75.2618'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='267.007' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='276.382' y='80.1993'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='282.217' y='80.1993'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='285.134' y='80.1993'>5</text>
+<text font-family='fourier-ms' font-size='10.9577' x='293.013' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='302.973' y='80.1993'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='308.807' y='80.1993'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='311.724' y='80.1993'>4<tspan x='317.559'>0</tspan>
+<tspan x='325.867'>m</tspan>
+<tspan x='336.017'>J</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+(<i>c</i>) A potência média fornecida é igual a essa energia, dividida
+pelo intervalo de tempo:
+</p>
+<div class="center">
+<svg height='2.75545em' version='1.1' viewBox='149.123 66.0846 168.371 27.5545' width='16.8371em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq112'>
+<text font-family='futr8r' font-size='10.9577' x='152.688' y='82.2734'>¯</text>
+<text font-family='futri8r' font-size='10.9577' x='149.723' y='84.7063'>P</text>
+<text font-family='fourier-ms' font-size='10.9577' x='159.707' y='84.7063'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='170.862' y='76.6127'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='178.107' y='76.6127'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='187.073' y='78.4059'>e</text>
+<rect height='0.637912' width='20.9504' x='170.862' y='81.291'/>
+<text font-family='fourier-ml' font-size='10.9577' x='174.834' y='92.9075'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='182.915' y='92.9075'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='195.054' y='84.7063'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='206.209' y='76.6127'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='212.043' y='76.6127'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='214.96' y='76.6127'>4<tspan x='220.794'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='228.09' y='76.6127'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='237.465' y='76.6127'>1<tspan x='243.299'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='249.133' y='72.273'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='255.069' y='72.273'>3</text>
+<rect height='0.637912' width='53.7337' x='206.209' y='81.291'/>
+<text font-family='futr8r' font-size='10.9577' x='230.159' y='92.9075'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='263.184' y='84.7063'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='273.144' y='84.7063'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='278.978' y='84.7063'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='281.895' y='84.7063'>2<tspan x='287.729'>0</tspan>
+<tspan x='296.038'>m</tspan>
+<tspan x='306.188'>W</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+(<i>d</i>)O tempo obtém-se dividindo a carga máxima que pode ser transferida,
+pela corrente média:
+</p>
+<div class="center">
+<svg height='2.59743em' version='1.1' viewBox='202.485 66.0958 60.0867 25.9743' width='6.00867em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq113'>
+<text font-family='fourier-ml' font-size='10.9577' x='203.085' y='82.5365'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='211.166' y='82.5365'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='218.138' y='82.5365'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='229.293' y='74.4428'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='236.777' y='74.4428'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='245.54' y='76.2361'>m<tspan x='253.152'>á</tspan>
+<tspan x='257.465'>x</tspan>
+</text>
+<rect height='0.637912' width='32.6784' x='229.293' y='79.1211'/>
+<text font-family='futr8r' font-size='10.9577' x='244.628' y='89.0372'>¯</text>
+<text font-family='futri8r' font-size='10.9577' x='243.223' y='91.47'>I</text>
+</g>
+</svg>
+</div>
+<p>
+substituindo, obtém-se:
+</p>
+<div class="center">
+<svg height='2.57569em' version='1.1' viewBox='138.832 66.2203 188.177 25.7569' width='18.8177em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq114'>
+<text font-family='fourier-ml' font-size='10.9577' x='139.432' y='83.0446'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='147.514' y='83.0446'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='154.485' y='83.0446'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='183.263' y='74.9509'>3<tspan x='191.572'>A</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='200.015' y='74.9509'>·</text>
+<text font-family='futr8r' font-size='10.9577' x='204.536' y='74.9509'>h</text>
+<rect height='0.637912' width='63.1902' x='165.64' y='79.6292'/>
+<text font-family='futr8r' font-size='10.9577' x='165.64' y='91.2458'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='171.474' y='91.2458'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='174.391' y='91.2458'>8<tspan x='180.225'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='187.521' y='91.2458'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='196.896' y='91.2458'>1<tspan x='202.73'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='208.564' y='87.7908'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='214.5' y='87.7908'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='221.849' y='91.2458'>A</text>
+<text font-family='fourier-ms' font-size='10.9577' x='232.071' y='83.0446'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='242.031' y='83.0446'>3<tspan x='247.865'>7</tspan>
+<tspan x='253.7'>5</tspan>
+<tspan x='259.534'>0</tspan>
+<tspan x='267.843'>h</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='276.559' y='83.0446'>≈</text>
+<text font-family='futr8r' font-size='10.9577' x='286.519' y='83.0446'>1<tspan x='292.353'>5</tspan>
+<tspan x='298.187'>6</tspan>
+<tspan x='306.496'>d</tspan>
+<tspan x='313.071'>i</tspan>
+<tspan x='316.275'>a</tspan>
+<tspan x='322.026'>s</tspan>
+</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-2.7">
+<h2>2.7. Voltímetros e amperímetros</h2>
+<p>
+Para medir a diferença de potencial entre dois pontos num dispositivo,
+basta tocar nesses pontos com os terminais de um
+<span id="voltímetro" class="index"><b>voltímetro</b></span>. Se a diferença de potencial não ultrapassa
+o valor máximo aceite pelo voltímetro, essa operação é
+bastante segura e muito útil para diagnosticar problemas nos
+dispositivos.
+</p>
+<p>
+Para medir a corrente elétrica usa-se um
+<span id="amperímetro" class="index"><b>amperímetro</b></span>. Igual que no caso do
+voltímetro, a corrente a ser medida não deverá ultrapassar o valor
+máximo aceite pelo amperímetro. O problema neste caso é que um bom
+amperímetro deverá facilitar a passagem das cargas, para não
+interferir com o dispositivo onde vai medir-se a corrente. Ou seja,
+ligando o amperímetro entre dois pontos de um dispositivo, a maioria
+das cargas passam pelo amperímetro e não pelo dispositivo, já que
+encontram um percurso mais livre através do amperímetro. Assim sendo,
+a corrente através do amperímetro pode ser muito elevada, correndo-se
+o risco de queimá-lo.
+</p>
+<p>
+Como tal, há que ter maior cuidado no uso de um amperímetro do que um
+voltímetro. Antes de tocar num dispositivo com os terminais de um
+amperímetro, é necessário "cortar" o fluxo de carga no ponto onde vai
+medir-se a corrente e fazer uma ponte com os terminais do amperímetro,
+entre os dois pontos onde foi aberto o circuito, para garantir que
+todas as cargas que passem pelo amperímetro têm que passar pelo
+dispositivo, que foi concebido para limitar o fluxo das cargas. Um
+<span id="multimetro" class="index"><b>multimetro</b></span> combina as funções de voltímetro
+e amperímetro num único aparelho de medição.
+</p>
+</section>
+<section id="Perguntas">
+<h2>Perguntas</h2>
+<p>
+(Para conferir a sua resposta, clique nela.)
+</p>
+<ol class="spacious">
+<li>
+A força eletromotriz de uma pilha química:
+<ol class="answers">
+<li onclick="document.getElementById('p1c1').style.display='block'">É
+independente das reações químicas no seu interior.</li>
+<li onclick="document.getElementById('p1c2').style.display='block'">Depende
+do tamanho da pilha.</li>
+<li onclick="document.getElementById('p1c3').style.display='block'">Depende
+da sua carga máxima.</li>
+<li onclick="document.getElementById('p1c4').style.display='block'">É
+independente do tamanho dos elétrodos.</li>
+<li onclick="document.getElementById('p1c5').style.display='block'">Nenhuma
+das outras respostas.</li>
+</ol>
+</li>
+<li>
+Se o custo da energia elétrica fosse de 10 cêntimos por kilowatt-hora,
+quanto custaria manter uma torradeira de 660&thinsp;W a funcionar
+durante meia hora?
+<ol class="shortanswers">
+<li onclick="document.getElementById('p2c1').style.display='block'">15
+cêntimos.</li>
+<li onclick="document.getElementById('p2c2').style.display='block'">12
+cêntimos.</li>
+<li onclick="document.getElementById('p2c3').style.display='block'">6.9
+cêntimos.</li>
+<li onclick="document.getElementById('p2c4').style.display='block'">3.3
+cêntimos.</li>
+<li onclick="document.getElementById('p2c5').style.display='block'">1.7
+cêntimos.</li>
+</ol>
+</li>
+<li>
+A corrente num condutor aumenta linearmente desde um valor inicial de
+3 A, em <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq115'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+, até o valor final 6 A, em <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.314 8.7827' width='2.3314em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq116'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>3</text>
+</g>
+</svg>
+ h. Determine a carga
+total transportada pelo condutor durante esse intervalo.
+<ol class="shortanswers">
+<li onclick="document.getElementById('p3c1').style.display='block'">48.6 kC</li>
+<li onclick="document.getElementById('p3c2').style.display='block'">32.4 kC</li>
+<li onclick="document.getElementById('p3c3').style.display='block'">64.8 kC</li>
+<li onclick="document.getElementById('p3c4').style.display='block'">97.2 kC</li>
+<li onclick="document.getElementById('p3c5').style.display='block'">16.2 kC</li>
+</ol>
+</li>
+<li>
+Uma pilha AA tem uma carga total de 8 A·h. Se for ligada a um
+dispositivo, produzindo uma corrente média de 50 mA durante 50 horas,
+com que percentagem da sua carga ficará após as 50 horas?
+<ol class="shortanswers">
+<li onclick="document.getElementById('p4c1').style.display='block'">31%</li>
+<li onclick="document.getElementById('p4c2').style.display='block'">50%</li>
+<li onclick="document.getElementById('p4c3').style.display='block'">21%</li>
+<li onclick="document.getElementById('p4c4').style.display='block'">69%</li>
+<li onclick="document.getElementById('p4c5').style.display='block'">131%</li>
+</ol>
+</li>
+<li>
+Se cada segundo 4.0&times;10<sup>18</sup> eletrões e 1.5&times;10<sup>18</sup>
+protões atravessam a secção transversal de um tubo de descarga de
+hidrogénio, a corrente média no tubo é:
+<ol class="shortanswers">
+<li onclick="document.getElementById('p5c1').style.display='block'">0.40 A</li>
+<li onclick="document.getElementById('p5c2').style.display='block'">0.56 A</li>
+<li onclick="document.getElementById('p5c3').style.display='block'">0.88 A</li>
+<li onclick="document.getElementById('p5c4').style.display='block'">1.5 A</li>
+<li onclick="document.getElementById('p5c5').style.display='block'">4.0 A</li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="Problemas">
+<h2>Problemas</h2>
+<ol class="spaccious">
+<li id="prob-2.1">
+Um eletrão é acelerado no vácuo, a partir do repouso, através de uma
+diferença de potencial de 220 V. Determine a velocidade final do
+eletrão (a massa do eletrão encontra-se no <a href="constantes.html">apêndice A</a>).
+</li>
+<li id="prob-2.2">
+Num tubo de <span id="raios!X" class="index">raios</span> X são libertados eletrões,
+inicialmente em repouso, que são logo acelerados no vácuo do tubo por
+meio de um campo elétrico, atravessando uma região em que a diferença
+de potencial é de 4 kV. Os eletrões logo colidem com um alvo metálico
+produzindo radiação X. (<i>a</i>) Determine a energia cinética e a
+velocidade com que os eletrões colidem com o alvo. (<i>b</i>) Se a
+variação de potencial se estender por uma distância de 8 dm, determine
+a intensidade do campo elétrico médio.
+</li>
+<li id="prob-2.3">
+Uma certa bateria de automóvel tem carga máxima de 250 Ah, que
+corresponde à carga disponível quando está carregada a 100%.
+(<i>a</i>) Depois de algum uso, a bateria descarrega até 60% da sua
+carga máxima. Qual é a carga, em coulombs, com que fica a bateria?
+(<i>b</i>) A seguir, a bateria liga-se a um carregador de 12 V para a
+recarregar e observa-se que inicialmente a corrente do carregador tem
+intensidade de 7 A, mas 6 horas depois diminui a 3 A.  Admitindo
+diminuição linear da corrente em ordem ao tempo, com que percentagem
+da sua carga máxima fica a bateria no fim das 6 horas?
+</li>
+<li id="prob-2.4">
+Uma pilha recarregável de Ni-MH tem f.e.m. de 1.2 V e carga máxima
+2300 mA·h. Determine a energia potencial elétrica máxima que essa
+pilha pode armazenar.
+<img class="img-7 center" src="img/Pilha_Ni-MH.jpg"
+     alt="Pilha Ni-MH" width="800" height="282">
+</li>
+<li id="prob-2.5">
+Uma calculadora pode funcionar com um adaptador que fornece 40 mA, a 3
+V, ou com duas pilhas AA cada uma com 1.5 V e carga máxima de 8 Ah,
+ligadas em série. Admitindo que a calculadora utiliza a mesma potência
+quando funciona a pilhas ou com o adaptador, por quanto tempo pode
+funcionar a pilhas?
+</li>
+<li id="prob-2.6">
+Numa casa, o fusível do fogão elétrico na caixa de fusíveis é de 30
+A. Qual é a potência máxima que pode ter o fogão? (admita diferença de
+potencial de 230 V).
+</li>
+<li id="prob-2.7">
+A corrente num cabo varia de acordo com a função <svg height='1.12596em' version='1.1' viewBox='-0.241348 -10.52812 57.0405 11.2596' width='5.70405em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq117'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.58085' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.5408' y='0'>2<tspan x='23.3749'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='30.6702' y='0'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='40.0456' y='0'>3</text>
+<text font-family='futri8r' font-size='10.9577' x='47.2878' y='0'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='52.2133' y='-4.33971'>2</text>
+</g>
+</svg>
+, onde
+<svg height='0.87827em' version='1.1' viewBox='-0.241348 -8.1827 6.2734 8.7827' width='0.62734em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq118'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+</g>
+</svg>
+ mede-se em miliampere e <svg height='0.808141em' version='1.1' viewBox='-0.360891 -7.34992 6.01041 8.08141' width='0.601041em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq119'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+</g>
+</svg>
+ em segundos. (<i>a</i>) Que carga
+transporta o cabo desde <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq120'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+ até <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 29.3235 8.7827' width='2.93235em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq121'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>1<tspan x='23.0043'>0</tspan>
+</text>
+</g>
+</svg>
+ s? (<i>b</i>) Qual o valor da
+corrente constante que transporta a mesma quantidade de carga no mesmo
+intervalo de tempo?
+</li>
+<li id="prob-2.8">
+Num condutor ligado a uma pilha com f.e.m. de 1.5 V, circulam
+9.6&times;10<sup>21</sup> eletrões de condução durante 2 horas. Determine:
+<br>
+(<i>a</i>) A intensidade da corrente média.
+<br>
+(<i>b</i>) A energia fornecida pela pilha durante esse intervalo.
+<br>
+(<i>c</i>) A potência média fornecida pela pilha.
+<br>
+(<i>d</i>) Se a carga inicial da pilha era de 3 A·h, com que carga fica
+após as 2 horas?
+</li>
+<li id="prob-2.9">
+Para manter a temperatura a 20 °C num
+quarto, durante um dia de inverno, estima-se ser necessária
+energia de 132 kJ cada minuto. Se essa energia for
+fornecida por um aquecedor elétrico, ligado à tensão de 220
+V disponível na casa:
+<br>
+(<i>a</i>) Determine a intensidade da corrente no aquecedor.
+<br>
+(<i>b</i>) Se o custo da energia elétrica for de 12 cêntimos por kw·h, qual
+o custo de manter ligado o aquecedor durante 10 minutos?
+</li>
+</ol>
+</section>
+<section id="Respostas">
+<h2>Respostas</h2>
+<p><b>Perguntas:</b> <b>1.</b> D. <b>2.</b> D. <b>3.</b> A.
+<b>4.</b> D. <b>5.</b> C.</p>
+<p><b>Problemas</b></p>
+<ol class="spacious">
+<li>
+8.80 Mm/s.
+</li>
+<li>
+(<i>a</i>) <svg height='1.12596em' version='1.1' viewBox='-0.6 -10.52812 72.4071 11.2596' width='7.24071em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq122'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.74472' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='19.7047' y='0'>6</text>
+<text font-family='futr8r' font-size='10.9577' x='25.5388' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='28.4558' y='0'>4</text>
+<text font-family='fourier-ms' font-size='10.9577' x='35.7511' y='0'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='45.1266' y='0'>1<tspan x='50.9607'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='56.7948' y='-4.33971'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='62.7306' y='-4.33971'>1<tspan x='67.1061'>6</tspan>
+</text>
+</g>
+</svg>
+ J, <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 39.6976 8.7827' width='3.96976em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq123'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.93177' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='18.8917' y='0'>3<tspan x='24.7258'>7</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='30.5599' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='33.477' y='0'>5</text>
+</g>
+</svg>
+ Mm/s. (<i>b</i>) 5 kV/m.
+</li>
+<li>
+(<i>a</i>) 5.4&times;10<sup>5</sup> C. (<i>b</i>) 72%.
+</li>
+<li>
+9.936 kJ.
+</li>
+<li>
+200 horas.
+</li>
+<li>
+6.9 kW.
+</li>
+<li>
+(<i>a</i>) 1.2 C. (<i>b</i>) 120 mA.
+</li>
+<li>
+(<i>a</i>) 214 mA. (<i>b</i>) 2.307 kJ. (<i>c</i>) 320 mW. (<i>d</i>) 2.57 A·h.
+</li>
+<li>
+(<i>a</i>) 10 A. (<i>b</i>) 4.4 cêntimos.
+</li>
+</ol>
+</section>
+<div id="p1c1" class="comment" onclick="document.getElementById('p1c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta A: Errada</div>
+<p>
+A força eletromotriz é a diferença entre as energias associadas às
+reações nos dois elétrodos, dividida pela carga transferida nessas
+reações. Como tal, depende do tipo de reações.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c2" class="comment" onclick="document.getElementById('p1c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta B: Errada</div>
+<p>
+O tamanho da pilha determina o número máximo de cargas, por unidade de
+tempo, que podem ser transferidas nas reações químicas (corrente
+máxima) mas não altera o tipo de reações, que são as que determinam a
+energia transferida a cada carga (força eletromotriz).
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c3" class="comment" onclick="document.getElementById('p1c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta C: Errada</div>
+<p>
+A carga máxima determina o número máximo de moléculas que podem reagir
+(energia total disponível) mas não determina a energia que essas
+reações fornecem a cada carga (força eletromotriz).
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c4" class="comment" onclick="document.getElementById('p1c4').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 1, resposta D: Certa</div>
+<p>
+O tamanho dos elétrodos não altera o tipo de reações químicas nos
+elétrodos, que são as que determinam o valor da f.e.m.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c5" class="comment" onclick="document.getElementById('p1c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta E: Errada</div>
+<p>
+Uma das outras quatro afirmações é correta.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c1" class="comment" onclick="document.getElementById('p2c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta A: Errada</div>
+<p>
+Basta multiplicar o tempo em horas (1/2) pela potência em kW
+(660/1000), para determinar a energia em kW·h, e multiplicar por 10
+cêntimos.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c2" class="comment" onclick="document.getElementById('p2c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta B: Errada</div>
+<p>
+Basta multiplicar o tempo em horas (1/2) pela potência em kW
+(660/1000), para determinar a energia em kW·h, e multiplicar por 10
+cêntimos.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c3" class="comment" onclick="document.getElementById('p2c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta C: Errada</div>
+<p>
+Basta multiplicar o tempo em horas (1/2) pela potência em kW
+(660/1000), para determinar a energia em kW·h, e multiplicar por 10
+cêntimos.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c4" class="comment" onclick="document.getElementById('p2c4').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 2, resposta D: Certa</div>
+<p>
+Basta multiplicar o tempo em horas (1/2) pela potência em kW
+(660/1000), para determinar a energia em kW·h, e multiplicar por 10
+cêntimos.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c5" class="comment" onclick="document.getElementById('p2c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta E: Errada</div>
+<p>
+Basta multiplicar o tempo em horas (1/2) pela potência em kW
+(660/1000), para determinar a energia em kW·h, e multiplicar por 10
+cêntimos.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c1" class="comment" onclick="document.getElementById('p3c1').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 3, resposta A: Certa</div>
+<p>
+A corrente média é (3+6)/2 = 4.5 A. Multiplicando por 3 obtém-se a
+carga em unidades de A·h e multiplicando por 3600 (segundos por hora)
+transforma-se de A·h para coulomb.
+</p>
+</div>
+</div>
+<div id="p3c2" class="comment" onclick="document.getElementById('p3c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta B: Errada</div>
+<p>
+A corrente média é (3+6)/2 = 4.5 A. Multiplicando por 3 obtém-se a
+carga em unidades de A·h e multiplicando por 3600 (segundos por hora)
+transforma-se de A·h para coulomb.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c3" class="comment" onclick="document.getElementById('p3c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta C: Errada</div>
+<p>
+A corrente média é (3+6)/2 = 4.5 A. Multiplicando por 3 obtém-se a
+carga em unidades de A·h e multiplicando por 3600 (segundos por hora)
+transforma-se de A·h para coulomb.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c4" class="comment" onclick="document.getElementById('p3c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta D: Errada</div>
+<p>
+A corrente média é (3+6)/2 = 4.5 A. Multiplicando por 3 obtém-se a
+carga em unidades de A·h e multiplicando por 3600 (segundos por hora)
+transforma-se de A·h para coulomb.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c5" class="comment" onclick="document.getElementById('p3c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta E: Errada</div>
+<p>
+A corrente média é (3+6)/2 = 4.5 A. Multiplicando por 3 obtém-se a
+carga em unidades de A·h e multiplicando por 3600 (segundos por hora)
+transforma-se de A·h para coulomb.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c1" class="comment" onclick="document.getElementById('p4c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta A: Errada</div>
+<p>
+A carga que a pilha fornece durante as 50 horas é 2.5 A·h, que é de
+facto 31% da carga máxima, mas a pergunta pede a carga com que a pilha
+fica após ter perdido esses 2.5 A·h.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c2" class="comment" onclick="document.getElementById('p4c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta B: Errada</div>
+<p>
+Se ficasse com 50% da sua carga total, implicaria que a outra metade
+(4 A·h) foi a carga que circulou pela resistência; calcule a carga que
+circula pela resistência durante as 50 horas.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c3" class="comment" onclick="document.getElementById('p4c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta C: Errada</div>
+<p>
+Encontre a carga que passa pela resistência, em unidades de A·h e
+subtraia essa carga da carga inicial de 8 A·h, para determinar com que
+carga fica a pilha, e divida pela carga inicial para dar a resposta em
+percentagem da carga inicial.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c4" class="comment" onclick="document.getElementById('p4c4').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 4, resposta D: Certa</div>
+<p>
+A pilha fica com 5.5 A·h, que é 69% da carga total.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c5" class="comment" onclick="document.getElementById('p4c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta E: Errada</div>
+<p>
+A corrente na resistência são cargas que estão a sair da pilha,
+descarregando-a. Como tal, a carga da pilha está a diminuir e não pode
+terminar com carga maior do que a carga inicial.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c1" class="comment" onclick="document.getElementById('p5c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta A: Errada</div>
+<p>
+Os eletrões e protões deslocar-se-ão em sentidos opostos, ou seja, as
+correntes devidas a eles têm o mesmo sentido e devem ser somadas.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c2" class="comment" onclick="document.getElementById('p5c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta B: Errada</div>
+<p>
+A corrente calcula-se multiplicando o número de cargas que passam, a
+cada segundo, pela carga de cada uma delas.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c3" class="comment" onclick="document.getElementById('p5c3').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 5, resposta C: Certa</div>
+<p>
+A pesar de que os dois tipos de partículas se deslocam em sentidos
+opostos, como o sinal das suas cargas também é oposto, produzem
+correntes no mesmo sentido.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c4" class="comment" onclick="document.getElementById('p5c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta D: Errada</div>
+<p>
+A corrente calcula-se multiplicando o número de cargas que passam, a
+cada segundo, pela carga de cada uma delas.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c5" class="comment" onclick="document.getElementById('p5c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta E: Errada</div>
+<p>
+Os eletrões e protões deslocar-se-ão em sentidos opostos, ou seja, as
+correntes devidas a eles têm o mesmo sentido e devem ser somadas.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div class="bottom">
+<a href="#top"><span class="button">Topo</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../index.html">DEF</a>
+</div>
+<div class="category">
+<a href="../textos.html">Material de estudo</a>
+</div>
+<div class="category">
+<a href="../cursos.html">Cadeiras no Moodle</a>
+</div>
+<div class="category">
+<a href="../faq.html">Perguntas frequentes</a>
+</div>
+</div>
+&copy; 2016 &ndash; 2019, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Última atualização: 2020/10/09 07:58:33 UTC</span>
+</footer>
+</body>
+</html>

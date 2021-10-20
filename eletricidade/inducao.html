@@ -1,0 +1,2756 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9. Indução eletromagnética</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body id="top">
+<aside>
+<span class="current">HTML</span>
+<a target="_blank" href="./inducao.pdf">PDF</a>
+</aside>
+<header>
+<h1 id="title">9. Indução eletromagnética</h1>
+</header>
+<nav>
+<a href="../index.html">DEF</a><span>&rarr;</span>
+<a href="../ensino.html">Ensino</a><span>&rarr;</span>
+<a href="../textos.html">Material de estudo</a><span>&rarr;</span>
+<a href="./index.html">Eletricidade, Magnetismo e Circuitos</a><span>&rarr;</span>
+<span>9. Indução eletromagnética</span>
+</nav>
+<div class="content">
+<span class="button">Índice</span>
+<div class="content-items">
+<a href="./index.html">Eletricidade, Magnetismo e Circuitos</a>
+<ol class="nested" style="counter-increment: item 8">
+<li><a href="#top">Indução eletromagnética</a>
+<ul class="plain">
+<li><a href="#Introdução">Introdução</a></li>
+</ul>
+<ol class="nested">
+<li><a href="#sec-9.1">Campo eelétrico induzido</a></li>
+<li><a href="#sec-9.2">Gerador de Farady</a></li>
+<li><a href="#sec-9.3">Lei de Faraday</a></li>
+<li><a href="#sec-9.4">Gerador de tensão alternada</a></li>
+<li><a href="#sec-9.5">Indução mútua</a></li>
+<li><a href="#sec-9.6">Indutância</a></li>
+<li><a href="#sec-9.7">Circuitos de corrente contínua com indutores</a></li>
+</ol>
+<ul class="plain">
+<li><a href="#Perguntas">Perguntas</a></li>
+<li><a href="#Problemas">Problemas</a></li>
+<li><a href="#Respostas">Respostas</a></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<section id="Introdução" class="opening">
+<h2>Introdução</h2>
+<img class="img-13 center" src="img/Parque_eolico_La_Muela.jpg"
+     alt="Parque eólico La Muela" width="800" height="600">
+<p>
+A energia eólica é uma das fontes de energia renováveis que estão a
+ser utilizadas para reduzir a contaminação produzida pelos
+combustíveis fósseis. Portugal é um dos países em que a energia de
+origem eólica corresponde a uma maior percentagem da energia elétrica
+total, com aproximadamente 9%. Independentemente do tipo de
+combustível ou fonte de energia usada para gerar energia elétrica, em
+quase todos os casos é gerada energia mecânica de rotação que é logo
+usada para gerar eletricidade. O princípio que permite transformar a
+energia mecânica de rotação em eletricidade é a <span id="indução!eletromagnética" class="index">indução
+eletromagnética</span>. Viu-se no capítulo
+anterior que quando circula corrente por uma bobina que está dentro de
+um campo magnético, esta tem uma tendência a rodar; a indução
+eletromagnética é o efeito inverso: numa bobina que se faz rodar
+dentro de um campo magnético é induzida uma corrente elétrica.
+</p>
+</section>
+<section id="sec-9.1">
+<h2>9.1. Campo elétrico induzido</h2>
+<p>
+Considere-se uma barra condutora em movimento num campo magnético
+uniforme, <svg height='1.18511em' version='1.1' viewBox='-0.6 -11.2511 8.68712 11.8511' width='0.868712em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq1'>
+<text font-family='fourier-ml' font-size='10.9577' x='0.561881' y='-2.43288'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>B</text>
+</g>
+</svg>
+, como na figura <a href="#fig-9.1">9.1</a>. Sobre cada
+partícula com carga <svg height='0.960453em' version='1.1' viewBox='-0.360891 -6.35277 7.79651 9.60453' width='0.779651em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>q</text>
+</g>
+</svg>
+ do condutor atua a força magnética
+</p>
+<div class="eqn" id="eq-9.1">(9.1)</div>
+<div class="center">
+<svg height='1.45029em' version='1.1' viewBox='202.017 68.9481 61.6347 14.5029' width='6.16347em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq3'>
+<text font-family='fourier-ml' font-size='10.9577' x='202.713' y='77.7664'></text>
+<text font-family='futri8r' font-size='10.9577' x='202.617' y='80.1993'>F</text>
+<text font-family='futr8r' font-size='8.21825' x='209.252' y='81.9925'>m</text>
+<text font-family='fourier-ms' font-size='10.9577' x='219.408' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='229.608' y='80.1993'>q</text>
+<text font-family='fourier-ml' font-size='10.9577' x='237.513' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='238.081' y='80.1993'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='246.189' y='80.1993'>×</text>
+<text font-family='fourier-ml' font-size='10.9577' x='256.127' y='77.7664'></text>
+<text font-family='futri8r' font-size='10.9577' x='255.565' y='80.1993'>B</text>
+</g>
+</svg>
+</div>
+<br>
+<figure class="center" id="fig-9.1">
+<img class="fig" src="img/conductor_moving_in_magnetic_field.png"
+     alt="Condutor num campo magnético" style="width:11.52em">
+<figcaption>
+<b>Figura 9.1:</b> Condutor num campo magnético.
+</figcaption>
+</figure>
+<p>
+Essa força faz deslocar as cargas de condução no condutor e na
+situação da <a href="#fig-9.1">9.1</a>, acumular-se-á carga positiva em P e
+negativa em Q, qualquer que for o sinal das cargas de condução.
+Contudo, se o problema for analisado do ponto de vista do referencial
+que se desloca com o condutor (<a href="#fig-9.2">9.2</a>), este está em
+repouso e, portanto, não há força magnética sobre as cargas. Como se
+explica então o movimento das cargas na barra?
+</p>
+<p>
+O problema é que a equação <a href="#eq-9.1">9.1</a> não pode ser válida em
+qualquer referencial, porque a velocidade <svg height='0.972908em' version='1.1' viewBox='-0.928792 -8.99758 8.12524 9.72908' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq4'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.328792' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+</g>
+</svg>
+ é diferente em
+diferentes referenciais inerciais, mas a segunda lei de Newton implica
+que a força deve ser a mesma em qualquer referencial inercial.
+</p>
+<figure class="center" id="fig-9.2">
+<img class="fig" src="img/induced_electric_field.png"
+     alt="Campo elétrico induzido" style="width:13.83em">
+<figcaption>
+<b>Figura 9.2:</b> Campo elétrico induzido, <svg height='1.36444em' version='1.1' viewBox='-0.6 -11.2511 10.61742 13.6444' width='1.061742em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq5'>
+<text font-family='fourier-ml' font-size='10.9577' x='0.0776887' y='-2.43288'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='7.14919' y='1.79326'>i</text>
+</g>
+</svg>
+.
+</figcaption>
+</figure>
+<p>
+A equação <a href="#eq-9.1">9.1</a> é correta apenas no referencial em que o campo
+magnético é estático (não muda com o tempo). A solução do problema é
+que os campos elétrico e magnético não são independentes, e a
+força <a href="#eq-9.1">9.1</a> é apenas uma parte da equação geral para a força
+eletromagnética, que deverá dar o mesmo resultado em qualquer
+referencial inercial:
+</p>
+<div class="eqn" id="eq-9.2">(9.2)</div>
+<div class="center">
+<svg height='1.53539em' version='1.1' viewBox='191.987 68.9481 81.0454 15.3539' width='8.10454em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq6'>
+<text font-family='fourier-ml' font-size='10.9577' x='192.683' y='77.7664'></text>
+<text font-family='futri8r' font-size='10.9577' x='192.587' y='80.1993'>F</text>
+<text font-family='fourier-ms' font-size='10.9577' x='202.368' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='212.567' y='80.1993'>q</text>
+<text font-family='fourier-mex' font-size='10.9987' x='220.801' y='70.9435'></text>
+<text font-family='fourier-ml' font-size='10.9577' x='225.146' y='77.7664'></text>
+<text font-family='futri8r' font-size='10.9577' x='225.069' y='80.1993'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='234.229' y='80.1993'>+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='243.276' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='243.844' y='80.1993'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='251.952' y='80.1993'>×</text>
+<text font-family='fourier-ml' font-size='10.9577' x='261.889' y='77.7664'></text>
+<text font-family='futri8r' font-size='10.9577' x='261.327' y='80.1993'>B</text>
+<text font-family='fourier-mex' font-size='10.9987' x='269.397' y='70.9435'></text>
+</g>
+</svg>
+</div>
+<p>
+No referencial que se desloca com a barra (ver figura <a href="#fig-9.2">9.2</a>),
+<svg height='1.19826em' version='1.1' viewBox='-0.928792 -11.2511 26.7387 11.9826' width='2.67387em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq7'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.328792' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.3473' y='0'>×</text>
+<text font-family='fourier-ml' font-size='10.9577' x='18.2846' y='-2.43288'></text>
+<text font-family='futri8r' font-size='10.9577' x='17.7228' y='0'>B</text>
+</g>
+</svg>
+ é nulo, porque a velocidade da barra é
+nula. Mas o movimento das linhas de campo magnético, com velocidade
+<svg height='0.972908em' version='1.1' viewBox='-0.6 -8.99758 15.7108 9.72908' width='1.57108em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq8'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='fourier-ml' font-size='10.9577' x='7.58553' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='8.15343' y='0'>v</text>
+</g>
+</svg>
+, produz campo elétrico <b>induzido</b>,
+<svg height='1.36444em' version='1.1' viewBox='-0.6 -11.2511 10.61742 13.6444' width='1.061742em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq9'>
+<text font-family='fourier-ml' font-size='10.9577' x='0.0776887' y='-2.43288'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='7.14919' y='1.79326'>i</text>
+</g>
+</svg>
+, e força <svg height='1.45029em' version='1.1' viewBox='-0.360891 -11.2511 18.8518 14.5029' width='1.88518em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq10'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>q</text>
+<text font-family='fourier-ml' font-size='10.9577' x='8.55122' y='-2.43288'></text>
+<text font-family='futri8r' font-size='10.9577' x='8.47353' y='0'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='15.6227' y='1.79326'>i</text>
+</g>
+</svg>
+. Comparando com
+a força obtida no referencial em que o campo magnético é estático e
+não há campo elétrico (equação <a href="#eq-9.1">9.1</a>), conclui-se que o campo
+induzido é:
+</p>
+<div class="eqn" id="eq-9.3">(9.3)</div>
+<div class="center">
+<svg height='2.04199em' version='1.1' viewBox='205.214 65.5599 55.8229 20.4199' width='5.58229em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq11'>
+<rect height='0.3985' width='54.6229' x='205.814' y='66.1599'/>
+<rect height='18.4229' width='0.3985' x='205.814' y='66.5584'/>
+<text font-family='fourier-ml' font-size='10.9577' x='209.279' y='77.7664'></text>
+<text font-family='futri8r' font-size='10.9577' x='209.202' y='80.1993'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='216.351' y='81.9925'>i</text>
+<text font-family='fourier-ms' font-size='10.9577' x='221.298' y='80.1993'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='230.929' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='231.497' y='80.1993'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='239.605' y='80.1993'>×</text>
+<text font-family='fourier-ml' font-size='10.9577' x='249.542' y='77.7664'></text>
+<text font-family='futri8r' font-size='10.9577' x='248.98' y='80.1993'>B</text>
+<rect height='18.4229' width='0.3985' x='260.039' y='66.5584'/>
+<rect height='0.3985' width='54.6229' x='205.814' y='84.9813'/>
+</g>
+</svg>
+</div>
+<p>
+É como se no condutor existisse uma <span id="f.e.m.!induzida" class="index">f.e.m.</span>
+induzida, igual à diferença de potencial entre os seus
+extremos. Sendo <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 5.21051 9.46208' width='0.521051em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq12'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>l</text>
+</g>
+</svg>
+ o comprimento da barra, a f.e.m. induzida é:
+</p>
+<div class="eqn" id="eq-9.4">(9.4)</div>
+<div class="center">
+<svg height='1.3743em' version='1.1' viewBox='202.79 68.9481 59.4524 13.743' width='5.94524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq13'>
+<text font-family='fourier-mlit' font-size='10.9577' x='203.39' y='80.1993'>ε</text>
+<text font-family='futri8r' font-size='8.21825' x='209.068' y='81.9925'>i</text>
+<text font-family='fourier-ms' font-size='10.9577' x='215.217' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='225.177' y='80.1993'>l</text>
+<text font-family='fourier-ms' font-size='10.9577' x='230.948' y='80.1993'>|</text>
+<text font-family='fourier-ml' font-size='10.9577' x='233.68' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='234.248' y='80.1993'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='242.356' y='80.1993'>×</text>
+<text font-family='fourier-ml' font-size='10.9577' x='252.293' y='77.7664'></text>
+<text font-family='futri8r' font-size='10.9577' x='251.732' y='80.1993'>B</text>
+<text font-family='fourier-ms' font-size='10.9577' x='259.801' y='80.1993'>|</text>
+</g>
+</svg>
+</div>
+<br>
+<div id="ex-9.1" class="example">
+<h3>Exemplo 9.1</h3>
+<p>
+Uma barra condutora desliza sobre dois trilhos metálicos horizontais,
+unidos numa extremidade como, na figura. A distância <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 8.02662 9.46208' width='0.802662em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq14'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>h</text>
+</g>
+</svg>
+ é igual a
+3.3 cm e no instante <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq15'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+ a barra encontra-se a uma distância
+<svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 33.715 8.7827' width='3.3715em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq16'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.72855' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='18.6885' y='0'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='24.5226' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='27.4397' y='0'>2</text>
+</g>
+</svg>
+ cm da extremidade dos trilhos. Para <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq17'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>></text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+ a velocidade da
+barra é uniforme com módulo <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 33.8635 8.7827' width='3.38635em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq18'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.93177' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='18.8917' y='0'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='24.7258' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='27.6429' y='0'>5</text>
+</g>
+</svg>
+ cm/s e no sentido indicado na
+figura, permanecendo sempre em contacto com os trilhos de forma que
+possa circular corrente por eles e pela barra. (<i>a</i>) Sabendo que
+os trilhos e a barra são fios cilíndricos de cobre com diâmetro de
+1.2 mm, calcule a resistência total do circuito em função de <svg height='0.808141em' version='1.1' viewBox='-0.360891 -7.34992 6.01041 8.08141' width='0.601041em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq19'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+</g>
+</svg>
+, para
+<svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq20'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>></text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+ (admita que a temperatura é 20 °C). (<i>b</i>) Se existir um
+campo magnético externo, constante e uniforme, com módulo <svg height='0.892515em' version='1.1' viewBox='-0.6 -8.19366 32.5773 8.92515' width='3.25773em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq21'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>B</text>
+<text font-family='fourier-ms' font-size='10.9577' x='10.1153' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='20.0753' y='0'>3<tspan x='25.9094'>6</tspan>
+</text>
+</g>
+</svg>
+ G, no
+sentido indicado na figura, calcule a corrente no circuito em função
+do tempo, para <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq22'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>></text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+.
+</p>
+<img class="fig center" src="img/eic0014-ex_9_1.png"
+     alt="Barra a deslizar sobre dois trilhos" style="width:13.26em">
+</div>
+<p>
+<b>Resolução</b>. (<i>a</i>) O circuito neste caso é um retângulo
+com arestas <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.40204 6.83224' width='0.740204em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq23'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+</g>
+</svg>
+ e <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 8.02662 9.46208' width='0.802662em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq24'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>h</text>
+</g>
+</svg>
+. O comprimento total do fio que constitui o
+circuito é
+</p>
+<div class="center">
+<svg height='0.946208em' version='1.1' viewBox='203.76 71.4687 58.2886 9.46208' width='5.82886em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq25'>
+<text font-family='futri8r' font-size='10.9577' x='204.36' y='80.1993'>L</text>
+<text font-family='fourier-ms' font-size='10.9577' x='213.137' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='223.097' y='80.1993'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='230.339' y='80.1993'>x</text>
+<text font-family='fourier-ms' font-size='10.9577' x='238.244' y='80.1993'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='247.619' y='80.1993'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='254.622' y='80.1993'>h</text>
+</g>
+</svg>
+</div>
+<p>
+A distância <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.40204 6.83224' width='0.740204em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq26'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+</g>
+</svg>
+ aumenta com o tempo <svg height='0.808141em' version='1.1' viewBox='-0.360891 -7.34992 6.01041 8.08141' width='0.601041em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq27'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+</g>
+</svg>
+ segundo a equação:
+</p>
+<div class="center">
+<svg height='0.98418em' version='1.1' viewBox='205.817 72.8493 54.7408 9.8418' width='5.47408em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq28'>
+<text font-family='futri8r' font-size='10.9577' x='206.417' y='80.1993'>x</text>
+<text font-family='fourier-ms' font-size='10.9577' x='214.907' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='225.106' y='80.1993'>x</text>
+<text font-family='futr8r' font-size='8.21825' x='231.143' y='81.9925'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='237.478' y='80.1993'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='247.093' y='80.1993'>v</text>
+<text font-family='futri8r' font-size='10.9577' x='255.148' y='80.1993'>t</text>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='1.054309em' version='1.1' viewBox='-0.360891 -8.05121 38.1823 10.54309' width='3.81823em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq29'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+<text font-family='futr8r' font-size='8.21825' x='6.27646' y='1.79326'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='13.1958' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='23.1557' y='0'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='28.9898' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='31.9069' y='0'>2</text>
+</g>
+</svg>
+ cm e <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 33.8635 8.7827' width='3.38635em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq30'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.93177' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='18.8917' y='0'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='24.7258' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='27.6429' y='0'>5</text>
+</g>
+</svg>
+ cm/s. A área da
+secção transversal do fio é <svg height='1.12925em' version='1.1' viewBox='-0.015168 -10.52812 38.9361 11.2925' width='3.89361em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.076199em'>
+<g id='eq31'>
+<text font-family='futri8r' font-size='10.9577' x='0.836858' y='0'>A</text>
+<text font-family='fourier-ms' font-size='10.9577' x='10.2229' y='0'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='20.1829' y='0'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='28.3336' y='0'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='34.3351' y='-4.33971'>2</text>
+</g>
+</svg>
+, onde <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.05121 39.2602 8.7827' width='3.92602em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq32'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.0471' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='18.007' y='0'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='23.8412' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='26.7582' y='0'>0<tspan x='32.5923'>6</tspan>
+</text>
+</g>
+</svg>
+ cm é o raio do fio. A resistividade
+do cobre a 20 °C é <svg height='1.36922em' version='1.1' viewBox='-0.6 -10.4295 75.5882 13.6922' width='7.55882em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq33'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ρ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.03939' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='18.9993' y='0'>1<tspan x='24.8334'>7</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='32.1287' y='0'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='41.5042' y='0'>1<tspan x='47.3383'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='53.1724' y='-4.33971'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='59.1082' y='-4.33971'>7</text>
+<text font-family='fourier-ml' font-size='10.9577' x='66.0275' y='0'>Ω</text>
+</g>
+</svg>
+·cm e a resistência
+do fio que forma o circuito é
+</p>
+<div class="center">
+<svg height='5.60941em' version='1.1' viewBox='136.858 78.1934 192.421 56.0941' width='19.2421em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq34'>
+<text font-family='futri8r' font-size='10.9577' x='137.458' y='95.0177'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='147.406' y='95.0177'>=</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='158.561' y='86.924'>ρ</text>
+<text font-family='futri8r' font-size='10.9577' x='165.555' y='86.924'>L</text>
+<rect height='0.637912' width='13.7245' x='158.561' y='91.6023'/>
+<text font-family='futri8r' font-size='10.9577' x='162.172' y='103.219'>A</text>
+<text font-family='fourier-ms' font-size='10.9577' x='175.527' y='95.0177'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='186.682' y='86.924'>2</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='192.517' y='86.924'>ρ</text>
+<text font-family='futr8r' font-size='10.9577' x='199.51' y='86.924'>(</text>
+<text font-family='futri8r' font-size='10.9577' x='203.36' y='86.924'>h</text>
+<text font-family='fourier-ms' font-size='10.9577' x='212.09' y='86.924'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='221.704' y='86.924'>x</text>
+<text font-family='futr8r' font-size='8.21825' x='227.742' y='88.7173'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='234.077' y='86.924'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='243.691' y='86.924'>v</text>
+<text font-family='futri8r' font-size='10.9577' x='251.746' y='86.924'>t</text>
+<text font-family='futr8r' font-size='10.9577' x='256.672' y='86.924'>)</text>
+<rect height='0.637912' width='73.8388' x='186.682' y='91.6023'/>
+<text font-family='fourier-ml' font-size='10.9577' x='214.089' y='103.219'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='222.24' y='103.219'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='228.241' y='99.7639'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='147.406' y='125.322'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='158.561' y='117.228'>3<tspan x='164.395'>4</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='171.691' y='117.228'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='181.066' y='117.228'>1<tspan x='186.9'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='192.734' y='112.889'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='198.67' y='112.889'>7</text>
+<text font-family='futr8r' font-size='10.9577' x='203.544' y='117.228'>(<tspan x='207.393'>5</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='213.228' y='117.228'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='216.145' y='117.228'>5</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.44' y='117.228'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='232.815' y='117.228'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='238.65' y='117.228'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='241.567' y='117.228'>5</text>
+<text font-family='futri8r' font-size='10.9577' x='248.809' y='117.228'>t</text>
+<text font-family='futr8r' font-size='10.9577' x='253.734' y='117.228'>)</text>
+<rect height='0.637912' width='99.0223' x='158.561' y='121.907'/>
+<text font-family='fourier-ml' font-size='10.9577' x='186.517' y='133.523'>π</text>
+<text font-family='fourier-ms' font-size='10.9577' x='194.96' y='133.523'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='204.335' y='133.523'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='210.169' y='133.523'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='213.086' y='133.523'>0<tspan x='218.92'>6</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='224.755' y='130.068'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='260.825' y='125.322'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='270.785' y='125.322'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='276.619' y='125.322'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='279.536' y='125.322'>6<tspan x='285.37'>5</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='292.665' y='125.322'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='302.041' y='125.322'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='307.875' y='125.322'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='310.792' y='125.322'>0<tspan x='316.626'>5</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='323.868' y='125.322'>t</text>
+</g>
+</svg>
+</div>
+<p>
+em mΩ, se <svg height='0.808141em' version='1.1' viewBox='-0.360891 -7.34992 6.01041 8.08141' width='0.601041em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq35'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+</g>
+</svg>
+ for medido em segundos. (<i>b</i>) Na barra em
+movimento existe uma f.e.m. induzida:
+</p>
+<div class="center">
+<svg height='1.3743em' version='1.1' viewBox='183.173 68.9481 99.464 13.743' width='9.9464em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq36'>
+<text font-family='fourier-mlit' font-size='10.9577' x='183.773' y='80.1993'>ε</text>
+<text font-family='futri8r' font-size='8.21825' x='189.451' y='81.9925'>i</text>
+<text font-family='fourier-ms' font-size='10.9577' x='195.6' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='205.56' y='80.1993'>h</text>
+<text font-family='fourier-ms' font-size='10.9577' x='213.997' y='80.1993'>|</text>
+<text font-family='fourier-ml' font-size='10.9577' x='216.729' y='80.0199'></text>
+<text font-family='futri8r' font-size='10.9577' x='217.297' y='80.1993'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='225.405' y='80.1993'>×</text>
+<text font-family='fourier-ml' font-size='10.9577' x='235.342' y='77.7664'></text>
+<text font-family='futri8r' font-size='10.9577' x='234.781' y='80.1993'>B</text>
+<text font-family='fourier-ms' font-size='10.9577' x='242.85' y='80.1993'>|<tspan x='247.956'>=</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='257.916' y='80.1993'>B</text>
+<text font-family='futri8r' font-size='10.9577' x='267.394' y='80.1993'>v</text>
+<text font-family='futri8r' font-size='10.9577' x='275.21' y='80.1993'>h</text>
+</g>
+</svg>
+</div>
+<p>e a intensidade da corrente no circuito é</p>
+<div class="center">
+<svg height='2.56255em' version='1.1' viewBox='198.548 66.2383 68.318 25.6255' width='6.8318em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq37'>
+<text font-family='futri8r' font-size='10.9577' x='199.148' y='83.0625'>I</text>
+<text font-family='fourier-ms' font-size='10.9577' x='206.371' y='83.0625'>=</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='217.526' y='74.9689'>ε</text>
+<text font-family='futri8r' font-size='8.21825' x='223.205' y='76.7621'>i</text>
+<rect height='0.637912' width='9.78131' x='217.526' y='79.6472'/>
+<text font-family='futri8r' font-size='10.9577' x='218.465' y='91.2637'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='230.548' y='83.0625'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='241.704' y='74.9689'>B</text>
+<text font-family='futri8r' font-size='10.9577' x='251.182' y='74.9689'>v</text>
+<text font-family='futri8r' font-size='10.9577' x='258.998' y='74.9689'>h</text>
+<rect height='0.637912' width='24.5625' x='241.704' y='79.6472'/>
+<text font-family='futri8r' font-size='10.9577' x='250.034' y='91.2637'>R</text>
+</g>
+</svg>
+</div>
+<p>
+que em unidades SI, dá:
+</p>
+<div class="center">
+<svg height='5.65916em' version='1.1' viewBox='141.691 78.0397 182.032 56.5916' width='18.2032em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq38'>
+<text font-family='futri8r' font-size='10.9577' x='142.291' y='96.6615'>I</text>
+<text font-family='fourier-ms' font-size='10.9577' x='149.513' y='96.6615'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='160.669' y='88.5678'>3<tspan x='166.503'>6</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='173.798' y='88.5678'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='183.174' y='88.5678'>1<tspan x='189.008'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='194.842' y='84.2281'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='200.778' y='84.2281'>4</text>
+<text font-family='fourier-ms' font-size='10.9577' x='207.112' y='88.5678'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='216.488' y='88.5678'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='222.322' y='88.5678'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='225.239' y='88.5678'>5</text>
+<text font-family='fourier-ms' font-size='10.9577' x='232.534' y='88.5678'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='241.91' y='88.5678'>1<tspan x='247.744'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='253.578' y='84.2281'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='259.514' y='84.2281'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='265.849' y='88.5678'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='275.224' y='88.5678'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='281.058' y='88.5678'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='283.975' y='88.5678'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='291.271' y='88.5678'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='300.646' y='88.5678'>1<tspan x='306.48'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='312.314' y='84.2281'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='318.25' y='84.2281'>2</text>
+<rect height='0.637912' width='162.455' x='160.669' y='93.2462'/>
+<text font-family='futr8r' font-size='10.9577' x='192.385' y='104.863'>(<tspan x='196.235'>1</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='202.069' y='104.863'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='204.986' y='104.863'>6<tspan x='210.82'>5</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='218.115' y='104.863'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='227.491' y='104.863'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='233.325' y='104.863'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='236.242' y='104.863'>0<tspan x='242.076'>5</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='249.318' y='104.863'>t</text>
+<text font-family='futr8r' font-size='10.9577' x='254.244' y='104.863'>)</text>
+<text font-family='fourier-ms' font-size='10.9577' x='259.554' y='104.863'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='268.93' y='104.863'>1<tspan x='274.764'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='280.598' y='101.408'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='286.534' y='101.408'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='149.513' y='125.699'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='179.464' y='117.605'>4</text>
+<text font-family='futr8r' font-size='10.9577' x='185.298' y='117.605'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='188.215' y='117.605'>1<tspan x='194.049'>6</tspan>
+</text>
+<rect height='0.637912' width='58.0089' x='160.669' y='122.283'/>
+<text font-family='futr8r' font-size='10.9577' x='160.669' y='133.9'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='166.503' y='133.9'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='169.42' y='133.9'>6<tspan x='175.254'>5</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='182.549' y='133.9'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='191.925' y='133.9'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='197.759' y='133.9'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='200.676' y='133.9'>0<tspan x='206.51'>5</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='213.752' y='133.9'>t</text>
+</g>
+</svg>
+</div>
+<p>
+em mA.
+</p>
+</section>
+<section id="sec-9.2">
+<h2>9.2. Gerador de Faraday</h2>
+<p>
+Um tipo de <span id="gerador!de&nbsp;Faraday" class="index">gerador</span> de tensão contínua,
+inventado por Faraday, consiste num disco condutor, de raio <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq39'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+, que
+roda com velocidade angular <svg height='0.681032em' version='1.1' viewBox='-0.6 -6.10075 8.67313 6.81032' width='0.867313em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq40'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ω</text>
+</g>
+</svg>
+ dentro de um campo magnético
+perpendicular a ele (figura <a href="#fig-9.3">9.3</a>).
+</p>
+<figure class="center" id="fig-9.3">
+<img class="fig" src="img/Faraday_generator.png" alt="Gerador de Faraday"
+     style="width:19.56em">
+<figcaption>
+<b>Figura 9.3:</b> Gerador de Faraday.
+</figcaption>
+</figure>
+<p>
+No referencial que roda com o disco, existe um campo elétrico induzido
+na direção radial, com módulo igual a
+</p>
+<div class="eqn" id="eq-9.5">(9.5)</div>
+<div class="center">
+<svg height='1.058692em' version='1.1' viewBox='209.264 72.0056 47.0247 10.58692' width='4.70247em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq41'>
+<text font-family='futri8r' font-size='10.9577' x='209.864' y='80.1993'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='217.014' y='81.9925'>i</text>
+<text font-family='fourier-ms' font-size='10.9577' x='221.96' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='231.92' y='80.1993'>B</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='241.159' y='80.1993'>ω</text>
+<text font-family='futri8r' font-size='10.9577' x='250.386' y='80.1993'>r</text>
+</g>
+</svg>
+</div>
+<p>
+A diferença de potencial entre os pontos P e Q na figura <a href="#fig-9.3">9.3</a> é
+</p>
+<div class="eqn" id="eq-9.6">(9.6)</div>
+<div class="center">
+<svg height='4.0937em' version='1.1' viewBox='164.073 67.3324 136.978 40.937' width='13.6978em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq42'>
+<text font-family='futri8r' font-size='10.9577' x='164.673' y='91.1131'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='171.799' y='92.9064'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='180.043' y='91.1131'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='189.18' y='91.1131'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='196.305' y='92.9064'>P</text>
+<text font-family='fourier-ms' font-size='10.9577' x='203.798' y='91.1131'>=</text>
+<text font-family='futri8r' font-size='8.21825' x='218.224' y='73.6194'>R</text>
+<text font-family='fourier-mex' font-size='10.9987' x='213.758' y='75.8191'></text>
+<text font-family='futr8r' font-size='8.21825' x='214.292' y='107.571'>0</text>
+<text font-family='futri8r' font-size='10.9577' x='225.079' y='91.1131'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='232.228' y='92.9064'>i</text>
+<text font-family='futri8r' font-size='10.9577' x='236.298' y='91.1131'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='243.866' y='91.1131'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='251.913' y='91.1131'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='263.068' y='83.0195'>1</text>
+<rect height='0.637912' width='5.83411' x='263.068' y='87.6978'/>
+<text font-family='futr8r' font-size='10.9577' x='263.068' y='99.3143'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='270.098' y='91.1131'>B</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='279.336' y='91.1131'>ω</text>
+<text font-family='futri8r' font-size='10.9577' x='288.563' y='91.1131'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='296.466' y='86.1756'>2</text>
+</g>
+</svg>
+</div>
+<p>
+e colocando duas escovas condutoras em contato com os pontos P e Q
+obtém-se uma fonte de força eletromotriz.
+</p>
+</section>
+<section id="sec-9.3">
+<h2>9.3. Lei de Faraday</h2>
+<p>
+A equação <a href="#eq-9.3">9.3</a> para o campo elétrico induzido não só se aplica
+a condutores em movimento, como a qualquer referencial que se desloque
+com velocidade <svg height='0.972908em' version='1.1' viewBox='-0.928792 -8.99758 8.12524 9.72908' width='0.812524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq43'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.328792' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+</g>
+</svg>
+ em relação a um sistema onde as linhas de
+campo aparecem como fixas no espaço. Do ponto de vista desse
+referencial, as linhas de campo deslocam-se com velocidade <svg height='0.972908em' version='1.1' viewBox='-0.6 -8.99758 15.7108 9.72908' width='1.57108em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq44'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='fourier-ml' font-size='10.9577' x='7.58553' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='8.15343' y='0'>v</text>
+</g>
+</svg>
+
+e sempre que houver alteração das linhas de campo magnético, surgirá
+campo elétrico induzido.
+</p>
+<p>
+Outra situação em que há alteração das linhas de campo magnético é
+quando o campo magnético é variável, dando origem a um campo elétrico
+induzido. Uma expressão geral que inclui quer as situações em que o
+referencial se desloca em relação ao campo, quer as de campo magnético
+variável, é a <b><span id="lei!de&nbsp;Faraday" class="index">lei</span>
+de <span id="Faraday,&nbsp;Michael" class="index">Faraday</span></b>:
+</p>
+<div class="quotation">
+<p>
+<i>Numa espira condutora C, sempre que o fluxo magnético <svg height='0.889228em' version='1.1' viewBox='-0.6 -8.29228 9.83464 8.89228' width='0.983464em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq45'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>Ψ</text>
+</g>
+</svg>
+
+através da superfície delimitada por C varia, surge uma força
+eletromotriz induzida ao longo da espira, igual à derivada do fluxo em
+ordem ao tempo.</i>
+</p>
+</div>
+<div class="eqn" id="eq-9.7">(9.7)</div>
+<div class="center">
+<svg height='3.25663em' version='1.1' viewBox='204.606 66.1497 57.0404 32.5663' width='5.70404em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq46'>
+<rect height='0.3985' width='55.8404' x='205.206' y='66.7497'/>
+<rect height='30.5693' width='0.3985' x='205.206' y='67.1482'/>
+<text font-family='fourier-mlit' font-size='10.9577' x='208.593' y='86.4319'>ε</text>
+<text font-family='futri8r' font-size='8.21825' x='214.272' y='88.2251'>i</text>
+<text font-family='fourier-ms' font-size='10.9577' x='220.42' y='86.4319'>=<tspan x='230.38'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='239.49' y='78.3382'>d</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='247.234' y='78.3382'>Ψ</text>
+<rect height='0.637912' width='16.9736' x='239.49' y='83.0165'/>
+<text font-family='futr8r' font-size='10.9577' x='241.522' y='94.6331'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='249.505' y='94.6331'>t</text>
+<rect height='30.5693' width='0.3985' x='260.647' y='67.1482'/>
+<rect height='0.3985' width='55.8404' x='205.206' y='97.7175'/>
+</g>
+</svg>
+</div>
+<p>
+O <b><span id="fluxo!magnético" class="index">fluxo</span> magnético</b> <svg height='0.889228em' version='1.1' viewBox='-0.6 -8.29228 9.83464 8.89228' width='0.983464em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq47'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>Ψ</text>
+</g>
+</svg>
+,
+através da superfície S delimitada pela espira, define-se de forma
+análoga ao fluxo do campo elétrico. Se o campo for uniforme sobre o
+plano da espira, com módulo constante <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 8.55259 8.79366' width='0.855259em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq48'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>B</text>
+</g>
+</svg>
+ e formando um ângulo
+<svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 6.89799 9.47304' width='0.689799em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq49'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>θ</text>
+</g>
+</svg>
+ com o versor perpendicular à espira, o fluxo magnético é
+</p>
+<div class="eqn" id="eq-9.8">(9.8)</div>
+<div class="center">
+<svg height='1.63611em' version='1.1' viewBox='196.529 67.9928 73.1937 16.3611' width='7.31937em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq50'>
+<rect height='0.3985' width='71.9937' x='197.129' y='68.5928'/>
+<rect height='14.3641' width='0.3985' x='197.129' y='68.9913'/>
+<text font-family='fourier-mlit' font-size='10.9577' x='200.516' y='80.1993'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='211.791' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='222.588' y='80.1993'>A</text>
+<text font-family='futri8r' font-size='10.9577' x='231.097' y='80.1993'>B</text>
+<text font-family='futr8r' font-size='10.9577' x='241.505' y='80.1993'>c<tspan x='246.957'>o</tspan>
+<tspan x='253.305'>s</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='259.268' y='80.1993'>θ</text>
+<rect height='14.3641' width='0.3985' x='268.724' y='68.9913'/>
+<rect height='0.3985' width='71.9937' x='197.129' y='83.3554'/>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='0.87827em' version='1.1' viewBox='-0.015168 -8.1827 8.66217 8.7827' width='0.866217em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq51'>
+<text font-family='futri8r' font-size='10.9577' x='0.836858' y='0'>A</text>
+</g>
+</svg>
+ é a área da espira. Se o campo não for uniforme, é preciso
+dividir a espira em pequenos elementos diferenciais e somar todos os
+fluxos infinitesimais, obtendo-se um integral de superfície.
+</p>
+<p>
+O versor perpendicular à espira, <svg height='0.940035em' version='1.1' viewBox='-0.6 -8.66885 8.15812 9.40035' width='0.815812em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq52'>
+<text font-family='futr8r' font-size='10.9577' x='2.09812' y='-0.179335'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>n</text>
+</g>
+</svg>
+, pode ser escolhido a
+apontar para qualquer dos dois lados da superfície; o versor que for
+escolhido, define o sentido positivo da corrente na espira, usando a
+<span id="regra!da&nbsp;mão&nbsp;direita!versor&nbsp;normal" class="index">regra</span> da mão direita
+(figura <a href="#fig-9.4">9.4</a>). O
+sinal obtido no lado direito da equação <a href="#eq-9.7">9.7</a> indica o sentido
+do campo induzido na espira, tendo em conta que o sentido positivo é o
+que segue a regra da mão direita em relação ao versor <svg height='0.940035em' version='1.1' viewBox='-0.6 -8.66885 8.15812 9.40035' width='0.815812em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq53'>
+<text font-family='futr8r' font-size='10.9577' x='2.09812' y='-0.179335'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>n</text>
+</g>
+</svg>
+.
+</p>
+<figure class="center" id="fig-9.4">
+<img class="fig" src="img/normal_vector_of_curve.png"
+     alt="Sentido positivo de uma curva" style="width:19.38em">
+<figcaption>
+<b>Figura 9.4:</b> Definição do versor normal a uma curva plana.
+</figcaption>
+</figure>
+<p>
+O sentido do campo induzido pode também ser determinado pela
+<b><span id="lei!de&nbsp;Lenz" class="index">lei</span> de <span id="Lenz,&nbsp;Heinrich" class="index">Lenz</span></b>:
+</p>
+<div class="quotation">
+<p>
+<i>A força eletromotriz e o campo induzido são sempre no sentido
+que produz um campo magnético induzido que contraria a variação do
+fluxo magnético externo</i>.
+</p>
+</div>
+<p>
+Tal como no caso do campo elétrico (nas regiões onde não há cargas) ou
+do escoamento de um fluido incompressível, o fluxo é o mesmo através
+de todas as superfícies atravessadas pelas mesmas linhas de campo. As
+linhas de campo magnético que passam pela periferia de uma secção
+conexa de uma superfície delimitam uma região do espaço que é um tubo
+de fluxo magnético constante.
+</p>
+<figure class="center" id="fig-9.5">
+<img class="fig" src="img/moving_magnet_and_loop.png"
+     alt="Íman em movimento junto de uma espira" style="width:24.39em">
+<figcaption>
+<b>Figura 9.5:</b> Íman em movimento junto de uma espira condutora.
+</figcaption>
+</figure>
+<p>
+Um exemplo de aplicação da lei de Faraday é o caso de um íman que se
+aproxima de um anel condutor, com velocidade <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.36917 6.83224' width='0.736917em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq54'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+</g>
+</svg>
+. O movimento do íman
+implica variação do fluxo magnético através do anel.
+</p>
+<p>
+Na situação representada na figura <a href="#fig-9.5">9.5</a>, o fluxo magnético no
+anel é no sentido da esquerda para a direita e está a
+aumentar. Aparece então corrente induzida no anel, dando origem a
+fluxo magnético da direita para a esquerda, que contraria o aumento do
+fluxo externo. Como tal, o campo magnético induzido aponta para a
+esquerda, o que implica que a corrente e a f.e.m. induzidas no anel
+são no sentido indicado na figura. É como se tivesse sido ligada uma
+pilha no anel.
+</p>
+<div id="ex-9.2" class="example">
+<h3>Exemplo 9.2</h3>
+<img class="fig right" src="img/eic0014-ex_9_2.png"
+     alt="Espira dentro de um campo magnético variável" style="width:11.28em">
+<p>
+Uma espira condutora retangular com lados de 20 cm e 30 cm encontra-se
+sobre o plano O<svg height='0.93525em' version='1.1' viewBox='-0.057028 -6.10075 13.3269 9.3525' width='1.33269em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq55'>
+<text font-family='futri8r' font-size='10.9577' x='0.597761' y='0'>y</text>
+<text font-family='futri8r' font-size='10.9577' x='6.99376' y='0'>z</text>
+</g>
+</svg>
+, com um vértice na origem, como mostra a figura. A
+partir do instante <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq56'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+ aparece na região onde se encontra a espira
+um campo magnético variável com componentes (unidades SI):
+</p>
+<div class="center">
+<svg height='1.5508em' version='1.1' viewBox='145.951 69.0734 173.873 15.508' width='17.3873em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq57'>
+<text font-family='futri8r' font-size='10.9577' x='146.551' y='80.1993'>B</text>
+<text font-family='futri8r' font-size='8.21825' x='154.155' y='81.9925'>x</text>
+<text font-family='fourier-ms' font-size='10.9577' x='161.531' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='171.491' y='80.1993'>6</text>
+<text font-family='futri8r' font-size='10.9577' x='178.733' y='80.1993'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='183.659' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='189.994' y='80.1993'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='199.369' y='80.1993'>4</text>
+<text font-family='futri8r' font-size='10.9577' x='226.244' y='80.1993'>B</text>
+<text font-family='futri8r' font-size='8.21825' x='234.117' y='81.9925'>y</text>
+<text font-family='fourier-ms' font-size='10.9577' x='241.278' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='251.238' y='80.1993'>5</text>
+<text font-family='futri8r' font-size='10.9577' x='258.48' y='80.1993'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='263.406' y='75.2618'>3</text>
+<text font-family='futri8r' font-size='10.9577' x='289.321' y='80.1993'>B</text>
+<text font-family='futri8r' font-size='8.21825' x='296.924' y='81.9925'>z</text>
+<text font-family='fourier-ms' font-size='10.9577' x='303.906' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='313.866' y='80.1993'>0</text>
+</g>
+</svg>
+</div>
+<p>
+(<i>a</i>) Calcule a f.e.m. induzida na espira, em função do tempo <svg height='0.808141em' version='1.1' viewBox='-0.360891 -7.34992 6.01041 8.08141' width='0.601041em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq58'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+</g>
+</svg>
+, a
+partir do instante <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq59'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+. (<i>b</i>) Diga (justificando) qual é o
+sentido da corrente induzida na espira.
+</p>
+</div>
+<p>
+<b>Resolução</b>. (<i>a</i>) Como o campo é uniforme pode-se usar a
+equação <a href="#eq-9.8">9.8</a>. A espira é perpendicular ao eixo dos <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.40204 6.83224' width='0.740204em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq60'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+</g>
+</svg>
+ e
+pode-se escolher o versor normal à espira igual a <svg height='0.940035em' version='1.1' viewBox='-0.360891 -8.66885 5.42072 9.40035' width='0.542072em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq61'>
+<text font-family='futr8r' font-size='10.9577' x='0.591775' y='-0.179335'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>ı</text>
+</g>
+</svg>
+;
+assim sendo, o produto <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 33.8993 9.47304' width='3.38993em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq62'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>B</text>
+<text font-family='futr8r' font-size='10.9577' x='9.23866' y='0'>c<tspan x='14.6902'>o</tspan>
+<tspan x='21.0384'>s</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='27.0014' y='0'>θ</text>
+</g>
+</svg>
+ será a componente <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.40204 6.83224' width='0.740204em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq63'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+</g>
+</svg>
+ do campo
+<svg height='1.18511em' version='1.1' viewBox='-0.6 -11.2511 8.68712 11.8511' width='0.868712em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq64'>
+<text font-family='fourier-ml' font-size='10.9577' x='0.561881' y='-2.43288'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>B</text>
+</g>
+</svg>
+ e o fluxo magnético através da espira é
+</p>
+<div class="center">
+<svg height='1.52287em' version='1.1' viewBox='160.884 69.0734 143.251 15.2287' width='14.3251em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq65'>
+<text font-family='fourier-mlit' font-size='10.9577' x='161.484' y='80.1993'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='172.759' y='80.1993'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='182.719' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='192.329' y='80.1993'>y</text>
+<text font-family='fourier-ml' font-size='10.9577' x='199.654' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='208.905' y='80.1993'>z</text>
+<text font-family='futri8r' font-size='10.9577' x='215.992' y='80.1993'>B</text>
+<text font-family='futri8r' font-size='8.21825' x='223.595' y='81.9925'>x</text>
+<text font-family='fourier-ms' font-size='10.9577' x='230.972' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='240.932' y='80.1993'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='246.766' y='80.1993'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='249.683' y='80.1993'>0<tspan x='255.517'>6</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='262.52' y='70.9435'></text>
+<text font-family='futr8r' font-size='10.9577' x='266.788' y='80.1993'>6</text>
+<text font-family='futri8r' font-size='10.9577' x='274.03' y='80.1993'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='278.955' y='75.2618'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='285.29' y='80.1993'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='294.666' y='80.1993'>4</text>
+<text font-family='fourier-mex' font-size='10.9987' x='300.5' y='70.9435'></text>
+</g>
+</svg>
+</div>
+<p>
+A f.e.m. induzida calcula-se usando a lei de Faraday
+</p>
+<div class="center">
+<svg height='2.57569em' version='1.1' viewBox='184.656 66.2203 96.8236 25.7569' width='9.68236em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq66'>
+<text font-family='fourier-mlit' font-size='10.9577' x='185.256' y='83.0446'>ε</text>
+<text font-family='futri8r' font-size='8.21825' x='190.935' y='84.8378'>i</text>
+<text font-family='fourier-ms' font-size='10.9577' x='197.083' y='83.0446'>=<tspan x='207.043'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='216.153' y='74.9509'>d</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='223.897' y='74.9509'>Ψ</text>
+<rect height='0.637912' width='16.9736' x='216.153' y='79.6292'/>
+<text font-family='futr8r' font-size='10.9577' x='218.186' y='91.2458'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='226.169' y='91.2458'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='236.368' y='83.0446'>=<tspan x='246.328'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='254.242' y='83.0446'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='260.076' y='83.0446'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='262.993' y='83.0446'>7<tspan x='268.828'>2</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='276.07' y='83.0446'>t</text>
+</g>
+</svg>
+</div>
+<p>
+(em volts, se <svg height='0.808141em' version='1.1' viewBox='-0.360891 -7.34992 6.01041 8.08141' width='0.601041em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq67'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+</g>
+</svg>
+ for dado em segundos).
+</p>
+<img class="fig right" src="img/eic0014-ex_9_2-sol.png"
+     alt="Sentido da corrente induzida na espira" style="width:11.28em">
+<p>
+(<i>b</i>) Como <svg height='0.808141em' version='1.1' viewBox='-0.360891 -7.34992 6.01041 8.08141' width='0.601041em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq68'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+</g>
+</svg>
+ é positivo, o valor de <svg height='0.859263em' version='1.1' viewBox='-0.6 -6.10075 9.86193 8.59263' width='0.986193em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq69'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ε</text>
+<text font-family='futri8r' font-size='8.21825' x='5.67871' y='1.79326'>i</text>
+</g>
+</svg>
+ calculado
+na alínea anterior é sempre negativo. Isso quer dizer que a corrente
+induzida é no sentido oposto do sentido usado para definir o versor
+normal à espira. A escolha de <svg height='0.940035em' version='1.1' viewBox='-0.6 -8.66885 25.0656 9.40035' width='2.50656em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq70'>
+<text font-family='futr8r' font-size='10.9577' x='2.09812' y='-0.179335'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>n</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.44586' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='19.9976' y='-0.179335'>ˆ</text>
+<text font-family='futri8r' font-size='10.9577' x='19.6449' y='0'>ı</text>
+</g>
+</svg>
+ implica que se
+está a percorrer a espira no sentido anti-horário, vista desde o
+semieixo positivo dos <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.40204 6.83224' width='0.740204em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq71'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+</g>
+</svg>
+. A corrente induzida é então no sentido dos
+ponteiros do relógio, como mostra a figura ao lado.
+</p>
+<p>
+Outra forma de obter o sentido da corrente consiste em observar que o
+campo <svg height='1.068554em' version='1.1' viewBox='-0.6 -8.19366 13.455 10.68554' width='1.3455em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq72'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>B</text>
+<text font-family='futri8r' font-size='8.21825' x='7.60349' y='1.79326'>x</text>
+</g>
+</svg>
+ inicialmente aponta no sentido negativo do eixo dos <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.40204 6.83224' width='0.740204em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq73'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+</g>
+</svg>
+,
+mas está sempre a aumentar no sentido positivo do eixo dos <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.40204 6.83224' width='0.740204em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq74'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+</g>
+</svg>
+. O
+campo induzido deve contrariar esse aumento, apontando no sentido
+negativo do eixo dos <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.40204 6.83224' width='0.740204em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq75'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+</g>
+</svg>
+. Pela regra da mão direita, um campo
+magnético induzido no sentido negativo do eixo dos <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.40204 6.83224' width='0.740204em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq76'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>x</text>
+</g>
+</svg>
+ implica
+corrente induzida em sentido dos ponteiros do relógio.
+</p>
+</section>
+<section id="sec-9.4">
+<h2>9.4. Gerador de tensão alternada</h2>
+<p>
+Um <span id="gerador!de&nbsp;tensão&nbsp;alternada" class="index">gerador</span> de tensão alternada
+(figura <a href="#fig-9.6">9.6</a>), consiste numa bobina que se faz
+rodar dentro de um campo magnético; o fio onde começa a bobina está
+soldado a um anél condutor e o fim do fio, depois de ser enrolado na
+bobina, solda-se a outro anel condutor; esses dois anéis mantêm o
+contato com duas escovas, P e Q, enquanto a bobina roda, de forma que
+<svg height='1.21621em' version='1.1' viewBox='-0.839109 -8.1827 37.3635 12.1621' width='3.73635em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.400198em'>
+<g id='eq77'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>P</text>
+<text font-family='fourier-ms' font-size='10.9577' x='13.7949' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='22.9312' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='30.0565' y='1.79326'>Q</text>
+</g>
+</svg>
+ é igual à diferença de potencial
+<svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq78'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ na bobina.
+</p>
+<figure class="center" id="fig-9.6">
+<img class="fig" src="img/alternator.png"
+     alt="Gerador de tensão alternada" style="width:23.43em">
+<figcaption>
+<b>Figura 9.6:</b> Gerador de tensão alternada.
+</figcaption>
+</figure>
+<p>
+O fluxo magnético através da bobina é:
+</p>
+<div class="eqn" id="eq-9.9">(9.9)</div>
+<div class="center">
+<svg height='0.947304em' version='1.1' viewBox='194.388 71.4687 76.7053 9.47304' width='7.67053em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq79'>
+<text font-family='fourier-mlit' font-size='10.9577' x='194.988' y='80.1993'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='206.263' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='216.462' y='80.1993'>N</text>
+<text font-family='futri8r' font-size='10.9577' x='227.279' y='80.1993'>B</text>
+<text font-family='futri8r' font-size='10.9577' x='237.355' y='80.1993'>A</text>
+<text font-family='futr8r' font-size='10.9577' x='247.033' y='80.1993'>c<tspan x='252.484'>o</tspan>
+<tspan x='258.833'>s</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='264.796' y='80.1993'>θ</text>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.1827 10.95232 8.7827' width='1.095232em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq80'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>N</text>
+</g>
+</svg>
+ é o número de espiras, <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 8.55259 8.79366' width='0.855259em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq81'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>B</text>
+</g>
+</svg>
+ o campo magnético médio, <svg height='0.87827em' version='1.1' viewBox='-0.015168 -8.1827 8.66217 8.7827' width='0.866217em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq82'>
+<text font-family='futri8r' font-size='10.9577' x='0.836858' y='0'>A</text>
+</g>
+</svg>
+ a
+área de cada espira, e <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 6.89799 9.47304' width='0.689799em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq83'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>θ</text>
+</g>
+</svg>
+ o ângulo médio entre o campo e a
+normal à bobina.
+</p>
+<p>
+Se a bobina roda com velocidade angular constante, <svg height='0.681032em' version='1.1' viewBox='-0.6 -6.10075 8.67313 6.81032' width='0.867313em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq84'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ω</text>
+</g>
+</svg>
+, o ângulo
+<svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 6.89799 9.47304' width='0.689799em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq85'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>θ</text>
+</g>
+</svg>
+, em função do tempo, é dado por <svg height='1.12225em' version='1.1' viewBox='-0.6 -8.73059 36.5558 11.2225' width='3.65558em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq86'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ω</text>
+<text font-family='futri8r' font-size='10.9577' x='9.46582' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='15.8525' y='0'>+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='25.228' y='0'>θ</text>
+<text font-family='futr8r' font-size='8.21825' x='31.337' y='1.79326'>0</text>
+</g>
+</svg>
+. Como
+tal, a derivada do fluxo magnético em ordem ao tempo é
+</p>
+<div class="eqn" id="eq-9.10">(9.10)</div>
+<div class="center">
+<svg height='1.12225em' version='1.1' viewBox='175.918 71.4687 113.251 11.2225' width='11.3251em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq87'>
+<text font-family='fourier-ml' font-size='10.9577' x='176.518' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='184.121' y='80.1993'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='195.408' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='205.129' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='212.254' y='81.9925'>m<tspan x='219.867'>á</tspan>
+<tspan x='224.18'>x</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='231.024' y='80.1993'>s<tspan x='235.818'>i</tspan>
+<tspan x='239.022'>n</tspan>
+<tspan x='245.824'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='249.674' y='80.1993'>ω</text>
+<text font-family='futri8r' font-size='10.9577' x='259.139' y='80.1993'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='265.526' y='80.1993'>+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='274.902' y='80.1993'>θ</text>
+<text font-family='futr8r' font-size='8.21825' x='281.011' y='81.9925'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='285.884' y='80.1993'>)</text>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='1.068554em' version='1.1' viewBox='-0.839109 -8.19366 73.8761 10.68554' width='7.38761em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq88'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>m<tspan x='14.4986'>á</tspan>
+<tspan x='18.8115'>x</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='25.3632' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='35.5622' y='0'>N</text>
+<text font-family='futri8r' font-size='10.9577' x='46.3789' y='0'>B</text>
+<text font-family='futri8r' font-size='10.9577' x='56.4544' y='0'>A</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='64.9638' y='0'>ω</text>
+</g>
+</svg>
+. A expressão <a href="#eq-9.10">9.10</a> dá
+a diferença de potencial entre as duas escovas condutoras, em função
+do tempo e é designada <b><span id="tensão!alternada" class="index">tensão</span> alternada</b>.
+A diferença de potencial oscila entre um
+valor máximo <svg height='1.067459em' version='1.1' viewBox='-0.839109 -8.1827 24.4337 10.67459' width='2.44337em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq89'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>m<tspan x='14.4986'>á</tspan>
+<tspan x='18.8115'>x</tspan>
+</text>
+</g>
+</svg>
+ positivo e um valor mínimo negativo
+<svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 32.1089 10.67459' width='3.21089em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq90'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='7.67521' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='14.8005' y='1.79326'>m<tspan x='22.413'>á</tspan>
+<tspan x='26.7258'>x</tspan>
+</text>
+</g>
+</svg>
+. A <span id="frequência" class="index">frequência</span> da tensão
+alternada, <svg height='1.19823em' version='1.1' viewBox='-0.19343 -8.73059 53.7733 11.9823' width='5.37733em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq91'>
+<text font-family='futri8r' font-size='10.9577' x='1.19552' y='0'>f</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.38608' y='0'>=</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='19.346' y='0'>ω</text>
+<text font-family='futr8r' font-size='10.9577' x='27.4038' y='0'>/<tspan x='32.4608'>(</tspan>
+<tspan x='36.3104'>2</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='43.3134' y='0'>π</text>
+<text font-family='futr8r' font-size='10.9577' x='50.2952' y='0'>)</text>
+</g>
+</svg>
+, é o número de oscilações por
+unidade de tempo.
+</p>
+<p>
+O gerador de tensão alternada, também chamado <span id="alternador"
+class="index">alternador</span>, usa-se para gerar energia elétrica a partir de
+energia mecânica. A fonte da energia mecânica, que faz rodar a bobina,
+pode ser o vento, nas centrais de energia eólica, a corrente de água,
+nas centrais hidroelétricas, o fluxo de vapor de água evaporada por
+combustão de carvão, o movimento do motor, no alternador usado para
+recarregar a bateria num automóvel, etc.
+</p>
+<p>
+É importante regular a velocidade de rotação da bobina, de forma a
+manter uma velocidade angular constante, para que a tensão elétrica
+produzida tenha uma frequência constante. É por isso que as aspas num
+moinho de vento de uma estação eólica rodam lentamente e com
+velocidade angular constante. Existe um mecanismo mecânico usado para
+regular essa velocidade.
+</p>
+</section>
+<section id="sec-9.5">
+<h2>9.5. Indução mútua</h2>
+<p>
+Num circuito a corrente dá origem a campo magnético e, portanto, a
+fluxo magnético. Como tal, qualquer variação da corrente dá origem a
+uma força eletromotriz induzida no circuito.
+</p>
+<p>
+Por exemplo, quando se fecha um interruptor num circuito de corrente
+contínua, a corrente não aumenta instantaneamente de zero até um valor
+final, devido à indutância do circuito. A tendência da corrente para
+aumentar bruscamente é contrariada por uma corrente induzida oposta,
+que impõe o aumento da corrente de forma gradual. Igualmente, quando
+se abre o interruptor, a corrente não passa a ser nula de forma
+instantânea mas sim gradual.
+</p>
+<p>
+Imaginem-se dois circuitos, lado a lado (figura <a href="#fig-9.7">9.7</a>). No
+primeiro circuito há uma fonte de tensão que produz corrente e uma
+resistência variável que permite alterar a intensidade dessa
+corrente. No segundo circuito não há nenhuma fonte de tensão.
+</p>
+<figure class="center" id="fig-9.7">
+<img class="fig" src="img/mutual_inductance.png" alt="Indução mútua"
+     style="width:19.98em">
+<figcaption>
+<b>Figura 9.7:</b> Indução mútua entre dois circuitos.
+</figcaption>
+</figure>
+<p>
+A corrente no circuito 1 (lado esquerdo) origina fluxo magnético
+através do circuito 2, diretamente proporcional à corrente <svg height='1.057597em' version='1.1' viewBox='-0.241348 -8.1827 9.17893 10.57597' width='0.917893em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq92'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='4.74621' y='1.79326'>1</text>
+</g>
+</svg>
+ que
+produz esse campo magnético:
+</p>
+<div class="eqn" id="eq-9.11">(9.11)</div>
+<div class="center">
+<svg height='1.057597em' version='1.1' viewBox='204.937 72.0165 55.0946 10.57597' width='5.50946em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq93'>
+<text font-family='fourier-mlit' font-size='10.9577' x='205.537' y='80.1993'>Φ</text>
+<text font-family='futr8r' font-size='8.21825' x='213.643' y='81.9925'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='220.562' y='80.1993'>=<tspan x='230.522'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='238.676' y='80.1993'>M</text>
+<text font-family='futri8r' font-size='10.9577' x='251.453' y='80.1993'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='255.841' y='81.9925'>1</text>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.1827 12.5631 8.7827' width='1.25631em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq94'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>M</text>
+</g>
+</svg>
+ é uma constante chamada <b><span id="indutância!mútua" class="index">indutância</span> mútua</b>,
+que depende da forma dos circuitos e da
+distância entre eles.
+</p>
+<p>
+A variação da corrente no circuito 1 induz força eletromotriz no
+circuito 2:
+</p>
+<div class="eqn" id="eq-9.12">(9.12)</div>
+<div class="center">
+<svg height='2.57679em' version='1.1' viewBox='204.544 66.2383 55.9678 25.7679' width='5.59678em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq95'>
+<text font-family='fourier-mlit' font-size='10.9577' x='205.144' y='83.0625'>ε</text>
+<text font-family='futr8r' font-size='8.21825' x='210.823' y='84.8558'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='217.742' y='83.0625'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='227.941' y='83.0625'>M</text>
+<text font-family='futri8r' font-size='10.9577' x='241.555' y='74.9689'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='250.651' y='74.9689'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='255.038' y='76.7621'>1</text>
+<rect height='0.637912' width='18.3565' x='241.555' y='79.6472'/>
+<text font-family='futri8r' font-size='10.9577' x='243.783' y='91.2637'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='252.759' y='91.2637'>t</text>
+</g>
+</svg>
+</div>
+<p>
+No sistema internacional, a <span id="henry&nbsp;(unidade)" class="index">unidade</span> da indutância (V·s/A) é o
+<b>henry</b>, representado pela letra H, em
+homenagem ao físico Joseph <span id="Henry,&nbsp;Joseph" class="index">Henry</span> (1797&ndash;1878).</p>
+</section>
+<section id="sec-9.6">
+<h2>9.6. Indutância</h2>
+<p>
+A corrente numa bobina produz campo magnético que atravessa as espiras
+da bobina, como mostra a figura <a href="#fig-9.8">9.8</a>. Como tal, a bobina
+produz fluxo magnético através de si própria e qualquer alteração da
+corrente na bobina dá origem a variação desse fluxo, produzindo força
+eletromotriz induzida na bobina, que contraria a alteração da
+corrente.
+</p>
+<figure class="center" id="fig-9.8">
+<img class="fig" src="img/coil.png" alt="Auto indução" style="width:6.42em">
+<figcaption>
+<b>Figura 9.8:</b> Campo magnético produzido pela corrente numa bobina.
+</figcaption>
+</figure>
+<p>
+O campo magnético produzido pela bobina é diretamente proporcional à
+corrente. Como tal, o fluxo magnético produzido pela bobina sobre si
+própria é proporcional à corrente:
+</p>
+<div class="eqn" id="eq-9.13">(9.13)</div>
+<div class="center">
+<svg height='0.889228em' version='1.1' viewBox='215.191 71.907 35.7667 8.89228' width='3.57667em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq96'>
+<text font-family='fourier-mlit' font-size='10.9577' x='215.791' y='80.1993'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='227.066' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='237.026' y='80.1993'>L</text>
+<text font-family='futri8r' font-size='10.9577' x='245.284' y='80.1993'>I</text>
+</g>
+</svg>
+</div>
+<p>
+e a constante <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 7.80747 8.7827' width='0.780747em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq97'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>L</text>
+</g>
+</svg>
+ é a <span id="indutância" class="index">indutância</span> da bobina. A
+f.e.m. <span id="f.e.m.!autoinduzida" class="index">autoinduzida</span> na própria bobina é:
+</p>
+<div class="eqn" id="eq-9.14">(9.14)</div>
+<div class="center">
+<svg height='3.25663em' version='1.1' viewBox='202.503 66.1497 61.2459 32.5663' width='6.12459em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq98'>
+<rect height='0.3985' width='60.0459' x='203.103' y='66.7497'/>
+<rect height='30.5693' width='0.3985' x='203.103' y='67.1482'/>
+<text font-family='fourier-mlit' font-size='10.9577' x='206.49' y='86.4319'>ε</text>
+<text font-family='futri8r' font-size='8.21825' x='212.169' y='88.2251'>i</text>
+<text font-family='fourier-ms' font-size='10.9577' x='218.317' y='86.4319'>=<tspan x='228.277'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='236.191' y='86.4319'>L</text>
+<text font-family='futr8r' font-size='10.9577' x='245.286' y='78.3382'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='253.389' y='78.3382'>I</text>
+<rect height='0.637912' width='13.2795' x='245.286' y='83.0165'/>
+<text font-family='futr8r' font-size='10.9577' x='245.472' y='94.6331'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='253.455' y='94.6331'>t</text>
+<rect height='30.5693' width='0.3985' x='262.75' y='67.1482'/>
+<rect height='0.3985' width='60.0459' x='203.103' y='97.7175'/>
+</g>
+</svg>
+</div>
+<p>
+Quanto maior for a área das espiras na bobina, maior é a sua
+indutância. Quanto maior for o número de espiras, <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 8.15812 6.83224' width='0.815812em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq99'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>n</text>
+</g>
+</svg>
+, na bobina,
+maior será também a área atravessada pelas linhas de campo e maior
+será também o próprio campo magnético. Como tal, a indutância de uma
+bobina com <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 8.15812 6.83224' width='0.815812em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq100'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>n</text>
+</g>
+</svg>
+ espiras é diretamente proporcional a <svg height='1.12596em' version='1.1' viewBox='-0.6 -10.52812 12.5861 11.2596' width='1.25861em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq101'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>n</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='-4.33971'>2</text>
+</g>
+</svg>
+. A
+indutância da bobina é <svg height='1.12596em' version='1.1' viewBox='-0.6 -10.52812 12.5861 11.2596' width='1.25861em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq102'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>n</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='-4.33971'>2</text>
+</g>
+</svg>
+ vezes a indutância de cada uma das suas
+espiras por separado:
+</p>
+<div class="eqn" id="eq-9.15">(9.15)</div>
+<div class="center">
+<svg height='1.54093em' version='1.1' viewBox='187.921 69.0734 89.9129 15.4093' width='8.99129em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq103'>
+<text font-family='futri8r' font-size='10.9577' x='188.521' y='80.1993'>L</text>
+<text font-family='futr8r' font-size='8.21825' x='195.336' y='82.142'>b<tspan x='200.267'>o</tspan>
+<tspan x='205.028'>b</tspan>
+<tspan x='209.96'>i</tspan>
+<tspan x='212.363'>n</tspan>
+<tspan x='217.465'>a</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='224.321' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='234.281' y='80.1993'>n</text>
+<text font-family='futr8r' font-size='8.21825' x='241.681' y='75.2618'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='247.724' y='80.1993'>L</text>
+<text font-family='futr8r' font-size='8.21825' x='254.538' y='81.9925'>e<tspan x='258.78'>s</tspan>
+<tspan x='262.375'>p</tspan>
+<tspan x='267.387'>i</tspan>
+<tspan x='269.79'>r</tspan>
+<tspan x='272.92'>a</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+Todos os dispositivos têm indutância, mas geralmente essa indutância
+tem valor muito baixo que pode ser ignorado, exceto no caso das
+bobinas, usadas nos circuitos quando é necessário ter indutância não
+desprezável. A f.e.m. autoinduzida <a href="#eq-9.14">9.14</a> num dispositivo,
+representa-se num circuito de alguma das duas formas indicadas na
+figura <a href="#fig-9.9">9.9</a>. O símbolo usado no lado direito chama-se
+<span id="indutor" class="index"><b>indutor</b></span>, e em relação aos sinais usados na
+figura, a voltagem no indutor é: (o sinal positivo é devido à troca
+dos sinais em relação ao diagrama do lado esquerdo)
+</p>
+<div class="eqn" id="eq-9.16">(9.16)</div>
+<div class="center">
+<svg height='2.57569em' version='1.1' viewBox='206.316 66.2203 52.4251 25.7569' width='5.24251em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq104'>
+<text font-family='fourier-ml' font-size='10.9577' x='206.916' y='83.0446'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='214.519' y='83.0446'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='225.806' y='83.0446'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='235.766' y='83.0446'>L</text>
+<text font-family='futr8r' font-size='10.9577' x='244.861' y='74.9509'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='252.964' y='74.9509'>I</text>
+<rect height='0.637912' width='13.2795' x='244.861' y='79.6292'/>
+<text font-family='futr8r' font-size='10.9577' x='245.046' y='91.2458'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='253.03' y='91.2458'>t</text>
+</g>
+</svg>
+</div>
+<figure class="center" id="fig-9.9">
+<img class="fig" src="img/inductor.png"
+     alt="Diagrama de circuito de um indutor" style="width:14.01em">
+<figcaption>
+<b>Figura 9.9:</b> Diagrama de circuito de um indutor.
+</figcaption>
+</figure>
+<p>
+Tal como a indutância mútua, a indutância <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 7.80747 8.7827' width='0.780747em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq105'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>L</text>
+</g>
+</svg>
+ mede-se em henrys no
+sistema internacional de unidades.
+</p>
+</section>
+<section id="sec-9.7">
+<h2>9.7. Circuitos com indutores</h2>
+<p>
+Num circuito de corrente contínua, com fontes de tensão contínua, as
+correntes atingem o estado estacionário em que permanecem
+constantes. No estado estacionário, a equação <a href="#eq-9.16">9.16</a> implica
+que em todos os indutores no circuito a voltagem é nula, mas a
+corrente pode ter qualquer valor. Isso implica que, no estado
+estacionário, os indutores podem ser considerados curtos-circuitos
+(fios com resistência nula).
+</p>
+<p>
+Em qualquer instante em que se altera o estado estacionário, por ligar
+ou desligar alguma fonte, ou por abrir ou fechar algum interruptor, a
+corrente nos indutores não muda de forma instantânea, porque de acordo
+com a equação <a href="#eq-9.16">9.16</a> qualquer aumento instantâneo da corrente
+implica voltagem infinita, que é impossível. A corrente nos indutores
+varia sempre de forma contínua, enquanto que nas resistências,
+condensadores e fontes pode ser descontínua nos instantes em que se
+altera o estado estacionário. Mas a derivada da corrente nos indutores
+nesses instantes não é nula, devido à alteração introduzida no
+circuito. Como tal, a voltagem pode ter qualquer valor nesses
+instantes, e a corrente mantém o mesmo valor que tinha no estado
+estacionário.
+</p>
+<p>
+Conclui-se então que em qualquer instante <svg height='0.98418em' version='1.1' viewBox='-0.360891 -7.34992 9.3313 9.8418' width='0.93313em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq106'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='4.35169' y='1.79326'>0</text>
+</g>
+</svg>
+ em que é feita alguma
+mudança repentina no circuito, a voltagem num indutor pode ter
+qualquer valor, mas a corrente deverá ter o mesmo valor <svg height='1.067459em' version='1.1' viewBox='-0.241348 -8.1827 9.60628 10.67459' width='0.960628em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq107'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='4.74621' y='1.79326'>0</text>
+</g>
+</svg>
+ que
+tinha imediatamente antes da mudança ter acontecido. Se no instante
+<svg height='0.98418em' version='1.1' viewBox='-0.360891 -7.34992 9.3313 9.8418' width='0.93313em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq108'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='4.35169' y='1.79326'>0</text>
+</g>
+</svg>
+ em que se altera o estado estacionário do circuito a corrente no
+indutor é nula, o indutor é equivalente a um interruptor aberto, onde
+a corrente é nula, mas a voltagem pode ter qualquer valor.
+</p>
+<p>
+Após o instante <svg height='0.98418em' version='1.1' viewBox='-0.360891 -7.34992 9.3313 9.8418' width='0.93313em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq109'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='4.35169' y='1.79326'>0</text>
+</g>
+</svg>
+ em que há uma alteração repentina do circuito,
+as correntes nos indutores mudam gradualmente (resposta
+<span id="resposta!transitória" class="index">transitória</span>). Mas como não podem mudar
+indefinidamente, o circuito volta a atingir o estado estacionário em
+que as correntes nos indutores têm valores finais constantes. Para
+calcular esses valores finais das correntes, os indutores podem ser
+substituídos por curtos-circuitos (estado estacionário).
+</p>
+<div id="ex-9.3" class="example">
+<h3>Exemplo 9.3</h3>
+<img class="fig right" src="img/circ_21.png" alt="Circuito com indutor"
+     style="width:9.60em">
+<p>
+Uma bobina com resistência de 10 Ω e indutância de 1 H é ligada
+a duas resistências e a uma fonte de 12 V, como indica o
+diagrama. Encontre a corrente na resistência de 2 kΩ, no
+instante em que se fecha o interruptor e muito tempo após esse
+instante inicial. Determine a razão entre as correntes inicial e final
+nessa resistência.
+</p>
+</div>
+<p>
+<b>Resolução</b>. Como antes de ser fechado o interruptor
+não passa corrente pelo indutor, no instante inicial o
+indutor é equivalente a um interruptor aberto, ou seja, não
+circula corrente pela resistência de 10 Ω e é como se
+essa resistência e o indutor não existissem. Ignorando esses
+dois elementos, o circuito corresponde a uma única malha com
+a fonte e as duas resistências de 1 kΩ e 2 kΩ em
+série. Nessas condições, a corrente inicial nessas duas
+resistências é
+</p>
+<div class="center">
+<svg height='2.50776em' version='1.1' viewBox='190.699 66.0629 85.352 25.0776' width='8.5352em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq110'>
+<text font-family='futri8r' font-size='10.9577' x='191.299' y='82.2077'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='195.687' y='84.001'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='202.606' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='219.596' y='74.1141'>1<tspan x='225.43'>2</tspan>
+</text>
+<rect height='0.637912' width='23.3364' x='213.762' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='213.762' y='90.4089'>3<tspan x='219.596'>0</tspan>
+<tspan x='225.43'>0</tspan>
+<tspan x='231.264'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='240.339' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='250.299' y='82.2077'>4<tspan x='258.179'>m</tspan>
+<tspan x='268.329'>A</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+Para calcular a corrente final, substitui-se o indutor por um
+curto-circuito:
+</p>
+<img class="fig center" src="img/circ_22.png"
+     alt="Circuito equivalente no estado estacionário" style="width:9.06em">
+<p>
+as resistências de 2 kΩ e 10 Ω estão em paralelo,
+podendo ser substituídas por uma única resistência com valor
+2000 || 10 = 2/201 kΩ, que fica em série com a
+resistência de 1 kΩ e a resistência equivalente entre os
+terminais da fonte é
+</p>
+<div class="center">
+<svg height='2.50776em' version='1.1' viewBox='180.007 66.0629 105.74 25.0776' width='10.574em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq111'>
+<text font-family='futri8r' font-size='10.9577' x='180.607' y='82.2077'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='190.555' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='200.515' y='82.2077'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='207.81' y='82.2077'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='224.215' y='74.1141'>2</text>
+<rect height='0.637912' width='17.5023' x='218.381' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='218.381' y='90.4089'>2<tspan x='224.215'>0</tspan>
+<tspan x='230.049'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='239.125' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='250.28' y='74.1141'>2<tspan x='256.114'>0</tspan>
+<tspan x='261.948'>3</tspan>
+</text>
+<rect height='0.637912' width='17.5023' x='250.28' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='250.28' y='90.4089'>2<tspan x='256.114'>0</tspan>
+<tspan x='261.948'>1</tspan>
+<tspan x='271.023' y='82.2077'>k</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='276.786' y='82.2077'>Ω</text>
+</g>
+</svg>
+</div>
+<p>
+a corrente final que sai da fonte é <svg height='0.911143em' version='1.1' viewBox='-0.6 -8.34707 83.0779 9.11143' width='8.30779em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq112'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>1<tspan x='5.83412'>2</tspan>
+<tspan x='11.6682'>/</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='16.7253' y='0'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='26.6733' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='36.6332' y='0'>2<tspan x='42.4673'>4</tspan>
+<tspan x='48.3014'>1</tspan>
+<tspan x='54.1356'>2</tspan>
+<tspan x='59.9697'>/</tspan>
+<tspan x='65.0267'>2</tspan>
+<tspan x='70.8608'>0</tspan>
+<tspan x='76.695'>3</tspan>
+</text>
+</g>
+</svg>
+ mA e a diferença
+de potencial na resistência de 2 kΩ é
+</p>
+<div class="center">
+<svg height='2.73em' version='1.1' viewBox='164.416 66.2926 137.88 27.3' width='13.788em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq113'>
+<text font-family='fourier-ml' font-size='10.9577' x='165.016' y='83.0447'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='172.619' y='83.0447'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='183.906' y='83.0447'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='193.866' y='67.1896'></text>
+<text font-family='futr8r' font-size='10.9577' x='205.812' y='74.951'>2</text>
+<rect height='0.637912' width='17.5023' x='199.978' y='79.6293'/>
+<text font-family='futr8r' font-size='10.9577' x='199.978' y='91.2459'>2<tspan x='205.812'>0</tspan>
+<tspan x='211.646'>1</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='218.676' y='67.1896'><tspan x='224.761' y='67.1896'></tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='230.873' y='74.951'>2<tspan x='236.707'>4</tspan>
+<tspan x='242.541'>1</tspan>
+<tspan x='248.375'>2</tspan>
+</text>
+<rect height='0.637912' width='23.3364' x='230.873' y='79.6293'/>
+<text font-family='futr8r' font-size='10.9577' x='233.79' y='91.2459'>2<tspan x='239.624'>0</tspan>
+<tspan x='245.458'>3</tspan>
+</text>
+<text font-family='fourier-mex' font-size='10.9987' x='255.405' y='67.1896'></text>
+<text font-family='fourier-ms' font-size='10.9577' x='262.367' y='83.0447'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='276.44' y='74.951'>2<tspan x='282.274'>4</tspan>
+</text>
+<rect height='0.637912' width='17.5023' x='273.523' y='79.6293'/>
+<text font-family='futr8r' font-size='10.9577' x='273.523' y='91.2459'>2<tspan x='279.357'>0</tspan>
+<tspan x='285.191'>3</tspan>
+<tspan x='294.266' y='83.0447'>V</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+a corrente final na resistência de 2 kΩ é:
+</p>
+<div class="center">
+<svg height='2.53734em' version='1.1' viewBox='160.796 66.1854 145.158 25.3734' width='14.5158em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq114'>
+<text font-family='futri8r' font-size='10.9577' x='161.396' y='82.6261'>I</text>
+<text font-family='fourier-ms' font-size='10.9577' x='168.619' y='82.6261'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='179.774' y='74.5325'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='187.378' y='74.5325'>V</text>
+<rect height='0.637912' width='16.8448' x='179.774' y='79.2108'/>
+<text font-family='futri8r' font-size='10.9577' x='184.245' y='90.8274'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='199.86' y='82.6261'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='211.015' y='74.5325'>(<tspan x='214.865'>2</tspan>
+<tspan x='220.699'>4</tspan>
+<tspan x='226.533'>/</tspan>
+<tspan x='231.59'>2</tspan>
+<tspan x='237.424'>0</tspan>
+<tspan x='243.259'>3</tspan>
+<tspan x='249.093'>)</tspan>
+</text>
+<rect height='0.637912' width='41.9267' x='211.015' y='79.2108'/>
+<text font-family='futr8r' font-size='10.9577' x='220.311' y='90.8274'>2<tspan x='226.145'>0</tspan>
+<tspan x='231.979'>0</tspan>
+<tspan x='237.813'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='256.183' y='82.6261'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='270.256' y='74.5325'>1<tspan x='276.09'>2</tspan>
+</text>
+<rect height='0.637912' width='17.5023' x='267.339' y='79.2108'/>
+<text font-family='futr8r' font-size='10.9577' x='267.339' y='90.8274'>2<tspan x='273.173'>0</tspan>
+<tspan x='279.007'>3</tspan>
+<tspan x='288.082' y='82.6261'>m</tspan>
+<tspan x='298.232'>A</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+A razão entre as correntes inicial e final é:
+</p>
+<div class="center">
+<svg height='2.64802em' version='1.1' viewBox='164.475 66.2601 138.109 26.4802' width='13.8109em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq115'>
+<text font-family='futri8r' font-size='10.9577' x='165.434' y='74.4428'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='169.821' y='76.2361'>0</text>
+<rect height='0.637912' width='9.61992' x='165.075' y='79.1211'/>
+<text font-family='futri8r' font-size='10.9577' x='167.476' y='90.7377'>I</text>
+<text font-family='fourier-ms' font-size='10.9577' x='177.936' y='82.5365'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='207.138' y='74.4428'>4</text>
+<rect height='0.637912' width='41.9267' x='189.092' y='79.1211'/>
+<text font-family='futr8r' font-size='10.9577' x='189.092' y='90.7377'>(<tspan x='192.941'>1</tspan>
+<tspan x='198.775'>2</tspan>
+<tspan x='204.61'>/</tspan>
+<tspan x='209.667'>2</tspan>
+<tspan x='215.501'>0</tspan>
+<tspan x='221.335'>3</tspan>
+<tspan x='227.169'>)</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='234.26' y='82.5365'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='245.415' y='74.4428'>2<tspan x='251.249'>0</tspan>
+<tspan x='257.083'>3</tspan>
+</text>
+<rect height='0.637912' width='17.5023' x='245.415' y='79.1211'/>
+<text font-family='futr8r' font-size='10.9577' x='251.249' y='90.7377'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='266.158' y='82.5365'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='276.118' y='82.5365'>6<tspan x='281.952'>7</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='287.787' y='82.5365'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='290.704' y='82.5365'>6<tspan x='296.538'>7</tspan>
+</text>
+</g>
+</svg>
+</div>
+<hr>
+<p>
+O exemplo anterior mostra uma das propriedades importantes dos
+indutores que os torna muito úteis como
+<span id="balastro" class="index"><b>balastros</b></span>, dispositivos em que a corrente
+inicial é elevada mas a corrente final é muito menor. Os balastros são
+usados nas lâmpadas fluorescentes em que é necessária uma corrente
+elevada quando a lâmpada é ligada, para garantir a ionização do gás
+dentro do tubo tornando-se condutor; após a ionização do gás, se a
+corrente mantivesse o valor inicial elevado, a lâmpada queimava-se.
+</p>
+<figure class="center" id="fig-9.10">
+<img class="img-11 center" src="img/Fluorescent_Light.png"
+     alt="Circuito controlador para lâmpada fluorescente"
+     width="500" height="300">
+<figcaption>
+<b>Figura 9.10:</b> Diagrama do circuito de uma lâmpada fluorescente.
+</figcaption>
+</figure>
+<p>
+A figura <a href="#fig-9.10">9.10</a> mostra o circuito usado para controlar uma lâmpada
+fluorescente, inventado por Nikola <span id="Tesla,&nbsp;Nikola" class="index">Tesla</span>
+(1856&ndash;1943). Neste caso a fonte de alimentação é de tensão
+alternada. O balastro é a bobina G; como a sua resistência interna
+costuma ser baixa, foi ignorada no diagrama e as barras paralelas a
+tracejado representam um núcleo de material ferromagnético colocado
+dentro da bobina para aumentar a sua indutância. Inicialmente, o gás
+dentro do tubo A é isolador, porque não está ionizado; a corrente
+passa pelos dois filamentos F, que aquecem o gás, facilitando a
+produção de iões.
+</p>
+<p>
+Dentro do arrancador C, há uma lâmina metálica curva, que com a
+passagem da corrente é aquecida e dilata, mudando a sua
+curvatura. Isso faz com que o interruptor em D seja aberto, deixando
+de passar corrente pelos filamentos e arrancador, mas passando através
+do tubo A, onde o gás já foi ionizado.
+</p>
+<p>
+Um outro efeito da bobina G é que no instante em que o interruptor D é
+aberto, a corrente não cai imediatamente para zero; continuam a
+acumular-se cargas nos dois terminais do interruptor aberto,
+criando-se um campo elevado que pode produzir faíscas. Para evitar
+essas faíscas, que podem queimar o metal, liga-se um condensador E, em
+paralelo, que acumula cargas de forma segura.
+</p>
+<p class="clearfix">
+As atuais <span id="lâmpada!economizadora" class="index">lâmpadas</span> economizadoras de
+energia são também lâmpadas fluorescentes, em versão reduzida. As
+funções do balastro e o arrancador são garantidas por um pequeno
+circuito dentro da lâmpada, como pode ser visto na
+figura <a href="#fig-9.11">9.11</a>.
+</p>
+<figure class="center" id="fig-9.11">
+<img class="img-8" src="img/Elektronstarterp.jpg"
+     alt="Circuito para uma lâmpada" width="567" height="501">
+<figcaption>
+<b>Figura 9.11:</b> Circuito de lâmpada.
+</figcaption>
+</figure>
+</section>
+<section id="Perguntas">
+<h2>Perguntas</h2>
+<p>
+(Para conferir a sua resposta, clique nela.)
+</p>
+<ol class="spacious">
+<li>
+Quando um comboio com motor elétrico sobe um trajeto com declive,
+consome potência elétrica proveniente de uma central elétrica. No seu
+modo mais eficiente de operação, nos trajetos em que o comboio desce:
+<ol class="answers">
+<li onclick="document.getElementById('p1c1').style.display='block'">Deve consumir ainda maior potência.</li>
+<li onclick="document.getElementById('p1c2').style.display='block'">Pode gerar potência elétrica sendo alimentada de volta para a central.</li>
+<li onclick="document.getElementById('p1c3').style.display='block'">Não consome nem gera potência elétrica.</li>
+<li onclick="document.getElementById('p1c4').style.display='block'">Consome a mesma quantidade de potência.</li>
+<li onclick="document.getElementById('p1c5').style.display='block'">Nenhuma das anteriores.</li>
+</ol></li>
+<li>
+Uma barra condutora, com 25 cm de comprimento, desloca-se com
+velocidade uniforme de 12 m/s, num plano perpendicular a um campo
+magnético uniforme de 80 G. Calcule a diferença de potencial induzida
+nos extremos da barra.
+<ol class="shortanswers">
+<li onclick="document.getElementById('p2c1').style.display='block'">240 V</li>
+<li onclick="document.getElementById('p2c2').style.display='block'">0.24 V</li>
+<li onclick="document.getElementById('p2c3').style.display='block'">0.024 V</li>
+<li onclick="document.getElementById('p2c4').style.display='block'">0.384 V</li>
+<li onclick="document.getElementById('p2c5').style.display='block'">3.84 kV</li>
+</ol></li>
+<li>
+Uma espira de fio condutor desloca-se, com velocidade constante,
+dentro de uma região onde existe um campo magnético uniforme e
+constante no tempo, perpendicular ao plano da espira. A
+f.e.m. induzida nos terminais da espira é então:
+<ol class="shortanswers">
+<li onclick="document.getElementById('p3c1').style.display='block'">Variável no tempo.</li>
+<li onclick="document.getElementById('p3c2').style.display='block'">Constante e diferente de zero.</li>
+<li onclick="document.getElementById('p3c3').style.display='block'">Negativa.</li>
+<li onclick="document.getElementById('p3c4').style.display='block'">Positiva.</li>
+<li onclick="document.getElementById('p3c5').style.display='block'">Nula.</li>
+</ol></li>
+<li>
+Se o número de espiras duma bobina é reduzido para metade e a corrente
+através dela é triplicada, mantendo outras propriedades (área das
+espiras, forma, etc.)  constantes, a sua indutância então:
+<ol class="shortanswers">
+<li onclick="document.getElementById('p4c1').style.display='block'">Aumenta 4 vezes.</li>
+<li onclick="document.getElementById('p4c2').style.display='block'">Aumenta 6 vezes.</li>
+<li onclick="document.getElementById('p4c3').style.display='block'">Aumenta 9 vezes.</li>
+<li onclick="document.getElementById('p4c4').style.display='block'">Diminui 6 vezes.</li>
+<li onclick="document.getElementById('p4c5').style.display='block'">Diminui 4 vezes.</li>
+</ol></li>
+<li>
+Uma bobina retangular de 3 cm por 5 cm tem 100 espiras e o seu versor
+perpendicular faz um ângulo de 55&deg; com um campo magnético
+uniforme de 0.35 T. A bobina roda, durante 0.33 s, até o ângulo entre
+o campo e o versor perpendicular aumentar para 90&deg;. Calcule
+a força eletromotriz induzida média.
+<ol class="shortanswers">
+<li onclick="document.getElementById('p5c1').style.display='block'">160 mV</li>
+<li onclick="document.getElementById('p5c2').style.display='block'">130 mV</li>
+<li onclick="document.getElementById('p5c3').style.display='block'">91 mV</li>
+<li onclick="document.getElementById('p5c4').style.display='block'">68 mV</li>
+<li onclick="document.getElementById('p5c5').style.display='block'">29 mV</li>
+</ol></li>
+</ol>
+</section>
+<section id="Problemas">
+<h2>Problemas</h2>
+<ol class="spacious">
+<li id="prob-9.1">
+Um íman desloca-se a velocidade constante sobre o eixo de uma espira,
+como mostra a figura. (<i>a</i>) Represente num gráfico, em forma
+qualitativa, o fluxo magnético <svg height='0.889228em' version='1.1' viewBox='-0.6 -8.29228 9.83464 8.89228' width='0.983464em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq116'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>Ψ</text>
+</g>
+</svg>
+ através da espira em função
+do tempo <svg height='0.808141em' version='1.1' viewBox='-0.360891 -7.34992 6.01041 8.08141' width='0.601041em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq117'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+</g>
+</svg>
+. Indique o instante <svg height='0.974318em' version='1.1' viewBox='-0.360891 -7.34992 8.90395 9.74318' width='0.890395em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq118'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='4.35169' y='1.79326'>1</text>
+</g>
+</svg>
+ em que o íman está a meio da
+travessia da espira. (<i>b</i>) Represente o gráfico da corrente <svg height='0.87827em' version='1.1' viewBox='-0.241348 -8.1827 6.2734 8.7827' width='0.62734em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq119'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+</g>
+</svg>
+
+na espira em função do tempo.
+<img class="fig center" src="img/eic0014-prob_9_1.png"
+     alt="Íman a atravessar uma espira" style="width:18.24em">
+</li>
+<li id="prob-9.2">
+Uma barra metálica de comprimento <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 23.0351 9.46208' width='2.30351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq120'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>l</text>
+<text font-family='fourier-ms' font-size='10.9577' x='6.64835' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='16.6083' y='0'>9</text>
+</g>
+</svg>
+ cm desloca-se com velocidade
+constante <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 31.0341 8.7827' width='3.10341em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq121'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.93177' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='18.8917' y='0'>1<tspan x='24.7258'>8</tspan>
+</text>
+</g>
+</svg>
+ cm/s, numa região onde há campo magnético uniforme
+com intensidade <svg height='0.892515em' version='1.1' viewBox='-0.6 -8.19366 35.2861 8.92515' width='3.52861em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq122'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>B</text>
+<text font-family='fourier-ms' font-size='10.9577' x='10.1153' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='20.0753' y='0'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='25.9094' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='28.8265' y='0'>5</text>
+</g>
+</svg>
+ G, perpendicular à barra (ver
+figura). Determine a diferença de potencial
+<svg height='1.21621em' version='1.1' viewBox='-0.839109 -8.1827 37.3635 12.1621' width='3.73635em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.400198em'>
+<g id='eq123'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>P</text>
+<text font-family='fourier-ms' font-size='10.9577' x='13.7949' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='22.9312' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='30.0565' y='1.79326'>Q</text>
+</g>
+</svg>
+.
+<img class="fig center" src="img/conductor_moving_in_magnetic_field.png"
+     alt="Barra condutora em moviment num campo magnético"
+     style="width:11.52em">
+</li>
+<li id="prob-9.3">
+O comprimento total entre as pontas das asas de um avião Boeing 747 é
+60 m . O avião voa a 800 km/h e com altura constante, na direção
+sul-norte, numa região onde o campo magnético terrestre faz um ângulo
+de 60&deg; com a vertical e a sua intensidade é 0.5 G. Calcule a
+diferença de potencial induzida entre as pontas da asas.
+</li>
+<li id="prob-9.4">
+O plano de uma espira quadrada de cobre, com 4 cm de lado, está na
+posição horizontal. Coloca-se um eletro-íman em forma de barra na
+posição vertical, acima do plano da bobina e com o seu polo norte mais
+próximo da espira mas um pouco afastado do seu centro, de tal forma
+que as linhas de campo magnético atravessam a espira formando um
+ângulo de 30&deg; com a vertical. Calcule a f.e.m. induzida média
+na espira, enquanto a intensidade do campo magnético do eletro-íman,
+na superfície da espira, varia desde zero até um valor final de 0.5 T,
+num intervalo de 200 ms. Qual o sentido da corrente induzida na
+espira?
+</li>
+<li id="prob-9.5">
+A figura mostra uma barra condutora de comprimento <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 8.28961 9.47304' width='0.828961em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq124'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>d</text>
+</g>
+</svg>
+ e massa <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 11.3797 6.83224' width='1.13797em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq125'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>m</text>
+</g>
+</svg>
+ que
+desliza sobre dois trilhos metálicos verticais, dentro de um campo
+magnético <svg height='1.18511em' version='1.1' viewBox='-0.6 -11.2511 8.68712 11.8511' width='0.868712em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq126'>
+<text font-family='fourier-ml' font-size='10.9577' x='0.561881' y='-2.43288'></text>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>B</text>
+</g>
+</svg>
+ uniforme. A resistência elétrica dos trilhos e da
+barra são desprezáveis comparadas com <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq127'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+. A barra mantém sempre o
+contato com os trilhos, permitindo que circule corrente pela
+resistência <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq128'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+, mas o atrito é desprezável, assim como o efeito da
+resistência do ar na barra. Quando a barra começa a cair livremente,
+o seu movimento é inicialmente acelerado mas rapidamente atinge uma
+velocidade constante <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.36917 6.83224' width='0.736917em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq129'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+</g>
+</svg>
+. Calcule o valor dessa velocidade limite <svg height='0.683224em' version='1.1' viewBox='-0.360891 -6.10075 7.36917 6.83224' width='0.736917em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq130'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+</g>
+</svg>
+.
+<img class="fig center" src="img/eic0014-prob_9_5.png"
+     alt="Condutor em queda livre dentro de campo magnético"
+     style="width:11.76em">
+</li>
+<li id="prob-9.6">
+No interior da circunferência a tracejado na figura existe um campo
+magnético que aponta para lá da folha e com módulo que depende do
+tempo <svg height='0.808141em' version='1.1' viewBox='-0.360891 -7.34992 6.01041 8.08141' width='0.601041em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq131'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+</g>
+</svg>
+ segundo a expressão <svg height='1.15034em' version='1.1' viewBox='-0.6 -10.75 44.5314 11.5034' width='4.45314em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq132'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='5.83412' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='8.75119' y='0'>6<tspan x='15.7542'>e</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='21.409' y='-4.33971'>−</text>
+<text font-family='futri8r' font-size='8.21825' x='27.5241' y='-4.33971'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='31.2182' y='-4.33971'>/<tspan x='35.011'>1</tspan>
+<tspan x='39.3866'>5</tspan>
+</text>
+</g>
+</svg>
+ (unidades
+SI). Determine a intensidade, direção e sentido do campo elétrico
+induzido dentro do anel condutor de raio <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.05121 24.4338 8.7827' width='2.44338em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq133'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.0471' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='18.007' y='0'>9</text>
+</g>
+</svg>
+ cm.
+<img class="fig center" src="img/eic0014-prob_9_6.png"
+     alt="Campo elétrico induzido por magnético variável"
+     style="width:14.46em">
+</li>
+<li id="prob-9.7">
+Uma espira condutora retangular, paralela ao plano O<svg height='0.93525em' version='1.1' viewBox='-0.057028 -6.10075 13.3269 9.3525' width='1.33269em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq134'>
+<text font-family='futri8r' font-size='10.9577' x='0.597761' y='0'>y</text>
+<text font-family='futri8r' font-size='10.9577' x='6.99376' y='0'>z</text>
+</g>
+</svg>
+, desloca-se
+com velocidade constante <svg height='1.22493em' version='1.1' viewBox='-0.928792 -8.99758 32.9414 12.2493' width='3.29414em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq135'>
+<text font-family='fourier-ml' font-size='10.9577' x='-0.328792' y='-0.179335'></text>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.93176' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='18.8917' y='0'>3<tspan x='27.5445' y='-0.179335'>ˆ</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='27.0903' y='0'></text>
+</g>
+</svg>
+ (m/s) dentro de uma
+região onde existe um campo magnético com componentes: <svg height='1.14454em' version='1.1' viewBox='-0.6 -8.19366 56.0996 11.4454' width='5.60996em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq136'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>B</text>
+<text font-family='futri8r' font-size='8.21825' x='7.60349' y='1.79326'>x</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.9801' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='24.94' y='0'>(<tspan x='28.7896'>6</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='36.0849' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='46.0581' y='0'>y</text>
+<text font-family='futr8r' font-size='10.9577' x='52.215' y='0'>)</text>
+</g>
+</svg>
+
+(SI) e <svg height='1.25757em' version='1.1' viewBox='-0.6 -8.19366 56.0976 12.5757' width='5.60976em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq137'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>B</text>
+<text font-family='futri8r' font-size='8.21825' x='7.87248' y='1.79326'>y</text>
+<text font-family='fourier-ms' font-size='10.9577' x='15.0339' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='24.9938' y='0'>B</text>
+<text font-family='futri8r' font-size='8.21825' x='32.5973' y='1.79326'>z</text>
+<text font-family='fourier-ms' font-size='10.9577' x='39.5794' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='49.5393' y='0'>0</text>
+</g>
+</svg>
+. Calcule a f.e.m.  induzida na espira, em função do
+tempo <svg height='0.808141em' version='1.1' viewBox='-0.360891 -7.34992 6.01041 8.08141' width='0.601041em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq138'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+</g>
+</svg>
+, a partir do instante <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq139'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+ em que a espira se encontra na
+posição da figura, com um lado ao longo do eixo dos <svg height='0.670075em' version='1.1' viewBox='-0.360891 -5.96926 6.87607 6.70075' width='0.687607em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq140'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>z</text>
+</g>
+</svg>
+.
+<img class="fig center" src="img/eic0014-prob_9_7.png"
+     alt="Espira em movimento num campo magnético" style="width:12.84em">
+</li>
+<li id="prob-9.8">
+No circuito da figura, calcule as correntes iniciais no indutor e no
+condensador, a corrente final no indutor e a carga final no
+condensador.
+<img class="fig center" src="img/circ_20.png"
+     alt="Circuito com indutor e condensador" style="width:9.06em">
+</li>
+<li id="prob-9.9">
+(<i>a</i>) No <span id="circuito!LC" class="index">circuito</span> da figura, o interruptor
+<svg height='1.074033em' version='1.1' viewBox='-0.6 -8.34707 10.74505 10.74033' width='1.074505em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq141'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>S</text>
+<text font-family='futr8r' font-size='8.21825' x='5.95368' y='1.79326'>1</text>
+</g>
+</svg>
+ tem estado fechado durante muito tempo e o interruptor
+<svg height='1.074033em' version='1.1' viewBox='-0.6 -8.34707 11.13953 10.74033' width='1.113953em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq142'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>S</text>
+<text font-family='futr8r' font-size='8.21825' x='5.95368' y='1.79326'>2</text>
+</g>
+</svg>
+ aberto; determine a corrente no indutor. (<i>b</i>) A
+seguir, abre-se o interruptor <svg height='1.074033em' version='1.1' viewBox='-0.6 -8.34707 10.74505 10.74033' width='1.074505em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq143'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>S</text>
+<text font-family='futr8r' font-size='8.21825' x='5.95368' y='1.79326'>1</text>
+</g>
+</svg>
+ e simultaneamente
+fecha-se o interruptor <svg height='1.074033em' version='1.1' viewBox='-0.6 -8.34707 11.13953 10.74033' width='1.113953em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq144'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>S</text>
+<text font-family='futr8r' font-size='8.21825' x='5.95368' y='1.79326'>2</text>
+</g>
+</svg>
+; nesse preciso instante, a
+corrente no indutor deve ter o mesmo valor calculado na alínea
+anterior. Explique qualitativamente o que acontece com a corrente no
+indutor e a carga no condensador a partir desse instante.
+<img class="fig center" src="img/circ_LC1.png" alt="Circuito oscilador"
+     style="width:10.47em">
+</li>
+<li id="prob-9.10">
+No circuito representado no diagrama, a fonte foi ligada no instante
+<svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq145'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+, quando o condensador estava descarregado e não havia corrente no
+indutor. Determine as correntes em cada resistência em <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq146'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+ e quando
+o circuito atingir o estado estacionário.
+<img class="fig center" src="img/eic0014-prob_9_10.png"
+     alt="Circuito com duas malhas e dois indutores" style="width:16.11em">
+</li>
+<li id="prob-9.11">
+No circuito representado no diagrama, a fonte foi ligada no instante
+<svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq147'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+, quando não havia corrente no indutor. (<i>a</i>) Determine a
+voltagem na resistência de 3.4 kΩ em <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq148'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+. (<i>b</i>)
+Determine o valor da derivada voltagem na resistência de 3.4
+kΩ, em <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq149'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+. (<i>c</i>) Determine a voltagem na resistência de
+3.4 kΩ, quando o circuito atingir o estado estacionário.
+<br><br>
+<img class="fig center" src="img/circ_30.png"
+     alt="Circuito com duas malhas e um indutor" style="width:16.11em">
+</li>
+<li id="prob-9.12">
+A fonte no circuito do diagrama foi ligada no instante <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq150'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+, quando a
+corrente nos dois indutores era nula. (<i>a</i>) Determine a diferença
+de potencial em cada um dos dois indutores, no instante
+<svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq151'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+. (<i>b</i>) Encontre o valor da derivada da corrente em cada
+indutor, em <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq152'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+. (<i>c</i>) Determine a intensidade da corrente em
+cada indutor, após o circuito atingir o estado estacionário.
+<br><br>
+<img class="fig center" src="img/circ_28.png"
+     alt="Circuito com duas malhas e dois indutores" style="width:18.45em">
+</li>
+</ol>
+</section>
+<section id="Respostas">
+<h2>Respostas</h2>
+<p>
+<b>Perguntas:</b> <b>1.</b> B. <b>2.</b> C. <b>3.</b> E.
+<b>4.</b> E. <b>5.</b> C.
+</p>
+<p>
+<b>Problemas</b>
+</p>
+<ol class="spacious">
+<li>
+O fluxo aumenta até um valor máximo, decresce até um valor mínimo
+local em <svg height='0.974318em' version='1.1' viewBox='-0.360891 -7.34992 8.90395 9.74318' width='0.890395em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq153'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='4.35169' y='1.79326'>1</text>
+</g>
+</svg>
+, volta a aumentar até o valor máximo e a seguir diminui
+monotonicamente. A corrente troca de sentido 3 vezes, nos 3 pontos
+onde o fluxo é máximo ou mínimo. Enquanto o anel se aproxima desde
+longe a corrente aumenta desde zero, e quando o anel já está a
+afastar-se longe do íman, a corrente decresce até zero.
+</li>
+<li>
+<svg height='1.12596em' version='1.1' viewBox='-0.6 -10.52812 54.1609 11.2596' width='5.41609em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq154'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>5</text>
+<text font-family='futr8r' font-size='10.9577' x='5.83412' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='8.75119' y='0'>6<tspan x='14.5853'>7</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='21.8806' y='0'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='31.256' y='0'>1<tspan x='37.0902'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='42.9243' y='-4.33971'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='48.86' y='-4.33971'>6</text>
+</g>
+</svg>
+ V.
+</li>
+<li>
+0.33 V.
+</li>
+<li>
+3.5 mV. Vista de cima, a corrente na espira tem sentido anti-horário.
+</li>
+<li>
+<svg height='2.522em' version='1.1' viewBox='-0.360891 -16.2763 49.0537 25.22' width='4.90537em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq155'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.9577' x='8.93177' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='20.0872' y='-8.09364'>m</text>
+<text font-family='futri8r' font-size='10.9577' x='32.1234' y='-8.09364'>g</text>
+<text font-family='futri8r' font-size='10.9577' x='40.1904' y='-8.09364'>R</text>
+<rect height='0.637912' width='28.0056' x='20.0872' y='-3.41534'/>
+<text font-family='futri8r' font-size='10.9577' x='21.3976' y='8.20122'>B</text>
+<text font-family='futr8r' font-size='8.21825' x='29.4673' y='4.74619'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='34.3411' y='8.20122'>d</text>
+<text font-family='futr8r' font-size='8.21825' x='41.9087' y='4.74619'>2</text>
+</g>
+</svg>
+.
+</li>
+<li>
+<svg height='1.31433em' version='1.1' viewBox='-0.6 -10.75 84.0896 13.1433' width='8.40896em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq156'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='7.14919' y='1.79326'>i</text>
+<text font-family='fourier-ms' font-size='10.9577' x='12.0959' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='22.0558' y='0'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='27.89' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='30.807' y='0'>0<tspan x='36.6411'>0</tspan>
+<tspan x='42.4753'>1</tspan>
+<tspan x='48.3094'>8</tspan>
+<tspan x='55.3124'>e</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='60.9672' y='-4.33971'>−</text>
+<text font-family='futri8r' font-size='8.21825' x='67.0823' y='-4.33971'>t</text>
+<text font-family='futr8r' font-size='8.21825' x='70.7764' y='-4.33971'>/<tspan x='74.5692'>1</tspan>
+<tspan x='78.9448'>5</tspan>
+</text>
+</g>
+</svg>
+, na direção tangente ao anel
+e no sentido horário.
+</li>
+<li>
+<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.05121 21.1326 8.7827' width='2.11326em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq157'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='5.83412' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='8.75119' y='0'>1<tspan x='14.5853'>8</tspan>
+</text>
+</g>
+</svg>
+ V, no sentido anti-horário visto desde a esquerda.
+</li>
+<li>
+Inicialmente, 100 mA no condensador e 0 no indutor. No fim, 1.96 mA no
+indutor e 17.6 µC no condensador.
+</li>
+<li>
+(<i>a</i>) 20 mA. (<i>b</i>) A corrente diminui enquanto a carga
+aumenta; quando a corrente decresce até zero, a carga atinge um valor
+máximo e nesse momento, o condensador começa a descarregar, surgindo
+uma corrente que aumenta, no sentido contrário à corrente
+inicial. Quando a carga diminui até zero, a corrente é máxima e com a
+mesma intensidade inicial. O ciclo repete-se indefinidamente, pois não
+existe nenhuma resistência que dissipe energia.
+</li>
+<li>
+Em <svg height='0.87827em' version='1.1' viewBox='-0.360891 -8.05121 23.4894 8.7827' width='2.34894em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq158'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.21024' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.1702' y='0'>0</text>
+</g>
+</svg>
+, 1.91 mA na resistência de 4.7 kΩ, e 2.0 mA nas resistências de
+1.8 kΩ e 2.7 kΩ. No estado estacionário, 2.56 mA na resistência de 1.8 kΩ,
+0.93 mA na resistência de 4.7 kΩ, e 1.63 mA na resistência de 2.7 kΩ.
+</li>
+<li>
+(<i>a</i>) 0. (<i>b</i>) 41.26 kV/s. (<i>c</i>) 5 V. 
+<li>
+(<i>a</i>) 24 V no indutor de 1.2 H, e 0 no indutor de 5 H.
+(<i>b</i>) 20 A/s no indutor de 1.2 H, e 0 no indutor de 5 H.
+(<i>c</i>) 5 A no indutor de 1.2 H, e 1 A no indutor de 5 H.
+</li>
+</ol>
+</section>
+<div id="p1c1" class="comment" onclick="document.getElementById('p1c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta A: Errada</div>
+<p>
+Nas descidas, o peso faz acelerar o comboio, sendo desnecessário o
+motor elétrico.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c2" class="comment" onclick="document.getElementById('p1c2').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 1, resposta B: Certa</div>
+<p>
+O peso faz acelerar o comboio. Se o motor for usado como gerador
+(travão eletromagnético) a energia potencial gravítica pode ser
+convertida em energia elétrica.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c3" class="comment" onclick="document.getElementById('p1c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta C: Errada</div>
+<p>
+O peso faz acelerar o comboio, sendo necessário travar. O motor pode
+ser usado como gerador (travão eletromagnético) para transformar
+energia potencial em energia elétrica.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c4" class="comment" onclick="document.getElementById('p1c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta D: Errada</div>
+<p>
+Nas descidas, o peso faz acelerar o comboio, sendo desnecessário o
+motor elétrico.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c5" class="comment" onclick="document.getElementById('p1c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta E: Errada</div>
+<p>
+O peso faz acelerar o comboio, sendo necessário travar. O motor pode
+ser usado como gerador (travão eletromagnético) para transformar
+energia potencial em energia elétrica.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c1" class="comment" onclick="document.getElementById('p2c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta A: Errada</div>
+<p>
+A unidade SI de campo magnético é o tesla (T) e não o gauss (G).
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c2" class="comment" onclick="document.getElementById('p2c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta B: Errada</div>
+<p>
+A unidade SI de campo magnético é o tesla (T) igual
+10<sup>&minus;4</sup> G.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c3" class="comment" onclick="document.getElementById('p2c3').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 2, resposta C: Certa</div>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c4" class="comment" onclick="document.getElementById('p2c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta D: Errada</div>
+<p>
+A diferença de potencial induzida é igual ao campo induzido, vezes o
+comprimento da barra.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c5" class="comment" onclick="document.getElementById('p2c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta E: Errada</div>
+<p>
+A diferença de potencial induzida é igual ao campo induzido, vezes o
+comprimento da barra.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c1" class="comment" onclick="document.getElementById('p3c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta A: Errada</div>
+<p>
+O fluxo magnético através da espira permanece constante.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c2" class="comment" onclick="document.getElementById('p3c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta B: Errada</div>
+<p>
+O fluxo magnético através da espira permanece constante.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c3" class="comment" onclick="document.getElementById('p3c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta C: Errada</div>
+<p>
+O fluxo magnético através da espira permanece constante.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c4" class="comment" onclick="document.getElementById('p3c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta D: Errada</div>
+<p>
+O fluxo magnético através da espira permanece constante.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c5" class="comment" onclick="document.getElementById('p3c5').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 3, resposta E: Certa</div>
+<p>
+O fluxo magnético através da espira permanece constante.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c1" class="comment" onclick="document.getElementById('p4c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta A: Errada</div>
+<p>
+A diminuição do número de espiras faz diminuir a indutância.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c2" class="comment" onclick="document.getElementById('p4c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta B: Errada</div>
+<p>
+A indutância de qualquer dispositivo não depende da corrente.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c3" class="comment" onclick="document.getElementById('p4c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta C: Errada</div>
+<p>
+A indutância de qualquer dispositivo não depende da corrente.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c4" class="comment" onclick="document.getElementById('p4c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta D: Errada</div>
+<p>
+A indutância de qualquer dispositivo não depende da corrente.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c5" class="comment" onclick="document.getElementById('p4c5').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 4, resposta E: Certa</div>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c1" class="comment" onclick="document.getElementById('p5c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta A: Errada</div>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c2" class="comment" onclick="document.getElementById('p5c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta B: Errada</div>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c3" class="comment" onclick="document.getElementById('p5c3').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 5, resposta C: Certa</div>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c4" class="comment" onclick="document.getElementById('p5c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta D: Errada</div>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c5" class="comment" onclick="document.getElementById('p5c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta E: Errada</div>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div class="bottom">
+<a href="#top"><span class="button">Topo</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../index.html">DEF</a>
+</div>
+<div class="category">
+<a href="../textos.html">Material de estudo</a>
+</div>
+<div class="category">
+<a href="../cursos.html">Cadeiras no Moodle</a>
+</div>
+<div class="category">
+<a href="../faq.html">Perguntas frequentes</a>
+</div>
+</div>
+&copy; 2016 &ndash; 2019, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Última atualização: 2020/10/09 07:59:19 UTC</span>
+</footer>
+</body>
+</html>

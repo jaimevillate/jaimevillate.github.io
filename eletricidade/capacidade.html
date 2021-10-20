@@ -1,0 +1,2465 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4. Capacidade</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body id="top">
+<aside>
+<span class="current">HTML</span>
+<a target="_blank" href="./capacidade.pdf">PDF</a>
+</aside>
+<header>
+<h1 id="title">4. Capacidade</h1>
+</header>
+<nav>
+<a href="../index.html">DEF</a><span>&rarr;</span>
+<a href="../ensino.html">Ensino</a><span>&rarr;</span>
+<a href="../textos.html">Material de estudo</a><span>&rarr;</span>
+<a href="index.html">Eletricidade, Magnetismo e Circuitos</a><span>&rarr;</span>
+<span>4. Capacidade</span>
+</nav>
+<div class="content">
+<span class="button">Índice</span>
+<div class="content-items">
+<a href="./index.html">Eletricidade, Magnetismo e Circuitos</a>
+<ol class="nested" style="counter-increment: item 3">
+<li><a href="#top">Capacidade</a>
+<ul class="plain">
+<li><a href="#Introdução">Introdução</a></li>
+</ul>
+<ol class="nested">
+<li><a href="#sec-4.1">Capacidade de um condutor isolado</a></li>
+<li><a href="#sec-4.2">Esfera condutora isolada</a></li>
+<li><a href="#sec-4.3">Condensadores</a>
+<ol class="nested">
+<li><a href="#sec-4.3.1">Condensador esférico</a></li>
+<li><a href="#sec-4.3.2">Condensador plano</a></li>
+<li><a href="#sec-4.3.3">Ultracondensadores</a></li>
+</ol>
+</li>
+<li><a href="#sec-4.4">Energia elétrica num condensador</a></li>
+<li><a href="#sec-4.5">Associações de condensadores</a></li>
+</ol>
+<ul class="plain">
+<li><a href="#Perguntas">Perguntas</a></li>
+<li><a href="#Problemas">Problemas</a></li>
+<li><a href="#Respostas">Respostas</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<section id="Introdução" class="opening">
+<h2>Introdução</h2>
+<img class="img-10 center" src="img/Garrafa_de_Leiden.jpg"
+     alt="Garrafa de Leiden" width="600" height="654">
+<p>
+Em 1745, o holandês Pieter van
+<span id="van&nbsp;Musschenbroek,&nbsp;Pieter" class="index">Musschenbroek</span> inventou o primeiro
+<span id="condensador" class="index"><b>condensador</b></span>. Enquanto usava uma garrafa de
+vidro para isolar uma lâmina metálica no seuinterior, descobriu que
+quando segurava a garrafa na mão, a carga elétrica que conseguia
+armazenar na lâmina era muito maior do que quando a garrafa estava
+sobre a mesa. A explicação é que na mão, que é um condutor,
+são <span id="carga!induzida" class="index">induzidas</span> cargas de sinal contrário que atraem
+as cargas no metal, permitindo que seja mais fácil introduzir mais
+cargas do mesmo sinal. Colocando uma segunda lâmina metálica por fora
+da garrafa, facilita-se a entrada de cargas na garrafa, podendo ser
+armazenadas cargas muito elevadas. O condensador de van Musschenbroek ficou conhecido como <b><span id="garrafa&nbsp;de&nbsp;Leiden"class="index">garrafa de Leiden</span></b>,
+que é a cidade onde trabalhou. Trata-se de
+uma das invenções mais importantes da história da eletricidade, que
+permitiu acumular cargas maiores, facilitando a realização de
+experiências de eletrostática.
+</p>
+</section>
+<section id="sec-4.1">
+<h2>4.1. Capacidade de um condutor isolado</h2>
+<p>
+O potencial num condutor isolado é uniforme em todo o condutor e
+proporcional à carga total nele. Define-se a
+<span id="capacidade" class="index"><b>capacidade</b></span> do condutor como a razão entre a
+carga e o potencial na superfície do condutor
+</p>
+<div class="eqn" id="eq-4.1">(4.1)</div>
+<div class="center">
+<svg height='3.56029em' version='1.1' viewBox='207.348 66.1497 51.5557 35.6029' width='5.15557em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq1'>
+<rect height='0.3985' width='50.3557' x='207.948' y='66.7497'/>
+<rect height='33.6059' width='0.3985' x='207.948' y='67.1482'/>
+<text font-family='futri8r' font-size='10.9577' x='210.977' y='85.9238'>C</text>
+<text font-family='fourier-ms' font-size='10.9577' x='221.57' y='85.9238'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='238.477' y='77.8301'>Q</text>
+<rect height='0.637912' width='20.9952' x='232.726' y='82.5084'/>
+<text font-family='futri8r' font-size='10.9577' x='232.486' y='94.125'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='239.612' y='95.9182'>s<tspan x='243.207'>u</tspan>
+<tspan x='248.211'>p</tspan>
+</text>
+<rect height='33.6059' width='0.3985' x='257.905' y='67.1482'/>
+<rect height='0.3985' width='50.3557' x='207.948' y='100.754'/>
+</g>
+</svg>
+</div>
+<p>
+A capacidade não depende da carga nem do potencial, pois os dois
+aumentam na mesma proporção; a capacidade depende unicamente da forma
+e tamanho do condutor. O potencial <svg height='1.24662em' version='1.1' viewBox='-0.839109 -8.1827 21.518 12.4662' width='2.1518em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.425398em'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>s<tspan x='10.4817'>u</tspan>
+<tspan x='15.4849'>p</tspan>
+</text>
+</g>
+</svg>
+ é realmente a
+diferença de potencial entre a superfície do condutor e um ponto no
+infinito, onde costuma arbitrar-se potencial igual a zero.
+</p>
+<p>
+No sistema internacional de unidades, a unidade para medir capacidade
+elétrica é o <span id="farad&nbsp;(unidade)" class="index">farad</span>, em homenagem ao cientista
+<span id="Faraday,&nbsp;Michael" class="index">Michael Faraday</span> (1791&ndash;1867). O farad,
+representado pela letra F, é a capacidade de um condutor que, com uma
+carga de 1 C, tem um potencial de 1 V:</p>
+<div class="eqn" id="eq-4.2">(4.2)</div>
+<div class="center">
+<svg height='0.911143em' version='1.1' viewBox='205.678 71.8522 55.3552 9.11143' width='5.53552em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq3'>
+<text font-family='futr8r' font-size='10.9577' x='206.278' y='80.1993'>1<tspan x='214.158'>F</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='222.587' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='232.547' y='80.1993'>1<tspan x='240.427'>C</tspan>
+<tspan x='247.947'>/</tspan>
+<tspan x='253.004'>V</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+Uma capacidade de 1 F é muito elevada, sendo comum encontrarem-se na
+prática capacidades da ordem de 1 µF, 1 nF ou 1 pF.
+</p>
+</section>
+<section id="sec-4.2">
+<h2>4.2. Esfera condutora isolada</h2>
+<figure class="center" id="fig-4.1">
+<div class="right">
+<img class="fig center" src="img/conducting_sphere.png"
+     alt="Esfera condutora isolada" style="width:7.29em">
+<p class="center"><b>Figura 4.1:</b> Esfera condutora.</p>
+</div>
+</figure>
+<p>
+Numa esfera condutora isolada (figura <a href="#fig-4.1">4.1</a>), toda a carga se
+acumula na superfície, de forma uniforme, devido à simetria da
+esfera. No <a href="calculo_campo.html">apêndice B</a> mostra-se como calcular o
+campo elétrico e o resultado é que, dentro da esfera o campo é nulo e
+fora dela o campo é idêntico ao campo de uma carga pontual <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq4'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+
+colocada no centro da esfera. O módulo do campo elétrico num ponto que
+se encontra a uma distância <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq5'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+ do centro da esfera é:
+</p>
+<div class="eqn" id="eq-4.3">(4.3)</div>
+<div class="center">
+<svg height='4.23149em' version='1.1' viewBox='184.612 66.2383 95.348 42.3149' width='9.5348em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq6'>
+<text font-family='futri8r' font-size='10.9577' x='185.212' y='91.2627'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='194.957' y='91.2627'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='204.917' y='68.3575'>⎧<tspan x='204.917' y='78.2674'>⎨</tspan>
+<tspan x='204.917' y='98.0653'>⎩</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='215.241' y='74.9689'>k</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.236' y='74.9689'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='225.938' y='74.9689'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='235.072' y='74.9689'>|</text>
+<rect height='0.637912' width='22.8914' x='215.241' y='79.6472'/>
+<text font-family='futri8r' font-size='10.9577' x='216.223' y='91.2637'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='226.275' y='91.2637'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='232.277' y='87.8087'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='249.849' y='83.0625'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='253.935' y='83.0625'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='261.982' y='83.0625'>></text>
+<text font-family='futri8r' font-size='10.9577' x='271.942' y='83.0625'>R</text>
+<text font-family='futr8r' font-size='10.9577' x='214.046' y='104.382'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='249.849' y='104.382'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='253.935' y='104.382'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='261.982' y='104.382'>&lt;</text>
+<text font-family='futri8r' font-size='10.9577' x='271.942' y='104.382'>R</text>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 7.79651 9.46208' width='0.779651em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq7'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>k</text>
+</g>
+</svg>
+ é a constante de Coulomb (9.00&times;10<sup>9</sup>
+N·m<sup>2</sup>/C<sup>2</sup>) e <svg height='0.883749em' version='1.1' viewBox='-0.6 -8.1827 10.19624 8.83749' width='1.019624em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq8'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>K</text>
+</g>
+</svg>
+ é a constante dielétrica do meio à volta da
+esfera. A figura <a href="#fig-4.2">4.2</a> mostra o gráfico do módulo do campo em
+função da distância até o centro, no caso em que a carga é positiva.
+</p>
+<figure class="center" id="fig-4.2">
+<img class="fig" src="img/field_of_conducting_sphere.png"
+     alt="Campo elétrico duma esfera condutora isolada" style="width:19.05em">
+<figcaption>
+<b>Figura 4.2:</b> Gráfico do módulo do campo elétrico deuma esfera condutora
+isolada.
+</figcaption>
+</figure>
+<p>
+Para calcular <svg height='1.24662em' version='1.1' viewBox='-0.839109 -8.1827 21.518 12.4662' width='2.1518em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.425398em'>
+<g id='eq9'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>s<tspan x='10.4817'>u</tspan>
+<tspan x='15.4849'>p</tspan>
+</text>
+</g>
+</svg>
+ integra-se a componente tangencial do
+campo elétrico, desde a superfície da esfera até o infinito, ao longo
+de qualquer percurso; um percurso que facilita o cálculo é na direção
+e sentido radial, que é a direção das linhas de campo elétrico:
+</p>
+<div class="eqn" id="eq-4.4">(4.4)</div>
+<div class="center">
+<svg height='3.91783em' version='1.1' viewBox='147.894 67.1902 169.029 39.1783' width='16.9029em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq10'>
+<text font-family='futri8r' font-size='10.9577' x='148.494' y='89.0643'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='155.619' y='90.8576'>s<tspan x='159.215'>u</tspan>
+<tspan x='164.218'>p</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='171.774' y='89.0643'>=</text>
+<text font-family='fourier-ms' font-size='8.21825' x='184.954' y='71.5706'>∞</text>
+<text font-family='fourier-mex' font-size='10.9987' x='181.734' y='73.7703'></text>
+<text font-family='futri8r' font-size='8.21825' x='181.493' y='105.768'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='193.055' y='89.0643'>E</text>
+<text font-family='futr8r' font-size='10.9577' x='201.923' y='89.0643'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='208.498' y='89.0643'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='216.545' y='89.0643'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='227.701' y='80.9707'>k</text>
+<text font-family='futri8r' font-size='10.9577' x='235.337' y='80.9707'>Q</text>
+<rect height='0.637912' width='16.7704' x='227.701' y='85.649'/>
+<text font-family='futri8r' font-size='10.9577' x='231.644' y='97.2655'>K</text>
+<text font-family='fourier-ms' font-size='8.21825' x='250.055' y='71.5706'>∞</text>
+<text font-family='fourier-mex' font-size='10.9987' x='246.835' y='73.7703'></text>
+<text font-family='futri8r' font-size='8.21825' x='246.594' y='105.768'>R</text>
+<text font-family='futr8r' font-size='10.9577' x='261.872' y='80.9707'>1</text>
+<rect height='0.637912' width='10.8752' x='259.352' y='85.649'/>
+<text font-family='futri8r' font-size='10.9577' x='259.352' y='97.2655'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='265.353' y='93.8105'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='272.591' y='89.0643'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='279.167' y='89.0643'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='287.214' y='89.0643'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='298.961' y='80.9707'>k</text>
+<text font-family='futri8r' font-size='10.9577' x='306.598' y='80.9707'>Q</text>
+<rect height='0.637912' width='17.954' x='298.369' y='85.649'/>
+<text font-family='futri8r' font-size='10.9577' x='298.369' y='97.2655'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='308.421' y='97.2655'>R</text>
+</g>
+</svg>
+</div>
+<p>
+O valor deste integral é também igual à área sombreada na
+figura <a href="#fig-4.2">4.2</a>. Usando a expressão obtida para <svg height='1.24662em' version='1.1' viewBox='-0.839109 -8.1827 21.518 12.4662' width='2.1518em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.425398em'>
+<g id='eq11'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>s<tspan x='10.4817'>u</tspan>
+<tspan x='15.4849'>p</tspan>
+</text>
+</g>
+</svg>
+,
+encontra-se a expressão para a capacidade da esfera de raio <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq12'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+,
+</p>
+<div class="eqn" id="eq-4.5">(4.5)</div>
+<div class="center">
+<svg height='2.89254em' version='1.1' viewBox='194.201 66.0958 76.2948 28.9254' width='7.62948em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq13'>
+<text font-family='futri8r' font-size='10.9577' x='194.801' y='82.5365'>C</text>
+<text font-family='fourier-ms' font-size='10.9577' x='205.395' y='82.5365'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='222.302' y='74.4428'>Q</text>
+<rect height='0.637912' width='20.9952' x='216.55' y='79.1211'/>
+<text font-family='futri8r' font-size='10.9577' x='216.311' y='90.7377'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='223.437' y='92.531'>s<tspan x='227.032'>u</tspan>
+<tspan x='232.035'>p</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='240.787' y='82.5365'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='251.942' y='74.4428'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='261.994' y='74.4428'>R</text>
+<rect height='0.637912' width='17.954' x='251.942' y='79.1211'/>
+<text font-family='futri8r' font-size='10.9577' x='257.506' y='90.7377'>k</text>
+</g>
+</svg>
+</div>
+<p>
+Observe-se que se <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq14'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+ for negativa, <svg height='1.117147em' version='1.1' viewBox='-0.6 -8.34707 14.8765 11.17147' width='1.48765em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq15'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>|</text>
+<text font-family='futri8r' font-size='10.9577' x='2.70187' y='0'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='11.8356' y='0'>|</text>
+</g>
+</svg>
+ deveria ser substituída por
+<svg height='1.117147em' version='1.1' viewBox='-0.6 -8.34707 17.4013 11.17147' width='1.74013em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq16'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='7.55567' y='0'>Q</text>
+</g>
+</svg>
+ mas o resultado do integral na equação <a href="#eq-4.4">4.4</a>
+é o mesmo porque, nesse caso, o sentido do campo seria oposto ao
+sentido radial, introduzindo outro sinal negativo. O potencial na
+superfície, em relação ao infinito, tem sempre o mesmo sinal da carga
+e, como tal, a capacidade é sempre um número positivo.
+</p>
+<p>
+Quanto maior for a esfera, maior será a sua capacidade. Já se referiu
+anteriormente que a capacidade não depende da carga armazenada na
+esfera, nem do potencial produzido por essa carga. A capacidade
+depende apenas do tamanho e da forma geométrica do condutor e da
+constante dielétrica do meio. Neste caso é diretamente proporcional ao
+raio da esfera e à constante dielétrica do meio.
+</p>
+</section>
+<section id="sec-4.3">
+<h2>4.3. Condensadores</h2>
+<p>
+Na abertura do capítulo mencionou-se a garrafa de Leiden, que foi o
+primeiro condensador construído na história. Os dois condutores
+separados por um isolador (neste caso vidro), designam-se de
+<span id="armadura" class="index"><b>armaduras</b></span>. Quando existem cargas numa das
+armaduras são induzidas cargas de sinal contrário na outra armadura, o
+que faz diminuir o potencial de cada armadura em relação ao potencial
+de referência (a <span id="terra" class="index"><b>terra</b></span>). A diminuição do
+potencial do sistema de duas armaduras, comparado com o potencial que
+teria uma única armadura com a mesma carga, implica uma capacidade
+muito maior para o condensador em comparação com a capacidade de cada
+uma das duas armaduras por separado.
+</p>
+<p>
+Se uma das armaduras tiver carga <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq17'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+ a outra tem carga <svg height='1.117147em' version='1.1' viewBox='-0.6 -8.34707 17.4013 11.17147' width='1.74013em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq18'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='7.55567' y='0'>Q</text>
+</g>
+</svg>
+. Se
+<svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq19'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ for a voltagem entre as duas armaduras, define-se a
+capacidade do condensador como:
+</p>
+<div class="eqn" id="eq-4.6">(4.6)</div>
+<div class="center">
+<svg height='3.19626em' version='1.1' viewBox='208.839 66.1497 48.5742 31.9626' width='4.85742em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq20'>
+<rect height='0.3985' width='47.3742' x='209.439' y='66.7497'/>
+<rect height='29.9656' width='0.3985' x='209.439' y='67.1482'/>
+<text font-family='futri8r' font-size='10.9577' x='212.467' y='85.9238'>C</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.061' y='85.9238'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='238.477' y='77.8301'>Q</text>
+<rect height='0.637912' width='18.0137' x='234.216' y='82.5084'/>
+<text font-family='fourier-ml' font-size='10.9577' x='234.216' y='94.125'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='242.989' y='94.125'>V</text>
+<rect height='29.9656' width='0.3985' x='256.414' y='67.1482'/>
+<rect height='0.3985' width='47.3742' x='209.439' y='97.1138'/>
+</g>
+</svg>
+</div>
+<p>
+Se entre as duas armaduras é colocado um isolador, a constante de
+coulomb, <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 7.79651 9.46208' width='0.779651em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq21'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>k</text>
+</g>
+</svg>
+, que entra no cálculo da diferença de potencial
+<svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq22'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+, a partir da força, é substituída por <svg height='0.949495em' version='1.1' viewBox='-0.6 -8.73059 22.0797 9.49495' width='2.20797em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq23'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>k</text>
+<text font-family='futr8r' font-size='10.9577' x='6.8264' y='0'>/</text>
+<text font-family='futri8r' font-size='10.9577' x='11.8834' y='0'>K</text>
+</g>
+</svg>
+, onde <svg height='0.883749em' version='1.1' viewBox='-0.6 -8.1827 10.19624 8.83749' width='1.019624em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq24'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>K</text>
+</g>
+</svg>
+ é a
+<span id="constante!dielétrica" class="index">constante</span> dielétrica do isolador. Como
+tal, com o isolador a capacidade do condensador aumenta de um fator
+<svg height='0.883749em' version='1.1' viewBox='-0.6 -8.1827 10.19624 8.83749' width='1.019624em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq25'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>K</text>
+</g>
+</svg>
+.  Assim, na garrafa de Leiden a garrafa de vidro serve de isolador
+e ajuda a aumentar a capacidade. Como o vidro tem uma constante
+dielétrica de perto de 6, a capacidade com a garrafa de vidro é cerca
+de 6 vezes a que se obtinha sem vidro entre as armaduras.
+</p>
+<p>
+Quanto maior a capacidade de um condensador, mais fácil é armazenar
+cargas nele. Existem vários modelos diferentes de condensadores, com
+diferentes formas e tamanhos (figura <a href="#fig-4.3">4.3</a>).
+</p>
+<figure class="center" id="fig-4.3">
+<img class="img-11 center" src="img/Modelos_de_condensadores.jpg"
+     alt="Vários tipos de condensadores" width="600" height="480">
+<figcaption>
+<b>Figura 4.3:</b> Vários tipos diferentes de condensadores.
+</figcaption>
+</figure>
+<p>
+O isolador entre as armaduras de um condensador também se chama
+<span id="dielétrico" class="index">dielétrico</span>. O dielétrico também ajuda a aumentar a
+diferença de potencial máxima que pode existir entre as
+armaduras. Cada material isolador tem um valor da
+<b><span id="rigidez&nbsp;dielétrica" class="index">rigidez dielétrica</span></b>
+(<svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 24.4576 10.67459' width='2.44576em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq26'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='7.14919' y='1.79326'>m<tspan x='14.7616'>á</tspan>
+<tspan x='19.0745'>x</tspan>
+</text>
+</g>
+</svg>
+) que é o campo elétrico máximo que suporta o
+dielétrico sem se produzir rutura. A rutura de um dielétrico ocorre
+quando as suas moléculas ou átomos são deformadas a tal ponto, que
+algumas delas são ionizadas, formando-se fendas onde o material está
+queimado e passa a ser condutor por causa dos iões depositados nessa
+fendas. A figura <a href="#fig-4.4">4.4</a> mostra um bloco de acrílico que foi
+colocado entre duas armaduras com uma voltagem elevada, ultrapassando
+a rigidez dielétrica do acrílico, produzindo a sua rutura. As fendas
+onde o dielétrico foi queimado criam as chamadas figuras de
+<span id="Lichtenberg,&nbsp;Georg&nbsp;Christoph" class="index">Lichtenberg</span>
+</p>
+<figure class="center" id="fig-4.4">
+<img class="img-11 center" src="img/PlanePair2.jpg"
+     alt="Dielétrico após uma rutura" width="600" height="545">
+<figcaption>
+<b>Figura 4.4:</b> Bloco de acrílico após a rutura do dielétrico.
+</figcaption>
+</figure>
+<p>
+A diferença de potencial máxima que suporta um condensador com
+dielétrico de espessura <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 8.28961 9.47304' width='0.828961em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq27'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>d</text>
+</g>
+</svg>
+ sem se queimar é então,
+</p>
+<div class="eqn" id="eq-4.7">(4.7)</div>
+<div class="center">
+<svg height='1.12225em' version='1.1' viewBox='194.784 71.4687 76.2048 11.2225' width='7.62048em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq28'>
+<text font-family='fourier-ml' font-size='10.9577' x='195.384' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='202.988' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='210.113' y='81.9925'>m<tspan x='217.726'>á</tspan>
+<tspan x='222.038'>x</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='228.59' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='238.55' y='80.1993'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='245.699' y='81.9925'>m<tspan x='253.312'>á</tspan>
+<tspan x='257.625'>x</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='263.3' y='80.1993'>d</text>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 24.4576 10.67459' width='2.44576em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq29'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='7.14919' y='1.79326'>m<tspan x='14.7616'>á</tspan>
+<tspan x='19.0745'>x</tspan>
+</text>
+</g>
+</svg>
+ é a rigidez do dielétrico. Diferentes modelos de
+condensadores (figura <a href="#fig-4.3">4.3</a>) têm diferentes capacidades e
+diferenças de potencial máximas, conforme o tamanho e o dielétrico
+utilizado. Em algumas aplicações também é importante que o tempo de
+resposta do dielétrico seja rápido, já que as cargas não são induzidas
+nas moléculas do dielétrico de forma instantânea. A
+tabela <a href="#tab-4.1">4.1</a> indica a constante dielétrica e a rigidez
+dielétrica de vários materiais isoladores.
+</p>
+<table class="book center" id="tab-4.1">
+<caption>
+<b>Tabela 4.1:</b> Constante e rigidez de alguns dielétricos.
+</caption>
+<tr>
+<th>Material&emsp;</th>
+<th>Constante dielétrica, <svg height='0.883749em' version='1.1' viewBox='-0.6 -8.1827 10.19624 8.83749' width='1.019624em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq30'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>K</text>
+</g>
+</svg>
+&emsp;</th>
+<th>Rigidez, <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 24.4576 10.67459' width='2.44576em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq31'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='7.14919' y='1.79326'>m<tspan x='14.7616'>á</tspan>
+<tspan x='19.0745'>x</tspan>
+</text>
+</g>
+</svg>
+ (kV/mm)</th>
+</tr>
+<tr><td>Água (20 °C)</td><td>80 </td><td>&mdash;</td></tr>
+<tr><td>Ar seco</td><td>1.00059</td><td>3</td></tr> 
+<tr><td>Óleo</td><td>2.24</td><td>12</td></tr>
+<tr><td>Papel</td><td>3.7</td><td>16</td></tr>
+<tr><td>Acrílico</td><td>3.4</td><td>40</td></tr>
+<tr><td>Vidro pirex</td><td>5.6</td><td>14</td></tr>
+<tr><td>Porcelana</td><td>7</td><td>5.7</td></tr>
+<tr><td>Poliéster</td><td>2.55</td><td>24</td></tr>
+<tr><td>Parafina</td><td>2.1&ndash; 2.5</td><td>10</td></tr>
+</table>
+<p>
+A rigidez dielétrica do ar seco é 3 kV/mm. Quando a diferença de
+potencial entre dois objetos no ar ultrapassa 3000 V por milímetro de
+afastamento, dá-se uma descarga elétrica abrupta dos objetos. As
+forças elétricas elevadas ionizam as moléculas do ar, e a descarga é a
+passagem de iões positivos e negativos do ar entre os dois objetos.
+</p>
+<p>
+As nuvens e a terra, que são condutores, atuam como as armaduras de um
+condensador, sendo o ar o dielétrico. Durante uma trovoada, a humidade
+do ar faz diminuir a rigidez dielétrica do ar e a diferença de
+potencial máxima entre as nuvens e a terra diminui, existindo a
+possibilidade de surgirem descargas elétricas
+(figura <a href="#fig-4.5">4.5</a>). Quanto mais perto das nuvens estiverem os
+objetos apoiados no chão, maior será a probabilidade de serem
+atingidos por um raio, porque <svg height='1.12225em' version='1.1' viewBox='-0.6 -8.73059 77.3737 11.2225' width='7.73737em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq32'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='8.77241' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='15.8977' y='1.79326'>m<tspan x='23.5102'>á</tspan>
+<tspan x='27.823'>x</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='34.3747' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='44.3346' y='0'>E</text>
+<text font-family='futr8r' font-size='8.21825' x='51.4838' y='1.79326'>m<tspan x='59.0962'>á</tspan>
+<tspan x='63.4091'>x</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='69.0841' y='0'>d</text>
+</g>
+</svg>
+
+é então menor.
+</p>
+<figure class="center" id="fig-4.5">
+<img class="img-11 center"
+     src="img/Lightning_over_Oradea_Romania_2.jpg"
+     alt="Trovoada" width="529" height="600">
+<figcaption>
+<b>Figura 4.5:</b> Numa trovoada, a humidade do ar facilita as descargas elétricas.
+</figcaption>
+</figure>
+<div id="sec-4.3.1">
+<h3>4.3.1. Condensador esférico</h3>
+<figure class="center" id="fig-4.6">
+<div class="right">
+<img class="fig center" src="img/spherical_capacitor.png"
+     alt="Condensador esférico" style="width:11.13em">
+<p class="center">
+<b>Figura 4.6:</b> Condensador esférico.
+</p>
+</div>
+</figure>
+<p>
+A figura <a href="#fig-4.6">4.6</a> mostra um condensador esférico, formado por
+duas armaduras esféricas concêntricas, de raios <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 12.1916 10.57597' width='1.21916em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq33'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>1</text>
+</g>
+</svg>
+ e <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 12.5861 10.57597' width='1.25861em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq34'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2</text>
+</g>
+</svg>
+,
+separadas por um isolador de constante dielétrica <svg height='0.883749em' version='1.1' viewBox='-0.6 -8.1827 10.19624 8.83749' width='1.019624em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq35'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>K</text>
+</g>
+</svg>
+ que ocupa o
+espaço entre as duas esferas. A esfera menor está ligada a um fio que
+passa para fora da esfera maior, sem tocá-la, de forma a poder-se
+armazenar uma carga <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq36'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+ numa das esferas e <svg height='1.117147em' version='1.1' viewBox='-0.6 -8.34707 17.4013 11.17147' width='1.74013em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq37'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='7.55567' y='0'>Q</text>
+</g>
+</svg>
+ na outra.
+</p>
+<p>
+O campo produzido pelas duas esferas condutoras é dado pela expressão
+obtida no <a href="calculo_campo.html">apêndice B</a>, substituindo <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 13.5545 11.17147' width='1.35545em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq38'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>1</text>
+</g>
+</svg>
+ por
+<svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq39'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+ e <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 13.949 11.17147' width='1.3949em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq40'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>2</text>
+</g>
+</svg>
+ por <svg height='1.117147em' version='1.1' viewBox='-0.6 -8.34707 17.4013 11.17147' width='1.74013em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq41'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='7.55567' y='0'>Q</text>
+</g>
+</svg>
+ na equação <a href="calculo_campo.html#eq-B.14">B.14</a>. Como a soma das duas cargas é
+zero, o campo fora das duas esferas é nulo. O campo elétrico está
+confinado à região entre as duas esferas, onde existe o dielétrico que
+as separa. A expressão do campo (admitindo que <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq42'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+ é positiva) é,
+</p>
+<div class="eqn" id="eq-4.8">(4.8)</div>
+<div class="center">
+<svg height='4.23149em' version='1.1' viewBox='159.284 66.2383 145.601 42.3149' width='14.5601em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq43'>
+<text font-family='futri8r' font-size='10.9577' x='159.884' y='91.2627'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='169.629' y='91.2627'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='179.588' y='68.3575'>⎧<tspan x='179.588' y='78.2674'>⎨</tspan>
+<tspan x='179.588' y='98.0653'>⎩</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='191.991' y='74.9689'>k</text>
+<text font-family='futri8r' font-size='10.9577' x='199.628' y='74.9689'>Q</text>
+<rect height='0.637912' width='20.9268' x='189.913' y='79.6472'/>
+<text font-family='futri8r' font-size='10.9577' x='189.913' y='91.2637'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='199.965' y='91.2637'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='205.966' y='87.8087'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='222.556' y='83.0625'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='226.642' y='83.0625'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='234.042' y='84.8558'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='240.961' y='83.0625'>&lt;</text>
+<text font-family='futri8r' font-size='10.9577' x='250.921' y='83.0625'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='258.968' y='83.0625'>&lt;</text>
+<text font-family='futri8r' font-size='10.9577' x='268.928' y='83.0625'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='276.329' y='84.8558'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='188.717' y='104.382'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='222.556' y='104.382'>,</text>
+<text font-family='futri8r' font-size='10.9577' x='226.642' y='104.382'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='234.689' y='104.382'>&lt;</text>
+<text font-family='futri8r' font-size='10.9577' x='244.649' y='104.382'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='252.049' y='106.176'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='259.397' y='104.382'>o<tspan x='265.746'>u</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='274.891' y='104.382'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='282.938' y='104.382'>></text>
+<text font-family='futri8r' font-size='10.9577' x='292.898' y='104.382'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='300.299' y='106.176'>2</text>
+</g>
+</svg>
+</div>
+<p>
+E a diferença de potencial entre as esferas é o integral do campo, no
+sentido radial, entre as duas esferas:
+</p>
+<div class="eqn" id="eq-4.9">(4.9)</div>
+<div class="center">
+<svg height='4.27972em' version='1.1' viewBox='153.325 67.3324 158.237 42.7972' width='15.8237em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq44'>
+<text font-family='fourier-ml' font-size='10.9577' x='153.925' y='91.4804'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='161.529' y='91.4804'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='172.816' y='91.4804'>=</text>
+<text font-family='futri8r' font-size='8.21825' x='185.48' y='73.6194'>R</text>
+<text font-family='futr8r' font-size='6.39197' x='191.03' y='74.9644'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='182.776' y='76.1864'></text>
+<text font-family='futri8r' font-size='8.21825' x='180.772' y='108.185'>R</text>
+<text font-family='futr8r' font-size='6.39197' x='186.322' y='109.53'>1</text>
+<text font-family='futri8r' font-size='10.9577' x='197.37' y='83.3868'>k</text>
+<text font-family='futri8r' font-size='10.9577' x='205.007' y='83.3868'>Q</text>
+<rect height='0.637912' width='20.9268' x='195.292' y='88.0651'/>
+<text font-family='futri8r' font-size='10.9577' x='195.292' y='99.6816'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='205.344' y='99.6816'>r</text>
+<text font-family='futr8r' font-size='8.21825' x='211.345' y='96.2266'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='217.414' y='91.4804'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='223.99' y='91.4804'>r</text>
+<text font-family='fourier-ms' font-size='10.9577' x='232.037' y='91.4804'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='243.192' y='83.3868'>k</text>
+<text font-family='futri8r' font-size='10.9577' x='250.829' y='83.3868'>Q</text>
+<rect height='0.637912' width='16.7704' x='243.192' y='88.0651'/>
+<text font-family='futri8r' font-size='10.9577' x='247.136' y='99.6816'>K</text>
+<text font-family='fourier-mex' font-size='10.9987' x='262.327' y='75.6254'></text>
+<text font-family='futr8r' font-size='10.9577' x='271.659' y='83.3868'>1</text>
+<rect height='0.637912' width='12.274' x='268.439' y='88.0651'/>
+<text font-family='futri8r' font-size='10.9577' x='268.439' y='99.6816'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='275.839' y='101.475'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='283.369' y='91.4804'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='297.16' y='83.3868'>1</text>
+<rect height='0.637912' width='12.274' x='293.94' y='88.0651'/>
+<text font-family='futri8r' font-size='10.9577' x='293.94' y='99.6816'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='301.341' y='101.475'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='307.41' y='75.6254'></text>
+</g>
+</svg>
+</div>
+<p>
+Dividindo a carga, <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq45'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+, pela diferença de potencial, <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq46'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+,
+obtém-se a expressão para a capacidade do condensador esférico:
+</p>
+<div class="eqn" id="eq-4.10">(4.10)</div>
+<div class="center">
+<svg height='3.37559em' version='1.1' viewBox='187.166 66.1497 91.9198 33.7559' width='9.19198em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq47'>
+<rect height='0.3985' width='90.7198' x='187.766' y='66.7497'/>
+<rect height='31.7589' width='0.3985' x='187.766' y='67.1482'/>
+<text font-family='futri8r' font-size='10.9577' x='190.795' y='85.9238'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='198.661' y='87.8665'>e<tspan x='202.902'>s</tspan>
+<tspan x='206.498'>f</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='211.669' y='85.9238'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='231.064' y='77.8301'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='241.115' y='77.8301'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='248.516' y='79.6234'>1</text>
+<text font-family='futri8r' font-size='10.9577' x='253.389' y='77.8301'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='260.79' y='79.6234'>2</text>
+<rect height='0.637912' width='51.0789' x='222.824' y='82.5084'/>
+<text font-family='futri8r' font-size='10.9577' x='222.824' y='94.125'>k</text>
+<text font-family='futr8r' font-size='10.9577' x='230.819' y='94.125'>(</text>
+<text font-family='futri8r' font-size='10.9577' x='234.669' y='94.125'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='242.069' y='95.9182'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='248.404' y='94.125'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='257.779' y='94.125'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='265.18' y='95.9182'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='270.053' y='94.125'>)</text>
+<rect height='31.7589' width='0.3985' x='278.087' y='67.1482'/>
+<rect height='0.3985' width='90.7198' x='187.766' y='98.9071'/>
+</g>
+</svg>
+</div>
+</div>
+<div id="sec-4.3.2">
+<h3>4.3.2. Condensador plano</h3>
+<p>
+Um <span id="condensador!plano" class="index">condensador plano</span> é formado por duas
+armaduras planas, de área <svg height='0.87827em' version='1.1' viewBox='-0.015168 -8.1827 8.66217 8.7827' width='0.866217em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq48'>
+<text font-family='futri8r' font-size='10.9577' x='0.836858' y='0'>A</text>
+</g>
+</svg>
+, paralelas e separadas por uma distância
+constante <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 8.28961 9.47304' width='0.828961em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq49'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>d</text>
+</g>
+</svg>
+, como no lado esquerdo da figura <a href="#fig-4.7">4.7</a>. Se as
+armaduras estão suficientemente próximas uma boa aproximação consiste
+em considerar o condensador plano como uma pequena parte num
+condensador esférico, com um raio muito grande, aproximando-se de
+infinito, e as duas esferas aproximadamente com o mesmo raio, como
+mostra a figura <a href="#fig-4.7">4.7</a>.
+</p>
+<figure class="center" id="fig-4.7">
+<img class="fig" src="img/parallel-plate_capacitor.png"
+     alt="Aproximação do condensador plano" style="width:31.83em">
+<figcaption>
+<b>Figura 4.7:</b> Condensador plano, condensador esférico muito grande e uma
+pequena região que aproxima o condensador plano.
+</figcaption>
+</figure>
+<p>
+A carga e a área no condensador esférico muito grande aproximam-se de
+infinito, mas a relação entre elas, carga superficial, permanece
+finita. A equação <a href="#eq-4.8">4.8</a> para o campo dentro do condensador
+esférico deve ser escrita em função da carga superficial,
+<svg height='1.33525em' version='1.1' viewBox='-0.6 -10.52812 69.1411 13.3525' width='6.91411em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq50'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>σ</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.68496' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='19.2862' y='0'>Q</text>
+<text font-family='futr8r' font-size='10.9577' x='28.42' y='0'>/<tspan x='33.477'>(</tspan>
+<tspan x='37.3266'>4</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='44.3296' y='0'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='52.4804' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='60.3827' y='-4.33971'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='65.2565' y='0'>)</text>
+</g>
+</svg>
+, e com <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq51'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+ igual a <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq52'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+ para obter o
+campo na vizinhança da esfera; o campo dentro do condensador plano e
+então, aproximadamente:
+</p>
+<div class="eqn" id="eq-4.11">(4.11)</div>
+<div class="center">
+<svg height='2.56802em' version='1.1' viewBox='206.084 66.2383 52.8886 25.6802' width='5.28886em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq53'>
+<text font-family='futri8r' font-size='10.9577' x='206.684' y='83.0625'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='216.428' y='83.0625'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='227.584' y='74.9689'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='234.587' y='74.9689'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='242.738' y='74.9689'>k</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='250.733' y='74.9689'>σ</text>
+<rect height='0.637912' width='30.7884' x='227.584' y='79.6472'/>
+<text font-family='futri8r' font-size='10.9577' x='238.537' y='91.2637'>K</text>
+</g>
+</svg>
+</div>
+<p>
+E a diferença de potencial entre as armaduras é igual a
+</p>
+<div class="eqn" id="eq-4.12">(4.12)</div>
+<div class="center">
+<svg height='4.13479em' version='1.1' viewBox='134.889 67.316 195.279 41.3479' width='19.5279em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq54'>
+<text font-family='fourier-ml' font-size='10.9577' x='135.489' y='91.5076'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='143.092' y='91.5076'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='154.379' y='91.5076'>=</text>
+<text font-family='futri8r' font-size='8.21825' x='168.931' y='74.0139'>d</text>
+<text font-family='fourier-mex' font-size='10.9987' x='164.339' y='76.2137'></text>
+<text font-family='futr8r' font-size='8.21825' x='164.873' y='107.965'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='176.855' y='83.414'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='183.858' y='83.414'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='192.009' y='83.414'>k</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='200.004' y='83.414'>σ</text>
+<rect height='0.637912' width='30.7884' x='176.855' y='88.0923'/>
+<text font-family='futri8r' font-size='10.9577' x='187.808' y='99.7089'>K</text>
+<text font-family='futr8r' font-size='10.9577' x='210.008' y='91.5076'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='216.823' y='91.5076'>s</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.83' y='91.5076'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='234.985' y='83.414'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='241.988' y='83.414'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='250.139' y='83.414'>k</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='258.134' y='83.414'>σ</text>
+<text font-family='futri8r' font-size='10.9577' x='266.943' y='83.414'>d</text>
+<rect height='0.637912' width='39.525' x='234.985' y='88.0923'/>
+<text font-family='futri8r' font-size='10.9577' x='250.306' y='99.7089'>K</text>
+<text font-family='fourier-ms' font-size='10.9577' x='277.751' y='91.5076'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='288.907' y='83.414'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='295.91' y='83.414'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='304.06' y='83.414'>k</text>
+<text font-family='futri8r' font-size='10.9577' x='311.697' y='83.414'>Q</text>
+<text font-family='futri8r' font-size='10.9577' x='322' y='83.414'>d</text>
+<rect height='0.637912' width='40.6607' x='288.907' y='88.0923'/>
+<text font-family='futri8r' font-size='10.9577' x='300.123' y='99.7089'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='311.011' y='99.7089'>A</text>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 8.28961 9.47304' width='0.828961em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq55'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>d</text>
+</g>
+</svg>
+ é a distância entre as armaduras, <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq56'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+ a carga na armadura
+positiva e <svg height='0.87827em' version='1.1' viewBox='-0.015168 -8.1827 8.66217 8.7827' width='0.866217em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq57'>
+<text font-family='futri8r' font-size='10.9577' x='0.836858' y='0'>A</text>
+</g>
+</svg>
+ a área das armaduras.  A partir da equação <a href="#eq-4.6">4.6</a>
+obtém-se a expressão para a capacidade do condensador plano:
+</p>
+<div class="eqn" id="eq-4.13">(4.13)</div>
+<div class="center">
+<svg height='3.2124em' version='1.1' viewBox='191.833 66.1497 82.5862 32.124' width='8.25862em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq58'>
+<rect height='0.3985' width='81.3862' x='192.433' y='66.7497'/>
+<rect height='30.127' width='0.3985' x='192.433' y='67.1482'/>
+<text font-family='futri8r' font-size='10.9577' x='195.461' y='85.9238'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='203.328' y='87.8665'>p<tspan x='208.34'>l</tspan>
+<tspan x='210.644'>a</tspan>
+<tspan x='214.957'>n</tspan>
+<tspan x='220.059'>o</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='227.364' y='85.9238'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='244.763' y='77.8301'>K</text>
+<text font-family='futri8r' font-size='10.9577' x='255.652' y='77.8301'>A</text>
+<rect height='0.637912' width='30.7167' x='238.519' y='82.5084'/>
+<text font-family='futr8r' font-size='10.9577' x='238.519' y='94.125'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='245.522' y='94.125'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='253.673' y='94.125'>k</text>
+<text font-family='futri8r' font-size='10.9577' x='261.669' y='94.125'>d</text>
+<rect height='30.127' width='0.3985' x='273.42' y='67.1482'/>
+<rect height='0.3985' width='81.3862' x='192.433' y='97.2752'/>
+</g>
+</svg>
+</div>
+<p>
+A capacidade de um condensador plano é diretamente proporcional à
+constante dielétrica e à área das armaduras e inversamente
+proporcional à distância entre elas.
+</p>
+<div id="ex-4.1" class="example">
+<h3>Exemplo 4.1</h3>
+<img class="fig right" src="img/variable_capacitor.png"
+     alt="Condensador variavel" style="width:10.89em">
+<p>
+Um <span id="condensador!variável" class="index">condensador</span> variável é constituído por
+duas placas planas paralelas com forma de setor circular de ângulo 80&deg;
+e raio 5 cm, que podem rodar à volta de um eixo comum, como mostra a
+figura. Se a distância entre as placas é 0.5 cm, calcule a capacidade
+máxima e a capacidade quando uma das placas roda 30&deg; a partir da
+posição onde a capacidade é máxima.
+</p>
+</div>
+<p>
+<b>Resolução</b>. A capacidade máxima obtém-se quando as duas placas
+estão completamente sobrepostas uma acima da outra, de forma que a carga
+se distribui ao longo de toda a superfície das placas. O ângulo de
+80&deg; equivale a uma fração 80/360 do círculo completo; portanto, a
+área das armaduras é:
+</p>
+<div class="center">
+<svg height='2.75545em' version='1.1' viewBox='178.192 66.0846 109.564 27.5545' width='10.9564em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq59'>
+<text font-family='futri8r' font-size='10.9577' x='179.044' y='84.7063'>A</text>
+<text font-family='fourier-ms' font-size='10.9577' x='188.43' y='84.7063'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='199.586' y='76.6127'>8<tspan x='205.42'>0</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='212.423' y='76.6127'>π</text>
+<text font-family='futr8r' font-size='10.9577' x='220.574' y='76.6127'>5</text>
+<text font-family='futr8r' font-size='8.21825' x='226.408' y='72.273'>2</text>
+<rect height='0.637912' width='31.6957' x='199.586' y='81.291'/>
+<text font-family='futr8r' font-size='10.9577' x='206.682' y='92.9075'>3<tspan x='212.516'>6</tspan>
+<tspan x='218.351'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='234.523' y='84.7063'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='245.678' y='76.6127'>5<tspan x='251.512'>0</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='257.346' y='76.6127'>π</text>
+<rect height='0.637912' width='18.65' x='245.678' y='81.291'/>
+<text font-family='futr8r' font-size='10.9577' x='252.086' y='92.9075'>9<tspan x='267.569' y='84.7063'>c</tspan>
+<tspan x='273.021'>m</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='283.171' y='79.7688'>2</text>
+</g>
+</svg>
+</div>
+<p>
+A capacidade é dada pela expressão <a href="#eq-4.13">4.13</a>, com a constante
+dielétrica do ar, <svg height='0.883749em' version='1.1' viewBox='-0.6 -8.1827 26.8767 8.83749' width='2.68767em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq60'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>K</text>
+<text font-family='fourier-ms' font-size='10.9577' x='10.9283' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='20.8882' y='0'>1</text>
+</g>
+</svg>
+:
+</p>
+<div class="center">
+<svg height='2.51104em' version='1.1' viewBox='136.25 66.0629 192.959 25.1104' width='19.2959em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq61'>
+<text font-family='futri8r' font-size='10.9577' x='136.85' y='82.2077'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='144.717' y='84.001'>m<tspan x='152.329'>á</tspan>
+<tspan x='156.642'>x</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='163.194' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='213.044' y='74.1141'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='218.878' y='74.1141'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='221.796' y='74.1141'>0<tspan x='227.63'>0</tspan>
+<tspan x='233.464'>5</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='240.467' y='74.1141'>π</text>
+<rect height='0.637912' width='111.795' x='174.349' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='174.349' y='90.4089'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='181.352' y='90.4089'>π</text>
+<text font-family='fourier-ms' font-size='10.9577' x='189.795' y='90.4089'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='199.17' y='90.4089'>9</text>
+<text font-family='fourier-ms' font-size='10.9577' x='206.466' y='90.4089'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='215.841' y='90.4089'>1<tspan x='221.675'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='227.509' y='86.9539'>9</text>
+<text font-family='fourier-ms' font-size='10.9577' x='233.844' y='90.4089'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='243.22' y='90.4089'>9</text>
+<text font-family='fourier-ms' font-size='10.9577' x='250.515' y='90.4089'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='259.891' y='90.4089'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='265.725' y='90.4089'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='268.642' y='90.4089'>0<tspan x='274.476'>0</tspan>
+<tspan x='280.31'>5</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='289.385' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='299.345' y='82.2077'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='305.179' y='82.2077'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='308.096' y='82.2077'>1<tspan x='315.976'>p</tspan>
+<tspan x='322.659'>F</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+Quando uma das placas roda 30&deg;, a área na qual a carga se
+distribui, corresponde apenas à área da parte das placas que se encontra
+sobreposta, ou seja, um setor circular de ângulo 50&deg;. A área é
+então 5/8 da área total das armaduras e a capacidade, sendo diretamente
+proporcional à área, é 5/8 da capacidade máxima:
+</p>
+<div class="eqn" id="eq-4.14">(4.14)</div>
+<div class="center">
+<svg height='2.49461em' version='1.1' viewBox='184.551 66.1944 96.3562 24.9461' width='9.63562em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq62'>
+<text font-family='futri8r' font-size='10.9577' x='185.151' y='82.2077'>C</text>
+<text font-family='fourier-ms' font-size='10.9577' x='195.745' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='206.9' y='74.1141'>5</text>
+<rect height='0.637912' width='5.83411' x='206.9' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='206.9' y='90.4089'>8</text>
+<text font-family='futri8r' font-size='10.9577' x='214.74' y='82.2077'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='222.607' y='84.001'>m<tspan x='230.219'>á</tspan>
+<tspan x='234.532'>x</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='241.084' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='251.044' y='82.2077'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='256.878' y='82.2077'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='259.795' y='82.2077'>9<tspan x='267.675'>p</tspan>
+<tspan x='274.358'>F</tspan>
+</text>
+</g>
+</svg>
+</div>
+</div>
+<div id="sec-4.3.3">
+<h3>4.3.3. Ultracondensadores</h3>
+<p>
+Um condensador pode cumprir uma função semelhante à de uma bateria, já
+que pode ser usado para armazenar cargas que são fornecidas a um
+circuito. A grande vantagem é que, como não há reações químicas
+envolvidas, a carga e descarga podem ser feitas muito rapidamente e o
+condensador não fica inutilizado após várias cargas e descargas, que é
+o que acontece a uma bateria recarregável. Imagine por exemplo que em
+vez de ter que esperar algumas horas para recarregar a bateria do
+telemóvel, esta ficasse imediatamente recarregada quando fosse ligada
+à tomada, e que nunca tivesse que trocá-la por uma nova. Isso está
+cada vez mais perto de ser uma realidade, com o desenvolvimento dos
+ultracondensadores.
+</p>
+<p>
+A dificuldade em usar um condensador normal como fonte é que à medida
+que o condensador descarrega, a diferença de potencial entre as suas
+armaduras decresce rapidamente. Uma desvantagem ainda maior é que a
+capacidade de armazenar carga não é tão elevada como nas
+baterias. Considere-se por exemplo a pilha recarregável no
+<a href="./corrente.html#prob-2.4">problema 4</a> do capítulo 2. O valor da f.e.m. é 1.2 V e a carga
+máxima armazenada é de 2300 mA·h = 8.28 kC. De acordo com a
+equação <a href="#eq-4.6">4.6</a>, seria necessário um condensador de 6.9 kF para
+armazenar essa carga, com essa diferença de potencial.
+</p>
+<p>
+Uma capacidade tão elevada era algo impensável, até finais do século
+passado. Um condensador tradicional, do tamanho dessa pilha, teria uma
+capacidade da ordem dos µF. Os condensadores eletrolíticos atinge
+capacidades superiores, mas ainda aquém dos quilo-farad. Recentemente
+têm sido produzidos <span id="ultracondensador" class="index"><b>ultracondensadores</b></span>, com capacidades
+muito mais elevadas, na ordem dos quilo-farad (figura <a href="#fig-4.8">4.8</a>).
+</p>
+<figure class="center" id="fig-4.8">
+<img class="img-11 center"
+     src="img/Maxwell_MC_and_BC_ultracapacitor_cells_and_modules.jpg"
+     alt="Ultracondensadores" width="600" height="393">
+<figcaption>
+<b>Figura 4.8:</b> Alguns ultracondensadores.
+</figcaption>
+</figure>
+<p>
+Por exemplo, o ultracondensador cilíndrico situado à frente na
+figura <a href="#fig-4.8">4.8</a>, tem uma capacidade de 3000 farads a 2.7
+volts. Com esses valores, a carga que se consegue armazenar é de 8.1
+kC já muito próximo da carga de uma pilha recarregável. A capacidade
+elevada também implica que demora muito mais a descarregar quando é
+ligado a um circuito. Ainda falta reduzir um pouco o tamanho para que
+seja competitivo com as atuais baterias de iões de lítio.
+</p>
+<p>
+Nos ultracondensadores usa-se um meio poroso para substituir uma das
+armaduras. A área de contacto entre elétrodos e eletrólito é muito
+elevada. Os ultracondensadores são já utilizados em combinação com os
+motores elétricos dos automóveis que funcionam a hidrogénio com
+células de combustível (figura <a href="#fig-4.9">4.9</a>) e que já estão a ser
+comercializados em alguns países.
+</p>
+<figure class="center" id="fig-4.9">
+<img class="img-11 center" src="img/H2_Bus_STCP.jpg"
+     alt="Autocarro movido a hidrogénio" width="600" height="499">
+<figcaption>
+<b>Figura 4.9:</b> Autocarro experimental a hidrogénio da STCP no Porto.
+</figcaption>
+</figure>
+<p>
+O ultracondensador permite acumular rapidamente as cargas produzidas
+pelas células de combustível ou pelos travões eletromagnéticos, e essa
+carga pode ser fornecida rapidamente, nos momentos em que é necessário
+acelerar. As únicas reações químicas produzidas nesse tipo de veículo
+é a combinação do hidrogénio com o oxigénio nas células de
+combustível, que produz vapor de água. Não são libertados gases
+nocivos para a atmosfera, nem existem baterias a produzir produtos
+químicos corrosivos.
+</p>
+<p>
+Os ultracondensadores podem fornecer carga e serem recarregados muito
+mais rapidamente do que uma bateria e sem sofrer o desgaste que faz
+com que a bateria tenha um número limitado de ciclos de carga e
+descarga.
+</p>
+</div>
+</section>
+<section id="sec-4.4">
+<h2>4.4. Energia elétrica armazenada num condensador</h2>
+<p>
+Para carregar um condensador, é necessário carregar uma das armaduras
+com carga <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq63'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+ e a outra com carga <svg height='1.117147em' version='1.1' viewBox='-0.6 -8.34707 17.4013 11.17147' width='1.74013em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq64'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='7.55567' y='0'>Q</text>
+</g>
+</svg>
+. O processo implica uma
+transferência de carga <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq65'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+ de uma armadura para a outra. Essa passagem
+pode ser feita por ligação de dois cabos nas armaduras e nos terminais
+de uma bateria (figura <a href="#fig-4.10">4.10</a>).
+</p>
+<figure class="center" id="fig-4.10">
+<img class="fig" src="img/capacitor_energy.png"
+     alt="Condensador a ser carregado" style="width:12.87em">
+<figcaption>
+<b>Figura 4.10:</b> Passagem da carga de uma armadura para a outranum condensador.
+</figcaption>
+</figure>
+<p>
+Para determinar a energia fornecida pela bateria nesse processo,
+imaginemos que a carga total <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq66'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+ foi transferida em pequenas cargas
+infinitesimais <svg height='1.19823em' version='1.1' viewBox='-0.6 -8.73059 14.611 11.9823' width='1.4611em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq67'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='6.81445' y='0'>q</text>
+</g>
+</svg>
+ desde uma das armaduras até a outra, como
+indica a figura <a href="#fig-4.10">4.10</a>. Cada vez que uma carga <svg height='1.19823em' version='1.1' viewBox='-0.6 -8.73059 14.611 11.9823' width='1.4611em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq68'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='6.81445' y='0'>q</text>
+</g>
+</svg>
+
+passa da armadura negativa para a positiva, ganha uma energia
+potencial elétrica
+</p>
+<div class="eqn" id="eq-4.15">(4.15)</div>
+<div class="center">
+<svg height='2.3412em' version='1.1' viewBox='181.868 65.7528 102.047 23.412' width='10.2047em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq69'>
+<text font-family='futr8r' font-size='10.9577' x='182.468' y='80.1993'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='188.446' y='80.1993'>U</text>
+<text font-family='futri8r' font-size='8.21825' x='197.412' y='81.9925'>e</text>
+<text font-family='fourier-ms' font-size='10.9577' x='204.295' y='80.1993'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='214.255' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='221.859' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='10.9577' x='232.269' y='80.1993'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='239.083' y='80.1993'>q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='248.195' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='260.031' y='72.1056'>q</text>
+<rect height='0.637912' width='8.18928' x='259.35' y='76.7839'/>
+<text font-family='futri8r' font-size='10.9577' x='258.991' y='88.4005'>C</text>
+<text font-family='futr8r' font-size='10.9577' x='269.904' y='80.1993'>d</text>
+<text font-family='futri8r' font-size='10.9577' x='276.718' y='80.1993'>q</text>
+</g>
+</svg>
+</div>
+<p>
+A energia total armazenada no condensador obtem-se por integração,
+desde <svg height='1.1303em' version='1.1' viewBox='-0.360891 -8.05121 25.6293 11.303' width='2.56293em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq70'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.35022' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='19.3101' y='0'>0</text>
+</g>
+</svg>
+, até <svg height='1.15988em' version='1.1' viewBox='-0.360891 -8.34707 28.558 11.5988' width='2.8558em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq71'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.35022' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='18.9515' y='0'>Q</text>
+</g>
+</svg>
+ (área sob a reta no gráfico de <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq72'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ em
+função de <svg height='0.960453em' version='1.1' viewBox='-0.360891 -6.35277 7.79651 9.60453' width='0.779651em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq73'>
+<text font-family='futri8r' font-size='10.9577' x='0.239109' y='0'>q</text>
+</g>
+</svg>
+, na figura<a href="#fig-4.11">4.11</a>). O resultado é:
+</p>
+<div class="eqn" id="eq-4.16">(4.16)</div>
+<div class="center">
+<svg height='2.75874em' version='1.1' viewBox='199.333 66.0846 65.7916 27.5874' width='6.57916em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq74'>
+<text font-family='futri8r' font-size='10.9577' x='199.933' y='84.7063'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='208.9' y='86.649'>c<tspan x='212.988'>o</tspan>
+<tspan x='217.75'>n</tspan>
+<tspan x='222.851'>d</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='230.327' y='84.7063'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='241.482' y='76.6127'>1</text>
+<rect height='0.637912' width='5.83411' x='241.482' y='81.291'/>
+<text font-family='futr8r' font-size='10.9577' x='241.482' y='92.9075'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='250.518' y='76.6127'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='259.651' y='72.273'>2</text>
+<rect height='0.637912' width='13.6488' x='250.876' y='81.291'/>
+<text font-family='futri8r' font-size='10.9577' x='253.247' y='92.9075'>C</text>
+</g>
+</svg>
+</div>
+<figure class="center" id="fig-4.11">
+<img class="fig" src="img/capacitor_potential_plot.png"
+     alt="Voltagem num condensador em função da carga" style="width:18.66em">
+<figcaption>
+<b>Figura 4.11:</b> Aumento da voltagem num condensador, em função da carga armazenada.
+</figcaption>
+</figure>
+<p>
+Usando a equação <a href="#eq-4.6">4.6</a>, que relaciona a carga e a
+diferença de potencial em qualquer condensador, a equação anterior
+pode ser escrita em outras duas formas alternativas:
+</p>
+<div class="eqn" id="eq-4.17">(4.17)</div>
+<div class="center">
+<svg height='3.16338em' version='1.1' viewBox='164.931 66.1497 136.389 31.6338' width='13.6389em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq75'>
+<rect height='0.3985' width='135.189' x='165.531' y='66.7497'/>
+<rect height='29.6368' width='0.3985' x='165.531' y='67.1482'/>
+<text font-family='futri8r' font-size='10.9577' x='168.321' y='85.595'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='177.287' y='87.5377'>c<tspan x='181.376'>o</tspan>
+<tspan x='186.137'>n</tspan>
+<tspan x='191.239'>d</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='198.714' y='85.595'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='209.869' y='77.5014'>1</text>
+<rect height='0.637912' width='5.83411' x='209.869' y='82.1797'/>
+<text font-family='futr8r' font-size='10.9577' x='209.869' y='93.7962'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='217.709' y='85.595'>Q</text>
+<text font-family='fourier-ml' font-size='10.9577' x='228.012' y='85.595'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='235.615' y='85.595'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='246.902' y='85.595'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='258.058' y='77.5014'>1</text>
+<rect height='0.637912' width='5.83411' x='258.058' y='82.1797'/>
+<text font-family='futr8r' font-size='10.9577' x='258.058' y='93.7962'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='265.898' y='85.595'>C</text>
+<text font-family='fourier-ml' font-size='10.9577' x='275.615' y='85.595'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='283.218' y='85.595'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='292.459' y='80.6575'>2</text>
+<rect height='29.6368' width='0.3985' x='300.322' y='67.1482'/>
+<rect height='0.3985' width='135.189' x='165.531' y='96.785'/>
+</g>
+</svg>
+</div>
+<p>
+A carga não é transferida para as armaduras de forma
+instantânea. Quando se liga um condensador a uma fonte, a carga
+aumenta gradualmente até uma carga final. O processo de aumento da
+carga com o tempo denomina-se <span id="resposta!transitória" class="index">resposta transitória</span>
+do condensador; se a resistência entre a fonte e as
+armaduras do condensador não for muito elevada, a resposta transitória
+é extremamente rápida e pode-se admitir que a carga no condensador já
+tem o seu valor final estável. No capítulo sobre processamento de
+sinais mostra-se como determinar a resposta transitória.
+</p>
+</section>
+<section id="sec-4.5">
+<h2>4.5. Associações de condensadores</h2>
+<p>
+Um sistema de condensadores pode ser substituido por um único
+condensador equivalente. Nos casos em que os condensadores são ligados
+em série ou em paralelo, é fácil calcular a capacidade do condensador
+equivalente.
+</p>
+<p>
+A figura <a href="#fig-4.12">4.12</a> mostra dois condensadores ligados em
+<span id="condensador!em&nbsp;série" class="index">série</span>, entre os pontos A e B. Se os
+condensadores estiverem inicialmente descarregados, ao introduzir uma
+diferença de potencial entre os pontos A e B, circula uma carga <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq76'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+
+que entra pelo ponto a maior potencial (A na figura) e sai pelo ponto
+a menor potencial. Na região central, que liga as duas armaduras
+comuns aos dois condensadores, são induzidas cargas <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 9.8456 11.17147' width='0.98456em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq77'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+</g>
+</svg>
+ e <svg height='1.117147em' version='1.1' viewBox='-0.6 -8.34707 17.4013 11.17147' width='1.74013em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq78'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='7.55567' y='0'>Q</text>
+</g>
+</svg>
+ (a
+carga total nessa região é nula). Assim, a carga armazenada em cada um
+dos condensadores é idêntica.
+</p>
+<figure class="center" id="fig-4.12">
+<img class="fig" src="img/capacitors_in_series.png"
+     alt="Condensadores em série" style="width:11.19em">
+<figcaption>
+<b>Figura 4.12:</b> Condensadores em série.
+</figcaption>
+</figure>
+<p>
+A diferença de potencial entre os pontos A e B é a soma das diferenças
+de potencial em cada um dos condensadores:
+</p>
+<div class="eqn" id="eq-4.18">(4.18)</div>
+<div class="center">
+<svg height='2.73465em' version='1.1' viewBox='156.998 66.2926 151.768 27.3465' width='15.1768em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq79'>
+<text font-family='fourier-ml' font-size='10.9577' x='157.598' y='83.0447'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='165.201' y='83.0447'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='176.488' y='83.0447'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='186.448' y='83.0447'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='194.052' y='83.0447'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='201.177' y='84.8379'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='207.512' y='83.0447'>+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='216.887' y='83.0447'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='224.491' y='83.0447'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='231.616' y='84.8379'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='238.535' y='83.0447'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='248.495' y='67.1896'></text>
+<text font-family='futr8r' font-size='10.9577' x='257.881' y='74.951'>1</text>
+<rect height='0.637912' width='12.3816' x='254.607' y='79.6293'/>
+<text font-family='futri8r' font-size='10.9577' x='254.249' y='91.2459'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='262.115' y='93.0391'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='269.645' y='83.0447'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='283.49' y='74.951'>1</text>
+<rect height='0.637912' width='12.3816' x='280.216' y='79.6293'/>
+<text font-family='futri8r' font-size='10.9577' x='279.858' y='91.2459'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='287.724' y='93.0391'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='293.793' y='67.1896'></text>
+<text font-family='futri8r' font-size='10.9577' x='299.52' y='83.0447'>Q</text>
+</g>
+</svg>
+</div>
+<p>
+O sistema é então equivalente a um único condensador cuja capacidade
+satisfaz a equação:
+</p>
+<div class="eqn" id="eq-4.19">(4.19)</div>
+<div class="center">
+<svg height='3.37559em' version='1.1' viewBox='136.977 66.1497 193.134 33.7559' width='19.3134em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq80'>
+<text font-family='futr8r' font-size='10.9577' x='140.82' y='77.8301'>1</text>
+<rect height='0.637912' width='11.6015' x='137.936' y='82.5084'/>
+<text font-family='futri8r' font-size='10.9577' x='137.577' y='94.125'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='145.444' y='95.9182'>s</text>
+<text font-family='fourier-ms' font-size='10.9577' x='152.779' y='85.9238'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='167.208' y='77.8301'>1</text>
+<rect height='0.637912' width='12.3816' x='163.934' y='82.5084'/>
+<text font-family='futri8r' font-size='10.9577' x='163.575' y='94.125'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='171.442' y='95.9182'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='178.972' y='85.9238'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='192.817' y='77.8301'>1</text>
+<rect height='0.637912' width='12.3816' x='189.543' y='82.5084'/>
+<text font-family='futri8r' font-size='10.9577' x='189.185' y='94.125'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='197.051' y='95.9182'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='224.161' y='85.9238'>o<tspan x='230.51'>u</tspan>
+<tspan x='237.181'>:</tspan>
+</text>
+<rect height='0.3985' width='68.3724' x='261.139' y='66.7497'/>
+<rect height='31.7589' width='0.3985' x='261.139' y='67.1482'/>
+<text font-family='futri8r' font-size='10.9577' x='264.167' y='85.9238'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='272.034' y='87.717'>s</text>
+<text font-family='fourier-ms' font-size='10.9577' x='278.173' y='85.9238'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='293.804' y='77.8301'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='301.67' y='79.6234'>1</text>
+<text font-family='futri8r' font-size='10.9577' x='307.354' y='77.8301'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='315.221' y='79.6234'>2</text>
+<rect height='0.637912' width='35.5997' x='289.329' y='82.5084'/>
+<text font-family='futri8r' font-size='10.9577' x='288.97' y='94.125'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='296.836' y='95.9182'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='303.171' y='94.125'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='312.188' y='94.125'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='320.055' y='95.9182'>2</text>
+<rect height='31.7589' width='0.3985' x='329.113' y='67.1482'/>
+<rect height='0.3985' width='68.3724' x='261.139' y='98.9071'/>
+</g>
+</svg>
+</div>
+<p>
+O valor da carga armazenada no condensador equivalente é o mesmo que
+em cada um dos condensadores em série.
+</p>
+<p>
+A figura <a href="#fig-4.13">4.13</a> mostra um sistema de dois condensadores
+ligados em <span id="condensador!em&nbsp;paralelo" class="index">paralelo</span> entre dois pontos A
+e B. A diferença de potencial é sempre igual nos dois condensadores, e
+igual à diferença de potencial entre os pontos A e B.
+</p>
+<figure class="center" id="fig-4.13">
+<img class="fig" src="img/capacitors_in_parallel.png"
+     alt="Condensadores em paralelo" style="width:12.99em">
+<figcaption>
+<b>Figura 4.13:</b> Condensadores em paralelo.
+</figcaption>
+</figure>
+<p>
+Se os condensadores estiverem inicialmente descarregados, no momento
+em que é introduzida uma diferença de potencial entre os pontos A e B,
+entra carga positiva nas armaduras que estiverem ligadas ao ponto com
+maior potencial, e sai a mesma quantidade de carga das armaduras
+ligadas ao ponto com menor potencial. Mas a quantidade de carga que
+entra em cada condensador não tem que ser a mesma; a carga total que
+entra e sai entre os pontos A e B é:
+</p>
+<div class="eqn" id="eq-4.20">(4.20)</div>
+<div class="center">
+<svg height='1.117147em' version='1.1' viewBox='165.837 71.8522 133.974 11.17147' width='13.3974em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq81'>
+<text font-family='futri8r' font-size='10.9577' x='166.437' y='80.1993'>Q</text>
+<text font-family='fourier-ms' font-size='10.9577' x='177.616' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='187.217' y='80.1993'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='195.981' y='81.9925'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='202.315' y='80.1993'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='211.332' y='80.1993'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='220.095' y='81.9925'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='227.015' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='236.975' y='80.2979'>(</text>
+<text font-family='futri8r' font-size='10.9577' x='240.466' y='80.1993'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='248.332' y='81.9925'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='254.667' y='80.1993'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='263.684' y='80.1993'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='271.55' y='81.9925'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='276.424' y='80.2979'>)</text>
+<text font-family='fourier-ml' font-size='10.9577' x='282.611' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='290.215' y='80.1993'>V</text>
+</g>
+</svg>
+</div>
+<p>
+Ou seja, o sistema é equivalente a um único condensador com capacidade
+igual à soma das capacidades dos dois condensadores:
+</p>
+<div class="eqn" id="eq-4.21">(4.21)</div>
+<div class="center">
+<svg height='1.9308em' version='1.1' viewBox='198.827 68.5188 68.598 19.308' width='6.8598em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq82'>
+<rect height='0.3985' width='67.398' x='199.427' y='69.1188'/>
+<rect height='17.311' width='0.3985' x='199.427' y='69.5173'/>
+<text font-family='futri8r' font-size='10.9577' x='202.455' y='80.1993'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='210.322' y='81.9925'>p</text>
+<text font-family='fourier-ms' font-size='10.9577' x='217.878' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='227.479' y='80.1993'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='235.346' y='81.9925'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='241.681' y='80.1993'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='250.697' y='80.1993'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='258.564' y='81.9925'>2</text>
+<rect height='17.311' width='0.3985' x='266.426' y='69.5173'/>
+<rect height='0.3985' width='67.398' x='199.427' y='86.8284'/>
+</g>
+</svg>
+</div>
+<div id="ex-4.2" class="example">
+<h3>Exemplo 4.2</h3>
+<img class="fig right" src="img/eic0014-ex_4_2.png"
+     alt="Circuito com 3 condensadores" style="width:11.79em">
+<p>
+Considere o circuito representado na figura e calcule: (<i>a</i>) A
+capacidade equivalente entre A e B. (<i>b</i>) A carga armazenada em
+cada condensador quando a voltagem entre A e B for <svg height='0.892515em' version='1.1' viewBox='-0.6 -8.19366 47.0769 8.92515' width='4.70769em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq83'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='18.8904' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='28.8504' y='0'>2<tspan x='34.6845'>0</tspan>
+<tspan x='40.5186'>0</tspan>
+</text>
+</g>
+</svg>
+
+V. (<i>c</i>) A energia total armazenada no circuito quando
+<svg height='0.892515em' version='1.1' viewBox='-0.6 -8.19366 47.0769 8.92515' width='4.70769em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq84'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='18.8904' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='28.8504' y='0'>2<tspan x='34.6845'>0</tspan>
+<tspan x='40.5186'>0</tspan>
+</text>
+</g>
+</svg>
+ V.
+</p>
+</div>
+<p>
+<b>Resolução</b>. Os condensadores de 4 µF e 15 µF encontram-se em
+série e, portanto, podem ser substituídos por um só condensador de
+capacidade:
+</p>
+<div class="center">
+<svg height='2.50776em' version='1.1' viewBox='170.303 66.0629 124.853 25.0776' width='12.4853em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq85'>
+<text font-family='futri8r' font-size='10.9577' x='170.903' y='82.2077'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='178.769' y='84.001'>e<tspan x='183.01'>q</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='190.432' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='201.587' y='74.1141'>4</text>
+<text font-family='fourier-ms' font-size='10.9577' x='208.883' y='74.1141'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='218.258' y='74.1141'>1<tspan x='224.092'>5</tspan>
+</text>
+<rect height='0.637912' width='28.3389' x='201.587' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='201.587' y='90.4089'>4</text>
+<text font-family='fourier-ms' font-size='10.9577' x='208.883' y='90.4089'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='218.258' y='90.4089'>1<tspan x='224.092'>5</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='233.167' y='82.2077'>µ</text>
+<text font-family='futr8r' font-size='10.9577' x='240.245' y='82.2077'>F</text>
+<text font-family='fourier-ms' font-size='10.9577' x='248.675' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='258.634' y='82.2077'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='264.469' y='82.2077'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='267.386' y='82.2077'>1<tspan x='273.22'>6</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='281.529' y='82.2077'>µ</text>
+<text font-family='futr8r' font-size='10.9577' x='288.606' y='82.2077'>F</text>
+</g>
+</svg>
+</div>
+<p>
+este condensador está ligado em paralelo com o condensador de 12 µF,
+pelo que a capacidade total é 15.16 µF.
+</p>
+<img class="fig center" src="img/eic0014-ex_4_2-sol.png"
+     alt="Simplificação de circuito com condensadores" style="width:25.32em">
+<p>
+Nos dois condensadores de 12 µF e 3.16 µF a voltagem é a mesma e é
+igual a 200 V; assim sendo, as cargas nesses condensadores são:
+</p>
+<div class="center">
+<svg height='3.31572em' version='1.1' viewBox='149.944 81.0285 165.597 33.1572' width='16.5597em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq86'>
+<text font-family='futri8r' font-size='10.9577' x='150.544' y='92.1544'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='159.307' y='93.9477'>1<tspan x='163.683'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='170.602' y='92.1544'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='180.562' y='92.1544'>2<tspan x='186.396'>0</tspan>
+<tspan x='192.23'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='199.526' y='92.1544'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='208.901' y='92.1544'>1<tspan x='214.735'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='222.03' y='92.1544'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='231.406' y='92.1544'>1<tspan x='237.24'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='243.074' y='87.2169'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='249.01' y='87.2169'>6</text>
+<text font-family='fourier-ms' font-size='10.9577' x='255.929' y='92.1544'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='265.889' y='92.1544'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='271.723' y='92.1544'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='274.64' y='92.1544'>4<tspan x='282.52'>m</tspan>
+<tspan x='292.67'>C</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='150.544' y='110.934'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='159.307' y='112.727'>3</text>
+<text font-family='futr8r' font-size='8.21825' x='163.683' y='112.727'>.</text>
+<text font-family='futr8r' font-size='8.21825' x='165.871' y='112.727'>1<tspan x='170.246'>6</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='177.166' y='110.934'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='187.125' y='110.934'>2<tspan x='192.96'>0</tspan>
+<tspan x='198.794'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='206.089' y='110.934'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='215.464' y='110.934'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='221.299' y='110.934'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='224.216' y='110.934'>1<tspan x='230.05'>6</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='237.345' y='110.934'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='246.721' y='110.934'>1<tspan x='252.555'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='258.389' y='105.997'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='264.325' y='105.997'>6</text>
+<text font-family='fourier-ms' font-size='10.9577' x='271.244' y='110.934'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='281.204' y='110.934'>6<tspan x='287.038'>3</tspan>
+<tspan x='292.872'>2</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='300.752' y='110.934'>µ</text>
+<text font-family='futr8r' font-size='10.9577' x='307.829' y='110.934'>C</text>
+</g>
+</svg>
+</div>
+<p>
+As cargas nos condensadores de 4 µF e 15 µF são iguais
+porque eles estão ligados em série:
+</p>
+<div class="center">
+<svg height='1.15988em' version='1.1' viewBox='187.408 71.8522 90.6678 11.5988' width='9.06678em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq87'>
+<text font-family='futri8r' font-size='10.9577' x='188.008' y='80.1993'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='196.772' y='81.9925'>4</text>
+<text font-family='fourier-ms' font-size='10.9577' x='203.691' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='213.292' y='80.1993'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='222.055' y='81.9925'>1<tspan x='226.431'>5</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='233.35' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='243.31' y='80.1993'>6<tspan x='249.144'>3</tspan>
+<tspan x='254.978'>2</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='263.287' y='80.1993'>µ</text>
+<text font-family='futr8r' font-size='10.9577' x='270.365' y='80.1993'>C</text>
+</g>
+</svg>
+</div>
+<p>
+A energia total armazenada pode ser calculada somando as energias
+armazenadas em cada um dos condensadores; a resposta deve ser a mesma
+em qualquer dos circuitos equivalentes. Usando o circuito mais
+simples, com um só condensador de 15.16 µF, obtém-se:
+</p>
+<div class="eqnalign">
+<svg height='2.49461em' version='1.1' viewBox='-1.197761 -16.1449 180.435 24.9461' width='18.0435em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.8832em'>
+<g id='eq88'>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+<text font-family='futr8r' font-size='8.21825' x='8.36862' y='1.79326'>t</text>
+<text font-family='fourier-ms' font-size='10.9577' x='13.7457' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='24.9012' y='-8.09364'>1</text>
+<rect height='0.637912' width='5.83411' x='24.9012' y='-3.41534'/>
+<text font-family='futr8r' font-size='10.9577' x='24.9012' y='8.20122'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='32.7411' y='0'>C</text>
+<text font-family='fourier-ml' font-size='10.9577' x='42.4579' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='51.2303' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='60.4717' y='-4.93748'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='67.391' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='78.5465' y='-8.09364'>1</text>
+<rect height='0.637912' width='5.83411' x='78.5465' y='-3.41534'/>
+<text font-family='futr8r' font-size='10.9577' x='78.5465' y='8.20122'>2<tspan x='86.745' y='0'>1</tspan>
+<tspan x='92.5791'>5</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='98.4133' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='101.33' y='0'>1<tspan x='107.164'>6</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='114.46' y='0'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='123.835' y='0'>1<tspan x='129.669'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='135.503' y='-4.93748'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='141.439' y='-4.93748'>6</text>
+<text font-family='fourier-ms' font-size='10.9577' x='147.774' y='0'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='157.149' y='0'>2<tspan x='162.984'>0</tspan>
+<tspan x='168.818'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='174.652' y='-4.93748'>2</text>
+</g>
+</svg>
+&emsp;
+<svg height='1.003188em' version='1.1' viewBox='-0.6 -8.1827 42.1217 10.03188' width='4.21217em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.179998em'>
+<g id='eq89'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='9.95993' y='0'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='15.7941' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='18.7111' y='0'>3<tspan x='24.5452'>0</tspan>
+<tspan x='30.3794'>3</tspan>
+<tspan x='37.3824'>J</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+</section>
+<section id="Perguntas">
+<h2>Perguntas</h2>
+<p>
+(Para conferir a sua resposta, clique nela.)
+</p>
+<ol class="spacious">
+<li>
+A capacidade elétrica de um condutor isolado:
+<ol class="answers">
+<li onclick="document.getElementById('p1c1').style.display='block'">Diminui se o condutor tiver um dielétrico à sua volta.</li>
+<li onclick="document.getElementById('p1c2').style.display='block'">Não depende do seu tamanho.</li>
+<li onclick="document.getElementById('p1c3').style.display='block'">Mede-se em unidades de J/C.</li>
+<li onclick="document.getElementById('p1c4').style.display='block'">É igual ao trabalho necessário para deslocar uma carga desde o infinito até o condutor.</li>
+<li onclick="document.getElementById('p1c5').style.display='block'">É independente da carga acumulada no condutor.</li>
+</ol>
+</li>
+<li>
+Qual deve ser a capacidade de um condensador para que, quando a sua
+voltagem for de 9.0 V, a carga na armadura com carga negativa seja
+equivalente a 10<sup>10</sup> eletrões?
+<ol class="shortanswers">
+<li onclick="document.getElementById('p2c1').style.display='block'">14 nF</li>
+<li onclick="document.getElementById('p2c2').style.display='block'">178 nF</li>
+<li onclick="document.getElementById('p2c3').style.display='block'">178 pF</li>
+<li onclick="document.getElementById('p2c4').style.display='block'">14 pF</li>
+<li onclick="document.getElementById('p2c5').style.display='block'">5.6 pF</li>
+</ol>
+</li>
+<li>
+Qual é a capacidade de um condensador de placas paralelas circulares, com
+5 cm de raio, separadas de 1 cm?
+<ol class="shortanswers">
+<li onclick="document.getElementById('p3c1').style.display='block'">6.9 pF</li>
+<li onclick="document.getElementById('p3c2').style.display='block'">22.0 pF</li>
+<li onclick="document.getElementById('p3c3').style.display='block'">2.2 pF</li>
+<li onclick="document.getElementById('p3c4').style.display='block'">0.22 nF</li>
+<li onclick="document.getElementById('p3c5').style.display='block'">0.69 nF</li>
+</ol>
+</li>
+<li>Aumentando a carga de um condensador de placas paralelas de 3 µC
+para 9 µC e aumentando a separação entre as placas de 1 mm para 3 mm,
+a energia armazenada no condensador varia de um fator
+<ol class="shortanswers">
+<li onclick="document.getElementById('p4c1').style.display='block'">9</li>
+<li onclick="document.getElementById('p4c2').style.display='block'">3</li>
+<li onclick="document.getElementById('p4c3').style.display='block'">8</li>
+<li onclick="document.getElementById('p4c4').style.display='block'">27</li>
+<li onclick="document.getElementById('p4c5').style.display='block'">1/3</li>
+</ol>
+</li>
+<li>
+Num sistema de dois condensadores ligados em paralelo, qual das
+seguintes afirmações é verdadeira?
+<ol class="answers">
+<li onclick="document.getElementById('p5c1').style.display='block'">A
+capacidade equivalente é menor que as capacidades dos
+dois condensadores.</li>
+<li onclick="document.getElementById('p5c2').style.display='block'">A
+carga armazenada nos dois condensadores é a mesma.</li>
+<li onclick="document.getElementById('p5c3').style.display='block'">A
+carga armazenada será maior no condensador com maior
+capacidade.</li>
+<li onclick="document.getElementById('p5c4').style.display='block'">A
+diferença de potencial será maior no condensador com
+maior capacidade.</li>
+<li onclick="document.getElementById('p5c5').style.display='block'">A
+diferença de potencial será maior no condensador com
+menor capacidade.</li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="Problemas">
+<h2>Problemas</h2>
+<ol class="spacious">
+<li id="prob-4.1">
+Um flash fotográfico típico fornece 2 kW durante aproximadamente 2 ms.
+Essa energia é obtida descarregando um condensador de
+50 µF. (<i>a</i>) Até que diferença de potencial deverá ser carregado
+o condensador? (<i>b</i>) Se o condensador fosse substituído por
+outro de 250 µF, até que diferença de potencial deveria ser carregado?
+(<i>c</i>) Qual seria a desvantagem em usar o condensador com maior
+capacidade?
+</li>
+<li id="prob-4.2">
+(<i>a</i>) Determine a capacidade de uma esfera condutora isolada, com
+raio de 4.0 cm, rodeada por ar. (<i>b</i>) A esfera da alínea
+anterior é coberta com uma camada de vidro de 1 mm de espessura e
+constante dielétrica de 5.6, deixando um orifício para ligar um cabo à
+esfera, e a camada de vidro é coberta com uma segunda lâmina metálica
+esférica de raio 4.1 cm, formando-se assim um condensador
+esférico. Determine a capacidade desse condensador. (<i>c</i>) Qual a
+relação entre a capacidade do condensador e a da esfera?
+</li>
+<li id="prob-4.3">
+No sistema de três condensadores apresentado na figura, <svg height='1.074033em' version='1.1' viewBox='-0.958652 -8.34707 40.0114 10.74033' width='4.00114em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq90'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='7.50785' y='1.79326'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.4272' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='24.3871' y='0'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='30.2212' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='33.1383' y='0'>2</text>
+</g>
+</svg>
+ µF,
+<svg height='1.074033em' version='1.1' viewBox='-0.958652 -8.34707 39.8799 10.74033' width='3.98799em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq91'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='7.50785' y='1.79326'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.4272' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='24.3871' y='0'>4</text>
+<text font-family='futr8r' font-size='10.9577' x='30.2212' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='33.1383' y='0'>3</text>
+</g>
+</svg>
+ µF e <svg height='1.083895em' version='1.1' viewBox='-0.958652 -8.34707 39.9566 10.83895' width='3.99566em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq92'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>C</text>
+<text font-family='futr8r' font-size='8.21825' x='7.50785' y='1.79326'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.4272' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='24.3871' y='0'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='30.2212' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='33.1383' y='0'>5</text>
+</g>
+</svg>
+ µF. A voltagem entre os pontos A e B é de
+9.0 V. (<i>a</i>) Calcule a carga armazenada em cada condensador.
+(<i>b</i>) Calcule a energia total armazenada no sistema.
+<img class="fig center" src="img/eic0014-prob_4_3.png"
+     alt="Circuito com condensadores" style="width:15.69em">
+</li>
+<li id="prob-4.4">
+Um condensador plano com armaduras de 12 cm<sup>2</sup> distanciadas de 1 cm,
+está totalmente preenchido por dois dielétricos, cada um com espessura
+igual a 0.5 cm e área igual à das placas. Calcule a capacidade do
+condensador sabendo que as constantes dos dielétricos são 4.9 e 5.6
+(sugestão: admita que o condensador é equivalente a dois condensadores
+em série, cada um com um dielétrico diferente).
+</li>
+<li id="prob-4.5">
+Considere um condensador plano, de área 0.3 m<sup>2</sup> e distanciadas
+0.5 cm. Entre as placas encontra-se uma chapa de acrílico com a mesma
+área e espessura igual a 0.5 cm. O condensador é carregado até a
+diferença de potencial ser igual a 12 V e, de seguida, é desligado da
+fonte usada para o carregar. (<i>a</i>) Qual é o trabalho necessário
+para retirar a chapa de acrílico de entre as placas do condensador?
+(<i>b</i>) Calcule o potencial de rutura com dielétrico e depois de
+este ser removido.
+</li>
+<li id="prob-4.6">
+Dois condensadores de 10 µF e 20 µF ligam-se em série a uma fonte de
+1200 V até estarem completamente carregados. (<i>a</i>) Calcule a
+carga em cada condensador. (<i>b</i>) A fonte é então desligada,
+ligando-se entre si os dois condensadores (armadura positiva com
+positiva e negativa com negativa). Calcule a voltagem e a carga final
+em cada condensador.
+</li>
+<li id="prob-4.7">
+No circuito da figura, calcule a capacidade equivalente: (<i>a</i>)
+Entre os pontos B e D. (<i>b</i>) Entre os pontos A e B.
+<img class="fig center" src="img/eic0014-prob_4_7.png"
+     alt="Circuito com condensadores em duas malhas" style="width:17.37em">
+</li>
+<li id="prob-4.8">
+Os condensadores no circuito da figura encontram-se inicialmente
+descarregados. Calcule a carga armazenada no condensador de 2.4 pF
+quando a voltagem entre os pontos A e B é 5 V.
+<br><br>
+<img class="fig center" src="img/eic0014-prob_4_8.png"
+     alt="Circuito com vários condensadores" style="width:15.60em">
+</li>
+</ol>
+</section>
+<section id="Respostas">
+<h2>Respostas</h2>
+<p>
+<b>Perguntas:</b> <b>1.</b> E. <b>2.</b> C. <b>3.</b> A.
+<b>4.</b> D. <b>5.</b> C.
+</p>
+<p>
+<b>Problemas</b>
+</p>
+<ol class="spacious">
+<li>
+(<i>a</i>) 400 V. (<i>b</i>) 179 V. (<i>c</i>) O condensador de maior
+capacidade ocupa um volume maior.
+</li>
+<li>
+(<i>a</i>) 4.44 pF. (<i>b</i>) 1.02 nF. (<i>c</i>) 229.6
+</li>
+<li>
+(<i>a</i>) <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 46.775 11.17147' width='4.6775em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq93'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='15.3238' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='25.2837' y='0'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='31.1179' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='34.0349' y='0'>3<tspan x='39.8691'>8</tspan>
+</text>
+</g>
+</svg>
+ µC, <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 46.2162 11.17147' width='4.62162em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq94'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='15.3238' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='25.2837' y='0'>1<tspan x='31.1179'>2</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='36.952' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='39.8691' y='0'>1</text>
+</g>
+</svg>
+ µC e <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 46.6874 11.17147' width='4.66874em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq95'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='15.3238' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='25.2837' y='0'>1<tspan x='31.1179'>5</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='36.952' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='39.8691' y='0'>5</text>
+</g>
+</svg>
+ µC. (<i>b</i>) 69.6 µJ
+</li>
+<li>
+5.55 pF.
+</li>
+<li>
+(<i>a</i>) 3.12&times;10<sup>-7</sup> J. (<i>b</i>) Sem dielétrico, 15 kV;
+com dielétrico 200 kV.
+</li>
+<li>
+(<i>a</i>) 8 mC. (<i>b</i>) <svg height='0.911143em' version='1.1' viewBox='-0.6 -8.34707 63.6269 9.11143' width='6.36269em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq96'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='18.8904' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='28.8504' y='0'>1<tspan x='34.6845'>6</tspan>
+<tspan x='40.5186'>0</tspan>
+<tspan x='46.3527'>0</tspan>
+<tspan x='52.1869'>/</tspan>
+<tspan x='57.2439'>3</tspan>
+</text>
+</g>
+</svg>
+ V, <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 48.7507 11.17147' width='4.87507em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq97'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='15.3238' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='25.2837' y='0'>1<tspan x='31.1179'>6</tspan>
+<tspan x='36.952'>/</tspan>
+<tspan x='42.009'>3</tspan>
+</text>
+</g>
+</svg>
+ mC, <svg height='1.117147em' version='1.1' viewBox='-0.958652 -8.34707 48.7507 11.17147' width='4.87507em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.2844em'>
+<g id='eq98'>
+<text font-family='futri8r' font-size='10.9577' x='-0.358652' y='0'>Q</text>
+<text font-family='futr8r' font-size='8.21825' x='8.40448' y='1.79326'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='15.3238' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='25.2837' y='0'>3<tspan x='31.1179'>2</tspan>
+<tspan x='36.952'>/</tspan>
+<tspan x='42.009'>3</tspan>
+</text>
+</g>
+</svg>
+ mC.
+</li>
+<li>
+(<i>a</i>) 12 pF. (<i>b</i>) 21.6 pF.
+</li>
+<li>
+3.15 pC.
+</li>
+</ol>
+</section>
+<div id="p1c1" class="comment" onclick="document.getElementById('p1c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta A: Errada</div>
+<p>
+Quando se coloca um dielétrico à volta a capacidade aumenta, em vez de
+diminuir.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c2" class="comment" onclick="document.getElementById('p1c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta B: Errada</div>
+<p>
+Quanto maior for o tamanho de um condutor, maior será a sua capacidade
+de armazenar carga.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c3" class="comment" onclick="document.getElementById('p1c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta C: Errada</div>
+<p>
+J/C são unidades de energia por unidade de carga, enquanto que a
+capacidade tem unidades de carga por unidade de potencial.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c4" class="comment" onclick="document.getElementById('p1c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta D: Errada</div>
+<p>
+Esse trabalho é igual ao potencial na superfície do condutor vezes a
+carga; para obter a capacidade do condutor é necessário dividir a
+carga na superfície pelo potencial na superfície.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c5" class="comment" onclick="document.getElementById('p1c5').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 1, resposta E: Certa</div>
+<p>
+O potencial na superfície aumenta na mesma proporção que a carga
+acumulada; a capacidade, obtida dividindo a carga pela diferença de
+potencial, resulta então independente da carga e do potencial na
+superfície.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c1" class="comment" onclick="document.getElementById('p2c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta A: Errada</div>
+<p>
+A capacidade é igual à carga desse número de eletrões, dividida pela
+diferença de potencial de 9 V.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c2" class="comment" onclick="document.getElementById('p2c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta B: Errada</div>
+<p>
+A capacidade é igual à carga desse número de eletrões, dividida pela
+diferença de potencial de 9 V.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c3" class="comment" onclick="document.getElementById('p2c3').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 2, resposta C: Certa</div>
+<p>
+A capacidade é igual à carga desse número de eletrões, dividida pela
+diferença de potencial de 9 V.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c4" class="comment" onclick="document.getElementById('p2c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta D: Errada</div>
+<p>
+A capacidade é igual à carga desse número de eletrões, dividida pela
+diferença de potencial de 9 V.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c5" class="comment" onclick="document.getElementById('p2c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta E: Errada</div>
+<p>
+A capacidade é igual à carga desse número de eletrões, dividida pela
+diferença de potencial de 9 V.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c1" class="comment" onclick="document.getElementById('p3c1').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 3, resposta A: Certa</div>
+<p>
+A capacidade é igual à área de uma das armaduras (área do círculo com
+5 cm de raio) dividida por <svg height='0.949495em' version='1.1' viewBox='-0.6 -8.73059 22.9503 9.49495' width='2.29503em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.076199em'>
+<g id='eq99'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='7.00305' y='0'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='15.1538' y='0'>k</text>
+</g>
+</svg>
+, onde <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 7.79651 9.46208' width='0.779651em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq100'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>k</text>
+</g>
+</svg>
+ é a constante de
+Coulomb e <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 8.28961 9.47304' width='0.828961em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq101'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>d</text>
+</g>
+</svg>
+ a distância entre as duas armaduras.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c2" class="comment" onclick="document.getElementById('p3c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta B: Errada</div>
+<p>
+A capacidade é igual à área de uma das armaduras (área do círculo com
+5 cm de raio) dividida por <svg height='0.949495em' version='1.1' viewBox='-0.6 -8.73059 22.9503 9.49495' width='2.29503em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.076199em'>
+<g id='eq102'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='7.00305' y='0'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='15.1538' y='0'>k</text>
+</g>
+</svg>
+, onde <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 7.79651 9.46208' width='0.779651em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq103'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>k</text>
+</g>
+</svg>
+ é a constante de
+Coulomb e <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 8.28961 9.47304' width='0.828961em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq104'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>d</text>
+</g>
+</svg>
+ a distância entre as duas armaduras.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c3" class="comment" onclick="document.getElementById('p3c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta C: Errada</div>
+<p>
+A capacidade é igual à área de uma das armaduras (área do círculo com
+5 cm de raio) dividida por <svg height='0.949495em' version='1.1' viewBox='-0.6 -8.73059 22.9503 9.49495' width='2.29503em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.076199em'>
+<g id='eq105'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='7.00305' y='0'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='15.1538' y='0'>k</text>
+</g>
+</svg>
+, onde <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 7.79651 9.46208' width='0.779651em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq106'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>k</text>
+</g>
+</svg>
+ é a constante de
+Coulomb e <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 8.28961 9.47304' width='0.828961em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq107'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>d</text>
+</g>
+</svg>
+ a distância entre as duas armaduras.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c4" class="comment" onclick="document.getElementById('p3c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta D: Errada</div>
+<p>
+A capacidade é igual à área de uma das armaduras (área do círculo com
+5 cm de raio) dividida por <svg height='0.949495em' version='1.1' viewBox='-0.6 -8.73059 22.9503 9.49495' width='2.29503em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.076199em'>
+<g id='eq108'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='7.00305' y='0'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='15.1538' y='0'>k</text>
+</g>
+</svg>
+, onde <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 7.79651 9.46208' width='0.779651em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq109'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>k</text>
+</g>
+</svg>
+ é a constante de
+Coulomb e <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 8.28961 9.47304' width='0.828961em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq110'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>d</text>
+</g>
+</svg>
+ a distância entre as duas armaduras.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c5" class="comment" onclick="document.getElementById('p3c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta E: Errada</div>
+<p>
+A capacidade é igual à área de uma das armaduras (área do círculo com
+5 cm de raio) dividida por <svg height='0.949495em' version='1.1' viewBox='-0.6 -8.73059 22.9503 9.49495' width='2.29503em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.076199em'>
+<g id='eq111'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>4</text>
+<text font-family='fourier-ml' font-size='10.9577' x='7.00305' y='0'>π</text>
+<text font-family='futri8r' font-size='10.9577' x='15.1538' y='0'>k</text>
+</g>
+</svg>
+, onde <svg height='0.946208em' version='1.1' viewBox='-0.6 -8.73059 7.79651 9.46208' width='0.779651em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq112'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>k</text>
+</g>
+</svg>
+ é a constante de
+Coulomb e <svg height='0.947304em' version='1.1' viewBox='-0.6 -8.73059 8.28961 9.47304' width='0.828961em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq113'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>d</text>
+</g>
+</svg>
+ a distância entre as duas armaduras.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c1" class="comment" onclick="document.getElementById('p4c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta A: Errada</div>
+<p>
+A carga aumenta num fator de 3. A capacidade diminui num fator 1/3,
+porque a distância aumenta 3 vezes e, portanto, a diferença de
+potencial aumenta num fator de 9 (diferença de potencial é igual a
+carga sobre capacidade). Com esses resultados calcula-se o aumento da
+energia <svg height='0.894707em' version='1.1' viewBox='-1.197761 -8.1827 11.2263 8.94707' width='1.12263em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq114'>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+</g>
+</svg>
+.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c2" class="comment" onclick="document.getElementById('p4c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta B: Errada</div>
+<p>
+A carga aumenta num fator de 3. A capacidade diminui num fator 1/3,
+porque a distância aumenta 3 vezes e, portanto, a diferença de
+potencial aumenta num fator de 9 (diferença de potencial é igual a
+carga sobre capacidade). Com esses resultados calcula-se o aumento da
+energia <svg height='0.894707em' version='1.1' viewBox='-1.197761 -8.1827 11.2263 8.94707' width='1.12263em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq115'>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+</g>
+</svg>
+.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c3" class="comment" onclick="document.getElementById('p4c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta C: Errada</div>
+<p>
+A carga aumenta num fator de 3. A capacidade diminui num fator 1/3,
+porque a distância aumenta 3 vezes e, portanto, a diferença de
+potencial aumenta num fator de 9 (diferença de potencial é igual a
+carga sobre capacidade). Com esses resultados calcula-se o aumento da
+energia <svg height='0.894707em' version='1.1' viewBox='-1.197761 -8.1827 11.2263 8.94707' width='1.12263em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq116'>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+</g>
+</svg>
+.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c4" class="comment" onclick="document.getElementById('p4c4').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 4, resposta D: Certa</div>
+<p>
+A carga aumenta num fator de 3. A capacidade diminui num fator 1/3,
+porque a distância aumenta 3 vezes e, portanto, a diferença de
+potencial aumenta num fator de 9 (diferença de potencial é igual a
+carga sobre capacidade). Com esses resultados calcula-se o aumento da
+energia <svg height='0.894707em' version='1.1' viewBox='-1.197761 -8.1827 11.2263 8.94707' width='1.12263em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq117'>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+</g>
+</svg>
+.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c5" class="comment" onclick="document.getElementById('p4c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta E: Errada</div>
+<p>
+A carga aumenta num fator de 3. A capacidade diminui num fator 1/3,
+porque a distância aumenta 3 vezes e, portanto, a diferença de
+potencial aumenta num fator de 9 (diferença de potencial é igual a
+carga sobre capacidade). Com esses resultados calcula-se o aumento da
+energia <svg height='0.894707em' version='1.1' viewBox='-1.197761 -8.1827 11.2263 8.94707' width='1.12263em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq118'>
+<text font-family='futri8r' font-size='10.9577' x='-0.597761' y='0'>U</text>
+</g>
+</svg>
+.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c1" class="comment" onclick="document.getElementById('p5c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta A: Errada</div>
+<p>
+A capacidade equivalente é igual à soma das capacidades, ou seja,
+maior que cada uma das duas capacidades.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c2" class="comment" onclick="document.getElementById('p5c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta B: Errada</div>
+<p>
+A diferença de potencial é a mesma nos dois condensadores. Como a
+carga é o produto da diferença de potencial e da capacidade, as duas
+cargas só seriam iguais se as capacidades fossem iguais.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c3" class="comment" onclick="document.getElementById('p5c3').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 5, resposta C: Certa</div>
+<p>
+Como as diferenças de potencial nos dois condensadores são iguais, as
+cargas serão diretamente proporcionais às capacidades e, portanto,
+maior no condensador com maior capacidade.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c4" class="comment" onclick="document.getElementById('p5c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta D: Errada</div>
+<p>
+Em quaisquer dois dispositivos ligados em paralelo, a diferença de
+potencial é sempre igual neles.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c5" class="comment" onclick="document.getElementById('p5c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta E: Errada</div>
+<p>
+Em quaisquer dois dispositivos ligados em paralelo, a diferença de
+potencial é sempre igual neles.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div class="bottom">
+<a href="#top"><span class="button">Topo</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../index.html">DEF</a>
+</div>
+<div class="category">
+<a href="../textos.html">Material de estudo</a>
+</div>
+<div class="category">
+<a href="../cursos.html">Cadeiras no Moodle</a>
+</div>
+<div class="category">
+<a href="../faq.html">Perguntas frequentes</a>
+</div>
+</div>
+&copy; 2016 &ndash; 2019, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Última atualização: 2020/10/09 08:01:41 UTC</span>
+</footer>
+</body>
+</html>

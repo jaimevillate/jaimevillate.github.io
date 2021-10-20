@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercícios Resolvidos de Eletricidade, Magnetismo e Circuitos &ndash; Resistência</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body id="top">
+<aside>
+<span class="current">HTML</span>
+<a target="_blank" href="./probs-resistencia.pdf">PDF</a>
+</aside>
+<header>
+<h1 id="title">Exercícios Resolvidos de Eletricidade, Magnetismo e Circuitos</h1>
+</header>
+<nav>
+<a href="../index.html">DEF</a><span>&rarr;</span>
+<a href="../ensino.html">Ensino</a><span>&rarr;</span>
+<a href="../textos.html">Material de estudo</a><span>&rarr;</span>
+<a href="./index.html">Eletricidade, Magnetismo e Circuitos</a><span>&rarr;</span>
+<a href="./problemas.html">Exercícios Resolvidos</a><span>&rarr;</span>
+<span>3. Resistência</span>
+</nav>
+<div class="content">
+<span class="button">Índice</span>
+<div class="content-items">
+<a href="./index.html">Eletricidade, Magnetismo e Circuitos</a><br>
+<a href="./problemas.html">Exercícios Resolvidos</a><br>
+3. <a href="#top">Resistência</a>
+<ul class="plain">
+<li><a href="#prob-3.1">Problema 1</a></li>
+<li><a href="#prob-3.3">Problema 3</a></li>
+<li><a href="#prob-3.5">Problema 5</a></li>
+<li><a href="#prob-3.6">Problema 6</a></li>
+</ul>
+</div>
+</div>
+<section>
+<h2>3. Resistência</h2>
+<div id="prob-3.1" class="example">
+<h3>Problema 1</h3>
+<p>
+A temperatura num dado momento é 12 °C. Quanto deve aumentar a
+temperatura para que a resistência de um fio de cobre aumente 10%?
+</p>
+</div>
+<p>
+Se <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 16.9617 10.57597' width='1.69617em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq1'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>1<tspan x='11.7758'>2</tspan>
+</text>
+</g>
+</svg>
+ for a resistência a 12 °C, a resistência à temperatura <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 9.34154 8.7827' width='0.934154em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>T</text>
+</g>
+</svg>
+
+procurada será <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 32.7159 10.57597' width='3.27159em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq3'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='5.83412' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='8.75119' y='0'>1</text>
+<text font-family='futri8r' font-size='10.9577' x='15.7542' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='23.1545' y='1.79326'>1<tspan x='27.5301'>2</tspan>
+</text>
+</g>
+</svg>
+. A expressão que relaciona a resistência a
+duas temperaturas diferentes depende do coeficiente de temperatura,
+que é diferente a cada temperatura. Como o coeficiente de temperatura
+do cobre que aparece na <a href="resistencia.html#tab-3.2">tabela 3.2</a> do livro é para 20 °C, teremos que
+relacionar as resistências a 12 °C e <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 9.34154 8.7827' width='0.934154em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq4'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>T</text>
+</g>
+</svg>
+ com a resistência a 20 °C
+(<svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 16.9946 10.67459' width='1.69946em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq5'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2<tspan x='11.7758'>0</tspan>
+</text>
+</g>
+</svg>
+, desconhecida), obtendo-se duas equações:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i1)</span> <span class="maxv">eq1</span><span class="maxm">:</span><span class="maxv"> R12</span><span class="maxo"> =</span><span class="maxv"> R20</span><span class="maxo">*</span><span class="maxd">(</span><span class="maxn">1</span><span class="maxo"> +</span><span class="maxn"> 0.0039</span><span class="maxo">*</span><span class="maxd">(</span><span class="maxn">12</span><span class="maxo"> -</span><span class="maxn"> 20</span><span class="maxd">))</span><span class="maxm">$</span><br>
+<span class="maxm">(%i2)</span> <span class="maxv">eq2</span><span class="maxm">:</span><span class="maxn"> 1.1</span><span class="maxo">*</span><span class="maxv">R12</span><span class="maxo"> =</span><span class="maxv"> R20</span><span class="maxo">*</span><span class="maxd">(1</span><span class="maxo"> +</span><span class="maxn"> 0.0039</span><span class="maxo">*</span><span class="maxd">(</span><span class="maxv">T</span><span class="maxo"> -</span><span class="maxn"> 20</span><span class="maxd">))</span><span class="maxm">$</span>
+</div>
+<p>
+Esse sistema tem uma variável livre, já que são duas equações com 3
+variáveis: as resistências <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 16.9617 10.57597' width='1.69617em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq6'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>1<tspan x='11.7758'>2</tspan>
+</text>
+</g>
+</svg>
+, <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 16.9946 10.67459' width='1.69946em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq7'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2<tspan x='11.7758'>0</tspan>
+</text>
+</g>
+</svg>
+ e a temperatura
+<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 9.34154 8.7827' width='0.934154em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq8'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>T</text>
+</g>
+</svg>
+. Para usar o comando <span class="maxf">solve</span> do Maxima, teremos que
+selecionar duas das variáveis, por exemplo <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 9.34154 8.7827' width='0.934154em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq9'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>T</text>
+</g>
+</svg>
+ e <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 16.9617 10.57597' width='1.69617em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq10'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>1<tspan x='11.7758'>2</tspan>
+</text>
+</g>
+</svg>
+, que serão
+resolvidas em função da terceira variável <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 16.9946 10.67459' width='1.69946em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq11'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2<tspan x='11.7758'>0</tspan>
+</text>
+</g>
+</svg>
+, considerada
+variável livre
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i3)</span> <span class="maxf">float</span><span class="maxd"> (</span><span class="maxf">solve</span><span class="maxd"> ([</span><span class="maxv">eq1</span><span class="maxd">,</span><span class="maxv">eq2</span><span class="maxd">], [</span><span class="maxv">T</span><span class="maxd">,</span><span class="maxv">R12</span><span class="maxd">]))</span><span class="maxm">;</span><br>
+(%o3) &emsp;&emsp;&emsp;[ [<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 9.34154 8.7827' width='0.934154em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq12'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>T</text>
+</g>
+</svg>
+ = 36.84, <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 20.251 8.7827' width='2.0251em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq13'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='10.9577' x='7.90237' y='0'>1<tspan x='13.7365'>2</tspan>
+</text>
+</g>
+</svg>
+ = 0.9688 <svg height='0.89142em' version='1.1' viewBox='-0.6 -8.1827 20.2948 8.9142' width='2.02948em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq14'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='10.9577' x='7.90237' y='0'>2<tspan x='13.7365'>0</tspan>
+</text>
+</g>
+</svg>
+] ]
+</div>
+<p>
+<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 9.34154 8.7827' width='0.934154em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq15'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>T</text>
+</g>
+</svg>
+ não depende da variável livre. A resposta é que a temperatura deve
+aumentar 24.84 °C (aumenta de 12 °C para 36.84 °C).
+</p>
+<br>
+<div id="prob-3.3" class="example">
+<h3>Problema 3</h3>
+<p>
+A diferença de potencial entre os elétrodos de uma bateria é 3 V
+quando a bateria é percorrida por uma corrente de 4 A, no sentido do
+elétrodo negativo para o positivo. Quando a corrente é de 2 A, no
+sentido oposto, a diferença de potencial aumenta até 12 V. (<i>a</i>)
+Calcule a resistência interna da bateria. (<i>b</i>) Qual é a
+f.e.m. da bateria?
+</p>
+</div>
+<p>
+No primeiro caso, quando a corrente passa do elétrodo negativo para o
+positivo, as cargas de condução aumentam a sua energia elétrica na
+passagem pela bateria. Como tal, a bateria está no modo gerador;
+substituindo os valores da voltagem e da corrente na equação do
+gerador, obtem-se uma primeira condição:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i4)</span> <span class="maxv">eq1</span><span class="maxm">:</span><span class="maxn"> 3</span><span class="maxo"> =</span><span class="maxv"> E</span><span class="maxo"> -</span><span class="maxv"> r</span><span class="maxo">*</span><span class="maxn">4</span><span class="maxm">$</span>
+</div>
+<p>
+No segundo caso, as cargas de condução perdem energia elétrica na sua
+passagem pelo eletrólito da bateria. A bateria está a ser recarregada
+e, como tal, a voltagem e corrente verificam a equação dum recetor:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i5)</span> <span class="maxv">eq2</span><span class="maxm">:</span><span class="maxn"> 12</span><span class="maxo"> =</span><span class="maxv"> E</span><span class="maxo"> +</span><span class="maxv"> r</span><span class="maxo">*</span><span class="maxn">2</span><span class="maxm">$</span>
+</div>
+<p>
+A resolução dessas duas equações dá os valores da f.e.m. e
+da resistência interna (unidades SI)
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i6)</span> <span class="maxf">float</span><span class="maxd"> (</span><span class="maxf">solve</span><span class="maxd"> ([</span><span class="maxv">eq1</span><span class="maxd">,</span><span class="maxv">eq2</span><span class="maxd">]))</span><span class="maxm">;</span><br>
+(%o6) &emsp;&emsp;&emsp;[ [<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.7827 8.7827' width='0.87827em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq16'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>E</text>
+</g>
+</svg>
+= 9.0, <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq17'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+ = 1.5] ]
+</div>
+<p>
+A bateria tem f.e.m. de 9 V e resistência interna de 1.5 Ω.
+</p>
+<p>
+<b>Comentários:</b> A voltagem nos elétrodos de uma bateria quando
+estiver a descarregar, no modo gerador, é sempre menor que o valor da
+sua f.e.m.; quando a bateria estiver a ser recarregada, no modo
+recetor, a voltagem entre os elétrodos deve ser maior do que a sua
+f.e.m. Como tal, no enunciado do problema fica claro que no primeiro
+caso a bateria está a descarregar, no segundo caso está a recarregar e
+a sua f.e.m. estará entre 3 V e 12 V.
+</p>
+<br>
+<div id="prob-3.5" class="example">
+<h3>Problema 5</h3>
+<p>
+A resistência de uma lâmpada incandescente de 60 W e 230 V, à
+temperatura ambiente de 20 °C, é <svg height='0.89142em' version='1.1' viewBox='-0.6 -8.1827 32.2017 8.9142' width='3.22017em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq18'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.94798' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='19.9079' y='0'>6<tspan x='25.742'>5</tspan>
+</text>
+</g>
+</svg>
+ Ω. No entanto, as
+especificações do fabricante (60 W e 230 V) conduzem a um valor muito
+mais elevado da resistência. Justifique, calculando a temperatura do
+filamento de tungsténio quando a lâmpada se encontra acesa.
+</p>
+</div>
+<p>
+A potência e voltagem nominais, indicadas pelo fabricante, permitem
+determinar o valor da resistência nominal, usando a expressão
+<svg height='1.12925em' version='1.1' viewBox='-0.6 -10.52812 55.3377 11.2925' width='5.53377em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq19'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>P</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.98383' y='0'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='19.9438' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='27.5472' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='36.7886' y='-4.33971'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='41.6623' y='0'>/</text>
+<text font-family='futri8r' font-size='10.9577' x='46.7194' y='0'>R</text>
+</g>
+</svg>
+
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i7)</span> <span class="maxv">Rn</span><span class="maxm">:</span><span class="maxf"> float</span><span class="maxd"> (</span><span class="maxn">230</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo">/</span><span class="maxn">60</span><span class="maxd">)</span><span class="maxm">;</span><br>
+(%o7) &emsp;&emsp;&emsp;881.7
+</div>
+<p>
+Essa será a resistência da lâmpada quando for ligada à voltagem de
+230 V, com uma temperatura elevada que faz com que ilumine. A
+resistência a 20 °C, <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 40.9489 10.67459' width='4.09489em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq20'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2<tspan x='11.7758'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='18.6952' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='28.6551' y='0'>6<tspan x='34.4892'>5</tspan>
+</text>
+</g>
+</svg>
+ Ω, é muito menor porque a essa
+temperatura a lâmpada não aquece o suficiente para iluminar. A
+temperatura da lâmpada acessa obtém-se a partir da <a href="resistencia.html#eq-3.7">equação 3.7</a> do
+livro, substituindo os valores de <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 13.5641 10.57597' width='1.35641em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq21'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>n</text>
+</g>
+</svg>
+, <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 16.9946 10.67459' width='1.69946em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq22'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2<tspan x='11.7758'>0</tspan>
+</text>
+</g>
+</svg>
+ e o
+coeficiente de temperatura do tungsténio (<a href="resistencia.html#tab-3.2">tabela 3.2</a>):
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i8)</span> <span class="maxf">float</span><span class="maxd"> (</span><span class="maxf">solve</span><span class="maxd"> (</span><span class="maxv">Rn</span><span class="maxo"> =</span><span class="maxn"> 65</span><span class="maxo">*</span><span class="maxd">(</span><span class="maxn">1</span><span class="maxo"> +</span><span class="maxn"> 0.0045</span><span class="maxo">*</span><span class="maxd">(</span><span class="maxv">T</span><span class="maxo">-</span><span class="maxn">20</span><span class="maxd">))))</span><span class="maxm">;</span><br>
+(%o8) &emsp;&emsp;&emsp;[<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 9.34154 8.7827' width='0.934154em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq23'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>T</text>
+</g>
+</svg>
+ = 2.812e+3]
+</div>
+<p>
+Quando a diferença de potencial na lâmpada for de 230 V, o filamento
+aquecerá ate 2812 °C, produzindo luz.
+</p>
+<p>
+<b>Comentários:</b> Esse resultado é uma aproximação, já que a
+relação entre resistência e temperatura provavelmente já não será
+linear à temperatura elevada da lâmpada. De qualquer forma, a
+temperatura deve ser da ordem dos milhares de graus Celsius para que o
+filamento produza luz visível. A lâmpada não queima porque dentro dela
+não há oxigênio. O mecanismo de produção de luz usado nas lâmpadas
+incandescentes (aquecer um filamento) é muito ineficiente, pois grande
+parte da energia elétrica é dissipada em calor; as lâmpadas
+fluorescentes são muito mais eficientes. Hoje em dia as lâmpadas de
+LEDs são ainda mais eficientes, aproveitando quase toda a
+energia elétrica para produzir luz.
+</p>
+<br>
+<div id="prob-3.6" class="example">
+<h3>Problema 6</h3>
+<p>
+No circuito representado na figura, foi medida a corrente na
+resistência de 8 kΩ e obteve-se o valor de 2 mA. Use esses
+dados para calcular o valor da f.e.m. e a diferença de potencial em
+cada resistência.
+</p>
+<img class="fig center" src="img/eic0014-prob_3_6.png"
+     alt="Circuito com f.e.m. e resistências" style="width:13.56em">
+</div>
+<p>
+A diferença de potencial na resistência de 8 kΩ é:
+</p>
+<div class="center">
+<svg height='1.36178em' version='1.1' viewBox='158.778 69.0734 149.154 13.6178' width='14.9154em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq24'>
+<text font-family='fourier-ml' font-size='10.9577' x='159.378' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='166.982' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='174.107' y='81.9925'>8</text>
+<text font-family='fourier-ms' font-size='10.9577' x='181.026' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='190.986' y='80.1993'>8</text>
+<text font-family='fourier-ms' font-size='10.9577' x='198.282' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='207.657' y='80.1993'>1<tspan x='213.491'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='219.325' y='75.2618'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='225.66' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='235.036' y='80.1993'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='242.331' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='251.706' y='80.1993'>1<tspan x='257.541'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='263.375' y='75.2618'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='269.31' y='75.2618'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='276.23' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='286.19' y='80.1993'>1<tspan x='292.024'>6</tspan>
+<tspan x='299.904'>V</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+A resistência equivalente às duas resistências de 6 kΩ e 3
+kΩ em paralelo é:
+</p>
+<div class="maxima notranslate">
+<span class="maxm">(%i9)</span> <span class="maxv">Rp</span><span class="maxm">:</span><span class="maxn"> 1</span><span class="maxo">/</span><span class="maxd">(</span><span class="maxn">1</span><span class="maxo">/</span><span class="maxn">3</span><span class="maxo"> +</span><span class="maxn"> 1</span><span class="maxo">/</span><span class="maxn">6)</span><span class="maxm">;</span><br>
+(%o9) &emsp;&emsp;&emsp;&emsp;2
+</div>
+<p>
+E a corrente através dessa resistência equivalente são os mesmos 2 mA
+que passam pela resistência de 8 kΩ, que está em série com
+ela. A diferença de potencial na resistência equivalente de 2
+kΩ é:
+<div class="center">
+<svg height='1.35191em' version='1.1' viewBox='161.695 69.0734 143.32 13.5191' width='14.332em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq25'>
+<text font-family='fourier-ml' font-size='10.9577' x='162.295' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='169.899' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='177.024' y='81.9925'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='183.943' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='193.903' y='80.1993'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='201.199' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='210.574' y='80.1993'>1<tspan x='216.408'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='222.242' y='75.2618'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='228.577' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='237.953' y='80.1993'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='245.248' y='80.1993'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='254.623' y='80.1993'>1<tspan x='260.458'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='266.292' y='75.2618'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='272.227' y='75.2618'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='279.147' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='289.107' y='80.1993'>4<tspan x='296.986'>V</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+que será igual à diferença de potencial nas resistências de 3 kΩ
+e 6 kΩ que estão em paralelo:
+</p>
+<div class="center">
+<svg height='1.068554em' version='1.1' viewBox='193.493 72.0056 79.7251 10.68554' width='7.97251em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq26'>
+<text font-family='fourier-ml' font-size='10.9577' x='194.093' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='201.696' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='208.822' y='81.9925'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='215.741' y='80.1993'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='225.701' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='233.304' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='240.43' y='81.9925'>6</text>
+<text font-family='fourier-ms' font-size='10.9577' x='247.349' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='257.309' y='80.1993'>4<tspan x='265.189'>V</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+O valor da f.e.m. deverá ser igual à soma das diferenças de potencial
+nas duas resistências de 2 kΩ e 8 kΩ, que estão em série:
+</p>
+<div class="center">
+<svg height='1.068554em' version='1.1' viewBox='182.318 72.0056 102.075 10.68554' width='10.2075em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq27'>
+<text font-family='fourier-mlit' font-size='10.9577' x='182.918' y='80.1993'>ε</text>
+<text font-family='fourier-ms' font-size='10.9577' x='190.643' y='80.1993'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='200.603' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='208.206' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='215.331' y='81.9925'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='221.666' y='80.1993'>+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='231.042' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='238.645' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='245.77' y='81.9925'>8</text>
+<text font-family='fourier-ms' font-size='10.9577' x='252.69' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='262.65' y='80.1993'>2<tspan x='268.484'>0</tspan>
+<tspan x='276.364'>V</tspan>
+</text>
+</g>
+</svg>
+</div>
+</section>
+<div class="bottom">
+<a href="#top"><span class="button">Topo</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../index.html">DEF</a>
+</div>
+<div class="category">
+<a href="../textos.html">Material de estudo</a>
+</div>
+<div class="category">
+<a href="../cursos.html">Cadeiras no Moodle</a>
+</div>
+<div class="category">
+<a href="../faq.html">Perguntas frequentes</a>
+</div>
+</div>
+&copy; 2016 &ndash; 2020, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Última atualização: 2020/09/25 09:45:22 UTC</span>
+</footer>
+</body>
+</html>

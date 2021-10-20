@@ -1,0 +1,2707 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. Resistência</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body id="top">
+<aside>
+<span class="current">HTML</span>
+<a target="_blank" href="./resistencia.pdf">PDF</a>
+</aside>
+<header>
+<h1 id="title">3. Resistência</h1>
+</header>
+<nav>
+<a href="../index.html">DEF</a><span>&rarr;</span>
+<a href="../ensino.html">Ensino</a><span>&rarr;</span>
+<a href="../textos.html">Material de estudo</a><span>&rarr;</span>
+<a href="index.html">Eletricidade, Magnetismo e Circuitos</a><span>&rarr;</span>
+<span>3. Resistência</span>
+</nav>
+<div class="content">
+<span class="button">Índice</span>
+<div class="content-items">
+<a href="./index.html">Eletricidade, Magnetismo e Circuitos</a>
+<ol class="nested" style="counter-increment: item 2">
+<li><a href="#top">Resistência</a>
+<ul class="plain">
+<li><a href="#Introdução">Introdução</a></li>
+</ul>
+<ol class="nested">
+<li><a href="#sec-3.1">Caraterísticas voltagem-corrente</a></li>
+<li><a href="#sec-3.2">Lei de Ohm</a></li>
+<li><a href="#sec-3.3">Caraterística de uma bateria</a></li>
+<li><a href="#sec-3.4">Código de cores para resistências</a></li>
+<li><a href="#sec-3.5">Resistividade</a></li>
+<li><a href="#sec-3.6">Supercondutividade</a></li>
+<li><a href="#sec-3.7">Associações de resistências</a></li>
+</ol>
+<ul class="plain">
+<li><a href="#Perguntas">Perguntas</a></li>
+<li><a href="#Problemas">Problemas</a></li>
+<li><a href="#Respostas">Respostas</a></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<section id="Introdução" class="opening">
+<h2>Introdução</h2>
+<img class="img-4 right" src="img/High_voltage_warning_200.png"
+     alt="Símbolo de périgo por risco de eletrocussão" width="200"
+     height="168">
+<p>
+&quot;Em termos gerais, os efeitos da corrente no corpo humano são
+os seguintes:
+</p>
+<ul>
+<li>com menos do que 0.01 A: sensação de formigueiro ou nada se sente;
+<li>0.02 A: sensação de dor e fica-se agarrado;
+<li>0.03 A: perturbações respiratórias;
+<li>0.07 A: grandes dificuldades respiratórias;
+<li>0.1 A: morte devido a fibrilação;
+<li>mais do que 0.2 A; não existe fibrilação mas verificam-se
+queimaduras muito graves e cessa a respiração.
+</ul>
+<p>
+A gama intermédia que vai de 0.1 a 0.2 A é, por estranho que pareça, a
+que origina a maior parte das mortes nas situações comuns, porque a
+este nível de intensidade inicia-se a fibrilação do coração, que
+consiste numa contração muscular espasmódica e incontrolada do
+coração. A quebra da corrente sanguínea daí resultante origina
+rapidamente a morte. Acima de 0.2 A o coração simplesmente pára e as
+medidas normais de primeiros socorros podem restabelecer o seu
+funcionamento. Mas o único processo para deter a fibrilação é um outro
+choque elétrico controlado. Por isso, correntes entre 0.1 e 0.2 A são
+mais mortais do que correntes mais intensas. A intensidade de corrente
+que passa por uma vítima é geralmente determinada pela resistência da
+pele que vai de cerca de 1000 Ω para peles molhadas até 500 000 Ω para
+peles secas. A resistência interna é menor do que a da pele, estando
+compreendida entre 100 e 500 Ω . Para voltagens superiores a cerca de
+240 V, geralmente resulta a perfuração da pele pela corrente.&quot;
+</p>
+<p>
+<i>O Grande Circo da Física</i> (Walker, 1975,
+pp. 463&ndash;464).
+</p>
+</section>
+<section id="sec-3.1">
+<h2>3.1. Caraterísticas voltagem-corrente</h2>
+<p>
+A potência elétrica dissipada num dispositivo (por exemplo, numa
+lâmpada) é igual ao produto da diferença de potencial entre os
+extremos do elemento pela corrente que o percorre: <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 44.4477 8.79366' width='4.44477em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq1'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>P</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.98383' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='20.3024' y='0'>I</text>
+<text font-family='fourier-ml' font-size='10.9577' x='26.6479' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='34.2514' y='0'>V</text>
+</g>
+</svg>
+. Duas lâmpadas diferentes podem dissipar diferentes potências,
+quando são ligadas à mesma voltagem. Por exemplo, existem lâmpadas
+pequenas, de 12V, com potências de 1 W e de 2 W; isso indica que para
+o mesmo valor da diferença de potencial, a corrente na lâmpada de 2 W
+é o dobro da corrente na lâmpada de 1 W.
+</p>
+<p>
+Cada dispositivo tem uma curva caraterística que mostra os valores
+resultantes da corrente, <svg height='0.87827em' version='1.1' viewBox='-0.241348 -8.1827 6.2734 8.7827' width='0.62734em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+</g>
+</svg>
+, para diferentes valores da diferença de
+potencial, <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq3'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+. A figura <a href="#fig-3.1">3.1</a> mostra algumas dessas
+curvas caraterísticas para três elementos diferentes.
+</p>
+<figure class="center" id="fig-3.1">
+<img class="fig" src="img/characteristics_V_I.png"
+     alt="Carateristicas voltagem-corrente" style="width:32.28em">
+<figcaption>
+<b>Figura 3.1:</b> Caraterísticas voltagem-corrente de três dispositivos diferentes.
+</figcaption>
+</figure>
+</section>
+<section id="sec-3.2">
+<h2>3.2. Lei de Ohm</h2>
+<p>
+Em alguns condutores (o caso <i>a</i> na figura <a href="#fig-3.1">3.1</a>),
+designados de <span id="ohmico&nbsp;(material)" class="index"><b>ohmicos</b></span>, a curva
+caraterística é uma reta que passa pela origem. Essa relação linear
+entre <svg height='0.87827em' version='1.1' viewBox='-0.241348 -8.1827 6.2734 8.7827' width='0.62734em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq4'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+</g>
+</svg>
+ e <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq5'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ expressa-se matematicamente pela
+<b><span id="lei!de&nbsp;Ohm" class="index">Lei</span> de <span id="Ohm,&nbsp;Georg" class="index">Ohm</span></b>:
+</p>
+<div class="eqn" id="eq-3.1">(3.1)</div>
+<div class="center">
+<svg height='1.56677em' version='1.1' viewBox='207.41 68.5188 51.4314 15.6677' width='5.14314em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq6'>
+<rect height='0.3985' width='50.2314' x='208.01' y='69.1188'/>
+<rect height='13.6707' width='0.3985' x='208.01' y='69.5173'/>
+<text font-family='fourier-ml' font-size='10.9577' x='211.397' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='219.001' y='80.1993'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='230.288' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='240.248' y='80.1993'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='249.678' y='80.1993'>I</text>
+<rect height='13.6707' width='0.3985' x='257.843' y='69.5173'/>
+<rect height='0.3985' width='50.2314' x='208.01' y='83.188'/>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq7'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+ é uma constante chamada
+<span id="resistência" class="index"><b>resistência</b></span>, que corresponde ao declive da
+caraterística voltagem-corrente. Um condutor ohmico designa-se
+simplesmente por resistência. A figura <a href="#fig-3.2">3.2</a> mostra o símbolo
+usado para representar uma resistência nos circuitos.
+</p>
+<figure class="center" id="fig-3.2">
+<img class="fig" src="img/resistor_diagram.png"
+     alt="Diagrama de circuito de uma resistência" style="width:5.46em">
+<figcaption>
+<b>Figura 3.2:</b> Símbolo de resistência num circuito.
+</figcaption>
+</figure>
+<p>
+Nos elementos não ohmicos (<i>b</i> e <i>c</i> na
+figura <a href="#fig-3.1">3.1</a>) pode também definir-se a resistência <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq8'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+ pela
+relação <svg height='0.911143em' version='1.1' viewBox='-0.6 -8.34707 28.5339 9.11143' width='2.85339em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq9'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+<text font-family='futr8r' font-size='10.9577' x='16.8448' y='0'>/</text>
+<text font-family='futri8r' font-size='10.9577' x='22.2605' y='0'>I</text>
+</g>
+</svg>
+, mas observe-se-se que nesses casos <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq10'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+ não é
+constante e também não é o declive da caraterística voltagem-corrente,
+mas sim o declive de uma reta que passa pelo respetivo ponto e pela origem.
+</p>
+<p>
+No sistema internacional, a unidade usada para medir a resistência é o
+<span id="ohm&nbsp;(unidade)" class="index">ohm</span> representado pela letra grega Ω (ómega
+maiúsculo). Uma resistência de 1 ohm é uma resistência em que uma
+voltagem de 1 volt produz uma corrente de 1 ampere:
+</p>
+<div class="eqn" id="eq-3.2">(3.2)</div>
+<div class="center">
+<svg height='2.50776em' version='1.1' viewBox='209.098 66.3498 47.3128 25.0776' width='4.73128em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq11'>
+<text font-family='futr8r' font-size='10.9577' x='209.698' y='82.6261'>1</text>
+<text font-family='fourier-ml' font-size='10.9577' x='218.007' y='82.6261'>Ω</text>
+<text font-family='fourier-ms' font-size='10.9577' x='228.912' y='82.6261'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='238.872' y='82.6261'>1<tspan x='248.382' y='74.5325'>V</tspan>
+</text>
+<rect height='0.637912' width='6.98181' x='248.376' y='79.2108'/>
+<text font-family='futr8r' font-size='10.9577' x='248.376' y='90.8274'>A</text>
+</g>
+</svg>
+</div>
+<p>
+Usando a lei de Ohm, a potência dissipada por efeito Joule numa
+resistência (<svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 44.4477 8.79366' width='4.44477em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq12'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>P</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.98383' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='20.3024' y='0'>I</text>
+<text font-family='fourier-ml' font-size='10.9577' x='26.6479' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='34.2514' y='0'>V</text>
+</g>
+</svg>
+) pode ser escrita em função do valor da
+resistência:
+</p>
+<div class="eqn" id="eq-3.3">(3.3)</div>
+<div class="center">
+<svg height='2.7423em' version='1.1' viewBox='194.756 66.0846 75.5436 27.423' width='7.55436em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq13'>
+<text font-family='futri8r' font-size='10.9577' x='195.356' y='84.7063'>P</text>
+<text font-family='fourier-ms' font-size='10.9577' x='205.34' y='84.7063'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='215.3' y='84.7063'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='224.73' y='84.7063'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='229.907' y='79.7688'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='236.826' y='84.7063'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='247.981' y='76.6127'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='255.585' y='76.6127'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='264.826' y='72.273'>2</text>
+<rect height='0.637912' width='21.7185' x='247.981' y='81.291'/>
+<text font-family='futri8r' font-size='10.9577' x='254.889' y='92.9075'>R</text>
+</g>
+</svg>
+</div>
+<p>
+a potência dissipada pelo dispositivo depende da voltagem à que for
+ligado.  A potência nominal, indicada pelo fabricante, é a potência
+que dissipa quando for ligado à diferença de potencial recomendada
+pelo fabricante. Comparando dispositivos com a mesma voltagem nominal,
+quanto maior a potencia nominal, menor será a resistência do
+dispositivo.
+</p>
+<figure class="center" id="fig-3.3">
+<img class="img-11" src="img/Small_appliance.jpg"
+     alt="Eletrodomésticos" width="600" height="400">
+<figcaption>
+<b>Figura 3.3:</b> Cada eletrodoméstico tem uma potência elétrica nominal.
+</figcaption>
+</figure>
+</section>
+<section id="sec-3.3">
+<h2>3.3. Caraterística de uma bateria</h2>
+<p>
+No modo normal de funcionamento das <span id="bateria" class="index">baterias</span> ou
+<span id="pilha" class="index">pilhas</span>, em que a corrente entra na bateria pelo elétrodo
+negativo e sai pelo elétrodo positivo, a energia elétrica das cargas
+de condução aumenta quando passam pela bateria; ou seja, a bateria
+fornece energia elétrica e diz-se que funciona como
+<span id="gerador" class="index"><b>gerador</b></span>. As reações químicas no eletrólito
+fornecem potência elétrica <svg height='0.89142em' version='1.1' viewBox='-0.6 -8.1827 13.4797 8.9142' width='1.34797em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq14'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ε</text>
+<text font-family='futri8r' font-size='10.9577' x='7.20629' y='0'>I</text>
+</g>
+</svg>
+. Uma parte dessa potência
+é dissipada em calor dentro da própria bateria, devido à passagem das
+cargas pelos elétrodos e pelo eletrólito. Se os elétrodos e o
+eletrólito são condutores ohmicos, com resistência total <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq15'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+, a
+potência dissipada em calor dentro da bateria é <svg height='1.12596em' version='1.1' viewBox='-0.6 -10.52812 17.8915 11.2596' width='1.78915em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq16'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+<text font-family='futri8r' font-size='10.9577' x='7.52907' y='0'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='12.7057' y='-4.33971'>2</text>
+</g>
+</svg>
+ e, assim
+sendo, a potência fornecida pela bateria ao dispositivo ligado entre
+os elétrodos é <svg height='1.12596em' version='1.1' viewBox='-0.6 -10.52812 41.111 11.2596' width='4.1111em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq17'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ε</text>
+<text font-family='futri8r' font-size='10.9577' x='7.20629' y='0'>I</text>
+<text font-family='fourier-ms' font-size='10.9577' x='13.844' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='23.2195' y='0'>r</text>
+<text font-family='futri8r' font-size='10.9577' x='30.7486' y='0'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='35.9251' y='-4.33971'>2</text>
+</g>
+</svg>
+. Como essa potência fornecida
+ao dispositivo é igual a <svg height='0.879366em' version='1.1' viewBox='-0.241348 -8.19366 24.1452 8.79366' width='2.41452em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq18'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+<text font-family='fourier-ml' font-size='10.9577' x='6.70416' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='14.3076' y='0'>V</text>
+</g>
+</svg>
+, obtém-se então a expressão da
+caraterística da bateria, no modo normal em que fornece energia a um
+dispositivo:
+</p>
+<div class="eqn" id="eq-3.4">(3.4)</div>
+<div class="center">
+<svg height='1.96413em' version='1.1' viewBox='186.476 68.5188 93.2996 19.6413' width='9.32996em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq19'>
+<rect height='0.3985' width='92.0996' x='187.076' y='69.1188'/>
+<rect height='17.6443' width='0.3985' x='187.076' y='69.5173'/>
+<text font-family='fourier-ml' font-size='10.9577' x='190.463' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='198.067' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='205.192' y='82.142'>g<tspan x='209.478'>e</tspan>
+<tspan x='213.719'>r</tspan>
+<tspan x='216.848'>a</tspan>
+<tspan x='221.161'>d</tspan>
+<tspan x='226.093'>o</tspan>
+<tspan x='230.854'>r</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='236.607' y='80.1993'>=</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='246.567' y='80.1993'>ε</text>
+<text font-family='fourier-ms' font-size='10.9577' x='253.707' y='80.1993'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='263.083' y='80.1993'>r</text>
+<text font-family='futri8r' font-size='10.9577' x='270.612' y='80.1993'>I</text>
+<rect height='17.6443' width='0.3985' x='278.777' y='69.5173'/>
+<rect height='0.3985' width='92.0996' x='187.076' y='87.1616'/>
+</g>
+</svg>
+</div>
+<p>
+A figura <a href="#fig-3.4">3.4</a> mostra a caraterística do gerador. A ordenada
+na origem é o valor da f.e.m. e o valor absoluto do declive é a
+<span id="resistência!interna" class="index"><b>resistência interna</b></span> da bateria,
+
+<svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq20'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+. A corrente <svg height='1.083895em' version='1.1' viewBox='-0.241348 -8.34707 38.5061 10.83895' width='3.85061em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq21'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='4.74621' y='1.79326'>0</text>
+<text font-family='fourier-ms' font-size='10.9577' x='11.6655' y='0'>=</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='21.6255' y='0'>ε</text>
+<text font-family='futr8r' font-size='10.9577' x='27.3042' y='0'>/</text>
+<text font-family='futri8r' font-size='10.9577' x='32.3612' y='0'>r</text>
+</g>
+</svg>
+ é a corrente máxima que pode
+fornecer a bateria, quando for ligada em
+<span id="curto-circuito" class="index"><b>curto-circuito</b></span> (diferença de potencial
+<svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq22'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ nula entre os elétrodos).
+</p>
+<figure class="center" id="fig-3.4">
+<img class="fig" src="img/characteristic_battery.png"
+     alt="Carateristica voltagem-corrente de uma bateria" style="width:22.26em">
+<figcaption>
+<b>Figura 3.4:</b> Caraterística voltagem-corrente de uma bateria.
+</figcaption>
+</figure>
+<p>
+Nas baterias recarregáveis, o sentido normal da corrente pode ser
+invertido, ligando outra fonte externa com f.e.m. maior que a da
+bateria e contrariando a sua polaridade. Nesse caso, a corrente entra
+na bateria pelo elétrodo positivo e sai pelo elétrodo negativo. As
+cargas de condução perdem energia elétrica durante a sua passagem pela
+bateria. A bateria está então a absorver potência elétrica
+<svg height='0.879366em' version='1.1' viewBox='-0.241348 -8.19366 24.1452 8.79366' width='2.41452em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq23'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+<text font-family='fourier-ml' font-size='10.9577' x='6.70416' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='14.3076' y='0'>V</text>
+</g>
+</svg>
+, que está a ser fornecida pela fonte externa. A bateria
+passa a funcionar como <span id="recetor" class="index"><b>recetor</b></span>. Uma parte
+dessa potência absorvida é usada para inverter as reações químicas no
+eletrólito, aumentando o número de catiões e aniões; essa parte é
+igual <svg height='0.89142em' version='1.1' viewBox='-0.6 -8.1827 13.4797 8.9142' width='1.34797em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq24'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ε</text>
+<text font-family='futri8r' font-size='10.9577' x='7.20629' y='0'>I</text>
+</g>
+</svg>
+. A outra parte da potência absorvida pela
+bateria é dissipada em calor na resistência interna e é igual a
+<svg height='1.12596em' version='1.1' viewBox='-0.6 -10.52812 17.8915 11.2596' width='1.78915em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq25'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+<text font-family='futri8r' font-size='10.9577' x='7.52907' y='0'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='12.7057' y='-4.33971'>2</text>
+</g>
+</svg>
+. Como tal, a caraterística da bateria, no modo recetor, é
+</p>
+<div class="eqn" id="eq-3.5">(3.5)</div>
+<div class="center">
+<svg height='1.75058em' version='1.1' viewBox='187.7 68.5188 90.8518 17.5058' width='9.08518em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq26'>
+<rect height='0.3985' width='89.6518' x='188.3' y='69.1188'/>
+<rect height='15.5088' width='0.3985' x='188.3' y='69.5173'/>
+<text font-family='fourier-ml' font-size='10.9577' x='191.687' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='199.291' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='206.416' y='81.9925'>r<tspan x='209.465'>e</tspan>
+<tspan x='213.706'>c</tspan>
+<tspan x='217.794'>e</tspan>
+<tspan x='222.035'>t</tspan>
+<tspan x='224.869'>o</tspan>
+<tspan x='229.63'>r</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='235.384' y='80.1993'>=</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='245.343' y='80.1993'>ε</text>
+<text font-family='fourier-ms' font-size='10.9577' x='252.483' y='80.1993'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='261.859' y='80.1993'>r</text>
+<text font-family='futri8r' font-size='10.9577' x='269.388' y='80.1993'>I</text>
+<rect height='15.5088' width='0.3985' x='277.553' y='69.5173'/>
+<rect height='0.3985' width='89.6518' x='188.3' y='85.0261'/>
+</g>
+</svg>
+</div>
+<p>
+A figura <a href="#fig-3.5">3.5</a> mostra as caraterísticas da bateria nos dois
+
+modos de funcionamento. Nos dois casos, o valor absoluto do declive é
+igual à resistência interna <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq27'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+. A voltagem da bateria só é igual ao
+valor da sua f.e.m. quando a bateria não está ligada a nenhum
+dispositivo (corrente nula). Quando a bateria é ligada a um
+dispositivo, passando corrente através dela, a voltagem da bateria é
+maior que a f.e.m. no modo de receptor e menor que a f.e.m. no modo de
+gerador. No modo de gerador, quando a bateria está em curto-circuito
+(ligam-se os dois terminais da bateria entre si), a voltagem diminui
+para zero, e toda a energia fornecida pelas reações químicas é
+dissipada em calor dentro da própria bateria, descarregando-se
+totalmente, se antes não se queimar pelo calor dissipado.
+</p>
+<figure class="center" id="fig-3.5">
+<img class="fig" src="img/gerador_recetor.png"
+     alt="Caraterísticas de bateria recarregável" style="width:15.06em">
+<figcaption>
+<b>Figura 3.5:</b> Caraterísticas de uma bateria recarregável nos dois modos de operação.
+</figcaption>
+</figure>
+<p>
+O diagrama de circuito correspondente deve incluir uma f.e.m. ligada
+em série a uma resistência <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq28'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+. Tal como foi referido no capítulo
+anterior, a barra mais comprida na f.e.m. representa o elétrodo
+positivo e a barra mais curta o elétrodo negativo. A
+figura <a href="#fig-3.6">3.6</a> mostra os diagrama de circuito de uma bateria
+quando está a fornecer energia a um dispositivo (gerador) e da mesma
+bateria quando está a ser recarregada (recetor) por uma fonte
+externa. A letra A indica o <span id="ânodo" class="index">ânodo</span> e a letra C o
+<span id="cátodo"class="index">cátodo</span>. Por definição, o cátodo é o terminal para onde
+se deslocam os catiões e o o ânodo o terminal para onde se deslocam os
+aniões. O sentido da corrente indica o sentido do deslocamento do
+catiões, ou seja que a corrente vai sempre do ânodo para o
+cátodo. Como o sentido da corrente é oposto nos dois casos, o cátodo e
+o ânodo invertem-se nos dois modos de operação.
+</p>
+<figure class="center" id="fig-3.6">
+<img class="fig" src="img/modos_pilha.png"
+     alt="Bateria recarregável como gerador ou recetor" style="width:27.24em">
+<figcaption>
+<b>Figura 3.6:</b> Bateria recarregável operando como gerador ou recetor.
+</figcaption>
+</figure>
+<p>
+No modo de gerador, a bateria fornece energia ao dispositivo e a carga
+no eletrólito diminui. O sentido da corrente mostra que o potencial do
+ponto A é maior do que o do ponto B (figura <a href="#fig-3.6">3.6</a>); como o
+potencial de C também é maior que o de B, a voltagem da bateria
+(<svg height='1.069924em' version='1.1' viewBox='-0.839109 -8.1827 37.5279 10.69924' width='3.75279em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.256648em'>
+<g id='eq29'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>C</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.4853' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='23.6217' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='30.747' y='1.79326'>A</text>
+</g>
+</svg>
+) é o valor da f.e.m. menos a diferença de
+potencial em <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq30'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+, obtendo-se a equação <a href="#eq-3.4">3.4</a>. No modo recetor,
+a bateria absorve energia da fonte externa e a carga no eletrólito
+aumenta. O sentido da corrente indica que <svg height='1.057597em' version='1.1' viewBox='-0.839109 -8.1827 13.2151 10.57597' width='1.32151em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq31'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>B</text>
+</g>
+</svg>
+ é maior que
+<svg height='1.069924em' version='1.1' viewBox='-0.839109 -8.1827 13.6589 10.69924' width='1.36589em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.256648em'>
+<g id='eq32'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>C</text>
+</g>
+</svg>
+ e como o potencial de A é maior que o de B, a voltagem
+da bateria (<svg height='1.069924em' version='1.1' viewBox='-0.839109 -8.1827 37.1162 10.69924' width='3.71162em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.256648em'>
+<g id='eq33'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>A</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.0818' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='23.2182' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='30.3435' y='1.79326'>C</text>
+</g>
+</svg>
+) é o valor da f.e.m. mais a
+diferença de potencial em <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq34'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+, obtendo-se a equação <a href="#eq-3.5">3.5</a>.
+</p>
+</section>
+<section id="sec-3.4">
+<h2>3.4. Código de cores para resistências</h2>
+<p>
+As resistências usadas comumente nos circuitos eletrónicos são
+pequenos cilindros de carbono, com um isolamento cerâmico. No circuito
+da figura <a href="#fig-3.7">3.7</a> todos os cilindros com riscas de cores são
+resistências.  Usam-se 4 riscas de <span id="código&nbsp;de&nbsp;cores" class="index">cores</span> para
+indicar o valor da resistência.
+</p>
+<figure class="center" id="fig-3.7">
+<img class="img-11" src="img/MOS6581_chtaube061229.jpg"
+     alt="Circuito impresso" width="600" height="431">
+<figcaption>
+<b>Figura 3.7:</b> Circuito impresso
+(<span id="circuito!impresso" class="index">PCB</span>) com
+duas resistências de 10 kΩ (<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq35'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+<sub>6</sub> e
+<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq36'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+<sub>8</sub>) e uma de 1 kΩ (<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq37'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+<sub>7</sub>).
+</figcaption>
+</figure>
+<p>
+A correspondência entre cores e algarismos é dada na
+tabela <a href="#tab-3.1">3.1</a>. Três das riscas estão mais próximas umas das
+outras; as duas primeiras dessas riscas, contadas a partir do extremo
+mais próximo do cilindro, representam os dois algarismos de um número
+inteiro entre 0 e 99. A terceira risca indica a ordem de grandeza
+desse número, em ohms, usando a mesma relação entre cores e algarismos
+da tabela acima. A quarta risca, mais afastada das outras três,
+representa a tolerância (erro relativo) no valor indicado para a
+resistência.
+</p>
+<table class="book center" id="tab-3.1">
+<caption>
+<b>Tabela 3.1:</b> Código de cores para resistências.
+</caption>
+<tr><th>&emsp;&emsp;&emsp;Cor&emsp;&emsp;&emsp;</th>
+<th>&emsp;Algarismo&emsp;</th><th>&emsp;Tolerância&emsp;</th></tr>
+<tr><td>Preto   </td><td>0</td><td></td></tr>
+<tr><td>Castanho</td><td>1</td><td>1%</td></tr>
+<tr><td>Vermelho</td><td>2</td><td>2%</td></tr>
+<tr><td>Laranja </td><td>3</td><td></td></tr>
+<tr><td>Amarelo </td><td>4</td><td></td></tr>
+<tr><td>Verde   </td><td>5</td><td>0.5%</td></tr>
+<tr><td>Azul    </td><td>6</td><td>0.25%</td></tr>
+<tr><td>Roxo    </td><td>7</td><td>0.1%</td></tr>
+<tr><td>Cinza   </td><td>8</td><td>0.05%</td></tr>
+<tr><td>Branco  </td><td>9</td><td></td></tr>
+<tr><td>Dourado </td><td> </td><td>5%</td></tr>
+<tr><td>Prateado</td><td> </td><td>10%</td></tr>
+<tr><td>Nenhuma </td><td> </td><td>20%</td></tr>
+</table>
+<p>
+Por exemplo, se as cores das 3 riscas mais próximas fossem laranja,
+preta e azul e a quarta risca for prateada, o valor da resistência
+seria: <svg height='1.12596em' version='1.1' viewBox='-0.6 -10.52812 50.6531 11.2596' width='5.06531em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq38'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>3<tspan x='5.83412'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='13.1294' y='0'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='22.5049' y='0'>1<tspan x='28.339'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='34.1731' y='-4.33971'>6</text>
+<text font-family='fourier-ml' font-size='10.9577' x='41.0924' y='0'>Ω</text>
+</g>
+</svg>
+ (<svg height='1.15336em' version='1.1' viewBox='-0.6 -10.52812 52.7333 11.5336' width='5.27333em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.1026em'>
+<g id='eq39'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>±</text>
+<text font-family='futr8r' font-size='10.9577' x='7.91432' y='0'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='15.2096' y='0'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='24.5851' y='0'>1<tspan x='30.4192'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='36.2533' y='-4.33971'>6</text>
+<text font-family='fourier-ml' font-size='10.9577' x='43.1726' y='0'>Ω</text>
+</g>
+</svg>
+).
+</p>
+</section>
+<section id="sec-3.5">
+<h2>3.5. Resistividade</h2>
+<p>
+A resistência de um condutor ohmico resulta das colisões entre as
+cargas de condução e os átomos ou iões. As cargas de condução são
+aceleradas pela força eletrostática, mas devido às colisões acabam por
+se deslocar a uma velocidade média constante. A resistência é
+determinada pela relação que existir entre a velocidade média atingida
+e a diferença de potencial (por unidade de comprimento) que produz o
+movimento. Os fatores que determinam o valor da resistência são: a
+natureza do material, o tamanho do condutor e a temperatura.
+</p>
+<p>
+Para estudar a influência do tamanho do condutor, considerem-se dois
+cilindros condutores idênticos, de comprimento <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 7.80747 8.7827' width='0.780747em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq40'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>L</text>
+</g>
+</svg>
+ e área transversal
+<svg height='0.87827em' version='1.1' viewBox='-0.015168 -8.1827 8.66217 8.7827' width='0.866217em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq41'>
+<text font-family='futri8r' font-size='10.9577' x='0.836858' y='0'>A</text>
+</g>
+</svg>
+, cada um com resistência <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq42'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+, ligados em série
+(figura <a href="#fig-3.8">3.8</a>).
+</p>
+<figure class="center" id="fig-3.8">
+<img class="fig" src="img/conductors_in_series.png"
+     alt="Cilindros condutores em série" style="width:17.97em">
+<figcaption>
+<b>Figura 3.8:</b> Dois cilindros condutores ligados em série.
+</figcaption>
+</figure>
+<p>
+A combinação em série é equivalente a um único cilindro de comprimento
+<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 14.8105 8.7827' width='1.48105em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq43'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='7.00305' y='0'>L</text>
+</g>
+</svg>
+ e se a corrente for <svg height='0.87827em' version='1.1' viewBox='-0.241348 -8.1827 6.2734 8.7827' width='0.62734em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq44'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+</g>
+</svg>
+, a diferença de potencial será
+<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 41.1465 8.7827' width='4.11465em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0684em'>
+<g id='eq45'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='9.42995' y='0'>I</text>
+<text font-family='fourier-ms' font-size='10.9577' x='16.0677' y='0'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='25.4432' y='0'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='34.8731' y='0'>I</text>
+</g>
+</svg>
+; a resistência do sistema é então <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 15.6214 8.7827' width='1.56214em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq46'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='7.00305' y='0'>R</text>
+</g>
+</svg>
+. A resistência
+é então diretamente proporcional ao comprimento do condutor.
+</p>
+<p>
+Se os mesmos dois cilindros condutores fossem ligados em paralelo,
+como se mostra na figura <a href="#fig-3.9">3.9</a>, o sistema é agora equivalente
+a um único condutor de comprimento <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 7.80747 8.7827' width='0.780747em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq47'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>L</text>
+</g>
+</svg>
+ e área transversal
+<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 16.25 8.7827' width='1.625em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq48'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='7.83991' y='0'>A</text>
+</g>
+</svg>
+. Neste caso, a diferença de potencial é igual em ambos
+cilindros (<svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq49'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+), a corrente em cada cilindro é <svg height='0.911143em' version='1.1' viewBox='-0.6 -8.34707 30.5202 9.11143' width='3.05202em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq50'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+<text font-family='futr8r' font-size='10.9577' x='16.8448' y='0'>/</text>
+<text font-family='futri8r' font-size='10.9577' x='21.9019' y='0'>R</text>
+</g>
+</svg>
+ e a
+corrente total é <svg height='0.911143em' version='1.1' viewBox='-0.6 -8.34707 37.5233 9.11143' width='3.75233em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq51'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>2</text>
+<text font-family='fourier-ml' font-size='10.9577' x='7.00305' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='14.6065' y='0'>V</text>
+<text font-family='futr8r' font-size='10.9577' x='23.8479' y='0'>/</text>
+<text font-family='futri8r' font-size='10.9577' x='28.9049' y='0'>R</text>
+</g>
+</svg>
+, que corresponde à corrente num
+sistema com resistência <svg height='0.911143em' version='1.1' viewBox='-0.6 -8.34707 19.4739 9.11143' width='1.94739em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq52'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='10.9577' x='7.90237' y='0'>/<tspan x='12.9594'>2</tspan>
+</text>
+</g>
+</svg>
+. Ou seja, duplicando a área transversal,
+a resistência diminui a metade, o que significa que a resistência é
+inversamente proporcional à área da secção transversal do condutor.
+</p>
+<figure class="center" id="fig-3.9">
+<img class="fig" src="img/conductors_in_parallel.png"
+     alt="Cilindros condutores em paralelo" style="width:13.11em">
+<figcaption>
+<b>Figura 3.9:</b> Dois cilindros condutores ligados em paralelo.
+</figcaption>
+</figure>
+<p>
+Resumindo, a resistência de um condutor com comprimento <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 7.80747 8.7827' width='0.780747em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq53'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>L</text>
+</g>
+</svg>
+ e área
+transversal <svg height='0.87827em' version='1.1' viewBox='-0.015168 -8.1827 8.66217 8.7827' width='0.866217em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq54'>
+<text font-family='futri8r' font-size='10.9577' x='0.836858' y='0'>A</text>
+</g>
+</svg>
+ pode ser expressa como
+</p>
+<div class="eqn" id="eq-3.6">(3.6)</div>
+<div class="center">
+<svg height='3.19626em' version='1.1' viewBox='209.819 66.1497 46.6135 31.9626' width='4.66135em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq55'>
+<rect height='0.3985' width='45.4135' x='210.419' y='66.7497'/>
+<rect height='29.9656' width='0.3985' x='210.419' y='67.1482'/>
+<text font-family='futri8r' font-size='10.9577' x='213.806' y='85.9238'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.754' y='85.9238'>=</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='233.714' y='85.9238'>ρ</text>
+<text font-family='futri8r' font-size='10.9577' x='243.796' y='77.8301'>L</text>
+<rect height='0.637912' width='8.17733' x='243.072' y='82.5084'/>
+<text font-family='futri8r' font-size='10.9577' x='243.909' y='94.125'>A</text>
+<rect height='29.9656' width='0.3985' x='255.434' y='67.1482'/>
+<rect height='0.3985' width='45.4135' x='210.419' y='97.1138'/>
+</g>
+</svg>
+</div>
+<p>
+onde a constante de proporcionalidade, <svg height='0.936346em' version='1.1' viewBox='-0.6 -6.10075 7.42395 9.36346' width='0.742395em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq56'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ρ</text>
+</g>
+</svg>
+, é a
+<span id="resistividade" class="index"><b>resistividade</b></span> do material, que depende
+da natureza do material e da temperatura. Nos condutores ohmicos, a
+resistência aumenta com a temperatura, de modo quase linear (ver
+figura <a href="#fig-3.10">3.10</a>), para temperaturas afastadas do zero absoluto (<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.05121 25.9655 8.7827' width='2.59655em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq57'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='7.91432' y='0'>2<tspan x='13.7484'>7</tspan>
+<tspan x='19.5826'>3</tspan>
+</text>
+</g>
+</svg>
+ °C).
+</p>
+<figure class="center" id="fig-3.10">
+<img class="fig" src="img/R_vs_T.png"
+     alt="Resistência de um condutor em função da temperatura absoluta"
+     style="width:14.25em">
+<figcaption>
+<b>Figura 3.10:</b> Variação da resistência de um condutor em função da temperatura
+absoluta.
+</figcaption>
+</figure>
+<p>
+A expressão obtida de forma empírica para a resistência de um condutor
+em função da temperatura é então
+</p>
+<div class="eqn" id="eq-3.7">(3.7)</div>
+<div class="center">
+<svg height='1.75955em' version='1.1' viewBox='170.324 68.4292 125.604 17.5955' width='12.5604em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq58'>
+<rect height='0.3985' width='124.404' x='170.924' y='69.0292'/>
+<rect height='15.5985' width='0.3985' x='170.924' y='69.4276'/>
+<text font-family='futri8r' font-size='10.9577' x='174.311' y='80.1993'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='184.259' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='194.219' y='80.1993'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='201.619' y='81.9925'>2<tspan x='205.995'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='212.038' y='80.2979'>(<tspan x='215.887' y='80.1993'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='223.182' y='80.1993'>+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='232.558' y='80.1993'>α</text>
+<text font-family='futr8r' font-size='8.21825' x='240.245' y='81.9925'>2<tspan x='244.621'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='249.494' y='80.1993'>(</text>
+<text font-family='futri8r' font-size='10.9577' x='253.344' y='80.1993'>T</text>
+<text font-family='fourier-ms' font-size='10.9577' x='263.198' y='80.1993'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='272.573' y='80.1993'>2<tspan x='278.407'>0</tspan>
+<tspan x='284.241'>)</tspan>
+<tspan x='288.091' y='80.2979'>)</tspan>
+</text>
+<rect height='15.5985' width='0.3985' x='294.929' y='69.4276'/>
+<rect height='0.3985' width='124.404' x='170.924' y='85.0261'/>
+</g>
+</svg>
+</div>
+<p>
+onde <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 16.9946 10.67459' width='1.69946em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq59'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2<tspan x='11.7758'>0</tspan>
+</text>
+</g>
+</svg>
+ é a resistência a 20 °C , <svg height='0.859263em' version='1.1' viewBox='-0.6 -6.10075 17.2815 8.59263' width='1.72815em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq60'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>α</text>
+<text font-family='futr8r' font-size='8.21825' x='7.68717' y='1.79326'>2<tspan x='12.0628'>0</tspan>
+</text>
+</g>
+</svg>
+ é o
+<b><span id="coeficiente!de&nbsp;temperatura" class="index">coeficiente</span> de temperatura</b>
+e <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 9.34154 8.7827' width='0.934154em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq61'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>T</text>
+</g>
+</svg>
+ é a temperatura em graus Celsius. Cada material tem um
+coeficiente de temperatura próprio que é medido
+experimentalmente. Note-se que o declive da reta na
+figura <a href="#fig-3.10">3.10</a> é o produto <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 35.1 10.67459' width='3.51em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq62'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2<tspan x='11.7758'>0</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='17.8185' y='0'>α</text>
+<text font-family='futr8r' font-size='8.21825' x='25.5057' y='1.79326'>2<tspan x='29.8813'>0</tspan>
+</text>
+</g>
+</svg>
+ e, como tal,
+apesar do declive ser quase constante, o valor da constante <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 8.36631 6.83224' width='0.836631em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq63'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>α</text>
+</g>
+</svg>
+
+depende da temperatura. A tabela <a href="#tab-3.2">3.2</a> mostra os valores da
+resistividade e do coeficiente de temperatura de alguns materiais a
+20 °C. A grafite, que é um semicondutor, tem um coeficiente de
+temperatura negativo, o que quer dizer que a 20 °C a sua resistência
+diminui quando a temperatura aumenta.
+</p>
+<table  class="book center" id="tab-3.2">
+<caption>
+<b>Tabela 3.2:</b> Resistividade e coeficiente de temperatura de alguns
+materiais, a 20 °C.
+</caption>
+<tr><th>&emsp;&emsp;&emsp;Material&emsp;&emsp;&emsp;</th>
+<th>&emsp;&emsp;<svg height='0.936346em' version='1.1' viewBox='-0.6 -6.10075 16.5881 9.36346' width='1.65881em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq64'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ρ</text>
+<text font-family='futr8r' font-size='8.21825' x='6.99377' y='1.79326'>2<tspan x='11.3694'>0</tspan>
+</text>
+</g>
+</svg>
+ (nΩ·m)&emsp;</th>
+<th>&emsp;<svg height='0.859263em' version='1.1' viewBox='-0.6 -6.10075 17.2815 8.59263' width='1.72815em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq65'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>α</text>
+<text font-family='futr8r' font-size='8.21825' x='7.68717' y='1.79326'>2<tspan x='12.0628'>0</tspan>
+</text>
+</g>
+</svg>
+ (°C<sup>&minus;1</sup>)&emsp;&emsp;</th>
+</tr>
+<tr><td>Prata</td><td>16</td><td>0.0038</td></tr>
+<tr><td>Cobre</td><td>17</td><td>0.0039</td></tr>
+<tr><td>Alumínio</td><td>28</td><td>0.0039</td></tr>
+<tr><td>Tungsténio</td><td>55</td><td>0.0045</td></tr>
+<tr><td>Ferro</td><td>100</td><td>0.0050</td></tr>
+<tr><td>Chumbo</td><td>220</td><td>0.0043</td></tr>
+<tr><td>Níquel-crómio</td><td>1000</td><td>0.0004</td></tr>
+<tr><td>Grafite</td><td>35000</td><td><svg height='0.87827em' version='1.1' viewBox='-0.6 -8.05121 40.6275 8.7827' width='4.06275em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq66'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='7.91432' y='0'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='13.7484' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='16.6655' y='0'>0<tspan x='22.4996'>0</tspan>
+<tspan x='28.3337'>0</tspan>
+<tspan x='34.1679'>5</tspan>
+</text>
+</g>
+</svg>
+</td></tr>
+</table>
+<br>
+<div id="ex-3.1" class="example">
+<h3>Exemplo 3.1</h3>
+<p>
+Um fio de cobre de raio 0.0815 cm e comprimento de 40 cm transporta
+uma corrente de 1 A. Calcule o campo elétrico dentro do fio e a
+diferença de potencial nos extremos, quando a temperatura for de
+30 °C.
+</p>
+</div>
+<p>
+<b>Resolução</b>. Usando o valor de <svg height='0.936346em' version='1.1' viewBox='-0.6 -6.10075 16.5881 9.36346' width='1.65881em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq67'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ρ</text>
+<text font-family='futr8r' font-size='8.21825' x='6.99377' y='1.79326'>2<tspan x='11.3694'>0</tspan>
+</text>
+</g>
+</svg>
+ para o cobre
+(tabela <a href="#tab-3.2">3.2</a>), a resistência a 20 °C é:
+</p>
+<div class="center">
+<svg height='2.88256em' version='1.1' viewBox='133.313 66.0846 199.128 28.8256' width='19.9128em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq68'>
+<text font-family='futri8r' font-size='10.9577' x='133.913' y='84.7063'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='141.313' y='86.4996'>2<tspan x='145.688'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='152.608' y='84.7063'>=</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='163.763' y='76.6127'>ρ</text>
+<text font-family='futr8r' font-size='8.21825' x='170.757' y='78.4059'>2<tspan x='175.133'>0</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='181.175' y='76.6127'>L</text>
+<rect height='0.637912' width='24.1428' x='163.763' y='81.291'/>
+<text font-family='futri8r' font-size='10.9577' x='172.583' y='92.9075'>A</text>
+<text font-family='fourier-ms' font-size='10.9577' x='191.147' y='84.7063'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='202.302' y='76.6127'>1<tspan x='208.137'>7</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='215.432' y='76.6127'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='224.807' y='76.6127'>1<tspan x='230.641'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='236.476' y='72.273'>−</text>
+<text font-family='futr8r' font-size='8.21825' x='242.411' y='72.273'>9</text>
+<text font-family='fourier-ms' font-size='10.9577' x='248.746' y='76.6127'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='258.122' y='76.6127'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='263.956' y='76.6127'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='266.873' y='76.6127'>4</text>
+<rect height='0.637912' width='70.4044' x='202.302' y='81.291'/>
+<text font-family='fourier-ml' font-size='10.9577' x='205.265' y='92.9075'>π</text>
+<text font-family='futr8r' font-size='10.9577' x='213.416' y='92.9075'>(<tspan x='217.265'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='223.099' y='92.9075'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='226.016' y='92.9075'>0<tspan x='231.851'>0</tspan>
+<tspan x='237.685'>0</tspan>
+<tspan x='243.519'>8</tspan>
+<tspan x='249.353'>1</tspan>
+<tspan x='255.187'>5</tspan>
+<tspan x='261.021'>)</tspan>
+</text>
+<text font-family='futr8r' font-size='8.21825' x='264.871' y='89.4525'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='275.948' y='84.7063'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='285.908' y='84.7063'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='291.742' y='84.7063'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='294.659' y='84.7063'>2<tspan x='300.493'>5</tspan>
+<tspan x='306.327'>9</tspan>
+<tspan x='313.33'>m</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='323.48' y='84.7063'>Ω</text>
+</g>
+</svg>
+</div>
+<p>
+e usando o valor de <svg height='0.859263em' version='1.1' viewBox='-0.6 -6.10075 17.2815 8.59263' width='1.72815em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq69'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>α</text>
+<text font-family='futr8r' font-size='8.21825' x='7.68717' y='1.79326'>2<tspan x='12.0628'>0</tspan>
+</text>
+</g>
+</svg>
+ do cobre na equação <a href="#eq-3.7">3.7</a>,
+obtém-se:
+</p>
+<div class="eqnalign">
+<svg height='1.15506em' version='1.1' viewBox='-0.6 -9.44936 190.379 11.5506' width='19.0379em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.209701em'>
+<g id='eq70'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='10.9577' x='7.90237' y='0'>(<tspan x='11.7519'>3</tspan>
+<tspan x='17.586'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.21825' x='24.5891' y='-4.93748'>◦</text>
+<text font-family='futr8r' font-size='10.9577' x='29.2118' y='0'>C<tspan x='36.7316'>)</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='42.6267' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='52.5867' y='0'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='58.4208' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='61.3378' y='0'>2<tspan x='67.172'>5</tspan>
+<tspan x='73.0061'>9</tspan>
+<tspan x='81.1781' y='0.0986444'>(</tspan>
+<tspan x='85.0276' y='0'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='92.3229' y='0'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='101.698' y='0'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='107.532' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='110.45' y='0'>0<tspan x='116.284'>0</tspan>
+<tspan x='122.118'>3</tspan>
+<tspan x='127.952'>9</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='135.247' y='0'>×</text>
+<text font-family='futr8r' font-size='10.9577' x='144.623' y='0'>(<tspan x='148.472'>3</tspan>
+<tspan x='154.306'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='161.602' y='0'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='170.977' y='0'>2<tspan x='176.811'>0</tspan>
+<tspan x='182.645'>)</tspan>
+<tspan x='186.495' y='0.0986444'>)</tspan>
+</text>
+</g>
+</svg>
+
+<svg height='0.904569em' version='1.1' viewBox='-0.6 -8.3142 57.9697 9.04569' width='5.79697em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq71'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='9.95993' y='0'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='15.7941' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='18.7111' y='0'>3<tspan x='24.5452'>8</tspan>
+<tspan x='30.3794'>6</tspan>
+<tspan x='38.2591'>m</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='48.409' y='0'>Ω</text>
+</g>
+</svg>
+
+</div>
+<p>
+A diferença de potencial obtém-se a partir da lei de Ohm:
+</p>
+<div class="center">
+<svg height='0.892515em' version='1.1' viewBox='182.085 72.0056 102.541 8.92515' width='10.2541em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq72'>
+<text font-family='fourier-ml' font-size='10.9577' x='182.685' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='190.289' y='80.1993'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='201.576' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='211.894' y='80.1993'>I</text>
+<text font-family='futri8r' font-size='10.9577' x='218.24' y='80.1993'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='228.188' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='238.148' y='80.1993'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='243.982' y='80.1993'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='246.899' y='80.1993'>3<tspan x='252.733'>8</tspan>
+<tspan x='258.567'>6</tspan>
+<tspan x='266.447'>m</tspan>
+<tspan x='276.597'>V</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+Como a secção transvesal do fio é constante, o módulo do campo
+elétrico também deve ser constante e, portanto, pode ser calculado
+através da expressão para o campo elétrico médio
+</p>
+<div class="center">
+<svg height='2.522em' version='1.1' viewBox='162.238 66.3388 141.039 25.22' width='14.1039em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq73'>
+<text font-family='futri8r' font-size='10.9577' x='162.838' y='82.6261'>E</text>
+<text font-family='fourier-ms' font-size='10.9577' x='172.583' y='82.6261'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='183.738' y='74.5325'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='192.511' y='74.5325'>V</text>
+<rect height='0.637912' width='18.0137' x='183.738' y='79.2108'/>
+<text font-family='fourier-ml' font-size='10.9577' x='185.639' y='90.8274'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='194.89' y='90.8274'>s</text>
+<text font-family='fourier-ms' font-size='10.9577' x='204.993' y='82.6261'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='216.149' y='74.5325'>3</text>
+<text font-family='futr8r' font-size='10.9577' x='221.983' y='74.5325'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='224.9' y='74.5325'>3<tspan x='230.734'>8</tspan>
+<tspan x='236.568'>6</tspan>
+</text>
+<rect height='0.637912' width='26.2535' x='216.149' y='79.2108'/>
+<text font-family='futr8r' font-size='10.9577' x='221.983' y='90.8274'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='227.817' y='90.8274'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='230.734' y='90.8274'>4</text>
+<text font-family='fourier-ms' font-size='10.9577' x='245.643' y='82.6261'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='255.603' y='82.6261'>8</text>
+<text font-family='futr8r' font-size='10.9577' x='261.437' y='82.6261'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='264.355' y='82.6261'>4<tspan x='270.189'>6</tspan>
+<tspan x='276.023'>5</tspan>
+<tspan x='285.098' y='74.5325'>m</tspan>
+<tspan x='295.248'>V</tspan>
+</text>
+<rect height='0.637912' width='17.1198' x='285.098' y='79.2108'/>
+<text font-family='futr8r' font-size='10.9577' x='288.583' y='90.8274'>m</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-3.6">
+<h2>3.6. Supercondutividade</h2>
+<p>
+Em 1911, o físico holandês Heike Kamerlingh
+<span id="Kamerlingh&nbsp;Onnes,&nbsp;Heike" class="index">Onnes</span> (1853-1926) descobriu que a
+resistividade de alguns condutores diminui drasticamente quando a
+temperatura se aproxima do zero absoluto (<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.05121 25.9655 8.7827' width='2.59655em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq74'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='7.91432' y='0'>2<tspan x='13.7484'>7</tspan>
+<tspan x='19.5826'>3</tspan>
+</text>
+</g>
+</svg>
+ °C). O gráfico da
+figura <a href="#fig-3.11">3.11</a> mostra os valores da
+<span id="mercúrio!resistividade" class="index">resistividade</span> do mercúrio, medidos por
+Onnes perto dos 4 Kelvin (<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.05121 26.0094 8.7827' width='2.60094em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq75'>
+<text font-family='fourier-ms' font-size='10.9577' x='0' y='0'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='7.91432' y='0'>2<tspan x='13.7484'>6</tspan>
+<tspan x='19.5826'>9</tspan>
+</text>
+</g>
+</svg>
+ °C),
+</p>
+<figure class="center" id="fig-3.11">
+<img class="fig" src="img/Hg_superconductivity.png"
+     alt="Condutividade do mercúrio a baixas temperaturas" style="width:21.78em">
+<figcaption>
+<b>Figura 3.11:</b> Resistividade do mercúrio a baixas temperaturas.
+</figcaption>
+</figure>
+<p>
+Abaixo da <b><span id="temperatura!crítica" class="index">temperatura</span> crítica</b>
+(4.2 K no caso do mercúrio) a resistividade dos supercondutores
+diminui dum fator de aproximadamente 10<sup>12</sup>, tornando-se
+praticamente <span id="supercondutividade" class="index">nula.</span> Isso implica a
+possibilidade de manter uma corrente a circular no supercondutor,
+durante alguns anos, sem existirem fontes de voltagem!
+</p>
+<p>
+Nas experiências de <b><span id="levitação!magnética" class="index">levitação</span>
+magnética</b> coloca-se um íman sobre um material supercondutor (ver
+figura <a href="#fig-3.12">3.12</a>). O <span id="íman" class="index">íman</span>
+<span id="corrente!induzida" class="index">induz</span> no supercondutor correntes elétricas
+que produzem um campo magnético oposto ao campo do íman; em condições
+normais, essas correntes desaparecem rapidamente devido a efeitos
+dissipativos no supercondutor. No entanto, se o sistema for arrefecido
+até uma temperatura inferior à temperatura crítica do supercondutor,
+as correntes persistem e o disco eleva-se no ar devido à repulsão
+magnética (<span id="efeito!Meissner" class="index">efeito</span>
+<span id="Meissner,&nbsp;Walther" class="index">Meissner</span>).
+</p>
+<figure class="center" id="fig-3.12">
+<img class="img-11" src="img/Magnet_4.jpg"
+     alt="Levitação magnética" width="800" height="600">
+<figcaption>
+<b>Figura 3.12:</b> Levitação magnética de um íman cúbico sobre um disco de
+material supercondutor.
+</figcaption>
+</figure>
+<p>
+Essas experiências têm a dificuldade de não ser fácil atingir
+temperaturas tão baixas e mantê-las durante algum tempo. Mas
+hoje em dia já há materiais com
+<span id="supercondutividade!a&nbsp;alta&nbsp;temperatura" class="index">temperaturas</span> críticas
+muito mais elevadas, embora ainda na ordem dos <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.05121 18.2265 8.7827' width='1.82265em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq76'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>1<tspan x='5.83412'>5</tspan>
+<tspan x='11.6682'>0</tspan>
+</text>
+</g>
+</svg>
+ °C .
+</p>
+<p>
+O princípio da levitação magnética já está a ser aplicado
+comercialmente nos comboios <span id="maglev" class="index"><b>maglev</b></span> em Xangai e
+no Japão (ver figura <a href="#fig-3.13">3.13</a>). O comboio possui barras
+supercondutoras em vez de rodas e os carris são substituídos por uma
+calha onde vários eletro-ímanes produzem campos magnéticos no momento
+em que o comboio passa perto deles. O campo magnético é usado para
+produzir a força vertical que faz o comboio levitar, bem como forças
+horizontais para fazer acelerar ou travar o comboio.
+</p>
+<figure class="center" id="fig-3.13">
+<img class="img-11" src="img/Shanghai_Transrapid_002.jpg"
+     alt="Comboio maglev em Xangai" width="640" height="480">
+<figcaption>
+<b>Figura 3.13:</b> O comboio maglev de Xangai.
+</figcaption>
+</figure>
+<p>
+Num comboio tradicional existem dois tipos de atrito nas rodas: atrito
+estático entre a superfície das rodas e os carris e atrito cinético
+nos eixos das rodas. Quando são aplicados os travões, a força de
+atrito estático é oposta à velocidade, mas no resto da viagem aponta
+no mesmo sentido da velocidade (ou é nula), sendo a força propulsora
+que permite manter o comboio em movimento; como tal, a força de
+travagem e a força propulsora estão limitadas ao valor máximo da força
+de atrito estático, que depende do peso do comboio e do estado dos
+carris. O atrito cinético é sempre uma força dissipativa que diminui a
+energia mecânica aquecendo as peças em contacto.
+</p>
+<p>
+A levitação magnética permite eliminar as rodas com várias vantagens:
+as forças propulsoras e de travagem podem ser muito superiores do que
+nos comboios tradicionais, por não estarem limitadas à força de atrito
+estático máximo e a eliminação do atrito cinético conduz a uma
+dissipação de energia mecânica muito inferior do que nos comboios
+tradicionais (ainda existe a força dissipativa da resistência do ar).
+Esse tipo de comboios podem alcançar velocidades superiores a 500 km/h.
+</p>
+</section>
+<section id="sec-3.7">
+<h2>3.7. Associações de resistências</h2>
+<p>
+A caraterística voltagem-corrente de um conjunto de várias
+resistências tem sempre o aspeto da caraterística de uma única
+resistência; nomeadamente, é uma reta que passa pela origem. O declive
+dessa reta é a <span id="resistência!equivalente" class="index">resistência</span> equivalente.
+Podem-se usar algumas regras simples para calcular a resistência
+equivalente, quando as resistências estão ligadas em série ou em
+paralelo.
+</p>
+<p>
+Duas resistências estão ligadas em <span id="resistência!em&nbsp;série" class="index">série</span>,
+quando uma estiver a seguir à outra, sem nenhum outro elemento de
+circuito no meio, como se mostra na figura <a href="#fig-3.14">3.14</a>.
+</p>
+<figure class="center" id="fig-3.14">
+<img class="fig" src="img/resistors_in_series.png" alt="Resistências em série"
+     style="width:10.86em">
+<figcaption>
+<b>Figura 3.14:</b> Duas resistências ligadas em série.
+</figcaption>
+</figure>
+<p>
+Nesse caso, a corrente é a mesma nas duas resistências e a diferença
+de potencial no sistema é a soma das diferenças de potencial em cada
+resistência:
+</p>
+<div class="eqn" id="eq-3.8">(3.8)</div>
+<div class="center">
+<svg height='1.058692em' version='1.1' viewBox='162.183 72.0056 141.782 10.58692' width='14.1782em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq77'>
+<text font-family='fourier-ml' font-size='10.9577' x='162.783' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='170.387' y='80.1993'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='181.674' y='80.1993'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='191.634' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='199.237' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='206.362' y='81.9925'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='212.697' y='80.1993'>+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='222.073' y='80.1993'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='229.676' y='80.1993'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='236.801' y='81.9925'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='243.721' y='80.1993'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='253.681' y='80.2979'>(</text>
+<text font-family='futri8r' font-size='10.9577' x='257.53' y='80.1993'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='264.93' y='81.9925'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='271.265' y='80.1993'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='280.641' y='80.1993'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='288.041' y='81.9925'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='292.915' y='80.2979'>)</text>
+<text font-family='futri8r' font-size='10.9577' x='298.292' y='80.1993'>I</text>
+</g>
+</svg>
+</div>
+<p>
+Como tal, o sistema é equivalente a uma única resistência
+<svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 11.8876 10.67459' width='1.18876em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq78'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>s</text>
+</g>
+</svg>
+ com valor igual à soma das duas resistências.
+</p>
+<div class="eqn" id="eq-3.9">(3.9)</div>
+<div class="center">
+<svg height='1.75058em' version='1.1' viewBox='199.697 68.5188 66.8585 17.5058' width='6.68585em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq79'>
+<rect height='0.3985' width='65.6585' x='200.297' y='69.1188'/>
+<rect height='15.5088' width='0.3985' x='200.297' y='69.5173'/>
+<text font-family='futri8r' font-size='10.9577' x='203.684' y='80.1993'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='211.084' y='81.9925'>s</text>
+<text font-family='fourier-ms' font-size='10.9577' x='217.223' y='80.1993'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='227.183' y='80.1993'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='234.583' y='81.9925'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='240.918' y='80.1993'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='250.294' y='80.1993'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='257.694' y='81.9925'>2</text>
+<rect height='15.5088' width='0.3985' x='265.557' y='69.5173'/>
+<rect height='0.3985' width='65.6585' x='200.297' y='85.0261'/>
+</g>
+</svg>
+</div>
+<p>
+Diz-se que duas resistências estão ligadas em
+<span id="resistência!em&nbsp;paralelo" class="index">paralelo</span>, se os dois terminais de ambas
+as resistências estiverem ligados entre os mesmos pontos, como na
+figura <a href="#fig-3.15">3.15</a>.</p>
+<figure class="center" id="fig-3.15">
+<img class="fig" src="img/resistors_in_parallel.png"
+     alt="Resistências em paralelo" style="width:10.86em">
+<figcaption>
+<b>Figura 3.15:</b> Duas resistências em paralelo.
+</figcaption>
+</figure>
+<p>
+A diferença de potencial é a mesma nas duas resistências em paralelo e
+a corrente no sistema é a soma das correntes em cada resistência:
+</p>
+<div class="eqn" id="eq-3.10">(3.10)</div>
+<div class="center">
+<svg height='2.73465em' version='1.1' viewBox='169.066 66.2926 128.232 27.3465' width='12.8232em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq80'>
+<text font-family='futri8r' font-size='10.9577' x='169.666' y='83.0447'>I</text>
+<text font-family='fourier-ms' font-size='10.9577' x='176.889' y='83.0447'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='187.207' y='83.0447'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='191.595' y='84.8379'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='197.93' y='83.0447'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='207.664' y='83.0447'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='212.051' y='84.8379'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='218.971' y='83.0447'>=</text>
+<text font-family='fourier-mex' font-size='10.9987' x='228.931' y='67.1896'></text>
+<text font-family='futr8r' font-size='10.9577' x='238.262' y='74.951'>1</text>
+<rect height='0.637912' width='12.274' x='235.043' y='79.6293'/>
+<text font-family='futri8r' font-size='10.9577' x='235.043' y='91.2459'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='242.443' y='93.0391'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='249.973' y='83.0447'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='263.764' y='74.951'>1</text>
+<rect height='0.637912' width='12.274' x='260.544' y='79.6293'/>
+<text font-family='futri8r' font-size='10.9577' x='260.544' y='91.2459'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='267.944' y='93.0391'>2</text>
+<text font-family='fourier-mex' font-size='10.9987' x='274.014' y='67.1896'></text>
+<text font-family='fourier-ml' font-size='10.9577' x='280.099' y='83.0447'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='287.702' y='83.0447'>V</text>
+</g>
+</svg>
+</div>
+<p>
+O sistema é então equivalente a uma única resistência <svg height='1.24662em' version='1.1' viewBox='-0.6 -8.1827 13.1943 12.4662' width='1.31943em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.425398em'>
+<g id='eq81'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>p</text>
+</g>
+</svg>
+
+que verifica a equação
+</p>
+<div class="eqn" id="eq-3.11">(3.11)</div>
+<div class="center">
+<svg height='2.86295em' version='1.1' viewBox='199.984 66.0629 66.2827 28.6295' width='6.62827em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq82'>
+<text font-family='futr8r' font-size='10.9577' x='204.123' y='74.1141'>1</text>
+<rect height='0.637912' width='12.9106' x='200.584' y='78.7924'/>
+<text font-family='futri8r' font-size='10.9577' x='200.584' y='90.4089'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='207.985' y='92.2022'>p</text>
+<text font-family='fourier-ms' font-size='10.9577' x='216.736' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='231.112' y='74.1141'>1</text>
+<rect height='0.637912' width='12.274' x='227.892' y='78.7924'/>
+<text font-family='futri8r' font-size='10.9577' x='227.892' y='90.4089'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='235.292' y='92.2022'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='242.822' y='82.2077'>+</text>
+<text font-family='futr8r' font-size='10.9577' x='256.613' y='74.1141'>1</text>
+<rect height='0.637912' width='12.274' x='253.393' y='78.7924'/>
+<text font-family='futri8r' font-size='10.9577' x='253.393' y='90.4089'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='260.793' y='92.2022'>2</text>
+</g>
+</svg>
+</div>
+<p>
+Esta equação pode ser escrita também da forma seguinte:
+</p>
+<div class="eqn" id="eq-3.12">(3.12)</div>
+<div class="center">
+<svg height='3.37559em' version='1.1' viewBox='174.721 66.1497 116.81 33.7559' width='11.681em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq83'>
+<rect height='0.3985' width='115.61' x='175.321' y='66.7497'/>
+<rect height='31.7589' width='0.3985' x='175.321' y='67.1482'/>
+<text font-family='futri8r' font-size='10.9577' x='178.708' y='85.9238'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='186.108' y='87.717'>p</text>
+<text font-family='fourier-ms' font-size='10.9577' x='193.664' y='85.9238'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='203.624' y='85.9238'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='211.024' y='87.717'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='217.944' y='85.9238'>∥</text>
+<text font-family='futri8r' font-size='10.9577' x='225.489' y='85.9238'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='232.889' y='87.717'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='239.808' y='85.9238'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='255.798' y='77.8301'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='263.198' y='79.6234'>1</text>
+<text font-family='futri8r' font-size='10.9577' x='269.24' y='77.8301'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='276.641' y='79.6234'>2</text>
+<rect height='0.637912' width='35.3845' x='250.964' y='82.5084'/>
+<text font-family='futri8r' font-size='10.9577' x='250.964' y='94.125'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='258.364' y='95.9182'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='264.699' y='94.125'>+</text>
+<text font-family='futri8r' font-size='10.9577' x='274.074' y='94.125'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='281.475' y='95.9182'>2</text>
+<rect height='31.7589' width='0.3985' x='290.532' y='67.1482'/>
+<rect height='0.3985' width='115.61' x='175.321' y='98.9071'/>
+</g>
+</svg>
+</div>
+<p>
+onde foi introduzida a notação <svg height='1.111289em' version='1.1' viewBox='-0.6 -8.71963 34.4507 11.11289' width='3.44507em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq84'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.3196' y='0'>∥</text>
+<text font-family='futri8r' font-size='10.9577' x='21.8646' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='29.2648' y='1.79326'>2</text>
+</g>
+</svg>
+ que quer dizer
+&quot;<svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 12.1916 10.57597' width='1.21916em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq85'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>1</text>
+</g>
+</svg>
+ em paralelo com <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 12.5861 10.57597' width='1.25861em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq86'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2</text>
+</g>
+</svg>
+&quot;. É possível simplificar alguns
+sistemas com várias resistências, substituindo sucessivamente as
+resistências que se encontram em série ou em paralelo por uma
+resistência equivalente, até obter uma única resistência equivalente.
+</p>
+<div id="ex-3.2" class="example">
+<h3>Exemplo 3.2</h3>
+<p>
+No circuito da figura, calcule a corrente através de cada uma das
+resistências, para uma diferença de potencial
+<svg height='1.057597em' version='1.1' viewBox='-0.839109 -8.1827 36.6724 10.57597' width='3.66724em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq87'>
+<text font-family='futri8r' font-size='10.9577' x='-0.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='6.88618' y='1.79326'>A</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.0818' y='0'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='23.2182' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='30.3435' y='1.79326'>B</text>
+</g>
+</svg>
+ igual a 12 V.
+</p>
+<img class="fig center" src="img/eic0014-ex_3_2.png"
+     alt="Circuito com várias resistências" style="width:20.19em">
+</div>
+<p>
+<b>Resolução</b>. Substituindo sucessivamente as resistências
+ligadas em série ou em paralelo, pode simplificar-se o circuito entre
+A e B em 3 passos:
+</p>
+<img class="fig center" src="img/eic0014-ex_3_2-sol.png"
+     alt="Simplificação de circuito com resistências" style="width:30.66em">
+<p>
+Note-se que não é necessário reduzir o circuito até ficar com uma
+única resistência equivalente, pois no passo (<i>c</i>) já se podem
+calcular as correntes correspondentes a uma diferença de potencial de
+12 V em cada resistência; será 12/10 = 1.2 A através de cada uma
+delas.
+</p>
+<p>
+Uma vez calculadas as correntes e diferenças de potencial em
+(<i>c</i>), pode-se resolver o circuito da figura (<i>b</i>): nas 3
+resistências a corrente a corrente é neste caso igual a 1.2 A, pelo
+que a diferença de potencial na resistência de 6 Ω é
+6&times;1.2 = 7.2 V.
+</p>
+<p>
+A seguir procede-se a analisar o circuito da figura (<i>a</i>); a
+corrente nas resistências de 4 Ω e 5 Ω é a calculada em
+(<i>b</i>), nomeadamente, 1.2 A. Nas resistências de 10 Ω e
+15 Ω a diferença de potencial é 7.2 V, conforme cálculo feito
+para a resistência equivalente em paralelo. As correntes nessas duas
+resistências são então:
+</p>
+<div class="eqnalign">
+<svg height='1.083895em' version='1.1' viewBox='-0.241348 -8.34707 98.8694 10.83895' width='9.88694em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq88'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='4.74621' y='1.79326'>1<tspan x='9.1218'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='16.0411' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='26.0011' y='0'>7</text>
+<text font-family='futr8r' font-size='10.9577' x='31.8352' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='34.7522' y='0'>2<tspan x='40.5864'>/</tspan>
+<tspan x='45.6434'>1</tspan>
+<tspan x='51.4775'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='59.3573' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='69.3172' y='0'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='75.1513' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='78.0684' y='0'>7<tspan x='83.9025'>2</tspan>
+<tspan x='90.9055'>A</tspan>
+</text>
+</g>
+</svg>
+&emsp;&emsp;
+<svg height='1.083895em' version='1.1' viewBox='-0.241348 -8.34707 98.8694 10.83895' width='9.88694em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq89'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='4.74621' y='1.79326'>1<tspan x='9.1218'>5</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='16.0411' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='26.0011' y='0'>7</text>
+<text font-family='futr8r' font-size='10.9577' x='31.8352' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='34.7522' y='0'>2<tspan x='40.5864'>/</tspan>
+<tspan x='45.6434'>1</tspan>
+<tspan x='51.4775'>5</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='59.3573' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='69.3172' y='0'>0</text>
+<text font-family='futr8r' font-size='10.9577' x='75.1513' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='78.0684' y='0'>4<tspan x='83.9025'>8</tspan>
+<tspan x='90.9055'>A</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+Finalmente, no circuito original, a corrente na série de resistências
+de 5 Ω e 10 Ω é igual a <svg height='1.067459em' version='1.1' viewBox='-0.241348 -8.1827 13.9079 10.67459' width='1.39079em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq90'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='4.74621' y='1.79326'>1<tspan x='9.1218'>5</tspan>
+</text>
+</g>
+</svg>
+, enquanto a corrente
+nas duas resistências de 10 Ω em paralelo é distribuída por
+igual, passando 0.6 A por cada resistência.
+</p>
+<p>
+Resumindo, no ponto A entra uma corrente total de 2.4 A, passando
+1.2 A pelas resistências de 4 Ω e 5 Ω. Ao ponto B
+chegam quatro correntes: uma corrente de 0.72 A da resistência de
+10 Ω na parte superior, uma corrente de 0.48 A que percorre as
+resistências de 10 Ω e 5 Ω em série e duas correntes
+de 0.6 A que passam por cada uma das resistências de 10 Ω em
+paralelo. A corrente total que sai em B é 2.4 A.
+</p>
+<div id="ex-3.3" class="example">
+<h3>Exemplo 3.3</h3>
+<p>
+No circuito representado pelo diagrama da figura, a leitura do
+amperímetro é a mesma quando os dois interruptores estão abertos e
+quando os dois estão fechados. Calcule a resistência <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq91'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+.
+</p>
+<img class="fig center" src="img/eic0014-ex_3_3.png"
+     alt="Circuito com resistências e interruptores" style="width:15.48em">
+</div>
+<p>
+<b>Resolução</b>. Quando os dois interruptores estão abertos, não
+passa nenhuma corrente pela resistência <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq92'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+ e as 3 resistências de
+300 Ω, 100 Ω e 50 Ω estão em série, porque por
+elas passa a mesma corrente. Assim, a resistência equivalente é
+450 Ω e a corrente medida no amperímetro é:
+</p>
+<div class="center">
+<svg height='2.50776em' version='1.1' viewBox='191.662 66.0629 83.4272 25.0776' width='8.34272em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq93'>
+<text font-family='futri8r' font-size='10.9577' x='192.262' y='82.2077'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='196.649' y='84.001'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='203.569' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='216.183' y='74.1141'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='222.017' y='74.1141'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='224.934' y='74.1141'>5</text>
+<rect height='0.637912' width='17.5023' x='214.724' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='214.724' y='90.4089'>4<tspan x='220.558'>5</tspan>
+<tspan x='226.392'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='235.468' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='252.457' y='74.1141'>1</text>
+<rect height='0.637912' width='17.5023' x='246.623' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='246.623' y='90.4089'>3<tspan x='252.457'>0</tspan>
+<tspan x='258.291'>0</tspan>
+<tspan x='267.367' y='82.2077'>A</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+Quando os dois interruptores estão fechados, não passa nenhuma
+corrente pela resistência de 50 Ω e o circuito equivalente é:
+</p>
+<img class="fig center" src="img/eic0014-ex_3_3-sol.png"
+     alt="Circuito equivalente quando os interruptores estão fechados"
+     style="width:9.15em">
+<p>
+Como a leitura do amperímetro é idêntica ao caso anterior, a corrente
+que passa pela resistência de 100 Ω é também <svg height='1.057597em' version='1.1' viewBox='-0.241348 -8.1827 9.17893 10.57597' width='0.917893em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq94'>
+<text font-family='futri8r' font-size='10.9577' x='0.358652' y='0'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='4.74621' y='1.79326'>1</text>
+</g>
+</svg>
+ e, portanto,
+a diferença de potencial nas resistências de 100 Ω e <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq95'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+ é:
+</p>
+<div class="center">
+<svg height='2.50776em' version='1.1' viewBox='171.419 66.0629 123.873 25.0776' width='12.3873em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq96'>
+<text font-family='fourier-ml' font-size='10.9577' x='172.019' y='82.2077'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='180.792' y='82.2077'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='187.917' y='84.001'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='194.836' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='204.796' y='82.2077'>1<tspan x='210.63'>0</tspan>
+<tspan x='216.464'>0</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='223.826' y='82.2077'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='228.214' y='84.001'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='235.133' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='246.288' y='74.1141'>1<tspan x='252.123'>0</tspan>
+<tspan x='257.957'>0</tspan>
+</text>
+<rect height='0.637912' width='17.5023' x='246.288' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='246.288' y='90.4089'>3<tspan x='252.123'>0</tspan>
+<tspan x='257.957'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='267.032' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='278.187' y='74.1141'>1</text>
+<rect height='0.637912' width='5.83411' x='278.187' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='278.187' y='90.4089'>3<tspan x='287.263' y='82.2077'>V</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+A diferença de potencial e a corrente na resistência de 300 Ω são:
+</p>
+<div class="eqnalign">
+<svg height='2.50776em' version='1.1' viewBox='-0.6 -16.1449 149.168 25.0776' width='14.9168em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.889198em'>
+<g id='eq97'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='8.77241' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='15.8977' y='1.79326'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='22.817' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='32.777' y='0'>1</text>
+<text font-family='futr8r' font-size='10.9577' x='38.6111' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='41.5281' y='0'>5</text>
+<text font-family='fourier-ms' font-size='10.9577' x='48.8234' y='0'>−</text>
+<text font-family='fourier-ml' font-size='10.9577' x='58.1989' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='66.9713' y='0'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='74.0966' y='1.79326'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='81.0159' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='92.1714' y='-8.09364'>3</text>
+<rect height='0.637912' width='5.83411' x='92.1714' y='-3.41534'/>
+<text font-family='futr8r' font-size='10.9577' x='92.1714' y='8.20122'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='100.662' y='0'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='111.233' y='-8.09364'>1</text>
+<rect height='0.637912' width='5.83411' x='111.233' y='-3.41534'/>
+<text font-family='futr8r' font-size='10.9577' x='111.233' y='8.20122'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='120.308' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='131.464' y='-8.09364'>7</text>
+<rect height='0.637912' width='5.83411' x='131.464' y='-3.41534'/>
+<text font-family='futr8r' font-size='10.9577' x='131.464' y='8.20122'>6<tspan x='140.539' y='0'>V</tspan>
+</text>
+</g>
+</svg>
+&emsp;&emsp;
+<svg height='2.522em' version='1.1' viewBox='2.23337 -16.2873 92.5304 25.22' width='9.25304em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.889198em'>
+<g id='eq98'>
+<text font-family='futri8r' font-size='10.9577' x='2.83337' y='0'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='7.22092' y='1.79326'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.1403' y='0'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='25.2957' y='-8.09364'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='34.0681' y='-8.09364'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='41.1934' y='-6.30038'>2</text>
+<rect height='0.637912' width='20.7714' x='25.2957' y='-3.41534'/>
+<text font-family='futr8r' font-size='10.9577' x='26.9302' y='8.20122'>3<tspan x='32.7644'>0</tspan>
+<tspan x='38.5985'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='49.3082' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='69.2148' y='-8.09364'>7</text>
+<rect height='0.637912' width='23.3364' x='60.4637' y='-3.41534'/>
+<text font-family='futr8r' font-size='10.9577' x='60.4637' y='8.20122'>1<tspan x='66.2978'>8</tspan>
+<tspan x='72.1319'>0</tspan>
+<tspan x='77.966'>0</tspan>
+<tspan x='87.0412' y='0'>A</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+A corrente que passa por <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq99'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+ é então:
+</p>
+<div class="center">
+<svg height='2.50776em' version='1.1' viewBox='149.422 66.0629 167.907 25.0776' width='16.7907em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq100'>
+<text font-family='futri8r' font-size='10.9577' x='150.022' y='82.2077'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='154.409' y='84.001'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='161.329' y='82.2077'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='171.647' y='82.2077'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='176.035' y='84.001'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='182.37' y='82.2077'>−</text>
+<text font-family='futri8r' font-size='10.9577' x='192.104' y='82.2077'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='196.491' y='84.001'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='203.411' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='223.317' y='74.1141'>7</text>
+<rect height='0.637912' width='23.3364' x='214.566' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='214.566' y='90.4089'>1<tspan x='220.4'>8</tspan>
+<tspan x='226.234'>0</tspan>
+<tspan x='232.069'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='240.559' y='82.2077'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='256.964' y='74.1141'>1</text>
+<rect height='0.637912' width='17.5023' x='251.13' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='251.13' y='90.4089'>3<tspan x='256.964'>0</tspan>
+<tspan x='262.798'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='271.874' y='82.2077'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='291.78' y='74.1141'>1</text>
+<rect height='0.637912' width='23.3364' x='283.029' y='78.7924'/>
+<text font-family='futr8r' font-size='10.9577' x='283.029' y='90.4089'>1<tspan x='288.863'>8</tspan>
+<tspan x='294.697'>0</tspan>
+<tspan x='300.531'>0</tspan>
+<tspan x='309.607' y='82.2077'>A</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+e, finalmente, o valor de <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq101'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+ é:
+</p>
+<div class="center">
+<svg height='2.69804em' version='1.1' viewBox='171.918 66.2492 121.918 26.9804' width='12.1918em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='display'>
+<g id='eq102'>
+<text font-family='futri8r' font-size='10.9577' x='172.518' y='82.5365'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='182.466' y='82.5365'>=</text>
+<text font-family='fourier-ml' font-size='10.9577' x='193.621' y='74.4428'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='202.394' y='74.4428'>V</text>
+<text font-family='futr8r' font-size='8.21825' x='209.519' y='76.2361'>1</text>
+<rect height='0.637912' width='20.7714' x='193.621' y='79.1211'/>
+<text font-family='futri8r' font-size='10.9577' x='199.556' y='90.7377'>I</text>
+<text font-family='futr8r' font-size='8.21825' x='203.943' y='92.531'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='217.634' y='82.5365'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='228.789' y='74.4428'>1<tspan x='234.624'>8</tspan>
+<tspan x='240.458'>0</tspan>
+<tspan x='246.292'>0</tspan>
+</text>
+<rect height='0.637912' width='23.3364' x='228.789' y='79.1211'/>
+<text font-family='futr8r' font-size='10.9577' x='237.541' y='90.7377'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='255.367' y='82.5365'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='265.327' y='82.5365'>6<tspan x='271.161'>0</tspan>
+<tspan x='276.995'>0</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='284.875' y='82.5365'>Ω</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="Perguntas">
+<h2>Perguntas</h2>
+<p>(Para conferir a sua resposta, clique nela.)</p>
+<ol class="spacious">
+<li>
+A resistência de um condutor metálico é igual a 6.5 kΩ, a 20
+°C. Quando a temperatura aumenta para 60°C, a resistência aumenta para
+8 kΩ. Calcule o valor do coeficiente de temperatura, <svg height='0.859263em' version='1.1' viewBox='-0.6 -6.10075 17.2815 8.59263' width='1.72815em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq103'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>α</text>
+<text font-family='futr8r' font-size='8.21825' x='7.68717' y='1.79326'>2<tspan x='12.0628'>0</tspan>
+</text>
+</g>
+</svg>
+
+(todas as respostas estão em unidades de °C<sup>-1</sup>)
+<ol class="shortanswers">
+<li onclick="document.getElementById('p1c1').style.display='block'">0.0049</li>
+<li onclick="document.getElementById('p1c2').style.display='block'">0.0058</li>
+<li onclick="document.getElementById('p1c3').style.display='block'">0.0250</li>
+<li onclick="document.getElementById('p1c4').style.display='block'">0.0115</li>
+<li onclick="document.getElementById('p1c5').style.display='block'">0.0038</li>
+</ol>
+</li>
+<li>
+Aplica-se a mesma diferença de potencial a dois cabos diferentes. O
+cabo A transporta duas vezes mais corrente do que o cabo B. Se a
+resistência do cabo B for <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq104'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+, qual será a resistência do cabo A?
+<ol class="shortanswers">
+<li onclick="document.getElementById('p2c1').style.display='block'"><svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq105'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+</li>
+<li onclick="document.getElementById('p2c2').style.display='block'"><svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 15.6214 8.7827' width='1.56214em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq106'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>2</text>
+<text font-family='futri8r' font-size='10.9577' x='7.00305' y='0'>R</text>
+</g>
+</svg>
+</li>
+<li onclick="document.getElementById('p2c3').style.display='block'"><svg height='0.911143em' version='1.1' viewBox='-0.6 -8.34707 19.4739 9.11143' width='1.94739em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq107'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='10.9577' x='7.90237' y='0'>/<tspan x='12.9594'>2</tspan>
+</text>
+</g>
+</svg>
+</li>
+<li onclick="document.getElementById('p2c4').style.display='block'"><svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 15.6214 8.7827' width='1.56214em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq108'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>4</text>
+<text font-family='futri8r' font-size='10.9577' x='7.00305' y='0'>R</text>
+</g>
+</svg>
+</li>
+<li onclick="document.getElementById('p2c5').style.display='block'"><svg height='0.911143em' version='1.1' viewBox='-0.6 -8.34707 19.5615 9.11143' width='1.95615em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq109'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='10.9577' x='7.90237' y='0'>/<tspan x='12.9594'>4</tspan>
+</text>
+</g>
+</svg>
+</li>
+</ol>
+</li>
+<li>
+Dois fios de cobre 1 e 2 têm o mesmo volume, mas o fio 2 é 20% mais
+comprido que o fio 1. A razão entre as resistências dos dois fios,
+<svg height='1.074033em' version='1.1' viewBox='-0.6 -8.34707 29.5226 10.74033' width='2.95226em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq110'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='12.274' y='0'>/</text>
+<text font-family='futri8r' font-size='10.9577' x='17.331' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='24.7313' y='1.79326'>1</text>
+</g>
+</svg>
+, é igual a:
+<ol class="shortanswers">
+<li onclick="document.getElementById('p3c1').style.display='block'">1.20</li>
+<li onclick="document.getElementById('p3c2').style.display='block'">0.83</li>
+<li onclick="document.getElementById('p3c3').style.display='block'">1.11</li>
+<li onclick="document.getElementById('p3c4').style.display='block'">0.91</li>
+<li onclick="document.getElementById('p3c5').style.display='block'">1.44</li>
+</ol>
+</li>
+<li>
+Duas lâmpadas importadas da América do Sul têm as especificações 110
+V, 75 W. As duas lâmpadas foram ligadas em série na rede elétrica
+portuguesa com 220 V. Qual das seguintes lâmpadas produz a mesma
+intensidade luminosa, quando forem ligadas a 220 V?
+<ol class="shortanswers">
+<li onclick="document.getElementById('p4c1').style.display='block'">220 V, 75 W</li>
+<li onclick="document.getElementById('p4c2').style.display='block'">110 V, 150 W</li>
+<li onclick="document.getElementById('p4c3').style.display='block'">220 V, 150 W</li>
+<li onclick="document.getElementById('p4c4').style.display='block'">110 V, 75 W</li>
+<li onclick="document.getElementById('p4c5').style.display='block'">55 V, 150 W</li>
+</ol>
+</li>
+<li>
+Três aquecedores elétricos idênticos de 1000 W a 100 V (isto é,
+qualquer um deles dissipa 1000 W a uma voltagem de 100 V) são ligados
+em série a uma voltagem de 120 V; qual será a potência dissipada pelo
+sistema?
+<ol class="shortanswers">
+<li onclick="document.getElementById('p5c1').style.display='block'">0.48 kW</li>
+<li onclick="document.getElementById('p5c2').style.display='block'">1.0 kW</li>
+<li onclick="document.getElementById('p5c3').style.display='block'">1.2 kW</li>
+<li onclick="document.getElementById('p5c4').style.display='block'">3.0 kW</li>
+<li onclick="document.getElementById('p5c5').style.display='block'">3.6 kW</li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="Problemas">
+<h2>Problemas</h2>
+<ol class="spacious">
+<li id="prob-3.1">
+A temperatura num dado momento é 12 °C. Quanto deve aumentar a
+temperatura para que a resistência de um fio de cobre aumente 10%?
+</li>
+<li id="prob-3.2">
+Um fio condutor de 1 m de comprimento tem uma resistência de
+0.3 Ω. O fio é esticado até o seu comprimento aumentar para
+2 m. Qual será o novo valor da resistência?
+</li>
+<li id="prob-3.3">
+A diferença de potencial entre os elétrodos de uma bateria é 3 V
+quando a bateria é percorrida por uma corrente de 4 A, no sentido do
+elétrodo negativo para o positivo. Quando a corrente é de 2 A, no
+sentido oposto, a diferença de potencial aumenta até 12 V. (<i>a</i>)
+Calcule a resistência interna da bateria. (<i>b</i>) Qual é a
+f.e.m. da bateria?
+</li>
+<li id="prob-3.4">
+Determine a corrente máxima que pode fornecer uma pilha com f.e.m. de
+1.5 V e resistência interna de 0.2 Ω, e a potência dissipada em calor
+dentro da própria pilha quando fornece essa corrente máxima.
+</li>
+<li id="prob-3.5">
+A resistência de uma lâmpada incandescente de 60 W e 230 V, à
+temperatura ambiente de 20 °C, é <svg height='0.89142em' version='1.1' viewBox='-0.6 -8.1827 32.2017 8.9142' width='3.22017em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq111'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.94798' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='19.9079' y='0'>6<tspan x='25.742'>5</tspan>
+</text>
+</g>
+</svg>
+ Ω. No entanto, as
+especificações do fabricante (60 W e 230 V) conduzem a um valor muito
+mais elevado da resistência. Justifique, calculando a temperatura do
+filamento de tungsténio quando a lâmpada se encontra acesa.
+</li>
+<li id="prob-3.6">
+No circuito representado na figura, foi medida a corrente na
+resistência de 8 kΩ e obteve-se o valor de 2 mA. Use esses
+dados para calcular o valor da f.e.m. e a diferença de potencial em
+cada resistência.
+<img class="fig center" src="img/eic0014-prob_3_6.png"
+     alt="Circuito com f.e.m. e resistências" style="width:13.56em">
+</li>
+<li id="prob-3.7">
+Uma bateria tem f.e.m. <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.41585 6.83224' width='0.641585em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq112'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ε</text>
+</g>
+</svg>
+ e resistência interna <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq113'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+.
+<br>
+(<i>a</i>) Determine o valor da resistência <svg height='0.87827em' version='1.1' viewBox='-0.6 -8.1827 8.61834 8.7827' width='0.861834em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq114'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+</g>
+</svg>
+ de um circuito que,
+quando for ligado a essa bateria, consiga absorver a máxima potência
+possível.
+<br>
+(<i>b</i>) Calcule o valor da potência máxima que a bateria pode
+fornecer a um circuito, em função de <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.41585 6.83224' width='0.641585em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq115'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ε</text>
+</g>
+</svg>
+ e <svg height='0.683224em' version='1.1' viewBox='-0.6 -6.10075 6.50351 6.83224' width='0.650351em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq116'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>r</text>
+</g>
+</svg>
+.
+<br>
+(<i>c</i>) Numa fonte de alimentação de um PC, entre os cabos vermelho
+e preto há uma f.e.m. de 5 V; numa fonte de 400 W, a potência máxima
+entre esses cabos é de 125 W. Calcule a resistência interna entre
+esses cabos.
+<br>
+(<i>d</i>) Na alínea anterior, que vantagem haveria em usar uma fonte
+com maior potência máxima?
+</li>
+<li id="prob-3.8">
+O circuito do lado esquerdo na figura, com três terminais, vai ser
+substituído pelo circuito equivalente do lado direito. Calcule os
+valores que deverão ter <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 12.1916 10.57597' width='1.21916em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq117'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>1</text>
+</g>
+</svg>
+, <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 12.5861 10.57597' width='1.25861em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq118'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2</text>
+</g>
+</svg>
+, e <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 12.4875 10.67459' width='1.24875em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq119'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>3</text>
+</g>
+</svg>
+ (sugestão: no circuito
+do lado esquerdo, determine os valores das resistências entre os
+pontos AB, AC e BC; iguale cada um desses resultados às 3 expressões
+para essas resistências, no circuito do lado direito, em função das 3
+variáveis <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 12.1916 10.57597' width='1.21916em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq120'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>1</text>
+</g>
+</svg>
+, <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 12.5861 10.57597' width='1.25861em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq121'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2</text>
+</g>
+</svg>
+ e <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 12.4875 10.67459' width='1.24875em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq122'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>3</text>
+</g>
+</svg>
+. Resolva o sistema de 3 equações com 3
+variáveis). Diz-se que as 3 resistências estão ligadas em delta, no
+circuito do lado esquerdo, e em estrela, no circuito do lado direito.
+<img class="fig center" src="img/circ_delta_star.png"
+     alt="Circuitos delta e estrela" style="width:26.49em">
+</li>
+<li id="prob-3.9">
+Um fio condutor de cobre de 1.29 mm de diâmetro e revestido a borracha
+pode suportar, com segurança, uma corrente máxima de 6 A. (<i>a</i>)
+Qual é a diferença de potencial que pode ser aplicada a 40 m deste
+fio?  (admita temperatura ambiente, igual a 20 °C.) (<i>b</i>) Calcule
+a potência dissipada no fio quando a corrente for 6 A.
+</li>
+<li id="prob-3.10">
+Um fio de níquel-crómio de 1.8 mm de diâmetro vai ser usado como
+aquecedor numa caldeira de água que produz 8 g de vapor de água por
+segundo. A fonte de alimentação fornece voltagem contínua de 220
+V. Calcule o comprimento que deve ter o fio. (O calor de evaporação da
+água é 2257.2 J/g, e use 100 °C para a temperatura de ebulição da
+água.)
+</li>
+<li id="prob-3.11">
+Um fio de cobre e um de tungsténio, têm o mesmo diâmetro de 0.1 mm. O
+fio de cobre tem 32 cm de comprimento e o de tungsténio 10 cm. Calcule
+a temperatura para a qual a resistência dos dois fios é igual.
+</li>
+<li id="prob-3.12">
+No circuito da figura, determine a potência dissipada em cada
+resistência e a potência fornecida pela f.e.m. Verifique que a
+potência fornecida pela f.e.m. é igual à soma das potências dissipadas
+em todas as resistências.
+<br><br>
+<img class="fig center" src="img/eic0014-prob_3_12.png"
+     alt="Circuito com fonte e várias resistências" style="width:17.04em">
+</li>
+</ol>
+</section>
+<section id="Respostas">
+<h2>Respostas</h2>
+<p>
+<b>Perguntas:</b> <b>1.</b> B. <b>2.</b> C. <b>3.</b> E.
+<b>4.</b> C. <b>5.</b> A.
+</p>
+<p>
+<b>Problemas</b>
+</p>
+<ol class="spacious">
+<li>
+24.8 °C (ou seja, a temperatura final é 36.8 °C).
+</li>
+<li>
+1.2 Ω.
+</li>
+<li>
+(<i>a</i>) 1.5 Ω. (<i>b</i>) 9 V.
+</li>
+<li>
+7.5 A e 11.25 W.
+</li>
+<li>
+Quando a lâmpada está acesa, a temperatura do filamento de tungstênio
+é muito mais elevada do que a temperatura ambiente e, portanto, a
+resistência também é muito mais elevada. A temperatura do filamento é
+da ordem de 2812 °C.
+</li>
+<li>
+<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.05121 30.0767 8.7827' width='3.00767em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq123'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ε</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.72432' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='17.6843' y='0'>2<tspan x='23.5184'>0</tspan>
+</text>
+</g>
+</svg>
+ V. Nas resistências de 3 kΩ e 6 kΩ,
+<svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 35.4525 8.79366' width='3.54525em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq124'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='18.8904' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='28.8504' y='0'>4</text>
+</g>
+</svg>
+ V; na resistência de 8 kΩ, <svg height='0.892515em' version='1.1' viewBox='-0.6 -8.19366 41.3524 8.92515' width='4.13524em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq125'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='18.8904' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='28.8504' y='0'>1<tspan x='34.6845'>6</tspan>
+</text>
+</g>
+</svg>
+ V.
+</li>
+<li>
+(<i>a</i>) <svg height='0.89142em' version='1.1' viewBox='-0.6 -8.1827 26.4114 8.9142' width='2.64114em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq126'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='fourier-ms' font-size='10.9577' x='9.94798' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='19.9079' y='0'>r</text>
+</g>
+</svg>
+. (<i>b</i>) <svg height='1.25307em' version='1.1' viewBox='-0.6 -10.52812 35.1793 12.5307' width='3.51793em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.1998em'>
+<g id='eq127'>
+<text font-family='fourier-mlit' font-size='10.9577' x='0' y='0'>ε</text>
+<text font-family='futr8r' font-size='8.21825' x='5.67871' y='-4.33971'>2</text>
+<text font-family='futr8r' font-size='10.9577' x='10.5524' y='0'>/<tspan x='15.6095'>(</tspan>
+<tspan x='19.459'>4</tspan>
+</text>
+<text font-family='futri8r' font-size='10.9577' x='25.2932' y='0'>r</text>
+<text font-family='futr8r' font-size='10.9577' x='31.2946' y='0'>)</text>
+</g>
+</svg>
+. (<i>c</i>)
+0.05 Ω. (<i>d</i>) Reduz-se a diminuição da diferença de
+potencial quando a corrente aumenta.
+</li>
+<li>
+<svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 51.2463 10.57597' width='5.12463em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq128'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.3196' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='24.2795' y='0'>4<tspan x='30.1136'>1</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='35.9478' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='38.8648' y='0'>4<tspan x='44.6989'>8</tspan>
+</text>
+</g>
+</svg>
+ Ω, <svg height='1.057597em' version='1.1' viewBox='-0.6 -8.1827 51.0819 10.57597' width='5.10819em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq129'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>2</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.3196' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='24.2795' y='0'>5<tspan x='30.1136'>3</tspan>
+</text>
+<text font-family='futr8r' font-size='10.9577' x='35.9478' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='38.8648' y='0'>9<tspan x='44.6989'>3</tspan>
+</text>
+</g>
+</svg>
+ Ω, <svg height='1.067459em' version='1.1' viewBox='-0.6 -8.1827 44.8533 10.67459' width='4.48533em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq130'>
+<text font-family='futri8r' font-size='10.9577' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.21825' x='7.40025' y='1.79326'>3</text>
+<text font-family='fourier-ms' font-size='10.9577' x='14.3196' y='0'>=</text>
+<text font-family='futr8r' font-size='10.9577' x='24.2795' y='0'>4</text>
+<text font-family='futr8r' font-size='10.9577' x='30.1136' y='0'>.</text>
+<text font-family='futr8r' font-size='10.9577' x='33.0307' y='0'>8<tspan x='38.8648'>1</tspan>
+</text>
+</g>
+</svg>
+ Ω.
+</li>
+<li>
+(<i>a</i>) 3.12 V (<i>b</i>) 18.7 W
+</li>
+<li>
+6.6 m
+</li>
+<li>
+3.0 °C
+</li>
+<li>
+Na resistência de 20 Ω, 55.1 mW. Na resistência de
+100 Ω, 99.2 mW. Na resistência de 150 Ω, 66.2 mW. Na
+resistência de 60 Ω, 54.0 mW. Na resistência de 80 Ω,
+40.5 mW. A f.e.m. fornece 315 mW.
+</li>
+</ol>
+</section>
+<div id="p1c1" class="comment" onclick="document.getElementById('p1c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta A: Errada</div>
+<p>
+O fator em que aumentou a resistência, 8/6.5, é igual a
+<svg height='1.068554em' version='1.1' viewBox='-0.6 -8.19366 51.9603 10.68554' width='5.19603em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq131'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.29527' y='0'>+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='16.6707' y='0'>α</text>
+<text font-family='futr8r' font-size='8.21825' x='24.3579' y='1.79326'>2<tspan x='28.7335'>0</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='34.7761' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='42.6187' y='0'>T</text>
+</g>
+</svg>
+, onde <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.1841 8.79366' width='1.71841em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq132'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.84259' y='0'>T</text>
+</g>
+</svg>
+ é o aumento da temperatura,
+<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.05121 34.8973 8.7827' width='3.48973em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq133'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>6<tspan x='5.83412'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='13.1294' y='0'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='22.5049' y='0'>2<tspan x='28.339'>0</tspan>
+</text>
+</g>
+</svg>
+.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c2" class="comment" onclick="document.getElementById('p1c2').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 1, resposta B: Certa</div>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c3" class="comment" onclick="document.getElementById('p1c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta C: Errada</div>
+<p>
+O fator em que aumentou a resistência, 8/6.5, é igual a
+<svg height='1.068554em' version='1.1' viewBox='-0.6 -8.19366 51.9603 10.68554' width='5.19603em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq134'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.29527' y='0'>+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='16.6707' y='0'>α</text>
+<text font-family='futr8r' font-size='8.21825' x='24.3579' y='1.79326'>2<tspan x='28.7335'>0</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='34.7761' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='42.6187' y='0'>T</text>
+</g>
+</svg>
+, onde <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.1841 8.79366' width='1.71841em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq135'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.84259' y='0'>T</text>
+</g>
+</svg>
+ é o aumento da temperatura,
+<svg height='0.87827em' version='1.1' viewBox='-0.6 -8.05121 34.8973 8.7827' width='3.48973em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.065998em'>
+<g id='eq136'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>6<tspan x='5.83412'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.9577' x='13.1294' y='0'>−</text>
+<text font-family='futr8r' font-size='10.9577' x='22.5049' y='0'>2<tspan x='28.339'>0</tspan>
+</text>
+</g>
+</svg>
+.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c4" class="comment" onclick="document.getElementById('p1c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta D: Errada</div>
+<p>
+Quando a temperatura aumenta, a resistência aumenta num fator
+<svg height='1.068554em' version='1.1' viewBox='-0.6 -8.19366 51.9603 10.68554' width='5.19603em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq137'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.29527' y='0'>+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='16.6707' y='0'>α</text>
+<text font-family='futr8r' font-size='8.21825' x='24.3579' y='1.79326'>2<tspan x='28.7335'>0</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='34.7761' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='42.6187' y='0'>T</text>
+</g>
+</svg>
+, onde <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.1841 8.79366' width='1.71841em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq138'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.84259' y='0'>T</text>
+</g>
+</svg>
+ é o aumento da temperatura,
+e não a temperatura inicial.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p1c5" class="comment" onclick="document.getElementById('p1c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 1, resposta E: Errada</div>
+<p>
+Quando a temperatura aumenta, a resistência aumenta num fator
+<svg height='1.068554em' version='1.1' viewBox='-0.6 -8.19366 51.9603 10.68554' width='5.19603em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq139'>
+<text font-family='futr8r' font-size='10.9577' x='0' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.9577' x='7.29527' y='0'>+</text>
+<text font-family='fourier-mlit' font-size='10.9577' x='16.6707' y='0'>α</text>
+<text font-family='futr8r' font-size='8.21825' x='24.3579' y='1.79326'>2<tspan x='28.7335'>0</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.9577' x='34.7761' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='42.6187' y='0'>T</text>
+</g>
+</svg>
+, onde <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.1841 8.79366' width='1.71841em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq140'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.84259' y='0'>T</text>
+</g>
+</svg>
+ é o aumento da temperatura,
+e não a temperatura final.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c1" class="comment" onclick="document.getElementById('p2c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta A: Errada</div>
+<p>
+A lei de Ohm, <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 44.5537 8.79366' width='4.45537em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq141'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='18.8904' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='28.8504' y='0'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='38.2803' y='0'>I</text>
+</g>
+</svg>
+, implica que quando a voltagem
+<svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq142'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ é constante, a resistência é inversamente proporcional à
+corrente. Como a corrente no cabo A é maior, a sua resistência deverá
+então ser menor.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c2" class="comment" onclick="document.getElementById('p2c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta B: Errada</div>
+<p>
+A lei de Ohm, <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 44.5537 8.79366' width='4.45537em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq143'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='18.8904' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='28.8504' y='0'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='38.2803' y='0'>I</text>
+</g>
+</svg>
+, implica que quando a voltagem
+<svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq144'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ é constante, a resistência é inversamente proporcional à
+corrente. Como a corrente no cabo A é maior, a sua resistência deverá
+então ser menor.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c3" class="comment" onclick="document.getElementById('p2c3').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 2, resposta C: Certa</div>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c4" class="comment" onclick="document.getElementById('p2c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta D: Errada</div>
+<p>
+A lei de Ohm, <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 44.5537 8.79366' width='4.45537em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq145'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='18.8904' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='28.8504' y='0'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='38.2803' y='0'>I</text>
+</g>
+</svg>
+, implica que quando a voltagem
+<svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq146'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ é constante, a resistência é inversamente proporcional à
+corrente. Como a corrente no cabo A é maior, a sua resistência deverá
+então ser menor.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p2c5" class="comment" onclick="document.getElementById('p2c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 2, resposta E: Errada</div>
+<p>
+A lei de Ohm, <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 44.5537 8.79366' width='4.45537em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq147'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.9577' x='18.8904' y='0'>=</text>
+<text font-family='futri8r' font-size='10.9577' x='28.8504' y='0'>R</text>
+<text font-family='futri8r' font-size='10.9577' x='38.2803' y='0'>I</text>
+</g>
+</svg>
+, implica que quando a voltagem <svg height='0.879366em' version='1.1' viewBox='-0.6 -8.19366 17.7997 8.79366' width='1.77997em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='inline' style='vertical-align:-0.06em'>
+<g id='eq148'>
+<text font-family='fourier-ml' font-size='10.9577' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.9577' x='7.60348' y='0'>V</text>
+</g>
+</svg>
+ é constante, a resistência é inversamente proporcional à
+corrente. Como a corrente no cabo A é maior num fator de 2, a sua
+resistência deverá ser menor no mesmo fator.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c1" class="comment" onclick="document.getElementById('p3c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta A: Errada</div>
+<p>
+Se o fio 2 é mais comprido, deve ter uma secção com área menor, para
+manter o mesmo volume.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c2" class="comment" onclick="document.getElementById('p3c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta B: Errada</div>
+<p>
+Maior comprimento, com o mesmo volume, implica também uma secção
+menor. Com maior comprimento e menor secção, o fio 2 deve ter uma
+resistência maior do que o fio 1.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c3" class="comment" onclick="document.getElementById('p3c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta C: Errada</div>
+<p>
+Se o fio 2 é 20% mais comprido, deve ter uma secção com área 20%
+menor, para manter o mesmo volume.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c4" class="comment" onclick="document.getElementById('p3c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 3, resposta D: Errada</div>
+<p>
+Com maior comprimento e menor secção, o fio 2 deve ter uma resistência
+maior do que o fio 1.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p3c5" class="comment" onclick="document.getElementById('p3c5').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 3, resposta E: Certa</div>
+<p></p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c1" class="comment" onclick="document.getElementById('p4c1').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta A: Errada</div>
+<p>
+A intensidade desta lâmpada é equivalente a 75 W, que é menor do que
+as duas lâmpadas importadas dissipam.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c2" class="comment" onclick="document.getElementById('p4c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta B: Errada</div>
+<p>
+Esta lâmpada vai fornecer mais do que 150 W de luz, porque está ligada
+a uma voltagem o dobro do que era suposto ter. As duas lâmpadas
+importadas juntas fornecem 150 W.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c3" class="comment" onclick="document.getElementById('p4c3').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 4, resposta C: Certa</div>
+<p>
+A voltagem em cada lâmpada será 110 V, ou seja, cada uma fornecerá
+exatamente 75 W e o total é 150 W.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c4" class="comment" onclick="document.getElementById('p4c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta D: Errada</div>
+<p>
+Quando ligada à voltagem de 220 V, que é o dobro do que a voltagem
+nominal, a potência não aumenta para o dobro, mas aumenta mais, já que
+a potência é proporcional ao quadrado da voltagem.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p4c5" class="comment" onclick="document.getElementById('p4c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 4, resposta E: Errada</div>
+<p>
+Esta lâmpada vai fornecer mais do que 150 W de luz, porque está ligada
+a uma voltagem maior do que era suposto ter. As duas lâmpadas
+importadas juntas fornecem 150 W.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c1" class="comment" onclick="document.getElementById('p5c1').style.display='none'">
+<div class="hint">
+<div class="center green">Pergunta 5, resposta A: Certa</div>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c2" class="comment" onclick="document.getElementById('p5c2').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta B: Errada</div>
+<p>
+Com os valores da potência e voltagem nominal de cada aquecedor,
+calcule a sua resistência e depois calcule a potência no sistema de 3
+resistências iguais ligadas em série.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c3" class="comment" onclick="document.getElementById('p5c3').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta C: Errada</div>
+<p>
+Com os valores da potência e voltagem nominal de cada aquecedor,
+calcule a sua resistência e depois calcule a potência no sistema de 3
+resistências iguais ligadas em série.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c4" class="comment" onclick="document.getElementById('p5c4').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta D: Errada</div>
+<p>
+Com os valores da potência e voltagem nominal de cada aquecedor,
+calcule a sua resistência e depois calcule a potência no sistema de 3
+resistências iguais ligadas em série.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div id="p5c5" class="comment" onclick="document.getElementById('p5c5').style.display='none'">
+<div class="hint">
+<div class="center red">Pergunta 5, resposta E: Errada</div>
+<p>
+Com os valores da potência e voltagem nominal de cada aquecedor,
+calcule a sua resistência e depois calcule a potência no sistema de 3
+resistências iguais ligadas em série.
+</p>
+<p class="center">(clique para continuar)</p>
+</div>
+</div>
+<div class="bottom">
+<a href="#top"><span class="button">Topo</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../index.html">DEF</a>
+</div>
+<div class="category">
+<a href="../textos.html">Material de estudo</a>
+</div>
+<div class="category">
+<a href="../cursos.html">Cadeiras no Moodle</a>
+</div>
+<div class="category">
+<a href="../faq.html">Perguntas frequentes</a>
+</div>
+</div>
+&copy; 2016 &ndash; 2019, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Última atualização: 2020/10/01 15:36:16 UTC</span>
+</footer>
+</body>
+</html>
