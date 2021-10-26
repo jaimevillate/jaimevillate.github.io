@@ -1,6 +1,6 @@
 /*
-   Copyright, 2018-2019. Jaime E. Villate
-   Version: 2019-07-29
+   Copyright, 2018-2021. Jaime E. Villate
+   Version: 2021-10-22
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 */
@@ -12,23 +12,20 @@ body {background-color: #fff;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif}
 
-header {background-color: #e7d4c1;
+header {background-color: #85817a;
     padding: 2em 0 0 0.5em;
-    border-bottom: 1px solid #666;
-    color:#222}
+    border-bottom: 2px solid #f18458;
+    color:#fff}
 
 header h1 {font-size: 2em;
     line-height: 1.2em;
-    color: #005;
-    text-shadow: 0.05em 0.05em 0.07em rgba(0,0,0,0.3)}
+    color: #ffffcc}
 
 header:after {content: "";
     display: table;
     clear: both}
 
-header a {color: #66f}
-
-header a:hover {color: #00f}
+header a {color: #fabf77}
 
 div.menu {float: left; width: 100%}
 
@@ -39,15 +36,15 @@ div.menu ul {list-style-type: none;
 
 div.menu li {position: relative}
 
-div.menu li.current {padding: 0 0.5em 0 0.5em; background-color: #aaa}
+div.menu li.current {padding: 0 0.5em 0 0.5em; background-color: #bdbab5}
 
 div.menu li a {padding: 0.5em;
     display: block;
     line-height: 1em;
-    background-color: #cfc6b1;
-    color: #5252f2}
+    background-color: #d17444; 
+    color: #ffffff}
 
-div.menu li a:hover {background-color: #b39f96}
+div.menu li a:hover {background-color: #fa9877; color: #000000}
 
 main, section {padding: 15px;
     width: 100%;
@@ -59,7 +56,7 @@ main:after, section:after {content: "";
 
 section.opening {border: 1px solid #333;
     padding: 0 30px 15px 30px;
-    background-color: #dcdcff}
+    background-color: #f2f1f0}
 
 section.opening h2 {text-align: center}
 
@@ -67,11 +64,11 @@ footer {float: left;
     width: 100%;
     padding: 30px;
     font-size: 0.7em;
-    background-color: #ab9178;
+    background-color: #303030;
     text-align: center;
     border-top: 1px solid #666;
     border-top: 1px solid #666;
-    color: #f1e8c6}
+    color: #ffffff}
 
 div.site-map::before {content: ""; display: table; clear: both}
 
@@ -87,38 +84,38 @@ div.site-map {display: none;
 
 .category ul {list-style-type: none; margin: 0; padding: 0}
 
-.category a {color: #fff}
+.category a {color: #fabf77}
 
-.category a b {color: #f1e8c6}
+.category a b {color: #f9f1e4}
 
-.category a:hover {color: #966}
+.category a:hover {color: #fa9877}
 
-.category a b:hover {color: #633}
+.category a b:hover {color: #fa9877}
 
 nav {font-size: 0.8em;
     color: #000;
-    background-color: #aaa;
-    border-bottom: 1px solid #666;
+    background-color: #bdbab5;
+    border-bottom: 2px solid #f18458;
     width: 100%;
     overflow: hidden}
 
 nav span {float: left;
     display: block;
-    color: #222222;
+    color: #000000;
     text-align: center;
     padding: 3px 6px}
 
 nav a {float:left;
     display: block;
-    color: #3232f2;
+    color: #c96201;
     padding: 3px 7.5px;
     text-align: center}
 
-nav a:hover {background-color: #b39f96; color: #00f}
+nav a:hover {background-color: #828282; color: #fabf77}
 
 aside {font-size: 0.8em;
     color: #ccc;
-    background-color: #666;
+    background-color: #4f4d46;
     position: absolute;
     top: 0px;
     width: 100%;
@@ -126,35 +123,34 @@ aside {font-size: 0.8em;
 
 aside span {float: left;
     display: block;
-    color: #f2f2f2;
+    color: #ffffff;
     padding: 3px 10px 3px 10px}
 
-aside span.current {color: #222; background-color: #e7d4c1}
+aside span.current {background-color: #85817a}
 
 aside a {float: left;
     display: block;
-    color: #a2a2f2;
+    color: #f18458;
     padding: 3px 10px 3px 10px;
     text-decoration: none}
 
-aside a:hover {background-color: #b39f96; color: #22f}
+aside a:hover {color: #fa9877}
 
-a {color: #3232ff; text-decoration: none}
+a {color: #c96201; text-decoration: none}
 
-.titlebar {color: #e7d4c1;
-    background-color: #ab9178;
-    line-height: 1.5em;
-    padding: 0.2em 1em 0.2em 1em;
-    margin-bottom: 30px}
+hr.thin {background-color: #ef9801;
+    color: #f18458;
+    height: 1px;
+    border: none;}
 
 .hover:hover {opacity: 0.75}
 
-.border {border: 1px solid #ab9178;
+.border {border: 1px solid #f18458;
     border-radius: 8px}
 
 .full {width: 100%}
 
-.highlight {background-color: #e7d4c1; padding: 5px 20px 5px 20px}
+.highlight {background-color: #f2f1f0; padding: 5px 20px 5px 20px}
 
 .img-1 {max-width: 8%; height: auto}
 .img-2 {max-width: 16%; height: auto}
@@ -239,28 +235,23 @@ table.spacious td {padding: 0.5em}
 
 table.borders {border-collapse: collapse}
 
-table.borders td, table.borders th {border: 1px solid black; padding: 0.5em}
+table.borders td, table.borders th {border: 1px solid #f18458; padding: 0.5em}
 
 table.center {margin-left: auto; margin-right: auto}
 
-table.evenodd th {background-color: #ab9178;
-    color: #e7d4c1;
-    letter-spacing: 0.25px}
+table.evenodd th {background-color: #85817a; color: #ffffcc}
 
-table.evenodd tr:nth-child(even) {background-color: #e7d4c1}
+table.evenodd th a {color: #fabf77}
 
-table.evenodd tr:nth-child(odd) {background-color: #ffffff}
+table.evenodd tr:nth-child(even) {background-color: #f2f1f0}
+
+table.evenodd tr:nth-child(odd) {background-color: #bdbab5}
+
+div.center, div.equation {text-align: center}
 
 table.right, div.right {float: right}
 
 table.left, div.left {float: left}
-
-div.equation {text-align: center}
-
-div.bcenter {margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    display: block}
 
 .inline {font-size: 0.95em}
 .display {font-size: 0.95em}
@@ -299,14 +290,14 @@ div.content {position: -webkit-sticky;
 
 div.content-items {display: none;
     position: absolute;
-    background-color: #e9e9e9;
+    background-color: #f9f1e4;
     min-width: 400px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 6px 15px 4px 15px;
     z-index: 1}
 
-div.content-items a {color: #3232f2; text-decoration: none}
-div.content-items a:hover {background-color: #aaa; color: #8e32f2}
+div.content-items a {color: #d47315; text-decoration: none}
+div.content-items a:hover {color: #fa9877}
 
 div.content:hover div.content-items {display: block}
 
@@ -318,19 +309,20 @@ div.bottom {position: -webkit-sticky;
     float: left;
     bottom: 0}
 
-div.bottom a {display: block; color: #3232f2}
+div.bottom a {display: block; color: #d47315}
 
 span.button {font-size: 0.8em;
     padding: 5px;
-    border: 1px solid #666;
-    background-color: #aaa;
+    border: 1px solid #d47315;
+    background-color: #f9f1e4;
+    color: #d47315;
     border-radius: 5px}
 
-span.button:hover {background-color: #b39f96; color: #aaf}
+span.button:hover {background-color: #828282; color: #fa9877}
 
 div.example {border: 1px solid #333;
     padding: 0 15px 15px 15px;
-    background-color: #c3dcff;
+    background-color: #f2f1f0;
     border-radius: 15px}
 
 div.example:after {content: "";
@@ -463,7 +455,8 @@ p.bibitem {margin-left: 2em; text-indent: -2em}
 .green {color: #fff !important; background-color:#4CAF50 !important}
 
 @media (min-width: 600px) {
-    header {padding: 2em 0 0 2em}
+    header {padding-top: 30px}
+    header p, header h1 {margin-left: 1em}
     body {font-size: 1em; line-height: 1.5em}
     div.menu {float: left; font-size: 0.8em; padding: 15px; width: 25%}
     div.menu ul {margin-top: 15px}
@@ -504,6 +497,7 @@ p.bibitem {margin-left: 2em; text-indent: -2em}
     main {float: left; width: 75%; padding: 15px 50px 15px 15px}}
 
 @media (min-width: 900px) {
+    header p, header h1 {margin-left: 50px}
     ul.multicol {columns: 3; -webkit-columns: 3; -moz-columns: 3}
     section {padding: 20px 60px 20px 60px}
     section.opening {padding: 20px 50px 20px 50px}
