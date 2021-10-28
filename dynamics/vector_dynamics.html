@@ -1,0 +1,3048 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4. Vector dynamics</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body id="top">
+<aside>
+<a href="../dinamica/mecanica_vetorial.html">Português</a>
+<span class="current">English</span>
+</aside>
+<header>
+<h1 id="title">4. Vector dynamics</h1>
+</header>
+<nav>
+<a href="../index.html">Jaime Villate</a><span>&rarr;</span>
+<a href="../material.html">Study Material</a><span>&rarr;</span>
+<a href="./index.html">Dynamics and Dynamic Systems</a><span>&rarr;</span>
+<span>4. Vector Dynamics</span>
+</nav>
+<div class="content">
+<span class="button">Contents</span>
+<div class="content-items">
+<a href="./index.html">Dynamics and Dynamical Systems</a>
+<ol class="nested" style="counter-increment: item 3">
+<li><a href="#top">Vector dynamics</a>
+<ul class="plain">
+<li><a href="#Introduction">Introduction</a></li>
+</ul>
+<ol class="nested">
+<li><a href="#sec-4.1">Newton's laws</a>
+<ol class="nested">
+<li><a href="#sec-4.1.1">Law of inertia</a></li>
+<li><a href="#sec-4.1.2">Force and acceleration</a></li>
+<li><a href="#sec-4.1.3">Law of action and reaction</a></li>
+</ol>
+</li>
+<li><a href="#sec-4.2">Normal and tangential force components</a></li>
+<li><a href="#sec-4.3">Normal and frictional forces</a>
+<ol class="nested">
+<li><a href="#sec-4.3.1">Static friction</a></li>
+<li><a href="#sec-4.3.2">Kinetic friction</a></li>
+<li><a href="#sec-4.3.3">Fluid resistance</a></li>
+</ol>
+</li>
+</ol>
+<ul class="plain">
+<li><a href="#Questions">Questions</a></li>
+<li><a href="#Problems">Problems</a></li>
+<li><a href="#Answers">Answers</a></li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<section id="Introduction" class="opening">
+<h2>Introduction</h2>
+<div class="large center">
+<img class="responsive" src="img/Nascer_da_Lua_no_Alasca.jpg"
+     alt="Moonrise in Alaska" width="1024" height="768">
+</div>
+<p><span id="Newton,&nbsp;Isaac" class="index">Isaac Newton</span>
+had a very ingenious idea when he was 23, which would later
+develop into his famous theory of gravitation and the laws
+of motion. Newton thought that in the same way as an apple
+falls to the Earth, due to its gravitational attraction, so
+the Moon is also falling to the Earth under the same
+gravitational attraction of the Earth. The reason why the
+Moon never reaches the surface of the Earth, as the apple
+does, is because it also has a very high velocity component
+in the direction parallel to the surface of the Earth;
+therefore, the distance the Moon falls during a time
+interval, combined with the distance it moves parallel to
+the surface give an arc with constant radius. Using the data
+he knew for the distance from the Earth to the Moon and
+the orbital period of the Moon, Newton determined the
+distance that the Moon falls per unit time; comparing that
+distance with the distance that an apple falls per unit
+time, he concluded that the gravitational attraction of the
+Earth decreases in the proportion of the square of the
+distance from the Earth's center.</p>
+</section>
+<section id="sec-4.1">
+<h2>4.1. Newton's laws</h2>
+<p>Newton's three <span id="law!of&nbsp;Newton"
+                        class="index">laws of motion</span>  are the basis of
+classical mechanics, which describes the motion of objects
+around us as well as the motion of planets, stars and
+other distant objects. The three laws were clearly stated in 
+a single page of the book <i>Mathematical Principles
+of Natural Philosophy</i>, written by Newton in 1687.</p>
+<div id="sec-4.1.1">
+<h3>4.1.1. Law of inertia</h3>
+<p>The original statement given by Newton of his first law,
+often referred to as the law of <span id="law!of&nbsp;inertia"
+                                      class="index">inertia</span>, is as follows:</p>
+<div class="fbox">
+<b>LAW I.</b><br>
+<p>&quot;<i>Every body continues in its state of<span id="rest"
+                                                      class="index"> rest</span>, or of uniform motion in a
+right line, unless it is compelled to change that state
+by forces impressed upon it</i>.</p>
+<p>Projectiles continue in their <span id="motion!uniform"
+                                       class="index">motions</span>, so far as they are not
+retarded by the resistance of the air, or impelled
+downwards by the force of gravity. A top, whose parts by
+their cohesion are continually drawn aside from
+rectilinear motion motions, does not cease its rotation,
+otherwise than as it is retarded by the air. The greater
+bodies of the planets and comets, meeting with less
+resistance in freer spaces, preserve their motions both
+progressive and circular for a much longer time.&quot;</p></div>
+<p>There are reference frames called Newtonian
+or <span id="reference&nbsp;frame!inertial"
+         class="index"><b>inertial reference frames</b></span>
+where the law of inertia is valid. Let us look at an
+example: a sphere resting on top of a horizontal table
+inside a train wagon that passes through a train station
+with uniform rectilinear motion.</p>
+<p>A person sitting on the station sees the sphere moving
+together with train, therefore with uniform rectilinear
+motion. Meanwhile, a passenger seating on the train wagon
+will see the sphere at rest on the table. The station and
+the train wagon are both inertial reference frames, so the
+two persons see the sphere behave according to the law of
+inertia; one of them sees the sphere remaining and the
+other person sees that it maintains its uniform
+rectilinear motion because there are no forces that compel
+it to change that state of rest or uniform motion.</p>
+<p>If the train slows down, the passenger in the station
+sees that the sphere maintains its uniform speed, but
+since the trains speed is getting lower, the table is
+being left behind and the sphere rolls to its front. The
+station continues to be an inertial reference
+frame. However, the wagon slowing down is no longer an
+inertial reference frame so, from the point of view of the
+person on the wagon, the sphere no longer behaves
+according to the law of inertia: it leaves its state of
+rest and starts speeding up without existing a force
+responsible for that change.</p>
+<p>The rotation of the Earth implies that it is not an
+inertial frame. However, the weight of the objects on the
+surface of the Earth and the normal force opposed to it
+eliminate the effects of the rotation and, therefore, with
+respect to horizontal motion on the surface of the Earth,
+it is a good approximation to assume that the Earth is an
+inertial frame. Any object at rest or with uniform
+rectilinear motion relative to it is also be an inertial
+frame. The station or a stopped train are at rest relative
+to Earth, so they are inertial frames. A train with
+uniform rectilinear motion relative to the Earth is also
+an inertial frame, but a train slowing down or speeding up
+or with curved motion relative to Earth is not an inertial
+frame.</p>
+<h3 id="sec-4.1.2">4.1.2. Force and acceleration</h3>
+<p>The second law can be viewed as the definition of the
+vector associated to a force, measured in terms to the effect
+it produces in the motion of the object upon which it
+acts. Newton stated that law in his book in the following
+way:</p>
+<div class="fbox">
+<b>LAW II.</b><br>
+<p>&quot;<i>The change of motion is proportional to the motive
+force impressed; and is made in the direction of the
+right line in which that force is impressed</i>.</p>
+<p>If any force generates a motion, a double force will
+generate double the motion, a triple force triple the
+motion, whether that force be impressed altogether and
+at once, or gradually and successively. And this motion
+(being always directed the same way with the generating
+force), if the body moved before, is added to or
+subtracted from the former motion, according as they
+directly conspire with or are directly contrary to each
+other; or obliquely joined, when they are oblique, so as
+to produce a new motion compounded from the
+determination of both.&quot;</p></div>
+<p>One of the eight definitions preceding the statement of
+the three laws in Newton's book was the definition
+of <span id="quantity&nbsp;of&nbsp;motion"
+         class="index">quantity of motion</span>, as the product of
+mass and the velocity of a body. The quantity of motion is
+frequently referred to as <span id="momentum!linear"
+                                class="index"><b>linear momentum</b></span>. The
+explanation following the statement of the second law,
+about how to sum the linear momentum due to a force to the
+linear momentum the object already had, correspond to our
+contemporary definition of vector addition. Therefore, in
+today's notation the linear momentum (Newton's quantity of
+motion) is a vector <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8196958em' height='1.2249338em' viewBox='-0.360891 -8.997584 8.196958 12.249338' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq1'>
+<text font-family='fourier-ml' font-size='10.957664' x='.310823' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>p</text>
+</g>
+</svg>
+, equal to the product of
+the <span id="mass" class="index">mass</span> of the
+object times its velocity,</p>
+<div class="eqn" id="eq-4.1">(4.1)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.6230948em' height='1.9074955em' viewBox='210.010312 67.813448 46.230948 19.074955' class='display'>
+<g id='eq2'>
+<rect x='210.610312' y='68.413448' height='.3985' width='45.030948'/>
+<rect x='210.610312' y='68.811947' height='17.077956' width='.3985'/>
+<text font-family='fourier-ml' font-size='10.957664' x='214.308427' y='80.019917'></text>
+<text font-family='futri8r' font-size='10.957664' x='214.236712' y='80.199253'>p</text>
+<text font-family='fourier-ms' font-size='10.957664' x='223.610831' y='80.199253'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='233.570761' y='80.199253'>m</text>
+<text font-family='fourier-ml' font-size='10.957664' x='245.03905' y='80.019917'></text>
+<text font-family='futri8r' font-size='10.957664' x='245.606951' y='80.199253'>v</text>
+<rect x='255.24276' y='68.811947' height='17.077956' width='.3985'/>
+<rect x='210.610312' y='85.889903' height='.3985' width='45.030948'/>
+</g>
+</svg>
+</div>
+<p>And the change of motion mentioned in the second law
+would be the final linear momentum, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2275259em' height='1.2249338em' viewBox='-0.360891 -8.997584 12.275259 12.249338' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq3'>
+<text font-family='fourier-ml' font-size='10.957664' x='.310823' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>p</text>
+<text font-family='futr8r' font-size='8.218248' x='7.328517' y='1.793263'>2</text>
+</g>
+</svg>
+, minus the
+initial linear momentum <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1880783em' height='1.2249338em' viewBox='-0.360891 -8.997584 11.880783 12.249338' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq4'>
+<text font-family='fourier-ml' font-size='10.957664' x='.310823' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>p</text>
+<text font-family='futr8r' font-size='8.218248' x='7.328517' y='1.793263'>1</text>
+</g>
+</svg>
+ and as stated in the
+second law, that change of linear momentum is a vector
+with the same direction as the force that produces it. The
+sentence &quot;whether that force be impressed altogether
+and at once, or gradually and successively&quot; means
+that the change in linear momentum equals the time
+integral of the force during the time interval when it
+acts. Hence, the mathematical statement of Newton's second
+law is:</p>
+<div class="eqn" id="eq-4.2">(4.2)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.0978888em' height='4.1486658em' viewBox='191.654673 67.271044 80.978888 41.486658' class='display'>
+<g id='eq5'>
+<text font-family='futri8r' font-size='8.218248' x='196.962148' y='72.933485'>t</text>
+<text font-family='futr8r' font-size='6.391971' x='200.04658' y='74.278432'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='192.935717' y='75.500519'></text>
+<text font-family='futri8r' font-size='8.218248' x='192.254673' y='106.812755'>t</text>
+<text font-family='futr8r' font-size='6.391971' x='195.339105' y='108.157702'>1</text>
+<text font-family='fourier-ml' font-size='10.957664' x='204.352095' y='88.361607'></text>
+<text font-family='futri8r' font-size='10.957664' x='204.256469' y='90.794485'>F</text>
+<text font-family='futr8r' font-size='10.957664' x='213.160381' y='90.794485'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='221.14376' y='90.794485'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='228.114895' y='90.794485'>=</text>
+<text font-family='fourier-ml' font-size='10.957664' x='238.385648' y='90.615149'></text>
+<text font-family='futri8r' font-size='10.957664' x='238.313934' y='90.794485'>p</text>
+<text font-family='futr8r' font-size='8.218248' x='245.403342' y='92.587748'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='251.738202' y='90.794485'>−</text>
+<text font-family='fourier-ml' font-size='10.957664' x='261.424493' y='90.615149'></text>
+<text font-family='futri8r' font-size='10.957664' x='261.352778' y='90.794485'>p</text>
+<text font-family='futr8r' font-size='8.218248' x='268.442187' y='92.587748'>1</text>
+</g>
+</svg>
+</div>
+<p>where <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8815577em' height='1.1851126em' viewBox='-0.6 -11.251126 8.815577 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq6'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+</g>
+</svg>
+ is the force as a function of time. In the
+statement of that law, Newton restricts to a single force,
+but later in his book he explains that several forces should
+be added as vectors and he explains the
+<span id="parallelogram&nbsp;rule"
+      class="index"><b>parallelogram rule</b></span> to add
+forces (see
+figure&thinsp;<a href="vector_kinematics.html#fig-2.3">2.3</a>
+in <a href="vector_kinematics.html">chapter&thinsp;2</a>).</p>
+<p>Therefore, the force <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8815577em' height='1.1851126em' viewBox='-0.6 -11.251126 8.815577 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq7'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+</g>
+</svg>
+ in
+equation <a href="#eq-4.2">4.2</a> must be interpreted as
+the total <span id="force" class="index">force</span>
+acting on the object, namely, equal to the sum of all
+forces acting upon it.</p>
+<p>The time integral of the total force, on the left-hand
+side of equation <a href="#eq-4.2">4.2</a>, gives a vetor
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8125244em' height='1.1851126em' viewBox='-1.30537 -11.251126 8.125244 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq8'>
+<text font-family='fourier-ml' font-size='10.957664' x='-.70537' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='.358652' y='0'>I</text>
+</g>
+</svg>
+ called <span id="impulse"
+                       class="index"><b>impulse</b></span>. Hence, if a total
+force acts during a time interval [<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8903951em' height='0.9743184em' viewBox='-0.360891 -7.349921 8.903951 9.743184' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq9'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='futr8r' font-size='8.218248' x='4.351685' y='1.793263'>1</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.9298427em' height='0.9743184em' viewBox='-0.360891 -7.349921 9.298427 9.743184' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq10'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='futr8r' font-size='8.218248' x='4.351685' y='1.793263'>2</text>
+</g>
+</svg>
+] upon a
+body with initial linear momentum <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1880783em' height='1.2249338em' viewBox='-0.360891 -8.997584 11.880783 12.249338' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq11'>
+<text font-family='fourier-ml' font-size='10.957664' x='.310823' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>p</text>
+<text font-family='futr8r' font-size='8.218248' x='7.328517' y='1.793263'>1</text>
+</g>
+</svg>
+, its linear
+momentum at time <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.9298427em' height='0.9743184em' viewBox='-0.360891 -7.349921 9.298427 9.743184' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq12'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='futr8r' font-size='8.218248' x='4.351685' y='1.793263'>2</text>
+</g>
+</svg>
+ will be
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.442738em' height='1.4502881em' viewBox='-0.360891 -11.251126 54.42738 14.502881' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq13'>
+<text font-family='fourier-ml' font-size='10.957664' x='.310823' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>p</text>
+<text font-family='futr8r' font-size='8.218248' x='7.328517' y='1.793263'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='14.24784' y='0'>=</text>
+<text font-family='fourier-ml' font-size='10.957664' x='24.518594' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='24.446879' y='0'>p</text>
+<text font-family='futr8r' font-size='8.218248' x='31.536288' y='1.793263'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='37.871148' y='0'>+</text>
+<text font-family='fourier-ml' font-size='10.957664' x='46.541245' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='47.605267' y='0'>I</text>
+</g>
+</svg>
+.</p>
+<p>Equation <a href="#eq-4.2">4.2</a> can be written in
+differential form, namely,</p>
+<div class="eqn" id="eq-4.3">(4.3)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.7447917em' height='2.6023942em' viewBox='213.804069 66.150618 37.447917 26.023942' class='display'>
+<g id='eq14'>
+<text font-family='fourier-ml' font-size='10.957664' x='214.499696' y='80.808966'></text>
+<text font-family='futri8r' font-size='10.957664' x='214.404069' y='83.241844'>F</text>
+<text font-family='fourier-ms' font-size='10.957664' x='224.184668' y='83.241844'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='235.340112' y='75.148202'>d</text>
+<text font-family='fourier-ml' font-size='10.957664' x='243.395206' y='74.968867'></text>
+<text font-family='futri8r' font-size='10.957664' x='243.323491' y='75.148202'>p</text>
+<rect x='235.340112' y='79.826505' height='.637912' width='15.311874'/>
+<text font-family='futr8r' font-size='10.957664' x='236.541615' y='91.443069'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='244.524994' y='91.443069'>t</text>
+</g>
+</svg>
+</div>
+<p>And when the mass of the body is constant, replacing
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8196958em' height='1.2249338em' viewBox='-0.360891 -8.997584 8.196958 12.249338' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq15'>
+<text font-family='fourier-ml' font-size='10.957664' x='.310823' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>p</text>
+</g>
+</svg>
+ by <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.9593533em' height='0.9729076em' viewBox='-0.6 -8.997584 19.593533 9.729076' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq16'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='fourier-ml' font-size='10.957664' x='11.468289' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='12.03619' y='0'>v</text>
+</g>
+</svg>
+ leads the following equation</p>
+<div class="eqn" id="eq-4.4">(4.4)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.6541794em' height='1.8722274em' viewBox='209.854889 65.559905 46.541794 18.722274' class='display'>
+<g id='eq17'>
+<rect x='210.454889' y='66.159905' height='.3985' width='45.341794'/>
+<rect x='210.454889' y='66.558405' height='16.725275' width='.3985'/>
+<text font-family='fourier-ml' font-size='10.957664' x='213.937807' y='77.766375'></text>
+<text font-family='futri8r' font-size='10.957664' x='213.842181' y='80.199253'>F</text>
+<text font-family='fourier-ms' font-size='10.957664' x='223.622779' y='80.199253'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='233.58271' y='80.199253'>m</text>
+<text font-family='fourier-ml' font-size='10.957664' x='245.122736' y='80.019917'></text>
+<text font-family='futri8r' font-size='10.957664' x='245.6189' y='80.199253'>a</text>
+<rect x='255.398183' y='66.558405' height='16.725275' width='.3985'/>
+<rect x='210.454889' y='83.283679' height='.3985' width='45.341794'/>
+</g>
+</svg>
+</div>
+<p>where <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8248847em' height='0.9729076em' viewBox='-0.857055 -8.997584 8.248847 9.729076' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq18'>
+<text font-family='fourier-ml' font-size='10.957664' x='-.257055' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+</g>
+</svg>
+ is the <span id="acceleration"
+                                class="index">acceleration</span> of the body, equal to
+the time derivative of the velocity. This is the most
+frequently used form for Newton's second law.</p>
+<p>The unit of force adopted in the International System of
+units is the <span id="newton"
+                   class="index">newton</span>, N. A force of 1&thinsp;N is a
+force that makes a 1&thinsp;kg body accelerate at
+1&thinsp;m/s<sup>2</sup>.</p>
+<p>As already mentioned in previous chapters, all objects in
+free fall in the vacuum would be accelerated with the
+same <span id="gravity" class="index"><b>acceleration of
+gravity</b></span> , which near the surface of the Earth
+has a value <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.786226em' height='0.9462079em' viewBox='-0.360891 -6.210324 7.86226 9.462079' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq19'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>g</text>
+</g>
+</svg>
+.</p>
+<p>Thus, according to Newton's second law, the
+<span id="weight" class="index">weight</span> of any
+object (gravitational force exerted by the Earth) is
+directly proportional to its mass:</p>
+<div class="eqn" id="eq-4.5">(4.5)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.3323161em' height='1.5633205em' viewBox='211.34629 68.948126 43.323161 15.633205' class='display'>
+<g id='eq20'>
+<text font-family='fourier-ml' font-size='10.957664' x='212.041917' y='77.766375'></text>
+<text font-family='futri8r' font-size='10.957664' x='211.94629' y='80.199253'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='218.581412' y='81.992516'>g</text>
+<text font-family='fourier-ms' font-size='10.957664' x='225.411071' y='80.199253'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='235.371002' y='80.199253'>m</text>
+<text font-family='fourier-ml' font-size='10.957664' x='246.964827' y='79.846571'></text>
+<text font-family='futri8r' font-size='10.957664' x='247.407192' y='80.199253'>g</text>
+</g>
+</svg>
+</div>
+<p>where <span id="acceleration!of&nbsp;gravity"
+               class="index"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8304624em' height='1.2422684em' viewBox='-0.803255 -9.17093 8.304624 12.422684' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq21'>
+<text font-family='fourier-ml' font-size='10.957664' x='-.203255' y='-.352681'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>g</text>
+</g>
+</svg>
+</span> is a constant vector in the
+vertical direction, pointing downwards and with magnitude equal to
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.786226em' height='0.9462079em' viewBox='-0.360891 -6.210324 7.86226 9.462079' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq22'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>g</text>
+</g>
+</svg>
+, which is approximately 9.8 m/s<sup>2</sup>.</p>
+<p>For example, a body with a mass of 2 kg weights 19.6 N
+the surface of the Earth. If the same body were
+on a spacecraft half way between the Earth and the
+Moon, its mass would be the same but its weight would be
+smaller. The acceleration of gravity at that
+distance from the Earth would be only 0.011
+m/s<sup>2</sup>, so the object would weight only 0.022 N.</p>
+<p>The weight of a body is actually the sum of many forces:
+the weights of each of all the particles that make up the
+body, which together produce the total weight <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.989845em' height='0.9462079em' viewBox='-0.6 -6.210324 19.89845 9.462079' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq23'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='12.03619' y='0'>g</text>
+</g>
+</svg>
+. In
+addition to the magnitude and direction and direction of a
+force, the point where it is applied is also
+important. Newton addresses this issue in his book, but
+this subject will be postponed in this book
+until <a href="rigid_bodies.html">chapter 5</a>. For now,
+it will suffice to take into account that the weight of a
+body must always be represented at a point
+called <span id="center!of&nbsp;gravity"
+             class="index"><b>center of gravity</b></span>, that in
+homogeneous bodies with simple geometric shapes is located
+at its geometric center.</p>
+<p>Like the first law, the second law is valid only in
+inertial reference frames. Two inertial references may
+have a relative velocity, but this relative velocity must
+be constant. We conclude that the relative acceleration of
+one inertial frame relative to the others should be
+zero. As such, the acceleration of an object should be the
+same in relation to any inertial frame. The velocities
+measured in different inertial frames may be different,
+but their derivative (acceleration) will be the same in
+all. To determine whether a frame is inertial, it is
+enough to observe free objects, in which no force acts. If
+the uniform rectilinear motion remains in a state of rest,
+the frame will be inertial. Newton believed in the
+possibility of measuring the absolute acceleration of an
+object, relative to absolute space, and in the equation
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.9529402em' height='1.1982618em' viewBox='-0.6 -11.251126 39.529402 11.982618' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq24'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.780599' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='19.740529' y='0'>m</text>
+<text font-family='fourier-ml' font-size='10.957664' x='31.280556' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='31.776719' y='0'>a</text>
+</g>
+</svg>
+ interpreted <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8248847em' height='0.9729076em' viewBox='-0.857055 -8.997584 8.248847 9.729076' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq25'>
+<text font-family='fourier-ml' font-size='10.957664' x='-.257055' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+</g>
+</svg>
+ as the absolute
+acceleration of the object.</p>
+</div>
+<div id="sec-4.1.3">
+<h3>4.1.3. Law of action and reaction</h3>
+<div class="fbox">
+<b><span id="law!of&nbsp;action&nbsp;and&nbsp;reaction"
+         class="index">LAW III.</span></b><br>
+<p>&quot;<i>To every action there is always opposed an
+equal <span id="reaction"
+            class="index">reaction</span>: or, the mutual actions
+of two bodies upon each other are always equal, and
+directed to contrary parts</i>.</p>
+<p>Whatever draws or presses another is as much drawn or
+pressed by that other. If you press a stone with your
+finger, the finger is also pressed by the stone. If a
+horse draws a stone tide to a rope, the horse (if I may
+so say) will be equally drawn towards the stone; for the
+distended rope, by the same endeavor to relax or unbend
+itself, will draw the horse as much towards the stone as
+it does the stone towards the horse, and will obstruct
+the progress of the one as much as it advances that of
+the other. If a body impinge upon another, and by its
+force change the motion of the other, that body also
+(because of the equality of the mutual pressure) will
+undergo an equal change, in its own motion, towards the
+contrary part. The changes made by these actions are
+equal, not in the velocities but in the motions of
+bodies; that is to say, if the bodies are not hindered
+by any other impediments. For, because the motions are
+equally changed, the changes of the velocities made
+towards contrary parts are inversely proportional to the
+bodies.&quot;</p>
+</div>
+<p>This third is known as <b>law of action and
+reaction</b>. Let us consider the example given by Newton:
+a horse dragging a stone tied to a rope
+(figure <a href="#fig-4.1">4.1</a> ). The rope exerts the
+same force on the stone and on the horse, but in opposite
+directions.</p>
+<figure class="center" id="fig-4.1">
+<img class="fig" src="img/horse.png"
+     alt="Horse dragging a stone" style="width:36.18em">
+<figcaption>
+<b>Figure 4.1:</b> Horse dragging a 350 kg stone.
+</figcaption>
+</figure>
+<p>It is convenient to analyze separately the forces acting
+on the stone and the horse, as shown in
+figure <a href="#fig-4.2">4.2</a>. If the horse moves with
+constnat speed, Newton's second law implies that the sum
+of the forces acting on the stone and on the horse are
+both zero.</p>
+<figure class="center" id="fig-4.2">
+<img class="fig" src="img/horse-stone_forces.png"
+     alt="Forces on the stone and the horse" style="width:35.10em">
+<figcaption>
+<b>Figure 4.2:</b> Forces acting upon the stone and the horse.
+</figcaption>
+</figure>
+<p>The weight of the stone, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1122421em' height='1.3743008em' viewBox='-0.6 -11.251126 11.122421 13.743008' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq26'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>s</text>
+</g>
+</svg>
+, Acts in
+its center of gravity. The rope pulls the block in the
+direction in which it is stretched, with a force
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.9341545em' height='1.1851126em' viewBox='-0.6 -11.251126 9.341545 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq27'>
+<text font-family='fourier-ml' font-size='10.957664' x='.424396' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+</g>
+</svg>
+, As shown on the left side of
+figure <a href="#fig-4.2">4.2</a>. The sum of that force
+of the rope upon the stone plus the weight of the stone is
+a vector that points down and to the right. Since the sum
+of all the forces upon the block is zero, the
+force<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1722353em' height='1.3743008em' viewBox='-0.6 -11.251126 11.722353 13.743008' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq28'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>c</text>
+</g>
+</svg>
+ impressed by the ground on the
+stone points upwards and to the left; that force is the
+result of the contact between the surfaces of the stone
+and the floor.</p>
+<p>The rope pulls the horse back, with the force <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.7255862em' height='1.1851126em' viewBox='-0.6 -11.251126 17.255862 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq29'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>−</text>
+<text font-family='fourier-ml' font-size='10.957664' x='8.338713' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='7.914318' y='0'>T</text>
+</g>
+</svg>
+
+opposite to the force acting on the stone. On the two
+horseshoes of the horse that are in contact with the
+ground there will be contact forces, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1426496em' height='1.3644389em' viewBox='-0.6 -11.251126 11.426496 13.644389' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq30'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>1</text>
+</g>
+</svg>
+ and
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1820972em' height='1.3644389em' viewBox='-0.6 -11.251126 11.820972 13.644389' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq31'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>2</text>
+</g>
+</svg>
+, which point upwards and to the right. The sum
+of those two forces plus the weight of the horse and the
+force impressed by the rope should be equal to zero.</p>
+<p>The forces exerted by the ground are the 3 forces
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1122421em' height='1.3743008em' viewBox='-0.6 -11.251126 11.122421 13.743008' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq32'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>s</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1426496em' height='1.3644389em' viewBox='-0.6 -11.251126 11.426496 13.644389' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq33'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>1</text>
+</g>
+</svg>
+ and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1820972em' height='1.3644389em' viewBox='-0.6 -11.251126 11.820972 13.644389' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq34'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>2</text>
+</g>
+</svg>
+. These
+three forces of contact with the ground counteract the
+tendency to fall from the block and the horse, and prevent the
+stone and the horse from accelerating forward and
+backward. The rope is opposing the motion of the horse and
+keeping the stone in motion.</p>
+<p>A total of 5 reaction forces act upon the ground, as
+shown in figure&thinsp; <a href="#fig-4.3">4.3</a>. The
+reactions to the stone and horse weights, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.9036739em' height='1.3743008em' viewBox='-0.6 -11.251126 19.036739 13.743008' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq35'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>−</text>
+<text font-family='fourier-ml' font-size='10.957664' x='8.009945' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='7.914318' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='14.54944' y='1.793263'>s</text>
+</g>
+</svg>
+ and
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.0614643em' height='1.3793853em' viewBox='-0.6 -11.251126 20.614643 13.793853' class='inline' style='vertical-align:-0.255001em'>
+<g id='eq36'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>−</text>
+<text font-family='fourier-ml' font-size='10.957664' x='8.009945' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='7.914318' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='14.54944' y='1.942727'>h</text>
+</g>
+</svg>
+, are the gravitational forces that
+the stone and the horse produce on the Earth. These forces
+act in the center of gravity of the Earth, but were
+represented near the ground in the figure. The other three
+forces are the contact forces exerted on the ground by the surface
+of the stone and the horseshoes. Since the speed of the horse
+is constant, the sum of those 5 forces is zero.</p>
+<figure class="center" id="fig-4.3">
+<img class="fig" src="img/forces_on_the_ground.png"
+     alt="Forces to act on the ground" style="width:28.80em">
+<figcaption><b>Figure 4.3:</b> Forces exerted on the
+ground.</figcaption></figure>
+<p>If the horse were to accelerate, the sum of the forces on
+the horse and the stone would be a force pointing to the
+right. The sum of the 5 forces acting on the ground would
+be the reaction to that force, ie, an equal and opposite
+force would act on the Earth, that would make it
+accelerate to the left.</p>
+<p>However, since the mass of the Earth is many orders of
+magnitude greater than the mass of the horse and the
+block, the Earth's acceleration to the left would be
+imperceptible compared to the acceleration to the horse's
+right and the block. As Newton points out, the changes
+produced by the forces of the horse-block system on Earth
+and the reactions of these forces on the horse-block
+system do not result in equal velocities and opposite
+directions, but rather equal amounts of movement .</p>
+<div id="ex-4.1" class="example">
+<h3>Example 4.1</h3>
+<p>The only two forces acting upon a particle with mass of
+200 grams are:</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16.7798659em' height='1.4502881em' viewBox='149.092286 68.948126 167.798659 14.502881' class='display'>
+<g id='eq37'>
+<text font-family='fourier-ml' font-size='10.957664' x='149.787912' y='77.766375'></text>
+<text font-family='futri8r' font-size='10.957664' x='149.692286' y='80.199253'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='156.327407' y='81.992516'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='163.246742' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='173.206672' y='80.199253'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='180.448828' y='80.199253'>t</text>
+<text font-family='futr8r' font-size='10.957664' x='187.135051' y='80.019917'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='186.782385' y='80.199253'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='192.631073' y='80.199253'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='202.00654' y='80.199253'>4<tspan x='210.659391' y='80.019917'>ˆ</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='210.205109' y='80.199253'></text>
+<text font-family='fourier-ml' font-size='10.957664' x='256.973696' y='77.766375'></text>
+<text font-family='futri8r' font-size='10.957664' x='256.878069' y='80.199253'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='263.513191' y='81.992516'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='270.432526' y='80.199253'>=<tspan x='280.392456'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='288.306774' y='80.199253'>2<tspan x='295.901596' y='80.019917'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='295.54893' y='80.199253'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='301.397618' y='80.199253'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='312.422889' y='80.019917'>ˆ</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='311.968606' y='80.199253'></text>
+</g>
+</svg>
+</div>
+<p>in SI units, where <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq38'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+ is the time. The particle is
+initially at rest at <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq39'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+ = 0, in the position <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.895972em' height='1.4700194em' viewBox='-1.67 -11.448439 58.95972 14.700194' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq40'>
+<text font-family='fourier-ml' font-size='10.957664' x='-1.07' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.047094' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='18.598799' y='-.179335'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='18.246133' y='0'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='24.094821' y='0'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='35.120093' y='-.179335'>ˆ</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='34.66581' y='0'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='40.717738' y='0'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='51.605525' y='-2.958921'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='50.093206' y='0'>k</text>
+</g>
+</svg>
+. Determine the
+position of the particle at <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq41'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+ = 3 s.</p></div>
+<p><b>Solution</b>. The total force is the sum of the two forces</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.5462233em' height='1.4502881em' viewBox='190.260491 68.948126 85.462233 14.502881' class='display'>
+<g id='eq42'>
+<text font-family='fourier-ml' font-size='10.957664' x='190.956118' y='77.766375'></text>
+<text font-family='futri8r' font-size='10.957664' x='190.860491' y='80.199253'>F</text>
+<text font-family='fourier-ms' font-size='10.957664' x='200.64109' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='210.60102' y='80.199253'>2(</text>
+<text font-family='futri8r' font-size='10.957664' x='220.523809' y='80.199253'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='226.91048' y='80.199253'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='236.285948' y='80.199253'>1)<tspan x='247.730328' y='80.019917'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='247.377662' y='80.199253'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='253.22635' y='80.199253'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='262.601818' y='80.199253'>5<tspan x='271.254668' y='80.019917'>ˆ</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='270.800386' y='80.199253'></text>
+</g>
+</svg>
+</div>
+<p>Dividing by the mass, 0.2 kg, we get the acceleration vector</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.6682167em' height='1.2249338em' viewBox='184.522008 71.201669 96.682167 12.249338' class='display'>
+<g id='eq43'>
+<text font-family='fourier-ml' font-size='10.957664' x='185.122008' y='80.019917'></text>
+<text font-family='futri8r' font-size='10.957664' x='185.618171' y='80.199253'>a</text>
+<text font-family='fourier-ms' font-size='10.957664' x='194.454299' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='204.414229' y='80.199253'>10(</text>
+<text font-family='futri8r' font-size='10.957664' x='220.171139' y='80.199253'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='226.55781' y='80.199253'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='235.933278' y='80.199253'>1)<tspan x='247.377658' y='80.019917'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='247.024992' y='80.199253'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='252.87368' y='80.199253'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='262.249148' y='80.199253'>25<tspan x='276.73612' y='80.019917'>ˆ</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='276.281837' y='80.199253'></text>
+</g>
+</svg>
+</div>
+<p>Which can be replaced in the equation <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.6318143em' height='2.6023942em' viewBox='-0.857055 -17.091225 36.318143 26.023942' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq44'>
+<text font-family='fourier-ml' font-size='10.957664' x='-.257055' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.075236' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='20.23068' y='-8.093642'>d</text>
+<text font-family='fourier-ml' font-size='10.957664' x='27.646159' y='-8.272977'></text>
+<text font-family='futri8r' font-size='10.957664' x='28.21406' y='-8.093642'>v</text>
+<rect x='20.23068' y='-3.415339' height='.637912' width='14.630408'/>
+<text font-family='futr8r' font-size='10.957664' x='21.091451' y='8.201225'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='29.07483' y='8.201225'>t</text>
+</g>
+</svg>
+ to obtain a
+separable differential equation:</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.5489852em' height='2.6023942em' viewBox='179.783164 66.150618 105.489852 26.023942' class='display'>
+<g id='eq45'>
+<text font-family='futr8r' font-size='10.957664' x='180.383164' y='83.241844'>10(</text>
+<text font-family='futri8r' font-size='10.957664' x='196.140074' y='83.241844'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='202.526745' y='83.241844'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='211.902213' y='83.241844'>1)<tspan x='223.346593' y='83.062509'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='222.993927' y='83.241844'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='228.842615' y='83.241844'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='238.218083' y='83.241844'>25<tspan x='252.705055' y='83.062509'>ˆ</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='252.250772' y='83.241844'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='258.887163' y='83.241844'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='270.042608' y='75.148202'>d</text>
+<text font-family='fourier-ml' font-size='10.957664' x='277.458086' y='74.968867'></text>
+<text font-family='futri8r' font-size='10.957664' x='278.025987' y='75.148202'>v</text>
+<rect x='270.042608' y='79.826505' height='.637912' width='14.630408'/>
+<text font-family='futr8r' font-size='10.957664' x='270.903378' y='91.443069'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='278.886758' y='91.443069'>t</text>
+</g>
+</svg>
+</div>
+<p>Separating variables and integrating,</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='21.9665993em' height='6.1910936em' viewBox='123.158622 79.205418 219.665993 61.910936' class='display'>
+<g id='eq46'>
+<text font-family='futri8r' font-size='8.218248' x='129.430875' y='86.103595'>t</text>
+<text font-family='fourier-mex' font-size='10.998733' x='123.758622' y='88.303338'></text>
+<text font-family='futr8r' font-size='8.218248' x='124.293011' y='120.054921'>0</text>
+<text font-family='fourier-mex' font-size='10.998733' x='135.079375' y='94.341562'></text>
+<text font-family='futr8r' font-size='10.957664' x='139.346865' y='103.597304'>10(</text>
+<text font-family='futri8r' font-size='10.957664' x='155.103774' y='103.597304'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='161.490446' y='103.597304'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='170.865913' y='103.597304'>1)<tspan x='182.310294' y='103.417969'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='181.957628' y='103.597304'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='187.806316' y='103.597304'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='197.181783' y='103.597304'>25<tspan x='211.668755' y='103.417969'>ˆ</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='211.214473' y='103.597304'></text>
+<text font-family='fourier-mex' font-size='10.998733' x='215.805251' y='94.341562'></text>
+<text font-family='futr8r' font-size='10.957664' x='222.410483' y='103.597304'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='230.393862' y='103.597304'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='237.364978' y='103.597304'>=</text>
+<text font-family='fourier-ml' font-size='8.218248' x='251.925657' y='85.969105'></text>
+<text font-family='futri8r' font-size='8.218248' x='252.351587' y='86.103595'>v</text>
+<text font-family='fourier-mex' font-size='10.998733' x='247.324908' y='88.303338'></text>
+<text font-family='fourier-ml' font-size='8.218248' x='246.545731' y='120.696026'></text>
+<text font-family='futr8r' font-size='8.218248' x='247.859296' y='122.274108'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='259.814586' y='103.597304'>d</text>
+<text font-family='fourier-ml' font-size='10.957664' x='267.230065' y='103.417969'></text>
+<text font-family='futri8r' font-size='10.957664' x='267.797966' y='103.597304'>v</text>
+<text font-family='fourier-ml' font-size='10.957664' x='228.104424' y='137.685264'></text>
+<text font-family='futri8r' font-size='10.957664' x='228.672325' y='137.8646'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='237.364978' y='137.8646'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='247.324908' y='137.8646'>(5</text>
+<text font-family='futri8r' font-size='10.957664' x='258.416623' y='137.8646'>t</text>
+<text font-family='futr8r' font-size='8.218248' x='263.342145' y='132.927121'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='269.677016' y='137.8646'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='279.052484' y='137.8646'>10</text>
+<text font-family='futri8r' font-size='10.957664' x='292.12876' y='137.8646'>t</text>
+<text font-family='futr8r' font-size='10.957664' x='297.054282' y='137.8646'>)<tspan x='302.664542' y='137.685264'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='302.311876' y='137.8646'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='308.160564' y='137.8646'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='317.536031' y='137.8646'>25</text>
+<text font-family='futri8r' font-size='10.957664' x='330.612308' y='137.8646'>t</text>
+<text font-family='futr8r' font-size='10.957664' x='338.35656' y='137.685264'>ˆ</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='337.902277' y='137.8646'></text>
+</g>
+</svg>
+</div>
+<p>Replacing this expression in the equation <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.5361738em' height='2.6023942em' viewBox='-0.928792 -17.091225 35.361738 26.023942' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq47'>
+<text font-family='fourier-ml' font-size='10.957664' x='-.328792' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.931762' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='20.087206' y='-8.093642'>d</text>
+<text font-family='fourier-ml' font-size='10.957664' x='26.761476' y='-8.272977'></text>
+<text font-family='futri8r' font-size='10.957664' x='27.831476' y='-8.093642'>r</text>
+<rect x='20.087206' y='-3.415339' height='.637912' width='13.74574'/>
+<text font-family='futr8r' font-size='10.957664' x='20.505635' y='8.201225'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='28.489014' y='8.201225'>t</text>
+</g>
+</svg>
+, we obtain a
+separable differential equation:</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12.3314945em' height='2.6023942em' viewBox='170.870617 66.150618 123.314945 26.023942' class='display'>
+<g id='eq48'>
+<text font-family='futr8r' font-size='10.957664' x='171.470617' y='83.241844'>(5</text>
+<text font-family='futri8r' font-size='10.957664' x='182.562332' y='83.241844'>t</text>
+<text font-family='futr8r' font-size='8.218248' x='187.487854' y='78.304366'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='193.822725' y='83.241844'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='203.198193' y='83.241844'>10</text>
+<text font-family='futri8r' font-size='10.957664' x='216.27447' y='83.241844'>t</text>
+<text font-family='futr8r' font-size='10.957664' x='221.199991' y='83.241844'>)<tspan x='226.810251' y='83.062509'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='226.457585' y='83.241844'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='232.306273' y='83.241844'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='241.681741' y='83.241844'>25</text>
+<text font-family='futri8r' font-size='10.957664' x='254.758017' y='83.241844'>t</text>
+<text font-family='futr8r' font-size='10.957664' x='262.502269' y='83.062509'>ˆ</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='262.047986' y='83.241844'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='268.684378' y='83.241844'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='279.839822' y='75.148202'>d</text>
+<text font-family='fourier-ml' font-size='10.957664' x='286.514092' y='74.968867'></text>
+<text font-family='futri8r' font-size='10.957664' x='287.584092' y='75.148202'>r</text>
+<rect x='279.839822' y='79.826505' height='.637912' width='13.74574'/>
+<text font-family='futr8r' font-size='10.957664' x='280.258251' y='91.443069'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='288.24163' y='91.443069'>t</text>
+</g>
+</svg>
+</div>
+<p>Using once again the method of separation of variables,
+we obtain the position vector at <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq49'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+ = 3</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='18.6453275em' height='6.4487319em' viewBox='139.291035 79.205418 186.453275 64.487319' class='display'>
+<g id='eq50'>
+<text font-family='futr8r' font-size='8.218248' x='147.371825' y='86.103595'>3</text>
+<text font-family='fourier-mex' font-size='10.998733' x='142.129961' y='88.303338'></text>
+<text font-family='futr8r' font-size='8.218248' x='142.66435' y='120.054921'>0</text>
+<text font-family='fourier-mex' font-size='10.998733' x='153.450713' y='94.341562'></text>
+<text font-family='futr8r' font-size='10.957664' x='157.718203' y='103.597304'>(5</text>
+<text font-family='futri8r' font-size='10.957664' x='168.809918' y='103.597304'>t</text>
+<text font-family='futr8r' font-size='8.218248' x='173.73544' y='98.659826'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='180.070311' y='103.597304'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='189.445779' y='103.597304'>10</text>
+<text font-family='futri8r' font-size='10.957664' x='202.522056' y='103.597304'>t</text>
+<text font-family='futr8r' font-size='10.957664' x='207.447577' y='103.597304'>)<tspan x='213.057837' y='103.417969'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='212.705171' y='103.597304'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='218.553859' y='103.597304'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='227.929326' y='103.597304'>25</text>
+<text font-family='futri8r' font-size='10.957664' x='241.005603' y='103.597304'>t</text>
+<text font-family='futr8r' font-size='10.957664' x='248.749855' y='103.417969'>ˆ</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='248.295572' y='103.597304'></text>
+<text font-family='fourier-mex' font-size='10.998733' x='252.886351' y='94.341562'></text>
+<text font-family='futr8r' font-size='10.957664' x='259.491567' y='103.597304'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='267.474947' y='103.597304'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='274.446081' y='103.597304'>=</text>
+<text font-family='fourier-ml' font-size='8.218248' x='296.107164' y='85.969105'></text>
+<text font-family='futri8r' font-size='8.218248' x='296.90966' y='86.103595'>r</text>
+<text font-family='fourier-mex' font-size='10.998733' x='291.730565' y='88.303338'></text>
+<text font-family='futr8r' font-size='8.218248' x='282.49609' y='122.453443'>ˆ</text>
+<text font-family='futri8r' font-size='8.218248' x='282.231606' y='122.587933'>ı</text>
+<text font-family='fourier-ms' font-size='8.218248' x='285.522248' y='122.587933'>+</text>
+<text font-family='futr8r' font-size='8.218248' x='292.695335' y='122.453443'>ˆ</text>
+<text font-family='fourier-mlit' font-size='8.218248' x='292.354627' y='122.587933'></text>
+<text font-family='fourier-ms' font-size='8.218248' x='295.7977' y='122.587933'>+</text>
+<text font-family='futr8r' font-size='8.218248' x='302.867674' y='120.368747'>ˆ</text>
+<text font-family='futri8r' font-size='8.218248' x='301.733438' y='122.587933'>k</text>
+<text font-family='futr8r' font-size='10.957664' x='311.544796' y='103.597304'>d</text>
+<text font-family='fourier-ml' font-size='10.957664' x='318.219066' y='103.417969'></text>
+<text font-family='futri8r' font-size='10.957664' x='319.289067' y='103.597304'>r</text>
+<text font-family='fourier-ml' font-size='10.957664' x='139.891035' y='140.261647'></text>
+<text font-family='futri8r' font-size='10.957664' x='140.961035' y='140.440982'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='149.008129' y='140.440982'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='159.559835' y='140.261647'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='159.207169' y='140.440982'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='165.055857' y='140.440982'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='174.431324' y='140.440982'>113</text>
+<text font-family='futr8r' font-size='10.957664' x='191.933687' y='140.440982'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='194.850753' y='140.440982'>5<tspan x='203.503604' y='140.261647'>ˆ</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='203.049322' y='140.440982'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='209.10125' y='140.440982'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='219.989036' y='137.482062'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='218.476718' y='140.440982'>k</text>
+</g>
+</svg>
+</div>
+</div>
+</section>
+<section id="sec-4.2">
+<h2>4.2. Normal and tangential force components</h2>
+<p>As discussed in <a href="curvilinear_motion.html">Chapter
+3</a>, the acceleration of an object can have tangential and
+normal components,</p>
+<div class="eqn" id="eq-4.6">(4.6)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.5592882em' height='1.1489466em' viewBox='194.882752 71.201669 75.592882 11.489466' class='display'>
+<g id='eq51'>
+<text font-family='fourier-ml' font-size='10.957664' x='195.482752' y='80.019917'></text>
+<text font-family='futri8r' font-size='10.957664' x='195.978916' y='80.199253'>a</text>
+<text font-family='fourier-ms' font-size='10.957664' x='204.815043' y='80.199253'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='215.014082' y='80.199253'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='221.541598' y='81.992516'>t</text>
+<text font-family='fourier-ml' font-size='10.957664' x='225.163309' y='80.019917'></text>
+<text font-family='futri8r' font-size='10.957664' x='226.042025' y='80.199253'>e</text>
+<text font-family='futr8r' font-size='8.218248' x='231.625089' y='81.992516'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='236.417728' y='80.199253'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='246.032304' y='80.199253'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='252.559821' y='81.992516'>n</text>
+<text font-family='fourier-ml' font-size='10.957664' x='258.450032' y='80.019917'></text>
+<text font-family='futri8r' font-size='10.957664' x='259.328749' y='80.199253'>e</text>
+<text font-family='futr8r' font-size='8.218248' x='264.911812' y='81.992516'>n</text>
+</g>
+</svg>
+</div>
+<p>where <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.9472834em' height='1.0755302em' viewBox='-0.360891 -8.26342 29.472834 10.755302' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq52'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='1.793263'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.143739' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='24.243624' y='-.179335'>˙</text>
+<text font-family='futri8r' font-size='10.957664' x='22.342778' y='0'>v</text>
+</g>
+</svg>
+ and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.9568319em' height='1.2921385em' viewBox='-0.360891 -10.528122 49.568319 12.921385' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq53'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='1.793263'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='14.41224' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='24.611279' y='0'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='31.258327' y='-4.339714'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='36.132049' y='0'>/</text>
+<text font-family='futri8r' font-size='10.957664' x='41.189089' y='0'>R</text>
+</g>
+</svg>
+. The
+total force on an object can also be written as the sum of
+its tangential and normal components:</p>
+<div class="eqn" id="eq-4.7">(4.7)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.5778184em' height='1.3743008em' viewBox='194.918621 68.948126 75.778184 13.743008' class='display'>
+<g id='eq54'>
+<text font-family='fourier-ml' font-size='10.957664' x='195.614248' y='77.766375'></text>
+<text font-family='futri8r' font-size='10.957664' x='195.518621' y='80.199253'>F</text>
+<text font-family='fourier-ms' font-size='10.957664' x='205.29922' y='80.199253'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='215.25915' y='80.199253'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='221.894272' y='81.992516'>t</text>
+<text font-family='fourier-ml' font-size='10.957664' x='225.515983' y='80.019917'></text>
+<text font-family='futri8r' font-size='10.957664' x='226.394699' y='80.199253'>e</text>
+<text font-family='futr8r' font-size='8.218248' x='231.977763' y='81.992516'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='236.770402' y='80.199253'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='246.145869' y='80.199253'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='252.780991' y='81.992516'>n</text>
+<text font-family='fourier-ml' font-size='10.957664' x='258.671203' y='80.019917'></text>
+<text font-family='futri8r' font-size='10.957664' x='259.549919' y='80.199253'>e</text>
+<text font-family='futr8r' font-size='8.218248' x='265.132983' y='81.992516'>n</text>
+</g>
+</svg>
+</div>
+<p>And Newton's second law, leads to the expressions:
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4546513em' height='1.0674586em' viewBox='-0.6 -8.182704 44.546513 10.674586' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq55'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.012236' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='21.972166' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='34.008356' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='40.535872' y='1.793263'>t</text>
+</g>
+</svg>
+ and
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.8968195em' height='1.0575967em' viewBox='-0.6 -8.182704 48.968195 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq56'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='14.280737' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='24.240667' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='36.276857' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='42.804373' y='1.793263'>n</text>
+</g>
+</svg>
+.</p>
+<p>If the total force upon a particle with velocity
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8125244em' height='0.9729076em' viewBox='-0.928792 -8.997584 8.125244 9.729076' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq57'>
+<text font-family='fourier-ml' font-size='10.957664' x='-.328792' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+</g>
+</svg>
+ is <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8815577em' height='1.1851126em' viewBox='-0.6 -11.251126 8.815577 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq58'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+</g>
+</svg>
+, The component <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0645763em' height='1.0674586em' viewBox='-0.6 -8.182704 10.645763 10.674586' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq59'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>t</text>
+</g>
+</svg>
+ in the
+direction parallel to <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8125244em' height='0.9729076em' viewBox='-0.928792 -8.997584 8.125244 9.729076' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq60'>
+<text font-family='fourier-ml' font-size='10.957664' x='-.328792' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+</g>
+</svg>
+ increases or decreases the
+speed, depending on whether that component has the same
+direction of <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8125244em' height='0.9729076em' viewBox='-0.928792 -8.997584 8.125244 9.729076' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq61'>
+<text font-family='fourier-ml' font-size='10.957664' x='-.328792' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+</g>
+</svg>
+ or the opposite direction. The normal
+component <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2798944em' height='1.0575967em' viewBox='-0.6 -8.182704 12.798944 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq62'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>n</text>
+</g>
+</svg>
+, perpendicular to <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8125244em' height='0.9729076em' viewBox='-0.928792 -8.997584 8.125244 9.729076' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq63'>
+<text font-family='fourier-ml' font-size='10.957664' x='-.328792' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+</g>
+</svg>
+, makes
+the trajectory curve in the direction of that component
+(figure&thinsp;<a href="#fig-4.4">4.4</a>).</p>
+<figure class="center" id="fig-4.4">
+<img class="fig" src="img/Forcas_tangencial_e_normal.png"
+     alt="Tangential and normal components of force"  style="width:15.24em">
+<figcaption>
+<b>Figure 4.4:</b> Tangential and normal force components.
+</figcaption>
+</figure>
+<p></p>
+<div id="ex-4.2" class="example">
+<h3>Example 4.2</h3>
+<p>A <span id="pendulum!simple" class="index"><b>simple
+pendulum</b></span>, formed by a sphere of 50 grams
+hanging from a 25 cm string, oscillates by the action of
+gravity. At the instant shown in the figure, in which the
+string makes an angle of 30 ° with the vertical, the
+sphere is moving higher with speed ofand the value of 1
+m/s. Find the magnitude of the tension on the string and
+the tangential acceleration of the sphere at that
+instant.</p>
+<img class="fig center" src="img/Pendulo_simples.png"
+     alt="Simple Pendulum" style="width:12.30em">
+</div>
+<div class="right">
+<img class="fig center" src="img/Forcas_no_pendulo_simples.png"
+     alt="Forces in the simple pendulum" style="width:11.58em">
+</div>
+<p><b>Solution</b>. It is convenient to make a free-body
+diagram for the sphere, that is, a diagram indicating only
+the external forces acting on the object. In this case,
+ignoring the air resistance, there are only two possible
+causes for these forces: the string and the gravitational
+attraction. Thus, the only external forces on the sphere are the
+tension <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.9341545em' height='1.1851126em' viewBox='-0.6 -11.251126 9.341545 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq64'>
+<text font-family='fourier-ml' font-size='10.957664' x='.424396' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+</g>
+</svg>
+ of the string, which acts in the direction
+of the string and the weight, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.989845em' height='1.2422684em' viewBox='-0.6 -9.17093 19.89845 12.422684' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq65'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='fourier-ml' font-size='10.957664' x='11.593826' y='-.352681'></text>
+<text font-family='futri8r' font-size='10.957664' x='12.03619' y='0'>g</text>
+</g>
+</svg>
+, in the vertical
+direction and downwards. The diagram shows those two forces
+and two angles which are equal.</p>
+<p>Once the external forces are identified, a system of axes
+is chosen to calculate the components of those forces. In
+this case, since there is circular motion, it is convenient
+to use the tangential and normal axes, represented by the
+letters <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq66'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+ and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8158117em' height='0.6832239em' viewBox='-0.6 -6.100747 8.158117 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq67'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>n</text>
+</g>
+</svg>
+ in the diagram.</p>
+<p>The normal axis points in the direction of the center of
+curvature of the trajectory, which in this case is the same
+direction of the string. The tangential axis is tangent to
+the circular trajectory; therefore, the velocity vector is
+perpendicular to the string. As the sphere moving higher,
+the velocity vector has the direction of the <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.6010415em' height='0.8081413em' viewBox='-0.360891 -7.349921 6.010415 8.081413' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq68'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+</g>
+</svg>
+ axis..</p>
+<p>The tension on the string has only normal component. The
+tangential component of the weight is
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.8245751em' height='1.2103355em' viewBox='-0.6 -8.8516 108.245751 12.103355' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq69'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='7.914318' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='19.950508' y='0'>g</text>
+<text font-family='futr8r' font-size='10.957664' x='29.186464' y='0'>sin<tspan x='45.155876'>30</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='56.824118' y='-4.339714'>◦</text>
+<text font-family='fourier-ms' font-size='10.957664' x='63.492395' y='0'>=<tspan x='73.452326'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='81.366643' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='87.200764' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='90.117831' y='0'>245</text>
+</g>
+</svg>
+&thinsp;N and the normal component is
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.60156em' height='1.2103355em' viewBox='-0.6 -8.8516 116.0156 12.103355' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq70'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='7.914318' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='19.950508' y='0'>g</text>
+<text font-family='futr8r' font-size='10.957664' x='29.186464' y='0'>cos<tspan x='46.949154'>30</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='58.617396' y='-4.339714'>◦</text>
+<text font-family='fourier-ms' font-size='10.957664' x='65.285673' y='0'>=<tspan x='75.245604'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='83.159922' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='88.994043' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='91.911109' y='0'>4244</text>
+</g>
+</svg>
+&thinsp;N. Thus, the
+tangential and normal components of the total force are:</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.6325483em' height='2.8010587em' viewBox='194.747084 83.971717 76.325483 28.010587' class='display'>
+<g id='eq71'>
+<text font-family='futri8r' font-size='10.957664' x='195.347084' y='92.154421'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='201.982206' y='93.947684'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='207.35932' y='92.154421'>=<tspan x='217.31925'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='225.233568' y='92.154421'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='231.067689' y='92.154421'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='233.984755' y='92.154421'>245</text>
+<text font-family='futri8r' font-size='10.957664' x='195.347084' y='109.589041'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='201.982206' y='111.382304'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='209.627821' y='109.589041'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='219.587751' y='109.589041'>T</text>
+<text font-family='fourier-ms' font-size='10.957664' x='229.441421' y='109.589041'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='238.816889' y='109.589041'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='244.65101' y='109.589041'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='247.568076' y='109.589041'>4244</text>
+</g>
+</svg>
+</div>
+<p>The tangential acceleration is hitherto unknown, but the
+normal acceleration can be obtained from the information
+given in the problem.</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.1707586em' height='2.7554481em' viewBox='187.175578 66.084559 91.707586 27.554481' class='display'>
+<g id='eq72'>
+<text font-family='futri8r' font-size='10.957664' x='187.775578' y='84.706323'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='194.303094' y='86.499586'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='201.948709' y='84.706323'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='213.343262' y='76.612681'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='219.99031' y='72.272967'>2</text>
+<rect x='213.104153' y='81.290984' height='.637912' width='11.759871'/>
+<text font-family='futri8r' font-size='10.957664' x='215.03291' y='92.907548'>R</text>
+<text font-family='fourier-ms' font-size='10.957664' x='228.10515' y='84.706323'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='244.116378' y='76.612681'>1</text>
+<text font-family='futr8r' font-size='8.218248' x='249.950499' y='72.272967'>2</text>
+<rect x='239.260594' y='81.290984' height='.637912' width='20.419384'/>
+<text font-family='futr8r' font-size='10.957664' x='239.260594' y='92.907548'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='245.094715' y='92.907548'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='248.011782' y='92.907548'>25</text>
+<text font-family='fourier-ms' font-size='10.957664' x='262.921105' y='84.706323'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='272.881035' y='84.706323'>4</text>
+</g>
+</svg>
+</div>
+<p>(SI units). Equating the tangential and normal components
+to <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.2574347em' height='0.859263em' viewBox='-0.6 -6.100747 22.574347 8.59263' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq73'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='12.03619' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='18.563706' y='1.793263'>t</text>
+</g>
+</svg>
+ and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.4727528em' height='0.8494011em' viewBox='-0.6 -6.100747 24.727528 8.494011' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq74'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='12.03619' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='18.563706' y='1.793263'>n</text>
+</g>
+</svg>
+, The following
+system of equations is obtained:</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.1180436em' height='2.6217324em' viewBox='182.319597 84.103209 101.180436 26.217324' class='display'>
+<g id='eq75'>
+<text font-family='fourier-ms' font-size='10.957664' x='200.068514' y='92.154421'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='207.982832' y='92.154421'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='213.816953' y='92.154421'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='216.734019' y='92.154421'>245</text>
+<text font-family='fourier-ms' font-size='10.957664' x='236.281927' y='92.154421'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='246.241857' y='92.154421'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='252.075978' y='92.154421'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='254.993044' y='92.154421'>05</text>
+<text font-family='futri8r' font-size='10.957664' x='268.069321' y='92.154421'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='274.596837' y='93.947684'>t</text>
+<text font-family='futri8r' font-size='10.957664' x='182.919597' y='109.589041'>T</text>
+<text font-family='fourier-ms' font-size='10.957664' x='192.773266' y='109.589041'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='202.148734' y='109.589041'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='207.982855' y='109.589041'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='210.899921' y='109.589041'>4244</text>
+<text font-family='fourier-ms' font-size='10.957664' x='236.281927' y='109.589041'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='246.241857' y='109.589041'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='252.075978' y='109.589041'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='254.993044' y='109.589041'>05</text>
+<text font-family='fourier-ms' font-size='10.957664' x='268.122436' y='109.589041'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='277.497904' y='109.589041'>4</text>
+</g>
+</svg>
+</div>
+<p>The solution of that system is <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0538157em' height='0.859263em' viewBox='-0.360891 -6.100747 10.538157 8.59263' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq76'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='1.793263'>t</text>
+</g>
+</svg>
+ = -4.9
+m/s<sup>2</sup> and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.9341545em' height='0.8782704em' viewBox='-0.6 -8.182704 9.341545 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq77'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+</g>
+</svg>
+ = 0.624 N. The negative sign of the
+tangential acceleration means that the speed of the sphere is
+decreasing.</p>
+</section>
+<section id="sec-4.3">
+<h2>4.3. Normal and frictional forces</h2>
+<p>When two surfaces are in contact there is a force among
+them, such as the forces <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1122421em' height='1.3743008em' viewBox='-0.6 -11.251126 11.122421 13.743008' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq78'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>s</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1426496em' height='1.3644389em' viewBox='-0.6 -11.251126 11.426496 13.644389' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq79'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>1</text>
+</g>
+</svg>
+
+and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1820972em' height='1.3644389em' viewBox='-0.6 -11.251126 11.820972 13.644389' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq80'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>2</text>
+</g>
+</svg>
+ in the example of the horse dragging a stone
+given in the previous section
+(figure&thinsp;<a href="#fig-4.4">4.2</a>). Those forces may
+point in different directions, but always in the sense from
+the surface towards the object on which that forces is
+acting.</p>
+<p>It is convenient to separate the contact forces into two
+components: one component perpendicular to the surfaces in
+contact, called <span id="force!normal" class="index"><b>normal
+force</b></span> and another component tangent to the
+surfaces, called <span id="force!frictional" class="index"><b>frictional
+force</b></span>.</p>
+<p>The force of contact between two surfaces is actually
+distributed at various points on the surface. The resultant
+of all these forces can be represented as a single force at
+a point on the surface, separating the normal and tangential
+components (figure <a href="#fig-4.5">4.5</a> ). The normal
+force, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0952321em' height='1.1851126em' viewBox='-0.360891 -11.251126 10.952321 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq81'>
+<text font-family='fourier-ml' font-size='10.957664' x='.992274' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+</g>
+</svg>
+, points always in the sense that would make the
+two bodies in contact separate. The frictional force,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1032021em' height='1.3793853em' viewBox='-0.6 -11.251126 11.032021 13.793853' class='inline' style='vertical-align:-0.255001em'>
+<g id='eq82'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.942727'>f</text>
+</g>
+</svg>
+, Can be in any sense of any of the
+directions tangent to the surface.</p>
+<figure class="center" id="fig-4.5">
+<img class="fig" src="img/Reacao_normal_e_forca_de_atrito.png"
+     alt="normal force and frictional force" style="width:28.83em">
+<figcaption>
+<b>Figure 4.5:</b> normal force <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0952321em' height='1.1851126em' viewBox='-0.360891 -11.251126 10.952321 11.851126' class='inline' style='vertical-align:-0.06em'>
+<g id='eq83'>
+<text font-family='fourier-ml' font-size='10.957664' x='.992274' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+</g>
+</svg>
+ and frictional
+force <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1032021em' height='1.3793853em' viewBox='-0.6 -11.251126 11.032021 13.793853' class='inline' style='vertical-align:-0.255001em'>
+<g id='eq84'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.942727'>f</text>
+</g>
+</svg>
+ on a block on the surface of a
+table.
+</figcaption>
+</figure>
+<div id="sec-4.3.1">
+<h3>4.3.1. Static friction</h3>
+<p>When there is no relative movement between the two surfaces
+in contact, the frictional force is called
+<span id="friction!static" class="index">static</span>
+frictional force. It may be zero, or it may point in any
+direction tangent to the surfaces in contact.</p>
+<p>In the example of the horse and the stone
+(figure&thinsp;<a href="#fig-4.2">4.2</a>), the tangential
+components of the contat forces on the horse's horseshoes,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1426496em' height='1.3644389em' viewBox='-0.6 -11.251126 11.426496 13.644389' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq85'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>1</text>
+</g>
+</svg>
+ and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1820972em' height='1.3644389em' viewBox='-0.6 -11.251126 11.820972 13.644389' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq86'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>2</text>
+</g>
+</svg>
+, are static frictional
+forces. It is thanks toe the static frictional force with
+the road that wheeled vehicles can move and stop. It is
+also thanks to that force that we can walk: we push the
+ground with our feet and the reaction of the ground in the
+opposite direction makes us move forward.</p>
+<figure class="center" id="fig-4.6">
+<img class="img-11" src="img/Railbus.jpg" alt="Street car" width="1280"
+     height="853">
+<figcaption>
+<b>Figure 4.6:</b> The force that allows the street car
+to climb a slope or go downhill with constant speed is
+the static frictional force between the wheels and the
+rails.</figcaption></figure>
+<p>If the floor was covered with ice, our feet would slip
+making it harder for us to move or stop. This is because the
+magnitude of the static frictional force can not exceed a
+maximum value, which is proportional to the normal
+force:</p>
+<div class="eqn" id="eq-4.8">(4.8)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.29358em' height='1.8369577em' viewBox='206.657878 68.518826 52.9358 18.369577' class='display'>
+<g id='eq87'>
+<rect x='207.257878' y='69.118826' height='.3985' width='51.7358'/>
+<rect x='207.257878' y='69.517325' height='16.372578' width='.3985'/>
+<text font-family='futri8r' font-size='10.957664' x='210.64517' y='80.199253'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='217.280292' y='81.992516'>s</text>
+<text font-family='fourier-ms' font-size='10.957664' x='223.419547' y='80.199253'>≤</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='233.379477' y='80.199253'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='240.456937' y='81.992516'>s</text>
+<text font-family='futri8r' font-size='10.957664' x='245.958614' y='80.199253'>N</text>
+<rect x='258.595179' y='69.517325' height='16.372578' width='.3985'/>
+<rect x='207.257878' y='85.889903' height='.3985' width='51.7358'/>
+</g>
+</svg>
+</div>
+<p>where <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1564759em' height='0.9352502em' viewBox='-0.6 -6.100747 11.564759 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq88'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='7.07746' y='1.793263'>s</text>
+</g>
+</svg>
+ is a constant characteristic of the
+type of surfaces in contact, called
+<span id="coeffficient!of&nbsp;static&nbsp;friction"
+      class="index"><b>coefficient of static friction</b></span>.
+It usually has a value less than 1. In terms of the full
+contact force, this implies that the contact force is usually
+close to the normal direction, with a deviation of less
+than 45°.</p>
+<p>Let us consider an example: the forces between the road
+and the tires of a bicycle. The frictional forces between
+the two tires and the road are both static frictional
+forces because the wheels do not slide. In the rear wheel
+the frictional force points forward in the direction the
+bicycle is moving
+(figure&thinsp;<a href="#fig-4.7">4.7</a>), and they are the
+reaction of the road to the action that the tire exerts on
+it in the opposite direction.</p>
+<p>The static frictional force on the front wheel is in the
+direction opposite to the motion of the bicycle, because
+no traction is exerted by the rider on that wheel. The
+friction in the wheel axis and the rolling friction on the
+tire act against the rotation of that wheel, and the
+frictional force of the road allows the wheel to maintain
+its rotation in spite of those other forces.</p>
+<figure class="center" id="fig-4.7">
+<img class="fig" src="img/bicicleta.png"
+     alt="Forces on the wheels of a bicycle" style="width:22.5em">
+<figcaption>
+<b>Figure 4.7:</b> Forces exerted by the road on the tires
+of a moving bicycle.</figcaption></figure>
+<p>If the speed of the bicycle is constant, the magnitude of
+the frictional force on the rear tire should be equal to
+the sum of the magnitudes of the frictional force on the
+front tire, the air resistance and the rolling friction
+upon the wheels.</p></div>
+<div id="sec-4.3.2">
+<h3>4.3.2. Kinetic friction</h3>
+<p>When the two surfaces in contact slide between them, the
+frictional force is called <span id="friction!kinetic"
+                                 class="index">kinetic</span> frictional force. In the
+example of the horse and the stone
+(figure&thinsp;<a href="#fig-4.2">4.2</a>) the tangential
+component of the contact force <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.225654em' height='1.3834945em' viewBox='-0.6 -11.251126 12.25654 13.834945' class='inline' style='vertical-align:-0.2595em'>
+<g id='eq89'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.942727'>k</text>
+</g>
+</svg>
+ acting
+on the stone is a kinetic frictional force.</p>
+<p>The <span id="force!of&nbsp;kinetic&nbsp;friction"
+             class="index">kinetic frictional force</span>
+is always in the same direction of the velocity of the
+object relative to the surface, but in the opposite
+sense. Its magnitude is directly proportional to the
+normal force:</p>
+<div class="eqn" id="eq-4.9">(4.9)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.4388361em' height='1.8369577em' viewBox='205.931598 68.518826 54.388361 18.369577' class='display'>
+<g id='eq90'>
+<rect x='206.531598' y='69.118826' height='.3985' width='53.188361'/>
+<rect x='206.531598' y='69.517325' height='16.372578' width='.3985'/>
+<text font-family='futri8r' font-size='10.957664' x='209.918889' y='80.199253'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='216.554011' y='82.14198'>k</text>
+<text font-family='fourier-ms' font-size='10.957664' x='223.419547' y='80.199253'>=</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='233.379477' y='80.199253'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='240.456937' y='82.14198'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='246.684894' y='80.199253'>N</text>
+<rect x='259.321459' y='69.517325' height='16.372578' width='.3985'/>
+<rect x='206.531598' y='85.889903' height='.3985' width='53.188361'/>
+</g>
+</svg>
+</div>
+<p>where <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.3224845em' height='0.9352502em' viewBox='-0.6 -6.100747 13.224845 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq91'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>µ</text>
+<text font-family='futri8r' font-size='8.218248' x='7.07746' y='1.956181'>k</text>
+</g>
+</svg>
+ is the
+<span id="coefficient!of&nbsp;kinetic&nbsp;friction"
+      class="index"><b>coefficient of kinetic
+friction</b></span>, which is usually less than the
+coefficient of static friction between the same
+surfaces.</p>
+<p>Being in the opposite sense of the relative motion, the
+kinetic frictional force makes the relative velocity of
+the two surfaces decrease, but it can never reverse the
+direction of that relative velocity. At the instant that
+relative velocity becomes zero, the kinetic frictional
+force vanishes and it might be replaced by the static
+frictional force.</p>
+<p>Thus, although the magnitude of the kinetic frictional
+force is constant, it depends implicitly on the velocity
+because it is always in the direction of the velocity and in
+the opposite sense. The vector expression of the kinetic
+frictional force is as follows:</p>
+<div class="eqn" id="eq-4.10">(4.10)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.9873685em' height='4.239138em' viewBox='177.353296 67.848169 109.873685 42.39138' class='display'>
+<g id='eq92'>
+<text font-family='fourier-ml' font-size='10.957664' x='178.048923' y='88.92047'></text>
+<text font-family='futri8r' font-size='10.957664' x='177.953296' y='91.353348'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='184.588418' y='93.296075'>k</text>
+<text font-family='fourier-ms' font-size='10.957664' x='191.453953' y='91.353348'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='201.413884' y='68.448169'>⎧<tspan x='201.413884' y='78.358013'>⎨</tspan>
+<tspan x='201.413884' y='98.155933'>⎩</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.957664' x='208.791392' y='76.779961'></text>
+<text font-family='futr8r' font-size='10.957664' x='210.542828' y='78.884086'>0</text>
+<text font-family='futri8r' font-size='10.957664' x='262.616092' y='78.884086'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='271.308753' y='78.884086'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='281.268683' y='78.884086'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='210.542828' y='99.871378'>−</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='219.652659' y='91.777736'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='226.730119' y='93.720463'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='232.958076' y='91.777736'>N</text>
+<rect x='219.652659' y='96.456039' height='.637912' width='22.953202'/>
+<text font-family='fourier-ms' font-size='10.957664' x='224.625679' y='108.072602'>|</text>
+<text font-family='futri8r' font-size='10.957664' x='227.925306' y='108.072602'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='234.572353' y='108.072602'>|</text>
+<text font-family='fourier-ml' font-size='10.957664' x='244.641509' y='99.692042'></text>
+<text font-family='futri8r' font-size='10.957664' x='245.209409' y='99.871378'>v</text>
+<text font-family='futri8r' font-size='10.957664' x='262.616092' y='99.871378'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='271.308753' y='99.871378'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='281.268683' y='99.871378'>0</text>
+</g>
+</svg>
+</div>
+<p>Where <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8125244em' height='0.9729076em' viewBox='-0.928792 -8.997584 8.125244 9.729076' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq93'>
+<text font-family='fourier-ml' font-size='10.957664' x='-.328792' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+</g>
+</svg>
+ is the velocity of the body on which the
+force acts, relative to the surface that produces it.</p>
+<div id="ex-4.3" class="example">
+<h3>Example 4.3</h3>
+<p>Compute the forces acting on the stone and the horse in
+figure <a href="#fig-4.1">4.1</a>, when they move with
+constant speed, the mass of the horse is 300 kg, the mass
+of the stone is 350 kg and the angle the rope does with
+the horizontal is 20°. The coefficient of kinetic friction
+between the stone and the ground is 0.4 and the
+coefficient of static friction between the horseshoes and
+the ground is 0.5.</p>
+</div>
+<p><b>Solution</b>. The forces acting on the block and on
+the horse were shown in
+figure <a href="#fig-4.2">4.2</a>. Since the acceleration
+is zero, the sum of the horizontal and vertical components
+of the forces on the stone and the horse must be zero.</p>
+<p>Starting with the stone, we can separate the force
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1722353em' height='1.3743008em' viewBox='-0.6 -11.251126 11.722353 13.743008' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq94'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>c</text>
+</g>
+</svg>
+ into the normal force <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0952321em' height='0.8782704em' viewBox='-0.360891 -8.182704 10.952321 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq95'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+</g>
+</svg>
+,
+perpendicular to the ground, and the frictional force
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.225654em' height='1.0766522em' viewBox='-0.6 -8.182704 12.25654 10.766522' class='inline' style='vertical-align:-0.2595em'>
+<g id='eq96'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.942727'>k</text>
+</g>
+</svg>
+, tangent to the ground. The sum of the
+horizontal and vertical forces is,</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12.2194483em' height='3.0135739em' viewBox='171.910191 82.705057 122.194483 30.135739' class='display'>
+<g id='eq97'>
+<text font-family='futri8r' font-size='10.957664' x='202.53508' y='92.154421'>T</text>
+<text font-family='futr8r' font-size='10.957664' x='213.265452' y='92.154421'>cos<tspan x='229.859216'>(20</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='245.377016' y='87.216943'>◦</text>
+<text font-family='futr8r' font-size='10.957664' x='249.999681' y='92.154421'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='255.310389' y='92.154421'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='264.685857' y='92.154421'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='271.320979' y='94.097148'>k</text>
+<text font-family='fourier-ms' font-size='10.957664' x='278.186446' y='92.154421'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='288.146376' y='92.154421'>0</text>
+<text font-family='futri8r' font-size='10.957664' x='172.510191' y='109.589041'>N</text>
+<text font-family='fourier-ms' font-size='10.957664' x='183.619141' y='109.589041'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='192.994608' y='109.589041'>T</text>
+<text font-family='futr8r' font-size='10.957664' x='203.72498' y='109.589041'>sin<tspan x='218.525466'>(20</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='234.043267' y='104.651563'>◦</text>
+<text font-family='futr8r' font-size='10.957664' x='238.665931' y='109.589041'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='243.97664' y='109.589041'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='253.352107' y='109.589041'>m</text>
+<text font-family='futr8r' font-size='8.218248' x='263.741153' y='111.382304'>s</text>
+<text font-family='futri8r' font-size='10.957664' x='269.24283' y='109.589041'>g</text>
+<text font-family='fourier-ms' font-size='10.957664' x='278.186446' y='109.589041'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='288.146376' y='109.589041'>0</text>
+</g>
+</svg>
+</div>
+<p>Notice that the frictional force on the stone is due to
+kinetic friction, because the stone is sliding on the
+floor. Therefore, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.7718326em' height='1.1434458em' viewBox='-0.6 -8.182704 47.718326 11.434458' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq98'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.942727'>k</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.500657' y='0'>=</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='23.460588' y='0'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='30.538047' y='1.942727'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='36.766005' y='0'>N</text>
+</g>
+</svg>
+ and
+replacing the values ​​of the coefficient of kinetic
+friction, mass of the stone and acceleration of gravity,
+we obtain a system of two equations with two unknowns</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12.2742112em' height='2.8886565em' viewBox='171.636377 82.705057 122.742112 28.886565' class='display'>
+<g id='eq99'>
+<text font-family='futri8r' font-size='10.957664' x='188.622834' y='92.154421'>T</text>
+<text font-family='futr8r' font-size='10.957664' x='199.353206' y='92.154421'>cos<tspan x='215.94697'>(20</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='231.464771' y='87.216943'>◦</text>
+<text font-family='futr8r' font-size='10.957664' x='236.087435' y='92.154421'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='241.398144' y='92.154421'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='250.773611' y='92.154421'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='256.607732' y='92.154421'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='259.524798' y='92.154421'>4</text>
+<text font-family='futri8r' font-size='10.957664' x='266.766954' y='92.154421'>N</text>
+<text font-family='fourier-ms' font-size='10.957664' x='278.46026' y='92.154421'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='288.42019' y='92.154421'>0</text>
+<text font-family='futri8r' font-size='10.957664' x='172.236377' y='109.589041'>N</text>
+<text font-family='fourier-ms' font-size='10.957664' x='183.345326' y='109.589041'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='192.720794' y='109.589041'>T</text>
+<text font-family='futr8r' font-size='10.957664' x='203.451166' y='109.589041'>sin<tspan x='218.251651'>(20</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='233.769452' y='104.651563'>◦</text>
+<text font-family='futr8r' font-size='10.957664' x='238.392117' y='109.589041'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='243.702825' y='109.589041'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='253.078293' y='109.589041'>3430</text>
+<text font-family='fourier-ms' font-size='10.957664' x='278.46026' y='109.589041'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='288.42019' y='109.589041'>0</text>
+</g>
+</svg>
+</div>
+<p>This system can be solved in Maxima with the following command:</p>
+<div class="maxima notranslate">
+<span class="maxm"><span class="maxm">(%i1)</span></span> <span class="maxf">float</span><span class="maxd">(</span><span class="maxf">solve</span><span class="maxd">([</span><span class="maxv">T</span><span class="maxo">*</span><span class="maxf">cos</span><span class="maxd">(</span><span class="maxi">%pi</span><span class="maxo">/</span><span class="maxn">9</span><span class="maxd">)</span><span class="maxo">-</span><span class="maxn">0.4</span><span class="maxo">*</span><span class="maxv">N</span><span class="maxo">=</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxv">N</span><span class="maxo">+</span><span class="maxv">T</span><span class="maxo">*</span><span class="maxf">sin</span><span class="maxd">(</span><span class="maxi">%pi</span><span class="maxo">/</span><span class="maxn">9</span><span class="maxd">)</span><span class="maxo">-</span><span class="maxn">3430</span><span class="maxo">=</span><span class="maxn">0</span><span class="maxd">]))</span><span class="maxm">;</span><br>
+(%o1)    <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='18.9379984em' height='1.4509924em' viewBox='-0.6 -10.528122 189.379984 14.509924' class='inline' style='vertical-align:-0.411607em'>
+<g id='eq100'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-9.255742'><tspan x='6.628433' y='-9.255742'></tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='11.211254' y='0'>T</text>
+<text font-family='fourier-ms' font-size='10.957664' x='21.649387' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='31.609317' y='0'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='37.443438' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='40.360504' y='0'>274</text>
+<text font-family='fourier-ms' font-size='10.957664' x='59.324017' y='0'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='68.699484' y='0'>10</text>
+<text font-family='fourier-ms' font-size='8.218248' x='80.367727' y='-4.339714'>+</text>
+<text font-family='futr8r' font-size='8.218248' x='86.303465' y='-4.339714'>3</text>
+<text font-family='futr8r' font-size='10.957664' x='91.177182' y='0'>,</text>
+<text font-family='futri8r' font-size='10.957664' x='97.547895' y='0'>N</text>
+<text font-family='fourier-ms' font-size='10.957664' x='109.241308' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='119.201238' y='0'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='125.035359' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='127.952426' y='0'>994</text>
+<text font-family='fourier-ms' font-size='10.957664' x='146.915938' y='0'>×</text>
+<text font-family='futr8r' font-size='10.957664' x='156.291406' y='0'>10</text>
+<text font-family='fourier-ms' font-size='8.218248' x='167.959648' y='-4.339714'>+</text>
+<text font-family='futr8r' font-size='8.218248' x='173.895386' y='-4.339714'>3</text>
+<text font-family='fourier-mex' font-size='10.998733' x='178.769103' y='-9.255742'><tspan x='185.397305' y='-9.255742'></tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>The normal force in the block is 2994 N and the tension
+in the rope is 1274 N.</p>
+<p>Looking now at the free-body diagram for the horse
+(figure <a href="#fig-4.2">4.2</a>), the sums of the
+horizontal and vertical forces acting on the horse are:</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='15.2040796em' height='3.0135739em' viewBox='156.987027 82.705057 152.040796 30.135739' class='display'>
+<g id='eq101'>
+<text font-family='futri8r' font-size='10.957664' x='187.867959' y='92.154421'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='194.503081' y='93.947684'>s1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='204.433463' y='92.154421'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='213.80893' y='92.154421'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='220.444052' y='93.947684'>s2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='230.374434' y='92.154421'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='239.749902' y='92.154421'>T</text>
+<text font-family='futr8r' font-size='10.957664' x='250.480274' y='92.154421'>cos<tspan x='267.074038'>(20</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='282.591839' y='87.216943'>◦</text>
+<text font-family='futr8r' font-size='10.957664' x='287.214503' y='92.154421'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='293.109595' y='92.154421'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='303.069525' y='92.154421'>0</text>
+<text font-family='futri8r' font-size='10.957664' x='157.587027' y='109.589041'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='166.218649' y='111.382304'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='172.55352' y='109.589041'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='182.168096' y='109.589041'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='190.799718' y='111.382304'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='197.134589' y='109.589041'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='206.510057' y='109.589041'>T</text>
+<text font-family='futr8r' font-size='10.957664' x='217.240429' y='109.589041'>sin<tspan x='232.040915'>(20</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='247.558715' y='104.651563'>◦</text>
+<text font-family='futr8r' font-size='10.957664' x='252.18138' y='109.589041'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='257.492088' y='109.589041'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='266.867556' y='109.589041'>m</text>
+<text font-family='futr8r' font-size='8.218248' x='277.256602' y='111.531768'>h</text>
+<text font-family='futri8r' font-size='10.957664' x='284.165994' y='109.589041'>g</text>
+<text font-family='fourier-ms' font-size='10.957664' x='293.109595' y='109.589041'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='303.069525' y='109.589041'>0</text>
+</g>
+</svg>
+</div>
+<p>It should be noted that in this case the relationship
+between the frictional forces and the normal forces is
+undetermined, because the friction is static. Replacing
+the value of the tension <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.9341545em' height='0.8782704em' viewBox='-0.6 -8.182704 9.341545 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq102'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+</g>
+</svg>
+ already obtained, the mass of
+the horse and the acceleration of gravity, we get the
+following system:</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.7884087em' height='2.8010587em' viewBox='189.017426 83.971717 87.884087 28.010587' class='display'>
+<g id='eq103'>
+<text font-family='futri8r' font-size='10.957664' x='189.617426' y='92.154421'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='196.252548' y='93.947684'>s1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='206.18293' y='92.154421'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='215.558397' y='92.154421'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='222.193519' y='93.947684'>s2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='232.708364' y='92.154421'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='242.668294' y='92.154421'>1198<tspan x='268.050391'>N</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='189.856535' y='109.589041'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='198.488156' y='111.382304'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='204.823028' y='109.589041'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='214.437604' y='109.589041'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='223.069225' y='111.382304'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='229.98856' y='109.589041'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='239.94849' y='109.589041'>3376<tspan x='265.330587'>N</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>The sum of the normal forces on the horse's feet is 3376
+N, and the sum of the frictional forces is 1198 N. In the
+chapter on <a href="rigid_bodies.html">dynamics of rigid
+bodies</a> it will be explained how to determine the
+values ​​of <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.3422996em' height='1.0575967em' viewBox='-0.360891 -8.182704 13.422996 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq104'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='8.87073' y='1.793263'>1</text>
+</g>
+</svg>
+ and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.3817472em' height='1.0575967em' viewBox='-0.360891 -8.182704 13.817472 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq105'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='8.87073' y='1.793263'>2</text>
+</g>
+</svg>
+ separately. For the time being,
+it follows only that the sum of these two forces is equal
+to 3376 N.</p>
+<p>The values ​​of <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5022013em' height='1.0674586em' viewBox='-0.6 -8.182704 15.022013 10.674586' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq106'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>s1</text>
+</g>
+</svg>
+ and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5416489em' height='1.0674586em' viewBox='-0.6 -8.182704 15.416489 10.674586' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq107'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>s2</text>
+</g>
+</svg>
+ can
+not be determined without additional information; it would
+be necessary to know the relation between the pressures
+that the horse is exerting on each foot, resulting from
+the action of different muscles on different joints. Since
+we are regarding the horse as a single rigid body, it is
+only possible for us to find the sum of those two
+forces.</p>
+<p>The coefficient of static friction between the horseshoes
+and the road allows us to determine whether it is feasible
+for the horse to drag that stone, which is heavier than
+its own weight. The maximum static frictional force
+between the horseshoes and the floor is:</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14.0275456em' height='1.1434458em' viewBox='162.821775 72.016549 140.275456 11.434458' class='display'>
+<g id='eq108'>
+<text font-family='futri8r' font-size='10.957664' x='163.421775' y='80.199253'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='170.056897' y='81.992516'>max</text>
+<text font-family='fourier-ms' font-size='10.957664' x='188.533873' y='80.199253'>=</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='198.493804' y='80.199253'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='205.571263' y='81.992516'>s</text>
+<text font-family='futr8r' font-size='10.957664' x='210.833831' y='80.199253'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='214.922499' y='80.199253'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='223.55412' y='81.992516'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='229.888992' y='80.199253'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='239.503568' y='80.199253'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='248.13519' y='81.992516'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='253.008912' y='80.199253'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='258.904083' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='268.864013' y='80.199253'>1688<tspan x='294.24611'>N</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>Since the sum of the two frictional forces <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5515167em' height='1.0674586em' viewBox='-0.6 -8.182704 15.515167 10.674586' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq109'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>c1</text>
+</g>
+</svg>
+
+and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5909643em' height='1.0674586em' viewBox='-0.6 -8.182704 15.909643 10.674586' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq110'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.793263'>c2</text>
+</g>
+</svg>
+ is less than this value, it is then
+possible for the horse to drag the stone. The horse could
+even drag a stone a bit heavier, but if the mass of the
+stone was bigger than a maximum value, the horseshoes
+would start to slip and the horse would not be able to
+drag the stone.</p>
+</div>
+<div id="sec-4.3.3">
+<h3>4.3.3. Fluid resistance</h3>
+<p>Most of the motions analyzed in this book are rigid body
+motions within fluids. In the example of the horse dragging
+a stone, the two bodies are moving into the air, which is a
+fluid. The air exerts a force
+of <span id="force!of&nbsp;resistance&nbsp;in&nbsp;fluids"
+         class="index">resistance</span>, which is always opposite to
+the direction of motion.</p>
+<p>In the two free-body diagrams in
+figure <a href="#fig-4.2">4.2</a> the air resistance was
+ignored; it was assumed to be much smaller than the other
+forces, because the speed was low. Whe the speed is high,
+as it may happen for an object in free fall, the air
+resistance force is not negligible. In this section we
+discuss the dependence of that force on velocity.</p>
+<p>The force that opposes the motion in fluids is produced
+mainly by two different mechanisms; the first one is
+related to the <span id="viscosity"
+                     class="index">viscosity</span> of the fluid and is due to
+the fact that the neighboring fluid layers are adhered to
+the body, moving with it and creating friction with other
+layers of fluid more distant, giving rise to a force
+directly proportional to the velocity.</p>
+<p>The second mechanism has to do with the pressure
+difference generated in the fluid ahead and behind the
+moving object. The fluid is compressed in the front region
+and decompressed in the back. This difference of pressure
+produces a force opposite to the velocity and directly
+proportional to the square of its magnitude.</p>
+<p>The two mechanisms are always present but in some
+conditions one of them may be much more appreciable than the
+other. The <span id="Reynolds&nbsp;number"
+                 class="index"><b>Reynolds number</b></span> can be used as a
+measure of which of the two mechanisms is stronger; it is
+defined as</p>
+<div class="eqn" id="eq-4.11">(4.11)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.0492856em' height='2.8204994em' viewBox='202.317009 66.292647 60.492856 28.204994' class='display'>
+<g id='eq111'>
+<text font-family='futri8r' font-size='10.957664' x='202.917009' y='83.044662'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='211.548631' y='84.837925'>R</text>
+<text font-family='fourier-ms' font-size='10.957664' x='219.400458' y='83.044662'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='229.360388' y='83.044662'>l</text>
+<text font-family='futri8r' font-size='10.957664' x='235.371161' y='83.044662'>v</text>
+<text font-family='fourier-mex' font-size='10.998733' x='244.356061' y='67.189613'></text>
+<text font-family='fourier-mlit' font-size='10.957664' x='250.467998' y='74.95102'>ρ</text>
+<rect x='250.467998' y='79.629323' height='.637912' width='6.993762'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='250.784803' y='91.245886'>η</text>
+<text font-family='fourier-mex' font-size='10.998733' x='258.657274' y='67.189613'></text>
+</g>
+</svg>
+</div>
+<p>where <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.5210505em' height='0.9462079em' viewBox='-0.6 -8.730587 5.210505 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq112'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>l</text>
+</g>
+</svg>
+ Is a length of the order of magnitude of the
+straight section of the body seen in the direction of
+motion, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7369165em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.369165 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq113'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+</g>
+</svg>
+ is the speed of the body, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7423953em' height='0.936346em' viewBox='-0.6 -6.100747 7.423953 9.36346' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq114'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ρ</text>
+</g>
+</svg>
+ is
+the <span id="density" class="index">density</span> of the
+fluid and <span id="coefficient!of&nbsp;viscosity"
+                class="index"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7029477em' height='0.9352502em' viewBox='-0.6 -6.100747 7.029477 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq115'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>η</text>
+</g>
+</svg>
+</span> is the viscosity coefficient
+of the fluid. The <span id="Reynolds,&nbsp;Osborne"
+                        class="index">Reynolds</span> number has no units and it
+is not necessary to know its exact value but only its
+order of magnitude.</p>
+<p><span id="Stokes,&nbsp;George&nbsp;G." class="index">Stokes</span> 
+showed that when the Reynolds number is very low (order of
+magnitude of 1 or less), the fluid resistance force is
+proportional to the velocity. In the case of a sphere of
+radius <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8618339em' height='0.8782704em' viewBox='-0.6 -8.182704 8.618339 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq116'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+</g>
+</svg>
+, the expression for this force is:</p>
+<div class="eqn" id="eq-4.12">(4.12)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.9154886em' height='1.8369577em' viewBox='198.548335 68.518826 69.154886 18.369577' class='display'>
+<g id='eq117'>
+<rect x='199.148335' y='69.118826' height='.3985' width='67.954886'/>
+<rect x='199.148335' y='69.517325' height='16.372578' width='.3985'/>
+<text font-family='futri8r' font-size='10.957664' x='202.535627' y='80.199253'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='209.170749' y='81.992516'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='214.924441' y='80.199253'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='224.884371' y='80.199253'>6</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='231.887418' y='80.199253'>π<tspan x='240.22945'>η</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='247.758528' y='80.199253'>R</text>
+<text font-family='futri8r' font-size='10.957664' x='257.068931' y='80.199253'>v</text>
+<rect x='266.704722' y='69.517325' height='16.372578' width='.3985'/>
+<rect x='199.148335' y='85.889903' height='.3985' width='67.954886'/>
+</g>
+</svg>
+</div>
+<p>When the Reynolds number is very high (order of magnitude
+of the thousands or more) the fluid resistance force is
+proportional to the square of the speed of the body:</p> 
+<div class="eqn" id="eq-4.13">(4.13)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.6927561em' height='2.4946078em' viewBox='194.218092 66.062859 76.927561 24.946078' class='display'>
+<g id='eq118'>
+<text font-family='futri8r' font-size='10.957664' x='194.818092' y='82.207712'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='201.453214' y='84.000975'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='207.206907' y='82.207712'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='218.362351' y='74.114071'>1</text>
+<rect x='218.362351' y='78.792373' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='218.362351' y='90.408937'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='226.202248' y='82.207712'>C</text>
+<text font-family='futr8r' font-size='8.218248' x='234.068749' y='84.000975'>D</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='242.164686' y='82.207712'>ρ</text>
+<text font-family='futri8r' font-size='10.957664' x='251.164244' y='82.207712'>A</text>
+<text font-family='futri8r' font-size='10.957664' x='259.912755' y='82.207712'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='266.559803' y='77.270234'>2</text>
+</g>
+</svg>
+</div>
+<p>where <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7423953em' height='0.936346em' viewBox='-0.6 -6.100747 7.423953 9.36346' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq119'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ρ</text>
+</g>
+</svg>
+ is the density of the fluid, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.507404em' height='1.0740332em' viewBox='-0.958652 -8.347069 15.07404 10.740332' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq120'>
+<text font-family='futri8r' font-size='10.957664' x='-.358652' y='0'>C</text>
+<text font-family='futr8r' font-size='8.218248' x='7.507849' y='1.793263'>D</text>
+</g>
+</svg>
+
+is the <span id="drag&nbsp;coefficient" class="index">drag
+coefficient</span> of the body, smaller for sharp bodies
+and larger for less aerodynamic ones, and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8662169em' height='0.8782704em' viewBox='-0.015168 -8.182704 8.662169 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq121'>
+<text font-family='futri8r' font-size='10.957664' x='.836858' y='0'>A</text>
+</g>
+</svg>
+ is the
+frontal area of the body, namely, the area of its
+projection in the direction of motion. In the case of a
+sphere of radius <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8618339em' height='0.8782704em' viewBox='-0.6 -8.182704 8.618339 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq122'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+</g>
+</svg>
+, its straight section is <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.1430251em' height='1.1259614em' viewBox='-0.6 -10.528122 21.430251 11.259614' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq123'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>π</text>
+<text font-family='futri8r' font-size='10.957664' x='8.342031' y='0'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='16.2444' y='-4.339714'>2</text>
+</g>
+</svg>
+
+and the drag coefficient is approximately 1/2; therefore,
+the fluid resistance force on the sphere when the Reynolds
+number is high is:</p>
+<div class="eqn" id="eq-4.14">(4.14)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.4923932em' height='2.9709058em' viewBox='195.663812 66.149689 74.923932 29.709058' class='display'>
+<g id='eq124'>
+<rect x='196.263812' y='66.749689' height='.3985' width='73.723932'/>
+<rect x='196.263812' y='67.148188' height='27.712059' width='.3985'/>
+<text font-family='futri8r' font-size='10.957664' x='199.651104' y='83.670215'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='206.286226' y='85.463478'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='212.039918' y='83.670215'>=</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='223.195362' y='75.576573'>π</text>
+<rect x='223.195362' y='80.254876' height='.637912' width='7.173098'/>
+<text font-family='futr8r' font-size='10.957664' x='223.864864' y='91.87144'>4</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='232.7329' y='83.670215'>ρ</text>
+<text font-family='futri8r' font-size='10.957664' x='240.895599' y='83.670215'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='248.797968' y='78.732737'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='255.079725' y='83.670215'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='261.726773' y='78.732737'>2</text>
+<rect x='269.589245' y='67.148188' height='27.712059' width='.3985'/>
+<rect x='196.263812' y='94.860247' height='.3985' width='73.723932'/>
+</g>
+</svg>
+</div>
+<p>If the velocity is very high, of the order of the speed
+of sound in the fluid (in air it is about 340 m/s) the fluid
+resistance force is proportional to the speed raised to an
+exponent greater than 2.</p>
+<p>For a sphere of radius <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8618339em' height='0.8782704em' viewBox='-0.6 -8.182704 8.618339 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq125'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+</g>
+</svg>
+, the Reynolds number can be
+estimated by replacing <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.5210505em' height='0.9462079em' viewBox='-0.6 -8.730587 5.210505 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq126'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>l</text>
+</g>
+</svg>
+ by <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8618339em' height='0.8782704em' viewBox='-0.6 -8.182704 8.618339 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq127'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+</g>
+</svg>
+ in
+equation&thinsp;<a href="#eq-4.11">4.11</a>. To decide which
+of the two equations, <a href="#eq-4.12">4.12</a> 
+or <a href="#eq-4.14">4.14</a>, is more accurate, one may
+start by admitting that the Reynolds number is low and
+solve the problem using
+equation&thinsp;<a href="#eq-4.12">4.12</a>. If the values
+​​obtained lead to a low Reynolds number, it is then assumed
+that the solution is correct. Otherwise, one should solve
+the problem again using
+equation&thinsp;<a href="#eq-4.14">4.14</a> and check that
+the result leads to a high Reynolds number but the
+velocity is less than the velocity of sound in that fluid
+(see problem&thinsp;<a href="#prob-4.8">8</a> at the end of
+the chapter).</p>
+<figure class="center" id="fig-4.8">
+<div class="right">
+<img class="fig center" src="img/Esfera_em_queda_livre.png"
+     alt="Sphere in free fall in a fluid" style="width:5.82em">
+<p class="center"><b>Figure 4.8:</b> Falling in a fluid.</p>
+</div>
+</figure>
+<p>The resistance to motion of bodies in the air can be
+assumed to be proportional to the square of the velocity,
+unless the velocity is comparable to or greater than the
+speed of sound in the air (340 m/s). Indeed, the viscosity
+coefficient is 5 orders of magnitude smaller than the
+density, leading to high Reynolds numbers. The Reynolds
+number is only low if the velocity is too low, making the
+air resistance force small, or in microscopic bodies.</p>
+<p>In the case of a free falling sphere in a fluid, the
+external forces acting on it are: the weight, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.989845em' height='0.9462079em' viewBox='-0.6 -6.210324 19.89845 9.462079' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq128'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='12.03619' y='0'>g</text>
+</g>
+</svg>
+, the
+upward <span id="buoyancy" class="index">buoyant
+force</span>, which according to <span id="Archimedes"
+                                       class="index">Archimedes'</span> principal is equal to the
+weight of the <span id="principle!of&nbsp;Archimedes"
+                    class="index">fluid</span> that the sphere displaces,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.2784615em' height='0.9462079em' viewBox='-0.6 -6.210324 22.784615 9.462079' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq129'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='futr8r' font-size='8.218248' x='10.389046' y='1.942727'>f</text>
+<text font-family='futri8r' font-size='10.957664' x='14.922355' y='0'>g</text>
+</g>
+</svg>
+, and the fluid resistance force. If the
+density of the sphere is greater than the density of the
+fluid, the weight <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.989845em' height='0.9462079em' viewBox='-0.6 -6.210324 19.89845 9.462079' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq130'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='12.03619' y='0'>g</text>
+</g>
+</svg>
+ is greater than the buoyant force
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.2784615em' height='0.9462079em' viewBox='-0.6 -6.210324 22.784615 9.462079' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq131'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='futr8r' font-size='8.218248' x='10.389046' y='1.942727'>f</text>
+<text font-family='futri8r' font-size='10.957664' x='14.922355' y='0'>g</text>
+</g>
+</svg>
+ and the sphere falls. In that case, the
+fluid resistance force points upwards and its magnitude is
+given by either expressions&thinsp;<a href="#eq-4.12">4.12</a> 
+or <a href="#eq-4.14">4.14</a>. When the free fall occurs
+in air, the resulting acceleration downward vertical
+acceleration is <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.4129144em' height='1.3779877em' viewBox='-0.6 -10.528122 54.129144 13.779877' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq132'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='fourier-ms' font-size='8.218248' x='10.628155' y='-4.339714'></text>
+<text font-family='futri8r' font-size='10.957664' x='14.964205' y='0'>g</text>
+<text font-family='fourier-ms' font-size='10.957664' x='23.32346' y='0'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='32.340276' y='0'>C</text>
+<text font-family='futri8r' font-size='10.957664' x='42.296246' y='0'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='48.943294' y='-4.339714'>2</text>
+</g>
+</svg>
+, where <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.950591em' height='0.9111434em' viewBox='-0.958652 -8.347069 9.50591 9.111434' class='inline' style='vertical-align:-0.0768em'>
+<g id='eq133'>
+<text font-family='futri8r' font-size='10.957664' x='-.358652' y='0'>C</text>
+</g>
+</svg>
+ is a constant and
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.1812431em' height='1.2109314em' viewBox='-0.6 -9.566587 61.812431 12.109314' class='inline' style='vertical-align:-0.255001em'>
+<g id='eq134'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='fourier-ms' font-size='8.218248' x='10.628155' y='-4.339714'></text>
+<text font-family='fourier-ms' font-size='10.957664' x='15.601783' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='25.561713' y='0'>m</text>
+<text font-family='fourier-ms' font-size='10.957664' x='37.651018' y='0'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='47.026486' y='0'>m</text>
+<text font-family='futr8r' font-size='8.218248' x='57.415532' y='1.942727'>f</text>
+</g>
+</svg>
+. As shown in
+problem&thinsp;<a href="kinematics.html#prob-1.12">12</a>
+of <a href="kinematics.html">chapter 1</a>, the speed
+reaches a <span id="velocity!terminal"
+                class="index">limit</span> value of <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.7307371em' height='1.4596457em' viewBox='-0.6 -10.723793 47.307371 14.596457' class='inline' style='vertical-align:-0.388508em'>
+<g id='eq135'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-9.485867'></text>
+<rect x='10.998763' y='-10.123779' height='.637912' width='35.108608'/>
+<text font-family='futri8r' font-size='10.957664' x='10.998763' y='0'>m</text>
+<text font-family='fourier-ms' font-size='8.218248' x='21.626918' y='-3.455031'></text>
+<text font-family='futri8r' font-size='10.957664' x='25.962968' y='0'>g</text>
+<text font-family='futr8r' font-size='10.957664' x='32.861073' y='0'>/</text>
+<text font-family='futri8r' font-size='10.957664' x='37.559462' y='0'>C</text>
+</g>
+</svg>
+.</p>
+<br class="clear">
+</div>
+</section>
+<section id="Questions">
+<h2>Questions</h2>
+<p>(To check your answer, click on it.)</p>
+<ol class="spacious">
+<li>A book lies at rest on a table. Which of the following
+statements is correct:
+<ol class="answers">
+<li onclick="document.getElementById('p1c1').style.display='block'">There is no force acting on the book.</li>
+<li onclick="document.getElementById('p1c2').style.display='block'">The book has no inertia.</li>
+<li onclick="document.getElementById('p1c3').style.display='block'">There is no force acting on the table.</li>
+<li onclick="document.getElementById('p1c4').style.display='block'">The book is in equilibrium.</li>
+<li onclick="document.getElementById('p1c5').style.display='block'">The inertia of the book is equal to the inertia of the table.</li></ol></li>
+<li>Two metal balls are the same size but one weighs twice
+as much as the other. The two balls are dropped
+simultaneously, from the rest, from the top of a
+building. How do the times the two balls take to reach the
+ground compare?
+<ol class="answers">
+<li onclick="document.getElementById('p2c1').style.display='block'">The heavier ball takes about half the time of the lighter ball.</li>
+<li onclick="document.getElementById('p2c2').style.display='block'">The lighter ball takes about half the time of the heaviest ball.</li>
+<li onclick="document.getElementById('p2c3').style.display='block'">Both times are similar, but the heavier ball takes less time than the lighter one.</li>
+<li onclick="document.getElementById('p2c4').style.display='block'">Both times are similar, but the lighter ball takes less time than the heavier one.</li>
+<li onclick="document.getElementById('p2c5').style.display='block'">The two balls take exactly the same time.</li></ol></li>
+<li>A big truck collides frontally with a small car. What of
+the following states is true during the collision?
+<ol class="answers">
+<li onclick="document.getElementById('p3c1').style.display='block'">The
+truck exerts a greater force on the car than the force
+excerted by the car on the truck.</li>
+<li onclick="document.getElementById('p3c2').style.display='block'">The
+car exerts a greater force on the truck than the force
+excerted by the truck on the car.</li>
+<li onclick="document.getElementById('p3c3').style.display='block'">Neither
+one exerts force on the other. The car is crushed simply
+because it was in the path of the truck.</li>
+<li onclick="document.getElementById('p3c4').style.display='block'">The truck exerts force on the car, but the car does not exert any force on the truck.</li>
+<li onclick="document.getElementById('p3c5').style.display='block'">The truck exerts a force on the car and the car exerts the same force on the truck.</li></ol></li>
+<li>A stone is thrown vertically upwards. At the highest point of the trajectory of the stone:
+<ol class="answers">
+<li onclick="document.getElementById('p4c1').style.display='block'">Its velocity and acceleration point down.</li>
+<li onclick="document.getElementById('p4c2').style.display='block'">Its velocity points upwards and its acceleration points downwards.</li>
+<li onclick="document.getElementById('p4c3').style.display='block'">Its
+velocity ​​and acceleration are both zero.</li>
+<li onclick="document.getElementById('p4c4').style.display='block'">Its
+velocity is zero and its acceleration points down.</li>
+<li onclick="document.getElementById('p4c5').style.display='block'">Its
+velocity points downward and its acceleration is zero.</li></ol></li>
+<li>A woman pushes a large box with a constant horizontal
+force. The force exerted by the woman causes the box to move
+horizontally with constant speed <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1423445em' height='0.859263em' viewBox='-0.360891 -6.100747 11.423445 8.59263' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq136'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='6.44383' y='1.793263'>0</text>
+</g>
+</svg>
+. We can then conclude
+that the magnitude of force exerted by the woman:
+<ol class="answers">
+<li onclick="document.getElementById('p5c1').style.display='block'">Is
+equal to the weight of the box.</li>
+<li onclick="document.getElementById('p5c2').style.display='block'">Is
+larger than the weight of the box.</li>
+<li onclick="document.getElementById('p5c3').style.display='block'">Is
+equal to the total force that opposes the movement of the box.</li>
+<li onclick="document.getElementById('p5c4').style.display='block'">Is
+larger than the total force that opposes the movement of the box.</li>
+<li onclick="document.getElementById('p5c5').style.display='block'">Is
+larger than the weight and the total force that opposes the movement of the box.</li></ol></li>
+</ol>
+</section>
+<section id="Problems">
+<h2>Problems</h2>
+<ol class="spacious">
+<li id="prob-4.1">A 70 kg person climbs to the sixth floor
+of a building using an elevator. The elevator starts from
+rest on the ground floor, accelerates until the second
+floor with uniform acceleration of 2 m/s<sup>2</sup>,
+keeps the speed constant between the second and fourth
+floors and slows down between the fourth and sixth floors
+with uniform acceleration of &minus;2
+m/s<sup>2</sup>. Determine the magnitude of the normal
+force in the person's feet in each part of the climb.</li>
+<li id="prob-4.2">A block of mass 30 kg is on a horizontal
+surface with coefficient of kinetic friction equal to
+0.35. There is an external force of 100 N acting on the
+block, which makes an angle of 30° with the
+horizontal. Determine the value of the acceleration of the
+block.
+<img class="fig center" src="img/Bloco_a_deslizar_numa_mesa.png"
+     alt="Sliding block on a table" style="width:13.29em">
+</li>
+<li id="prob-4.3">A block of mass <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.7373385em' height='0.8782704em' viewBox='-0.6 -8.051212 37.373385 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq137'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.673768' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='22.633698' y='0'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='28.467819' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='31.384885' y='0'>1</text>
+</g>
+</svg>
+&thinsp;Kg slides
+down the surface of an incline with 4 m of base and 3 m of
+height. If the coefficient of kinetic friction between the
+block and the surface of the incline is 0.25, compute the
+value of the frictional force on the block.
+<img class="fig center" src="img/Bloco_a_deslizar_num_plano_inclinado.png"
+     alt="Sliding block on an incline" style="width:13.29em">
+</li>
+<li id="prob-4.4">An object with mass of 2 kg moves with
+initial velocity <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.2989845em' height='1.1920609em' viewBox='-0.6 -8.668854 42.989845 11.920609' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq138'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>(3<tspan x='11.444381' y='-.179335'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='11.091714' y='0'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.940403' y='0'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='26.31587' y='0'>4<tspan x='34.968721' y='-.179335'>ˆ</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='34.514438' y='0'></text>
+<text font-family='futr8r' font-size='10.957664' x='39.105217' y='0'>)</text>
+</g>
+</svg>
+&thinsp;m/s, when an external force
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.1205533em' height='1.1982618em' viewBox='-0.6 -11.251126 51.205533 11.982618' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq139'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.780599' y='0'>=<tspan x='19.740529'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='27.654847' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='33.488968' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='36.406034' y='0'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='43.080289' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='43.64819' y='0'>v</text>
+</g>
+</svg>
+ (SI units) is applied during 5
+seconds. Determine:
+<ol class="probitems">
+<li>The final velocity after 5 seconds.</li>
+<li>The impulse given by the external force during the 5
+seconds.</li></ol></li>
+<li id="prob-4.5">A 72 kg man pushes an 8 kg wooden box on a
+horizontal floor, exerting a horizontal force on it that
+makes it slide on the floor. On the box is placed a book
+with 0.6 kg. The man, the box and the book move together,
+with acceleration equal to 0.5 m/s<sup>2</sup>. Determine
+the values ​​of the frictional forces between the floor and
+the box, between the box and the book and between the
+floor and the feet of the man, ignoring the air resistance
+and knowing that the coefficients of static friction
+(<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1564759em' height='0.9352502em' viewBox='-0.6 -6.100747 11.564759 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq140'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='7.07746' y='1.793263'>s</text>
+</g>
+</svg>
+) and kinetic friction (<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2698877em' height='0.9352502em' viewBox='-0.6 -6.100747 12.698877 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq141'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='7.07746' y='1.942727'>k</text>
+</g>
+</svg>
+)
+are: between the floor and the box, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4221632em' height='1.1302967em' viewBox='-0.6 -8.051212 44.221632 11.302967' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq142'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='7.07746' y='1.793263'>s</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.216715' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='23.176645' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='29.010766' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='31.927832' y='0'>25</text>
+</g>
+</svg>
+
+and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.916858em' height='1.1302967em' viewBox='-0.6 -8.051212 39.16858 11.302967' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq143'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='7.07746' y='1.942727'>k</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.942995' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='23.902925' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='29.737046' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='32.654113' y='0'>2</text>
+</g>
+</svg>
+; between the box and the book,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4221632em' height='1.1302967em' viewBox='-0.6 -8.051212 44.221632 11.302967' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq144'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='7.07746' y='1.793263'>s</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.216715' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='23.176645' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='29.010766' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='31.927832' y='0'>35</text>
+</g>
+</svg>
+ and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.5035574em' height='1.1302967em' viewBox='-0.6 -8.051212 45.035574 11.302967' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq145'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='7.07746' y='1.942727'>k</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.942995' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='23.902925' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='29.737046' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='32.654113' y='0'>28</text>
+</g>
+</svg>
+; between
+the ground and the feet of the man, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.8529961em' height='1.1302967em' viewBox='-0.6 -8.051212 38.529961 11.302967' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq146'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='7.07746' y='1.793263'>s</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.216715' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='23.176645' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='29.010766' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='31.927832' y='0'>4</text>
+</g>
+</svg>
+
+and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.9037088em' height='1.1302967em' viewBox='-0.6 -8.051212 39.037088 11.302967' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq147'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>µ</text>
+<text font-family='futr8r' font-size='8.218248' x='7.07746' y='1.942727'>k</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.942995' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='23.902925' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='29.737046' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='32.654113' y='0'>3</text>
+</g>
+</svg>
+.</li>
+<li id="prob-4.6">A 1230 kg car climbs an 8 percent slope
+with constant speed. Determine:
+<ol class="probitems">
+<li>The value of the total frictional force (sum of the
+forces on the four tires).</li>
+<li>The minimum value of the coefficient of static
+friction between the road and the tires so that the
+car can climb up the ramp.</li></ol>
+<img class="fig center" src="img/Automovel_a_subir_rampa.png"
+     alt="Car going up an incline" style="width:17.49em">
+</li>
+<li id="prob-4.7">To determine the rigidity of a material, a
+block of that material is place 30 cm below a metal cone
+of 0.3 kg. The cone is allowed to fall freely from rest
+then penetrating the block until it stops after moving a
+distance <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.3345718em' height='0.859263em' viewBox='-0.360891 -6.100747 23.345718 8.59263' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq148'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='6.276459' y='1.793263'>max</text>
+</g>
+</svg>
+ inside it. While the cone is
+penetrating, the block exerts on it a force opposite to
+its velocity directly proportional to the square of the
+penetrated distance; that is, the magnitude of the force
+is <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.9864114em' height='1.1259614em' viewBox='-0.6 -10.528122 19.864114 11.259614' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq149'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='8.234433' y='0'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='14.678263' y='-4.339714'>2</text>
+</g>
+</svg>
+, where <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq150'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ is the distance penetrated by the
+tip of the cone and <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7796514em' height='0.9462079em' viewBox='-0.6 -8.730587 7.796514 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq151'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>k</text>
+</g>
+</svg>
+ is a positive constant that
+measures the rigidity of the material. If the maximum
+distance that the cone penetrates is
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.0933935em' height='1.0411602em' viewBox='-0.360891 -7.91972 40.933935 10.411602' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq152'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='6.276459' y='1.793263'>max</text>
+<text font-family='fourier-ms' font-size='10.957664' x='24.753435' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='34.713365' y='0'>5</text>
+</g>
+</svg>
+&thinsp;cm, determine the value of the
+rigidity constant <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7796514em' height='0.9462079em' viewBox='-0.6 -8.730587 7.796514 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq153'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>k</text>
+</g>
+</svg>
+ for this material.
+<img class="fig center" src="img/Cone_a_penetrar_bloco.png"
+     alt="Cone penetrating a block" style="width:10.71em">
+</li>
+<li id="prob-4.8">A sphere of radius <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8618339em' height='0.8782704em' viewBox='-0.6 -8.182704 8.618339 8.782704' class='inline' style='vertical-align:-0.06em'>
+<g id='eq154'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+</g>
+</svg>
+ and density
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2146751em' height='0.936346em' viewBox='-0.6 -6.100747 12.146751 9.36346' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq155'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ρ</text>
+<text font-family='futr8r' font-size='8.218248' x='6.993774' y='1.793263'>e</text>
+</g>
+</svg>
+ falls freely inside a fluid with a
+density <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7423953em' height='0.936346em' viewBox='-0.6 -6.100747 7.423953 9.36346' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq156'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ρ</text>
+</g>
+</svg>
+ and viscosity coefficient
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7029477em' height='0.9352502em' viewBox='-0.6 -6.100747 7.029477 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq157'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>η</text>
+</g>
+</svg>
+. (<i>a</i>) Find the expressions for the terminal
+velocity when the resistance of the fluid is proportional
+to the velocity and when it is proportional to the square
+of the velocity. (<i>b</i>) Compute the terminal
+velocities of a sphere of diameter 1&thinsp;cm made of
+steel, with density 7800&thinsp;kg/m<sup>3</sup>, inside
+glycerin, water and air. In each case determine the value
+of the Reynolds number. Use the data in the following
+table:
+<table class="borders center">
+<tbody><tr><td class="left"><b>Fluid</b></td><td class="center"><b>Viscosity</b> (kg/(m·s))</td><td class="center"><b>Density</b> (kg/m<sup>3</sup>)</td></tr>
+<tr><td class="left">Glycerin</td><td class="center">1.5</td><td class="center">1200</td></tr>
+<tr><td class="left">Water</td><td class="center">10<sup>&minus;3</sup></td><td class="center">1000</td></tr>
+<tr><td class="left">Air </td><td class="center">1.8×10<sup>&minus;5</sup></td><td class="center">1.2</td></tr>
+</tbody></table></li>
+<li id="prob-4.9">Compute the terminal velocity for free
+fall in air of:
+<ol class="probitems">
+<li>A raindrop with radius of 1&thinsp;mm (use
+1000&thinsp;kg/m<sup>3</sup> for the density of water).</li>
+<li>A hail stone with a radius of 1 cm (the density of the ice is 917&thinsp;kg/m<sup>3</sup>).</li>
+<li>A table tennis ball with radius of 1.9&thinsp;cm and mass of 0.0024&thinsp;kg.</li>
+<li>A tennis ball with radius of 3.25&thinsp;cm and mass
+of 0.062&thinsp;kg. (Use the results of the previous
+problem).</li></ol></li>
+<li id="prob-4.10">To measure the coefficient of static
+friction between a block and a disc, the disc was rotated
+with constant angular acceleration <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.6152391em' height='0.8651212em' viewBox='-0.6 -7.91972 26.152391 8.651212' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq158'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>α</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.732782' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='19.692712' y='0'>5</text>
+</g>
+</svg>
+
+rad/s<sup>2</sup>. The disc starts from rest at <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.3489363em' height='0.8782704em' viewBox='-0.360891 -8.051212 23.489363 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq159'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.170174' y='0'>0</text>
+</g>
+</svg>
+ and
+at <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.803084em' height='0.8782704em' viewBox='-0.360891 -8.051212 38.03084 8.782704' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq160'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.210243' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='17.170174' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='23.004295' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='25.921361' y='0'>82</text>
+</g>
+</svg>
+&thinsp;s the block begins to skid over the
+disk. Determine the value of the coefficient of static
+friction.
+<img class="fig center" src="img/Bloco_sobre_um_disco.png"
+     alt="Block on a disk"style="width:18.12em" >
+</li>
+<li id="prob-4.11">A ball with mass 0.8&thinsp;kg is initially
+kept at rest by two wires, as shown in the figure. The wire
+on the left is suddenly cut off. Determine the tension on
+the right-hand wire before the other wire was cut and the
+exact instant after the wire is cut (assume that the wire
+weights are negligible).
+<img class="fig center" src="img/Esfera_pendurada_por_dois_fios.png"
+     alt="Sphere hung by two wires" style="width:16.59em">
+</li>
+</ol>
+</section>
+<section id="Answers">
+<h2>Answers</h2>
+<p><b>Questions: </b> <b>1.</b> D. <b>2.</b> C. <b>3.</b> E.
+<b>4.</b> D. D. <b>5.</b> C.</p>
+<p><b>Problems</b></p>
+<ol class="spacious">
+<li>Between the gound level and the 2nd floor, 826
+N. Between the 2nd and 4th floors, 686 N. Between the 4th
+and 6th floors, 546 N.</li>
+<li>0.040 m/s<sup>2</sup></li>
+<li>4.12 N.</li>
+<li>(<i>a</i>) (<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.5357834em' height='1.1920609em' viewBox='-0.6 -8.668854 65.357834 11.920609' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq161'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='5.834121' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='8.751187' y='0'>10<tspan x='22.18013' y='-.179335'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='21.827464' y='0'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='27.676152' y='0'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='37.05162' y='0'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='42.885741' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='45.802807' y='0'>47<tspan x='60.289779' y='-.179335'>ˆ</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='59.835496' y='0'></text>
+</g>
+</svg>
+)
+m/s. (<i>b</i> ) (<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.3272152em' height='1.1920609em' viewBox='-0.6 -8.668854 73.272152 11.920609' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq162'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='7.914318' y='0'>3</text>
+<text font-family='futr8r' font-size='10.957664' x='13.748439' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.665505' y='0'>79<tspan x='30.094448' y='-.179335'>ˆ</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='29.741782' y='0'>ı</text>
+<text font-family='fourier-ms' font-size='10.957664' x='35.59047' y='0'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='44.965937' y='0'>5</text>
+<text font-family='futr8r' font-size='10.957664' x='50.800058' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='53.717125' y='0'>06<tspan x='68.204096' y='-.179335'>ˆ</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='67.749814' y='0'></text>
+</g>
+</svg>
+) N·s.</li>
+<li>The frictional force between the box and the book is 0.3
+N, the frictional force between the box and the floor is
+16.856 N, and the frictional force between the floor and
+the man's feet is 57.156 N.</li>
+<li>(<i>a</i>) 961.2 N. (<i>b</i>) 0.08.</li>
+<li>24 696 N / m <sup>2</sup> .</li>
+<li>( <i>a</i> ) With resistance proportional to the speed:
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.0484534em' height='3.0074744em' viewBox='-0.360891 -18.621764 90.484534 30.074744' class='inline' style='vertical-align:-1.154398em'>
+<g id='eq163'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='6.44383' y='1.793263'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.820944' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='22.976388' y='-8.093642'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='29.979435' y='-8.093642'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='37.881804' y='-12.433355'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='44.163561' y='-8.093642'>g</text>
+<rect x='22.976388' y='-3.415339' height='.637912' width='28.085247'/>
+<text font-family='futr8r' font-size='10.957664' x='30.337426' y='8.201225'>9</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='37.340472' y='8.201225'>η</text>
+<text font-family='futr8r' font-size='10.957664' x='53.426075' y='0'>(</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='57.275634' y='0'>ρ</text>
+<text font-family='futr8r' font-size='8.218248' x='64.269408' y='1.793263'>e</text>
+<text font-family='fourier-ms' font-size='10.957664' x='70.469774' y='0'>−</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='79.845241' y='0'>ρ</text>
+<text font-family='futr8r' font-size='10.957664' x='86.839015' y='0'>)</text>
+</g>
+</svg>
+. <br>
+With resistance proportional to <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1832898em' height='1.1259614em' viewBox='-0.360891 -10.528122 11.832898 11.259614' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq164'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='6.886157' y='-4.339714'>2</text>
+</g>
+</svg>
+:
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.4462735em' height='3.0708207em' viewBox='-0.360891 -19.244269 114.462735 30.708207' class='inline' style='vertical-align:-1.154398em'>
+<g id='eq165'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='6.44383' y='1.793263'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.820944' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='21.780874' y='0'>4</text>
+<text font-family='fourier-mex' font-size='10.998733' x='27.614995' y='-17.140222'></text>
+<rect x='38.613759' y='-17.778135' height='.637912' width='18.599518'/>
+<text font-family='futri8r' font-size='10.957664' x='39.809272' y='-8.093642'>R</text>
+<text font-family='futri8r' font-size='10.957664' x='49.119676' y='-8.093642'>g</text>
+<rect x='39.809272' y='-3.415339' height='.637912' width='16.20849'/>
+<text font-family='futr8r' font-size='10.957664' x='44.99647' y='8.201225'>3</text>
+<text font-family='fourier-mex' font-size='10.998733' x='60.720054' y='-15.855049'></text>
+<text font-family='fourier-mlit' font-size='10.957664' x='66.831991' y='-8.093642'>ρ</text>
+<text font-family='futr8r' font-size='8.218248' x='73.825765' y='-6.300379'>e</text>
+<rect x='66.831991' y='-3.415339' height='.637912' width='11.732979'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='69.201599' y='8.201225'>ρ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='81.221633' y='0'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='90.597101' y='0'>1</text>
+<text font-family='fourier-mex' font-size='10.998733' x='96.431222' y='-15.855049'></text>
+<text font-family='futr8r' font-size='8.218248' x='101.347623' y='-12.833968'>1/2</text>
+</g>
+</svg>
+.<br>
+(<i>b</i>) In glycerin: <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.8519493em' height='1.0543094em' viewBox='-0.360891 -8.051212 48.519493 10.543094' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq166'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='6.44383' y='1.793263'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.820944' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='21.780874' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='27.614995' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='30.532062' y='0'>240</text>
+</g>
+</svg>
+ m/s,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.3410148em' height='1.0575967em' viewBox='-0.360891 -8.182704 53.410148 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq167'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='8.87073' y='1.793263'>R</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.722557' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='26.682488' y='0'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='32.516609' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='35.433675' y='0'>958</text>
+</g>
+</svg>
+; in water: <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.2510049em' height='1.0543094em' viewBox='-0.360891 -8.051212 42.510049 10.543094' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq168'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='6.44383' y='1.793263'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.820944' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='21.780874' y='0'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='27.614995' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='30.532062' y='0'>33</text>
+</g>
+</svg>
+ m/s,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.0405421em' height='1.0575967em' viewBox='-0.360891 -8.182704 50.405421 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq169'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='8.87073' y='1.793263'>R</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.722557' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='26.682488' y='0'>6665</text>
+</g>
+</svg>
+; in air: <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.2641541em' height='1.0543094em' viewBox='-0.360891 -8.051212 42.641541 10.543094' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq170'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='6.44383' y='1.793263'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.820944' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='21.780874' y='0'>41</text>
+<text font-family='futr8r' font-size='10.957664' x='33.449116' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='36.366183' y='0'>2</text>
+</g>
+</svg>
+ m/s,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.6425822em' height='1.0575967em' viewBox='-0.360891 -8.182704 56.425822 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq171'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>N</text>
+<text font-family='futr8r' font-size='8.218248' x='8.87073' y='1.793263'>R</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.722557' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='26.682488' y='0'>13737</text>
+</g>
+</svg>
+.</li>
+<li>(<i>a</i>) 6.60 m/s = 23.7 km/h. (<i>b</i>) 20.0 m/s =
+71.9 km/h. (<i>c</i>) 8.25 m/s = 29.7 km/h. (<i>d</i>) 24.7
+m/s = 88.8 km/h.</li>
+<li>0.143</li>
+<li>Before: <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.4223538em' height='2.5877958em' viewBox='-0.6 -16.945242 114.223538 25.877958' class='inline' style='vertical-align:-0.889198em'>
+<g id='eq172'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='fourier-ms' font-size='10.957664' x='10.438133' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='20.398063' y='0'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='32.434253' y='0'>g</text>
+<text font-family='futr8r' font-size='10.957664' x='41.696798' y='-8.093642'>sin<tspan x='57.666209'>40</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='69.334452' y='-12.433355'>◦</text>
+<rect x='41.696798' y='-3.415339' height='.637912' width='32.260295'/>
+<text font-family='futr8r' font-size='10.957664' x='41.696798' y='8.201225'>sin<tspan x='57.666209'>80</tspan>
+</text>
+<text font-family='fourier-ms' font-size='8.218248' x='69.334452' y='4.746194'>◦</text>
+<text font-family='fourier-ms' font-size='10.957664' x='77.19822' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='87.15815' y='0'>5</text>
+<text font-family='futr8r' font-size='10.957664' x='92.992271' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='95.909337' y='0'>117</text>
+</g>
+</svg>
+ N.
+after: <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.4828685em' height='2.3105191em' viewBox='-0.6 -14.303966 74.828685 23.105191' class='inline' style='vertical-align:-0.8832em'>
+<g id='eq173'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>T</text>
+<text font-family='fourier-ms' font-size='10.957664' x='10.438133' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='21.593577' y='-8.093642'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='33.629767' y='-8.093642'>g</text>
+<rect x='21.593577' y='-3.415339' height='.637912' width='18.934276'/>
+<text font-family='futr8r' font-size='10.957664' x='28.14366' y='8.201225'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='43.768979' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='53.72891' y='0'>3</text>
+<text font-family='futr8r' font-size='10.957664' x='59.563031' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='62.480097' y='0'>92</text>
+</g>
+</svg>
+ N.</li>
+</ol>
+</section>
+<div id="p1c1" class="comment" onclick="document.getElementById('p1c1').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p1c2" class="comment" onclick="document.getElementById('p1c2').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p1c3" class="comment" onclick="document.getElementById('p1c3').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p1c4" class="comment" onclick="document.getElementById('p1c4').style.display='none'">
+<div class="hint">
+<div class="center green">Correct</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p1c5" class="comment" onclick="document.getElementById('p1c5').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p2c1" class="comment" onclick="document.getElementById('p2c1').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p2c2" class="comment" onclick="document.getElementById('p2c2').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p2c3" class="comment" onclick="document.getElementById('p2c3').style.display='none'">
+<div class="hint">
+<div class="center green">Correct</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p2c4" class="comment" onclick="document.getElementById('p2c4').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p2c5" class="comment" onclick="document.getElementById('p2c5').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p3c1" class="comment" onclick="document.getElementById('p3c1').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p3c2" class="comment" onclick="document.getElementById('p3c2').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p3c3" class="comment" onclick="document.getElementById('p3c3').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p3c4" class="comment" onclick="document.getElementById('p3c4').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p3c5" class="comment" onclick="document.getElementById('p3c5').style.display='none'">
+<div class="hint">
+<div class="center green">Correct</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p4c1" class="comment" onclick="document.getElementById('p4c1').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p4c2" class="comment" onclick="document.getElementById('p4c2').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p4c3" class="comment" onclick="document.getElementById('p4c3').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p4c4" class="comment" onclick="document.getElementById('p4c4').style.display='none'">
+<div class="hint">
+<div class="center green">Correct</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p4c5" class="comment" onclick="document.getElementById('p4c5').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p5c1" class="comment" onclick="document.getElementById('p5c1').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p5c2" class="comment" onclick="document.getElementById('p5c2').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p5c3" class="comment" onclick="document.getElementById('p5c3').style.display='none'">
+<div class="hint">
+<div class="center green">Correct</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p5c4" class="comment" onclick="document.getElementById('p5c4').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div id="p5c5" class="comment" onclick="document.getElementById('p5c5').style.display='none'">
+<div class="hint">
+<div class="center red">Wrong</div>
+<p class="center">(Click to continue)</p>
+</div>
+</div>
+<div class="bottom">
+<a href="#top"><span class="button">Page Top</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../index.html">Jaime Villate</a>
+</div>
+<div class="category">
+<a href="../software.html">Free Software</a>
+</div>
+<div class="category">
+<a href="../publications/index.html">Publications</a>
+</div>
+<div class="category">
+<a href="../talks/index.html">Talks</a>
+</div>
+</div>
+&copy; 2017 &ndash; 2019, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2021/10/28 10:19:59 UTC</span>
+</footer>
+</body>
+</html>
