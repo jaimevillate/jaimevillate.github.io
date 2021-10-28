@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2. Sistemas de equações lineares</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body id="top">
+<header>
+<h1 id="title">2. Sistemas de equações lineares</h1>
+</header>
+<nav>
+<a href="../pt/index.html">Jaime Villate</a><span>&rarr;</span>
+<a href="../pt/material.html">Material pedagógico</a><span>&rarr;</span>
+<a href="./index.html">Métodos Numéricos</a><span>&rarr;</span>
+<span>2. Sistemas de equações lineares</span>
+</nav>
+<div class="content">
+<span class="button">Índice</span>
+<div class="content-items">
+<a href="./index.html">Métodos Numéricos</a>
+<ol class="nested" style="counter-increment: item 1">
+<li>
+<a href="#top">Sistemas de equações lineares</a>
+<ol class="nested">
+<li><a href="#sec-2.1">Representação matricial</a></li>
+<li><a href="#sec-2.2">Método de eliminação de Gauss</a></li>
+<li><a href="#sec-2.3">Método de Gauss-Jordan</a></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<section>
+<h2 id="sec-2.1">2.1. Representação matricial</h2>
+<p>
+Um sistema linear de ordem <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8158117em' height='0.6832239em' viewBox='-0.6 -6.100747 8.158117 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq1'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>n</text>
+</g>
+</svg>
+ é um sistema com <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8158117em' height='0.6832239em' viewBox='-0.6 -6.100747 8.158117 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>n</text>
+</g>
+</svg>
+ variáveis <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0828724em' height='0.8494011em' viewBox='-0.360891 -6.100747 10.828724 8.494011' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq3'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='6.276459' y='1.793263'>1</text>
+</g>
+</svg>
+,
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.12232em' height='0.8494011em' viewBox='-0.360891 -6.100747 11.2232 8.494011' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq4'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='6.276459' y='1.793263'>2</text>
+</g>
+</svg>
+, &hellip;, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2455938em' height='0.859263em' viewBox='-0.360891 -6.100747 12.455938 8.59263' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq5'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futri8r' font-size='8.218248' x='6.276459' y='1.793263'>n</text>
+</g>
+</svg>
+, que satisfazem <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.8158117em' height='0.6832239em' viewBox='-0.6 -6.100747 8.158117 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq6'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>n</text>
+</g>
+</svg>
+ equações lineares:
+</p>
+<div class="eqn" id="eq-2.1">(2.1)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='15.9595829em' height='6.9792854em' viewBox='153.032572 83.423834 159.595829 69.792854' class='display'>
+<g id='eq7'>
+<text font-family='futri8r' font-size='10.957664' x='157.156315' y='92.154421'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='163.683831' y='93.947684'>11</text>
+<text font-family='futri8r' font-size='10.957664' x='174.341178' y='92.154421'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='180.378527' y='93.947684'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='186.713399' y='92.154421'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='196.327975' y='92.154421'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='202.855491' y='93.947684'>12</text>
+<text font-family='futri8r' font-size='10.957664' x='213.512838' y='92.154421'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='219.550188' y='93.947684'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='225.885059' y='92.154421'>+<tspan x='235.260527'>·</tspan>
+<tspan x='239.48997'>·</tspan>
+<tspan x='243.719414'>·</tspan>
+<tspan x='248.24107'>+</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='257.855646' y='92.154421'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='264.383163' y='93.947684'>1</text>
+<text font-family='futri8r' font-size='8.218248' x='268.758753' y='93.947684'>n</text>
+<text font-family='futri8r' font-size='10.957664' x='276.21509' y='92.154421'>x</text>
+<text font-family='futri8r' font-size='8.218248' x='282.25244' y='93.947684'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='290.346275' y='92.154421'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='300.306206' y='92.154421'>b</text>
+<text font-family='futr8r' font-size='8.218248' x='306.809813' y='93.947684'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='157.156315' y='109.589041'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='163.683831' y='111.382304'>21</text>
+<text font-family='futri8r' font-size='10.957664' x='174.341178' y='109.589041'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='180.378527' y='111.382304'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='186.713399' y='109.589041'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='196.327975' y='109.589041'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='202.855491' y='111.382304'>21</text>
+<text font-family='futri8r' font-size='10.957664' x='213.512838' y='109.589041'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='219.550188' y='111.382304'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='225.885059' y='109.589041'>+<tspan x='235.260527'>·</tspan>
+<tspan x='239.48997'>·</tspan>
+<tspan x='243.719414'>·</tspan>
+<tspan x='248.24107'>+</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='257.855646' y='109.589041'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='264.383163' y='111.382304'>2</text>
+<text font-family='futri8r' font-size='8.218248' x='268.758753' y='111.382304'>n</text>
+<text font-family='futri8r' font-size='10.957664' x='276.21509' y='109.589041'>x</text>
+<text font-family='futri8r' font-size='8.218248' x='282.25244' y='111.382304'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='290.346275' y='109.589041'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='300.306206' y='109.589041'>b</text>
+<text font-family='futr8r' font-size='8.218248' x='306.809813' y='111.382304'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='288.300663' y='125.320074'>.<tspan x='288.300663' y='129.30513'>.</tspan>
+<tspan x='288.300663' y='133.290186'>.</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='153.632572' y='150.724806'>a</text>
+<text font-family='futri8r' font-size='8.218248' x='160.160088' y='152.518069'>n</text>
+<text font-family='futr8r' font-size='8.218248' x='165.710268' y='152.518069'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='171.992016' y='150.724806'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='178.029366' y='152.518069'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='184.364237' y='150.724806'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='193.978813' y='150.724806'>a</text>
+<text font-family='futri8r' font-size='8.218248' x='200.50633' y='152.518069'>n</text>
+<text font-family='futr8r' font-size='8.218248' x='206.056509' y='152.518069'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='212.338257' y='150.724806'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='218.375607' y='152.518069'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='224.710478' y='150.724806'>+<tspan x='234.085946'>·</tspan>
+<tspan x='238.315389'>·</tspan>
+<tspan x='242.544833'>·</tspan>
+<tspan x='247.066489'>+</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='256.681066' y='150.724806'>a</text>
+<text font-family='futri8r' font-size='8.218248' x='263.208582' y='152.518069'>n</text>
+<text font-family='futri8r' font-size='8.218248' x='268.758761' y='152.518069'>n</text>
+<text font-family='futri8r' font-size='10.957664' x='276.21509' y='150.724806'>x</text>
+<text font-family='futri8r' font-size='8.218248' x='282.25244' y='152.518069'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='290.346275' y='150.724806'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='300.306206' y='150.724806'>b</text>
+<text font-family='futri8r' font-size='8.218248' x='306.809813' y='152.518069'>n</text>
+</g>
+</svg>
+</div>
+<p>
+Se as equações são linearmente independentes, existe sempre uma única
+solução. Claro está que basta dar a lista de equações e variáveis aos
+comandos <span id="solve" class="index maxf">solve</span>
+ou <span id="linsolve" class="index maxf">linsolve</span> do Maxima
+para obter a solução, mas o objetivo deste capítulo não é obter a
+resposta mas sim mostrar, passo a passo, como funcionam alguns métodos
+de resolução.
+</p>
+<p>
+Chama-se <span id="matriz&nbsp;aumentada" class="index"><b>matriz
+aumentada</b></span> do sistema à matriz:
+</p>
+<div class="eqn" id="eq-2.2">(2.2)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14.0412563em' height='6.4253527em' viewBox='161.29351 66.149689 140.412563 64.253527' class='display'>
+<g id='eq8'>
+<text font-family='fourier-mex' font-size='10.998733' x='161.89351' y='69.019512'>⎡<tspan x='161.89351' y='88.377492'>⎢</tspan>
+<tspan x='161.89351' y='94.976799'>⎢</tspan>
+<tspan x='161.89351' y='101.576106'>⎢</tspan>
+<tspan x='161.89351' y='108.615337'>⎣</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='175.033733' y='76.861717'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='181.561249' y='78.65498'>11</text>
+<text font-family='futri8r' font-size='10.957664' x='202.186883' y='76.861717'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='208.714399' y='78.65498'>12</text>
+<text font-family='fourier-ms' font-size='10.957664' x='228.513634' y='76.861717'>·<tspan x='232.743077'>·</tspan>
+<tspan x='236.972521'>·</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='251.990993' y='76.861717'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='258.518509' y='78.65498'>1</text>
+<text font-family='futri8r' font-size='8.218248' x='262.8941' y='78.65498'>n</text>
+<rect x='274.311762' y='66.749689' height='14.445813' width='.3985'/>
+<text font-family='futri8r' font-size='10.957664' x='280.079615' y='76.861717'>b</text>
+<text font-family='futr8r' font-size='8.218248' x='286.583222' y='78.65498'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='175.033733' y='91.30753'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='181.561249' y='93.100793'>21</text>
+<text font-family='futri8r' font-size='10.957664' x='202.186883' y='91.30753'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='208.714399' y='93.100793'>22</text>
+<text font-family='fourier-ms' font-size='10.957664' x='228.513634' y='91.30753'>·<tspan x='232.743077'>·</tspan>
+<tspan x='236.972521'>·</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='251.990993' y='91.30753'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='258.518509' y='93.100793'>2</text>
+<text font-family='futri8r' font-size='8.218248' x='262.8941' y='93.100793'>n</text>
+<rect x='274.311762' y='81.195502' height='14.445813' width='.3985'/>
+<text font-family='futri8r' font-size='10.957664' x='280.079615' y='91.30753'>b</text>
+<text font-family='futr8r' font-size='8.218248' x='286.583222' y='93.100793'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='181.344069' y='103.053506'>.<tspan x='181.344069' y='107.038562'>.</tspan>
+<tspan x='181.344069' y='111.023618'>.</tspan>
+<tspan x='208.497219' y='103.053506'>.</tspan>
+<tspan x='208.497219' y='107.038562'>.</tspan>
+<tspan x='208.497219' y='111.023618'>.</tspan>
+<tspan x='229.313293' y='104.04977'>.</tspan>
+<tspan x='233.399274' y='107.038562'>.</tspan>
+<tspan x='237.485254' y='110.027354'>.</tspan>
+<tspan x='258.888619' y='103.053506'>.</tspan>
+<tspan x='258.888619' y='107.038562'>.</tspan>
+<tspan x='258.888619' y='111.023618'>.</tspan>
+</text>
+<rect x='274.311755' y='95.641315' height='19.716088' width='.3985'/>
+<text font-family='futr8r' font-size='10.957664' x='284.309754' y='103.053506'>.<tspan x='284.309754' y='107.038562'>.</tspan>
+<tspan x='284.309754' y='111.023618'>.</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='174.446442' y='125.469431'>a</text>
+<text font-family='futri8r' font-size='8.218248' x='180.973958' y='127.262694'>n</text>
+<text font-family='futr8r' font-size='8.218248' x='186.524138' y='127.262694'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='201.599592' y='125.469431'>a</text>
+<text font-family='futri8r' font-size='8.218248' x='208.127108' y='127.262694'>n</text>
+<text font-family='futr8r' font-size='8.218248' x='213.677288' y='127.262694'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='228.513634' y='125.469431'>·<tspan x='232.743077'>·</tspan>
+<tspan x='236.972521'>·</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='251.403702' y='125.469431'>a</text>
+<text font-family='futri8r' font-size='8.218248' x='257.931218' y='127.262694'>n</text>
+<text font-family='futri8r' font-size='8.218248' x='263.481398' y='127.262694'>n</text>
+<rect x='274.311762' y='115.357403' height='14.445813' width='.3985'/>
+<text font-family='futri8r' font-size='10.957664' x='279.492324' y='125.469431'>b</text>
+<text font-family='futri8r' font-size='8.218248' x='285.995932' y='127.262694'>n</text>
+<text font-family='fourier-mex' font-size='10.998733' x='297.025543' y='69.019512'>⎤<tspan x='297.025543' y='88.377492'>⎥</tspan>
+<tspan x='297.025543' y='94.976799'>⎥</tspan>
+<tspan x='297.025543' y='101.576106'>⎥</tspan>
+<tspan x='297.025543' y='108.615337'>⎦</tspan>
+</text>
+</g>
+</svg>
+</div>
+</section>
+<section>
+<h2 id="sec-2.2">2.2. Método de eliminação de Gauss</h2>
+<p>
+A qualquer equação no sistema pode somar-se outra das equações,
+multiplicada por uma constante <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7796514em' height='0.9462079em' viewBox='-0.6 -8.730587 7.796514 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq9'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>k</text>
+</g>
+</svg>
+, e a solução do sistema não se
+altera. Na matriz aumentada, essa operação corresponde a substituir
+uma linha <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0997666em' height='1.0674586em' viewBox='-0.6 -8.182704 10.997666 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq10'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814442' y='1.793263'>i</text>
+</g>
+</svg>
+ por <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.1659739em' height='1.3112666em' viewBox='-0.6 -8.730587 41.659739 13.112666' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq11'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814442' y='1.793263'>i</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.378203' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='21.753671' y='0'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='29.748995' y='0'>L</text>
+<text font-family='futri8r' font-size='8.218248' x='37.460078' y='1.793263'>j</text>
+</g>
+</svg>
+. Essa propriedade pode ser usada
+para obter uma matriz <b>triangular superior</b>, em que <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5228297em' height='1.0482827em' viewBox='-0.360891 -6.100747 15.228297 10.482827' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq12'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futri8r' font-size='8.218248' x='6.766625' y='1.793263'>i</text>
+<text font-family='futri8r' font-size='8.218248' x='11.267745' y='1.793263'>j</text>
+</g>
+</svg>
+ é
+zero, se <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.3206595em' height='1.1686485em' viewBox='-0.6 -8.43473 23.206595 11.686485' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq13'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>i</text>
+<text font-family='fourier-ms' font-size='10.957664' x='6.851595' y='0'>&lt;</text>
+<text font-family='futri8r' font-size='10.957664' x='18.007047' y='0'>j</text>
+</g>
+</svg>
+:
+</p>
+<div class="eqn" id="eq-2.3">(2.3)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13.8063402em' height='6.4253527em' viewBox='162.468091 66.149689 138.063402 64.253527' class='display'>
+<g id='eq14'>
+<text font-family='fourier-mex' font-size='10.998733' x='163.068091' y='69.019512'>⎡<tspan x='163.068091' y='88.377492'>⎢</tspan>
+<tspan x='163.068091' y='94.976799'>⎢</tspan>
+<tspan x='163.068091' y='101.576106'>⎢</tspan>
+<tspan x='163.068091' y='108.615337'>⎣</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='175.621023' y='76.861717'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='182.148539' y='78.65498'>11</text>
+<text font-family='futri8r' font-size='10.957664' x='201.599592' y='76.861717'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='208.127108' y='78.65498'>12</text>
+<text font-family='fourier-ms' font-size='10.957664' x='227.339053' y='76.861717'>·<tspan x='231.568496'>·</tspan>
+<tspan x='235.79794'>·</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='250.816412' y='76.861717'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='257.343928' y='78.65498'>1</text>
+<text font-family='futri8r' font-size='8.218248' x='261.719519' y='78.65498'>n</text>
+<rect x='273.137181' y='66.749689' height='14.445813' width='.3985'/>
+<text font-family='futri8r' font-size='10.957664' x='278.905034' y='76.861717'>b</text>
+<text font-family='futr8r' font-size='8.218248' x='285.408641' y='78.65498'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='180.472824' y='91.30753'>0</text>
+<text font-family='futri8r' font-size='10.957664' x='201.599592' y='91.30753'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='208.390115' y='86.967816'></text>
+<text font-family='futr8r' font-size='8.218248' x='208.127108' y='95.042744'>22</text>
+<text font-family='fourier-ms' font-size='10.957664' x='227.339053' y='91.30753'>·<tspan x='231.568496'>·</tspan>
+<tspan x='235.79794'>·</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='250.816412' y='91.30753'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='257.606934' y='86.967816'></text>
+<text font-family='futr8r' font-size='8.218248' x='257.343928' y='95.042744'>2</text>
+<text font-family='futri8r' font-size='8.218248' x='261.719519' y='95.042744'>n</text>
+<rect x='273.137181' y='81.195502' height='14.445813' width='.3985'/>
+<text font-family='futri8r' font-size='10.957664' x='278.905034' y='91.30753'>b</text>
+<text font-family='fourier-ms' font-size='8.218248' x='285.64775' y='86.967816'></text>
+<text font-family='futr8r' font-size='8.218248' x='285.408641' y='95.042744'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='181.931359' y='103.053506'>.<tspan x='181.931359' y='107.038562'>.</tspan>
+<tspan x='181.931359' y='111.023618'>.</tspan>
+<tspan x='207.909928' y='103.053506'>.</tspan>
+<tspan x='207.909928' y='107.038562'>.</tspan>
+<tspan x='207.909928' y='111.023618'>.</tspan>
+<tspan x='228.138712' y='104.04977'>.</tspan>
+<tspan x='232.224693' y='107.038562'>.</tspan>
+<tspan x='236.310673' y='110.027354'>.</tspan>
+<tspan x='257.714038' y='103.053506'>.</tspan>
+<tspan x='257.714038' y='107.038562'>.</tspan>
+<tspan x='257.714038' y='111.023618'>.</tspan>
+</text>
+<rect x='273.137174' y='95.641315' height='19.716088' width='.3985'/>
+<text font-family='futr8r' font-size='10.957664' x='283.135173' y='103.053506'>.<tspan x='283.135173' y='107.038562'>.</tspan>
+<tspan x='283.135173' y='111.023618'>.</tspan>
+<tspan x='180.472824' y='125.469431'>0</tspan>
+<tspan x='206.451393'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='227.339053' y='125.469431'>·<tspan x='231.568496'>·</tspan>
+<tspan x='235.79794'>·</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='250.229121' y='125.469431'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='257.019643' y='121.129717'></text>
+<text font-family='futri8r' font-size='8.218248' x='256.756637' y='128.422347'>n</text>
+<text font-family='futri8r' font-size='8.218248' x='262.306817' y='128.422347'>n</text>
+<rect x='273.137181' y='115.357403' height='14.445813' width='.3985'/>
+<text font-family='futri8r' font-size='10.957664' x='278.317743' y='125.469431'>b</text>
+<text font-family='fourier-ms' font-size='8.218248' x='285.06046' y='121.129717'></text>
+<text font-family='futri8r' font-size='8.218248' x='284.821351' y='128.422347'>n</text>
+<text font-family='fourier-mex' font-size='10.998733' x='295.850962' y='69.019512'>⎤<tspan x='295.850962' y='88.377492'>⎥</tspan>
+<tspan x='295.850962' y='94.976799'>⎥</tspan>
+<tspan x='295.850962' y='101.576106'>⎥</tspan>
+<tspan x='295.850962' y='108.615337'>⎦</tspan>
+</text>
+</g>
+</svg>
+</div>
+<p>
+que corresponde a outro sistema de equações com a mesma
+solução do sistema original (as constantes <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5228297em' height='1.6320996em' viewBox='-0.360891 -9.566587 15.228297 16.320996' class='inline' style='vertical-align:-0.681521em'>
+<g id='eq15'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='7.029631' y='-4.339714'></text>
+<text font-family='futri8r' font-size='8.218248' x='6.766625' y='4.165592'>i</text>
+<text font-family='futri8r' font-size='8.218248' x='11.267745' y='4.165592'>j</text>
+</g>
+</svg>
+ e
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1599909em' height='1.6320996em' viewBox='-0.6 -9.566587 11.599909 16.320996' class='inline' style='vertical-align:-0.681521em'>
+<g id='eq16'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>b</text>
+<text font-family='fourier-ms' font-size='8.218248' x='6.742716' y='-4.339714'></text>
+<text font-family='futri8r' font-size='8.218248' x='7.400249' y='4.165592'>j</text>
+</g>
+</svg>
+ não são as mesmas <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5228297em' height='1.0482827em' viewBox='-0.360891 -6.100747 15.228297 10.482827' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq17'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futri8r' font-size='8.218248' x='6.766625' y='1.793263'>i</text>
+<text font-family='futri8r' font-size='8.218248' x='11.267745' y='1.793263'>j</text>
+</g>
+</svg>
+ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1599909em' height='1.3112666em' viewBox='-0.6 -8.730587 11.599909 13.112666' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq18'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>b</text>
+<text font-family='futri8r' font-size='8.218248' x='7.400249' y='1.793263'>j</text>
+</g>
+</svg>
+ da matriz
+inicial).
+</p>
+<p>
+A última equação nesse sistema permite obter facilmente o
+valor da variável <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2455938em' height='0.859263em' viewBox='-0.360891 -6.100747 12.455938 8.59263' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq19'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futri8r' font-size='8.218248' x='6.276459' y='1.793263'>n</text>
+</g>
+</svg>
+
+</p>
+<div class="eqn" id="eq-2.4">(2.4)</div>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13.7399111em' height='2.9243279em' viewBox='163.94806 66.185323 137.399111 29.243279' class='display'>
+<g id='eq20'>
+<text font-family='futri8r' font-size='10.957664' x='164.54806' y='84.105624'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='171.338582' y='79.168146'></text>
+<text font-family='futri8r' font-size='8.218248' x='171.075576' y='87.05854'>n</text>
+<text font-family='futri8r' font-size='8.218248' x='176.625756' y='87.05854'>n</text>
+<text font-family='futri8r' font-size='10.957664' x='184.082084' y='84.105624'>x</text>
+<text font-family='futri8r' font-size='8.218248' x='190.119434' y='85.898887'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='198.21335' y='84.105624'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='208.17328' y='84.105624'>b</text>
+<text font-family='fourier-ms' font-size='8.218248' x='214.915996' y='79.168146'></text>
+<text font-family='futri8r' font-size='8.218248' x='214.676888' y='87.05854'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='233.291349' y='84.105624'>⇒</text>
+<text font-family='futri8r' font-size='10.957664' x='257.095371' y='84.105624'>x</text>
+<text font-family='futri8r' font-size='8.218248' x='263.132721' y='85.898887'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='271.226636' y='84.105624'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='285.288677' y='75.751911'>b</text>
+<text font-family='fourier-ms' font-size='8.218248' x='292.031393' y='71.412197'></text>
+<text font-family='futri8r' font-size='8.218248' x='291.792284' y='78.704826'>n</text>
+<rect x='282.382081' y='80.690286' height='.637912' width='18.365091'/>
+<text font-family='futri8r' font-size='10.957664' x='282.621189' y='92.306849'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='289.411712' y='88.098646'></text>
+<text font-family='futri8r' font-size='8.218248' x='289.148706' y='94.729983'>n</text>
+<text font-family='futri8r' font-size='8.218248' x='294.698885' y='94.729983'>n</text>
+</g>
+</svg>
+</div>
+<p>
+Este resultado pode ser substituído na penúltima equação para obter o
+valor de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.2314642em' height='0.859263em' viewBox='-0.360891 -6.100747 22.314642 8.59263' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq21'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futri8r' font-size='8.218248' x='6.276459' y='1.793263'>n</text>
+<text font-family='fourier-ms' font-size='8.218248' x='11.826638' y='1.793263'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='17.762376' y='1.793263'>1</text>
+</g>
+</svg>
+,
+</p>
+<div class="eqn" id="eq-2.5">(2.5)</div>
+<div class="eqnalign">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='15.4722406em' height='1.5060575em' viewBox='-0.360891 -9.566587 154.722406 15.060575' class='inline' style='vertical-align:-0.551922em'>
+<g id='eq22'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='7.029631' y='-4.339714'></text>
+<text font-family='futri8r' font-size='8.218248' x='6.766625' y='3.735215'>n</text>
+<text font-family='fourier-ms' font-size='8.218248' x='12.316804' y='3.735215'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='18.252543' y='3.735215'>1</text>
+<text font-family='futr8r' font-size='8.218248' x='22.628133' y='3.735215'>,</text>
+<text font-family='futri8r' font-size='8.218248' x='24.815933' y='3.735215'>n</text>
+<text font-family='fourier-ms' font-size='8.218248' x='30.366112' y='3.735215'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='36.301851' y='3.735215'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='42.583575' y='0'>x</text>
+<text font-family='futri8r' font-size='8.218248' x='48.620925' y='1.793263'>n</text>
+<text font-family='fourier-ms' font-size='8.218248' x='54.171104' y='1.793263'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='60.106842' y='1.793263'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='66.441701' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='76.056277' y='0'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='82.846799' y='-4.339714'></text>
+<text font-family='futri8r' font-size='8.218248' x='82.583793' y='3.735215'>n</text>
+<text font-family='fourier-ms' font-size='8.218248' x='88.133972' y='3.735215'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='94.069711' y='3.735215'>1</text>
+<text font-family='futr8r' font-size='8.218248' x='98.445301' y='3.735215'>,</text>
+<text font-family='futri8r' font-size='8.218248' x='100.633101' y='3.735215'>n</text>
+<text font-family='futri8r' font-size='10.957664' x='108.089419' y='0'>x</text>
+<text font-family='futri8r' font-size='8.218248' x='114.126769' y='1.793263'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='122.220685' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='132.180615' y='0'>b</text>
+<text font-family='fourier-ms' font-size='8.218248' x='138.923331' y='-4.339714'></text>
+<text font-family='futri8r' font-size='8.218248' x='138.684223' y='3.735215'>n</text>
+<text font-family='fourier-ms' font-size='8.218248' x='144.234402' y='3.735215'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='150.17014' y='3.735215'>1</text>
+</g>
+</svg>
+ &emsp;
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1313924em' height='0.7007562em' viewBox='-0.6 -6.407562 11.313924 7.007562' class='inline' style='vertical-align:-0.06em'>
+<g id='eq23'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>⇒</text>
+</g>
+</svg>
+ &emsp;
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14.1599436em' height='3.3623228em' viewBox='-0.360891 -19.796505 141.599436 33.623228' class='inline' style='vertical-align:-1.388322em'>
+<g id='eq24'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+<text font-family='futri8r' font-size='8.218248' x='6.276459' y='1.793263'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='14.370374' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='31.502277' y='-8.353714'>b</text>
+<text font-family='fourier-ms' font-size='8.218248' x='38.244994' y='-12.693427'></text>
+<text font-family='futri8r' font-size='8.218248' x='38.005885' y='-5.400798'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='45.515337' y='-8.353714'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='54.890805' y='-8.353714'>1</text>
+<rect x='25.525818' y='-3.415339' height='.637912' width='41.175533'/>
+<text font-family='futri8r' font-size='10.957664' x='25.764927' y='8.201225'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='32.555449' y='3.993022'></text>
+<text font-family='futri8r' font-size='8.218248' x='32.292443' y='12.06795'>n</text>
+<text font-family='fourier-ms' font-size='8.218248' x='37.842623' y='12.06795'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='43.778361' y='12.06795'>1</text>
+<text font-family='futr8r' font-size='8.218248' x='48.153952' y='12.06795'>,</text>
+<text font-family='futri8r' font-size='8.218248' x='50.341751' y='12.06795'>n</text>
+<text font-family='fourier-ms' font-size='8.218248' x='55.891931' y='12.06795'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='61.827669' y='12.06795'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='69.358014' y='0'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='88.23037' y='-10.229918'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='95.020892' y='-14.569631'></text>
+<text font-family='futri8r' font-size='8.218248' x='94.757886' y='-6.494703'>n</text>
+<text font-family='fourier-ms' font-size='8.218248' x='100.308065' y='-6.494703'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='106.243803' y='-6.494703'>1</text>
+<text font-family='futr8r' font-size='8.218248' x='110.619394' y='-6.494703'>,</text>
+<text font-family='futri8r' font-size='8.218248' x='112.807194' y='-6.494703'>n</text>
+<text font-family='futri8r' font-size='10.957664' x='120.024403' y='-10.229918'>b</text>
+<text font-family='fourier-ms' font-size='8.218248' x='126.76712' y='-14.569631'></text>
+<text font-family='futri8r' font-size='8.218248' x='126.528011' y='-7.277002'>n</text>
+<rect x='79.928996' y='-3.415339' height='.637912' width='60.709549'/>
+<text font-family='futri8r' font-size='10.957664' x='80.168104' y='8.201225'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='86.958627' y='3.993022'></text>
+<text font-family='futri8r' font-size='8.218248' x='86.69562' y='12.06795'>n</text>
+<text font-family='fourier-ms' font-size='8.218248' x='92.2458' y='12.06795'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='98.181538' y='12.06795'>1</text>
+<text font-family='futr8r' font-size='8.218248' x='102.557129' y='12.06795'>,</text>
+<text font-family='futri8r' font-size='8.218248' x='104.744929' y='12.06795'>n</text>
+<text font-family='fourier-ms' font-size='8.218248' x='110.295108' y='12.06795'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='116.230846' y='12.06795'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='122.51257' y='8.201225'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='129.303093' y='3.993022'></text>
+<text font-family='futri8r' font-size='8.218248' x='129.040086' y='10.624358'>n</text>
+<text font-family='futri8r' font-size='8.218248' x='134.590266' y='10.624358'>n</text>
+</g>
+</svg>
+
+</div>
+<p>
+e assim sucessivamente, até se obter o valor de todas as variáveis.
+</p>
+<div class="example">
+<h3 id="ex-2.1">Exemplo 2.1</h3>
+<p>
+Resolva o sistema de equações:
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.3164476em' height='4.6172207em' viewBox='176.423752 84.103209 113.164476 46.172207' class='display'>
+<g id='eq25'>
+<text font-family='futr8r' font-size='10.957664' x='177.023752' y='92.154421'>8</text>
+<text font-family='futri8r' font-size='10.957664' x='184.265908' y='92.154421'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='192.170888' y='92.154421'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='201.546356' y='92.154421'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='207.380477' y='92.154421'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='210.297543' y='92.154421'>5</text>
+<text font-family='futri8r' font-size='10.957664' x='217.539699' y='92.154421'>z</text>
+<text font-family='fourier-ms' font-size='10.957664' x='224.918655' y='92.154421'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='234.294123' y='92.154421'>12</text>
+<text font-family='futr8r' font-size='10.957664' x='245.962365' y='92.154421'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='248.879431' y='92.154421'>4</text>
+<text font-family='fourier-ms' font-size='10.957664' x='256.759165' y='92.154421'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='266.719095' y='92.154421'>3</text>
+<text font-family='futr8r' font-size='10.957664' x='272.553216' y='92.154421'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='275.470282' y='92.154421'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='283.07109' y='92.154421'>y</text>
+<text font-family='futr8r' font-size='10.957664' x='177.023752' y='109.589041'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='184.265908' y='109.589041'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='192.170888' y='109.589041'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='201.546356' y='109.589041'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='207.380477' y='109.589041'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='210.297543' y='109.589041'>8</text>
+<text font-family='futri8r' font-size='10.957664' x='217.898351' y='109.589041'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='226.100856' y='109.589041'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='236.060786' y='109.589041'>7</text>
+<text font-family='futr8r' font-size='10.957664' x='241.894907' y='109.589041'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='244.811974' y='109.589041'>6</text>
+<text font-family='fourier-ms' font-size='10.957664' x='252.107244' y='109.589041'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='261.482712' y='109.589041'>6</text>
+<text font-family='futr8r' font-size='10.957664' x='267.316833' y='109.589041'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='270.233899' y='109.589041'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='277.476055' y='109.589041'>z</text>
+<text font-family='futri8r' font-size='10.957664' x='177.262861' y='127.023661'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='185.167841' y='127.023661'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='194.543309' y='127.023661'>3</text>
+<text font-family='futri8r' font-size='10.957664' x='202.144116' y='127.023661'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='209.762159' y='127.023661'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='219.137626' y='127.023661'>10</text>
+<text font-family='futr8r' font-size='10.957664' x='230.805869' y='127.023661'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='233.722935' y='127.023661'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='240.96509' y='127.023661'>z</text>
+<text font-family='fourier-ms' font-size='10.957664' x='248.92851' y='127.023661'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='258.88844' y='127.023661'>8</text>
+<text font-family='futr8r' font-size='10.957664' x='264.722561' y='127.023661'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='267.639628' y='127.023661'>4</text>
+</g>
+</svg>
+</div>
+<p>
+usando o método de eliminação de Gauss.
+</p>
+</div>
+<p>
+<b>Resolução</b>. No Maxima, convém guardar as 3 equações em 3
+variáveis
+</p>
+<div class="maxima">
+<span class="maxm">(%i1)</span> <span class="maxv">eq1</span><span class="maxm">:</span><span class="maxn"> 8</span><span class="maxo">*</span><span class="maxv">x</span><span class="maxo"> +</span><span class="maxn"> 4.5</span><span class="maxo">*</span><span class="maxv">z</span><span class="maxo"> -</span><span class="maxn"> 12.4</span><span class="maxo"> =</span><span class="maxn"> 3.2</span><span class="maxo">*</span><span class="maxv">y</span><span class="maxm">$</span><br>
+<span class="maxm">(%i2)</span> <span class="maxv">eq2</span><span class="maxm">:</span><span class="maxn"> 2</span><span class="maxo">*</span><span class="maxv">x</span><span class="maxo"> -</span><span class="maxn"> 0.8</span><span class="maxo">*</span><span class="maxv">y</span><span class="maxo"> =</span><span class="maxn"> 7.6</span><span class="maxo"> +</span><span class="maxn"> 6.1</span><span class="maxo">*</span><span class="maxv">z</span><span class="maxm">$</span><br>
+<span class="maxm">(%i3)</span> <span class="maxv">eq3</span><span class="maxm">:</span><span class="maxv"> x</span><span class="maxo"> +</span><span class="maxn"> 3</span><span class="maxo">*</span><span class="maxv">y</span><span class="maxo"> +</span><span class="maxn"> 10.2</span><span class="maxo">*</span><span class="maxv">z</span><span class="maxo"> =</span><span class="maxn"> 8.4</span><span class="maxm">$</span><br>
+</div>
+<p>
+Este sistema pode ser escrito da mesma forma do sistema
+geral&nbsp;<a href="#eq-2.1">2.1</a> para obter a matriz aumentada. A
+função <span id="augcoefmatrix" class="index
+maxf">augcoefmatrix</span> realiza esse procedimento dando como
+resultado a matriz aumentada. É necessário dar dois argumentos
+a <span class="maxf">augcoefmatrix</span>, a lista das equações e a
+lista das variáveis, na ordem que se quiser. Neste caso, a matriz
+aumentada pode ser guardada na variável <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.137967em' height='0.6832239em' viewBox='-0.6 -6.100747 11.37967 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq26'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+</g>
+</svg>
+ com o seguinte comando
+</p>
+<div class="maxima">
+<span class="maxm">(%i4)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> float</span><span class="maxd"> (</span><span class="maxf">augcoefmatrix </span><span class="maxd">([</span><span class="maxv">eq1</span><span class="maxd">,</span><span class="maxv"> eq2</span><span class="maxd">,</span><span class="maxv"> eq3</span><span class="maxd">], [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv"> y</span><span class="maxd">,</span><span class="maxv"> z</span><span class="maxd">]))</span><span class="maxm">;</span><br>
+(%o4) &emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13.0419079em' height='4.0718632em' viewBox='-0.6 -23.483306 130.419079 40.718632' class='inline' style='vertical-align:-1.924198em'>
+<g id='eq27'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-22.454355'>⎡<tspan x='0' y='-2.656451'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='7.332504' y='-14.653074'>8</text>
+<text font-family='futr8r' font-size='10.957664' x='13.166625' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.083691' y='-14.653074'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='31.880418' y='-14.653074'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='39.794736' y='-14.653074'>3</text>
+<text font-family='futr8r' font-size='10.957664' x='45.628857' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='48.545923' y='-14.653074'>2<tspan x='68.299799'>4</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='74.13392' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='77.050986' y='-14.653074'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='96.804859' y='-14.653074'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='104.719177' y='-14.653074'>12</text>
+<text font-family='futr8r' font-size='10.957664' x='116.387419' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='119.304485' y='-14.653074'>4<tspan x='7.332504' y='-.207261'>2</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='13.166625' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.083691' y='-.207261'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='31.880418' y='-.207261'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='39.794736' y='-.207261'>0</text>
+<text font-family='futr8r' font-size='10.957664' x='45.628857' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='48.545923' y='-.207261'>8</text>
+<text font-family='fourier-ms' font-size='10.957664' x='64.342638' y='-.207261'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='72.256956' y='-.207261'>6</text>
+<text font-family='futr8r' font-size='10.957664' x='78.091077' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='81.008143' y='-.207261'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='99.721914' y='-.207261'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='107.636232' y='-.207261'>7</text>
+<text font-family='futr8r' font-size='10.957664' x='113.470353' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='116.387419' y='-.207261'>6<tspan x='7.332504' y='14.238552'>1</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='13.166625' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.083691' y='14.238552'>0<tspan x='35.837579'>3</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='41.6717' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='44.588766' y='14.238552'>0<tspan x='65.382744'>10</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='77.050986' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='79.968053' y='14.238552'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='99.721914' y='14.238552'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='107.636232' y='14.238552'>8</text>
+<text font-family='futr8r' font-size='10.957664' x='113.470353' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='116.387419' y='14.238552'>4</text>
+<text font-family='fourier-mex' font-size='10.998733' x='125.138549' y='-22.454355'>⎤<tspan x='125.138549' y='-2.656451'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+optou-se por usar a função <span id="float" class="index
+maxf">float</span> para evitar que a matriz seja armazenada em números
+racionais.
+</p>
+<p>
+Há que ter em conta que os números na última coluna não são <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0686832em' height='1.1222469em' viewBox='-0.6 -8.730587 10.686832 11.222469' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq28'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>b</text>
+<text font-family='futri8r' font-size='8.218248' x='6.503608' y='1.793263'>i</text>
+</g>
+</svg>
+ mas
+sim <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.8601149em' height='1.1222469em' viewBox='-0.6 -8.730587 18.601149 11.222469' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq29'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='7.914318' y='0'>b</text>
+<text font-family='futri8r' font-size='8.218248' x='14.417925' y='1.793263'>i</text>
+</g>
+</svg>
+ (ou seja, no sistema&nbsp;<a href="#eq-2.1">2.1</a> todas
+as equações foram igualadas a zero).
+</p>
+<p>
+Antes de começar com o processo de eliminação pode fixar-se um número
+reduzido de algarismos significativos, por exemplo 4, para os
+resultados que serão apresentados a seguir, de modo a evitar que as
+matrizes tenham muitos algarismos:
+</p>
+<div class="maxima">
+<span class="maxm">(%i5)</span> <span class="maxv">fpprintprec</span><span class="maxm">:</span><span class="maxn"> 4</span><span class="maxm">$</span><br>
+</div>
+<p>
+Como está a ser usado o formato de vírgula flutuante de dupla precisão
+(8 bytes), internamente os cálculos continuarão a ser feitos com 16
+algarismos significativos, mas todos os resultados apresentados no
+ecrã serão arredondados para 4 algarismos significativos.
+</p>
+<p>
+Para reduzir a matriz à forma triangular, começa-se por substituir a
+segunda linha, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2000293em' height='1.0575967em' viewBox='-0.6 -8.182704 12.000293 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq30'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futr8r' font-size='8.218248' x='6.814442' y='1.793263'>2</text>
+</g>
+</svg>
+, por <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2000293em' height='1.0575967em' viewBox='-0.6 -8.182704 12.000293 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq31'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futr8r' font-size='8.218248' x='6.814442' y='1.793263'>2</text>
+</g>
+</svg>
+ - (1/4)&thinsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1605817em' height='1.0575967em' viewBox='-0.6 -8.182704 11.605817 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq32'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futr8r' font-size='8.218248' x='6.814442' y='1.793263'>1</text>
+</g>
+</svg>
+, onde <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1605817em' height='1.0575967em' viewBox='-0.6 -8.182704 11.605817 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq33'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futr8r' font-size='8.218248' x='6.814442' y='1.793263'>1</text>
+</g>
+</svg>
+
+representa toda a primeira linha da matriz. O objetivo é fazer com que
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5694481em' height='0.8494011em' viewBox='-0.360891 -6.100747 15.694481 8.494011' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq34'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='1.793263'>21</text>
+</g>
+</svg>
+ fique igual a zero (note-se que 1/4 foi calculado dividindo
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5694481em' height='0.8494011em' viewBox='-0.360891 -6.100747 15.694481 8.494011' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq35'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='1.793263'>21</text>
+</g>
+</svg>
+ por <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5694481em' height='0.8494011em' viewBox='-0.360891 -6.100747 15.694481 8.494011' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq36'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='1.793263'>11</text>
+</g>
+</svg>
+).
+</p>
+<p>
+No Maxima, a função <span id="rowop maxf"
+class="index">rowop</span>(<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.137967em' height='0.6832239em' viewBox='-0.6 -6.100747 11.37967 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq37'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.5177632em' height='0.9166222em' viewBox='-0.6 -8.43473 5.177632 9.166222' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq38'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>i</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.5857007em' height='1.1686485em' viewBox='-0.061938 -8.43473 5.857007 11.686485' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq39'>
+<text font-family='futri8r' font-size='10.957664' x='1.195521' y='0'>j</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7796514em' height='0.9462079em' viewBox='-0.6 -8.730587 7.796514 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq40'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>k</text>
+</g>
+</svg>
+) produz uma nova matriz,
+em que a linha <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0997666em' height='1.0674586em' viewBox='-0.6 -8.182704 10.997666 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq41'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814442' y='1.793263'>i</text>
+</g>
+</svg>
+ da matriz <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.137967em' height='0.6832239em' viewBox='-0.6 -6.100747 11.37967 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq42'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+</g>
+</svg>
+ é substituída por <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0997666em' height='1.0674586em' viewBox='-0.6 -8.182704 10.997666 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq43'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814442' y='1.793263'>i</text>
+</g>
+</svg>
+ - <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.9906068em' height='1.3112666em' viewBox='-0.6 -8.730587 19.906068 13.112666' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq44'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='7.995324' y='0'>L</text>
+<text font-family='futri8r' font-size='8.218248' x='15.706407' y='1.793263'>j</text>
+</g>
+</svg>
+
+e as restantes linhas ficam iguais. Assim sendo, a substituição <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2000293em' height='1.0575967em' viewBox='-0.6 -8.182704 12.000293 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq45'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futr8r' font-size='8.218248' x='6.814442' y='1.793263'>2</text>
+</g>
+</svg>
+
+- (1/4)&thinsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1605817em' height='1.0575967em' viewBox='-0.6 -8.182704 11.605817 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq46'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futr8r' font-size='8.218248' x='6.814442' y='1.793263'>1</text>
+</g>
+</svg>
+ &rarr; <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.2000293em' height='1.0575967em' viewBox='-0.6 -8.182704 12.000293 10.575967' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq47'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futr8r' font-size='8.218248' x='6.814442' y='1.793263'>2</text>
+</g>
+</svg>
+ pode ser feita com o seguinte
+comando:
+</p>
+<div class="maxima">
+<span class="maxm">(%i6)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> rowop</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">,</span><span class="maxn"> 2</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxo">/</span><span class="maxn">4</span><span class="maxd">)</span><span class="maxm">;</span><br>
+(%o6) &emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14.2087298em' height='4.0718632em' viewBox='-0.6 -23.483306 142.087298 40.718632' class='inline' style='vertical-align:-1.924198em'>
+<g id='eq48'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-22.454355'>⎡<tspan x='0' y='-2.656451'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='7.332504' y='-14.653074'>8</text>
+<text font-family='futr8r' font-size='10.957664' x='13.166625' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.083691' y='-14.653074'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='31.880418' y='-14.653074'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='39.794736' y='-14.653074'>3</text>
+<text font-family='futr8r' font-size='10.957664' x='45.628857' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='48.545923' y='-14.653074'>2<tspan x='74.133909'>4</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='79.96803' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='82.885096' y='-14.653074'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='108.473078' y='-14.653074'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='116.387396' y='-14.653074'>12</text>
+<text font-family='futr8r' font-size='10.957664' x='128.055638' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='130.972704' y='-14.653074'>4<tspan x='7.332504' y='-.207261'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='13.166625' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.083691' y='-.207261'>0<tspan x='35.837579'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='41.6717' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='44.588766' y='-.207261'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='64.342638' y='-.207261'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='72.256956' y='-.207261'>7</text>
+<text font-family='futr8r' font-size='10.957664' x='78.091077' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='81.008143' y='-.207261'>225</text>
+<text font-family='fourier-ms' font-size='10.957664' x='111.390133' y='-.207261'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='119.304451' y='-.207261'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='125.138572' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='128.055638' y='-.207261'>5<tspan x='7.332504' y='14.238552'>1</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='13.166625' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.083691' y='14.238552'>0<tspan x='35.837579'>3</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='41.6717' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='44.588766' y='14.238552'>0<tspan x='71.216854'>10</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='82.885096' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='85.802162' y='14.238552'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='111.390133' y='14.238552'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='119.304451' y='14.238552'>8</text>
+<text font-family='futr8r' font-size='10.957664' x='125.138572' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='128.055638' y='14.238552'>4</text>
+<text font-family='fourier-mex' font-size='10.998733' x='136.806768' y='-22.454355'>⎤<tspan x='136.806768' y='-2.656451'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+A seguir, para eliminar <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5694481em' height='0.859263em' viewBox='-0.360891 -6.100747 15.694481 8.59263' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq49'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='1.793263'>31</text>
+</g>
+</svg>
+ = 1.0 usando novamente <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5694481em' height='0.8494011em' viewBox='-0.360891 -6.100747 15.694481 8.494011' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq50'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='1.793263'>11</text>
+</g>
+</svg>
+ =
+8.0, faz-se a substituição <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1901674em' height='1.0674586em' viewBox='-0.6 -8.182704 11.901674 10.674586' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq51'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futr8r' font-size='8.218248' x='6.814442' y='1.793263'>3</text>
+</g>
+</svg>
+ - <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.9601141em' height='1.112385em' viewBox='-0.6 -8.730587 19.601141 11.12385' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq52'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='7.995324' y='0'>L</text>
+<text font-family='futr8r' font-size='8.218248' x='14.809766' y='1.793263'>1</text>
+</g>
+</svg>
+ &rarr; <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1901674em' height='1.0674586em' viewBox='-0.6 -8.182704 11.901674 10.674586' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq53'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futr8r' font-size='8.218248' x='6.814442' y='1.793263'>3</text>
+</g>
+</svg>
+, onde <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7796514em' height='0.9462079em' viewBox='-0.6 -8.730587 7.796514 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq54'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>k</text>
+</g>
+</svg>
+ =
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.6767458em' height='1.0838951em' viewBox='-0.360891 -8.347069 36.767458 10.838951' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq55'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='1.793263'>11</text>
+<text font-family='futr8r' font-size='10.957664' x='16.015937' y='0'>/</text>
+<text font-family='futri8r' font-size='10.957664' x='21.312086' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='27.839602' y='1.793263'>31</text>
+</g>
+</svg>
+ = 1/8. Ou seja,
+</p>
+<div class="maxima">
+<span class="maxm">(%i7)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> rowop</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">,</span><span class="maxn"> 3</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxo">/</span><span class="maxn">8</span><span class="maxd">)</span><span class="maxm">;</span><br>
+(%o7) &emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14.2087298em' height='4.0718632em' viewBox='-0.6 -23.483306 142.087298 40.718632' class='inline' style='vertical-align:-1.924198em'>
+<g id='eq56'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-22.454355'>⎡<tspan x='0' y='-2.656451'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='7.332504' y='-14.653074'>8</text>
+<text font-family='futr8r' font-size='10.957664' x='13.166625' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.083691' y='-14.653074'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='31.880418' y='-14.653074'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='39.794736' y='-14.653074'>3</text>
+<text font-family='futr8r' font-size='10.957664' x='45.628857' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='48.545923' y='-14.653074'>2<tspan x='74.133909'>4</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='79.96803' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='82.885096' y='-14.653074'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='108.473078' y='-14.653074'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='116.387396' y='-14.653074'>12</text>
+<text font-family='futr8r' font-size='10.957664' x='128.055638' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='130.972704' y='-14.653074'>4<tspan x='7.332504' y='-.207261'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='13.166625' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.083691' y='-.207261'>0<tspan x='35.837579'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='41.6717' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='44.588766' y='-.207261'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='64.342638' y='-.207261'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='72.256956' y='-.207261'>7</text>
+<text font-family='futr8r' font-size='10.957664' x='78.091077' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='81.008143' y='-.207261'>225</text>
+<text font-family='fourier-ms' font-size='10.957664' x='111.390133' y='-.207261'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='119.304451' y='-.207261'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='125.138572' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='128.055638' y='-.207261'>5<tspan x='7.332504' y='14.238552'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='13.166625' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.083691' y='14.238552'>0<tspan x='35.837579'>3</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='41.6717' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='44.588766' y='14.238552'>4<tspan x='68.299799'>9</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='74.13392' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='77.050986' y='14.238552'>637</text>
+<text font-family='fourier-ms' font-size='10.957664' x='108.473078' y='14.238552'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='116.387396' y='14.238552'>6</text>
+<text font-family='futr8r' font-size='10.957664' x='122.221517' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='125.138583' y='14.238552'>85</text>
+<text font-family='fourier-mex' font-size='10.998733' x='136.806768' y='-22.454355'>⎤<tspan x='136.806768' y='-2.656451'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+Neste momento deveria usar-se <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.6088957em' height='1.3901802em' viewBox='-0.360891 -9.566587 16.088957 13.901802' class='inline' style='vertical-align:-0.434922em'>
+<g id='eq57'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='7.029631' y='-4.339714'></text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='3.735215'>22</text>
+</g>
+</svg>
+ para eliminar <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5990338em' height='1.4000421em' viewBox='-0.360891 -9.566587 15.990338 14.000421' class='inline' style='vertical-align:-0.43942em'>
+<g id='eq58'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='7.029631' y='-4.339714'></text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='3.735215'>23</text>
+</g>
+</svg>
+. No
+entanto, isso não é possível porque <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.6088957em' height='1.3901802em' viewBox='-0.360891 -9.566587 16.088957 13.901802' class='inline' style='vertical-align:-0.434922em'>
+<g id='eq59'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='7.029631' y='-4.339714'></text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='3.735215'>22</text>
+</g>
+</svg>
+ é nula (<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7796514em' height='0.9462079em' viewBox='-0.6 -8.730587 7.796514 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq60'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>k</text>
+</g>
+</svg>
+ =
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.7161934em' height='1.4000421em' viewBox='-0.360891 -9.566587 37.161934 14.000421' class='inline' style='vertical-align:-0.43942em'>
+<g id='eq61'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='7.029631' y='-4.339714'></text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='3.735215'>23</text>
+<text font-family='futr8r' font-size='10.957664' x='16.015937' y='0'>/</text>
+<text font-family='futri8r' font-size='10.957664' x='21.312086' y='0'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='28.102608' y='-4.339714'></text>
+<text font-family='futr8r' font-size='8.218248' x='27.839602' y='3.735215'>22</text>
+</g>
+</svg>
+ não existe). Em casos como este, troca-se a linha em
+questão (neste caso a segunda) com uma linha posterior (neste caso
+apenas pode ser com a terceira). Essa troca de linhas equivale a
+alterar a ordem das equações, sem que por isso se altere a
+solução. Usa-se a função <span id="rowswap" class="index
+maxf">rowswap</span> para trocar a ordem de duas linhas:
+</p>
+<div class="maxima">
+<span class="maxm">(%i8)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> rowswap</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">,</span><span class="maxn"> 2</span><span class="maxd">,</span><span class="maxn"> 3</span><span class="maxd">)</span><span class="maxm">;</span><br>
+(%o8) &emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14.2087298em' height='4.0718632em' viewBox='-0.6 -23.483306 142.087298 40.718632' class='inline' style='vertical-align:-1.924198em'>
+<g id='eq62'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-22.454355'>⎡<tspan x='0' y='-2.656451'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='7.332504' y='-14.653074'>8</text>
+<text font-family='futr8r' font-size='10.957664' x='13.166625' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.083691' y='-14.653074'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='31.880418' y='-14.653074'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='39.794736' y='-14.653074'>3</text>
+<text font-family='futr8r' font-size='10.957664' x='45.628857' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='48.545923' y='-14.653074'>2<tspan x='74.133909'>4</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='79.96803' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='82.885096' y='-14.653074'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='108.473078' y='-14.653074'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='116.387396' y='-14.653074'>12</text>
+<text font-family='futr8r' font-size='10.957664' x='128.055638' y='-14.653074'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='130.972704' y='-14.653074'>4<tspan x='7.332504' y='-.207261'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='13.166625' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.083691' y='-.207261'>0<tspan x='35.837579'>3</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='41.6717' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='44.588766' y='-.207261'>4<tspan x='68.299799'>9</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='74.13392' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='77.050986' y='-.207261'>637</text>
+<text font-family='fourier-ms' font-size='10.957664' x='108.473078' y='-.207261'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='116.387396' y='-.207261'>6</text>
+<text font-family='futr8r' font-size='10.957664' x='122.221517' y='-.207261'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='125.138583' y='-.207261'>85<tspan x='7.332504' y='14.238552'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='13.166625' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='16.083691' y='14.238552'>0<tspan x='35.837579'>0</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='41.6717' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='44.588766' y='14.238552'>0</text>
+<text font-family='fourier-ms' font-size='10.957664' x='64.342638' y='14.238552'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='72.256956' y='14.238552'>7</text>
+<text font-family='futr8r' font-size='10.957664' x='78.091077' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='81.008143' y='14.238552'>225</text>
+<text font-family='fourier-ms' font-size='10.957664' x='111.390133' y='14.238552'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='119.304451' y='14.238552'>4</text>
+<text font-family='futr8r' font-size='10.957664' x='125.138572' y='14.238552'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='128.055638' y='14.238552'>5</text>
+<text font-family='fourier-mex' font-size='10.998733' x='136.806768' y='-22.454355'>⎤<tspan x='136.806768' y='-2.656451'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+ficando assim uma matriz diagonal superior, que permite passar à
+segunda fase do método.
+</p>
+<p>
+Para resolver as equações associadas a cada linha da matriz é
+conveniente definir uma lista com as variáveis, na mesma ordem em que
+foram usadas para encontrar a matriz aumentada, seguidas por 1:
+</p>
+<div class="maxima">
+<span class="maxm">(%i9)</span> <span class="maxv">vars</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxv">x</span><span class="maxd">,</span><span class="maxv"> y</span><span class="maxd">,</span><span class="maxv"> z</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxd">]</span><span class="maxm">$</span><br>
+</div>
+<p>
+Multiplicando a terceira linha da matriz <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.137967em' height='0.6832239em' viewBox='-0.6 -6.100747 11.37967 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq63'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+</g>
+</svg>
+ pela lista de variáveis,
+obtém-se a última equação, na qual só aparece a variável <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.687607em' height='0.6700747em' viewBox='-0.360891 -5.969256 6.87607 6.700747' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq64'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>z</text>
+</g>
+</svg>
+;
+resolve-se essa equação para encontrar o valor de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.687607em' height='0.6700747em' viewBox='-0.360891 -5.969256 6.87607 6.700747' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq65'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>z</text>
+</g>
+</svg>
+, que será
+guardado para ser usado nos passos seguintes
+</p>
+<div class="maxima">
+<span class="maxm">(%i10)</span> <span class="maxv">sol</span><span class="maxm">:</span><span class="maxf"> float</span><span class="maxd"> (</span><span class="maxf">solve</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]</span><span class="maxo">.</span><span class="maxv">vars</span><span class="maxd">))</span><span class="maxm">;</span><br>
+(%o10) &emsp;&emsp;&emsp;[ <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.687607em' height='0.6700747em' viewBox='-0.360891 -5.969256 6.87607 6.700747' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq66'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>z</text>
+</g>
+</svg>
+ = -0.6228 ]
+</div>
+<p>
+Multiplicando a segunda linha da matriz pela lista de variáveis e
+substituindo o valor que já foi encontrado para <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.687607em' height='0.6700747em' viewBox='-0.360891 -5.969256 6.87607 6.700747' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq67'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>z</text>
+</g>
+</svg>
+, obtém-se uma
+equação que depende unicamente de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq68'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+. A resolução dessa equação
+conduz ao valor de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq69'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+ e é conveniente acrescentar esse resultado na
+mesma lista em que foi armazenado o valor de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.687607em' height='0.6700747em' viewBox='-0.360891 -5.969256 6.87607 6.700747' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq70'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>z</text>
+</g>
+</svg>
+
+</p>
+<div class="maxima">
+<span class="maxm">(%i11)</span> <span class="maxv">sol</span><span class="maxm">:</span><span class="maxf"> append</span><span class="maxd"> (</span><span class="maxf">float</span><span class="maxd"> (</span><span class="maxf">solve</span><span class="maxd"> (</span><span class="maxf"> subst</span><span class="maxd"> (</span><span class="maxv">sol</span><span class="maxd">,</span><span class="maxv"> m</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]</span><span class="maxo">.</span><span class="maxv">vars</span><span class="maxd">))),</span><span class="maxv"> sol</span><span class="maxd">)</span><span class="maxm">;</span><br>
+(%o11) &emsp;&emsp;&emsp;[ <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq71'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+ = 3.78, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.687607em' height='0.6700747em' viewBox='-0.360891 -5.969256 6.87607 6.700747' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq72'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>z</text>
+</g>
+</svg>
+ = -0.6228 ]
+</div>
+<p>
+Finalmente, repete-se o comando anterior, mas agora multiplicando pela
+primeira linha da matriz, para determinar o valor de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq73'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+
+</p>
+<div class="maxima">
+<span class="maxm">(%i12)</span> <span class="maxv">sol</span><span class="maxm">:</span><span class="maxf"> append</span><span class="maxd"> (</span><span class="maxf">float</span><span class="maxd"> (</span><span class="maxf">solve</span><span class="maxd"> (</span><span class="maxf"> subst</span><span class="maxd"> (</span><span class="maxv">sol</span><span class="maxd">,</span><span class="maxv"> m</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">]</span><span class="maxo">.</span><span class="maxv">vars</span><span class="maxd">))),</span><span class="maxv"> sol</span><span class="maxd">)</span><span class="maxm">;</span><br>
+(%o12) &emsp;&emsp;&emsp;[ <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7402038em' height='0.6832239em' viewBox='-0.360891 -6.100747 7.402038 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq74'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>x</text>
+</g>
+</svg>
+ = 3.412, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7171927em' height='0.9352502em' viewBox='-0.057028 -6.100747 7.171927 9.352502' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq75'>
+<text font-family='futri8r' font-size='10.957664' x='.597761' y='0'>y</text>
+</g>
+</svg>
+ = 3.78, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.687607em' height='0.6700747em' viewBox='-0.360891 -5.969256 6.87607 6.700747' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq76'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>z</text>
+</g>
+</svg>
+ = -0.6228 ]
+</div>
+</section>
+<section>
+<h2 id="sec-2.3">2.3. Método de Gauss-Jordan</h2>
+<p>
+O método de eliminação de Gauss tem a vantagem de não alterar o valor
+do determinante da matriz com coeficientes <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5228297em' height='1.0482827em' viewBox='-0.360891 -6.100747 15.228297 10.482827' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq77'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futri8r' font-size='8.218248' x='6.766625' y='1.793263'>i</text>
+<text font-family='futri8r' font-size='8.218248' x='11.267745' y='1.793263'>j</text>
+</g>
+</svg>
+ e, como tal, o
+determinante pode ser calculado facilmente multiplicando os valores
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.431522em' height='1.4430799em' viewBox='-0.360891 -9.566587 14.31522 14.430799' class='inline' style='vertical-align:-0.48532em'>
+<g id='eq78'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='7.029631' y='-4.339714'></text>
+<text font-family='futri8r' font-size='8.218248' x='6.766625' y='4.165592'>i</text>
+<text font-family='futri8r' font-size='8.218248' x='10.371104' y='4.165592'>i</text>
+</g>
+</svg>
+ na diagonal da matriz triangular obtida.
+</p>
+<p>
+O método de Gauss-Jordan consiste em transformar a matriz aumentada
+até os coeficientes <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5228297em' height='1.6320996em' viewBox='-0.360891 -9.566587 15.228297 16.320996' class='inline' style='vertical-align:-0.681521em'>
+<g id='eq79'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='7.029631' y='-4.339714'></text>
+<text font-family='futri8r' font-size='8.218248' x='6.766625' y='4.165592'>i</text>
+<text font-family='futri8r' font-size='8.218248' x='11.267745' y='4.165592'>j</text>
+</g>
+</svg>
+ corresponder à matriz identidade, ou
+seja, iguais a 1 se <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.5177632em' height='0.9166222em' viewBox='-0.6 -8.43473 5.177632 9.166222' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq80'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>i</text>
+</g>
+</svg>
+ = <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.5857007em' height='1.1686485em' viewBox='-0.061938 -8.43473 5.857007 11.686485' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq81'>
+<text font-family='futri8r' font-size='10.957664' x='1.195521' y='0'>j</text>
+</g>
+</svg>
+ ou zero caso contrário. A grande
+vantagem é que os valores finais de <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0686832em' height='1.4430799em' viewBox='-0.6 -9.566587 10.686832 14.430799' class='inline' style='vertical-align:-0.48532em'>
+<g id='eq82'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>b</text>
+<text font-family='fourier-ms' font-size='8.218248' x='6.742716' y='-4.339714'></text>
+<text font-family='futri8r' font-size='8.218248' x='6.503608' y='4.165592'>i</text>
+</g>
+</svg>
+ são os valores das
+variáveis, sem ser preciso realizar mais contas. Em contrapartida, o
+determinante da matriz já não é o produto dos elementos na diagonal da
+matriz reduzida.
+</p>
+<p>
+Para conseguir transformar a matriz na matriz identidade, começa-se
+por dividir a primeira equação por <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5694481em' height='0.8494011em' viewBox='-0.360891 -6.100747 15.694481 8.494011' class='inline' style='vertical-align:-0.239999em'>
+<g id='eq83'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='1.793263'>11</text>
+</g>
+</svg>
+, para que <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.5694481em' height='1.3901802em' viewBox='-0.360891 -9.566587 15.694481 13.901802' class='inline' style='vertical-align:-0.434922em'>
+<g id='eq84'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='7.029631' y='-4.339714'></text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='3.735215'>11</text>
+</g>
+</svg>
+ fique
+igual a 1, e a seguir usa-se essa primeira linha para eliminar o
+primeiro elemento em todas as outras linhas. A seguir divide-se a
+segunda linha por <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.6088957em' height='1.3901802em' viewBox='-0.360891 -9.566587 16.088957 13.901802' class='inline' style='vertical-align:-0.434922em'>
+<g id='eq85'>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>a</text>
+<text font-family='fourier-ms' font-size='8.218248' x='7.029631' y='-4.339714'></text>
+<text font-family='futr8r' font-size='8.218248' x='6.766625' y='3.735215'>22</text>
+</g>
+</svg>
+, para que este fique igual a 1 e usa-se
+essa segunda linha para eliminar o segundo elemento em todas as outras
+linhas, incluindo a primeira.
+</p>
+<p>
+Não existe um comando específico do Maxima para dividir uma linha de
+uma matriz por uma constante; no entanto, a divisão por <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7796514em' height='0.9462079em' viewBox='-0.6 -8.730587 7.796514 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq86'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>k</text>
+</g>
+</svg>
+ pode ser
+feita com a função <span id="rowop" class="index
+maxf">rowop</span>(<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.137967em' height='0.6832239em' viewBox='-0.6 -6.100747 11.37967 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq87'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.5177632em' height='0.9166222em' viewBox='-0.6 -8.43473 5.177632 9.166222' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq88'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>i</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.5177632em' height='0.9166222em' viewBox='-0.6 -8.43473 5.177632 9.166222' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq89'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>i</text>
+</g>
+</svg>
+, <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.5358413em' height='0.9494952em' viewBox='-0.6 -8.730587 35.358413 9.494952' class='inline' style='vertical-align:-0.082198em'>
+<g id='eq90'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.295271' y='0'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='16.670738' y='0'>1/</text>
+<text font-family='futri8r' font-size='10.957664' x='27.561899' y='0'>k</text>
+</g>
+</svg>
+), que substitui a linha
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0997666em' height='1.0674586em' viewBox='-0.6 -8.182704 10.997666 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq91'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814442' y='1.793263'>i</text>
+</g>
+</svg>
+ da matriz <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.137967em' height='0.6832239em' viewBox='-0.6 -6.100747 11.37967 6.832239' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq92'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+</g>
+</svg>
+, por <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0997666em' height='1.0674586em' viewBox='-0.6 -8.182704 10.997666 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq93'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814442' y='1.793263'>i</text>
+</g>
+</svg>
+ - (1-1/<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7796514em' height='0.9462079em' viewBox='-0.6 -8.730587 7.796514 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq94'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>k</text>
+</g>
+</svg>
+)&thinsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0997666em' height='1.0674586em' viewBox='-0.6 -8.182704 10.997666 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq95'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814442' y='1.793263'>i</text>
+</g>
+</svg>
+ = <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0997666em' height='1.0674586em' viewBox='-0.6 -8.182704 10.997666 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq96'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814442' y='1.793263'>i</text>
+</g>
+</svg>
+/<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.7796514em' height='0.9462079em' viewBox='-0.6 -8.730587 7.796514 9.462079' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq97'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>k</text>
+</g>
+</svg>
+.
+</p>
+<div class="example">
+<h3 id="ex-2.2">Exemplo 2.2</h3>
+<p>
+Determine a solução do seguinte sistema, pelo método de Gauss-Jordan
+</p>
+<div class="center">
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.1471737em' height='4.5412334em' viewBox='177.206796 84.103209 111.471737 45.412334' class='display'>
+<g id='eq98'>
+<text font-family='futr8r' font-size='10.957664' x='177.806796' y='92.154421'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='185.048952' y='92.154421'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='191.086302' y='93.947684'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='197.421173' y='92.154421'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='206.796641' y='92.154421'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='212.630762' y='92.154421'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='215.547828' y='92.154421'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='222.789984' y='92.154421'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='228.827334' y='93.947684'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='235.162205' y='92.154421'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='244.537673' y='92.154421'>4</text>
+<text font-family='futri8r' font-size='10.957664' x='251.779828' y='92.154421'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='257.817178' y='93.947684'>3</text>
+<text font-family='fourier-ms' font-size='10.957664' x='264.73641' y='92.154421'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='274.696341' y='92.154421'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='178.643654' y='109.589041'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='186.557972' y='109.589041'>3</text>
+<text font-family='futri8r' font-size='10.957664' x='193.800128' y='109.589041'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='199.837478' y='111.382304'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='206.172349' y='109.589041'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='215.547817' y='109.589041'>3</text>
+<text font-family='futri8r' font-size='10.957664' x='222.789972' y='109.589041'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='228.827322' y='111.382304'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='235.162194' y='109.589041'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='244.537661' y='109.589041'>5</text>
+<text font-family='futri8r' font-size='10.957664' x='251.779817' y='109.589041'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='257.817167' y='111.382304'>3</text>
+<text font-family='fourier-ms' font-size='10.957664' x='264.73641' y='109.589041'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='274.696341' y='109.589041'>12<tspan x='177.806796' y='127.023661'>2</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='183.640917' y='127.023661'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='186.557984' y='127.023661'>5</text>
+<text font-family='futri8r' font-size='10.957664' x='193.800139' y='127.023661'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='199.837489' y='128.816924'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='206.172361' y='127.023661'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='215.547828' y='127.023661'>4</text>
+<text font-family='futri8r' font-size='10.957664' x='222.789984' y='127.023661'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='228.827334' y='128.816924'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='235.162205' y='127.023661'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='244.537673' y='127.023661'>3</text>
+<text font-family='futri8r' font-size='10.957664' x='251.779828' y='127.023661'>x</text>
+<text font-family='futr8r' font-size='8.218248' x='257.817178' y='128.816924'>3</text>
+<text font-family='fourier-ms' font-size='10.957664' x='264.73641' y='127.023661'>=<tspan x='274.696341'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='282.610658' y='127.023661'>6</text>
+</g>
+</svg>
+</div>
+</div>
+<p>
+<b>Resolução</b>. Para mostrar como é possível obter soluções exatas,
+na resolução deste exemplo só será usada a
+função <span class="maxf">float</span> no fim e os dois números de
+vírgula flutuante 1.2 e 2.5 na primeira e terceira equações serão
+escritos como as fracções 12/10 e 25/10.
+</p>
+<p>
+Em vez de se usar a função <span class="maxf">augcoefmatrix</span>, a
+matriz aumentada pode também ser inserida diretamente usando a
+função <span id="matrix" class="index maxf">matrix</span>
+</p>
+<div class="maxima">
+<span class="maxm">(%i13)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> matrix</span><span class="maxd"> ([</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">12</span><span class="maxo">/</span><span class="maxn">10</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxd">,</span><span class="maxn">5</span><span class="maxd">],[</span><span class="maxo">-</span><span class="maxn">3</span><span class="maxd">,</span><span class="maxn">3</span><span class="maxd">,</span><span class="maxn">5</span><span class="maxd">,</span><span class="maxn">12</span><span class="maxd">],[</span><span class="maxn">25</span><span class="maxo">/</span><span class="maxn">10</span><span class="maxd">,</span><span class="maxn">4</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">3</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">6</span><span class="maxd">])</span><span class="maxm">;</span><br>
+(%o13) &emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.9885645em' height='6.3110913em' viewBox='-0.6 -34.695254 99.885645 63.110913' class='inline' style='vertical-align:-2.851998em'>
+<g id='eq99'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-32.353315'>⎡<tspan x='0' y='-12.995335'>⎢</tspan>
+<tspan x='0' y='-6.396028'>⎢</tspan>
+<tspan x='0' y='.203278'>⎢</tspan>
+<tspan x='0' y='7.242509'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='11.289664' y='-18.550401'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='31.04356' y='-18.550401'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='40.153391' y='-26.644042'>6</text>
+<rect x='40.153391' y='-21.965739' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='40.153391' y='-10.349176'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='57.145643' y='-18.550401'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='65.059961' y='-18.550401'>4<tspan x='84.81386'>5</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.332504' y='-.177374'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='15.246821' y='-.177374'>3<tspan x='36.196234'>3</tspan>
+<tspan x='61.102804'>5</tspan>
+<tspan x='81.896805'>12</tspan>
+<tspan x='11.289664' y='11.520792'>5</tspan>
+</text>
+<rect x='11.289664' y='16.199095' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='11.289664' y='27.815659'>2<tspan x='36.196234' y='19.614434'>4</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='57.145643' y='19.614434'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='65.059961' y='19.614434'>3</text>
+<text font-family='fourier-ms' font-size='10.957664' x='80.856699' y='19.614434'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='88.771017' y='19.614434'>6</text>
+<text font-family='fourier-mex' font-size='10.998733' x='94.605115' y='-32.353315'>⎤<tspan x='94.605115' y='-12.995335'>⎥</tspan>
+<tspan x='94.605115' y='-6.396028'>⎥</tspan>
+<tspan x='94.605115' y='.203278'>⎥</tspan>
+<tspan x='94.605115' y='7.242509'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+Começa-se por dividir a primeira linha pelo seu primeiro elemento (ou
+seja 2):
+</p>
+<div class="maxima">
+<span class="maxm">(%i14)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> rowop</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxo"> -</span><span class="maxn"> 1</span><span class="maxo">/</span><span class="maxv">m</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">])</span><span class="maxm">;</span><br>
+(%o14) &emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.9885645em' height='6.3110913em' viewBox='-0.6 -34.695254 99.885645 63.110913' class='inline' style='vertical-align:-2.851998em'>
+<g id='eq100'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-32.353315'>⎡<tspan x='0' y='-12.995335'>⎢</tspan>
+<tspan x='0' y='-6.396028'>⎢</tspan>
+<tspan x='0' y='.203278'>⎢</tspan>
+<tspan x='0' y='7.242509'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='11.289664' y='-18.550401'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='31.04356' y='-18.550401'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='40.153391' y='-26.644042'>3</text>
+<rect x='40.153391' y='-21.965739' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='40.153391' y='-10.349176'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='57.145643' y='-18.550401'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='65.059961' y='-18.550401'>2<tspan x='84.81386' y='-26.644042'>5</tspan>
+</text>
+<rect x='84.81386' y='-21.965739' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='84.81386' y='-10.349176'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.332504' y='-.177374'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='15.246821' y='-.177374'>3<tspan x='36.196234'>3</tspan>
+<tspan x='61.102804'>5</tspan>
+<tspan x='81.896805'>12</tspan>
+<tspan x='11.289664' y='11.520792'>5</tspan>
+</text>
+<rect x='11.289664' y='16.199095' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='11.289664' y='27.815659'>2<tspan x='36.196234' y='19.614434'>4</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='57.145643' y='19.614434'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='65.059961' y='19.614434'>3</text>
+<text font-family='fourier-ms' font-size='10.957664' x='80.856699' y='19.614434'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='88.771017' y='19.614434'>6</text>
+<text font-family='fourier-mex' font-size='10.998733' x='94.605115' y='-32.353315'>⎤<tspan x='94.605115' y='-12.995335'>⎥</tspan>
+<tspan x='94.605115' y='-6.396028'>⎥</tspan>
+<tspan x='94.605115' y='.203278'>⎥</tspan>
+<tspan x='94.605115' y='7.242509'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+A seguir, subtrai-se a primeira linha, multiplicada pelo primeiro
+elemento da segunda linha, para eliminar o primeiro elemento de
+segunda linha:
+</p>
+<div class="maxima">
+<span class="maxm">(%i15)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> rowop</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">,</span><span class="maxn"> 2</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxd">,</span><span class="maxv"> m</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">])</span><span class="maxm">;</span><br>
+(%o15) &emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.4673197em' height='7.3715165em' viewBox='-0.6 -39.981572 94.673197 73.715165' class='inline' style='vertical-align:-3.39243em'>
+<g id='eq101'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-38.952622'>⎡<tspan x='0' y='-19.594641'>⎢</tspan>
+<tspan x='0' y='-12.995335'>⎢</tspan>
+<tspan x='0' y='-6.396028'>⎢</tspan>
+<tspan x='0' y='.203278'>⎢</tspan>
+<tspan x='0' y='6.802585'>⎢</tspan>
+<tspan x='0' y='13.841816'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='8.528017' y='-23.187005'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='25.520281' y='-23.187005'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='34.630113' y='-31.280647'>3</text>
+<rect x='34.630113' y='-26.602344' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='34.630113' y='-14.98578'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='51.622365' y='-23.187005'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='59.536682' y='-23.187005'>2<tspan x='79.445989' y='-31.280647'>5</tspan>
+</text>
+<rect x='79.445989' y='-26.602344' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='79.445989' y='-14.98578'>2<tspan x='8.528017' y='.532017'>0</tspan>
+<tspan x='30.672956' y='-7.561625'>6</tspan>
+</text>
+<rect x='30.672956' y='-2.883322' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='30.672956' y='8.733242'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='51.622365' y='.532017'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='59.536682' y='.532017'>1<tspan x='76.528934' y='-7.561625'>39</tspan>
+</text>
+<rect x='76.528934' y='-2.883322' height='.637912' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='79.445989' y='8.733242'>2<tspan x='8.528017' y='16.157397'>5</tspan>
+</text>
+<rect x='8.528017' y='20.8357' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='8.528017' y='32.452263'>2<tspan x='30.672956' y='24.251039'>4</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='51.622365' y='24.251039'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='59.536682' y='24.251039'>3</text>
+<text font-family='fourier-ms' font-size='10.957664' x='75.488844' y='24.251039'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='83.403161' y='24.251039'>6</text>
+<text font-family='fourier-mex' font-size='10.998733' x='89.392668' y='-38.952622'>⎤<tspan x='89.392668' y='-19.594641'>⎥</tspan>
+<tspan x='89.392668' y='-12.995335'>⎥</tspan>
+<tspan x='89.392668' y='-6.396028'>⎥</tspan>
+<tspan x='89.392668' y='.203278'>⎥</tspan>
+<tspan x='89.392668' y='6.802585'>⎥</tspan>
+<tspan x='89.392668' y='13.841816'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+e faz-se o mesmo com a primeira e a terceira linhas, para eliminar o
+primeiro elemento da terceira linha:
+</p>
+<div class="maxima">
+<span class="maxm">(%i16)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> rowop</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">,</span><span class="maxn"> 3</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxd">,</span><span class="maxv"> m</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">])</span><span class="maxm">;</span><br>
+(%o16) &emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.0196476em' height='7.3715165em' viewBox='-0.6 -39.981572 100.196476 73.715165' class='inline' style='vertical-align:-3.39243em'>
+<g id='eq102'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-38.952622'>⎡<tspan x='0' y='-19.594641'>⎢</tspan>
+<tspan x='0' y='-12.995335'>⎢</tspan>
+<tspan x='0' y='-6.396028'>⎢</tspan>
+<tspan x='0' y='.203278'>⎢</tspan>
+<tspan x='0' y='6.802585'>⎢</tspan>
+<tspan x='0' y='13.841816'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='7.332504' y='-23.187005'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='23.129253' y='-23.187005'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='32.239085' y='-31.280647'>3</text>
+<rect x='32.239085' y='-26.602344' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='32.239085' y='-14.98578'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='49.231337' y='-23.187005'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='57.145655' y='-23.187005'>2<tspan x='81.012123' y='-31.280647'>5</tspan>
+</text>
+<rect x='81.012123' y='-26.602344' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='81.012123' y='-14.98578'>2<tspan x='7.332504' y='.532017'>0</tspan>
+<tspan x='28.281928' y='-7.561625'>6</tspan>
+</text>
+<rect x='28.281928' y='-2.883322' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='28.281928' y='8.733242'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='49.231337' y='.532017'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='57.145655' y='.532017'>1<tspan x='78.095068' y='-7.561625'>39</tspan>
+</text>
+<rect x='78.095068' y='-2.883322' height='.637912' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='81.012123' y='8.733242'>2<tspan x='7.332504' y='24.251039'>0</tspan>
+<tspan x='25.364873' y='16.157397'>11</tspan>
+</text>
+<rect x='25.364873' y='20.8357' height='.637912' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='28.281928' y='32.452263'>2<tspan x='53.188498' y='24.251039'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='72.942393' y='24.251039'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='82.052225' y='16.157397'>49</text>
+<rect x='82.052225' y='20.8357' height='.637912' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='84.969279' y='32.452263'>4</text>
+<text font-family='fourier-mex' font-size='10.998733' x='94.915946' y='-38.952622'>⎤<tspan x='94.915946' y='-19.594641'>⎥</tspan>
+<tspan x='94.915946' y='-12.995335'>⎥</tspan>
+<tspan x='94.915946' y='-6.396028'>⎥</tspan>
+<tspan x='94.915946' y='.203278'>⎥</tspan>
+<tspan x='94.915946' y='6.802585'>⎥</tspan>
+<tspan x='94.915946' y='13.841816'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+Repete-se o mesmo procedimento para a segunda coluna; ou seja,
+divide-se a segunda linha pelo seu segundo elemento,
+</p>
+<div class="maxima">
+<span class="maxm">(%i17)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> rowop</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">,</span><span class="maxn"> 2</span><span class="maxd">,</span><span class="maxn"> 2</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxo"> -</span><span class="maxn"> 1</span><span class="maxo">/</span><span class="maxv">m</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">])</span><span class="maxm">;</span><br>
+(%o17) &emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.2587504em' height='7.3715165em' viewBox='-0.6 -39.981572 102.587504 73.715165' class='inline' style='vertical-align:-3.39243em'>
+<g id='eq103'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-38.952622'>⎡<tspan x='0' y='-19.594641'>⎢</tspan>
+<tspan x='0' y='-12.995335'>⎢</tspan>
+<tspan x='0' y='-6.396028'>⎢</tspan>
+<tspan x='0' y='.203278'>⎢</tspan>
+<tspan x='0' y='6.802585'>⎢</tspan>
+<tspan x='0' y='13.841816'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='7.332504' y='-23.187005'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='23.129253' y='-23.187005'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='32.239085' y='-31.280647'>3</text>
+<rect x='32.239085' y='-26.602344' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='32.239085' y='-14.98578'>5</text>
+<text font-family='fourier-ms' font-size='10.957664' x='50.426851' y='-23.187005'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='58.341169' y='-23.187005'>2<tspan x='83.40315' y='-31.280647'>5</tspan>
+</text>
+<rect x='83.40315' y='-26.602344' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='83.40315' y='-14.98578'>2<tspan x='7.332504' y='.532017'>0</tspan>
+<tspan x='28.281928'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='49.231337' y='.532017'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='58.341169' y='-7.561625'>5</text>
+<rect x='58.341169' y='-2.883322' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='58.341169' y='8.733242'>6<tspan x='80.486095' y='-7.561625'>65</tspan>
+</text>
+<rect x='80.486095' y='-2.883322' height='.637912' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='83.40315' y='8.733242'>4<tspan x='7.332504' y='24.251039'>0</tspan>
+<tspan x='25.364873' y='16.157397'>11</tspan>
+</text>
+<rect x='25.364873' y='20.8357' height='.637912' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='28.281928' y='32.452263'>2<tspan x='54.384012' y='24.251039'>2</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='75.333421' y='24.251039'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='84.443252' y='16.157397'>49</text>
+<rect x='84.443252' y='20.8357' height='.637912' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='87.360307' y='32.452263'>4</text>
+<text font-family='fourier-mex' font-size='10.998733' x='97.306974' y='-38.952622'>⎤<tspan x='97.306974' y='-19.594641'>⎥</tspan>
+<tspan x='97.306974' y='-12.995335'>⎥</tspan>
+<tspan x='97.306974' y='-6.396028'>⎥</tspan>
+<tspan x='97.306974' y='.203278'>⎥</tspan>
+<tspan x='97.306974' y='6.802585'>⎥</tspan>
+<tspan x='97.306974' y='13.841816'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+e usa-se essa nova linha para eliminar o segundo elemento na primeira
+e na terceira linhas:
+</p>
+<div class="maxima">
+<span class="maxm">(%i18)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> rowop</span><span class="maxd"> (</span><span class="maxf">rowop</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxd">,</span><span class="maxn"> 2</span><span class="maxd">,</span><span class="maxv"> m</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">]),</span><span class="maxn"> 3</span><span class="maxd">,</span><span class="maxn"> 2</span><span class="maxd">,</span><span class="maxv"> m</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">])</span><span class="maxm">;</span><br>
+(%o18) &emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.8116279em' height='7.3715165em' viewBox='-0.6 -39.981572 98.116279 73.715165' class='inline' style='vertical-align:-3.39243em'>
+<g id='eq104'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-38.952622'>⎡<tspan x='0' y='-19.594641'>⎢</tspan>
+<tspan x='0' y='-12.995335'>⎢</tspan>
+<tspan x='0' y='-6.396028'>⎢</tspan>
+<tspan x='0' y='.203278'>⎢</tspan>
+<tspan x='0' y='6.802585'>⎢</tspan>
+<tspan x='0' y='13.841816'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='7.332504' y='-23.187005'>1<tspan x='23.129253'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='38.926003' y='-23.187005'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='48.035835' y='-31.280647'>5</text>
+<rect x='48.035835' y='-26.602344' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='48.035835' y='-14.98578'>2<tspan x='73.097816' y='-31.280647'>49</tspan>
+</text>
+<rect x='73.097816' y='-26.602344' height='.637912' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='76.014871' y='-14.98578'>4<tspan x='7.332504' y='.472259'>0</tspan>
+<tspan x='23.129253'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='38.926003' y='.472259'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='48.035835' y='-7.621383'>5</text>
+<rect x='48.035835' y='-2.94308' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='48.035835' y='8.673483'>6<tspan x='73.097816' y='-7.621383'>65</tspan>
+</text>
+<rect x='73.097816' y='-2.94308' height='.637912' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='76.014871' y='8.673483'>4<tspan x='7.332504' y='24.19128'>0</tspan>
+<tspan x='23.129253'>0</tspan>
+<tspan x='41.161623' y='16.097639'>79</tspan>
+</text>
+<rect x='41.161623' y='20.775942' height='.637912' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='41.161623' y='32.392505'>12</text>
+<text font-family='fourier-ms' font-size='10.957664' x='65.028087' y='24.19128'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='74.137918' y='16.097639'>813</text>
+<rect x='74.137918' y='20.775942' height='.637912' width='17.502329'/>
+<text font-family='futr8r' font-size='10.957664' x='79.972028' y='32.392505'>8</text>
+<text font-family='fourier-mex' font-size='10.998733' x='92.83575' y='-38.952622'>⎤<tspan x='92.83575' y='-19.594641'>⎥</tspan>
+<tspan x='92.83575' y='-12.995335'>⎥</tspan>
+<tspan x='92.83575' y='-6.396028'>⎥</tspan>
+<tspan x='92.83575' y='.203278'>⎥</tspan>
+<tspan x='92.83575' y='6.802585'>⎥</tspan>
+<tspan x='92.83575' y='13.841816'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+Finalmente, repete-se o mesmo procedimento para a terceira coluna:
+</p>
+<div class="maxima">
+<span class="maxm">(%i19)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> rowop</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">,</span><span class="maxn"> 3</span><span class="maxd">,</span><span class="maxn"> 3</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxo"> -</span><span class="maxn"> 1</span><span class="maxo">/</span><span class="maxv">m</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">][</span><span class="maxn">3</span><span class="maxd">])</span><span class="maxm">;</span><br>
+(%o19) &emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.3950389em' height='7.3715165em' viewBox='-0.6 -39.981572 103.950389 73.715165' class='inline' style='vertical-align:-3.39243em'>
+<g id='eq105'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-38.952622'>⎡<tspan x='0' y='-19.594641'>⎢</tspan>
+<tspan x='0' y='-12.995335'>⎢</tspan>
+<tspan x='0' y='-6.396028'>⎢</tspan>
+<tspan x='0' y='.203278'>⎢</tspan>
+<tspan x='0' y='6.802585'>⎢</tspan>
+<tspan x='0' y='13.841816'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='7.332504' y='-23.187005'>1<tspan x='23.129253'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='38.926003' y='-23.187005'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='48.035835' y='-31.280647'>5</text>
+<rect x='48.035835' y='-26.602344' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='48.035835' y='-14.98578'>2<tspan x='76.014871' y='-31.280647'>49</tspan>
+</text>
+<rect x='76.014871' y='-26.602344' height='.637912' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='78.931926' y='-14.98578'>4<tspan x='7.332504' y='.472259'>0</tspan>
+<tspan x='23.129253'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='38.926003' y='.472259'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='48.035835' y='-7.621383'>5</text>
+<rect x='48.035835' y='-2.94308' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='48.035835' y='8.673483'>6<tspan x='76.014871' y='-7.621383'>65</tspan>
+</text>
+<rect x='76.014871' y='-2.94308' height='.637912' width='11.668219'/>
+<text font-family='futr8r' font-size='10.957664' x='78.931926' y='8.673483'>4<tspan x='7.332504' y='24.19128'>0</tspan>
+<tspan x='23.129253'>0</tspan>
+<tspan x='44.078678'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='65.028087' y='24.19128'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='74.137918' y='16.097639'>2439</text>
+<rect x='74.137918' y='20.775942' height='.637912' width='23.336439'/>
+<text font-family='futr8r' font-size='10.957664' x='77.054973' y='32.392505'>158</text>
+<text font-family='fourier-mex' font-size='10.998733' x='98.669859' y='-38.952622'>⎤<tspan x='98.669859' y='-19.594641'>⎥</tspan>
+<tspan x='98.669859' y='-12.995335'>⎥</tspan>
+<tspan x='98.669859' y='-6.396028'>⎥</tspan>
+<tspan x='98.669859' y='.203278'>⎥</tspan>
+<tspan x='98.669859' y='6.802585'>⎥</tspan>
+<tspan x='98.669859' y='13.841816'>⎦</tspan>
+</text>
+</g>
+</svg>
+<br>
+<span class="maxm">(%i20)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> rowop</span><span class="maxd"> (</span><span class="maxf">rowop</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxd">,</span><span class="maxn"> 3</span><span class="maxd">,</span><span class="maxv"> m</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">][</span><span class="maxn">3</span><span class="maxd">]),</span><span class="maxn"> 2</span><span class="maxd">,</span><span class="maxn"> 3</span><span class="maxd">,</span><span class="maxv"> m</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">3</span><span class="maxd">])</span><span class="maxm">;</span><br>
+(%o20) &emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.3645055em' height='7.3715165em' viewBox='-0.6 -39.981572 93.645055 73.715165' class='inline' style='vertical-align:-3.39243em'>
+<g id='eq106'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-38.952622'>⎡<tspan x='0' y='-19.594641'>⎢</tspan>
+<tspan x='0' y='-12.995335'>⎢</tspan>
+<tspan x='0' y='-6.396028'>⎢</tspan>
+<tspan x='0' y='.203278'>⎢</tspan>
+<tspan x='0' y='6.802585'>⎢</tspan>
+<tspan x='0' y='13.841816'>⎣</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='7.332504' y='-23.216892'>1<tspan x='23.129253'>0</tspan>
+<tspan x='38.926003'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='54.722753' y='-23.216892'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='63.832584' y='-31.310533'>2081</text>
+<rect x='63.832584' y='-26.632231' height='.637912' width='23.336439'/>
+<text font-family='futr8r' font-size='10.957664' x='69.666694' y='-15.015667'>79<tspan x='7.332504' y='.50213'>0</tspan>
+<tspan x='23.129253'>1</tspan>
+<tspan x='38.926003'>0</tspan>
+<tspan x='62.792482' y='-7.591512'>535</tspan>
+</text>
+<rect x='62.792482' y='-2.913209' height='.637912' width='17.502329'/>
+<text font-family='futr8r' font-size='10.957664' x='62.792482' y='8.703355'>158<tspan x='7.332504' y='24.221152'>0</tspan>
+<tspan x='23.129253'>0</tspan>
+<tspan x='38.926003'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='54.722753' y='24.221152'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='63.832584' y='16.12751'>2439</text>
+<rect x='63.832584' y='20.805813' height='.637912' width='23.336439'/>
+<text font-family='futr8r' font-size='10.957664' x='66.749639' y='32.422377'>158</text>
+<text font-family='fourier-mex' font-size='10.998733' x='88.364525' y='-38.952622'>⎤<tspan x='88.364525' y='-19.594641'>⎥</tspan>
+<tspan x='88.364525' y='-12.995335'>⎥</tspan>
+<tspan x='88.364525' y='-6.396028'>⎥</tspan>
+<tspan x='88.364525' y='.203278'>⎥</tspan>
+<tspan x='88.364525' y='6.802585'>⎥</tspan>
+<tspan x='88.364525' y='13.841816'>⎦</tspan>
+</text>
+</g>
+</svg>
+
+</div>
+<p>
+Os três números na última coluna são os valores exatos das 3
+variáveis. Para aproximar esses números por números de vírgula
+flutuante e colocá-los numa lista, extrai-se a quarta linha da matriz
+transposta e aplica-se a função <span class="maxf">float</span>
+</p>
+<div class="maxima">
+<span class="maxm">(%i21)</span> <span class="maxf">float</span><span class="maxd"> (</span><span class="maxf">transpose</span><span class="maxd">(</span><span class="maxv">m</span><span class="maxd">)[</span><span class="maxn">4</span><span class="maxd">])</span><span class="maxm">;</span><br>
+(%o21) &emsp;&emsp;&emsp;[ -26.34, 3.386, -15.44 ]<br>
+</div>
+<p>
+Note-se que se tivesse sido usada a
+função <span class="maxf">augcoefmatrix</span> para construir a
+matriz, seria necessário mudar os sinais desses 3 valores obtidos.
+</p>
+<p>
+Este algoritmo pode ser automatizado facilmente. O mesmo resultado
+obtido com os comandos (<kbd>%i13</kbd>) até (<kbd>%i20</kbd>) podia
+ter-se obtido com o seguinte ciclo:
+</p>
+<div class="maxima">
+<span class="maxm">(%i22)</span> <span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> matrix</span><span class="maxd"> ([</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">12</span><span class="maxo">/</span><span class="maxn">10</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxd">,</span><span class="maxn">5</span><span class="maxd">],[</span><span class="maxo">-</span><span class="maxn">3</span><span class="maxd">,</span><span class="maxn">3</span><span class="maxd">,</span><span class="maxn">5</span><span class="maxd">,</span><span class="maxn">12</span><span class="maxd">],[</span><span class="maxn">25</span><span class="maxo">/</span><span class="maxn">10</span><span class="maxd">,</span><span class="maxn">4</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">3</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">6</span><span class="maxd">])</span><span class="maxm">;</span><br>
+<span class="maxm">(%i23)</span> <span class="maxm">for</span><span class="maxv"> i</span><span class="maxm">:</span><span class="maxv">1</span><span class="maxm"> thru</span><span class="maxn"> 3</span><span class="maxm"> do</span><span class="maxd"> (</span><br>
+&emsp;&emsp;&emsp;&emsp;<span class="maxv">m</span><span class="maxm">:</span><span class="maxf"> rowop</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">,</span><span class="maxv"> i</span><span class="maxd">,</span><span class="maxv"> i</span><span class="maxd">,</span><span class="maxn"> 1</span><span class="maxo"> -</span><span class="maxn"> 1</span><span class="maxo">/</span><span class="maxv">m</span><span class="maxd">[</span><span class="maxv"> i</span><span class="maxd"> ][</span><span class="maxv"> i</span><span class="maxd"> ] ),</span><br>
+&emsp;&emsp;&emsp;&emsp;<span class="maxm">for</span><span class="maxv"> j</span><span class="maxm">:</span><span class="maxn">1</span><span class="maxm"> thru</span><span class="maxn"> 3</span><span class="maxm"> do</span><span class="maxd"> (</span><br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="maxm">if</span><span class="maxd"> (</span><span class="maxv">i</span><span class="maxo"> #</span><span class="maxv"> j</span><span class="maxd">)</span><span class="maxm"> then</span><span class="maxv"> m</span><span class="maxm">:</span><span class="maxf"> rowop</span><span class="maxd"> (</span><span class="maxv">m</span><span class="maxd">,</span><span class="maxv"> j</span><span class="maxd">,</span><span class="maxv"> i</span><span class="maxd">,</span><span class="maxv"> m</span><span class="maxd">[</span><span class="maxv"> j</span><span class="maxd"> ][</span><span class="maxv"> i</span><span class="maxd"> ] )))</span><span class="maxm">;</span><br>
+(%o23)  &emsp;&emsp;&emsp;done
+</div>
+<p>
+onde <span class="maxo">#</span> é o operador &quot;diferente
+de&quot;.
+</p>
+<p>
+Se em alguma das iterações
+<span class="maxv">m</span><span class="maxd">[</span><span class="maxv">
+i</span><span class="maxd"> ][</span><span class="maxv">
+i</span><span class="maxd"> ]</span> for
+nulo, <span class="maxn">1</span><span class="maxo">/</span><span class="maxv">m</span><span class="maxd">[</span><span class="maxv">
+i</span><span class="maxd"> ][</span><span class="maxv">
+i</span><span class="maxd"> ]</span> produz um erro. Para evitar esse
+tipo de erro seria necessário acrescentar instruções para conferir
+que <span class="maxv">m</span><span class="maxd">[</span><span class="maxv">
+i</span><span class="maxd"> ][</span><span class="maxv">
+i</span><span class="maxd"> ]</span> não seja nulo e, caso contrário,
+trocar a linha <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.0997666em' height='1.0674586em' viewBox='-0.6 -8.182704 10.997666 10.674586' class='inline' style='vertical-align:-0.247198em'>
+<g id='eq107'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futri8r' font-size='8.218248' x='6.814442' y='1.793263'>i</text>
+</g>
+</svg>
+ com alguma das linhas <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1.1910744em' height='1.2564783em' viewBox='-0.6 -8.182704 11.910744 12.564783' class='inline' style='vertical-align:-0.443398em'>
+<g id='eq108'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>L</text>
+<text font-family='futri8r' font-size='8.218248' x='7.711083' y='1.793263'>j</text>
+</g>
+</svg>
+ com <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.5857007em' height='1.1686485em' viewBox='-0.061938 -8.43473 5.857007 11.686485' class='inline' style='vertical-align:-0.331199em'>
+<g id='eq109'>
+<text font-family='futri8r' font-size='10.957664' x='1.195521' y='0'>j</text>
+</g>
+</svg>
+ &gt; <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.5177632em' height='0.9166222em' viewBox='-0.6 -8.43473 5.177632 9.166222' class='inline' style='vertical-align:-0.0696em'>
+<g id='eq110'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>i</text>
+</g>
+</svg>
+.
+</p>
+</section>
+<div class="bottom">
+<a href="#top"><span class="button">Topo</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../pt/index.html">Jaime Villate</a>
+</div>
+<div class="category">
+<a href="../pt/software.html">Software livre</a>
+</div>
+<div class="category">
+<a href="../pt/publications/index.html">Publicações</a>
+</div>
+<div class="category">
+<a href="../pt/talks/index.html">Palestras</a>
+</div>
+</div>
+&copy; 2016 &ndash; 2018, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2021/10/28 16:27:10 UTC</span>
+</footer>
+</body>
+</html>
+
