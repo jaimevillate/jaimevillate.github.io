@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulações em VPython &mdash; Oscilador harmónico simples</title>
+<link rel="stylesheet" href="../css/book.css">
+</head>
+<body id="top">
+<header itemscope itemtype="http://schema.org/WebSite">
+<h1 itemprop="name">Simulações em VPython</h1>
+<p itemprop="creator" itemscope itemtype="http://schema.org/Person">
+por <a itemprop="url" href="http://villate.org/pt/" style="color: #fabf77"><span itemprop="name">Jaime E. Villate</span></a>.
+<span itemprop="affiliation">Universidade do Porto, Portugal</span>.
+</p>
+</header>
+<nav>
+<a href="../pt/index.html" style="color: #c96201">Jaime Villate</a><span>&rarr;</span>
+<a href="../pt/material.html" style="color: #c96201">Material pedagógico</a><span>&rarr;</span>
+<a href="./index.html" style="color: #c96201">Física computacional usando Python</a><span>&rarr;</span>
+<a href="./vpython.html" style="color: #c96201">3. Simulações com VPython</a><span>&rarr;</span>
+<span class="inverse">Oscilador harmónico simples</span>
+</nav>
+<section id="sec-1">
+<div id="glowscript" class="glowscript">
+<link type="text/css" href="https://s3.amazonaws.com/glowscript/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css" />
+<link type="text/css" href="https://s3.amazonaws.com/glowscript/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/package/glow.2.7.min.js"></script>
+<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/package/RSrun.2.7.min.js"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+;(function() {fontloading();
+ var __rt=srequire('streamline/lib/callbacks/runtime').runtime(__filename, false),__func=__rt.__func,__cb=__rt.__cb; var RS_modules = {};
+RS_modules.pythonize = {};
+
+(function() {
+  function strings() {
+    var string_funcs, exclude, name;
+    string_funcs = set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" "));
+    if (!arguments.length) {
+      exclude = (function() {
+        var s = RS_set();
+        s.jsset.add("split");
+        s.jsset.add("replace");
+        return s;
+      })(); }
+     else if (arguments[0]) {
+      exclude = Array.prototype.slice.call(arguments); }
+     else {
+      exclude = null; }  ;
+
+    if (exclude) {
+      string_funcs = string_funcs.difference(set(exclude)); } ;
+
+    var RS_Iter0 = RS_Iterable(string_funcs);
+    for (var RS_Index0 = 0; RS_Index0["<"](RS_Iter0.length); RS_Index0++) {
+      name = RS_Iter0[RS_Index0];
+      (RS_expr_temp = String.prototype)[((((typeof name === "number") && name["<"](0))) ? RS_expr_temp.length["+"](name) : name)] = (RS_expr_temp = RS_str.prototype)[((((typeof name === "number") && name["<"](0))) ? RS_expr_temp.length["+"](name) : name)]; }; };  RS_modules.pythonize.strings = strings;
+})();
+function main(_) { var version, box, sphere, cylinder, pyramid, cone, helix, ellipsoid, ring, arrow, compound, display, vector, print, scene, RS_ls, chao, parede, sitio, bar0, ang, mola1, bar1, c1, s1, s2, s3, s4, rf, m1, k1, b1, dt, uf1, uf2, uf3, uf4, ufm, __name__, strings, RS_Index1, __this = this;
+
+  function alongar_mola(y1) {
+    var RS_ls;
+    "37";
+    c1.pos.y = y1["-"](2);
+    "38";
+    bar1.origin = vec(0, y1, 0);
+    "39";
+    mola1.axis.y = y1["-"](5.8); };
+
+
+  function uf(rf) {
+    var RS_ls, a;
+    "42";
+    a = k1["-u"]()["*"](rf.y)["-"](b1["*"](rf.z))["/"](m1);
+    "43";
+    return vec(0, rf.z, a); }; var __frame = { name: "main", line: 32 }; return __func(_, this, arguments, main, 0, __frame, function __$main() { version = RS_list_decorate(["2.7","glowscript",]); Array.prototype["+"] = function(r) { return this.concat(r); }; Array.prototype["*"] = function(r) { return __array_times_number(this, r); }; __name__ = "__main__"; window.__GSlang = "vpython"; box = vp_box; sphere = vp_sphere; cylinder = vp_cylinder; pyramid = vp_pyramid; cone = vp_cone; helix = vp_helix; ellipsoid = vp_ellipsoid; ring = vp_ring; arrow = vp_arrow; compound = vp_compound; display = canvas; vector = vec; print = GSprint; scene = canvas(); return waitforfonts(__cb(_, __frame, 21, 4, function __$main() { strings = RS_modules.pythonize.strings; strings(); "2"; scene = RS_interpolate_kwargs.call(__this, canvas, [RS_desugar_kwargs({ title: "<h1>Oscilador harmónico simples<\/h1>", autoscale: 0, width: 500, height: 500, range: 7, forward: vec(0, 0, 1["-u"]()) }),]); "9"; scene.caption = "\nCarregue no botão direito e desloque o rato para rodar o sistema.\nPara ver mais de perto ou longe, carregue no botão do meio e desloque\no rato, ou use a roda do rato.\nPara deslocar o sistema, use a tecla Shift em simultâneo com o botão do lado\nesquerdo e desloque o rato."; "11"; chao = RS_interpolate_kwargs.call(__this, box, [RS_desugar_kwargs({ pos: vec(0, 6.1["-u"](), 0), size: vec(20, 0.1, 10), texture: textures.wood }),]); "12"; parede = RS_interpolate_kwargs.call(__this, box, [RS_desugar_kwargs({ pos: vec(0, 3.85, 5.05["-u"]()), size: vec(20, 20, 0.1), color: vec(0.7, 0.7, 0.7) }),]); "13"; sitio = RS_interpolate_kwargs.call(__this, text, [RS_desugar_kwargs({ pos: vec(0, 3.85, 5["-u"]()), text: "villate.org", color: color.blue, align: "center", depth: 0 }),]); "17"; bar0 = RS_interpolate_kwargs.call(__this, curve, [RS_desugar_kwargs({ radius: 0.03 }),]); "18"; for (RS_Index1 = pi; RS_Index1[">"](pi["-u"]()["/"](2)); RS_Index1 = RS_Index1["-="](0.1)) { ang = RS_Index1; "19"; bar0.append(vec(0, 5.2["+"](0.23["*"](sin(ang))), 0.23["*"](cos(ang)))); }; "20"; RS_interpolate_kwargs.call(bar0, bar0.append, [RS_desugar_kwargs({ pos: vec(0, 4.5, 0) }),]); "21"; RS_interpolate_kwargs.call(bar0, bar0.append, [RS_desugar_kwargs({ pos: vec(0, 4.5, 0.3) }),]); "22"; mola1 = RS_interpolate_kwargs.call(__this, helix, [RS_desugar_kwargs({ pos: vec(0, 4.5, 0), radius: 0.3, thickness: 0.05, coils: 30, axis: vec(0, 5.8["-u"](), 0) }),]); "25"; bar1 = RS_interpolate_kwargs.call(__this, curve, [RS_desugar_kwargs({ radius: 0.03, pos: RS_list_decorate([vec(0, 1.6["-u"](), 0),vec(0, 1.3["-u"](), 0),vec(0, 1.3["-u"](), 0.3),]) }),]); "26"; c1 = RS_interpolate_kwargs.call(__this, cylinder, [RS_desugar_kwargs({ pos: vec(0, 2["-u"](), 0), radius: 0.5, axis: vec(0, 0.4, 0), color: vec(0.3, 0.3, 0.3) }),]); "30"; s1 = RS_interpolate_kwargs.call(__this, cylinder, [RS_desugar_kwargs({ pos: vec(3, 5.2, 0), radius: 0.2, axis: vec(4["-u"](), 0, 0) }),]); "31"; s2 = RS_interpolate_kwargs.call(__this, cylinder, [RS_desugar_kwargs({ pos: vec(2.5, 5.2, 0), radius: 0.6, axis: vec(1["-u"](), 0, 0), color: vec(0.5, 0.5, 0.6) }),]); "32"; s3 = RS_interpolate_kwargs.call(__this, cylinder, [RS_desugar_kwargs({ pos: vec(2, 5["-u"](), 0.4), radius: 0.2, axis: vec(0, 11, 0) }),]); "33"; s4 = RS_interpolate_kwargs.call(__this, cylinder, [RS_desugar_kwargs({ pos: vec(2, 6.05["-u"](), 0.4), radius: 0.8, axis: vec(0, 1, 0), color: vec(0.9, 0.9, 0.6) }),]); "36"; if (!alongar_mola.__argnames__) { Object.defineProperties(alongar_mola, { __argnames__: { value: ["y1",] } }); } ; "41";
+
+      if (!uf.__argnames__) { Object.defineProperties(uf, {
+          __argnames__: { value: ["rf",] } }); } ;
+
+
+      "45";
+      rf = vec(0, 0.9, 0);
+      "46";
+      m1 = 0.3;
+      k1 = 16;
+      b1 = 0.02;
+      "47";
+      dt = 0.01;
+      "48";
+      alongar_mola(rf.y);
+      "50"; return (function ___(__break) { var __more; var __loop = __cb(_, __frame, 0, 0, function __$main() { __more = false;
+          var __2 = true; if (__2) {
+            "51";
+            return rate(100, __cb(_, __frame, 100, 8, function __$main() {
+              "52";
+              uf1 = uf(rf);
+              "53";
+              uf2 = uf(rf["+"](dt["*"](uf1)["/"](2)));
+              "54";
+              uf3 = uf(rf["+"](dt["*"](uf2)["/"](2)));
+              "55";
+              uf4 = uf(rf["+"](dt["*"](uf3)));
+              "56";
+              ufm = uf1["+"](2["*"](uf2))["+"](2["*"](uf3))["+"](uf4)["/"](6);
+              "57";
+              rf = rf["+="](dt["*"](ufm));
+              "58";
+              alongar_mola(rf.y); while (__more) { __loop(); }; __more = true; }, true)); } else { __break(); } ; }); do { __loop(); } while (__more); __more = true; })(_); }, true)); });};
+
+
+if (!main.__argnames__) { Object.defineProperties(main, {
+    __argnames__: { value: ["_",] } });};
+
+;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; main(__func) })})()
+//--><!]]></script>
+</div>
+</section>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../pt/index.html" style="color: #fabf77">Jaime Villate</a>
+</div>
+<div class="category">
+<a href="../pt/software.html" style="color: #fabf77">Software livre</a>
+</div>
+<div class="category">
+<a href="../pt/publications/index.html" style="color: #fabf77">Publicações</a>
+</div>
+<div class="category">
+<a href="../pt/talks/index.html" style="color: #fabf77">Palestras</a>
+</div>
+</div>
+&copy; 2018, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2021/10/28 15:36:21 UTC</span>
+</footer>
+</body>
+</html>

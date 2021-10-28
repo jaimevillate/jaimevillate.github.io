@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Física computacional usando Python &mdash; Programação em Python</title>
+<link rel="stylesheet" href="../css/book.css">
+</head>
+<body id="top">
+<header itemscope itemtype="http://schema.org/WebSite">
+<h1 itemprop="name">2. Programação em Python</h1>
+<p itemprop="creator" itemscope itemtype="http://schema.org/Person">
+por <a itemprop="url" href="http://villate.org/pt/"><span itemprop="name">Jaime E. Villate</span></a>.
+<span itemprop="affiliation">Universidade do Porto, Portugal</span>.
+</p>
+</header>
+<nav>
+<a href="../pt/index.html">Jaime Villate</a><span>&rarr;</span>
+<a href="../pt/material.html">Material pedagógico</a><span>&rarr;</span>
+<a href="./index.html">Física computacional usando Python</a>
+<span class="inverse">2. Programação em Python</span>
+</nav>
+<div class="content">
+<span class="button">Índice</span>
+<div class="content-items">
+<a href="./index.html">Física computacional usando Python</a>
+<ol class="nested" style="counter-increment: item 1">
+<li><a href="#top">Programação em Python</a>
+<ol class="nested">
+<li><a href="#sec-2.1">Programas</a></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<section id="sec-2.1">
+<h2>2.1. Programas</h2>
+<p>
+Um programa ou pode ser escrito interativamente na Shell, ou pode ser
+copiado para um ficheiro e depois executado. A opção &quot;<em>New
+File</em>&quot; no menu &quot;<em>File</em>&quot; do Idle permite
+abrir um editor de texto noutra janela, onde é possível escrever um
+módulo completo e gravá-lo num ficheiro. No mesmo menu há também a
+opção &quot;<em>Open</em>&quot; que permite abrir nesse editor de
+texto um programa já existente.
+</p>
+<p>
+O módulo pode conter apenas definições de funções e variáveis, como no
+caso do módulo <b>math</b>. Nesse caso, para usar essas funções e
+variáveis em outros módulos, ou na Shell, há que importar o módulo
+completo ou as funções desse módulo que vão ser utilizadas.
+</p>
+<p>
+O módulo pode ser também um programa que pede alguns valores de
+entrada através do teclado, realiza alguma ação e mostra alguns
+resultados no ecrã.
+</p>
+<p>
+Para obter valores de entrada de forma interativa, usa-se a função
+<span class="pytf">input</span>. Por exemplo,
+</p>
+<pre>
+<span class="pytp">&gt;&gt;&gt;</span> n = <span class="pytf">input</span>(<span class="pyts">"Indique o valor de n: "</span>)
+<span class="pytr">Indique o valor de n:</span> 7</pre>
+<p>
+Há que ter em conta que a pesar de ter sido escrito o valor numérico
+7, a função <span class="pytf">input</span> atribui à
+variável <kbd>n</kbd> uma cadeia de caracteres em vez de um número
+inteiro; para usar essa variável em operações com números, será
+necessário convertê-la para um valor numérico.
+</p>
+<p>
+Após gravar o programa num ficheiro, pode ser executado com a opção
+&quot;<em>Run Module</em>&quot; no menu &quot;<em>Run</em>&quot;.
+</p>
+<p>
+Para aprender mais sobre a sintaxe de Python, existe muita
+documentação disponível na Web. O
+<a href="http://www.vpython.org" target="_blank">sítio Web de
+VPython</a> é uma boa referência para encontrar manuais, tutoriais,
+livros e módulos adicionais.
+</p>
+<div class="center"><b>Programa 1</b></div>
+<pre class="prog">
+<span class="line"> g = -9.8            <span class="pytc"># aceler. da gravidade</span></span>
+<span class="line"> y = 5               <span class="pytc"># altura inicial</span></span>
+<span class="line"> vy = 0              <span class="pytc"># velocidade inicial</span></span>
+<span class="line"> dt = 0.01          <span class="pytc"> # intervalos de tempo</span></span>
+<span class="line"> <span class="pytk">while</span> y &gt; 0:        <span class="pytc"># queda enquanto não atingir o chão (y=0)</span></span>
+<span class="line">     y = y + vy*dt   <span class="pytc"># nova altura</span></span>
+<span class="line">     vy = vy + g*dt  <span class="pytc"># nova velocidade</span></span>
+<span class="line">     <span class="pytf">print</span>(y, vy)    <span class="pytc"># apresenta resultados</span></span></pre>
+</section>
+<div class="bottom">
+<a href="#top"><span class="button">Topo</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../pt/index.html">Jaime Villate</a>
+</div>
+<div class="category">
+<a href="../pt/software.html">Software livre</a>
+</div>
+<div class="category">
+<a href="../pt/publications/index.html">Publicações</a>
+</div>
+<div class="category">
+<a href="../pt/talks/index.html">Palestras</a>
+</div>
+</div>
+&copy; 2008, 2018, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2021/10/28 15:06:32 UTC</span>
+</footer>
+</body>
+</html>

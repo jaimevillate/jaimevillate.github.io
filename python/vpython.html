@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Física computacional usando Python &mdash; Simulações com VPython</title>
+<link rel="stylesheet" href="../css/book.css">
+</head>
+<body id="top">
+<header itemscope itemtype="http://schema.org/WebSite">
+<h1 itemprop="name">3. Simulações com VPython</h1>
+<p itemprop="creator" itemscope itemtype="http://schema.org/Person">
+por <a itemprop="url" href="http://villate.org/pt/"><span itemprop="name">Jaime E. Villate</span></a>.
+<span itemprop="affiliation">Universidade do Porto, Portugal</span>.
+</p>
+</header>
+<nav>
+<a href="../pt/index.html">Jaime Villate</a><span>&rarr;</span>
+<a href="../pt/material.html">Material pedagógico</a><span>&rarr;</span>
+<a href="./index.html">Física computacional usando Python</a><span>&rarr;</span>
+<span class="inverse">3. Simulações com VPython</span>
+</div>
+</nav>
+<div class="content">
+<span class="button">Índice</span>
+<div class="content-items">
+<a href="./index.html">Física computacional usando Python</a>
+<ol class="nested" style="counter-increment: item 2">
+<li><a href="#top">Simulações com VPython</a>
+<ol class="nested">
+<li><a href="#sec-3.1">VPhyton</a></li>
+<li><a href="#sec-3.2">Lançamento de projéteis no ar</a></li>
+<li><a href="#sec-3.3">Oscilador harmónico simples</a></li>
+<li><a href="#sec-3.4">Pêndulo</a></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<section id="sec-3.1">
+<h2>3.1. VPhyton</h2>
+<p>
+<a href="http://www.vpython.org/" target="_blank">VPython</a> é um
+módulo adicional para Python, que inclui classes para criar vários
+tipos de formas geométricas em três dimensões, podendo ser colocadas
+em movimento facilmente. VPython usa a biblioteca
+gráfica <a href="https://pt.wikipedia.org/wiki/OpenGL"
+target="_blank">OpenGL</a>. A versão mais recente, 7, lança as
+animações dentro dum browser, usando WebGL e Javascript.
+</p>
+<p>
+VPython é software livre que pode ser descarregado no
+seu <a href="http://www.vpython.org/">sítio Web</a> e instalado em
+todos os principais sistemas operativos.
+</p>
+</section>
+<section id="sec-3.2">
+<h2>3.2. Lançamento de projéteis no ar</h2>
+<pre class="prog">
+<span class="line"> <span class="pytk">from</span> vpython <span class="pytk">import</span> *</span>
+<span class="line"></span>
+<span class="line"> <span class="pytk">def</span> <span class="pytf">deslocar</span>(corpo):</span>
+<span class="line">     <span class="pyt">global</span> dt</span>
+<span class="line">     queda = <span class="pytk">True</span></span>
+<span class="line">     p = corpo.traj.point(corpo.traj.npoints-1)[<span class="pyts">'pos'</span>]</span>
+<span class="line">     corpo.pos += dt*corpo.v + dt**2*corpo.a/2.</span>
+<span class="line">     <span class="pytk">if</span> corpo.v.y &lt; 0 and corpo.pos.y &lt; corpo.radius:</span>
+<span class="line">         <span class="pytk">if</span> p.y != corpo.pos.y:</span>
+<span class="line">             f = (p.y - corpo.radius)/(p.y - corpo.pos.y)</span>
+<span class="line">             corpo.pos -= (1 - f)*(corpo.pos - p)</span>
+<span class="line">             corpo.v += f*dt*corpo.a</span>
+<span class="line">             corpo.t += f*dt</span>
+<span class="line">         queda = <span class="pytk">False</span></span>
+<span class="line">     <span class="pytk">else:</span></span>
+<span class="line">         corpo.t += dt</span>
+<span class="line">         corpo.v += dt*corpo.a</span>
+<span class="line">     corpo.traj.append(pos=<span class="pytf">vec</span>(corpo.pos))</span>
+<span class="line">     corpo.d += mag(corpo.pos - p)</span>
+<span class="line">     <span class="pytk">return</span> queda</span>
+<span class="line"></span>
+<span class="line"> <span class="pytk">def</span> <span class="pytf">resultados</span>(corpo):</span>
+<span class="line">     p0 = corpo.traj.point(0)[<span class="pyts">'pos'</span>]</span>
+<span class="line">     alcance = corpo.pos.x - p0.x</span>
+<span class="line">     velocidade = corpo.d / corpo.t</span>
+<span class="line">     scene.caption += <span class="pyts">'&lt;b&gt;'</span>+corpo.legenda+<span class="pyts">'&lt;/b&gt;\n'</span></span>
+<span class="line">     scene.caption += <span class="pyts">'Tempo de voo         = {:.2f} s\n'</span>.format(corpo.t)</span>
+<span class="line">     scene.caption += <span class="pyts">'Alcance horizontal   = {:.2f} m\n'</span>.format(alcance)</span>
+<span class="line">     scene.caption += <span class="pyts">'Distância percorrida = {:.2f} m\n'</span>.format(corpo.d)</span>
+<span class="line">     scene.caption += <span class="pyts">'Velocidade média     = {:.2f} m/s\n'</span>.format(velocidade)</span>
+<span class="line">     <span class="pytk">return</span></span>
+<span class="line"></span>
+<span class="line"> <span class="pytk">def</span> <span class="pytf">projetar</span>(corpo, vel, ang, leg):</span>
+<span class="line">     corpo.v = vel*<span class="pytf">vec</span>(cos(ang*pi/180.), sin(ang*pi/180.), 0)</span>
+<span class="line">     corpo.t = corpo.d = 0</span>
+<span class="line">     corpo.legenda = leg</span>
+<span class="line">     corpo.traj = curve(pos=<span class="pytf">vec</span>(corpo.pos),color=corpo.color)</span>
+<span class="line"></span>
+<span class="line"> scene = canvas(title = <span class="pyts">'&lt;h1&gt;Lançamento de projéteis no ar&lt;/h1&gt;'</span>,</span>
+<span class="line">                forward=<span class="pytf">vec</span>(-0.5,-0.2,-1))</span>
+<span class="line"> scene.caption = <span class="pyt">''</span></span>
+<span class="line"> a = 47.</span>
+<span class="line"> dt = 0.01</span>
+<span class="line"> g = <span class="pytf">vec</span>(0,-9.8,0)</span>
+<span class="line"> q1 = q2 = q3 = <span class="pytk">True</span></span>
+<span class="line"></span>
+<span class="line"> bola1 = sphere(pos=<span class="pytf">vec</span>(-7.5,0.2,1), radius=0.4, color=<span class="pytf">vec</span>(0.93,1,0.16))</span>
+<span class="line"> bola2 = sphere(pos=<span class="pytf">vec</span>(-7.5,0.1,0), radius=0.2, color=<span class="pytf">vec</span>(1,0,0))</span>
+<span class="line"> bola3 = sphere(pos=<span class="pytf">vec</span>(-7.5,0.1,-1), radius=0.2, color=<span class="pytf">vec</span>(1,0.49,0.05))</span>
+<span class="line"> chao = box(pos=<span class="pytf">vec</span>(0,-0.1,0), size=<span class="pytf">vec</span>(16,0.2,10), texture=textures.wood)</span>
+<span class="line"> parede = box(pos=<span class="pytf">vec</span>(0,2.8,-5.05),size=<span class="pytf">vec</span>(16,6,0.1), color=<span class="pytf">vec</span>(0.7,0.7,0.7))</span>
+<span class="line"> sitio = text(pos=<span class="pytf">vec</span>(0,2.8,-5), text=<span class="pyts">'def.fe.up.pt'</span>, color=color.blue,</span>
+<span class="line">              align=<span class="pyts">'center'</span>, depth=0)</span>
+<span class="line"> projetar (bola1, 12, 45., <span class="pyts">'Bola de ténis'</span>)</span>
+<span class="line"> projetar (bola2, 12, 45., <span class="pyts">'Sem resistência do ar'</span>)</span>
+<span class="line"> projetar (bola3, 12, 45., <span class="pyts">'Bola de ping-pong</span>')</span>
+<span class="line"> bola2.a = g</span>
+<span class="line"></span>
+<span class="line"> <span class="pytk">while</span> q1 <span class="pytk">or</span> q2 <span class="pytk">or</span> q3:</span>
+<span class="line">     rate(100)</span>
+<span class="line">     bola1.a = g - 0.01606*mag(bola1.v)*bola1.v</span>
+<span class="line">     bola3.a = g - 0.14176*mag(bola3.v)*bola3.v</span>
+<span class="line">     <span class="pytk">if</span> q1: q1 = deslocar (bola1)</span>
+<span class="line">     <span class="pytk">if</span> q2: q2 = deslocar (bola2)</span>
+<span class="line">     <span class="pytk">if</span> q3: q3 = deslocar (bola3)</span>
+<span class="line"></span>
+<span class="line"> resultados(bola2)</span>
+<span class="line"> resultados(bola1)</span>
+<span class="line"> resultados(bola3)</span></pre>
+<p><a href="projeteis.html">Executar o programa no browser</a></p>
+</section>
+<section id="sec-3.3">
+<h2>3.3. Oscilador harmónico simples</h2>
+<pre class="prog">
+<span class="line"> <span class="pytk">from</span> vpython <span class="pytk">import</span> *</span>
+<span class="line"></span>
+<span class="line"> scene = canvas(title=<span class="pyts">'&lt;h1&gt;Oscilador harmónico simples&lt;/h1&gt;</span>', autoscale=0,</span>
+<span class="line">                width=500, height=500, range=7, forward=<span class="pytf">vec</span>(0,0,-1))</span>
+<span class="line"> chao = box(pos=<span class="pytf">vec</span>(0,-6.1,0),size=<span class="pytf">vec</span>(20,0.1,10),texture=textures.wood)</span>
+<span class="line"> parede = box(pos=<span class="pytf">vec</span>(0,3.85,-5.05),size=<span class="pytf">vec</span>(20,20,0.1), color=<span class="pytf">vec</span>(0.7,0.7,0.7))</span>
+<span class="line"> sitio = text(pos=<span class="pytf">vec</span>(0,3.85,-5), text=<span class="pyts">'def.fe.up.pt'</span>, color=color.blue,</span>
+<span class="line">              align=<span class="pyts">'center'</span>, depth=0)</span>
+<span class="line"></span>
+<span class="line"> <span class="pytc"># Mola e cilindro</span></span>
+<span class="line"> bar0 = curve(radius=0.03)</span>
+<span class="line"> <span class="pytk">for</span> ang <span class="pytk">in</span> <span class="pytf">arange</span>(pi,-pi/2.,-0.1):</span>
+<span class="line">     bar0.append(<span class="pytf">vec</span>(0, 5.2+0.23*sin(ang), 0.23*cos(ang)))</span>
+<span class="line"> bar0.append(pos=<span class="pytf">vec</span>(0,4.5,0))</span>
+<span class="line"> bar0.append(pos=<span class="pytf">vec</span>(0,4.5,0.3))</span>
+<span class="line"> mola1 = helix(pos=<span class="pytf">vec</span>(0,4.5,0), radius=0.3, thickness=0.05, coils=30,</span>
+<span class="line">               axis = <span class="pytf">vec</span>(0,-5.8,0))</span>
+<span class="line"></span>
+<span class="line"> bar1 = curve(radius=0.03, pos=[<span class="pytf">vec</span>(0,-1.6,0),<span class="pytf">vec</span>(0,-1.3,0),<span class="pytf">vec</span>(0,-1.3,0.3)])</span>
+<span class="line"> c1 = cylinder(pos=<span class="pytf">vec</span>(0,-2,0),radius=0.5,axis=<span class="pytf">vec</span>(0,0.4,0),</span>
+<span class="line">               color=<span class="pytf">vec</span>(0.3,0.3,0.3))</span>
+<span class="line"></span>
+<span class="line"> <span class="pytc"># Barras do suporte</span></span>
+<span class="line"> s1 = cylinder(pos=<span class="pytf">vec</span>(3,5.2,0),radius=0.2, axis=<span class="pytf">vec</span>(-4,0,0))</span>
+<span class="line"> s2 = cylinder(pos=<span class="pytf">vec</span>(2.5,5.2,0),radius=0.6, axis=<span class="pytf">vec</span>(-1,0,0),color=<span class="pytf">vec</span>(0.5,0.5,0.6))</span>
+<span class="line"> s3 = cylinder(pos=<span class="pytf">vec</span>(2,-5,0.4),radius=0.2, axis=<span class="pytf">vec</span>(0,11,0))</span>
+<span class="line"> s4 = cylinder(pos=<span class="pytf">vec</span>(2,-6.05,0.4),radius=0.8, axis=<span class="pytf">vec</span>(0,1,0),color=<span class="pytf">vec</span>(0.9,0.9,0.6))</span>
+<span class="line"></span>
+<span class="line"> <span class="pytc"># Função que alonga/comprime a mola y1 unidades</span></span>
+<span class="line"> <span class="pytk">def</span> <span class="pytf">alongar_mola</span>(y1):</span>
+<span class="line">     c1.pos.y = y1 - 2</span>
+<span class="line">     bar1.origin = <span class="pytf">vec</span>(0,y1,0)</span>
+<span class="line">     mola1.axis.y = y1 - 5.8</span>
+<span class="line"></span>
+<span class="line"> <span class="pytk">def</span> <span class="pytf">uf</span>(rf):          <span class="pytc"># velocidade no espaço de fase</span></span>
+<span class="line">     a = (-k1*rf.y-b1*rf.z)/m1</span>
+<span class="line">     <span class="pytk">return</span> <span class="pytf">vec</span>(0,rf.z, a)</span>
+<span class="line"></span>
+<span class="line"> rf = <span class="pytf">vec</span>(0, 0.9, 0)</span>
+<span class="line"> m1 = 0.3; k1 = 16; b1 = 0.02</span>
+<span class="line"> dt = 0.01</span>
+<span class="line"> <span class="pytf">alongar_mola</span>(rf.y)</span>
+<span class="line"></span>
+<span class="line"> <span class="pytk">while True</span>:</span>
+<span class="line">     rate(100)</span>
+<span class="line">     uf1 = uf(rf)</span>
+<span class="line">     uf2 = uf(rf + dt*uf1 / 2.)</span>
+<span class="line">     uf3 = uf(rf + dt*uf2 / 2.)</span>
+<span class="line">     uf4 = uf(rf + dt*uf3)</span>
+<span class="line">     ufm = (uf1 + 2*uf2 + 2*uf3 + uf4)/6.</span>
+<span class="line">     rf += dt*ufm</span>
+<span class="line">     alongar_mola(rf.y)</span></pre>
+<p><a href="oscilador.html">Executar o programa no browser</a></p>
+</section>
+<section id="sec-3.4">
+<h2>3.4. Pêndulo</h2>
+<pre class="prog">
+<span class="line"> <span class="pytk">from</span> vpython <span class="pytk">import</span> *</span>
+<span class="line"> scene = canvas(title=<span class="pyts">'&lt;h1&gt;Pêndulo&lt;/h1&gt;'</span>, autoscale=0, range=5,</span>
+<span class="line">                center=<span class="pytf">vec</span>(0,3,0), forward=<span class="pytf">vec</span>(-0.3,0,-1))</span>
+<span class="line"> chao = box(pos=<span class="pytf">vec</span>(0,-0.85,0),size=<span class="pytf">vec</span>(20,0.1,10),texture=textures.wood)</span>
+<span class="line"> parede = box(pos=<span class="pytf">vec</span>(0,7.1,-5.05),size=<span class="pytf">vec</span>(20,16,0.1), color=<span class="pytf">vec</span>(0.7,0.7,0.7))</span>
+<span class="line"> sitio = text(pos=<span class="pytf">vec</span>(0,7.1,-5), text=<span class="pyts">'def.fe.up.pt'</span>, color=color.blue,</span>
+<span class="line">              align=<span class="pyts">'center'</span>, depth=0)</span>
+<span class="line"> barra = box(pos=<span class="pytf">vec</span>(0,-1.4,0), size=<span class="pytf">vec</span>(0.2,3.2,0.2), color=<span class="pytf">vec</span>(1,1,0))</span>
+<span class="line"> disco = cylinder(pos=<span class="pytf">vec</span>(0,-3,-0.2), radius=0.6, axis=<span class="pytf">vec</span>(0,0,0.4),</span>
+<span class="line">                  color=<span class="pytf">vec</span>(0.5,0.5,0.8))</span>
+<span class="line"> pendulo = compound([barra, disco])</span>
+<span class="line"> pendulo.pos=<span class="pytf">vec</span>(0,1.8,0)</span>
+<span class="line"> eixo = cylinder(pos=<span class="pytf">vec</span>(0,3.5,0.3), radius=0.09, axis=<span class="pytf">vec</span>(0,0,-1),</span>
+<span class="line">                 color=<span class="pytf">vec</span>(0.7,0.4,0.1))</span>
+<span class="line"> b1 = box(pos=<span class="pytf">vec</span>(0,1.7,-1), size=<span class="pytf">vec</span>(1,4.2,0.6), color=<span class="pytf">vec</span>(0.7,0.4,0.1))</span>
+<span class="line"> b2 = box(pos=<span class="pytf">vec</span>(0,-0.6,-0.5), size=<span class="pytf">vec</span>(3,0.4,1.6), color=<span class="pytf">vec</span>(0.7,0.4,0.1))</span>
+<span class="line"> </span>
+<span class="line"> pendulo.w = 10</span>
+<span class="line"> pendulo.angulo = 0</span>
+<span class="line"> pendulo.l = 3</span>
+<span class="line"> dt = 0.01</span>
+<span class="line"> </span>
+<span class="line"> <span class="pytk">while True</span>:</span>
+<span class="line">     rate(100)</span>
+<span class="line">     pendulo.a = -98*sin(pendulo.angulo)/pendulo.l</span>
+<span class="line">     pendulo.w = pendulo.w + pendulo.a*dt</span>
+<span class="line">     pendulo.angulo = pendulo.angulo + pendulo.w*dt</span>
+<span class="line">     pendulo.rotate(axis=<span class="pytf">vec</span>(0,0,1), angle=pendulo.w*dt, origin=<span class="pytf">vec</span>(0,3.5,0))</span></pre>
+<p><a href="pendulo.html">Executar o programa no browser</a></p>
+</section>
+<div class="bottom">
+<a href="#top"><span class="button">Topo</span></a>
+</div>
+<footer>
+<div class="site-map">
+<div class="category">
+<a href="../pt/index.html">Jaime Villate</a>
+</div>
+<div class="category">
+<a href="../pt/software.html">Software livre</a>
+</div>
+<div class="category">
+<a href="../pt/publications/index.html">Publicações</a>
+</div>
+<div class="category">
+<a href="../pt/talks/index.html">Palestras</a>
+</div>
+</div>
+&copy; 2008, 2018, <kbd>villate (at) fe.up.pt</kbd> &mdash;
+<span>Last modified: 2021/10/28 15:12:46 UTC</span>
+</footer>
+</body>
+</html>
