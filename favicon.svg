@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg'
+     xmlns:xlink='http://www.w3.org/1999/xlink' width="320" height="320"
+     viewbox="0 0 320 320">
+  <circle r="140" cx="160" cy="160"  fill="#39f" />
+  <path d="M80 60 L120 60 L160 180 L200 60 L240 60 L160 280 Z" fill="#fff" />
+</svg>
