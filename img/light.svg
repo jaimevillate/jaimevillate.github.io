@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg width="240" height="240" viewBox="0 0 170 170"
+     version='1.1' xmlns='http://www.w3.org/2000/svg'
+     xmlns:xlink='http://www.w3.org/1999/xlink'>
+  <desc>Copyright 2021 Jaime E. Villate</desc>
+  <rect x="0" y="0" width="240" height="240" fill="#aaa" />
+  <path  d="M72 120 L97 76.7 h-50 Z" fill="#ccc" />
+  <path  d="M0 94 L57 94 L91 87 L87 93 L58 97 L0 97 Z" fill="white" />
+  <path  d="M72 120 L97 76.7 h-50 Z" stroke="black" fill="none" />
+  <path  d="M0 94 L57 94 L91 87 L87 93 L58 97 L0 97" stroke="black" fill="none" />
+  <path  d="M87 93 L170 74 V67 L88 92 Z" fill="#f00" />
+  <path  d="M88 92 L170 67 V60 L89 91 Z" fill="#ff8000" />
+  <path  d="M89 91 L170 60 V53 L89 90 Z" fill="#ff0" />
+  <path  d="M89 90 L170 53 V46 L90 89 Z" fill="#0f0" />
+  <path  d="M90 89 L170 46 V39 L90 88 Z" fill="#00f" />
+  <path  d="M90 88 L170 39 V32 L91 87 Z" fill="#b0f" />
+</svg>
+
