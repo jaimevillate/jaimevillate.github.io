@@ -1,0 +1,318 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{dejavu,tgbonum,graphicx,xcolor}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.7em}
+\definecolor{brown}{rgb}{0.75,0.55,0.1}
+\definecolor{violet}{rgb}{0.7,0.1,0.8}
+\definecolor{blue}{rgb}{0,0,0.9}
+\definecolor{green}{rgb}{0,0.6,0}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=cyan,
+  citecolor=magenta,
+  urlcolor=green,
+  pdftitle={Introdução ao LaTeX, terceira parte},
+  pdfauthor={Jaime E. Villate},
+  pdfsubject={Latex},
+  pdfkeywords={Latex, Tex},
+}
+\urlstyle{same}
+
+\title{Introdução ao \LaTeX\ -- Terceira parte}
+\author{Jaime Villate}
+\institute[FEUP]{Faculdade de Engenharia da Universidade do Porto}
+\date[13/12/2021]{13 de dezembro de 2021}
+
+\begin{document}
+\frame{\titlepage}
+\begin{frame}
+\frametitle{Conteúdo}
+\tableofcontents
+\end{frame}
+\section{Tipos de letra}
+\begin{frame}
+\frametitle{Tipos de letra}
+O tipo de letra muda-se usando:
+\{\textcolor{blue}{$\backslash$estilo1$\backslash$estilo2\ldots} Texto\}
+em que estilo pode ser:\pause
+\begin{description}
+\item[$\backslash$rmfamily] {\rmfamily Letra serifada.}\pause
+\item[$\backslash$sffamily] {\sffamily Letra não serifada.}\pause
+\item[$\backslash$ttfamily] {\ttfamily Tamanho uniforme.}\pause
+\item[$\backslash$mdseries] {\mdseries Normal.}\pause
+\item[$\backslash$bfseries] {\bfseries Negrita.}\pause
+\item[$\backslash$upshape] {\upshape Normal.}\pause
+\item[$\backslash$itshape] {\rmfamily\itshape Itálica.}\pause
+\item[$\backslash$slshape] {\slshape Inclinada.}\pause
+\item[$\backslash$scshape] {\rmfamily\scshape Pequenas maiúsculas.}\pause
+\end{description}
+
+O estilo do texto por omissão muda-se com:
+\textcolor{blue}{$\backslash$renewcommand}\{\textcolor{blue}{$\backslash$familydefault}\}\{\textcolor{blue}{$\backslash$sfdefault}\} (ou rmdefault).
+
+\end{frame}
+\begin{frame}
+\frametitle{Tamanho das letras}
+O tamanho das letras altera-se usando:
+\{\textcolor{blue}{$\backslash$tamanho} Texto\}\pause
+
+Os possíveis tamanhos são:\pause
+\begin{description}
+\item[\phantom{xxxxxxiii}$\backslash$tiny] {\tiny Texto exemplo.}\pause
+\item[\phantom{xxi}$\backslash$scriptsize] {\scriptsize Texto exemplo.}\pause
+\item[$\backslash$footnotesize] {\footnotesize Texto exemplo.}\pause
+\item[\phantom{xxxxxx}$\backslash$small] {\small Texto exemplo.}\pause
+\item[\phantom{xi}$\backslash$normalsize] {\normalsize Texto exemplo.}\pause
+\item[\phantom{xxxxxxi}$\backslash$large] {\large Texto exemplo.}\pause
+\item[\phantom{xxxxxx}$\backslash$Large] {\Large Texto exemplo.}\pause
+\item[\phantom{xxxxx}$\backslash$LARGE] {\LARGE Texto exemplo.}\pause
+\item[\phantom{xxxxxxi}$\backslash$huge] {\huge Texto exemplo.}\pause
+\item[\phantom{xxxxxxi}$\backslash$Huge] {\Huge Texto exemplo.}
+\end{description}
+\end{frame}
+\begin{frame}
+\frametitle{Letras para PDF}
+A fonte original do \TeX\ (\emph{Computer Modern}), foi criada para
+impressoras, antes de existir o formato PDF.
+
+Hoje em dia é melhor usar fontes PDF, por meio do pacote:
+
+\qquad\textcolor{violet}{$\backslash$usepackage}[\textcolor{brown}{T1}]\{\textcolor{blue}{fontenc}\}\pause
+
+Existem muitas fontes disponíveis. Há um catálogo em:
+
+\qquad\url{https://tug.org/FontCatalogue/}
+\end{frame}
+\section{Cabeçalhos}
+\begin{frame}
+\frametitle{Cabeçalhos}
+Definem-se com o comando
+\textcolor{violet}{$\backslash$pagestyle}\{\textcolor{blue}{estilo}\},
+em que estilo pode ser:\pause
+\begin{description}
+\item[\phantom{xxxxoiii}plain] Número centrado, no fim da página.\pause
+\item[\phantom{xxxxii}empty] Sem número.\pause
+\item[\phantom{xxi}headings] Número no topo da página após cabeçalho.\pause
+\item[myheadings] Semelhante a headings mas configurável.\pause
+\end{description}
+
+\textcolor{violet}{$\backslash$thispagestyle}\{estilo\} muda o estilo apenas
+numa página.\pause
+
+Para configurar os cabeçalhos, recomenda-se o pacote \textbf{fancyhdr}.
+\end{frame}
+\section{Notas de pé de pagina}
+\begin{frame}
+\frametitle{Notas de pé de pagina}
+\textcolor{violet}{$\backslash$footnote}\{texto\} introduz uma nota de pé de
+página.\pause
+
+A nota é identificada por um número que aparecerá no lugar onde foi escrita a
+nota. 
+\end{frame}
+\section{Tabelas}
+\begin{frame}
+\frametitle{Tabelas}
+Colocadas num bloco aparte, num lugar apropriado do documento e numeradas
+automaticamente. Definem-se com:
+  
+\qquad\textcolor{violet}{$\backslash$begin}\{\textcolor{blue}{table}\}conteúdo\textcolor{violet}{$\backslash$end}\{\textcolor{blue}{table}\}\pause
+
+O \textbf{conteúdo} pode incluir:\pause
+\begin{itemize}
+\item O comando \textcolor{violet}{$\backslash$centering}, se quisermos
+a tabela centrada.\\[12pt]\pause
+\item Texto, gráficos ou um bloco \textbf{tabular}\\[12pt]\pause
+\item O comando
+\textcolor{violet}{$\backslash$caption}\{\textcolor{blue}{Legenda}\},
+para incluir uma legenda.\\[12pt]\pause
+\item O comando
+\textcolor{violet}{$\backslash$label}\{\textcolor{blue}{nome}\}, para poder
+fazer referência ao número da tabela.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Blocos tabular}
+Arranja o texto em linhas e colunas
+
+\quad\textcolor{violet}{$\backslash$begin}\{\textcolor{blue}{tabular}\}\{\textbf{formato das colunas}\}\\
+\qquad linha 1 coluna 1 \textcolor{red}{\&} linha 1 coluna 2\textcolor{red}{$\backslash$$\backslash$}\\
+\qquad linha 2 coluna 1 \textcolor{red}{\&} linha 2 coluna 2\textcolor{red}{$\backslash$$\backslash$}\\
+\quad\textcolor{violet}{$\backslash$end}\{\textcolor{blue}{tabular}\}\pause
+
+O \textbf{formato das colunas} usa, por cada coluna, uma letra. Em
+cada linha, as colunas separam-se com o carácter \textcolor{red}{\&} e
+o fim da linha com \textcolor{red}{$\backslash$$\backslash$}\pause
+
+Para colocar uma linha vertical, escreve-se uma barra vertical
+\textcolor{red}{|} na definição do formato, antes e/ou depois da letra
+que define a coluna.\pause
+
+Para colocar uma linha horizontal usa-se o comando
+\textcolor{blue}{$\backslash$hline} antes e/ou depois de uma linha.
+\end{frame}
+\begin{frame}
+\frametitle{Formato das colunas num bloco tabular}
+A letra para o formato de uma das colunas pode ser:\pause
+
+\begin{description}
+\item[\phantom{xxxxxxxxi}l] Alinhada à esquerda.\pause
+\item[\phantom{xxxxxxxxi}r] Alinhada à direita.\pause
+\item[\phantom{xxxxxxxxi}c] Centrada.\pause
+\item[\phantom{i}p\{largura\}] Parágrafo alinhado no topo.\pause
+\item[m\{largura\}] Parágrafo alinhado ao meio.\pause
+\item[\phantom{i}b\{largura\}] Parágrafo alinhado por baixo.\pause
+\end{description}
+
+\textbf{Exemplo:} [\textcolor{blue}{|r|m\{2 cm\}|c|}]
+
+Cria três colunas, separadas por barras verticais.
+
+\end{frame}
+\section{Índices}
+\begin{frame}
+\frametitle{Índices}
+\textcolor{violet}{\bfseries $\backslash$tableofcontents}\\
+\quad Cria automaticamente uma lista do conteúdo do\\
+\quad documento: capítulos, secções, subsecções, etc.\pause
+
+\textcolor{violet}{\bfseries $\backslash$listoffigures}\\
+\quad Cria uma lista com as figuras no documento.\pause
+
+\textcolor{violet}{\bfseries $\backslash$listoftables}\\
+\quad Cria uma lista com as tabelas no documento.
+\end{frame}
+\section{Hiperligações}
+\begin{frame}
+\frametitle{Hiperligações}
+\qquad\textcolor{violet}{$\backslash$usepackage}\{\textcolor{blue}{hyperref}\}
+
+Cria hiperligações no ficheiro PDF e inclui informação sobre o
+ficheiro PDF.\pause
+
+Permite criar hiperligações para um endereço (URL) na Web com algum dos dois
+comandos:\pause
+\begin{itemize}
+\item \textcolor{violet}{$\backslash$url}\{\textcolor{blue}{URL}\}\pause
+\item \textcolor{violet}{$\backslash$href}\{\textcolor{blue}{URL}\}\{texto\}\pause
+\end{itemize}
+
+As opções definem-se dentro do comando: \textcolor{blue}{$\backslash$hypersetup}\{\ldots\}
+\end{frame}
+\begin{frame}
+\frametitle{Opções do pacote hyperref}
+{\setlength{\parskip}{0.2em}
+\textcolor{blue}{\bfseries colorlinks=true}\\
+\quad Links às cores (por omissão, ligações sublinhadas, sem cor).\pause
+
+\textcolor{blue}{\bfseries linkcolor=cor}\\
+\quad Cor das ligações internas (``blue'', ``green'', ``magenta'', \ldots).\pause
+
+\textcolor{blue}{\bfseries citecolor=cor}\\
+\quad Cor das citações.\pause
+
+\textcolor{blue}{\bfseries urlcolor=cor}\\
+\quad Cor das hiperligações.\pause
+
+\textcolor{blue}{\bfseries pdftitle\{\ldots\}}\\
+\quad Título do documento.\pause
+
+\textcolor{blue}{\bfseries pdfauthor\{\ldots\}}\\
+\quad Nome do autor.\pause
+
+\textcolor{blue}{\bfseries pdfsubject\{\ldots\}}\\
+\quad Assunto do documento.\pause
+
+\textcolor{blue}{\bfseries pdfkeywords\{\ldots\}}\\
+\quad Palavras chave, separadas por vírgulas.}
+\end{frame}
+\section{Blocos pré-formatados}
+\begin{frame}
+\frametitle{Blocos pré-formatados}
+Usados para listagens de programas de computador ou outro texto que deva
+ser apresentado textualmente.
+
+\quad\textcolor{violet}{$\backslash$begin}\{\textcolor{blue}{verbatim}\}\\
+\qquad \texttt{linha1}\\
+\qquad \texttt{linha2}\\
+\qquad\ldots\\
+\quad\textcolor{violet}{$\backslash$end}\{\textcolor{blue}{verbatim}\}\pause
+
+Dentro de um parágrafo pode também ser apresentada alguma parte de forma
+textual, usando o comando \textcolor{blue}{$\backslash$verb}+\texttt{texto}+
+\pause
+
+O carácter usado para delimitar o texto (+ no caso acima), pode ser
+qualquer que não apareça no texto.
+\end{frame}
+\section{Outros tipos de documentos}
+\begin{frame}
+\frametitle{Livros}
+\quad\textcolor{violet}{$\backslash$documentclass}[\textcolor{brown}{opções}]\{\textcolor{blue}{book}\}\\
+\quad\textcolor{violet}{$\backslash$begin}\{\textcolor{blue}{document}\}\\
+\qquad\textcolor{brown}{$\backslash$frontmatter}\\
+\qquad Capa, conteúdo, capítulo do prefácio, etc.\\
+\qquad\textcolor{brown}{$\backslash$mainmatter}\\
+\qquad\textcolor{violet}{$\backslash$part}\{Nome da parte\}\\
+\qquad\textcolor{violet}{$\backslash$chapter}\{Título do capítulo\}\\
+\qquad\textcolor{violet}{$\backslash$section}\{Título da secção\}\\
+\qquad\textcolor{violet}{$\backslash$subsection}\{Título da subsecção\}\\
+\qquad\textcolor{red}{$\backslash$appendix}\\
+\qquad\textcolor{violet}{$\backslash$chapter}\{Título do apêndice\}\\
+\qquad\textcolor{violet}{$\backslash$section}\{Título da secção\}\\
+\qquad\textcolor{violet}{$\backslash$subsection}\{Título da subsecção\}\\
+\qquad\textcolor{brown}{$\backslash$backmatter}\\
+\qquad Bibliografia, índice remissivo, etc.\\
+\quad\textcolor{violet}{$\backslash$end}\{\textcolor{blue}{document}\}
+\end{frame}
+\begin{frame}
+\frametitle{Cartas}
+\quad\textcolor{violet}{$\backslash$documentclass}[\textcolor{brown}{opções}]\{\textcolor{blue}{letter}\}\\
+\quad\textcolor{violet}{$\backslash$address}\{Nome e morada do remetente\}\\
+\quad\textcolor{violet}{$\backslash$signature}\{Nome de quem assina no fim\}\\
+\quad\textcolor{violet}{$\backslash$date}\{data\}\\
+\quad\textcolor{violet}{$\backslash$begin}\{\textcolor{blue}{document}\}\\
+\qquad\textcolor{violet}{$\backslash$begin}\{\textcolor{blue}{letter}\}\{Nome e morada do destinatário\}\\
+\qquad\textcolor{violet}{$\backslash$opening}\{Saudação\}\\
+\qquad Texto da carta.\\
+\qquad\textcolor{violet}{$\backslash$closing}\{Despedida\}\\
+\qquad\textcolor{violet}{$\backslash$end}\{\textcolor{blue}{letter}\}\\
+\quad\textcolor{violet}{$\backslash$end}\{\textcolor{blue}{document}\}
+\end{frame}
+\begin{frame}
+\frametitle{Slides}
+\quad\textcolor{violet}{$\backslash$documentclass}[\textcolor{brown}{opções}]\{\textcolor{blue}{beamer}\}\\
+\quad\textcolor{violet}{$\backslash$usetheme}\{Nome do tema\}\\
+\quad\textcolor{violet}{$\backslash$usecolor}\{Nome do esquema de cores\}\\
+\quad\textcolor{violet}{$\backslash$begin}\{\textcolor{blue}{document}\}\\
+\qquad\textcolor{violet}{$\backslash$begin}\{\textcolor{blue}{frame}\}\\
+\qquad\textcolor{violet}{$\backslash$frametitle}\{Título do slide 1\}\\
+\qquad Texto do slide 1.\\
+\qquad\textcolor{violet}{$\backslash$end}\{\textcolor{blue}{frame}\}\\
+\qquad\textcolor{violet}{$\backslash$begin}\{\textcolor{blue}{frame}\}\\
+\qquad\textcolor{violet}{$\backslash$frametitle}\{Título do slide 2\}\\
+\qquad Texto do slide 2.\\
+\qquad\textcolor{violet}{$\backslash$end}\{\textcolor{blue}{frame}\}\\
+\quad\textcolor{violet}{$\backslash$end}\{\textcolor{blue}{document}\}
+
+O texto pode incluir pausas, usando o comando \textcolor{blue}{$\backslash$pause}
+\end{frame}
+\begin{frame}
+\frametitle{Sítios úteis}
+\begin{itemize}
+\item Manual do Overlay: \url{https://www.overleaf.com/learn/}
+\item Tabelas: \url{https://www.overleaf.com/learn/latex/Tables}
+\item Equações:\\
+  {\small \url{https://www.overleaf.com/learn/latex/Mathematical_expressions}}
+\item Hiperligações:\\
+  \url{https://www.overleaf.com/learn/latex/Hyperlinks}
+\item Grupo de utilizadores de \TeX: \url{https://tug.org/}
+\item Catálogo de fontes: \url{https://tug.org/FontCatalogue/}
+\item Galeria de estilos e cores do \textbf{beamer}:\\
+  {\small \url{https://deic-web.uab.cat/~iblanes/beamer_gallery/index.html}}
+\end{itemize}
+\end{frame}
+\end{document}

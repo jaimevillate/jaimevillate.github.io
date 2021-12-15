@@ -1,0 +1,160 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{graphicx,fullpage}
+
+\title{Leis de Newton}
+\author{Jaime Villate}
+\date{2 de dezembro de 2021}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  Este artigo introduz as leis de Newton, base da mecânica clássica.
+  Não se pretende explicar ou estudar essas leis, mas apenas usá-las
+  como pretexto para mostrar como escrever um artigo usando \LaTeX{}.
+\end{abstract}
+\section{Introdução}
+
+As três leis de Newton são a base da mecânica clássica, que permite
+estudar desde o movimento dos objetos à nossa volta, até o movimento
+dos planetas, estrelas e outros objetos distantes.  As 3 leis foram
+enunciadas de forma clara numa única página do livro escrito por
+Newton em 1687 (\emph{Princípios Matemáticos da Filosofia Natural}).
+
+\section{Lei da inércia}
+
+A primeira lei de Newton, denominada lei da inércia, foi enunciada por
+Newton no seu livro assim:
+
+\begin{quotation}
+\noindent\textbf{LEI I.}\\
+\emph{``Todo corpo mantém o seu estado de repouso\index{repouso} ou de
+movimento uniforme segundo uma linha reta, se não for compelido a mudar o
+seu estado por forças nele impressas}.
+
+Os projéteis continuam no seu movimento,\index{movimento!uniforme} a menos
+que sejam retardados pela resistência do ar ou impelidos para baixo pela
+força da gravidade. Um pião, cujas partes, pela sua coesão, são
+continuamente desviadas dos seus movimentos retilíneos, não cessa de
+rodar se não for retardado pelo ar. Os corpos maiores --- planetas e
+cometas --- encontrando menos resistência nos espaços livres, continuam
+os seus movimentos, retilíneos ou circulares, por tempo muito maior.''
+\end{quotation}
+
+\section{Força e aceleração}
+
+A segunda lei de Newton pode ser considerada a definição do vetor
+associado a uma força, medido em função do efeito que produz sobre os
+corpos em que atua. O texto original do livro de Newton é:
+
+\begin{quotation}
+\noindent\textbf{LEI II.}\\
+\emph{``A mudança na quantidade de movimento é proporcional à força
+motora impressa e faz-se na direção da linha reta segundo a qual a força
+motora é aplicada}.
+
+Se uma força gera uma quantidade de movimento, uma força dupla gerará
+uma quantidade de movimento dupla, uma força tripla gerará uma quantidade
+de movimento tripla, quer a força seja impressa de uma vez e
+imediatamente, quer seja impressa gradual e sucessivamente. E se o corpo
+já então se movia, a nova quantidade de movimento (sempre dirigida na
+direção da força atuante) é adicionada ou subtraída à quantidade de
+movimento inicial, conforme sejam concordantes ou opostas uma da outra; ou
+juntas obliquamente de forma a produzir uma nova quantidade de movimento
+composta pela determinação das duas.''
+\end{quotation}
+
+Uma das oito definições que antecedem o enunciado das três leis no
+livro de Newton é a definição de \textbf{quantidade de movimento}, que
+é o produto da massa e a velocidade de um corpo. A quantidade de
+movimento também costuma chamar-se momento linear. A explicação a
+seguir à segunda lei, sobre como somar a quantidade de movimento
+devida a uma força, com a quantidade de movimento que o objeto já
+tinha, corresponde à nossa definição atual de adição de vetores. Como
+tal, na notação usada atualmente a quantidade de movimento definida
+por Newton é um vetor $\vec{p}$, igual ao produto da massa do objeto
+vezes a sua velocidade
+\begin{equation}
+\vec{p} = m\,\vec{v}
+\end{equation}
+
+A ``mudança da quantidade de movimento'', referida na segunda lei, é a
+quantidade de movimento final, $\vec{p}_2$, menos a quantidade de movimento
+inicial, $\vec{p}_1$ e, como é dito no enunciado da lei, essa mudança de
+quantidade de movimento é um vetor com a mesma direção e sentido da
+força que a produz. A frase ``quer a força seja impressa de uma vez e
+imediatamente, quer seja impressa gradual e sucessivamente'' significa que
+a mudança na quantidade de movimento é igual ao integral da força
+durante o intervalo de tempo em que atua. Assim sendo, a expressão
+matemática da segunda lei de Newton é:
+\begin{equation}
+\label{lei1}
+ \int_{t_1}^{t_2}\vec{F}\,\mathrm{d}\,t = \vec{p}_2 - \vec{p}_1
+\end{equation}
+
+A força $\vec{F}$ na equação \ref{lei1} deverá ser interpretada como
+a força resultante que atua sobre o objeto, ou seja, a soma vetorial
+de todas as forças aplicadas sobre o objeto
+
+O integral da força resultante, no lado esquerdo da equação
+\ref{lei1}, dá como resultado um vetor $\vec{I}$ chamado
+\textbf{impulso}. Como tal, se uma força atua durante um intervalo de
+tempo [$t _{1}$, $t _{2}$] sobre um corpo com quantidade de movimento
+inicial $\vec{p}_1$, a sua quantidade de movimento no instante
+$t _{2}$ será $\vec{p} _{2}$ = $\vec{p} _{1}$ + $\vec{I}$.
+
+A equação \ref{lei1} pode ser escrita de forma diferencial, ou seja,
+\begin{equation}
+\vec{F} = \frac{\mathrm{d}\,\vec{p}}{\mathrm{d}\,t}
+\end{equation}
+
+E quando a massa do corpo permanece constante, substituindo $\vec{p}$ por
+$m\,\vec{v}$ conduz à seguinte equação
+\begin{equation}
+\vec{F} = m\,\vec{a}
+\end{equation}
+onde $\vec{a}$ é a aceleração do corpo, igual à derivada da sua
+velocidade em ordem ao tempo. Esta é a forma mais habitual de escrever
+a segunda lei de Newton.
+
+\section{Lei de ação e reação}
+
+A terceira lei, conhecida como \textbf{lei de ação e reação}, é:
+
+\begin{quotation}
+\noindent\textbf{LEI III.}\\
+``\emph{A toda a ação opõe sempre uma igual
+reação\index{reacao@reação}.  Isto é, as ações mútuas de dois
+corpos um sobre o outro são sempre iguais e opostas}.
+
+Aquilo que puxa ou comprime outra coisa é puxado ou comprimido da mesma
+maneira por essa coisa. Se premir uma pedra com um dedo, o dedo é
+igualmente premido pela pedra. Se um cavalo puxar uma pedra por meio de uma
+corda, o cavalo será puxado para trás igualmente em direção à pedra.
+Pois a corda esticada tanto puxa o cavalo para a pedra como puxa a pedra
+para o cavalo, tanto dificulta a progressão do cavalo como favorece a
+progressão da pedra. Se um corpo bater noutro e pela sua força lhe mudar
+a quantidade de movimento, sofrerá igual mudança na sua quantidade de
+movimento, em sentido oposto. As mudanças feitas por estas ações são
+iguais, não nas velocidades, mas nas quantidades de movimento dos corpos.
+Isto, suposto que os corpos não são retidos por outros impedimentos.
+Portanto, se as quantidades de movimento são mudadas de igual, as
+mudanças de velocidades em sentido contrário são inversamente
+proporcionais às massas dos corpos.''
+\end{quotation}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{cavalo.pdf}
+\caption{Cavalo a arrastar um bloco.}\label{fig:cavalo}
+\end{figure}
+
+No exemplo dado por Newton, em que um cavalo arrasta um bloco pesado
+por meio de uma corda (figura \ref{fig:cavalo}). O cavalo exerce uma
+força para a direita sobre o bloco, através da corda, e o bloco exerce
+uma força igual e oposta sobre o cavalo, para a esquerda.  opostos.
+
+\end{document}
