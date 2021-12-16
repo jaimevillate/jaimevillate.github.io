@@ -1,12 +1,5 @@
-%% This is file `letter.cls'
-%% hand-taylored from the original file `letter.cls',
-%% to support the portuguese norm for letters.
 %%
-%% by Jorge Teixeira, March 2001.
-%% 
-%% The following information refers to that file:
-%%
-%% This is file `letter.cls',
+%% This is file `carta.cls `letter.cls', by Jaime Villate, from `letter.cls',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
@@ -15,35 +8,43 @@
 %% 
 %% This is a generated file.
 %% 
-%% Copyright 1993 1994 1995 1996 1997 1998 1999
+%% The source is maintained by the LaTeX Project team and bug
+%% reports for it can be opened at https://latex-project.org/bugs.html
+%% (but please observe conditions on bug reports sent to that address!)
+%% 
+%% 
+%% Copyright (C) 1993-2020
 %% The LaTeX3 Project and any individual authors listed elsewhere
 %% in this file.
 %% 
-%% This file is part of the LaTeX2e system.
-%% ----------------------------------------
+%% This file was generated from file(s) of the LaTeX base system.
+%% --------------------------------------------------------------
 %% 
-%% It may be distributed under the terms of the LaTeX Project Public
-%% License, as described in lppl.txt in the base LaTeX distribution.
-%% Either version 1.0 or, at your option, any later version.
-%% \CharacterTable
-%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
-%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
-%%   Digits        \0\1\2\3\4\5\6\7\8\9
-%%   Exclamation   \!     Double quote  \"     Hash (number) \#
-%%   Dollar        \$     Percent       \%     Ampersand     \&
-%%   Acute accent  \'     Left paren    \(     Right paren   \)
-%%   Asterisk      \*     Plus          \+     Comma         \,
-%%   Minus         \-     Point         \.     Solidus       \/
-%%   Colon         \:     Semicolon     \;     Less than     \<
-%%   Equals        \=     Greater than  \>     Question mark \?
-%%   Commercial at \@     Left bracket  \[     Backslash     \\
-%%   Right bracket \]     Circumflex    \^     Underscore    \_
-%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
-%%   Right brace   \}     Tilde         \~}
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    https://www.latex-project.org/lppl.txt
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2008 or later.
+%% 
+%% This file has the LPPL maintenance status "maintained".
+%% 
+%% This file may only be distributed together with a copy of the LaTeX
+%% base system. You may however distribute the LaTeX base system without
+%% such generated files.
+%% 
+%% The list of all files belonging to the LaTeX base distribution is
+%% given in the file `manifest.txt'. See also `legal.txt' for additional
+%% information.
+%% 
+%% The list of derived (unpacked) files belonging to the distribution
+%% and covered by LPPL is defined by the unpacking scripts (with
+%% extension .ins) which are part of the distribution.
 \NeedsTeXFormat{LaTeX2e}[1996/06/01]
-\ProvidesClass{letter-pt}
-              [2001/03/24 from letter 
-               1999/02/09 v1.2z
+\ProvidesClass{carta}
+              [2021/12/13 from letter
+               2020/03/11 v1.3b
                Standard LaTeX document class]
 \newcommand\@ptsize{}
 \DeclareOption{a4paper}
@@ -150,17 +151,17 @@
       \let\@oddhead\@empty
       \def\@oddfoot{\normalfont\hfil\thepage\hfil}%
       \def\@evenfoot{\normalfont\hfil\thepage\hfil}}
-\newcommand*{\name}[1]{\def\fromname{#1}}
-\newcommand*{\signature}[1]{\def\fromsig{#1}}
-\newcommand*{\address}[1]{\def\fromaddress{#1}}
-\newcommand*{\location}[1]{\def\fromlocation{#1}}
-\newcommand*{\telephone}[1]{\def\telephonenum{#1}}
+\newcommand*\name[1]{\def\fromname{#1}}
+\newcommand*\signature[1]{\def\fromsig{#1}}
+\newcommand*\address[1]{\def\fromaddress{#1}}
+\newcommand*\location[1]{\def\fromlocation{#1}}
+\newcommand*\telephone[1]{\def\telephonenum{#1}}
 \name{}
 \signature{}
 \address{}
 \location{}
 \telephone{}
-\newcommand*{\makelabels}{%
+\newcommand*\makelabels{%
   \AtBeginDocument{%
      \let\@startlabels\startlabels
      \let\@mlabel\mlabel
@@ -174,8 +175,8 @@
     \if@twoside \ifodd\c@page
                 \else\thispagestyle{empty}\null\newpage\fi
     \fi
-    \c@page\@ne
-    \c@footnote\@ne
+    \c@page \@ne
+    \c@footnote \z@
     \interlinepenalty=200 % smaller than the TeXbook value
     \@processto{\leavevmode\ignorespaces #1}}
   {\stopletter\@@par\pagebreak\@@par
@@ -195,7 +196,7 @@
   \fi}
 \long\def\@xproc #1\\#2@@@{\def\toname{#1}\def\toaddress{#2}}
 \long\def\@yproc #1\\#2@@@{\def\toaddress{#2}}
-\newcommand*{\stopbreaks}{%
+\newcommand*\stopbreaks{%
   \interlinepenalty\@M
   \def\par{\@@par\nobreak}%
   \let\\\@nobreakcr
@@ -209,7 +210,7 @@
     \@bsphack\vadjust{\nobreak\vskip #1}\@esphack
   \fi}
 \def\@nobreakcr{\@ifstar{\@normalcr*}{\@normalcr*}}
-\newcommand*{\startbreaks}{%
+\newcommand*\startbreaks{%
   \let\\\@normalcr
   \interlinepenalty 200%
   \def\par{\@@par\penalty 200\relax}}
@@ -218,22 +219,22 @@
 \newdimen\indentedwidth
 \indentedwidth=\textwidth
 \advance\indentedwidth -\longindentation
-\newcommand*{\opening}[1]{\ifx\@empty\fromaddress
+\newcommand*\opening[1]{\ifx\@empty\fromaddress
   \thispagestyle{firstpage}%
-    {\raggedleft\@date\par}%
+    {\raggedright\@date\par}%
   \else  % home address
     \thispagestyle{empty}%
-   {\raggedright\begin{tabular}{l@{}}\ignorespaces
+    {\raggedright\begin{tabular}{l@{}}\ignorespaces
       \fromaddress \\*[2\parskip]%
       \end{tabular}\par}%
   \fi
   \vspace{2\parskip}%
- {\raggedleft\begin{tabular}{l@{}}\ignorespaces
-      \toname \\ \toaddress \\*[2\parskip]%
-      \@date \end{tabular}\par}%
+  {\raggedleft\begin{tabular}{l@{}}\ignorespaces
+                \toname \\ \toaddress \\*[2\parskip]%
+                \@date \end{tabular}\par}%
   \vspace{2\parskip}%
   #1\par\nobreak}
-\newcommand{\closing}[1]{\par\nobreak\vspace{\parskip}%
+\newcommand\closing[1]{\par\nobreak\vspace{\parskip}%
   \stopbreaks
   \noindent
   \ifx\@empty\fromaddress\else
@@ -245,21 +246,21 @@
        \else \fromsig \fi\strut}%
    \par}
 \medskipamount=\parskip
-\newcommand*{\cc}[1]{%
+\newcommand*\cc[1]{%
   \par\noindent
   \parbox[t]{\textwidth}{%
     \@hangfrom{\normalfont\ccname: }%
     \ignorespaces #1\strut}\par}
-\newcommand*{\encl}[1]{%
+\newcommand*\encl[1]{%
   \par\noindent
   \parbox[t]{\textwidth}{%
     \@hangfrom{\normalfont\enclname: }%
     \ignorespaces #1\strut}\par}
-\newcommand*{\ps}{\par\startbreaks}
-\newcommand*{\stopletter}{}
-\newcommand*{\returnaddress}{}
+\newcommand*\ps{\par\startbreaks}
+\newcommand*\stopletter{}
+\newcommand*\returnaddress{}
 \newcount\labelcount
-\newcommand*{\startlabels}{\labelcount\z@
+\newcommand*\startlabels{\labelcount\z@
   \pagestyle{empty}%
   \let\@texttop\relax
   \topmargin -50\p@
@@ -283,16 +284,16 @@
   \parindent \z@
   \twocolumn\relax}
 \let\@startlabels=\relax
-\newcommand*{\mlabel}[2]{%
+\newcommand*\mlabel[2]{%
   \parbox[b][2in][c]{262\p@}{\strut\ignorespaces #2}%
   }
 \let\@mlabel=\@gobbletwo
-\setlength\leftmargini  {2.5em}
+\setlength\leftmargini   {2.5em}
 \setlength\leftmarginii  {2.2em}
 \setlength\leftmarginiii {1.87em}
 \setlength\leftmarginiv  {1.7em}
-\setlength\leftmarginv  {1em}
-\setlength\leftmarginvi {1em}
+\setlength\leftmarginv   {1em}
+\setlength\leftmarginvi  {1em}
 \setlength\leftmargin    {\leftmargini}
 \setlength  \labelsep  {5\p@}
 \setlength  \labelwidth{\leftmargini}
@@ -335,16 +336,17 @@
 \renewcommand\p@enumii{\theenumi}
 \renewcommand\p@enumiii{\theenumi(\theenumii)}
 \renewcommand\p@enumiv{\p@enumiii\theenumiii}
-\newcommand\labelitemi{\textbullet}
-\newcommand\labelitemii{\normalfont\bfseries \textendash}
-\newcommand\labelitemiii{\textasteriskcentered}
-\newcommand\labelitemiv{\textperiodcentered}
+\newcommand\labelitemi  {\labelitemfont \textbullet}
+\newcommand\labelitemii {\labelitemfont \bfseries \textendash}
+\newcommand\labelitemiii{\labelitemfont \textasteriskcentered}
+\newcommand\labelitemiv {\labelitemfont \textperiodcentered}
+\newcommand\labelitemfont{\normalfont}
 \newenvironment{description}
                {\list{}{\labelwidth\z@ \itemindent-\leftmargin
                         \let\makelabel\descriptionlabel}}
                {\endlist}
-\newcommand*{\descriptionlabel}[1]{\hspace\labelsep
-                                \normalfont\bfseries #1}
+\newcommand*\descriptionlabel[1]{\hspace\labelsep
+                                 \normalfont\bfseries #1}
 \newenvironment{verse}
                {\let\\=\@centercr
                 \list{}{\setlength\itemsep{\z@}%
@@ -386,15 +388,15 @@
   \kern-\p@
   \hrule \@width .4\columnwidth
   \kern .6\p@}
-\long\def\@makefntext#1{%
+\newcommand\@makefntext[1]{%
     \noindent
     \hangindent 5\p@
     \hb@xt@5\p@{\hss\@makefnmark}#1}
-\newcommand*{\ccname}{cc}
-\newcommand*{\enclname}{encl}
-\newcommand*{\pagename}{Page}
-\newcommand*{\headtoname}{To}
-\newcommand*{\today}{\ifcase\month\or
+\newcommand*\ccname{cc}
+\newcommand*\enclname{encl}
+\newcommand*\pagename{Page}
+\newcommand*\headtoname{To}
+\newcommand*\today{\ifcase\month\or
   January\or February\or March\or April\or May\or June\or
   July\or August\or September\or October\or November\or December\fi
   \space\number\day, \number\year}
