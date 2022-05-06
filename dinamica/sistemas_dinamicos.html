@@ -1651,12 +1651,13 @@ Encontre os pontos de equilíbrio do sistema dinâmico
 </div>
 </div>
 <p>
-<b>Resolução</b>. Para resolver o problema usando o Maxima, é
-conveniente associar a uma lista as duas expressões dos lados direitos
-das equações de evolução
+<b>Resolução</b>. Como vão ser usados em vários comandos, comecemos por
+armazenar as duas expressões dos lados direitos das equações de evolução
+em duas variáveis
 </p>
 <div class="maxima notranslate">
-<span class="maxm">(%i2)</span> <span class="maxv">f</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxn">4</span><span class="maxo">-</span><span class="maxv">x1</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxo">*</span><span class="maxv">x2</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxv"> x2</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo">-</span><span class="maxv">x1</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo">+</span><span class="maxn">1</span><span class="maxd">]</span><span class="maxm">$</span><br>
+<span class="maxm">(%i2)</span> <span class="maxv">f1</span><span class="maxm">:</span> <span class="maxn">4</span><span class="maxo">-</span><span class="maxv">x1</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxo">*</span><span class="maxv">x2</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxm">$</span><br>
+<span class="maxm">(%i3)</span> <span class="maxv">f2</span><span class="maxm">:</span> <span class="maxv"> x2</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo">-</span><span class="maxv">x1</span><span class="maxo">^</span><span class="maxn">2</span><span class="maxo">+</span><span class="maxn">1</span><span class="maxm">$</span><br>
 </div>
 <p>
 a seguir, usa-se o comando <span id="solve&nbsp;(Maxima)" class="index maxf">solve</span> para
@@ -1664,9 +1665,9 @@ encontrar os pontos de equilíbrio que é onde as duas expressões são
 iguais a zero
 </p>
 <div class="maxima notranslate">
-<span class="maxm">(%i3)</span> <span class="maxv">equilibrio</span><span class="maxm">:</span><span class="maxf"> solve</span><span class="maxd">(</span><span class="maxv">f</span><span class="maxd">)</span><span class="maxm">$</span><br>
-<span class="maxm">(%i4)</span> <span class="maxf">float</span><span class="maxd"> (</span><span class="maxv">equilibrio</span><span class="maxd">)</span><span class="maxm">;</span><br>
-(%o4) <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14.2019673em' height='1.022909em' viewBox='-0.6 -8.084059 142.019673 10.22909' class='inline' style='vertical-align:-0.216em'>
+<span class="maxm">(%i4)</span> <span class="maxv">equilibrio</span><span class="maxm">:</span><span class="maxf"> solve</span><span class="maxd">([</span><span class="maxv">f1</span><span class="maxo">=</span><span class="maxn">0</span><span class="maxd">,</span> <span class="maxv">f2</span><span class="maxo">=</span><span class="maxn">0</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i5)</span> <span class="maxf">float</span><span class="maxd"> (</span><span class="maxv">equilibrio</span><span class="maxd">)</span><span class="maxm">;</span><br>
+(%o5) <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14.2019673em' height='1.022909em' viewBox='-0.6 -8.084059 142.019673 10.22909' class='inline' style='vertical-align:-0.216em'>
 <g id='eq137'>
 <text font-family='futr8r' font-size='10.957664' x='0' y='.098644'>[<tspan x='5.679979' y='.098644'>[</tspan>
 </text>
@@ -1794,16 +1795,17 @@ as nulclinas da segunda variável são as duas partes da hipérbole
 <p>
 Os pontos de equilíbrio do sistema são os quatro pontos de interseção
 entre a elipse e a hipérbole. Os gráficos dessas duas curvas podem ser
-obtidos no Maxima usando a função para gráficos de funções implícitas:
+obtidos no Maxima usando a sintaxe para gráficos de funções implícitas
+(em versões anteriores a 5.45, era necessário usar o programa
+<span class="maxf">implicit_plot</span>):
 </p>
 <div class="maxima notranslate">
-<span class="maxm">(%i5)</span> <span class="maxf">load</span><span class="maxd"> (</span><span class="maxs">"implicit_plot"</span><span class="maxd">)</span><span class="maxm">$</span><br>
-<span class="maxm">(%i6)</span> <span class="maxf">implicit_plot</span><span class="maxd"> (</span><span class="maxv">f</span><span class="maxd">, [</span><span class="maxv">x1</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">2.5</span><span class="maxd">,</span><span class="maxn">2.5</span><span class="maxd">], [</span><span class="maxv">x2</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">2</span><span class="maxd">], [</span><span class="maxk">legend</span><span class="maxd">,</span><span class="maxi">false</span><span class="maxd">],[</span><span class="maxk">xlabel</span><span class="maxd">,</span><span class="maxs">"x1"</span><span class="maxd">],[</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"x2"</span><span class="maxd">])</span><span class="maxm">;</span>
+<span class="maxm">(%i6)</span> <span class="maxf">plot2d</span> <span class="maxd">([</span><span class="maxv">f1</span><span class="maxo">=</span><span class="maxn">0</span><span class="maxd">,</span> <span class="maxv">f2</span><span class="maxo">=</span><span class="maxn">0</span><span class="maxd">] ,[</span><span class="maxv">x1</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">2.5</span><span class="maxd">,</span><span class="maxn">2.5</span><span class="maxd">], [</span><span class="maxv">x2</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">2</span><span class="maxd">,</span><span class="maxn">2</span><span class="maxd">],</span> <span class="maxk">nolegend</span><span class="maxd">)</span><span class="maxm">;</span>
 </div>
 <br>
 <figure class="center" id="fig-7.5">
 <img class="fig" src="img/Nulclinas_sistema_nao_linear.png"
-     alt="Nulclinas e pontos de equilíbrio" style="width:24.42em">
+     alt="Nulclinas e pontos de equilíbrio" style="width:24.51em">
 <figcaption>
 <b>Figura 7.5:</b> Nulclinas e pontos de equilíbrio.
 </figcaption>
@@ -5652,7 +5654,7 @@ derivando <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='htt
 </div>
 </div>
 &copy; 2017&ndash;2020, <kbd>villate (at) fe.up.pt</kbd> &mdash;
-<span>Última atualização: 2022/05/02 13:07:32 UTC</span>
+<span>Última atualização: 2022/05/06 09:46:03 UTC</span>
 </footer>
 </body>
 </html>
