@@ -1,0 +1,555 @@
+<!DOCTYPE html><html prefix="dcterms: http://purl.org/dc/terms/" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Potencial eletrostático</title>
+<!--Generated on Wed Aug 30 11:55:46 2023 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 30 de agosto de 2023.-->
+
+<link rel="stylesheet" href="../css/latex-probs-schola.css" type="text/css">
+<link rel="stylesheet" href="../css/ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<nav><a href="./index.html">Eletromagnetismo e Circuitos</a><span>&rarr;</span><a href="./problemas.html">Problemas resolvidos</a><span>&rarr;</span><span>Potencial eletrostático</span></nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line" lang="pt">
+<h1 class="ltx_title ltx_title_document">3. Potencial eletrostático</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jaime E. Villate e Luís Miguel Martelo
+</span></span>
+</div>
+<div class="ltx_dates">(30 de agosto de 2023)</div>
+
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Thmexample1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 3.1</span></span></h6><p></p>
+<div id="Thmexample1.p1" class="ltx_para">
+<p class="ltx_p">Demonstre a identidade:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\vec{\nabla}\left(\dfrac{1}{r}\right)=-\dfrac{\vec{r}}{r^{3}}=-\dfrac{\hat{r}}%
+{r^{2}}" display="block"><mrow><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mspace width=0.166em /><mrow><mo>(</mo><mfrac><mn>1</mn><mi>r</mi></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mfrac><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><msup><mi>r</mi><mn>3</mn></msup></mfrac></mrow><mo>=</mo><mrow><mo>−</mo><mfrac><mover accent="true"><mi>r</mi><mo stretchy="false">ˆ</mo></mover><msup><mi>r</mi><mn>2</mn></msup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Em coordenadas cartesianas,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="r^{-1}=\left(x^{2}+y^{2}+z^{2}\right)^{-1/2}" display="block"><mrow><msup><mi>r</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">e o gradiente é,</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle\vec{\nabla}\left(\dfrac{1}{r}\right)" display="inline"><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mspace width=0.166em /><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>r</mi></mfrac></mstyle><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=-\dfrac{2x\,\hat{\imath}}{2\bigl{(}x^{2}+y^{2}+z^{2}\bigr{)}^{3/%
+2}}-\dfrac{2y\,\hat{\jmath}}{2\bigl{(}x^{2}+y^{2}+z^{2}\bigr{)}^{3/2}}-\dfrac{%
+2z\,\hat{k}}{2\bigl{(}x^{2}+y^{2}+z^{2}\bigr{)}^{3/2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mspace width=0.166em /><mi>x</mi><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow><mrow><mn>2</mn><mspace width=0.166em /><msup><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow><mo>−</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mspace width=0.166em /><mi>y</mi><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow><mrow><mn>2</mn><mspace width=0.166em /><msup><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mspace width=0.166em /><mi>z</mi><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow><mrow><mn>2</mn><mspace width=0.166em /><msup><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle=-\dfrac{\vec{r}}{r^{3}}=-\dfrac{\hat{r}}{r^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><msup><mi>r</mi><mn>3</mn></msup></mfrac></mstyle></mrow><mo>=</mo><mrow><mo>−</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>r</mi><mo stretchy="false">ˆ</mo></mover><msup><mi>r</mi><mn>2</mn></msup></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Thmexample2" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 3.2</span></span></h6><p></p>
+<div id="Thmexample2.p1" class="ltx_para">
+<p class="ltx_p">Uma esfera metálica encontra-se próxima de outra peça metálica
+formada por um cilindro e duas semiesferas, como mostra a
+figura. Ambos objetos estão isolados de qualquer outro condutor. A
+esfera tem carga positiva (<math id="Thmexample2.p1.m1" class="ltx_Math" alttext="Q_{1}&gt;0" display="inline"><mrow><msub><mi>Q</mi><mn>1</mn></msub><mo>&gt;</mo><mn>0</mn></mrow></math>) e a peça cilíndrica está
+completamente descarregada (<math id="Thmexample2.p1.m2" class="ltx_Math" alttext="Q_{2}=0" display="inline"><mrow><msub><mi>Q</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn></mrow></math>). Arbitrando que o potencial
+da peça cilíndrica é zero, então o potencial da esfera é 80 V. Faça
+um desenho mostrando as duas peças, a distribuição de cargas, as
+linhas de campo nas duas peças e à sua volta, e as superfícies
+equipotenciais de -5 V, 5 V e 75 V.</p>
+<img src="img/prob-two_conductors.png" style="width:24.990em;max-width:100%;height:auto" id="Thmexample2.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Há que ter em conta várias coisas:</p>
+<ul id="S0.I1" class="ltx_itemize">
+<li id="S0.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">As cargas distribuem-se nas superfícies dos dois
+condutores. No cilindro são induzidas cargas negativas no extremo
+mais próximo da esfera e o mesmo número de cargas positivas no
+extremo mais afastado. Na superfície da esfera há cargas
+positivas, mais concentradas no extremo próximo do cilindro.</p>
+</div>
+</li>
+<li id="S0.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Não há linhas de campo dentro da esfera nem dentro do
+cilindro. Há linhas de campo a começar na superfície da esfera e
+na superfície do cilindro, no extremo onde há carga positiva, e
+linhas de campo a terminar na superfície do cilindro, no extremo
+onde há carga negativa.</p>
+</div>
+</li>
+<li id="S0.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Todas as linhas de campo são perpendiculares à superfície do
+objeto onde começam ou terminam.</p>
+</div>
+</li>
+<li id="S0.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Nenhuma linha de campo pode começar num extremo do cilindro e
+terminar no outro, porque o potencial é constante no cilindro,
+enquanto que o potencial onde começa uma linha é sempre maior do
+que o potencial onde esta termina.</p>
+</div>
+</li>
+<li id="S0.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">A equipotencial de <math id="S0.I1.i5.p1.m1" class="ltx_Math" alttext="75" display="inline"><mn>75</mn></math> V estará próxima da esfera, onde o
+potencial é <math id="S0.I1.i5.p1.m2" class="ltx_Math" alttext="80" display="inline"><mn>80</mn></math> V, e as equipotenciais de <math id="S0.I1.i5.p1.m3" class="ltx_Math" alttext="5" display="inline"><mn>5</mn></math> V e <math id="S0.I1.i5.p1.m4" class="ltx_Math" alttext="-5" display="inline"><mrow><mo>−</mo><mn>5</mn></mrow></math> V estarão
+próximas do cilindro, onde o potencial é <math id="S0.I1.i5.p1.m5" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>. No entanto, nenhuma
+dessas equipotenciais pode tocar nenhum dos objetos, porque estes
+têm valores de potencial diferentes de <math id="S0.I1.i5.p1.m6" class="ltx_Math" alttext="75" display="inline"><mn>75</mn></math> V, <math id="S0.I1.i5.p1.m7" class="ltx_Math" alttext="5" display="inline"><mn>5</mn></math> V e <math id="S0.I1.i5.p1.m8" class="ltx_Math" alttext="-5" display="inline"><mrow><mo>−</mo><mn>5</mn></mrow></math> V.</p>
+</div>
+</li>
+<li id="S0.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I1.i6.p1" class="ltx_para">
+<p class="ltx_p">Essas 3 equipotenciais não se podem cruzar entre si, por terem
+valores de potencial diferentes, e devem ser perpendiculares às
+linhas de campo elétrico, em todos os pontos onde se cruzam com
+elas.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">O gráfico é aproximadamente o seguinte:</p>
+<img src="figs/equipotentials-1.png" style="width:25.137em;max-width:100%;height:auto" id="p3.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Também pode ser representado visto de longe:</p>
+<img src="figs/equipotentials-2.png" style="width:15.876em;max-width:100%;height:auto" id="p4.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="Thmexample3" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 3.3</span></span></h6><p></p>
+<div id="Thmexample3.p1" class="ltx_para">
+<p class="ltx_p">O potencial elétrico a uma certa distância de uma carga pontual
+é 600 V (arbitrando potencial nulo no infinito) e o valor do campo
+elétrico é 200 N/C. Calcule a distância e o valor da carga.
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Usando as expressões do potencial e do módulo do
+campo eléctrico de uma carga pontual, em unidades SI,</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="600=\dfrac{kq}{d}\qquad 200=\dfrac{kq}{d^{2}}" display="block"><mrow><mrow><mn>600</mn><mo>=</mo><mfrac><mrow><mi>k</mi><mspace width=0.166em /><mi>q</mi></mrow><mi>d</mi></mfrac></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mn>200</mn><mo>=</mo><mfrac><mrow><mi>k</mi><mspace width=0.166em /><mi>q</mi></mrow><msup><mi>d</mi><mn>2</mn></msup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">onde <math id="p5.m1" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> é a distância atá à carga. Dividindo uma equação pela outra
+temos:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="d=3" display="block"><mrow><mi>d</mi><mo>=</mo><mn>3</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">e substituindo na equação do potencial,</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="kq=600\times 3\qquad\Longrightarrow\qquad q=2.00\times 10^{-7}" display="block"><mrow><mrow><mrow><mi>k</mi><mspace width=0.166em /><mi>q</mi></mrow><mo>=</mo><mrow><mrow><mn>600</mn><mo>×</mo><mn>3</mn></mrow><mo mathvariant="italic" separator="true">  </mo><mo>⟹</mo></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mi>q</mi><mo>=</mo><mrow><mn>2.00</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>7</mn></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">o valor da carga é 200 nC e encontra-se a 3 m.</p>
+</div>
+<div id="Thmexample4" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 3.4</span></span></h6><p></p>
+<div id="Thmexample4.p1" class="ltx_para">
+<p class="ltx_p">A figura representa as linhas de campo eletrostático de duas partículas
+carregadas e separadas por uma distância de 7 cm.
+<br class="ltx_break">(<em class="ltx_emph ltx_font_italic">a</em>) Calcule a distância do ponto P às partículas.
+<br class="ltx_break">(<em class="ltx_emph ltx_font_italic">b</em>) Sabendo que a carga da partícula no lado direito é de <math id="Thmexample4.p1.m1" class="ltx_Math" alttext="-8" display="inline"><mrow><mo>−</mo><mn>8</mn></mrow></math> nC,
+calcule o potencial no ponto P (arbitre <math id="Thmexample4.p1.m2" class="ltx_Math" alttext="V=0" display="inline"><mrow><mi>V</mi><mo>=</mo><mn>0</mn></mrow></math> no infinito).
+<br class="ltx_break"></p>
+<img src="img/eic0014-prob_7_5.png" style="width:15.813em;max-width:100%;height:auto" id="Thmexample4.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. (<em class="ltx_emph ltx_font_italic">a</em>) No ponto P o campo total é nulo, ou
+seja, os campos das duas cargas são vetores opostos e com o mesmo
+módulo. Se <math id="p6.m1" class="ltx_Math" alttext="d_{1}" display="inline"><msub><mi>d</mi><mn>1</mn></msub></math> e <math id="p6.m2" class="ltx_Math" alttext="d_{2}" display="inline"><msub><mi>d</mi><mn>2</mn></msub></math> são as distâncias desde cada uma das cargas
+até P, a condição para que os módulos dos dois campos sejam iguais
+é:</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\dfrac{k\,|q_{1}|}{d_{1}^{2}}=\dfrac{k\,|q_{2}|}{d_{2}^{2}}\quad%
+\Longrightarrow\quad\dfrac{d_{1}}{d_{2}}=\sqrt{\dfrac{q_{1}}{q_{2}}}=\dfrac{2}%
+{3}" display="block"><mrow><mrow><mfrac><mrow><mi>k</mi><mspace width=0.166em /><mrow><mo stretchy="false">|</mo><msub><mi>q</mi><mn>1</mn></msub><mo stretchy="false">|</mo></mrow></mrow><msubsup><mi>d</mi><mn>1</mn><mn>2</mn></msubsup></mfrac><mo>=</mo><mrow><mfrac><mrow><mi>k</mi><mspace width=0.166em /><mrow><mo stretchy="false">|</mo><msub><mi>q</mi><mn>2</mn></msub><mo stretchy="false">|</mo></mrow></mrow><msubsup><mi>d</mi><mn>2</mn><mn>2</mn></msubsup></mfrac><mo mathvariant="italic" separator="true"> </mo><mo>⟹</mo></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mfrac><msub><mi>d</mi><mn>1</mn></msub><msub><mi>d</mi><mn>2</mn></msub></mfrac><mo>=</mo><msqrt><mfrac><msub><mi>q</mi><mn>1</mn></msub><msub><mi>q</mi><mn>2</mn></msub></mfrac></msqrt><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">e como <math id="p6.m3" class="ltx_Math" alttext="d_{1}+d_{2}=7" display="inline"><mrow><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>+</mo><msub><mi>d</mi><mn>2</mn></msub></mrow><mo>=</mo><mn>7</mn></mrow></math> cm, então, com as distâncias em cm:</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\dfrac{d_{1}}{7-d_{1}}=\dfrac{2}{3}\quad\Longrightarrow\quad d_{1}=\dfrac{14}{%
+5}=2.8\;\mathrm{cm}" display="block"><mrow><mrow><mfrac><msub><mi>d</mi><mn>1</mn></msub><mrow><mn>7</mn><mo>−</mo><msub><mi>d</mi><mn>1</mn></msub></mrow></mfrac><mo>=</mo><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac><mo mathvariant="italic" separator="true"> </mo><mo>⟹</mo></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>=</mo><mfrac><mn>14</mn><mn>5</mn></mfrac><mo>=</mo><mrow><mn>2.8</mn><mspace width=0.166em /><mi>cm</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">e <math id="p6.m4" class="ltx_Math" alttext="d_{2}=4.2" display="inline"><mrow><msub><mi>d</mi><mn>2</mn></msub><mo>=</mo><mn>4.2</mn></mrow></math> cm. A carga mais próxima de P (<math id="p6.m5" class="ltx_Math" alttext="q_{1}" display="inline"><msub><mi>q</mi><mn>1</mn></msub></math> à esquerda) é menor
+que a outra (<math id="p6.m6" class="ltx_Math" alttext="q_{2}" display="inline"><msub><mi>q</mi><mn>2</mn></msub></math> à direita).
+</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">b</em>) A carga <math id="p7.m1" class="ltx_Math" alttext="q_{1}" display="inline"><msub><mi>q</mi><mn>1</mn></msub></math> da partícula no lado esquerdo obtém-se a
+partir da outra carga <math id="p7.m2" class="ltx_Math" alttext="q_{2}=-8" display="inline"><mrow><msub><mi>q</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>−</mo><mn>8</mn></mrow></mrow></math> nC, usando a relação entre as cargas
+dada no enunciado:</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\dfrac{q_{1}}{q_{2}}=\dfrac{4}{9}\quad\Longrightarrow\quad q_{1}=\dfrac{4\,q_{%
+2}}{9}=\dfrac{32}{9}\;\mathrm{nC}" display="block"><mrow><mrow><mfrac><msub><mi>q</mi><mn>1</mn></msub><msub><mi>q</mi><mn>2</mn></msub></mfrac><mo>=</mo><mrow><mfrac><mn>4</mn><mn>9</mn></mfrac><mo mathvariant="italic" separator="true"> </mo><mo>⟹</mo></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>=</mo><mfrac><mrow><mn>4</mn><mspace width=0.166em /><msub><mi>q</mi><mn>2</mn></msub></mrow><mn>9</mn></mfrac><mo>=</mo><mrow><mfrac><mn>32</mn><mn>9</mn></mfrac><mspace width=0.166em /><mi>nC</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">e o potencial total no ponto P é (unidades SI):</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="V=\dfrac{k\,q_{1}}{d_{1}}+\dfrac{k\,q_{2}}{d_{2}}=-\dfrac{8.988\times(32/9)}{0%
+.028}-\dfrac{8.988\times 8}{0.042}=-2853\,\mathrm{V}" display="block"><mrow><mi>V</mi><mo>=</mo><mrow><mfrac><mrow><mi>k</mi><mspace width=0.166em /><msub><mi>q</mi><mn>1</mn></msub></mrow><msub><mi>d</mi><mn>1</mn></msub></mfrac><mo>+</mo><mfrac><mrow><mi>k</mi><mspace width=0.166em /><msub><mi>q</mi><mn>2</mn></msub></mrow><msub><mi>d</mi><mn>2</mn></msub></mfrac></mrow><mo>=</mo><mrow><mrow><mo>−</mo><mfrac><mrow><mn>8.988</mn><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mn>32</mn><mo>/</mo><mn>9</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>0.028</mn></mfrac></mrow><mo>−</mo><mfrac><mrow><mn>8.988</mn><mo>×</mo><mn>8</mn></mrow><mn>0.042</mn></mfrac></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mn>2853</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample5" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 3.5</span></span></h6><p></p>
+<div id="Thmexample5.p1" class="ltx_para">
+<p class="ltx_p">Duas superfícies condutoras esféricas e concêntricas têm raios
+de 5 cm e 7 cm. A superfície menor tem carga total de 3 nC e a carga
+total na superfície maior é <math id="Thmexample5.p1.m1" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>−</mo><mn>2</mn></mrow></math> nC. Qual é a diferença de potencial
+entre as duas superfícies?
+</div>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. A expressão do potencial produzido por uma
+superfície condutora esférica, de raio <math id="p8.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> e carga total <math id="p8.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>, num
+ponto a uma distância <math id="p8.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> da esfera, é:</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="V(r)=\begin{cases}\dfrac{k\,Q}{r}&amp;r\geq R\quad(\mbox{fora da esfera})\\[5.0pt]
+\dfrac{k\,Q}{R}&amp;r&lt;R\quad(\mbox{constante dentro})\end{cases}" display="block"><mrow><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mfrac><mrow><mi>k</mi><mspace width=0.166em /><mi>Q</mi></mrow><mi>r</mi></mfrac></mtd><mtd columnalign="left"><mrow><mi>r</mi><mo>≥</mo><mrow><mi>R</mi><mo separator="true"> </mo><mrow><mo stretchy="false">(</mo><mtext>fora da esfera</mtext><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mfrac><mrow><mi>k</mi><mspace width=0.166em /><mi>Q</mi></mrow><mi>R</mi></mfrac></mtd><mtd columnalign="left"><mrow><mi>r</mi><mo>&lt;</mo><mrow><mi>R</mi><mo separator="true"> </mo><mrow><mo stretchy="false">(</mo><mtext>constante dentro</mtext><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Na superfície menor, de raio <math id="p9.m1" class="ltx_Math" alttext="R_{1}=5" display="inline"><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>=</mo><mn>5</mn></mrow></math> cm o potencial é a soma dos
+potenciais produzidos pelas duas esferas, em <math id="p9.m2" class="ltx_Math" alttext="r=R_{1}=5" display="inline"><mrow><mi>r</mi><mo>=</mo><msub><mi>R</mi><mn>1</mn></msub><mo>=</mo><mn>5</mn></mrow></math> cm. Como
+esses pontos encontram-se todos no interior da esfera de raio
+<math id="p9.m3" class="ltx_Math" alttext="R_{2}=7" display="inline"><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><mn>7</mn></mrow></math> cm, no caso da segunda esfera há que usar a expressão de
+<math id="p9.m4" class="ltx_Math" alttext="V(r)" display="inline"><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math> dentro da esfera (<math id="p9.m5" class="ltx_Math" alttext="k\,Q_{2}/R_{2}" display="inline"><mrow><mrow><mi>k</mi><mspace width=0.166em /><msub><mi>Q</mi><mn>2</mn></msub></mrow><mo>/</mo><msub><mi>R</mi><mn>2</mn></msub></mrow></math>, em vez de <math id="p9.m6" class="ltx_Math" alttext="k\,Q_{2}/r" display="inline"><mrow><mrow><mi>k</mi><mspace width=0.166em /><msub><mi>Q</mi><mn>2</mn></msub></mrow><mo>/</mo><mi>r</mi></mrow></math>). O
+potencial total nos pontos na superfície da esfera 1 é (unidades
+SI):</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="V(R_{1})=\dfrac{k\,Q_{1}}{R_{1}}+\dfrac{k\,Q_{2}}{R_{2}}=\dfrac{3k}{0.05}-%
+\dfrac{2k}{0.07}" display="block"><mrow><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><msub><mi>R</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mi>k</mi><mspace width=0.166em /><msub><mi>Q</mi><mn>1</mn></msub></mrow><msub><mi>R</mi><mn>1</mn></msub></mfrac><mo>+</mo><mfrac><mrow><mi>k</mi><mspace width=0.166em /><msub><mi>Q</mi><mn>2</mn></msub></mrow><msub><mi>R</mi><mn>2</mn></msub></mfrac></mrow><mo>=</mo><mrow><mfrac><mrow><mn>3</mn><mspace width=0.166em /><mi>k</mi></mrow><mn>0.05</mn></mfrac><mo>−</mo><mfrac><mrow><mn>2</mn><mspace width=0.166em /><mi>k</mi></mrow><mn>0.07</mn></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Na superfície de raio <math id="p10.m1" class="ltx_Math" alttext="R_{2}=7" display="inline"><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><mn>7</mn></mrow></math> cm, o potencial total é:</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="V(R_{2})=\dfrac{k\,Q_{1}}{R_{2}}+\dfrac{k\,Q_{2}}{R_{2}}=\dfrac{3k}{0.07}-%
+\dfrac{2k}{0.07}" display="block"><mrow><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><msub><mi>R</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mi>k</mi><mspace width=0.166em /><msub><mi>Q</mi><mn>1</mn></msub></mrow><msub><mi>R</mi><mn>2</mn></msub></mfrac><mo>+</mo><mfrac><mrow><mi>k</mi><mspace width=0.166em /><msub><mi>Q</mi><mn>2</mn></msub></mrow><msub><mi>R</mi><mn>2</mn></msub></mfrac></mrow><mo>=</mo><mrow><mfrac><mrow><mn>3</mn><mspace width=0.166em /><mi>k</mi></mrow><mn>0.07</mn></mfrac><mo>−</mo><mfrac><mrow><mn>2</mn><mspace width=0.166em /><mi>k</mi></mrow><mn>0.07</mn></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Como tal, a diferença de potencial é</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="V(R_{1})-V(R_{2})=\dfrac{3k}{0.05}-\dfrac{3k}{0.07}=154\,\mathrm{V}" display="block"><mrow><mrow><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><msub><mi>R</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><msub><mi>R</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mn>3</mn><mspace width=0.166em /><mi>k</mi></mrow><mn>0.05</mn></mfrac><mo>−</mo><mfrac><mrow><mn>3</mn><mspace width=0.166em /><mi>k</mi></mrow><mn>0.07</mn></mfrac></mrow><mo>=</mo><mrow><mn>154</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Comentários:</span> Outra forma de resolver este problema consiste
+em integrar o campo elétrico desde uma esfera até a outra. O
+percurso de integração pode ser qualquer, por exemplo, na direção
+radial <math id="p12.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>. Na região de integração, o campo é devido unicamente à
+esfera menor, porque essa região está dentro da esfera maior. Como
+tal,</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="V(R_{1})-V(R_{2})=\int_{R_{1}}^{R_{2}}\dfrac{k\,Q_{1}}{r^{2}}\,\mathrm{d}r=%
+\int_{0.05}^{0.07}\dfrac{3k}{r^{2}}\,\mathrm{d}r=\dfrac{3k}{0.05}-\dfrac{3k}{0%
+.07}=154" display="block"><mrow><mrow><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><msub><mi>R</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><msub><mi>R</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>R</mi><mn>1</mn></msub><msub><mi>R</mi><mn>2</mn></msub></msubsup><mrow><mfrac><mrow><mi>k</mi><mspace width=0.166em /><msub><mi>Q</mi><mn>1</mn></msub></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>r</mi></mrow></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0.05</mn><mn>0.07</mn></msubsup><mrow><mfrac><mrow><mn>3</mn><mspace width=0.166em /><mi>k</mi></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>r</mi></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mn>3</mn><mspace width=0.166em /><mi>k</mi></mrow><mn>0.05</mn></mfrac><mo>−</mo><mfrac><mrow><mn>3</mn><mspace width=0.166em /><mi>k</mi></mrow><mn>0.07</mn></mfrac></mrow><mo>=</mo><mn>154</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample6" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 3.6</span></span></h6><p></p>
+<div id="Thmexample6.p1" class="ltx_para">
+<p class="ltx_p">O potencial sobre o plano <math id="Thmexample6.p1.m1" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mspace width=0.166em /><mi>y</mi></mrow></math> é</p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="V=\dfrac{a\,x}{(x^{2}+y^{2})^{3/2}}+\dfrac{b}{(x^{2}+y^{2})^{1/2}}" display="block"><mrow><mi>V</mi><mo>=</mo><mrow><mfrac><mrow><mi>a</mi><mspace width=0.166em /><mi>x</mi></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac><mo>+</mo><mfrac><mi>b</mi><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Explique a que tipo de sistema corresponde esse potencial e encontre
+a expressão do campo elétrico em qualquer ponto do plano <math id="Thmexample6.p1.m2" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mspace width=0.166em /><mi>y</mi></mrow></math>.
+</div>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. O termo <math id="p13.m1" class="ltx_Math" alttext="(x^{2}+y^{2})^{1/2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></math> é a distância até à
+origem, <math id="p13.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>. Como o potencial de um dipolo na origem é</p>
+<table id="S0.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex18.m1" class="ltx_Math" alttext="V(\vec{r})=\frac{k\,\vec{p}\cdot\vec{r}}{r^{3}}" display="block"><mrow><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mrow><mi>k</mi><mspace width=0.166em /><mover accent="true"><mi>p</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo>⋅</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><msup><mi>r</mi><mn>3</mn></msup></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">então o primeiro termo é no potencial corresponde a um dipolo, com
+momento dipolar,</p>
+<table id="S0.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex19.m1" class="ltx_Math" alttext="\vec{p}=(a/k)\,\hat{\imath}" display="block"><mrow><mover accent="true"><mi>p</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>/</mo><mi>k</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">O segundo termo no potencial, uma constante sobre a distância até à
+origem, corresponde ao potencial de uma carga pontual <math id="p14.m1" class="ltx_Math" alttext="b/k" display="inline"><mrow><mi>b</mi><mo>/</mo><mi>k</mi></mrow></math> na
+origem. Como tal, o sistema é composto por um dipolo e uma carga
+pontual na origem.</p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">O campo elétrico é menos o gradiente do potencial:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex20.m1" class="ltx_Math" alttext="\displaystyle\vec{E}=" display="inline"><mrow><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex20.m2" class="ltx_Math" alttext="\displaystyle\left(-\dfrac{a}{(x^{2}+y^{2})^{3/2}}+\dfrac{3ax(2x)}{2(x^{2}+y^{%
+2})^{5/2}}+\dfrac{b(2x)}{2(x^{2}+y^{2})^{3/2}}\right)\,\hat{\imath}" display="inline"><mrow><mrow><mo>(</mo><mrow><mrow><mo>−</mo><mstyle displaystyle="true"><mfrac><mi>a</mi><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mn>3</mn><mspace width=0.166em /><mi>a</mi><mspace width=0.166em /><mi>x</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>2</mn><mspace width=0.166em /><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>5</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mi>b</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>2</mn><mspace width=0.166em /><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow><mo rspace="4.2pt">)</mo></mrow><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex21.m1" class="ltx_Math" alttext="\displaystyle+\left(\dfrac{3ax(2y)}{2(x^{2}+y^{2})^{5/2}}+\dfrac{b(2y)}{2(x^{2%
+}+y^{2})^{3/2}}\right)\,\hat{\jmath}" display="inline"><mrow><mo>+</mo><mrow><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>3</mn><mspace width=0.166em /><mi>a</mi><mspace width=0.166em /><mi>x</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>2</mn><mspace width=0.166em /><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>5</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mi>b</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>2</mn><mspace width=0.166em /><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow><mo rspace="4.2pt">)</mo></mrow><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex22.m1" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex22.m2" class="ltx_Math" alttext="\displaystyle\ \dfrac{bx^{3}+bxy^{2}-ay^{2}+2ax^{2}}{(x^{2}+y^{2})^{5/2}}\,%
+\hat{\imath}+\dfrac{by^{3}+bx^{2}y+3axy}{(x^{2}+y^{2})^{5/2}}\,\hat{\jmath}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mrow><mrow><mi>b</mi><mspace width=0.166em /><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mspace width=0.166em /><mi>x</mi><mspace width=0.166em /><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow><mo>−</mo><mrow><mi>a</mi><mspace width=0.166em /><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>a</mi><mspace width=0.166em /><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>5</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>b</mi><mspace width=0.166em /><msup><mi>y</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mspace width=0.166em /><msup><mi>x</mi><mn>2</mn></msup><mspace width=0.166em /><mi>y</mi></mrow><mo>+</mo><mrow><mn>3</mn><mspace width=0.166em /><mi>a</mi><mspace width=0.166em /><mi>x</mi><mspace width=0.166em /><mi>y</mi></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>5</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Thmexample7" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 3.7</span></span></h6><p></p>
+<div id="Thmexample7.p1" class="ltx_para">
+<p class="ltx_p">A figura mostra as superfícies equipotenciais de uma carga pontual no
+interior de um campo elétrico uniforme <math id="Thmexample7.p1.m1" class="ltx_Math" alttext="\vec{E}_{\mathrm{ext}}" display="inline"><msub><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mi>ext</mi></msub></math>. A grandes
+distâncias da carga pontual as superfícies são planos paralelos
+distanciados 8 cm.
+<br class="ltx_break">(<em class="ltx_emph ltx_font_italic">a</em>) Calcule o módulo e a direção do campo externo
+<math id="Thmexample7.p1.m2" class="ltx_Math" alttext="\vec{E}_{\mathrm{ext}}" display="inline"><msub><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mi>ext</mi></msub></math>.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) Diga se a carga pontual é positiva ou negativa. Justifique.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">c</em>) Qual é a direção da força sobre a carga pontual?
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">d</em>) Sabendo que a distância entre a carga pontual e o ponto P é 9
+cm, calcule o valor da carga pontual.</p>
+<img src="img/eic0014-prob_7_8.png" style="width:19.572em;max-width:100%;height:auto" id="Thmexample7.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. (<em class="ltx_emph ltx_font_italic">a</em>) O campo externo aponta para baixo
+(direção em que diminui o potencial) e tem módulo:</p>
+<table id="S0.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex23.m1" class="ltx_Math" alttext="E_{\text{ext}}=\dfrac{15}{0.08}=187.5\;\dfrac{\mathrm{V}}{\mathrm{m}}" display="block"><mrow><msub><mi>E</mi><mtext>ext</mtext></msub><mo>=</mo><mfrac><mn>15</mn><mn>0.08</mn></mfrac><mo>=</mo><mrow><mn>187.5</mn><mspace width=0.166em /><mfrac><mi mathvariant="normal">V</mi><mi mathvariant="normal">m</mi></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">b</em>) A carga é negativa, porque há uma linha de campo que
+atravessa as superfícies equipotenciais de 90 V, 75 V, 60 V, 45 V e
+30 V entrando logo na carga. Também, se não existisse a carga, o
+potencial no ponto onde se encontra teria um valor entre 45 V e 60
+V, mas com a carga pontual o potencial nesse ponto passa a ser menor
+que 30 V, ou seja, o potencial da carga pontual é negativo e a carga
+também.</p>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">c</em>) Como a carga é negativa, a força é na direção oposta ao
+campo externo, ou seja, para cima.</p>
+</div>
+<div id="p19" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">d</em>) No ponto P o campo total é nulo e, como tal, o módulo do
+campo produzido pela carga pontual deverá ser igual ao módulo do
+campo externo:</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex24"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex24.m1" class="ltx_Math" alttext="\displaystyle E" display="inline"><mi>E</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex24.m2" class="ltx_Math" alttext="\displaystyle=\dfrac{k\,|q|}{d^{2}}=E_{\text{ext}}=187.5" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>k</mi><mspace width=0.166em /><mrow><mo stretchy="false">|</mo><mi>q</mi><mo stretchy="false">|</mo></mrow></mrow><msup><mi>d</mi><mn>2</mn></msup></mfrac></mstyle><mo>=</mo><msub><mi>E</mi><mtext>ext</mtext></msub><mo>=</mo><mn>187.5</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex25.m1" class="ltx_Math" alttext="\displaystyle\Longrightarrow\quad|q|=\dfrac{187.5\times 0.09^{2}}{8.988\times 1%
+0^{9}}=1.69\times 10^{-10}" display="inline"><mrow><mrow><mo>⟹</mo><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">|</mo><mi>q</mi><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>187.5</mn><mo>×</mo><msup><mn>0.09</mn><mn>2</mn></msup></mrow><mrow><mn>8.988</mn><mo>×</mo><msup><mn>10</mn><mn>9</mn></msup></mrow></mfrac></mstyle><mo>=</mo><mrow><mn>1.69</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>10</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p20" class="ltx_para">
+<p class="ltx_p">O valor da carga pontual é <math id="p20.m1" class="ltx_Math" alttext="q=-0.169" display="inline"><mrow><mi>q</mi><mo>=</mo><mrow><mo>−</mo><mn>0.169</mn></mrow></mrow></math> nC.</p>
+</div>
+<div id="Thmexample8" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 3.8</span></span></h6><p></p>
+<div id="Thmexample8.p1" class="ltx_para">
+<p class="ltx_p">Demonstre que o campo elétrico <math id="Thmexample8.p1.m1" class="ltx_Math" alttext="\vec{E}=A\vec{r}" display="inline"><mrow><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>=</mo><mrow><mi>A</mi><mspace width=0.166em /><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></math>, em que <math id="Thmexample8.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> é
+uma constante e <math id="Thmexample8.p1.m3" class="ltx_Math" alttext="\vec{r}" display="inline"><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> o vetor posição, é conservativo. Calcule o
+potencial correspondente a esse campo.
+</div>
+</div>
+<div id="p21" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. As componentes cartesianas do campo são:</p>
+<table id="S0.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex26.m1" class="ltx_Math" alttext="E_{x}=Ax\qquad E_{y}=Ay\qquad E_{z}=Az" display="block"><mrow><mrow><msub><mi>E</mi><mi>x</mi></msub><mo>=</mo><mrow><mi>A</mi><mspace width=0.166em /><mi>x</mi></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><msub><mi>E</mi><mi>y</mi></msub><mo>=</mo><mrow><mi>A</mi><mspace width=0.166em /><mi>y</mi></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><msub><mi>E</mi><mi>z</mi></msub><mo>=</mo><mrow><mi>A</mi><mspace width=0.166em /><mi>z</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p22" class="ltx_para">
+<p class="ltx_p">Todas as derivadas cruzadas são nulas e, portanto, iguais entre si:</p>
+<table id="S0.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex27.m1" class="ltx_Math" alttext="\dfrac{\partial E_{x}}{\partial y}=\dfrac{\partial E_{y}}{\partial x}=\dfrac{%
+\partial E_{x}}{\partial z}=\dfrac{\partial E_{z}}{\partial x}=\dfrac{\partial
+E%
+_{y}}{\partial z}=\dfrac{\partial E_{z}}{\partial y}=0" display="block"><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><msub><mi>E</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>y</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><msub><mi>E</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><msub><mi>E</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>z</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><msub><mi>E</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><msub><mi>E</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>z</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><msub><mi>E</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>y</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">a igualdade das derivadas cruzadas mostra que o campo é
+conservativo.</p>
+</div>
+<div id="p23" class="ltx_para">
+<p class="ltx_p">As três derivadas parciais do gradiente do potencial são:</p>
+<table id="S0.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex28.m1" class="ltx_Math" alttext="\dfrac{\partial V}{\partial x}=-Ax\qquad\dfrac{\partial V}{\partial y}=-Ay%
+\qquad\dfrac{\partial V}{\partial z}=-Az" display="block"><mrow><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mi>V</mi></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>x</mi></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mi>A</mi><mspace width=0.166em /><mi>x</mi></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mi>V</mi></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>y</mi></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mi>A</mi><mspace width=0.166em /><mi>y</mi></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mi>V</mi></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>z</mi></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mi>A</mi><mspace width=0.166em /><mi>z</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p24" class="ltx_para">
+<p class="ltx_p">Como tal o potencial é,
+</p>
+<table id="S0.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex29.m1" class="ltx_Math" alttext="V(x,y,z)=-\dfrac{A}{2}\bigl{(}x^{2}+y^{2}+z^{2}\bigr{)}=-\dfrac{Ar^{2}}{2}" display="block"><mrow><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mi>A</mi><mn>2</mn></mfrac><mspace width=0.166em /><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mfrac><mrow><mi>A</mi><mspace width=0.166em /><msup><mi>r</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(mais uma constante arbitrária que foi escolhida igual a zero, fazendo
+com que o potencial seja nulo na origem).</p>
+</div>
+<div class="ltx_rdf" about="" property="dcterms:creator" content="Jaime E. Villate, Luís Miguel Martelo"></div>
+<div class="ltx_rdf" about="" property="dcterms:subject" content="Eletromagnetismo, Eletricidade, Magnetismo, Circuitos"></div>
+<div class="ltx_rdf" about="" property="dcterms:subject" content="Eletromagnetismo"></div>
+<div class="ltx_rdf" about="" property="dcterms:title" content="Eletromagnetismo e Circuitos"></div>
+
+</article>
+</div>
+<footer class="ltx_page_footer">
+<p>&copy; 2023, Jaime E. Villate &amp; Luís Miguel Martelo</p>
+<p>Publicado nos termos da <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição-Partilha</a> (versão 4.0).</p>
+<div class="ltx_page_logo">Generated  on Wed Aug 30 11:55:46 2023 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML </a>
+</div></footer>
+</div>
+</body>
+</html>
