@@ -235,9 +235,9 @@ table.ltx_eqn_eqnarray tr.ltx_eqn_lefteqn + tr td.ltx_align_right { min-width:2e
 .ltx_eqn_eqno.ltx_align_right .ltx_tag { float:right; }
 
 .ltx_eqn_center_padleft,
-.ltx_eqn_center_padright { width:50%; min-width:2em;}
+.ltx_eqn_center_padright { width:50%; min-width:3em;}
 .ltx_eqn_left_padleft,
-.ltx_eqn_right_padright { min-width:2em; }
+.ltx_eqn_right_padright { min-width:3em; }
 .ltx_eqn_left_padright,
 .ltx_eqn_right_padleft  { width:100%; }
 
