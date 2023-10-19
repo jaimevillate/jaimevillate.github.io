@@ -1,0 +1,967 @@
+<!DOCTYPE html><html prefix="dcterms: http://purl.org/dc/terms/" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Circuitos de corrente contínua</title>
+<!--Generated on Thu Oct 19 11:33:07 2023 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 19 de outubro de 2023.-->
+
+<link rel="stylesheet" href="../css/latex-probs-schola.css" type="text/css">
+<link rel="stylesheet" href="../css/ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<nav><a href="./index.html">Eletromagnetismo e Circuitos</a><span>&rarr;</span><a href="./problemas.html">Problemas resolvidos</a><span>&rarr;</span><span>Circuitos de corrente contínua</span></nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line" lang="pt">
+<h1 class="ltx_title ltx_title_document">6. Circuitos de corrente contínua</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jaime E. Villate e Luís Miguel Martelo
+</span></span>
+</div>
+<div class="ltx_dates">(19 de outubro de 2023)</div>
+
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Thmexample1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 6.1</span></span></h6><p></p>
+<div id="Thmexample1.p1" class="ltx_para">
+<p class="ltx_p">Determine a resistência equivalente entre os pontos A e B.</p>
+<img src="img/prob-two_deltas.png" style="width:18.018em;max-width:100%;height:auto" id="Thmexample1.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</div>
+<div id="p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Usando a transformação delta-estrela, o triângulo
+formado pelas resistências de 4 k<math id="p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, 2 k<math id="p1.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e 6 k<math id="p1.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>
+pode ser substituído pelas 3 resistências:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle I_{1}=\dfrac{6\times 4}{6+4+2}=2\;\mathrm{k}\Omega" display="inline"><mrow><msub><mi>I</mi><mn>1</mn></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>6</mn><mo>×</mo><mn>4</mn></mrow><mrow><mn>6</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>2</mn></mrow></mfrac></mstyle><mo>=</mo><mrow><mn>2</mn><mspace width=0.166em /><mi mathvariant="normal">k</mi><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle I_{2}=\dfrac{4\times 2}{6+4+2}=\dfrac{2}{3}\;\mathrm{k}\Omega" display="inline"><mrow><msub><mi>I</mi><mn>2</mn></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>×</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>2</mn></mrow></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>2</mn><mn>3</mn></mfrac></mstyle><mspace width=0.166em /><mi mathvariant="normal">k</mi><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle I_{3}=\dfrac{6\times 2}{6+4+2}=1\;\mathrm{k}\Omega" display="inline"><mrow><msub><mi>I</mi><mn>3</mn></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>6</mn><mo>×</mo><mn>2</mn></mrow><mrow><mn>6</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>2</mn></mrow></mfrac></mstyle><mo>=</mo><mrow><mn>1</mn><mspace width=0.166em /><mi mathvariant="normal">k</mi><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">e o circuito inicial fica equivalente ao seguinte circuito:</p>
+<img src="img/prob-two_deltas-sol_1.png" style="width:23.268em;max-width:100%;height:auto" id="p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">As resistências de 3 k<math id="p2.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e 2 k<math id="p2.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> estão em série e as
+resistências de 5 k<math id="p2.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e 1 k<math id="p2.m4" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. Combinando essas
+resistências, o novo circuito equivalente é o seguinte:</p>
+<img src="img/prob-two_deltas-sol_2.png" style="width:14.658em;max-width:100%;height:auto" id="p2.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">As resistências de 5 k<math id="p3.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e 6 k<math id="p3.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, em paralelo, podem ser
+substituídas pela resistência equivalente,</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="R_{\mathrm{p}}=\dfrac{5\times 6}{5+6}=\dfrac{30}{11}\;\mathrm{k}\Omega" display="block"><mrow><msub><mi>R</mi><mi mathvariant="normal">p</mi></msub><mo>=</mo><mfrac><mrow><mn>5</mn><mo>×</mo><mn>6</mn></mrow><mrow><mn>5</mn><mo>+</mo><mn>6</mn></mrow></mfrac><mo>=</mo><mrow><mfrac><mn>30</mn><mn>11</mn></mfrac><mspace width=0.166em /><mi mathvariant="normal">k</mi><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">E o circuito fica com apenas duas resistências em série entre A e B:</p>
+<img src="img/prob-two_deltas-sol_3.png" style="width:14.658em;max-width:100%;height:auto" id="p4.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">A resistência total entre A e B é 112/33 k<math id="p5.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, aproximadamente
+igual a 3.39 k<math id="p5.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>.</p>
+</div>
+<div id="Thmexample2" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 6.2</span></span></h6><p></p>
+<div id="Thmexample2.p1" class="ltx_para">
+<p class="ltx_p">Considere duas resistências <math id="Thmexample2.p1.m1" class="ltx_Math" alttext="R_{1}" display="inline"><msub><mi>R</mi><mn>1</mn></msub></math> e <math id="Thmexample2.p1.m2" class="ltx_Math" alttext="R_{2}" display="inline"><msub><mi>R</mi><mn>2</mn></msub></math> ligadas em
+paralelo. Uma corrente total <math id="Thmexample2.p1.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> distribui-se entre as duas
+resistências, passando corrente <math id="Thmexample2.p1.m4" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> por <math id="Thmexample2.p1.m5" class="ltx_Math" alttext="R_{1}" display="inline"><msub><mi>R</mi><mn>1</mn></msub></math> e corrente <math id="Thmexample2.p1.m6" class="ltx_Math" alttext="I_{2}" display="inline"><msub><mi>I</mi><mn>2</mn></msub></math>
+por <math id="Thmexample2.p1.m7" class="ltx_Math" alttext="R_{2}" display="inline"><msub><mi>R</mi><mn>2</mn></msub></math>. Admita que as correntes <math id="Thmexample2.p1.m8" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> e <math id="Thmexample2.p1.m9" class="ltx_Math" alttext="I_{2}" display="inline"><msub><mi>I</mi><mn>2</mn></msub></math> podem tomar
+qualquer valor (inclusivamente negativo) desde que <math id="Thmexample2.p1.m10" class="ltx_Math" alttext="I=I_{1}+I_{2}" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><msub><mi>I</mi><mn>1</mn></msub><mo>+</mo><msub><mi>I</mi><mn>2</mn></msub></mrow></mrow></math>. Determine os valores de <math id="Thmexample2.p1.m11" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> e <math id="Thmexample2.p1.m12" class="ltx_Math" alttext="I_{2}" display="inline"><msub><mi>I</mi><mn>2</mn></msub></math> que minimizam a
+potência dissipada por efeito Joule nas resistências, e mostre que
+obtém-se o mesmo resultado da equação (6.13) do livro.
+</div>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Considerando as correntes <math id="p6.m1" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> e <math id="p6.m2" class="ltx_Math" alttext="I_{2}" display="inline"><msub><mi>I</mi><mn>2</mn></msub></math> variáveis
+mas <math id="p6.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> fixa, as potências dissipadas nas duas resistências podem ser
+escritas em função de uma das variáveis, por exemplo, em função de
+<math id="p6.m4" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math>:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="P_{1}=R_{1}I_{1}^{2}\qquad P_{2}=R_{2}(I-I_{1})^{2}" display="block"><mrow><mrow><msub><mi>P</mi><mn>1</mn></msub><mo>=</mo><mrow><msub><mi>R</mi><mn>1</mn></msub><mspace width=0.166em /><msubsup><mi>I</mi><mn>1</mn><mn>2</mn></msubsup></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><msub><mi>P</mi><mn>2</mn></msub><mo>=</mo><mrow><msub><mi>R</mi><mn>2</mn></msub><mspace width=0.166em /><msup><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>−</mo><msub><mi>I</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">A potência total dissipada, igual à soma das potências dissipadas nas
+duas resistências, é:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="P=R_{1}I_{1}^{2}+R_{2}(I-I_{1})^{2}" display="block"><mrow><mi>P</mi><mo>=</mo><mrow><mrow><msub><mi>R</mi><mn>1</mn></msub><mspace width=0.166em /><msubsup><mi>I</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><msub><mi>R</mi><mn>2</mn></msub><mspace width=0.166em /><msup><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>−</mo><msub><mi>I</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">O valor da variável <math id="p8.m1" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> que faz com que a potência seja mínima, é o
+valor de <math id="p8.m2" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> em que a derivada de <math id="p8.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, em ordem a <math id="p8.m4" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math>, é nula:</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\dfrac{\mathrm{d}\,P}{\mathrm{d}\,I_{1}}=2R_{1}I_{1}-2R_{2}(I-I_{1})=0\quad%
+\Longrightarrow\quad I_{1}=\dfrac{R_{2}}{R_{1}+R_{2}}I" display="block"><mrow><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>P</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><msub><mi>I</mi><mn>1</mn></msub></mrow></mfrac><mo>=</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>I</mi><mn>1</mn></msub></mrow><mo>−</mo><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>2</mn></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>−</mo><msub><mi>I</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mo>⟹</mo><mo mathvariant="italic" separator="true"> </mo><msub><mi>I</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><mfrac><msub><mi>R</mi><mn>2</mn></msub><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow></mfrac><mspace width=0.166em /><mi>I</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">E substituindo em <math id="p9.m1" class="ltx_Math" alttext="I_{2}=I-I_{1}" display="inline"><mrow><msub><mi>I</mi><mn>2</mn></msub><mo>=</mo><mrow><mi>I</mi><mo>−</mo><msub><mi>I</mi><mn>1</mn></msub></mrow></mrow></math>, obtém-se:</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="I_{2}=\dfrac{R_{1}}{R_{1}+R_{2}}I" display="block"><mrow><msub><mi>I</mi><mn>2</mn></msub><mo>=</mo><mrow><mfrac><msub><mi>R</mi><mn>1</mn></msub><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow></mfrac><mspace width=0.166em /><mi>I</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample3" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 6.3</span></span></h6><p></p>
+<div id="Thmexample3.p1" class="ltx_para">
+<p class="ltx_p">No circuito da figura, determine quais das fontes de força
+eletromotriz fornecem ou absorvem energia e calcule a potência
+fornecida, ou absorvida, por cada uma.</p>
+<img src="img/circ_32.png" style="width:18.942em;max-width:100%;height:auto" id="Thmexample3.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Podemos determinar o equivalente de Thévenin entre
+os dois pontos onde está ligada a resistência de 5.6 k<math id="p10.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. A f.e.m. <math id="p10.m2" class="ltx_Math" alttext="V_{\mathrm{th}}" display="inline"><msub><mi>V</mi><mi>th</mi></msub></math> é a diferença de potencial entre os pontos A e B no
+seguinte circuito:</p>
+<img src="img/circ_32-sol_1.png" style="width:12.747em;max-width:100%;height:auto" id="p10.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Trata-se de uma malha simples, com f.e.m. total de 11 V e corrente no
+sentido dos ponteiros do relógio. A diferença de potencial entre B e A
+é 5 V menos a diferença de potencial na resistência de 7.0 k<math id="p11.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>,
+que pode ser determinada por divisão de voltagem na malha:</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="V_{\mathrm{B}}-V_{\mathrm{A}}=5-\dfrac{7\times 11}{2.1+4.2+7.0}=-\dfrac{15}{19%
+}\;\mathrm{V}" display="block"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub></mrow><mo>=</mo><mrow><mn>5</mn><mo>−</mo><mfrac><mrow><mn>7</mn><mo>×</mo><mn>11</mn></mrow><mrow><mn>2.1</mn><mo>+</mo><mn>4.2</mn><mo>+</mo><mn>7.0</mn></mrow></mfrac></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mn>15</mn><mn>19</mn></mfrac><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p"><math id="p12.m1" class="ltx_Math" alttext="V_{\mathrm{th}}" display="inline"><msub><mi>V</mi><mi>th</mi></msub></math> é igual a 15/19 V, positiva em A e negativa em B. Com
+as duas fontes em curto circuito, entre A e B as resistências de
+2.1 k<math id="p12.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e 4.2 k<math id="p12.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> estão em série e o resultado em paralelo
+com a resistência de 7.0 k<math id="p12.m4" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. A resistência de Thévenin é igual
+a:</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="R_{\mathrm{th}}=\dfrac{6.3\times 7}{6.3+7}=\dfrac{63}{19}\;\mathrm{k}\Omega" display="block"><mrow><msub><mi>R</mi><mi>th</mi></msub><mo>=</mo><mfrac><mrow><mn>6.3</mn><mo>×</mo><mn>7</mn></mrow><mrow><mn>6.3</mn><mo>+</mo><mn>7</mn></mrow></mfrac><mo>=</mo><mrow><mfrac><mn>63</mn><mn>19</mn></mfrac><mspace width=0.166em /><mi mathvariant="normal">k</mi><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">Ligando o equivalente de Thévenin à resistência de 5.6 k<math id="p13.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>,</p>
+<img src="img/circ_32-sol_2.png" style="width:13.608em;max-width:100%;height:auto" id="p13.g1" class="ltx_graphics ltx_centering" alt="">
+<p class="ltx_p">a diferença de potencial nessa resistência é igual a:</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="V_{\mathrm{A}}-V_{\mathrm{B}}=\dfrac{5.6\times(15/19)}{5.6+63/19}=\dfrac{60}{1%
+21}\;\mathrm{V}" display="block"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub></mrow><mo>=</mo><mfrac><mrow><mn>5.6</mn><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mn>15</mn><mo>/</mo><mn>19</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>5.6</mn><mo>+</mo><mrow><mn>63</mn><mo>/</mo><mn>19</mn></mrow></mrow></mfrac><mo>=</mo><mrow><mfrac><mn>60</mn><mn>121</mn></mfrac><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">No circuito inicial, admitindo que na resistência de 7.0 k<math id="p14.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>
+circula corrente <math id="p14.m2" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> de cima para baixo, a diferença de potencial
+entre os pontos A e B é igual a:</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="V_{\mathrm{A}}-V_{\mathrm{B}}=7I_{1}-5" display="block"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub></mrow><mo>=</mo><mrow><mrow><mn>7</mn><mspace width=0.166em /><msub><mi>I</mi><mn>1</mn></msub></mrow><mo>−</mo><mn>5</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">e como já vimos que essa diferença de potencial é igual a 60/121, o
+valor de <math id="p14.m3" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> será:</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="I_{1}=\dfrac{95}{121}\;\mathrm{mA}" display="block"><mrow><msub><mi>I</mi><mn>1</mn></msub><mo>=</mo><mrow><mfrac><mn>95</mn><mn>121</mn></mfrac><mspace width=0.166em /><mi>mA</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">O resultado positivo para <math id="p15.m1" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> indica que essa corrente de facto
+circula de cima para baixo, e então a fonte de 5 V está a fornecer
+potência igual a:</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="P_{5}=5I_{1}=3.93\;\mathrm{mW}" display="block"><mrow><msub><mi>P</mi><mn>5</mn></msub><mo>=</mo><mrow><mn>5</mn><mspace width=0.166em /><msub><mi>I</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><mn>3.93</mn><mspace width=0.166em /><mi>mW</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">No circuito inicial, admitindo que a corrente <math id="p16.m1" class="ltx_Math" alttext="I_{2}" display="inline"><msub><mi>I</mi><mn>2</mn></msub></math> nas resistências de
+2.1 k<math id="p16.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e 4.2 k<math id="p16.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> circula passando pela fonte de 6 V de
+baixo para cima, a diferença de potencial entre os pontos A e B é
+igual a:</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="V_{\mathrm{A}}-V_{\mathrm{B}}=6-6.3I_{2}=\dfrac{60}{121}\quad\Longrightarrow%
+\quad I_{2}=\dfrac{740}{847}\;\mathrm{mA}" display="block"><mrow><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub></mrow><mo>=</mo><mrow><mn>6</mn><mo>−</mo><mrow><mn>6.3</mn><mspace width=0.166em /><msub><mi>I</mi><mn>2</mn></msub></mrow></mrow><mo>=</mo><mfrac><mn>60</mn><mn>121</mn></mfrac></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mo>⟹</mo><mo mathvariant="italic" separator="true"> </mo><msub><mi>I</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mfrac><mn>740</mn><mn>847</mn></mfrac><mspace width=0.166em /><mi>mA</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p">O resultado positivo para <math id="p17.m1" class="ltx_Math" alttext="I_{2}" display="inline"><msub><mi>I</mi><mn>2</mn></msub></math> indica que a fonte de 6 V também fornece
+potência, igual a:</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="P_{6}=6I_{2}=5.24\;\mathrm{mW}" display="block"><mrow><msub><mi>P</mi><mn>6</mn></msub><mo>=</mo><mrow><mn>6</mn><mspace width=0.166em /><msub><mi>I</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mn>5.24</mn><mspace width=0.166em /><mi>mW</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample4" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 6.4</span></span></h6><p></p>
+<div id="Thmexample4.p1" class="ltx_para">
+<p class="ltx_p">Uma resistência de 2.7 k<math id="Thmexample4.p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> liga-se a duas pilhas, em
+série, ambas com a mesma f.e.m. de 9 V, mas com diferentes
+resistências internas, tal como mostra o digrama seguinte.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">a</em>) Determine a corrente na resistência de 2.7 k<math id="Thmexample4.p1.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) Qual das duas pilhas fornece maior potência?</p>
+<img src="img/circ_15.png" style="width:7.917em;max-width:100%;height:auto" id="Thmexample4.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. (<em class="ltx_emph ltx_font_italic">a</em>) A f.e.m. <math id="p18.m1" class="ltx_Math" alttext="V_{\text{th}}" display="inline"><msub><mi>V</mi><mtext>th</mtext></msub></math> entre os
+pontos onde está ligada a resistência de 2.7 k<math id="p18.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> é a diferença
+de potencial entre os pontos A e B no seguinte circuito:</p>
+<img src="img/circ_15-sol.png" style="width:10.101em;max-width:100%;height:auto" id="p18.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p19" class="ltx_para">
+<p class="ltx_p">Trata-se de uma malha simples, com f.e.m. total nula; como tal, a
+corrente na malha é nula, a diferença de potencial nas duas
+resistências também é nula e:</p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="V_{\text{th}}=V_{\mathrm{A}}-V_{\mathrm{B}}=9\;\mathrm{V}" display="block"><mrow><msub><mi>V</mi><mtext>th</mtext></msub><mo>=</mo><mrow><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub></mrow><mo>=</mo><mrow><mn>9</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p20" class="ltx_para">
+<p class="ltx_p">Com as duas fontes em curto circuito, a resistência entre A e B é a
+equivalente das duas resistências em paralelo:</p>
+<table id="S0.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex18.m1" class="ltx_Math" alttext="R_{\text{th}}=R_{\mathrm{AB}}=\dfrac{20\times 30}{20+30}=12\;\Omega" display="block"><mrow><msub><mi>R</mi><mtext>th</mtext></msub><mo>=</mo><msub><mi>R</mi><mi>AB</mi></msub><mo>=</mo><mfrac><mrow><mn>20</mn><mo>×</mo><mn>30</mn></mrow><mrow><mn>20</mn><mo>+</mo><mn>30</mn></mrow></mfrac><mo>=</mo><mrow><mn>12</mn><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p21" class="ltx_para">
+<p class="ltx_p">A corrente na resistência de 2.7 k<math id="p21.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> é igual a:</p>
+<table id="S0.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex19.m1" class="ltx_Math" alttext="I=\dfrac{V_{\text{th}}}{2700+R_{\text{th}}}=\dfrac{9}{2700+12}=3.32\;\mathrm{mA}" display="block"><mrow><mi>I</mi><mo>=</mo><mfrac><msub><mi>V</mi><mtext>th</mtext></msub><mrow><mn>2700</mn><mo>+</mo><msub><mi>R</mi><mtext>th</mtext></msub></mrow></mfrac><mo>=</mo><mfrac><mn>9</mn><mrow><mn>2700</mn><mo>+</mo><mn>12</mn></mrow></mfrac><mo>=</mo><mrow><mn>3.32</mn><mspace width=0.166em /><mi>mA</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p22" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">b</em>) A diferença de potencial na resistência de 2.7 k<math id="p22.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> é igual a:</p>
+<table id="S0.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex20.m1" class="ltx_Math" alttext="V_{\mathrm{A}}-V_{\mathrm{B}}=\dfrac{2700V_{\text{th}}}{2700+R_{\text{th}}}=8.%
+92\;\mathrm{V}" display="block"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub></mrow><mo>=</mo><mfrac><mrow><mn>2700</mn><mspace width=0.166em /><msub><mi>V</mi><mtext>th</mtext></msub></mrow><mrow><mn>2700</mn><mo>+</mo><msub><mi>R</mi><mtext>th</mtext></msub></mrow></mfrac><mo>=</mo><mrow><mn>8.92</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p23" class="ltx_para">
+<p class="ltx_p">No ramo onde está a pilha com resistência de 20 <math id="p23.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>,
+</p>
+<table id="S0.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex21.m1" class="ltx_Math" alttext="V_{\mathrm{A}}-V_{\mathrm{B}}=9-20I_{1}=8.92\quad\Longrightarrow\quad I_{1}=1.%
+99\;\mathrm{mA}" display="block"><mrow><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub></mrow><mo>=</mo><mrow><mn>9</mn><mo>−</mo><mrow><mn>20</mn><mspace width=0.166em /><msub><mi>I</mi><mn>1</mn></msub></mrow></mrow><mo>=</mo><mn>8.92</mn></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mo>⟹</mo><mo mathvariant="italic" separator="true"> </mo><msub><mi>I</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><mn>1.99</mn><mspace width=0.166em /><mi>mA</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">e no ramo onde está a pilha com resistência de 20 <math id="p23.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>,</p>
+<table id="S0.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex22.m1" class="ltx_Math" alttext="V_{\mathrm{A}}-V_{\mathrm{B}}=9-30I_{2}=8.92\quad\Longrightarrow\quad I_{2}=1.%
+33\;\mathrm{mA}" display="block"><mrow><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub></mrow><mo>=</mo><mrow><mn>9</mn><mo>−</mo><mrow><mn>30</mn><mspace width=0.166em /><msub><mi>I</mi><mn>2</mn></msub></mrow></mrow><mo>=</mo><mn>8.92</mn></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mo>⟹</mo><mo mathvariant="italic" separator="true"> </mo><msub><mi>I</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mn>1.33</mn><mspace width=0.166em /><mi>mA</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p24" class="ltx_para">
+<p class="ltx_p">Como a corrente que cada pilha fornece à resistência de 2.7 k<math id="p24.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>
+é <math id="p24.m2" class="ltx_Math" alttext="I_{i}(V_{\mathrm{A}}-V_{\mathrm{B}})" display="inline"><mrow><msub><mi>I</mi><mi>i</mi></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math> a pilha que mais potência fornece é
+a que tem resistência interna de 20 <math id="p24.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, por ser a que fornece
+mais corrente.</p>
+</div>
+<div id="Thmexample5" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 6.5</span></span></h6><p></p>
+<div id="Thmexample5.p1" class="ltx_para">
+<p class="ltx_p">Uma fonte com voltagem <math id="Thmexample5.p1.m1" class="ltx_Math" alttext="\Delta V_{\text{in}}" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>in</mtext></msub></mrow></math> é ligada a uma
+resistência <math id="Thmexample5.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, mas pretende-se que a voltagem nessa resistência
+seja reduzida para <math id="Thmexample5.p1.m3" class="ltx_Math" alttext="\Delta V_{\text{out}}" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>out</mtext></msub></mrow></math>, menor do que a voltagem de
+entrada <math id="Thmexample5.p1.m4" class="ltx_Math" alttext="\Delta V_{\text{in}}" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>in</mtext></msub></mrow></math>. Para conseguir esse objetivo, usa-se
+um circuito chamado <em class="ltx_emph ltx_font_italic">atenuador</em>. A figura mostra, dentro da
+caixa a tracejado, um possível circuito atenuador que tem a vantagem
+de permitir fazer com que a resistência entre os pontos de entrada A
+e B continue igual à resistência <math id="Thmexample5.p1.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> do dispositivo ligado entre os
+pontos de saída C e D.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">a</em>) Mostre que para que a
+resistência entre A e B seja igual a <math id="Thmexample5.p1.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, as resistências <math id="Thmexample5.p1.m7" class="ltx_Math" alttext="R_{1}" display="inline"><msub><mi>R</mi><mn>1</mn></msub></math> e
+<math id="Thmexample5.p1.m8" class="ltx_Math" alttext="R_{2}" display="inline"><msub><mi>R</mi><mn>2</mn></msub></math> do atenuador devem verificar a condição:</p>
+<table id="S0.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex23.m1" class="ltx_Math" alttext="4R_{1}\left(R_{1}+R_{2}\right)=R^{2}" display="block"><mrow><mrow><mn>4</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub><mspace width=0.166em /><mrow><mo>(</mo><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></mrow><mo>=</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">b</em>) Se <math id="Thmexample5.p1.m9" class="ltx_Math" alttext="R_{1}" display="inline"><msub><mi>R</mi><mn>1</mn></msub></math> e <math id="Thmexample5.p1.m10" class="ltx_Math" alttext="R_{2}" display="inline"><msub><mi>R</mi><mn>2</mn></msub></math> verificam a condição da alínea anterior,
+mostre que o fator de atenuação, <math id="Thmexample5.p1.m11" class="ltx_Math" alttext="\Delta V_{\text{out}}/\Delta V_{\text{in}}" display="inline"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>out</mtext></msub></mrow><mo>/</mo><mi mathvariant="normal">Δ</mi></mrow><mspace width=0.166em /><msub><mi>V</mi><mtext>in</mtext></msub></mrow></math> é dado pela expressão:</p>
+<table id="S0.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex24.m1" class="ltx_Math" alttext="\dfrac{\Delta V_{\text{out}}}{\Delta V_{\text{in}}}=\dfrac{R_{2}}{2R_{1}+R_{2}%
++R}" display="block"><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>out</mtext></msub></mrow><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>in</mtext></msub></mrow></mfrac><mo>=</mo><mfrac><msub><mi>R</mi><mn>2</mn></msub><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><mi>R</mi></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">c</em>) Determine os valores de <math id="Thmexample5.p1.m12" class="ltx_Math" alttext="R_{1}" display="inline"><msub><mi>R</mi><mn>1</mn></msub></math> e <math id="Thmexample5.p1.m13" class="ltx_Math" alttext="R_{2}" display="inline"><msub><mi>R</mi><mn>2</mn></msub></math> que fazem com que a
+resistência entre A e B seja igual a <math id="Thmexample5.p1.m14" class="ltx_Math" alttext="R=300\;\Omega" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mn>300</mn><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math>, com atenuação
+<math id="Thmexample5.p1.m15" class="ltx_Math" alttext="\Delta V_{\text{out}}/\Delta V_{\text{in}}=0.5" display="inline"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>out</mtext></msub></mrow><mo>/</mo><mi mathvariant="normal">Δ</mi></mrow><mspace width=0.166em /><msub><mi>V</mi><mtext>in</mtext></msub></mrow><mo>=</mo><mn>0.5</mn></mrow></math>.</p>
+<img src="img/atenuator.png" style="width:21.924em;max-width:100%;height:auto" id="Thmexample5.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="Thmexample5.p2" class="ltx_para">
+<p class="ltx_p">(Problema retirado de Nilsson e Riedel <a href="bibliografia.html#Nilsson">2015</a>, pág. 117)
+</div>
+</div>
+<div id="p25" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. (<em class="ltx_emph ltx_font_italic">a</em>) A resistência <math id="p25.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> soma-se às duas
+resistências <math id="p25.m2" class="ltx_Math" alttext="R_{1}" display="inline"><msub><mi>R</mi><mn>1</mn></msub></math> próximas dela, que estão em série com ela, e o
+resultado combina-se em paralelo com a resistência <math id="p25.m3" class="ltx_Math" alttext="R_{2}" display="inline"><msub><mi>R</mi><mn>2</mn></msub></math>, dando a
+resistência equivalente:</p>
+<table id="S0.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex25.m1" class="ltx_Math" alttext="R_{\mathrm{p}}=\dfrac{R_{2}\left(2R_{1}+R\right)}{2R_{1}+R_{2}+R}" display="block"><mrow><msub><mi>R</mi><mi mathvariant="normal">p</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>R</mi><mn>2</mn></msub><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><mi>R</mi></mrow><mo>)</mo></mrow></mrow><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><mi>R</mi></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p26" class="ltx_para">
+<p class="ltx_p">O circuito é então equivalente ao seguinte circuito mais simples:</p>
+<img src="img/atenuator-equiv.png" style="width:9.576em;max-width:100%;height:auto" id="p26.g1" class="ltx_graphics ltx_centering" alt="">
+<p class="ltx_p">e a resistência entre A e B é igual a:</p>
+<table id="S0.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex26.m1" class="ltx_Math" alttext="R_{\mathrm{AB}}=2R_{1}+R_{\mathrm{p}}=\dfrac{4R_{1}\left(R_{1}+R_{2}\right)+R%
+\left(2R_{1}+R_{2}\right)}{2R_{1}+R_{2}+R}" display="block"><mrow><msub><mi>R</mi><mi>AB</mi></msub><mo>=</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><msub><mi>R</mi><mi mathvariant="normal">p</mi></msub></mrow><mo>=</mo><mfrac><mrow><mrow><mn>4</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub><mspace width=0.166em /><mrow><mo>(</mo><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></mrow></mrow><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><mi>R</mi></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">igualando essa expressão a <math id="p26.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> obtém-se:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex27.m1" class="ltx_Math" alttext="\displaystyle 4R_{1}\left(R_{1}+R_{2}\right)+R\left(2R_{1}+R_{2}\right)=R\left%
+(2R_{1}+R_{2}+R\right)" display="inline"><mrow><mrow><mrow><mn>4</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub><mspace width=0.166em /><mrow><mo>(</mo><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><mi>R</mi></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex28"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex28.m1" class="ltx_Math" alttext="\displaystyle 4R_{1}\left(R_{1}+R_{2}\right)=R^{2}" display="inline"><mrow><mrow><mn>4</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub><mspace width=0.166em /><mrow><mo>(</mo><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></mrow><mo>=</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p27" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">b</em>) No circuito equivalente, com duas resistências <math id="p27.m1" class="ltx_Math" alttext="R_{1}" display="inline"><msub><mi>R</mi><mn>1</mn></msub></math> em
+série com <math id="p27.m2" class="ltx_Math" alttext="R_{\mathrm{p}}" display="inline"><msub><mi>R</mi><mi mathvariant="normal">p</mi></msub></math>, sendo
+<math id="p27.m3" class="ltx_Math" alttext="V_{\mathrm{A}}-V_{\mathrm{B}}=\Delta V_{\text{in}}" display="inline"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub></mrow><mo>=</mo><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>in</mtext></msub></mrow></mrow></math> e <math id="p27.m4" class="ltx_Math" alttext="R_{\mathrm{AB}}=R" display="inline"><mrow><msub><mi>R</mi><mi>AB</mi></msub><mo>=</mo><mi>R</mi></mrow></math>, o
+princípio da divisão de voltagem permite determinar a diferença de
+potencial em <math id="p27.m5" class="ltx_Math" alttext="R_{\mathrm{p}}" display="inline"><msub><mi>R</mi><mi mathvariant="normal">p</mi></msub></math>:</p>
+<table id="S0.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex29.m1" class="ltx_Math" alttext="\Delta V_{\mathrm{p}}=\dfrac{R_{\mathrm{p}}\Delta V_{\text{in}}}{R}=\dfrac{R_{%
+2}\left(2R_{1}+R\right)\Delta V_{\text{in}}}{R\left(2R_{1}+R_{2}+R\right)}" display="block"><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mi mathvariant="normal">p</mi></msub></mrow><mo>=</mo><mfrac><mrow><msub><mi>R</mi><mi mathvariant="normal">p</mi></msub><mspace width=0.166em /><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>in</mtext></msub></mrow><mi>R</mi></mfrac><mo>=</mo><mfrac><mrow><msub><mi>R</mi><mn>2</mn></msub><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><mi>R</mi></mrow><mo>)</mo></mrow><mspace width=0.166em /><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>in</mtext></msub></mrow><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><mi>R</mi></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">diferença de potencial essa que é a mesma do que no ramo com duas
+resistências <math id="p27.m6" class="ltx_Math" alttext="R_{1}" display="inline"><msub><mi>R</mi><mn>1</mn></msub></math> em série com <math id="p27.m7" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, no circuito inicial. Usando
+novamente o princípio da divisão de voltagem obtém-se:</p>
+<table id="S0.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex30.m1" class="ltx_Math" alttext="\Delta V_{\text{out}}=\dfrac{R\Delta V_{\mathrm{p}}}{2R1+R}=\dfrac{R_{2}\Delta
+V%
+_{\text{in}}}{2R_{1}+R_{2}+R}" display="block"><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>out</mtext></msub></mrow><mo>=</mo><mfrac><mrow><mi>R</mi><mspace width=0.166em /><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mi mathvariant="normal">p</mi></msub></mrow><mrow><mrow><mn>2</mn><mspace width=0.166em /><mi>R</mi><mspace width=0.166em /><mn>1</mn></mrow><mo>+</mo><mi>R</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msub><mi>R</mi><mn>2</mn></msub><mspace width=0.166em /><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>in</mtext></msub></mrow><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><mi>R</mi></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">e o fator de atenuação é:</p>
+<table id="S0.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex31.m1" class="ltx_Math" alttext="\dfrac{\Delta V_{\text{out}}}{\Delta V_{\text{in}}}=\dfrac{R_{2}}{2R_{1}+R_{2}%
++R}" display="block"><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>out</mtext></msub></mrow><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><msub><mi>V</mi><mtext>in</mtext></msub></mrow></mfrac><mo>=</mo><mfrac><msub><mi>R</mi><mn>2</mn></msub><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><mi>R</mi></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p28" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">c</em>) Substituindo os valores dados nas expressões obtidas nas
+duas alíneas anteriores, obtém-se o seguinte sistema não-linear:</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex32"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex32.m1" class="ltx_Math" alttext="\displaystyle 4R_{1}\left(R_{1}+R_{2}\right)=300^{2}" display="inline"><mrow><mrow><mn>4</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub><mspace width=0.166em /><mrow><mo>(</mo><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></mrow><mo>=</mo><msup><mn>300</mn><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex33"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex33.m1" class="ltx_Math" alttext="\displaystyle\dfrac{R_{2}}{2R_{1}+R_{2}+300}=0.5" display="inline"><mrow><mstyle displaystyle="true"><mfrac><msub><mi>R</mi><mn>2</mn></msub><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><mn>300</mn></mrow></mfrac></mstyle><mo>=</mo><mn>0.5</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p29" class="ltx_para">
+<p class="ltx_p">A segunda equação permite determinar <math id="p29.m1" class="ltx_Math" alttext="R_{2}" display="inline"><msub><mi>R</mi><mn>2</mn></msub></math> em função de <math id="p29.m2" class="ltx_Math" alttext="R1" display="inline"><mrow><mi>R</mi><mspace width=0.166em /><mn>1</mn></mrow></math>:</p>
+<table id="S0.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex34.m1" class="ltx_Math" alttext="R_{2}=R_{1}+0.5R_{2}+150\quad\Longrightarrow\quad R_{2}=2R_{1}+300" display="block"><mrow><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>0.5</mn><mspace width=0.166em /><msub><mi>R</mi><mn>2</mn></msub></mrow><mo>+</mo><mn>150</mn></mrow><mo mathvariant="italic" separator="true"> </mo><mo>⟹</mo></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow><mo>+</mo><mn>300</mn></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">e substituindo na primeira equação obtém-se uma equação quadrática
+para <math id="p29.m3" class="ltx_Math" alttext="R_{1}" display="inline"><msub><mi>R</mi><mn>1</mn></msub></math>:</p>
+<table id="S0.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex35.m1" class="ltx_Math" alttext="12R_{1}^{2}+1200R_{1}-90000=0" display="block"><mrow><mrow><mrow><mrow><mn>12</mn><mspace width=0.166em /><msubsup><mi>R</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mn>1200</mn><mspace width=0.166em /><msub><mi>R</mi><mn>1</mn></msub></mrow></mrow><mo>−</mo><mn>90000</mn></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">a fórmula resolvente da uma raiz negativa, que não interessa, e a raiz
+positiva <math id="p29.m4" class="ltx_Math" alttext="R_{1}=50\;\Omega" display="inline"><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>=</mo><mrow><mn>50</mn><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math>, que conduz ao valor de <math id="p29.m5" class="ltx_Math" alttext="R_{2}=400\;\Omega" display="inline"><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><mrow><mn>400</mn><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math>.</p>
+</div>
+<div id="Thmexample6" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 6.6</span></span></h6><p></p>
+<div id="Thmexample6.p1" class="ltx_para">
+<p class="ltx_p">Determine a potência dissipada em cada resistência no circuito
+representado no diagrama e a potência fornecida pela
+f.e.m. Verifique que a potência fornecida pela f.e.m. é igual à soma
+das potências dissipadas em todas as resistências.</p>
+<img src="img/circ_4.png" style="width:17.304em;max-width:100%;height:auto" id="Thmexample6.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</div>
+<div id="p30" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Para determinar a potência dissipada em cada
+resistência, basta encontrar os potenciais dos 4 nós do circuito e em
+cada resistência dividir a diferença de potencial, ao quadrado, pelo
+valor da resistência.</p>
+</div>
+<div id="p31" class="ltx_para">
+<p class="ltx_p">As resistências de 20 <math id="p31.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, 100 <math id="p31.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e 60 <math id="p31.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, em
+configuração delta, podem ser substituídas por três resistências em
+estrela, com os seguintes valores:</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex36"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex36.m1" class="ltx_Math" alttext="\displaystyle R_{\mathrm{A}}=\dfrac{20\times 100}{180}=\dfrac{100}{9}\;\Omega" display="inline"><mrow><msub><mi>R</mi><mi mathvariant="normal">A</mi></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>20</mn><mo>×</mo><mn>100</mn></mrow><mn>180</mn></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>100</mn><mn>9</mn></mfrac></mstyle><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex37"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex37.m1" class="ltx_Math" alttext="\displaystyle R_{\mathrm{B}}=\dfrac{60\times 100}{180}=\dfrac{100}{3}\;\Omega" display="inline"><mrow><msub><mi>R</mi><mi mathvariant="normal">B</mi></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>60</mn><mo>×</mo><mn>100</mn></mrow><mn>180</mn></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>100</mn><mn>3</mn></mfrac></mstyle><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex38"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex38.m1" class="ltx_Math" alttext="\displaystyle R_{\mathrm{C}}=\dfrac{20\times 60}{180}=\dfrac{20}{3}\;\Omega" display="inline"><mrow><msub><mi>R</mi><mi mathvariant="normal">C</mi></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>20</mn><mo>×</mo><mn>60</mn></mrow><mn>180</mn></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>20</mn><mn>3</mn></mfrac></mstyle><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p32" class="ltx_para">
+<p class="ltx_p">Com essa substituição, o circuito equivalente é o seguinte, em que as
+resistências estão em <math id="p32.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, a f.e.m. em V e os nós do circuito
+original são A, B, C e D.</p>
+<img src="img/circ_4-sol_1.png" style="width:15.141em;max-width:100%;height:auto" id="p32.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p33" class="ltx_para">
+<p class="ltx_p">Combinam-se as resistências de 150 e 100/9, em série, e as
+resistências de 80 e 20/3, em série, ficando o circuito do lado
+esquerdo da seguinte figura. A seguir combinam-se as resistências de
+1450/9 e 260/3, em paralelo, ficando o circuito do lado direito da
+figura seguinte:</p>
+<img src="img/circ_4-sol_2.png" style="width:16.506em;max-width:100%;height:auto" id="p33.g1" class="ltx_graphics ltx_centering" alt=""><img src="img/circ_4-sol_3.png" style="width:11.382em;max-width:100%;height:auto" id="p33.g2" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p34" class="ltx_para">
+<p class="ltx_p">Arbitrando <math id="p34.m1" class="ltx_Math" alttext="V_{\mathrm{B}}=0" display="inline"><mrow><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub><mo>=</mo><mn>0</mn></mrow></math>, o potencial do nó D será
+<math id="p34.m2" class="ltx_Math" alttext="V_{\mathrm{D}}=6" display="inline"><mrow><msub><mi>V</mi><mi mathvariant="normal">D</mi></msub><mo>=</mo><mn>6</mn></mrow></math> V. Por divisão de voltagem, no circuito do lado direito
+da figura acima, determina-se o potencial do ponto P:</p>
+<table id="S0.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex39.m1" class="ltx_Math" alttext="V_{\mathrm{P}}=\dfrac{6\times(100/3)}{56.35+100/3}=2.23\;\mathrm{V}" display="block"><mrow><msub><mi>V</mi><mi mathvariant="normal">P</mi></msub><mo>=</mo><mfrac><mrow><mn>6</mn><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mn>100</mn><mo>/</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>56.35</mn><mo>+</mo><mrow><mn>100</mn><mo>/</mo><mn>3</mn></mrow></mrow></mfrac><mo>=</mo><mrow><mn>2.23</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p35" class="ltx_para">
+<p class="ltx_p">A diferença de potencial <math id="p35.m1" class="ltx_Math" alttext="V_{\mathrm{D}}-V_{\mathrm{P}}=3.77" display="inline"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">D</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">P</mi></msub></mrow><mo>=</mo><mn>3.77</mn></mrow></math> V pode ser
+dividida nos ramos com os pontos A e C, no circuito com as
+resistências em estrela, para obter os potenciais dos nós A e C:</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex40"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex40.m1" class="ltx_Math" alttext="\displaystyle 6-V_{\mathrm{A}}=\dfrac{150\times 3.77}{150+100/9}" display="inline"><mrow><mrow><mn>6</mn><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>150</mn><mo>×</mo><mn>3.77</mn></mrow><mrow><mn>150</mn><mo>+</mo><mrow><mn>100</mn><mo>/</mo><mn>9</mn></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex40.m2" class="ltx_Math" alttext="\displaystyle\quad\Longrightarrow\quad V_{\mathrm{A}}=2.49\;\mathrm{V}" display="inline"><mrow><mrow><mo lspace="12.5pt">⟹</mo><mo mathvariant="italic" separator="true"> </mo><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub></mrow><mo>=</mo><mrow><mn>2.49</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex41"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex41.m1" class="ltx_Math" alttext="\displaystyle 6-V_{\mathrm{C}}=\dfrac{80\times 3.77}{80+100/9}" display="inline"><mrow><mrow><mn>6</mn><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">C</mi></msub></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>80</mn><mo>×</mo><mn>3.77</mn></mrow><mrow><mn>80</mn><mo>+</mo><mrow><mn>100</mn><mo>/</mo><mn>9</mn></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex41.m2" class="ltx_Math" alttext="\displaystyle\quad\Longrightarrow\quad V_{\mathrm{C}}=2.52\;\mathrm{V}" display="inline"><mrow><mrow><mo lspace="12.5pt">⟹</mo><mo mathvariant="italic" separator="true"> </mo><msub><mi>V</mi><mi mathvariant="normal">C</mi></msub></mrow><mo>=</mo><mrow><mn>2.52</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p36" class="ltx_para">
+<p class="ltx_p">A tabela seguinte mostra a diferença de potencial em cada uma das 5
+resistências, e a potência que dissipa.</p>
+</div>
+<div id="p37" class="ltx_para ltx_align_center">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">
+<span class="ltx_text ltx_font_bold">Resistência</span> /<math id="p37.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>
+</td>
+<td class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">
+<span class="ltx_text ltx_font_bold">Voltagem</span> /V</td>
+<td class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">
+<span class="ltx_text ltx_font_bold">Potência</span>
+/ mW</td>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">20</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;"><math id="p37.m2" class="ltx_Math" alttext="V_{\mathrm{C}}-V_{\mathrm{A}}=0.03" display="inline"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">C</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub></mrow><mo>=</mo><mn>0.03</mn></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">0.045</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">60</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;"><math id="p37.m3" class="ltx_Math" alttext="V_{\mathrm{C}}-V_{\mathrm{B}}=2.52" display="inline"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">C</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub></mrow><mo>=</mo><mn>2.52</mn></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">105.84</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">80</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;"><math id="p37.m4" class="ltx_Math" alttext="V_{\mathrm{D}}-V_{\mathrm{C}}=3.48" display="inline"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">D</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">C</mi></msub></mrow><mo>=</mo><mn>3.48</mn></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">151.38</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">100</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;"><math id="p37.m5" class="ltx_Math" alttext="V_{\mathrm{A}}-V_{\mathrm{B}}=2.49" display="inline"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub></mrow><mo>=</mo><mn>2.49</mn></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">62.001</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">150</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;"><math id="p37.m6" class="ltx_Math" alttext="V_{\mathrm{D}}-V_{\mathrm{A}}=3.51" display="inline"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">D</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub></mrow><mo>=</mo><mn>3.51</mn></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t" style="padding-top:3.5pt;padding-bottom:3.5pt;">82.134</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="p38" class="ltx_para">
+<p class="ltx_p">A potência total dissipada no circuito, igual à soma das potências
+dissipadas nas resistências, é igual a 401.4 mW. A corrente que passa
+pela f.e.m. é a mesma do que na resistência de 100/3 <math id="p38.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, que é
+igual a:</p>
+<table id="S0.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex42.m1" class="ltx_Math" alttext="I=\dfrac{V_{\mathrm{P}}-V_{\mathrm{B}}}{100/3}=\dfrac{2.23\times 3}{100}=66.9%
+\;\mathrm{mA}" display="block"><mrow><mi>I</mi><mo>=</mo><mfrac><mrow><msub><mi>V</mi><mi mathvariant="normal">P</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub></mrow><mrow><mn>100</mn><mo>/</mo><mn>3</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>2.23</mn><mo>×</mo><mn>3</mn></mrow><mn>100</mn></mfrac><mo>=</mo><mrow><mn>66.9</mn><mspace width=0.166em /><mi>mA</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">e a potência fornecida pela f.e.m. é igual a <math id="p38.m2" class="ltx_Math" alttext="6\,I=401.4" display="inline"><mrow><mrow><mn>6</mn><mspace width=0.166em /><mi>I</mi></mrow><mo>=</mo><mn>401.4</mn></mrow></math> mW, que é
+exatamente igual à potência total dissipada no circuito.</p>
+</div>
+<div id="Thmexample7" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 6.7</span></span></h6><p></p>
+<div id="Thmexample7.p1" class="ltx_para">
+<p class="ltx_p">No circuito representado no diagrama, os dois condensadores
+estão inicialmente descarregados. Determine:
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">a</em>) As correntes iniciais nas resistências e condensadores.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) As cargas finais nos condensadores, indicando as suas
+polaridades.</p>
+<img src="img/circ_18.png" style="width:22.974em;max-width:100%;height:auto" id="Thmexample7.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</div>
+<div id="p39" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. (<em class="ltx_emph ltx_font_italic">a</em>) No instante inicial, em que os condensadores descarregados
+atuam como curto-circuitos, o circuito equivalente é o seguinte</p>
+<img src="img/circ_18-sol_a.png" style="width:13.839em;max-width:100%;height:auto" id="p39.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p40" class="ltx_para">
+<p class="ltx_p">A resistência de 1.2 k<math id="p40.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> não foi representada, porque o
+equivalente dessa resistência em paralelo com o condensador de 68 nF
+(curto-circuito com resistência nula) é uma resistência nula
+(curto-circuito).</p>
+</div>
+<div id="p41" class="ltx_para">
+<p class="ltx_p">Arbitrando potencial nulo no ponto onde o elétrodo negativo da
+f.e.m. de 1.5 V está em contacto com a resistência de 150 <math id="p41.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, o
+elétrodo negativo da f.e.m. de 6 V também terá potencial nulo, porque
+o potencial em todos os pontos no curto-circuito à direita do circuito
+é o mesmo. Como tal, o potencial no elétrodo positivo da f.e.m. de
+1.5 V será 1.5 V, e o potencial do elétrodo positivo da f.e.m. de 6 V
+será 6 V, tal como mostra o diagrama acima.</p>
+</div>
+<div id="p42" class="ltx_para">
+<p class="ltx_p">Na resistência de 150 <math id="p42.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> a diferença de potencial é 6 V e a
+corrente será 6/150 = 0.04 A (de esquerda para direita), que é a mesma
+corrente no condensador de 82 nF (de direita para esquerda). Na
+resistência de 200 <math id="p42.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, a diferença de potencial é 1.5 V e a
+corrente 1.5/200 = 0.0075 A (de cima para baixo). Pela regra dos nós,
+a corrente no condensador de 68 nF é então, <math id="p42.m3" class="ltx_Math" alttext="0.04-0.0075=0.0325" display="inline"><mrow><mrow><mn>0.04</mn><mo>−</mo><mn>0.0075</mn></mrow><mo>=</mo><mn>0.0325</mn></mrow></math> A (de
+cima para baixo). Na resistência de 1.2 k<math id="p42.m4" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> a corrente é nula,
+porque a diferença de potencial é nula.</p>
+</div>
+<div id="p43" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">b</em>) No estado final, quando os condensadores completamente
+carregados são equivalentes a interruptores abertos, o circuito
+equivalente é o seguinte</p>
+<img src="img/circ_18-sol_b.png" style="width:17.514em;max-width:100%;height:auto" id="p43.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p44" class="ltx_para">
+<p class="ltx_p">Observe-se que a corrente na resistência de 150 <math id="p44.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> é nula,
+porque não tem percurso por onde circular. Como tal, o potencial nos
+dois extremos dessa resistência é o mesmo e pode arbitrar-se que é
+nulo, como mostra o diagrama anterior. O potencial no elétrodo negativo
+da f.e.m. de 6 V será então igual a <math id="p44.m2" class="ltx_Math" alttext="-6" display="inline"><mrow><mo>−</mo><mn>6</mn></mrow></math> V e o potencial no elétrodo
+positivo da f.e.m. de 1.5 V será igual a 1.5 V.
+</p>
+</div>
+<div id="p45" class="ltx_para">
+<p class="ltx_p">No ponto comum às resistências de 200 <math id="p45.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e 1.2 k<math id="p45.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> o valor
+do potencial, <math id="p45.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> no diagrama, deverá ser obtido pela lei de
+Ohm. Essas duas resistências, que estão em série, são equivalentes a
+uma única resistência de 1400 <math id="p45.m4" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> entre os pontos onde o
+potencial é 0 e 1.5 V; como tal, a corrente através
+dessas duas resistências é <math id="p45.m5" class="ltx_Math" alttext="I=1.5/1400" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mn>1.5</mn><mo>/</mo><mn>1400</mn></mrow></mrow></math> A, e o valor de <math id="p45.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> é:</p>
+<table id="S0.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex43.m1" class="ltx_Math" alttext="V=1200\,I=\dfrac{1200\times 1.5}{1400}=1.286\;\mathrm{V}" display="block"><mrow><mi>V</mi><mo>=</mo><mrow><mn>1200</mn><mspace width=0.166em /><mi>I</mi></mrow><mo>=</mo><mfrac><mrow><mn>1200</mn><mo>×</mo><mn>1.5</mn></mrow><mn>1400</mn></mfrac><mo>=</mo><mrow><mn>1.286</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p46" class="ltx_para">
+<p class="ltx_p">Observa-se então que no condensador de 82 nF a carga é positiva na
+armadura do lado direito (maior potencial), no condensador de 68 nF a
+carga é negativa na armadura de cima (menor potencial) e os valores
+das cargas nesses dois condensadores são os seguintes:</p>
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex44"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex44.m1" class="ltx_Math" alttext="\displaystyle Q_{1}" display="inline"><msub><mi>Q</mi><mn>1</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex44.m2" class="ltx_Math" alttext="\displaystyle=82\times(1.286-(-6))=597\;\mathrm{nC}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>82</mn><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1.286</mn><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>6</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>597</mn><mspace width=0.166em /><mi>nC</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex45"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex45.m1" class="ltx_Math" alttext="\displaystyle Q_{2}" display="inline"><msub><mi>Q</mi><mn>2</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex45.m2" class="ltx_Math" alttext="\displaystyle=68\times 1.286=87.4\;\mathrm{nC}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>68</mn><mo>×</mo><mn>1.286</mn></mrow><mo>=</mo><mrow><mn>87.4</mn><mspace width=0.166em /><mi>nC</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Thmexample8" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Problema 6.8</span></span></h6><p></p>
+<div id="Thmexample8.p1" class="ltx_para">
+<p class="ltx_p">Determine a intensidade e sentido da corrente no
+condensador, no instante inicial em que está descarregado.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) Determine a carga final do condensador, indicando a sua
+polaridade.
+</p>
+<img src="img/circ_19.png" style="width:15.687em;max-width:100%;height:auto" id="Thmexample8.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</div>
+<div id="p47" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. (<em class="ltx_emph ltx_font_italic">a</em>) No estado inicial, com o condensador em
+curto-circuito, as resistências de 180 <math id="p47.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, 270 <math id="p47.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e
+330 <math id="p47.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> formam um delta, que pode ser substituído pelas seguintes
+três resistências em estrela:</p>
+<table id="S0.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex46"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex46.m1" class="ltx_Math" alttext="\displaystyle R_{\mathrm{A}}=\dfrac{180\times 270}{180+270+330}=\dfrac{810}{13%
+}\approx 62.31" display="inline"><mrow><msub><mi>R</mi><mi mathvariant="normal">A</mi></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>180</mn><mo>×</mo><mn>270</mn></mrow><mrow><mn>180</mn><mo>+</mo><mn>270</mn><mo>+</mo><mn>330</mn></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>810</mn><mn>13</mn></mfrac></mstyle><mo>≈</mo><mn>62.31</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex47"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex47.m1" class="ltx_Math" alttext="\displaystyle R_{\mathrm{B}}=\dfrac{180\times 330}{180+270+330}=\dfrac{990}{13%
+}\approx 76.15" display="inline"><mrow><msub><mi>R</mi><mi mathvariant="normal">B</mi></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>180</mn><mo>×</mo><mn>330</mn></mrow><mrow><mn>180</mn><mo>+</mo><mn>270</mn><mo>+</mo><mn>330</mn></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>990</mn><mn>13</mn></mfrac></mstyle><mo>≈</mo><mn>76.15</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex48"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex48.m1" class="ltx_Math" alttext="\displaystyle R_{\mathrm{C}}=\dfrac{270\times 330}{180+270+330}=\dfrac{1485}{1%
+3}\approx 114.23" display="inline"><mrow><msub><mi>R</mi><mi mathvariant="normal">C</mi></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>270</mn><mo>×</mo><mn>330</mn></mrow><mrow><mn>180</mn><mo>+</mo><mn>270</mn><mo>+</mo><mn>330</mn></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1485</mn><mn>13</mn></mfrac></mstyle><mo>≈</mo><mn>114.23</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p48" class="ltx_para">
+<p class="ltx_p">E o circuito equivalente, com todas as resistências em unidades de
+<math id="p48.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, é o seguinte:</p>
+<img src="img/circ_19-sol_a.png" style="width:16.758em;max-width:100%;height:auto" id="p48.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p49" class="ltx_para">
+<p class="ltx_p">As resistências de 470 e 76.15, em série, substituem-se por uma
+resistência de 546.15 e as resistências de 114.23 e 560, também em
+série, substituem-se por uma resistência de 674.15. A seguir, as
+resistências de 546.15 e 674.23, em paralelo, substituem-se por uma
+resistência de <math id="p49.m1" class="ltx_Math" alttext="546.15\times 674.23/(546.15+674.23)=301.74" display="inline"><mrow><mrow><mrow><mn>546.15</mn><mo>×</mo><mn>674.23</mn></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>546.15</mn><mo>+</mo><mn>674.23</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>301.74</mn></mrow></math>. Os dois
+circuitos resultantes dessas duas simplificações são os seguintes:</p>
+<img src="img/circ_19-sol_b.png" style="width:22.533em;max-width:100%;height:auto" id="p49.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p50" class="ltx_para">
+<p class="ltx_p">No circuito do lado direito, as diferenças de potencial entre os
+pontos A, P e D são as seguintes:</p>
+<table id="S0.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex49"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex49.m1" class="ltx_Math" alttext="\displaystyle V_{\mathrm{P}}-V_{\mathrm{A}}=\dfrac{62.31\times 3}{62.31+301.74%
+}=0.5135\;\mathrm{V}" display="inline"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">P</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>62.31</mn><mo>×</mo><mn>3</mn></mrow><mrow><mn>62.31</mn><mo>+</mo><mn>301.74</mn></mrow></mfrac></mstyle><mo>=</mo><mrow><mn>0.5135</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex50"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex50.m1" class="ltx_Math" alttext="\displaystyle V_{\mathrm{D}}-V_{\mathrm{P}}=\dfrac{301.74\times 3}{62.31+301.7%
+4}=2.4865\;\mathrm{V}" display="inline"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">D</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">P</mi></msub></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>301.74</mn><mo>×</mo><mn>3</mn></mrow><mrow><mn>62.31</mn><mo>+</mo><mn>301.74</mn></mrow></mfrac></mstyle><mo>=</mo><mrow><mn>2.4865</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">e, como entre os pontos D e P estavam as resistências de 470 e 76.15,
+em série, com o ponto B entre elas, então:</p>
+<table id="S0.Ex51" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex51.m1" class="ltx_Math" alttext="V_{\mathrm{B}}-V_{\mathrm{P}}=\dfrac{76.15(V_{\mathrm{D}}-V_{\mathrm{P}})}{470%
++76.15}=0.3467\;\mathrm{V}" display="block"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">P</mi></msub></mrow><mo>=</mo><mfrac><mrow><mn>76.15</mn><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>V</mi><mi mathvariant="normal">D</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">P</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>470</mn><mo>+</mo><mn>76.15</mn></mrow></mfrac><mo>=</mo><mrow><mn>0.3467</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p51" class="ltx_para">
+<p class="ltx_p">A diferença de potencial entre A e B é igual a:
+</p>
+<table id="S0.Ex52" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex52.m1" class="ltx_Math" alttext="V_{\mathrm{B}}-V_{\mathrm{A}}=(V_{\mathrm{B}}-V_{\mathrm{P}})+(V_{\mathrm{P}}-%
+V_{\mathrm{A}})=0.3467+0.5135=0.8602\;\mathrm{V}" display="block"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">P</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>V</mi><mi mathvariant="normal">P</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>0.3467</mn><mo>+</mo><mn>0.5135</mn></mrow><mo>=</mo><mrow><mn>0.8602</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p52" class="ltx_para">
+<p class="ltx_p">E, com o condensador em curto-circuito, a resistência entre A e B é
+de 180 <math id="p52.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e a corrente nesse ramo é igual a:</p>
+<table id="S0.Ex53" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex53.m1" class="ltx_Math" alttext="I=\dfrac{0.8602}{180}=0.00478\;\mathrm{A}" display="block"><mrow><mi>I</mi><mo>=</mo><mfrac><mn>0.8602</mn><mn>180</mn></mfrac><mo>=</mo><mrow><mn>0.00478</mn><mspace width=0.166em /><mi mathvariant="normal">A</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p53" class="ltx_para">
+<p class="ltx_p">Ou seja, no instante inicial a corrente no condensador é 4.78 mA, de B
+para A (de baixo para cima).</p>
+</div>
+<div id="p54" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">b</em>) O circuito equivalente no estado final, com o condensador como
+interruptor aberto, é o seguinte</p>
+<img src="img/circ_19-sol_c.png" style="width:15.687em;max-width:100%;height:auto" id="p54.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p55" class="ltx_para">
+<p class="ltx_p">Onde as resistências de 470 e 330 estão em série entre C e D, e a
+resistência equivalente ficará em paralelo com a resistência de 560,
+conduzindo aos seguintes circuitos equivalentes mais simples:</p>
+<img src="img/circ_19-sol_d.png" style="width:22.575em;max-width:100%;height:auto" id="p55.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p56" class="ltx_para">
+<p class="ltx_p">No circuito do lado direito, as diferenças de potencial entre os pontos A, C e D são as seguintes:</p>
+<table id="S0.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex54"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex54.m1" class="ltx_Math" alttext="\displaystyle V_{\mathrm{C}}-V_{\mathrm{A}}=\dfrac{270\times 3}{270+329.41}=1.%
+3513\;\mathrm{V}" display="inline"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">C</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>270</mn><mo>×</mo><mn>3</mn></mrow><mrow><mn>270</mn><mo>+</mo><mn>329.41</mn></mrow></mfrac></mstyle><mo>=</mo><mrow><mn>1.3513</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex55"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex55.m1" class="ltx_Math" alttext="\displaystyle V_{\mathrm{D}}-V_{\mathrm{C}}=\dfrac{329.41\times 3}{270+329.41}%
+=1.6487\;\mathrm{V}" display="inline"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">D</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">C</mi></msub></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>329.41</mn><mo>×</mo><mn>3</mn></mrow><mrow><mn>270</mn><mo>+</mo><mn>329.41</mn></mrow></mfrac></mstyle><mo>=</mo><mrow><mn>1.6487</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">e, como entre os pontos D e C estavam as resistências de 470 e 330,
+em série, com o ponto B entre elas, então:</p>
+<table id="S0.Ex56" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex56.m1" class="ltx_Math" alttext="V_{\mathrm{B}}-V_{\mathrm{C}}=\dfrac{330(V_{\mathrm{D}}-V_{\mathrm{C}})}{470+3%
+30}=0.6801\;\mathrm{V}" display="block"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">C</mi></msub></mrow><mo>=</mo><mfrac><mrow><mn>330</mn><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>V</mi><mi mathvariant="normal">D</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">C</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>470</mn><mo>+</mo><mn>330</mn></mrow></mfrac><mo>=</mo><mrow><mn>0.6801</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p57" class="ltx_para">
+<p class="ltx_p">A diferença de potencial entre A e B é igual a:</p>
+<table id="S0.Ex57" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex57.m1" class="ltx_Math" alttext="V_{\mathrm{B}}-V_{\mathrm{A}}=(V_{\mathrm{B}}-V_{\mathrm{C}})+(V_{\mathrm{C}}-%
+V_{\mathrm{A}})=0.6801+1.3513=2.0314\;\mathrm{V}" display="block"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>V</mi><mi mathvariant="normal">B</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">C</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>V</mi><mi mathvariant="normal">C</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">A</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>0.6801</mn><mo>+</mo><mn>1.3513</mn></mrow><mo>=</mo><mrow><mn>2.0314</mn><mspace width=0.166em /><mi mathvariant="normal">V</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p58" class="ltx_para">
+<p class="ltx_p">O resultado positivo indica que a carga é positiva na armadura de
+baixo (maior potencial em B do que em A) e negativa na armadura de
+cima. Finalmente, a carga no condensador calcula-se a partir da sua
+voltagem</p>
+<table id="S0.Ex58" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex58.m1" class="ltx_Math" alttext="Q=C\,\Delta V=1.2\times 2.0314=2.44\;\mu\mathrm{C}" display="block"><mrow><mi>Q</mi><mo>=</mo><mrow><mi>C</mi><mspace width=0.166em /><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><mi>V</mi></mrow><mo>=</mo><mrow><mn>1.2</mn><mo>×</mo><mn>2.0314</mn></mrow><mo>=</mo><mrow><mn>2.44</mn><mspace width=0.166em /><mi>μ</mi><mspace width=0.166em /><mi mathvariant="normal">C</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div class="ltx_rdf" about="" property="dcterms:creator" content="Jaime E. Villate, Luís Miguel Martelo"></div>
+<div class="ltx_rdf" about="" property="dcterms:subject" content="Eletromagnetismo, Eletricidade, Magnetismo, Circuitos"></div>
+<div class="ltx_rdf" about="" property="dcterms:subject" content="Eletromagnetismo"></div>
+<div class="ltx_rdf" about="" property="dcterms:title" content="Eletromagnetismo e Circuitos"></div>
+
+</article>
+</div>
+<footer class="ltx_page_footer">
+<p>&copy; 2023, Jaime E. Villate &amp; Luís Miguel Martelo</p>
+<p>Publicado nos termos da <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição-Partilha</a> (versão 4.0).</p>
+<div class="ltx_page_logo">Generated  on Thu Oct 19 11:33:07 2023 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML </a>
+</div></footer>
+</div>
+</body>
+</html>
