@@ -1,0 +1,1643 @@
+<!DOCTYPE html><html prefix="dcterms: http://purl.org/dc/terms/" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Cálculo do campo magnético</title>
+<!--Generated on Sun Nov 26 18:12:21 2023 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 23 de novembro de 2023.-->
+
+<link rel="stylesheet" href="../css/latex-schola.css" type="text/css">
+<link rel="stylesheet" href="../css/ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" lang="pt" content="Ampère, André Marie, Biot, Jean-Baptiste, Princípio, Savart, Felix, ampere (unidade), campo, constante, corrente, da Sobreposição, de Ampère, de Biot-Savart, de campo magnético, do
+vácuo, fluxo, lei, linhas, magnetostática, magnético, permitividade elétrica, regra da mão direita, solenoide, trifásica">
+</head>
+<body>
+<nav><a href="./index.html">Eletromagnetismo e Circuitos</a><span>&rarr;</span><span>Cálculo do campo magnético</span></nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line" lang="pt">
+<h1 class="ltx_title ltx_title_document">8. Cálculo do campo magnético</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jaime E. Villate e Luís Miguel Martelo
+</span></span>
+</div>
+<div class="ltx_dates">(23 de novembro de 2023)</div>
+
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="p1" class="ltx_para ltx_align_center">
+<img src="figs/Ampere.jpg" style="width:12.600em;max-width:100%;height:auto" id="p1.g1" class="ltx_graphics" alt="">
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">André Marie Ampère (1775–1836)</span></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">O estudo da eletricidade avançou a grandes passos nas primeiras
+décadas do século XIX, após a invenção da pilha de Volta. No entanto,
+a relação entre os fenômenos elétricos e magnéticos era desconhecida,
+a pesar de que já tinha sido observado que quando uma casa é atingida
+por um raio, alguns objetos metálicos ficam magnetizados —por
+exemplo os talheres. Em 1820 Hans Christian Ørsted (1777–1851)
+revoluciono o estudo da eletricidade e o magnetismo ao descobrir que
+um fio atravessado por corrente eléctrica produz campo magnético à sua
+volta; poucos dias após o anúncio dessa descoberta Jean-Baptiste Biot
+e Felix Savart, encontraram uma expressão matemática para o campo
+magnético em função da corrente. De forma independente, Ampère estudou
+a relação entre a corrente e o campo magnético descobrindo que existem
+forças magnéticas entre dois fios atravessados por corrente.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8.1 </span>Campo magnético de fios com corrente</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">O campo magnético produz forças sobre os condutores com corrente e os
+condutores com corrente também produzem campos magnéticos. Um cabo
+condutor que transporta corrente produz linhas de campo magnético à
+sua volta.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">As linhas do campo magnético produzido por um fio retilíneo com
+corrente são circunferências perpendiculares ao fio e com centro no
+eixo do fio, como se mostra na figura <a href="#S1.F1" title="Figura 8.1 ‣ 1 Campo magnético de fios com corrente ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.1</span></a>. O
+sentido do campo segue a regra da mão direita, em relação à corrente:
+colocando o polegar da mão direita no sentido da corrente, os outros
+dedos indicam o sentido das linhas de campo magnético.</p>
+</div>
+<figure id="S1.F1" class="ltx_figure"><img src="img/magnetic_field_wire.png" style="width:28.938em;max-width:100%;height:auto" id="S1.F1.g1" class="ltx_graphics ltx_centering" alt="Campo magnético de um fio retilíneo com corrente.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.1: </span>Campo magnético de um fio retilíneo com corrente.</figcaption>
+</figure>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">O Princípio da Sobreposição também se aplica ao campo magnético: o
+campo magnético devido a um sistema é igual à soma vetorial dos campos
+individuais de cada elemento do sistema. A soma dos campos de vários
+fios retilíneos e paralelos são curvas planas, no plano perpendicular
+aos fios.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">As linhas de campo magnético de um sistema de fios retilíneos com
+corrente são idênticas às curvas equipotenciais de um sistema de fios
+retilíneos e paralelos, com densidade linear de carga constante, no
+plano perpendicular aos fios. As correntes em sentidos opostos
+assemelham-se a fios com densidade de carga de sinais opostos. No
+entanto, as linhas de campo magnético são verdadeiras curvas,
+orientadas num sentido, enquanto que as curvas equipotenciais são
+realmente a interseção de superfícies com um plano e não têm um
+sentido definido.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">A figura <a href="#S1.F2" title="Figura 8.2 ‣ 1 Campo magnético de fios com corrente ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.2</span></a> mostra dois exemplos. No corte com
+o plano perpendicular, os fios aparecem como pequenos círculos; as
+correntes para dentro da figura representam-se com um X e as correntes
+para fora da figura com um ponto. No lado esquerdo estão representadas
+as linhas de campo magnético de dos fios com correntes da mesma
+intensidade e sentido. Há um ponto de campo nulo no meio do segmento
+entre os fios. Na figura do lado direito, em que as correntes são em
+sentidos opostos, o ponto de campo nulo está fora do segmento entre as
+cargas. Nos pontos mais afastados dos fios, as linhas de campo
+aproximam-se de circunferências, com centro num ponto entre os dois
+fios, percorridas no sentido da mão direita segundo o sentido da soma
+das correntes nos dois fios.</p>
+</div>
+<figure id="S1.F2" class="ltx_figure">
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="position:relative; bottom:20.0pt;"><img src="img/magnetic_field-3.png" style="width:14.301em;max-width:100%;height:auto" id="S1.F2.g1" class="ltx_graphics" alt="Campo magnético de dois fios com correntes no mesmo sentido
+(esquerda) e em sentidos opostos (direita)."></span>
+                 <img src="img/magnetic_field-2.png" style="width:11.319em;max-width:100%;height:auto" id="S1.F2.g2" class="ltx_graphics" alt="Campo magnético de dois fios com correntes no mesmo sentido
+(esquerda) e em sentidos opostos (direita)."></p>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.2: </span>Campo magnético de dois fios com correntes no mesmo sentido
+(esquerda) e em sentidos opostos (direita).</figcaption>
+</figure>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">Num sistema de dois fios paralelos com corrente, o ponto de campo nulo
+encontra-se sempre mais próximo da corrente mais fraca, no segmento
+entre os dois fios se o sentido das correntes é o mesmo, ou fora desse
+segmento se os sentidos das correntes é oposto. O único caso em que
+não existe ponto de campo nulo, e as linhas de campo nos pontos
+afastados não são circunferências com centro entre os dois fios, é
+quando as correntes têm a mesma intensidade, com sentidos opostos. A
+figura <a href="#S1.F3" title="Figura 8.3 ‣ 1 Campo magnético de fios com corrente ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.3</span></a> mostra as linhas de campo nesse
+caso, no lado esquerdo na região próxima dos fios e no lado direito
+nos pontos muito afastados, onde os dos fios parecem passar pelo mesmo
+ponto.
+</p>
+</div>
+<figure id="S1.F3" class="ltx_figure">
+<table style="width:100%;">
+<tr>
+<td class="ltx_subgraphics"><img src="img/magnetic_field-1.png" style="width:12.663em;max-width:100%;height:auto" id="S1.F3.g1" class="ltx_graphics ltx_centering" alt="Campo magnético de dois fios paralelos, com correntes da
+mesma intensidade mas sentidos opostos."></td>
+<td class="ltx_subgraphics"><img src="img/dipole_magnetic_field.png" style="width:11.109em;max-width:100%;height:auto" id="S1.F3.g2" class="ltx_graphics ltx_centering" alt="Campo magnético de dois fios paralelos, com correntes da
+mesma intensidade mas sentidos opostos."></td>
+</tr>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.3: </span>Campo magnético de dois fios paralelos, com correntes da
+mesma intensidade mas sentidos opostos.</figcaption>
+</figure>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8.2 </span>Lei de Biot-Savart</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">lei de Biot-Savart</em> estabelece a expressão do campo
+magnético <math id="S2.p1.m1" class="ltx_Math" alttext="\vec{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> devido a um segmento de fio, entre os pontos P e
+Q, percorrido por uma corrente estacionária
+<math id="S2.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. O campo num ponto qualquer, de vetor posição <math id="S2.p1.m3" class="ltx_Math" alttext="\vec{r}" display="inline"><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math>, é dado
+pelo seguinte integral de linha ao longo do fio:</p>
+<table id="S2.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S2.E1.m1" class="ltx_Math" alttext="\boxed{\vec{B}(\vec{r})=k_{\mathrm{m}}\int_{\mathrm{P}}^{\mathrm{Q}}\dfrac{%
+\vec{I}\times\bigl{(}\vec{r}-\vec{r}^{\prime}\bigr{)}}{\lvert\vec{r}-\vec{r}^{%
+\prime}\rvert^{3}}\,\mathrm{d}s^{\prime}}" display="block"><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi mathvariant="normal">P</mi><mi mathvariant="normal">Q</mi></msubsup><mrow><mfrac><mrow><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>−</mo><msup><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><msup><mrow><mo fence="true" stretchy="false">|</mo><mrow><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>−</mo><msup><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></mrow><mo fence="true" stretchy="false">|</mo></mrow><mn>3</mn></msup></mfrac><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><msup><mi>s</mi><mo>′</mo></msup></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">onde <math id="S2.p1.m4" class="ltx_Math" alttext="\vec{r}^{\prime}" display="inline"><msup><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></math> é o vetor que define os pontos do fio entre P e Q (ver
+figura <a href="#S2.F4" title="Figura 8.4 ‣ 2 Lei de Biot-Savart ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.4</span></a>). O vetor <math id="S2.p1.m5" class="ltx_Math" alttext="\vec{r}-\vec{r}^{\prime}" display="inline"><mrow><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>−</mo><msup><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></mrow></math> vai
+desde cada ponto no fio até o ponto onde se calcula o campo.</p>
+</div>
+<figure id="S2.F4" class="ltx_figure"><img src="img/Biot-Savart_law.png" style="width:13.524em;max-width:100%;height:auto" id="S2.F4.g1" class="ltx_graphics ltx_centering" alt="Vetores usados para expressar a lei de Biot-Savart.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.4: </span>Vetores usados para expressar a lei de Biot-Savart.</figcaption>
+</figure>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Observe-se que o vetor corrente <math id="S2.p2.m1" class="ltx_Math" alttext="\vec{I}" display="inline"><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> pode mudar de direção mas
+tem módulo constante ao longo do integral. A <em class="ltx_emph ltx_font_italic">constante
+magnetostática</em> <math id="S2.p2.m2" class="ltx_Math" alttext="k_{\mathrm{m}}" display="inline"><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub></math> tem o seguinte valor experimental, no
+Sistema Internacional de unidades,</p>
+<table id="S2.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E2.m1" class="ltx_Math" alttext="k_{\mathrm{m}}=10^{-7}\;\mathrm{\frac{N}{A^{2}}}\;." display="block"><mrow><mrow><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mo>=</mo><mrow><msup><mn>10</mn><mrow><mo>−</mo><mn>7</mn></mrow></msup><mspace width=0.166em /><mfrac><mi mathvariant="normal">N</mi><msup><mi mathvariant="normal">A</mi><mn>2</mn></msup></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.2)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">A equação (<a href="#S2.E1" title="(1) ‣ 2 Lei de Biot-Savart ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.1</span></a>) é semelhante à equação
+(<a href="calculo_do_campo_eletrico.html#S2.E8">2.8</a>) do campo elétrico
+produzido por um fio com densidade linear de carga <math id="S2.p3.m1" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math>. No
+entanto, o produto vetorial com a corrente faz com que o campo
+magnético produzido por cada elemento infinitesimal de fio não seja
+um campo central e, como tal, não seja conservativo como no caso do
+campo elétrico. A seguir veremos alguns exemplos de aplicação da lei
+de Biot-Savart.</p>
+</div>
+<div id="Thmexample1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Exemplo 8.1</span></span></h6><p></p>
+<div id="Thmexample1.p1" class="ltx_para">
+<p class="ltx_p">Calcule o campo magnético produzido por um fio retilíneo, finito,
+com corrente <math id="Thmexample1.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>.</p>
+</div>
+<div id="Thmexample1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Podemos escolher o eixo <math id="Thmexample1.p2.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> ao longo do fio, no
+sentido da corrente, e a origem no ponto que faz com que o vetor
+posição <math id="Thmexample1.p2.m2" class="ltx_Math" alttext="\vec{r}" display="inline"><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math>, do ponto P onde vamos calcular o campo, esteja no
+plano <math id="Thmexample1.p2.m3" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mspace width=0.166em /><mi>y</mi></mrow></math>, tal como mostra o lado esquerdo da figura seguinte.</p>
+<img src="img/coordenadas_fio_com_corrente.png" style="width:24.801em;max-width:100%;height:auto" id="Thmexample1.p2.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="Thmexample1.p3" class="ltx_para">
+<p class="ltx_p">Usando coordenadas cilíndricas (secção <a href="analise_vetorial.html#S2.SS3">A.2.3</a> do
+apêndice <a href="analise_vetorial.html">A</a>), os vetores posição <math id="Thmexample1.p3.m1" class="ltx_Math" alttext="\vec{r}" display="inline"><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math>,
+<math id="Thmexample1.p3.m2" class="ltx_Math" alttext="\vec{r}^{\prime}" display="inline"><msup><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></math> (um ponto no fio) e <math id="Thmexample1.p3.m3" class="ltx_Math" alttext="\vec{I}" display="inline"><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> são os seguintes (ver lado
+direito da figura acima):</p>
+<table id="Sx2.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex1.m1" class="ltx_Math" alttext="\displaystyle\vec{r}=\varrho\left(\cos\phi\,\hat{\imath}+\sin\phi\,\hat{\jmath%
+}\right)" display="inline"><mrow><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>=</mo><mrow><mi>ϱ</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo>+</mo><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex2.m1" class="ltx_Math" alttext="\displaystyle\vec{r}^{\prime}=z^{\prime}\,\hat{k}" display="inline"><mrow><msup><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup><mo>=</mo><mrow><msup><mi>z</mi><mo>′</mo></msup><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex3.m1" class="ltx_Math" alttext="\displaystyle\vec{I}=I\,\hat{k}" display="inline"><mrow><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>=</mo><mrow><mi>I</mi><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Thmexample1.p4" class="ltx_para">
+<p class="ltx_p">Como tal,</p>
+<table id="Sx2.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex4.m1" class="ltx_Math" alttext="\displaystyle\vec{I}\times\left(\vec{r}-\vec{r}^{\prime}\right)" display="inline"><mrow><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mrow><mo>(</mo><mrow><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>−</mo><msup><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex4.m2" class="ltx_Math" alttext="\displaystyle=I\,\hat{k}\times\left(\varrho\cos\phi\,\hat{\imath}+\varrho\sin%
+\phi\,\hat{\jmath}-z^{\prime}\hat{k}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>I</mi><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow><mo>×</mo><mrow><mo>(</mo><mrow><mrow><mrow><mi>ϱ</mi><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mi>ϱ</mi><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow></mrow><mo>−</mo><mrow><msup><mi>z</mi><mo>′</mo></msup><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex5.m1" class="ltx_Math" alttext="\displaystyle=I\varrho\left(-\sin\phi\,\hat{\imath}+\cos\phi\,\hat{\jmath}%
+\right)=I\varrho\,\hat{\phi}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>I</mi><mspace width=0.166em /><mi>ϱ</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mo>−</mo><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>I</mi><mspace width=0.166em /><mi>ϱ</mi><mspace width=0.166em /><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">onde <math id="Thmexample1.p4.m1" class="ltx_Math" alttext="\hat{\phi}" display="inline"><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></math> é o versor azimutal no ponto P (ver figura
+acima). E o módulo de <math id="Thmexample1.p4.m2" class="ltx_Math" alttext="\vec{r}-\vec{r}^{\prime}" display="inline"><mrow><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>−</mo><msup><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></mrow></math> é igual a
+<math id="Thmexample1.p4.m3" class="ltx_Math" alttext="\sqrt{z^{\prime 2}+\varrho^{2}}" display="inline"><msqrt><mrow><msup><mi>z</mi><mrow><mo mathsize="142%" stretchy="false">′</mo><mo>⁣</mo><mn>2</mn></mrow></msup><mo>+</mo><msup><mi>ϱ</mi><mn>2</mn></msup></mrow></msqrt></math>. Substituindo na lei de
+Biot-Savart (<a href="#S2.E1" title="(1) ‣ 2 Lei de Biot-Savart ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.1</span></a>),</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="\vec{B}(\varrho)=k_{\mathrm{m}}I\varrho\int_{z_{1}}^{z_{2}}\dfrac{\hat{\phi}}{%
+(z^{\prime 2}+\varrho^{2})^{3/2}}\,\mathrm{d}z^{\prime}" display="block"><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ϱ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mi>ϱ</mi><mspace width=0.166em /><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub></msubsup><mrow><mfrac><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>z</mi><mrow><mo mathsize="142%" stretchy="false">′</mo><mo>⁣</mo><mn>2</mn></mrow></msup><mo>+</mo><msup><mi>ϱ</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><msup><mi>z</mi><mo>′</mo></msup></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample1.p5" class="ltx_para">
+<p class="ltx_p">O integral pode ser resolvido com a substituição trigonométrica</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="z^{\prime}=\varrho\tan\beta\qquad\mathrm{d}z^{\prime}=\varrho\sec^{2}\beta\,%
+\mathrm{d}\beta" display="block"><mrow><mrow><msup><mi>z</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>ϱ</mi><mspace width=0.166em /><mrow><mi>tan</mi><mspace width=0.11em /><mi>β</mi></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><msup><mi>z</mi><mo>′</mo></msup></mrow><mo>=</mo><mrow><mi>ϱ</mi><mspace width=0.166em /><mrow><msup><mi>sec</mi><mn>2</mn></msup><mspace width=0.11em /><mrow><mi>β</mi><mspace width=0.166em /><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>β</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">que conduz ao resultado:</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="\vec{B}(\varrho)=\dfrac{k_{\mathrm{m}}I}{\varrho}\int_{\beta_{1}}^{\beta_{2}}%
+\cos\beta\,\mathrm{d}\beta\,\hat{\phi}=\dfrac{k_{\mathrm{m}}I}{\varrho}(\sin%
+\beta_{2}-\sin\beta_{1})\hat{\phi}" display="block"><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ϱ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mi>ϱ</mi></mfrac><mspace width=0.166em /><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>β</mi><mn>1</mn></msub><msub><mi>β</mi><mn>2</mn></msub></msubsup><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mi>β</mi><mspace width=0.166em /><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>β</mi><mspace width=0.166em /><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mi>ϱ</mi></mfrac><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>sin</mi><mspace width=0.11em /><msub><mi>β</mi><mn>2</mn></msub></mrow><mo>−</mo><mrow><mi>sin</mi><mspace width=0.11em /><msub><mi>β</mi><mn>1</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mspace width=0.166em /><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample1.p6" class="ltx_para">
+<p class="ltx_p">Para escrever o resultado sem referência a nenhuma origem O, a
+figura seguinte mostra o fio, entre os pontos <math id="Thmexample1.p6.m1" class="ltx_Math" alttext="z_{1}" display="inline"><msub><mi>z</mi><mn>1</mn></msub></math> e <math id="Thmexample1.p6.m2" class="ltx_Math" alttext="z_{2}" display="inline"><msub><mi>z</mi><mn>2</mn></msub></math>, os
+ângulos <math id="Thmexample1.p6.m3" class="ltx_Math" alttext="\beta_{1}=\arctan(z_{1}/\varrho)" display="inline"><mrow><msub><mi>β</mi><mn>1</mn></msub><mo>=</mo><mrow><mi>arctan</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>/</mo><mi>ϱ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> e
+<math id="Thmexample1.p6.m4" class="ltx_Math" alttext="\beta_{2}=\arctan(z_{2}/\varrho)" display="inline"><mrow><msub><mi>β</mi><mn>2</mn></msub><mo>=</mo><mrow><mi>arctan</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>z</mi><mn>2</mn></msub><mo>/</mo><mi>ϱ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> e dois ângulos <math id="Thmexample1.p6.m5" class="ltx_Math" alttext="\theta_{1}" display="inline"><msub><mi>θ</mi><mn>1</mn></msub></math> e <math id="Thmexample1.p6.m6" class="ltx_Math" alttext="\theta_{2}" display="inline"><msub><mi>θ</mi><mn>2</mn></msub></math>
+definidos em relação ao fio e ao ponto P onde se calcula o campo:</p>
+<img src="img/straight_wire_with_current.png" style="width:19.341em;max-width:100%;height:auto" id="Thmexample1.p6.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="Thmexample1.p7" class="ltx_para">
+<p class="ltx_p">Como <math id="Thmexample1.p7.m1" class="ltx_Math" alttext="\sin\beta_{2}=\cos\theta_{2}" display="inline"><mrow><mrow><mi>sin</mi><mspace width=0.11em /><msub><mi>β</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mi>cos</mi><mspace width=0.11em /><msub><mi>θ</mi><mn>2</mn></msub></mrow></mrow></math> e <math id="Thmexample1.p7.m2" class="ltx_Math" alttext="\sin\beta_{1}=-\cos\theta_{1}" display="inline"><mrow><mrow><mi>sin</mi><mspace width=0.11em /><msub><mi>β</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>cos</mi><mspace width=0.11em /><msub><mi>θ</mi><mn>1</mn></msub></mrow></mrow></mrow></math> o
+campo magnético em qualquer ponto é:</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="\vec{B}(\varrho)=\dfrac{k_{\mathrm{m}}I}{\varrho}(\cos\theta_{1}+\cos\theta_{2%
+})\hat{\phi}" display="block"><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ϱ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mi>ϱ</mi></mfrac><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>cos</mi><mspace width=0.11em /><msub><mi>θ</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>cos</mi><mspace width=0.11em /><msub><mi>θ</mi><mn>2</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mspace width=0.166em /><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">em que <math id="Thmexample1.p7.m3" class="ltx_Math" alttext="\varrho" display="inline"><mi>ϱ</mi></math> é a distância desde o ponto até a reta que passa pelo
+fio e <math id="Thmexample1.p7.m4" class="ltx_Math" alttext="\hat{\phi}" display="inline"><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></math> o versor azimutal em relação ao eixo <math id="Thmexample1.p7.m5" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> ao longo
+do fio e no sentido da corrente.
+</div>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">No caso de um fio retilíneo infinito, os ângulo <math id="S2.p4.m1" class="ltx_Math" alttext="\theta_{1}" display="inline"><msub><mi>θ</mi><mn>1</mn></msub></math> e
+<math id="S2.p4.m2" class="ltx_Math" alttext="\theta_{2}" display="inline"><msub><mi>θ</mi><mn>2</mn></msub></math> aproximam-se de <math id="S2.p4.m3" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math> e
+<math id="S2.p4.m4" class="ltx_Math" alttext="\cos\theta_{1}+\cos\theta_{2}=2" display="inline"><mrow><mrow><mrow><mi>cos</mi><mspace width=0.11em /><msub><mi>θ</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>cos</mi><mspace width=0.11em /><msub><mi>θ</mi><mn>2</mn></msub></mrow></mrow><mo>=</mo><mn>2</mn></mrow></math>. A expressão do campo do fio retilíneo
+infinito é:</p>
+<table id="S2.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S2.E3.m1" class="ltx_Math" alttext="\boxed{\vec{B}_{\text{fio inf.}}(\varrho)=\dfrac{2k_{\mathrm{m}}I}{\varrho}\,%
+\hat{\phi}}" display="block"><mrow><mrow><msub><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mtext>fio inf.</mtext></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ϱ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mi>ϱ</mi></mfrac><mspace width=0.166em /><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">onde <math id="S2.p4.m5" class="ltx_Math" alttext="\varrho" display="inline"><mi>ϱ</mi></math> é a distância desde o ponto até a reta que passa pelo
+fio e <math id="S2.p4.m6" class="ltx_Math" alttext="\hat{\phi}" display="inline"><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></math> o versor azimutal em relação ao eixo <math id="S2.p4.m7" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> ao longo
+do fio e no sentido da corrente.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">Este resultado é semelhante ao campo elétrico de um fio retilíneo,
+infinito, com densidade linear de carga constante
+(problema <a href="calculo_do_campo_eletrico.html#Sx1.I1.i12.p1">12</a> do capítulo <a href="calculo_do_campo_eletrico.html">2</a>). A
+diferença está em que o campo elétrico é na direção radial cilíndrica,
+enquanto que o campo magnético é na direção azimutal cilíndrica.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8.3 </span>Lei de Ampère</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Consideremos um fio retilíneo infinito com corrente <math id="S3.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. As linhas de
+campo magnético são circunferências perpendiculares, com centro
+nele. Ao longo duma dessas circunferências C, de raio <math id="S3.p1.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>, o módulo do
+campo magnético é constante, igual a <math id="S3.p1.m3" class="ltx_Math" alttext="2k_{\mathrm{m}}I/r" display="inline"><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mo>/</mo><mi>r</mi></mrow></math>
+(equação (<a href="#S2.E3" title="(3) ‣ 2 Lei de Biot-Savart ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.3</span></a>)). Como tal, o integral de linha do
+campo magnético ao longo da circunferência C é,</p>
+<table id="S3.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E4.m1" class="ltx_Math" alttext="\oint_{\mathrm{C}}\vec{B}\cdot\mathrm{d}\vec{r}=\oint_{\mathrm{C}}\dfrac{2k_{%
+\mathrm{m}}I}{r}\,\mathrm{d}s=\dfrac{2k_{\mathrm{m}}I}{r}\oint_{\mathrm{C}}%
+\mathrm{d}s=4\pi k_{\mathrm{m}}I" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mi>r</mi></mfrac><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>s</mi></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mi>r</mi></mfrac><mspace width=0.166em /><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mo rspace="0pt">d</mo><mi>s</mi></mrow></mrow></mrow><mo>=</mo><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">resultado esse que não depende do tamanho da circunferência, porque o
+comprimento da circunferência aumenta proporcionalmente a <math id="S3.p1.m4" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> e o
+campo diminui proporcionalmente a <math id="S3.p1.m5" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">De facto, o integral dá o mesmo resultado independentemente do tamanho
+e da forma da curva de integração. Isto pode mostrar-se usando
+coordenadas cilíndricas, com eixo dos <math id="S3.p2.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> ao longo do fio no sentido
+da corrente. O campo magnético do fio é dado pela
+equação (<a href="#S2.E3" title="(3) ‣ 2 Lei de Biot-Savart ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.3</span></a>) e o deslocamento vetorial infinitesimal
+é dado pela equação (<a href="analise_vetorial.html#S2.E46">A.46</a>) do
+apêndice <a href="analise_vetorial.html">A</a>:</p>
+<table id="S3.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E5.m1" class="ltx_Math" alttext="\vec{B}\cdot\mathrm{d}\vec{r}=\dfrac{2k_{\mathrm{m}}I\hat{\phi}}{\varrho}\cdot%
+\bigl{(}\mathrm{d}\varrho\,\hat{\varrho}+\varrho\,\mathrm{d}\phi\,\hat{\phi}+%
+\mathrm{d}z\,\hat{k}\bigr{)}=2k_{\mathrm{m}}I\,\mathrm{d}\phi" display="block"><mrow><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mi mathvariant="normal">d</mi></mrow><mspace width=0.166em /><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></mrow><mi>ϱ</mi></mfrac><mo>⋅</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>ϱ</mi><mspace width=0.166em /><mover accent="true"><mi>ϱ</mi><mo stretchy="false">ˆ</mo></mover></mrow><mo>+</mo><mrow><mi>ϱ</mi><mspace width=0.166em /><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></mrow><mo>+</mo><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>z</mi><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>ϕ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.5)</span></td>
+</tr>
+</table>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">O integral de linha do campo magnético em qualquer curva fechada C é então,</p>
+<table id="S3.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E6.m1" class="ltx_Math" alttext="\oint_{\mathrm{C}}\vec{B}\cdot\mathrm{d}\vec{r}=2k_{\mathrm{m}}I\oint_{\mathrm%
+{C}}\mathrm{d}\phi" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mo rspace="0pt">d</mo><mi>ϕ</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.6)</span></td>
+</tr>
+</table>
+</div>
+<figure id="S3.F5" class="ltx_figure"><img src="img/Ampere_law.png" style="width:28.266em;max-width:100%;height:auto" id="S3.F5.g1" class="ltx_graphics ltx_centering" alt="Curva fechada C e fio com corrente ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.5: </span>Curva fechada C e fio com corrente <math id="S3.F5.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. No lado esquerdo o
+fio passa através do interior da curva C enquanto que no lado
+direito não. </figcaption>
+</figure>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Se o fio atravessa o interior da curva C, como no lado esquerdo da
+figura <a href="#S3.F5" title="Figura 8.5 ‣ 3 Lei de Ampère ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.5</span></a>, na curva C o ângulo <math id="S3.p4.m1" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> varia entre 0 e
+<math id="S3.p4.m2" class="ltx_Math" alttext="2\pi" display="inline"><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow></math>. No entanto, observe-se que na figura <a href="#S3.F5" title="Figura 8.5 ‣ 3 Lei de Ampère ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.5</span></a> o
+sentido da corrente indica que <math id="S3.p4.m3" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> aumenta no sentido contrário
+aos ponteiros do relógio, enquanto que a curva C é percorrida no
+sentido oposto; isso implica que o integral na
+equação (<a href="#S3.E6" title="(6) ‣ 3 Lei de Ampère ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.6</span></a>) é igual a <math id="S3.p4.m4" class="ltx_Math" alttext="-2\pi" display="inline"><mrow><mo>−</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow></mrow></math>. Já se a curva
+tivesse sido percorrida no mesmo sentido em que <math id="S3.p4.m5" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> aumenta
+(sentido da regra da mão direita em relação à corrente no fio), o
+resultado seria <math id="S3.p4.m6" class="ltx_Math" alttext="2\pi" display="inline"><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow></math>.</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">Quando o fio não atravessa o interior da curva C, como no lado direito
+da figura <a href="#S3.F5" title="Figura 8.5 ‣ 3 Lei de Ampère ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.5</span></a>, o integral na
+equação (<a href="#S3.E6" title="(6) ‣ 3 Lei de Ampère ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.6</span></a>) varia desde um ângulo mínimo
+<math id="S3.p5.m1" class="ltx_Math" alttext="\phi_{\text{min}}" display="inline"><msub><mi>ϕ</mi><mtext>min</mtext></msub></math> até um ângulo máximo <math id="S3.p5.m2" class="ltx_Math" alttext="\phi_{\text{max}}" display="inline"><msub><mi>ϕ</mi><mtext>max</mtext></msub></math>. A curva
+C pode ser dividida em duas partes: uma parte que vai desde
+<math id="S3.p5.m3" class="ltx_Math" alttext="\phi_{\text{min}}" display="inline"><msub><mi>ϕ</mi><mtext>min</mtext></msub></math> até <math id="S3.p5.m4" class="ltx_Math" alttext="\phi_{\text{max}}" display="inline"><msub><mi>ϕ</mi><mtext>max</mtext></msub></math>, onde o integral é igual a
+<math id="S3.p5.m5" class="ltx_Math" alttext="\phi_{\text{max}}-\phi_{\text{min}}" display="inline"><mrow><msub><mi>ϕ</mi><mtext>max</mtext></msub><mo>−</mo><msub><mi>ϕ</mi><mtext>min</mtext></msub></mrow></math>, e uma segunda parte em que vai
+desde <math id="S3.p5.m6" class="ltx_Math" alttext="\phi_{\text{max}}" display="inline"><msub><mi>ϕ</mi><mtext>max</mtext></msub></math> até <math id="S3.p5.m7" class="ltx_Math" alttext="\phi_{\text{min}}" display="inline"><msub><mi>ϕ</mi><mtext>min</mtext></msub></math>, onde o integral é
+igual a <math id="S3.p5.m8" class="ltx_Math" alttext="\phi_{\text{min}}-\phi_{\text{max}}" display="inline"><mrow><msub><mi>ϕ</mi><mtext>min</mtext></msub><mo>−</mo><msub><mi>ϕ</mi><mtext>max</mtext></msub></mrow></math>. Assim, o integral na
+curva completa é igual a zero.</p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">Concluindo, o integral de linha
+do campo produzido por um fio retilíneo infinito, em qualquer curva
+fechada C, é:</p>
+<table id="S3.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E7.m1" class="ltx_Math" alttext="\oint_{\mathrm{C}}\vec{B}\cdot\mathrm{d}\vec{r}=\begin{cases}-4\pi k_{\mathrm{%
+m}}I\;,&amp;I\text{ atravessa C no sentido negativo}\\
+4\pi k_{\mathrm{m}}I\;,&amp;I\text{ atravessa C no sentido positivo}\\
+0\;,&amp;I\text{ passa por fora de C}\end{cases}" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mo>−</mo><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mi>I</mi><mspace width=0.166em /><mtext> atravessa C no sentido negativo</mtext></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mi>I</mi><mspace width=0.166em /><mtext> atravessa C no sentido positivo</mtext></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mn>0</mn><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mi>I</mi><mspace width=0.166em /><mtext> passa por fora de C</mtext></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.7)</span></td>
+</tr>
+</table>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">No resultado anterior a curva C não tem de ser plana nem perpendicular
+ao fio, sempre e quando seja fechada. A curva até pode dar várias
+voltas antes de fechar e, nesse caso o resultado da
+equação <a href="#S3.E7" title="(7) ‣ 3 Lei de Ampère ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.7</span></a> deverá ser multiplicado pelo número de
+voltas <math id="S3.p7.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p">Quando existem vários fios com correntes, o integral do campo é a soma
+dos integrais dos campos de cada fio. Nos fios que não atravessam o
+interior da curva C o integral é nulo e nos fios com corrente <math id="S3.p8.m1" class="ltx_Math" alttext="I_{j}" display="inline"><msub><mi>I</mi><mi>j</mi></msub></math>
+que atravessam o interior da curva o integral é <math id="S3.p8.m2" class="ltx_Math" alttext="\pm 4\pi k_{\mathrm{m}}I_{j}" display="inline"><mrow><mo>±</mo><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msub><mi>I</mi><mi>j</mi></msub></mrow></mrow></math>. Somando os integrais obtém-se a <em class="ltx_emph ltx_font_italic">lei de Ampère</em>:</p>
+<table id="S3.E8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S3.E8.m1" class="ltx_Math" alttext="\boxed{\oint_{\mathrm{C}}\vec{B}\cdot\mathrm{d}\vec{r}=4\pi k_{\mathrm{m}}I_{%
+\mathrm{C}}}" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msub><mi>I</mi><mi mathvariant="normal">C</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.8)</span></td>
+</tr>
+</table>
+</div>
+<div id="S3.p9" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">O integral de linha do campo magnético em qualquer curva fechada
+é igual à soma algébrica das correntes elétricas que atravessam o
+interior da curva vezes <math id="S3.p9.m1" class="ltx_Math" alttext="4\pi k_{\mathrm{m}}" display="inline"><mrow><mn mathvariant="normal">4</mn><mo mathvariant="italic">⁢</mo><mi>π</mi><mo mathvariant="italic">⁢</mo><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub></mrow></math>.</em></p>
+</blockquote>
+</div>
+<div id="S3.p10" class="ltx_para">
+<p class="ltx_p">O lado direito na lei de Ampère também costuma ser escrito
+<math id="S3.p10.m1" class="ltx_Math" alttext="\mu_{0}I_{\mathrm{C}}" display="inline"><mrow><msub><mi>μ</mi><mn>0</mn></msub><mspace width=0.166em /><msub><mi>I</mi><mi mathvariant="normal">C</mi></msub></mrow></math>, onde <math id="S3.p10.m2" class="ltx_Math" alttext="\mu_{0}" display="inline"><msub><mi>μ</mi><mn>0</mn></msub></math> é chamada <em class="ltx_emph ltx_font_italic">permeabilidade
+magnética do vácuo</em> e é igual a </p>
+<table id="S3.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E9.m1" class="ltx_Math" alttext="\mu_{0}=4\pi k_{\mathrm{m}}=1.257\times 10^{-6}\;\mathrm{\dfrac{N}{A^{2}}}" display="block"><mrow><msub><mi>μ</mi><mn>0</mn></msub><mo>=</mo><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub></mrow><mo>=</mo><mrow><mrow><mn>1.257</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>6</mn></mrow></msup></mrow><mspace width=0.166em /><mfrac><mi mathvariant="normal">N</mi><msup><mi mathvariant="normal">A</mi><mn>2</mn></msup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.9)</span></td>
+</tr>
+</table>
+</div>
+<div id="S3.p11" class="ltx_para">
+<p class="ltx_p">Como veremos no capítulo <a href="equacoes_de_maxwell.html">12</a>, a lei de
+Ampère (<a href="#S3.E8" title="(8) ‣ 3 Lei de Ampère ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.8</span></a>) é válida unicamente quando o campo elétrico é
+nulo ou estático. Quando existem campos elétricos variáveis no tempo,
+deverá ser acrescentado outro termo devido à uma <em class="ltx_emph ltx_font_italic">corrente de
+deslocamento</em>.</p>
+</div>
+<div id="S3.p12" class="ltx_para">
+<p class="ltx_p">No cálculo do campo magnético a lei de Ampère tem um papel semelhante
+ao da lei de Gauss no cálculo do campo elétrico. Em alguns
+casos em que existe alguma simetria das linhas de campo magnético
+consegue-se calcular o campo a partir da lei de Ampère, como veremos
+no exemplo seguinte.</p>
+</div>
+<div id="Thmexample2" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Exemplo 8.2</span></span></h6><p></p>
+<div id="Thmexample2.p1" class="ltx_para">
+<p class="ltx_p">Determine o campo magnético produzido por um fio cilíndrico, de raio
+<math id="Thmexample2.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, com corrente <math id="Thmexample2.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> distribuída uniformemente na secção
+transversal do cilindro.
+</p>
+</div>
+<div id="Thmexample2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Por simetria, o campo magnético deve ser
+tangente às circunferências C na figura seguinte, concêntricas e
+perpendiculares ao fio.</p>
+</div>
+<div id="Thmexample2.p3" class="ltx_para ltx_align_center">
+<img src="img/cylinder_with_current.png" style="width:15.435em;max-width:100%;height:auto" id="Thmexample2.p3.g1" class="ltx_graphics" alt="">
+</div>
+<div id="Thmexample2.p4" class="ltx_para">
+<p class="ltx_p">O integral de linha do campo magnético ao longo dessas circunferências, de
+raio <math id="Thmexample2.p4.m1" class="ltx_Math" alttext="\varrho" display="inline"><mi>ϱ</mi></math>, é igual a:</p>
+<table id="S3.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex10.m1" class="ltx_Math" alttext="\oint_{\mathrm{C}}\vec{B}\cdot\mathrm{d}\vec{r}=B\oint_{\mathrm{C}}\mathrm{d}s%
+=2\pi\varrho B" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mi>B</mi><mspace width=0.166em /><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mo rspace="0pt">d</mo><mi>s</mi></mrow></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><mi>ϱ</mi><mspace width=0.166em /><mi>B</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample2.p5" class="ltx_para">
+<p class="ltx_p">E usando a lei de Ampère, esse integral deverá ser também igual a:</p>
+<table id="S3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex11.m1" class="ltx_Math" alttext="\oint_{\mathrm{C}}\vec{B}\cdot\mathrm{d}\vec{r}=4\pi k_{\mathrm{m}}I_{\mathrm{%
+C}}" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msub><mi>I</mi><mi mathvariant="normal">C</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample2.p6" class="ltx_para">
+<p class="ltx_p">Comparando as duas equações anteriores obtém-se a expressão do
+módulo do campo magnético:</p>
+<table id="S3.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex12.m1" class="ltx_Math" alttext="B=\frac{2k_{\mathrm{m}}I_{\mathrm{C}}}{\varrho}" display="block"><mrow><mi>B</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msub><mi>I</mi><mi mathvariant="normal">C</mi></msub></mrow><mi>ϱ</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample2.p7" class="ltx_para">
+<p class="ltx_p">Se o raio da circunferência C for maior do que o raio do cilindro, a
+corrente através de C será exatamente igual a <math id="Thmexample2.p7.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. Já no caso de uma
+circunferência com raio <math id="Thmexample2.p7.m2" class="ltx_Math" alttext="\varrho\leq a" display="inline"><mrow><mi>ϱ</mi><mo>≤</mo><mi>a</mi></mrow></math>, a corrente interna é igual ao
+produto da densidade de corrente <math id="Thmexample2.p7.m3" class="ltx_Math" alttext="J=I/\pi a^{2}" display="inline"><mrow><mi>J</mi><mo>=</mo><mrow><mrow><mi>I</mi><mo>/</mo><mi>π</mi></mrow><mspace width=0.166em /><msup><mi>a</mi><mn>2</mn></msup></mrow></mrow></math> vezes a área do
+círculo delimitado por C, <math id="Thmexample2.p7.m4" class="ltx_Math" alttext="A=\pi\varrho^{2}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>π</mi><mspace width=0.166em /><msup><mi>ϱ</mi><mn>2</mn></msup></mrow></mrow></math>. Como tal, a corrente
+que passa através de C é igual a:</p>
+<table id="S3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex13.m1" class="ltx_Math" alttext="I_{\mathrm{C}}=\begin{cases}I\;,&amp;\varrho\geq a\\[2.0pt]
+\dfrac{\varrho^{2}}{a^{2}}I\;,&amp;\varrho\leq a\end{cases}" display="block"><mrow><msub><mi>I</mi><mi mathvariant="normal">C</mi></msub><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mi>I</mi><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mi>ϱ</mi><mo>≥</mo><mi>a</mi></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mfrac><msup><mi>ϱ</mi><mn>2</mn></msup><msup><mi>a</mi><mn>2</mn></msup></mfrac><mspace width=0.166em /><mi>I</mi></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mi>ϱ</mi><mo>≤</mo><mi>a</mi></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample2.p8" class="ltx_para">
+<p class="ltx_p">E a expressão do campo magnético é,</p>
+<table id="S3.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex14.m1" class="ltx_Math" alttext="\vec{B}(\varrho)=\begin{cases}\dfrac{2k_{\mathrm{m}}I}{\varrho}\,\hat{\phi}&amp;%
+\varrho\geq a\\[8.0pt]
+\dfrac{2k_{\mathrm{m}}I\varrho}{a^{2}}\,\hat{\phi}&amp;\varrho\leq a\end{cases}" display="block"><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ϱ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mi>ϱ</mi></mfrac><mspace width=0.166em /><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mtd><mtd columnalign="left"><mrow><mi>ϱ</mi><mo>≥</mo><mi>a</mi></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mi>ϱ</mi></mrow><msup><mi>a</mi><mn>2</mn></msup></mfrac><mspace width=0.166em /><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mtd><mtd columnalign="left"><mrow><mi>ϱ</mi><mo>≤</mo><mi>a</mi></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">onde <math id="Thmexample2.p8.m1" class="ltx_Math" alttext="\varrho" display="inline"><mi>ϱ</mi></math> é a distância desde o ponto até o eixo do cilindro e
+<math id="Thmexample2.p8.m2" class="ltx_Math" alttext="\hat{\phi}" display="inline"><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></math> o versor azimutal em relação a esse eixo, no sentido da
+corrente.
+</div>
+</div>
+<div id="S3.p13" class="ltx_para">
+<p class="ltx_p">A figura <a href="#S3.F6" title="Figura 8.6 ‣ 3 Lei de Ampère ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.6</span></a> mostra o gráfico do
+módulo do campo magnético, em função da distância ao eixo do
+cilindro. No interior do cilindro, o campo aumenta linearmente em
+função de <math id="S3.p13.m1" class="ltx_Math" alttext="\varrho" display="inline"><mi>ϱ</mi></math>, até um valor máximo <math id="S3.p13.m2" class="ltx_Math" alttext="2k_{\mathrm{m}}I/a" display="inline"><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mo>/</mo><mi>a</mi></mrow></math>; fora do
+cilindro, o campo diminui inversamente proporcional a <math id="S3.p13.m3" class="ltx_Math" alttext="\varrho" display="inline"><mi>ϱ</mi></math> e o
+campo é igual ao campo magnético de um fio retilíneo ideal (raio nulo
+e comprimento infinito).</p>
+</div>
+<figure id="S3.F6" class="ltx_figure"><img src="img/magnetic_field_of_cylinder.png" style="width:15.036em;max-width:100%;height:auto" id="S3.F6.g1" class="ltx_graphics ltx_centering" alt="Campo magnético de um cilindro de raio ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.6: </span>Campo magnético de um cilindro de raio <math id="S3.F6.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> com corrente <math id="S3.F6.m4" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>
+distribuída uniformemente.</figcaption>
+</figure>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8.4 </span>Bobinas e solenoides</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">A figura <a href="#S4.F7" title="Figura 8.7 ‣ 4 Bobinas e solenoides ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.7</span></a> mostra o as linhas de campo
+magnético de uma espira ou bobina circular. Ao longo do eixo da bobina
+o campo magnético aponta na direção do momento magnético da bobina,
+i.e., na direção da normal no sentido da regra da mão direita de
+acordo com o sentido da corrente.</p>
+</div>
+<figure id="S4.F7" class="ltx_figure"><img src="img/magnetic_field_of_loop.png" style="width:9.366em;max-width:100%;height:auto" id="S4.F7.g1" class="ltx_graphics ltx_centering" alt="Campo magnético de uma espira ou bobina circular.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.7: </span>Campo magnético de uma espira ou bobina circular.</figcaption>
+</figure>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">A bobina com corrente é equivalente a um íman em que o momento
+magnético <math id="S4.p2.m1" class="ltx_Math" alttext="\vec{m}" display="inline"><mover accent="true"><mi>m</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> da bobina aponta do polo sul para o polo norte. O
+extremo da bobina onde olhando para ela a corrente circula no sentido
+anti-horário (lado esquerdo da figura <a href="#S4.F8" title="Figura 8.8 ‣ 4 Bobinas e solenoides ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.8</span></a>) é o polo
+norte e o extremo onde a corrente é vista no sentido horário (lado
+direito da figura <a href="#S4.F8" title="Figura 8.8 ‣ 4 Bobinas e solenoides ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.8</span></a>) é o polo sul. A
+figura <a href="#S4.F8" title="Figura 8.8 ‣ 4 Bobinas e solenoides ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.8</span></a> mostra uma regra simples para identificar
+os polos magnéticos da bobina: os sentidos da corrente sugerem as
+letra N ou S, que indicam o polo norte ou sul.</p>
+</div>
+<figure id="S4.F8" class="ltx_figure"><img src="img/coil_poles.png" style="width:16.023em;max-width:100%;height:auto" id="S4.F8.g1" class="ltx_graphics ltx_centering" alt="Regra para identificar os polos de uma bobina com
+corrente.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.8: </span>Regra para identificar os polos de uma bobina com
+corrente.</figcaption>
+</figure>
+<div id="Thmexample3" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Exemplo 8.3</span></span></h6><p></p>
+<div id="Thmexample3.p1" class="ltx_para">
+<p class="ltx_p">Determine o campo magnético de uma espira circular de raio <math id="Thmexample3.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>,
+com corrente <math id="Thmexample3.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, ao longo do eixo da espira.</p>
+</div>
+<div id="Thmexample3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Seja o eixo
+<math id="Thmexample3.p2.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> no eixo da espira e no sentido positivo da regra da mão direita
+segundo o sentido da corrente, com origem no centro da espira.</p>
+<img src="img/ring_with_current.png" style="width:15.498em;max-width:100%;height:auto" id="Thmexample3.p2.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="Thmexample3.p3" class="ltx_para">
+<p class="ltx_p">O vetor posição dum ponto P no eixo da espira é:</p>
+<table id="S4.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex15.m1" class="ltx_Math" alttext="\vec{r}=z\,\hat{k}" display="block"><mrow><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>=</mo><mrow><mi>z</mi><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">e o vetor posição dos pontos na espira, em função do ângulo azimutal
+<math id="Thmexample3.p3.m1" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>, é igual a:</p>
+<table id="S4.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex16.m1" class="ltx_Math" alttext="\vec{r}^{\prime}=a\left(\cos\phi\,\hat{\imath}+\sin\phi\,\hat{\jmath}\right)" display="block"><mrow><msup><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup><mo>=</mo><mrow><mi>a</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo>+</mo><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample3.p4" class="ltx_para">
+<p class="ltx_p">A corrente na espira, perpendicular a <math id="Thmexample3.p4.m1" class="ltx_Math" alttext="\vec{r}^{\prime}" display="inline"><msup><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></math>, é definida pelo
+vetor:</p>
+<table id="S4.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex17.m1" class="ltx_Math" alttext="\vec{I}=I\left(-\sin\phi\,\hat{\imath}+\cos\phi\,\hat{\jmath}\right)" display="block"><mrow><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>=</mo><mrow><mi>I</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mo>−</mo><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">e o elemento diferencial de arco ao longo da espira é:</p>
+<table id="S4.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex18.m1" class="ltx_Math" alttext="\mathrm{d}s^{\prime}=a\,\mathrm{d}\phi" display="block"><mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><msup><mi>s</mi><mo>′</mo></msup></mrow><mo>=</mo><mrow><mi>a</mi><mspace width=0.166em /><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>ϕ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample3.p5" class="ltx_para">
+<p class="ltx_p">O produto vetorial entre a corrente e o versor desde um ponto da
+espira até P é:</p>
+<table id="Sx2.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex22.m1" class="ltx_Math" alttext="\displaystyle\vec{I}\times\left(\vec{r}-\vec{r}^{\prime}\right)" display="inline"><mrow><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mrow><mo>(</mo><mrow><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>−</mo><msup><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex22.m2" class="ltx_Math" alttext="\displaystyle=\begin{vmatrix}\hidden@noalign{}\hfil\textstyle\hat{\imath}&amp;\hat%
+{\jmath}&amp;\hat{k}\ \\
+\hidden@noalign{}\hfil\textstyle-I\sin\phi&amp;I\cos\phi&amp;0\ \\
+\hidden@noalign{}\hfil\textstyle-a\cos\phi&amp;-a\sin\phi&amp;z\ \\
+\end{vmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>|</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mtd><mtd columnalign="center"><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mtd><mtd columnalign="center"><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>−</mo><mrow><mi>I</mi><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mi>ϕ</mi></mrow></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi>I</mi><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mi>ϕ</mi></mrow></mrow></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>−</mo><mrow><mi>a</mi><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mi>ϕ</mi></mrow></mrow></mrow></mtd><mtd columnalign="center"><mrow><mo>−</mo><mrow><mi>a</mi><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mi>ϕ</mi></mrow></mrow></mrow></mtd><mtd columnalign="center"><mi>z</mi></mtd></mtr></mtable><mo>|</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex23"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex23.m1" class="ltx_Math" alttext="\displaystyle=I\left(z\cos\phi\,\hat{\imath}+z\sin\phi\,\hat{\jmath}+a\,\hat{k%
+}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>I</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mi>z</mi><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mi>z</mi><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mi>a</mi><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Thmexample3.p6" class="ltx_para">
+<p class="ltx_p">Substituindo na expressão (<a href="#S2.E1" title="(1) ‣ 2 Lei de Biot-Savart ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.1</span></a>) da lei de Biot-Savart,</p>
+<table id="Sx2.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.E10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.E10.m1" class="ltx_Math" alttext="\displaystyle\vec{B}(z)" display="inline"><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.E10.m2" class="ltx_Math" alttext="\displaystyle=\dfrac{k_{\mathrm{m}}aI}{\left(z^{2}+a^{2}\right)^{3/2}}\int_{0}%
+^{2\pi}\left(z\cos\phi\,\hat{\imath}+z\sin\phi\,\hat{\jmath}+a\,\hat{k}\right)%
+\,\mathrm{d}\phi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>a</mi><mspace width=0.166em /><mi>I</mi></mrow><msup><mrow><mo>(</mo><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mspace width=0.166em /><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow></msubsup></mstyle><mrow><mrow><mo>(</mo><mrow><mrow><mi>z</mi><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mi>z</mi><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mi>ϕ</mi><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mi>a</mi><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo rspace="4.2pt">)</mo></mrow><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>ϕ</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.10)</span></td>
+</tr></tbody>
+<tbody id="S4.E11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.E11.m1" class="ltx_Math" alttext="\displaystyle=\dfrac{2\pi k_{\mathrm{m}}a^{2}I}{\left(z^{2}+a^{2}\right)^{3/2}%
+}\,\hat{k}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msup><mi>a</mi><mn>2</mn></msup><mspace width=0.166em /><mi>I</mi></mrow><msup><mrow><mo>(</mo><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.11)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Thmexample3.p7" class="ltx_para">
+<p class="ltx_p">Observe-se que <math id="Thmexample3.p7.m1" class="ltx_Math" alttext="\pi a^{2}I\,\hat{k}" display="inline"><mrow><mi>π</mi><mspace width=0.166em /><msup><mi>a</mi><mn>2</mn></msup><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></math> é o momento magnético <math id="Thmexample3.p7.m2" class="ltx_Math" alttext="\vec{m}" display="inline"><mover accent="true"><mi>m</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> da
+espira. Como tal, o resultado pode também ser escrito na forma,</p>
+<table id="S4.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex24.m1" class="ltx_Math" alttext="\vec{B}(z)=\dfrac{2k_{\mathrm{m}}\vec{m}}{\left(z^{2}+a^{2}\right)^{3/2}}" display="block"><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mover accent="true"><mi>m</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><msup><mrow><mo>(</mo><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample3.p8" class="ltx_para">
+<p class="ltx_p">No caso de uma bobina circular, de raio <math id="Thmexample3.p8.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> e com <math id="Thmexample3.p8.m2" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> espiras, o
+campo ao magnético é igual a <math id="Thmexample3.p8.m3" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> vezes o campo de uma espira.
+</div>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">Um <em class="ltx_emph ltx_font_italic">solenoide</em>  é uma bobina cilíndrica com
+comprimento <math id="S4.p3.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> maior do que o diâmetro, <math id="S4.p3.m2" class="ltx_Math" alttext="2a" display="inline"><mrow><mn>2</mn><mspace width=0.166em /><mi>a</mi></mrow></math>. Admitiremos que as <math id="S4.p3.m3" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>
+espiras estão muito próximas e uniformemente espaçadas, de forma que o
+número de espiras por unidade de comprimento é constante e igual a
+<math id="S4.p3.m4" class="ltx_Math" alttext="n=N/L" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mi>N</mi><mo>/</mo><mi>L</mi></mrow></mrow></math>. A corrente no solenoide circula realmente por uma curva
+helicoidal, mas se o número de voltas <math id="S4.p3.m5" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> é elevado e estão muito
+próximas entre si, podemos aproximar essa hélice por uma sucessão de
+espiras circulares, todas com o mesmo raio <math id="S4.p3.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> e a mesma corrente
+<math id="S4.p3.m7" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. O campo magnético em qualquer ponto será a sobreposição dos
+campos produzidos por todas as espiras nesse ponto.</p>
+</div>
+<div id="Thmexample4" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Exemplo 8.4</span></span></h6><p></p>
+<div id="Thmexample4.p1" class="ltx_para">
+<p class="ltx_p">Determine o campo magnético produzido por um solenoide de raio <math id="Thmexample4.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> e
+<math id="Thmexample4.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> espiras por unidade de comprimento, em função da intensidade da
+corrente, <math id="Thmexample4.p1.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, através de cada espira.</p>
+</div>
+<div id="Thmexample4.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Escolhemos o eixo <math id="Thmexample4.p2.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> ao longo do eixo da
+bobina, no sentido da regra da mão direita segundo o sentido em que
+roda a corrente, e a origem no ponto P onde vamos determinar o
+campo, tal como na figura seguinte, que mostra o corte do
+solenoide com um plano que passa pelo seu eixo:</p>
+<img src="img/solenoid_with_current.png" style="width:17.934em;max-width:100%;height:auto" id="Thmexample4.p2.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="Thmexample4.p3" class="ltx_para">
+<p class="ltx_p">Aproximaremos o solenoide por uma distribuição contínua de espiras
+circulares, cada uma com centro no eixo do solenoide, com coordenada
+<math id="Thmexample4.p3.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, que pode ter qualquer valor entre um valor mínimo <math id="Thmexample4.p3.m2" class="ltx_Math" alttext="z_{1}" display="inline"><msub><mi>z</mi><mn>1</mn></msub></math> e um
+valor máximo <math id="Thmexample4.p3.m3" class="ltx_Math" alttext="z_{2}" display="inline"><msub><mi>z</mi><mn>2</mn></msub></math>. O centro da espira na posição <math id="Thmexample4.p3.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> encontra-se a
+uma distância <math id="Thmexample4.p3.m5" class="ltx_Math" alttext="|z|" display="inline"><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow></math> do ponto P e, usando o resultado do
+exemplo <a href="#Thmexample3" title="Exemplo 8.3 ‣ 4 Bobinas e solenoides ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.3</span></a>, o campo que essa espira produz em P é dado
+pela expressão:
+</p>
+<table id="S4.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex25.m1" class="ltx_Math" alttext="\vec{B}=\dfrac{2\pi k_{\mathrm{m}}a^{2}I}{\left(z^{2}+a^{2}\right)^{3/2}}\,%
+\hat{k}" display="block"><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msup><mi>a</mi><mn>2</mn></msup><mspace width=0.166em /><mi>I</mi></mrow><msup><mrow><mo>(</mo><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample4.p4" class="ltx_para">
+<p class="ltx_p">Num intervalo infinitesimal <math id="Thmexample4.p4.m1" class="ltx_Math" alttext="\mathrm{d}z" display="inline"><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>z</mi></mrow></math> passam <math id="Thmexample4.p4.m2" class="ltx_Math" alttext="n\mathrm{d}z" display="inline"><mrow><mi>n</mi><mspace width=0.166em /><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>z</mi></mrow></math> espiras, onde
+<math id="Thmexample4.p4.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> é o número de espiras por unidade de comprimento. O campo que
+essas espiras produzem no ponto P é na direção de <math id="Thmexample4.p4.m4" class="ltx_Math" alttext="\hat{k}" display="inline"><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></math> e com
+valor igual a:</p>
+<table id="S4.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex26.m1" class="ltx_Math" alttext="\mathrm{d}B_{z}=\dfrac{2\pi k_{\mathrm{m}}a^{2}nI}{\left(z^{2}+a^{2}\right)^{3%
+/2}}\,\mathrm{d}z" display="block"><mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><msub><mi>B</mi><mi>z</mi></msub></mrow><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msup><mi>a</mi><mn>2</mn></msup><mspace width=0.166em /><mi>n</mi><mspace width=0.166em /><mi>I</mi></mrow><msup><mrow><mo>(</mo><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac><mspace width=0.166em /><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>z</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample4.p5" class="ltx_para">
+<p class="ltx_p">O campo total obtém-se integrando essa expressão entre os valores
+mínimo e máximo de <math id="Thmexample4.p5.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>:</p>
+<table id="S4.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex27.m1" class="ltx_Math" alttext="B_{z}=2\pi k_{\mathrm{m}}a^{2}nI\int_{z_{1}}^{z_{2}}\dfrac{\mathrm{d}z}{(z^{2}%
++a^{2})^{3/2}}" display="block"><mrow><msub><mi>B</mi><mi>z</mi></msub><mo>=</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msup><mi>a</mi><mn>2</mn></msup><mspace width=0.166em /><mi>n</mi><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub></msubsup><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>z</mi></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample4.p6" class="ltx_para">
+<p class="ltx_p">O integral pode ser resolvido com a mesma substituição
+trigonométrica usada no exemplo <a href="#Thmexample1" title="Exemplo 8.1 ‣ 2 Lei de Biot-Savart ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.1</span></a>:</p>
+<table id="S4.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex28.m1" class="ltx_Math" alttext="z=a\tan\beta\qquad\mathrm{d}z=a\sec^{2}\beta\,\mathrm{d}\beta" display="block"><mrow><mrow><mi>z</mi><mo>=</mo><mrow><mi>a</mi><mspace width=0.166em /><mrow><mi>tan</mi><mspace width=0.11em /><mi>β</mi></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>z</mi></mrow><mo>=</mo><mrow><mi>a</mi><mspace width=0.166em /><mrow><msup><mi>sec</mi><mn>2</mn></msup><mspace width=0.11em /><mrow><mi>β</mi><mspace width=0.166em /><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>β</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">em que <math id="Thmexample4.p6.m1" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> varia entre <math id="Thmexample4.p6.m2" class="ltx_Math" alttext="\beta_{1}=\arctan(z_{1}/\varrho)" display="inline"><mrow><msub><mi>β</mi><mn>1</mn></msub><mo>=</mo><mrow><mi>arctan</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>/</mo><mi>ϱ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> e
+<math id="Thmexample4.p6.m3" class="ltx_Math" alttext="\beta_{2}=\arctan(z_{2}/\varrho)" display="inline"><mrow><msub><mi>β</mi><mn>2</mn></msub><mo>=</mo><mrow><mi>arctan</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>z</mi><mn>2</mn></msub><mo>/</mo><mi>ϱ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> (ver figura acima). O resultado do
+integral conduz à seguinte expressão:</p>
+<table id="S4.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex29.m1" class="ltx_Math" alttext="B_{z}=2\pi k_{\mathrm{m}}nI\int_{\beta_{1}}^{\beta_{2}}\cos\beta\,\mathrm{d}%
+\beta=2\pi k_{\mathrm{m}}nI\left(\sin\beta_{2}-\sin\beta_{1}\right)" display="block"><mrow><msub><mi>B</mi><mi>z</mi></msub><mo>=</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>n</mi><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>β</mi><mn>1</mn></msub><msub><mi>β</mi><mn>2</mn></msub></msubsup><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mi>β</mi><mspace width=0.166em /><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>β</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>n</mi><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mi>sin</mi><mspace width=0.11em /><msub><mi>β</mi><mn>2</mn></msub></mrow><mo>−</mo><mrow><mi>sin</mi><mspace width=0.11em /><msub><mi>β</mi><mn>1</mn></msub></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample4.p7" class="ltx_para">
+<p class="ltx_p">Em função dos ângulos <math id="Thmexample4.p7.m1" class="ltx_Math" alttext="\theta_{1}" display="inline"><msub><mi>θ</mi><mn>1</mn></msub></math> e <math id="Thmexample4.p7.m2" class="ltx_Math" alttext="\theta_{2}" display="inline"><msub><mi>θ</mi><mn>2</mn></msub></math> da figura acima,
+<math id="Thmexample4.p7.m3" class="ltx_Math" alttext="\sin\beta_{2}=\cos\theta_{2}" display="inline"><mrow><mrow><mi>sin</mi><mspace width=0.11em /><msub><mi>β</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mi>cos</mi><mspace width=0.11em /><msub><mi>θ</mi><mn>2</mn></msub></mrow></mrow></math>, <math id="Thmexample4.p7.m4" class="ltx_Math" alttext="\sin\beta_{1}=-\cos\theta_{1}" display="inline"><mrow><mrow><mi>sin</mi><mspace width=0.11em /><msub><mi>β</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>cos</mi><mspace width=0.11em /><msub><mi>θ</mi><mn>1</mn></msub></mrow></mrow></mrow></math> e a
+expressão do campo magnético ao longo do eixo do solenoide é:</p>
+<table id="S4.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex30.m1" class="ltx_Math" alttext="B_{z}=2\pi k_{\mathrm{m}}nI\left(\cos\theta_{1}+\cos\theta_{2}\right)" display="block"><mrow><msub><mi>B</mi><mi>z</mi></msub><mo>=</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>n</mi><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mi>cos</mi><mspace width=0.11em /><msub><mi>θ</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>cos</mi><mspace width=0.11em /><msub><mi>θ</mi><mn>2</mn></msub></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">A figura <a href="#S4.F9" title="Figura 8.9 ‣ 4 Bobinas e solenoides ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.9</span></a> mostra o gráfico do módulo do
+campo magnético ao longo do eixo do solenoide, obtido no exemplo
+anterior, no case de um solenoide de raio <math id="S4.p4.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> e comprimento
+<math id="S4.p4.m2" class="ltx_Math" alttext="8a" display="inline"><mrow><mn>8</mn><mspace width=0.166em /><mi>a</mi></mrow></math>. Dentro do solenoide o módulo do campo é aproximadamente
+constante, aproximadamente igual a <math id="S4.p4.m3" class="ltx_Math" alttext="4\pi k_{\mathrm{m}}nI" display="inline"><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>n</mi><mspace width=0.166em /><mi>I</mi></mrow></math> e fora do
+solenoide diminui rapidamente até zero. As linhas de campo são
+aproximadamente paralelas dentro do solenoide mas afastam-se fora
+dele (ver figura <a href="#S4.F10" title="Figura 8.10 ‣ 4 Bobinas e solenoides ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.10</span></a>).</p>
+</div>
+<figure id="S4.F9" class="ltx_figure"><img src="img/solenoid_field_plot.png" style="width:35.112em;max-width:100%;height:auto" id="S4.F9.g1" class="ltx_graphics ltx_centering" alt="Módulo do campo magnético de um solenoide de raio ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.9: </span>Módulo do campo magnético de um solenoide de raio <math id="S4.F9.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> e
+comprimento <math id="S4.F9.m4" class="ltx_Math" alttext="8a" display="inline"><mrow><mn>8</mn><mspace width=0.166em /><mi>a</mi></mrow></math>, ao longo do seu eixo.</figcaption>
+</figure>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">A figura <a href="#S4.F10" title="Figura 8.10 ‣ 4 Bobinas e solenoides ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.10</span></a>) mostra o corte dum
+solenoide com um plano que passa pelo seu eixo e as linhas de campo
+magnético. As setas a sair do plano da figura indicam a corrente que
+sai por um lado das espiras e as setas para dentro da figura indicam a
+corrente que entra pelos lados opostos dessas espiras. As linhas de
+campo que entram no solenoide aproximam-se umas das outras, até
+ficarem mais próximas no centro do solenoide, e depois começa a
+fastarem-se entre si. na superfície externa do solenoide saem linhas
+num lado do solenoide, afastando-se entre si até ficarem mais
+afastadas no plano que corta o solenoide ao meio e logo aproximam-se
+entre si.</p>
+</div>
+<figure id="S4.F10" class="ltx_figure"><img src="img/magnetic_field_of_solenoid.png" style="width:21.399em;max-width:100%;height:auto" id="S4.F10.g1" class="ltx_graphics ltx_centering" alt="Campo magnético produzido por um solenoide.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.10: </span>Campo magnético produzido por um solenoide.</figcaption>
+</figure>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">No caso de um solenoide com comprimento infinito, as linhas de campo
+deverão ser então paralelas dentro e fora do solenoide, tal como na
+figura <a href="#S4.F11" title="Figura 8.11 ‣ 4 Bobinas e solenoides ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.11</span></a>. Como mostraremos na
+secção <a href="#S6" title="6 Divergência e rotacional do campo magnético ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.6</span></a>, linhas de campo magnético paralelas, num
+região onde não existe corrente, implicam um campo uniforme. Como tal
+o campo magnético <math id="S4.p6.m1" class="ltx_Math" alttext="\vec{B}_{\text{in}}" display="inline"><msub><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mtext>in</mtext></msub></math> dentro do solenoide infinito é
+uniforme, na direção axial e no sentido da regra da mão direita
+segundo o sentido da corrente. Fora do solenoide, o campo magnético
+<math id="S4.p6.m2" class="ltx_Math" alttext="\vec{B}_{\text{out}}" display="inline"><msub><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mtext>out</mtext></msub></math> também é uniforme e na direção axial, mas no
+sentido oposto do campo interno <math id="S4.p6.m3" class="ltx_Math" alttext="\vec{B}_{\text{in}}" display="inline"><msub><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mtext>in</mtext></msub></math>.</p>
+</div>
+<figure id="S4.F11" class="ltx_figure"><img src="img/infinite_solenoid.png" style="width:16.464em;max-width:100%;height:auto" id="S4.F11.g1" class="ltx_graphics ltx_centering" alt="Campo magnético num solenoide infinito.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.11: </span>Campo magnético num solenoide infinito.</figcaption>
+</figure>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">Como o campo a uma distância infinita do solenoide deverá ser nulo,
+conclui-se que o campo <math id="S4.p7.m1" class="ltx_Math" alttext="\vec{B}_{\text{out}}" display="inline"><msub><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mtext>out</mtext></msub></math> fora do solenoide é
+nulo. Para determinar o módulo do campo no interior, basta usar o
+resultado do exemplo <a href="#Thmexample4" title="Exemplo 8.4 ‣ 4 Bobinas e solenoides ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.4</span></a> no limite em que os dois
+ângulos <math id="S4.p7.m2" class="ltx_Math" alttext="\theta_{1}" display="inline"><msub><mi>θ</mi><mn>1</mn></msub></math> e <math id="S4.p7.m3" class="ltx_Math" alttext="\theta_{2}" display="inline"><msub><mi>θ</mi><mn>2</mn></msub></math> aproximam-se de zero; o resultado
+obtido é:</p>
+</div>
+<div id="S4.p8" class="ltx_para">
+<table id="S4.E12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S4.E12.m1" class="ltx_Math" alttext="\boxed{B_{sol.inf.}=4\pi k_{\mathrm{m}}nI}" display="block"><mrow><msub><mi>B</mi><mrow><mrow><mrow><mi>s</mi><mspace width=0.166em /><mi>o</mi><mspace width=0.166em /><mi>l</mi></mrow><mo>.</mo><mrow><mi>i</mi><mspace width=0.166em /><mi>n</mi><mspace width=0.166em /><mi>f</mi></mrow></mrow><mo>.</mo></mrow></msub><mo>=</mo><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>n</mi><mspace width=0.166em /><mi>I</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.12)</span></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8.5 </span>Força magnética entre fios paralelos com corrente</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">A figura <a href="#S5.F12" title="Figura 8.12 ‣ 5 Força magnética entre fios paralelos com corrente ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.12</span></a> mostra o corte transversal de
+dois fios retilíneos e paralelos, com correntes <math id="S5.p1.m1" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> e <math id="S5.p1.m2" class="ltx_Math" alttext="I_{2}" display="inline"><msub><mi>I</mi><mn>2</mn></msub></math> em
+sentidos opostos. O fio da esquerda, com corrente <math id="S5.p1.m3" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math>, produz linhas
+de campo circulares, com centro no fio, no sentido horário. No ponto
+onde se encontra o fio da direita, o campo <math id="S5.p1.m4" class="ltx_Math" alttext="\vec{B}_{1}" display="inline"><msub><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mn>1</mn></msub></math> produzido pelo
+primeiro fio aponta para baixo e tem módulo
+(equação (<a href="#S2.E3" title="(3) ‣ 2 Lei de Biot-Savart ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.3</span></a>)),</p>
+<table id="S5.E13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E13.m1" class="ltx_Math" alttext="B_{1}=\dfrac{2k_{\mathrm{m}}I_{1}}{d}" display="block"><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msub><mi>I</mi><mn>1</mn></msub></mrow><mi>d</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.13)</span></td>
+</tr>
+</table>
+<p class="ltx_p">onde <math id="S5.p1.m5" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> é a distância entre os fios.</p>
+</div>
+<figure id="S5.F12" class="ltx_figure"><img src="img/magnetic_force_wires.png" style="width:13.734em;max-width:100%;height:auto" id="S5.F12.g1" class="ltx_graphics ltx_centering" alt="Força magnética entre fios retilíneos e paralelos, com
+correntes em sentidos opostos.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.12: </span>Força magnética entre fios retilíneos e paralelos, com
+correntes em sentidos opostos.</figcaption>
+</figure>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">Esse campo produz força magnética no segundo fio. A força por unidade
+de comprimento que atua no segundo fio é, de acordo com a
+equação (<a href="forca_magnetica.html#S3.E38">7.38</a>) é igual a:</p>
+<table id="S5.E14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E14.m1" class="ltx_Math" alttext="\dfrac{\vec{F}_{21}}{l}=\vec{I}_{2}\times\vec{B}_{1}" display="block"><mrow><mfrac><msub><mover accent="true"><mi>F</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mn>21</mn></msub><mi>l</mi></mfrac><mo>=</mo><mrow><msub><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mn>2</mn></msub><mo>×</mo><msub><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mn>1</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.14)</span></td>
+</tr>
+</table>
+<p class="ltx_p">que é perpendicular ao fio. Os vetores <math id="S5.p2.m1" class="ltx_Math" alttext="\vec{I}_{2}" display="inline"><msub><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mn>2</mn></msub></math> e <math id="S5.p2.m2" class="ltx_Math" alttext="\vec{B}_{1}" display="inline"><msub><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mn>1</mn></msub></math> são
+perpendiculares e na figura <a href="#S5.F12" title="Figura 8.12 ‣ 5 Força magnética entre fios paralelos com corrente ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.12</span></a> vê-se que
+o seu produto vetorial é na direção que se afasta do primeiro
+fio. Substituindo a expressão (<a href="#S5.E13" title="(13) ‣ 5 Força magnética entre fios paralelos com corrente ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.13</span></a>) na
+equação (<a href="#S5.E14" title="(14) ‣ 5 Força magnética entre fios paralelos com corrente ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.14</span></a>) obtém-se o módulo da força, por
+unidade de comprimento:</p>
+<table id="S5.E15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S5.E15.m1" class="ltx_Math" alttext="\boxed{\dfrac{F_{21}}{l}=\dfrac{2k_{\mathrm{m}}I_{1}I_{2}}{d}}" display="block"><mrow><mfrac><msub><mi>F</mi><mn>21</mn></msub><mi>l</mi></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msub><mi>I</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>I</mi><mn>2</mn></msub></mrow><mi>d</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.15)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">O campo magnético que o segundo fio produz no ponto
+onde se encontra o primeiro é,</p>
+<table id="S5.E16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E16.m1" class="ltx_Math" alttext="B_{2}=\dfrac{2k_{\mathrm{m}}I_{2}}{d}" display="block"><mrow><msub><mi>B</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msub><mi>I</mi><mn>2</mn></msub></mrow><mi>d</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.16)</span></td>
+</tr>
+</table>
+<p class="ltx_p">e a força magnética do segundo fio sobre o primeiro, por unidade de
+comprimento, é dada pelo produto vetorial:</p>
+<table id="S5.E17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E17.m1" class="ltx_Math" alttext="\dfrac{\vec{F}_{12}}{l}=\vec{I}_{1}\times\vec{B}_{2}" display="block"><mrow><mfrac><msub><mover accent="true"><mi>F</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mn>12</mn></msub><mi>l</mi></mfrac><mo>=</mo><mrow><msub><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mn>1</mn></msub><mo>×</mo><msub><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mn>2</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.17)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">O resultado é uma força com o mesmo módulo de <math id="S5.p4.m1" class="ltx_Math" alttext="\vec{F}_{21}/l" display="inline"><mrow><msub><mover accent="true"><mi>F</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mn>21</mn></msub><mo>/</mo><mi>l</mi></mrow></math>, na mesma
+direção, mas no sentido oposto. Como tal, <math id="S5.p4.m2" class="ltx_Math" alttext="\vec{F}_{21}/l" display="inline"><mrow><msub><mover accent="true"><mi>F</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mn>21</mn></msub><mo>/</mo><mi>l</mi></mrow></math> e
+<math id="S5.p4.m3" class="ltx_Math" alttext="\vec{F}_{12}/l" display="inline"><mrow><msub><mover accent="true"><mi>F</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mn>12</mn></msub><mo>/</mo><mi>l</mi></mrow></math> constituem um par ação-reação com módulo dado pela
+expressão (<a href="#S5.E15" title="(15) ‣ 5 Força magnética entre fios paralelos com corrente ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.15</span></a>). Quando as correntes são no
+sentido oposto, a força magnética entre os fios é repulsiva.</p>
+</div>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p">A figura <a href="#S5.F13" title="Figura 8.13 ‣ 5 Força magnética entre fios paralelos com corrente ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.13</span></a> mostra os dois casos
+em que as correntes nos dois fios são no mesmo sentido. Nesses casos
+obtêm-se a mesma expressão (<a href="#S5.E15" title="(15) ‣ 5 Força magnética entre fios paralelos com corrente ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.15</span></a>) para a
+força por unidade de comprimento, mas a força é atrativa.</p>
+</div>
+<figure id="S5.F13" class="ltx_figure"><img src="img/two_currents_in_same_direction.png" style="width:22.680em;max-width:100%;height:auto" id="S5.F13.g1" class="ltx_graphics ltx_centering" alt="Força magnética entre fios retilíneos e paralelos, com
+correntes no mesmo sentido.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 8.13: </span>Força magnética entre fios retilíneos e paralelos, com
+correntes no mesmo sentido.</figcaption>
+</figure>
+<div id="S5.p6" class="ltx_para">
+<p class="ltx_p">A equação (<a href="#S5.E15" title="(15) ‣ 5 Força magnética entre fios paralelos com corrente ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.15</span></a>) usa-se para definir o
+ampere no Sistema Internacional de unidades, em função do newton e do
+metro: um ampere é a intensidade da corrente
+que deve circular por dois fios retilíneos e paralelos para se obter
+uma força por unidade de comprimento de <math id="S5.p6.m1" class="ltx_Math" alttext="2\times 10^{-7}\;\mathrm{N/m}" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>7</mn></mrow></msup></mrow><mspace width=0.166em /><mi mathvariant="normal">N</mi></mrow><mo>/</mo><mi mathvariant="normal">m</mi></mrow></math> quando
+a distância entre os fios for 1 metro.</p>
+</div>
+<div id="Thmexample5" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Exemplo 8.5</span></span></h6><p></p>
+<div id="Thmexample5.p1" class="ltx_para">
+<p class="ltx_p">Dois fios retilíneos e paralelos transportam correntes de
+<math id="Thmexample5.p1.m1" class="ltx_Math" alttext="3\;\mathrm{A}" display="inline"><mrow><mn>3</mn><mspace width=0.166em /><mi mathvariant="normal">A</mi></mrow></math> e <math id="Thmexample5.p1.m2" class="ltx_Math" alttext="4\;\mathrm{A}" display="inline"><mrow><mn>4</mn><mspace width=0.166em /><mi mathvariant="normal">A</mi></mrow></math>, no mesmo sentido, e encontram-se
+separados por uma distância de 5 cm (o comprimento dos fios é muito
+maior do que <math id="Thmexample5.p1.m3" class="ltx_Math" alttext="5\;\mathrm{cm}" display="inline"><mrow><mn>5</mn><mspace width=0.166em /><mi>cm</mi></mrow></math>). Calcule a força por unidade de
+comprimento entre os fios. Em que ponto (ou pontos) o campo
+magnético total é nulo?</p>
+</div>
+<div id="Thmexample5.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. A força entre os fios é atrativa, e o seu
+módulo, por unidade de comprimento, é igual a:</p>
+<table id="S5.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex31.m1" class="ltx_Math" alttext="\dfrac{F_{12}}{l}=\dfrac{2k_{\mathrm{m}}I_{1}I_{2}}{d}=\dfrac{2\times 10^{-7}%
+\times 3\times 4}{5\times 10^{-2}}=48\;\mathrm{\dfrac{\mu N}{m}}" display="block"><mrow><mfrac><msub><mi>F</mi><mn>12</mn></msub><mi>l</mi></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msub><mi>I</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>I</mi><mn>2</mn></msub></mrow><mi>d</mi></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>7</mn></mrow></msup><mo>×</mo><mn>3</mn><mo>×</mo><mn>4</mn></mrow><mrow><mn>5</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></mfrac><mo>=</mo><mrow><mn>48</mn><mspace width=0.166em /><mfrac><mrow><mi>μ</mi><mspace width=0.166em /><mi mathvariant="normal">N</mi></mrow><mi mathvariant="normal">m</mi></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample5.p3" class="ltx_para">
+<p class="ltx_p">Na região entre os dois fios, os campos dos dois fios têm sentidos
+opostos (ver figura <a href="#S5.F13" title="Figura 8.13 ‣ 5 Força magnética entre fios paralelos com corrente ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.13</span></a>) e,
+portanto, existirá um ponto P onde o campo total é nulo. Nesse
+ponto, os módulos dos campos das duas correntes serão iguais; usando
+unidades SI, temos:</p>
+<table id="Sx2.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S5.Ex32"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex32.m1" class="ltx_Math" alttext="\displaystyle\dfrac{2k_{\mathrm{m}}\times 3}{x_{1}}=\dfrac{2k_{\mathrm{m}}%
+\times 4}{x_{2}}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub></mrow><mo>×</mo><mn>3</mn></mrow><msub><mi>x</mi><mn>1</mn></msub></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub></mrow><mo>×</mo><mn>4</mn></mrow><msub><mi>x</mi><mn>2</mn></msub></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex33"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex33.m1" class="ltx_Math" alttext="\displaystyle x_{1}+x_{2}=0.05" display="inline"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>=</mo><mn>0.05</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">onde <math id="Thmexample5.p3.m1" class="ltx_Math" alttext="x_{1}" display="inline"><msub><mi>x</mi><mn>1</mn></msub></math> e <math id="Thmexample5.p3.m2" class="ltx_Math" alttext="x_{2}" display="inline"><msub><mi>x</mi><mn>2</mn></msub></math> são as distâncias desde cada um dos fios até o
+ponto P. A solução desse sistema de equações é:</p>
+<table id="S5.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex34.m1" class="ltx_Math" alttext="x_{1}=0.0214\qquad x_{2}=0.286" display="block"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mn>0.0214</mn></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mn>0.286</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample5.p4" class="ltx_para">
+<p class="ltx_p">O campo é nulo em todos os pontos na reta paralela aos dois fios, a
+2.14 cm do fio com 3 A e a 2.86 cm do fio com 4 A.
+</div>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8.6 </span>Divergência e rotacional do campo magnético</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">A lei de Ampère (<a href="#S3.E8" title="(8) ‣ 3 Lei de Ampère ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.8</span></a>) pode também ser escrita de forma
+diferencial; usando o teorema de Stokes (<a href="analise_vetorial.html#S3.E76">A.76</a>), podemos substituir
+o integral de linha por um integral de superfície:</p>
+<table id="S6.E18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.E18.m1" class="ltx_Math" alttext="\iint_{\mathrm{S}}(\vec{\nabla}\times\vec{B})\cdot\mathrm{d}\vec{A}=4\pi k_{%
+\mathrm{m}}I_{\mathrm{C}}" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>A</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msub><mi>I</mi><mi mathvariant="normal">C</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.18)</span></td>
+</tr>
+</table>
+<p class="ltx_p">onde S é uma superfície delimitada pela curva fechada C. A corrente
+<math id="S6.p1.m1" class="ltx_Math" alttext="I_{\mathrm{C}}" display="inline"><msub><mi>I</mi><mi mathvariant="normal">C</mi></msub></math> é a corrente através da curva C, a qual pode ser
+calculada integrando a densidade de corrente <math id="S6.p1.m2" class="ltx_Math" alttext="\vec{J}" display="inline"><mover accent="true"><mi>J</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> sobre a
+superfície S. Como tal, a equação anterior pode ser escrita da forma
+seguinte:</p>
+<table id="S6.E19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.E19.m1" class="ltx_Math" alttext="\iint_{\mathrm{S}}\left(\vec{\nabla}\times\vec{B}-4\pi k_{\mathrm{m}}\vec{J}%
+\right)\cdot\mathrm{d}\vec{A}=0" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mrow><mo>(</mo><mrow><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo>−</mo><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mover accent="true"><mi>J</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow><mo>)</mo></mrow><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>A</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.19)</span></td>
+</tr>
+</table>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">Para que esta equação seja válida em qualquer superfície S, orientada em
+qualquer direção, é necessário que o termo dentro do integral seja
+nulo em qualquer ponto:</p>
+<table id="S6.E20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S6.E20.m1" class="ltx_Math" alttext="\boxed{\vec{\nabla}\times\vec{B}=4\pi k_{\mathrm{m}}\vec{J}}\;." display="block"><mrow><mrow><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo>=</mo><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mover accent="true"><mi>J</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.20)</span></td>
+</tr>
+</table>
+</div>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p">A equação (<a href="#S6.E20" title="(20) ‣ 6 Divergência e rotacional do campo magnético ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.20</span></a>) é a forma diferencial da lei de Ampère e
+constitui uma das equações fundamentais da magnetostática, que
+relaciona o campo magnético em qualquer ponto com a densidade de
+corrente nesse ponto. Para caraterizar o campo magnético numa região
+não basta conhecer o seu rotacional em cada ponto da região; é
+necessário também conhecer a divergência do campo e algumas condições
+na fronteira da região.</p>
+</div>
+<div id="S6.p4" class="ltx_para">
+<p class="ltx_p">Como não existem monopolos magnéticos, não existem nunca pontos onde as
+linhas de campo magnético divergem em todas as direções, nem pontos
+onde as linhas de campo convergem de todas as direções. Isso implica
+que o fluxo magnético em qualquer superfície fechada é sempre nulo; o
+fluxo magnético que entra por uma parte da superfície é igual ao que
+sai pela parte restante.
+</p>
+</div>
+<div id="S6.p5" class="ltx_para">
+<table id="S6.E21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.E21.m1" class="ltx_Math" alttext="\oiint_{\mathrm{S}}\vec{B}\cdot\mathrm{d}\vec{A}=0" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∯</mo><mi mathvariant="normal">S</mi></msub><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>A</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.21)</span></td>
+</tr>
+</table>
+</div>
+<div id="S6.p6" class="ltx_para">
+<p class="ltx_p">Aplicando o teorema da divergência (<a href="analise_vetorial.html#S3.E70">A.70</a>),
+conclui-se que, em qualquer ponto, a divergência do campo magnético
+<math id="S6.p6.m1" class="ltx_Math" alttext="\vec{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> é nula:</p>
+<table id="S6.E22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S6.E22.m1" class="ltx_Math" alttext="\boxed{\vec{\nabla}\cdot\vec{B}=0}" display="block"><mrow><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.22)</span></td>
+</tr>
+</table>
+</div>
+<div id="S6.p7" class="ltx_para">
+<p class="ltx_p">Nos pontos do espaço onde não existe corrente, o rotacional e a
+divergência do campo magnético <math id="S6.p7.m1" class="ltx_Math" alttext="\vec{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> são ambos nulos. Se as linas
+de campo magnético forem paralelas, numa região onde não existe
+corrente, o campo deverá ser necessariamente uniforme nessa
+região. Para o demonstrar, seja o eixo dos <math id="S6.p7.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> na direção dessas
+linhas de campo paralelas; em coordenadas cartesianas, o campo pode
+depender das três coordenadas, mas como tem unicamente componente na
+direção de <math id="S6.p7.m3" class="ltx_Math" alttext="\hat{\imath}" display="inline"><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></math>, a forma geral desse campo será:</p>
+<table id="S6.E23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.E23.m1" class="ltx_Math" alttext="\vec{B}=B(x,y,z)\,\hat{\imath}" display="block"><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>=</mo><mrow><mi>B</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.23)</span></td>
+</tr>
+</table>
+</div>
+<div id="S6.p8" class="ltx_para">
+<p class="ltx_p">Calculando a divergência de <math id="S6.p8.m1" class="ltx_Math" alttext="\vec{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math>, em coordenadas cartesianas, e
+igualando a zero obtém-se:</p>
+<table id="S6.E24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.E24.m1" class="ltx_Math" alttext="\vec{\nabla}\cdot\vec{B}=\dfrac{\partial B}{\partial x}=0" display="block"><mrow><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo>=</mo><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mi>B</mi></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>x</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.24)</span></td>
+</tr>
+</table>
+<p class="ltx_p">que implica que <math id="S6.p8.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> não depende de <math id="S6.p8.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. O rotacional de <math id="S6.p8.m4" class="ltx_Math" alttext="\vec{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math>, em
+coordenadas cartesianas é igual a:</p>
+<table id="S6.E25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.E25.m1" class="ltx_Math" alttext="\dfrac{\mathrm{d}\,B}{\mathrm{d}\,z}\,\hat{\jmath}-\dfrac{\mathrm{d}\,B}{%
+\mathrm{d}\,y}\,\hat{k}" display="block"><mrow><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>B</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>z</mi></mrow></mfrac><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow><mo>−</mo><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>B</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>y</mi></mrow></mfrac><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(8.25)</span></td>
+</tr>
+</table>
+<p class="ltx_p">e como deve ser um vetor nulo, conclui-se que as derivadas
+<math id="S6.p8.m5" class="ltx_Math" alttext="\partial B/\partial y" display="inline"><mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>B</mi></mrow><mo>/</mo><mrow><mo>∂</mo><mspace width=0.11em /><mi>y</mi></mrow></mrow></math> e <math id="S6.p8.m6" class="ltx_Math" alttext="\partial B/\partial z" display="inline"><mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>B</mi></mrow><mo>/</mo><mrow><mo>∂</mo><mspace width=0.11em /><mi>z</mi></mrow></mrow></math> também são nulas e o
+campo não pode depender nem de <math id="S6.p8.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> nem de <math id="S6.p8.m8" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. O campo deve então ser
+constante.</p>
+</div>
+<div id="S6.p9" class="ltx_para">
+<p class="ltx_p">O campo elétrico numa região onde não existam cargas também tem
+divergência e rotacional nulos em todos os pontos dessa região
+(equações (<a href="calculo_do_campo_eletrico.html#S5.E30">2.30</a>) e (<a href="calculo_do_campo_eletrico.html#S6.E39">2.39</a>)). Consequentemente, se
+as linhas de campo elétrico forem paralelas, numa região onde não
+existem cargas livres, o campo será uniforme nessa região.</p>
+</div>
+<div id="S6.p10" class="ltx_para">
+<p class="ltx_p">Até agora temos considerado unicamente campos elétrico e magnético
+<em class="ltx_emph ltx_font_italic">estáticos</em>, i.e., que não variam em função do tempo. No
+seguinte capítulo veremos que quando o campo magnético varia em função
+do tempo, o campo elétrico deixa de ser conservativo e o seu
+rotacional não tem de ser nulo em todos os pontos. De forma análoga,
+quando o campo elétrico varia em função do tempo, o rotacional do
+campo magnético não depende apenas da densidade de corrente mas também
+da derivada do campo elétrico em função do tempo. No caso de campos
+não estáticos , em regiões onde não existem cargas nem correntes, é
+possível existirem campos não uniformes com linhas de campo
+paralelas (ondas eletromagnéticas planas).</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Problemas</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<ol id="Sx1.I1" class="ltx_enumerate">
+<li id="Sx1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.1.</span></span> 
+<div id="Sx1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">A figura mostra dois fios compridos e paralelos, no plano
+perpendicular a eles. A intensidade da corrente em cada fio é a
+mesma, <math id="Sx1.I1.i1.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, mas com sentidos opostos, como indicam o ponto e o x nos
+dois fios.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">a</em>) Represente graficamente os vetores de campo magnético
+devido a cada fio e o campo magnético resultante no ponto
+P.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) Encontre a expressão do módulo do campo magnético em
+qualquer ponto P sobre o eixo <math id="Sx1.I1.i1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, em função da distância <math id="Sx1.I1.i1.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> de P à
+origem.</p>
+<img src="img/eic0014-prob_8_3.png" style="width:11.130em;max-width:100%;height:auto" id="Sx1.I1.i1.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.2.</span></span> 
+<div id="Sx1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Considere o fio representado na figura, composto por dois segmentos
+semicirculares concêntricos de raios <math id="Sx1.I1.i2.p1.m1" class="ltx_Math" alttext="R_{1}" display="inline"><msub><mi>R</mi><mn>1</mn></msub></math> e <math id="Sx1.I1.i2.p1.m2" class="ltx_Math" alttext="R_{2}" display="inline"><msub><mi>R</mi><mn>2</mn></msub></math>, percorrido por
+uma corrente de intensidade <math id="Sx1.I1.i2.p1.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. Determine o campo magnético no
+centro P dos dois segmentos semicirculares.</p>
+<img src="img/prob-wire_with_two_arcs.png" style="width:10.542em;max-width:100%;height:auto" id="Sx1.I1.i2.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.3.</span></span> 
+<div id="Sx1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">A figura mostra uma <em class="ltx_emph ltx_font_italic">bobina de Helmholtz</em>, formada por duas
+bobinas circulares, cada uma de raio <math id="Sx1.I1.i3.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> e com <math id="Sx1.I1.i3.p1.m2" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> espiras, ambas
+com eixo no eixo <math id="Sx1.I1.i3.p1.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, paralelas e a uma distância <math id="Sx1.I1.i3.p1.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> entre elas. A
+corrente <math id="Sx1.I1.i3.p1.m5" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> é igual nas duas bobinas e circula no mesmo sentido em
+ambas. Com essa configuração é possível produzir campo magnético
+aproximadamente constante na região central entre as duas
+bobinas.</p>
+<img src="img/Helmholtz_coil.png" style="width:7.245em;max-width:100%;height:auto" id="Sx1.I1.i3.p1.g1" class="ltx_graphics ltx_centering" alt="">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">a</em>) Encontre a expressão <math id="Sx1.I1.i3.p1.m6" class="ltx_Math" alttext="B(z)" display="inline"><mrow><mi>B</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> do módulo do campo magnético
+em função de <math id="Sx1.I1.i3.p1.m7" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, com <math id="Sx1.I1.i3.p1.m8" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math> no ponto médio entre os
+centros das duas bobinas.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) Mostre que as duas primeiras derivadas de <math id="Sx1.I1.i3.p1.m9" class="ltx_Math" alttext="B(z)" display="inline"><mrow><mi>B</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> são
+nulas em <math id="Sx1.I1.i3.p1.m10" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">c</em>) Mostre que os três primeiros termos na série de Taylor de
+<math id="Sx1.I1.i3.p1.m11" class="ltx_Math" alttext="B(z)" display="inline"><mrow><mi>B</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> conduzem a um valor constante.</p>
+</div>
+</li>
+<li id="Sx1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.4.</span></span> 
+<div id="Sx1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Um condutor cilíndrico oco, com raio interno <math id="Sx1.I1.i4.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> e raio externo <math id="Sx1.I1.i4.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>
+transporta uma corrente <math id="Sx1.I1.i4.p1.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, paralela ao eixo do condutor,
+distribuída uniformemente na secção transversal do
+condutor. Encontre a expressão do campo magnético em função da
+distância até o eixo do cilindro, <math id="Sx1.I1.i4.p1.m4" class="ltx_Math" alttext="\varrho" display="inline"><mi>ϱ</mi></math>.</p>
+</div>
+</li>
+<li id="Sx1.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.5.</span></span> 
+<div id="Sx1.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Um fio condutor, de raio <math id="Sx1.I1.i5.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, conduz corrente de intensidade <math id="Sx1.I1.i5.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. A
+corrente está distribuída de forma não-uniforme, com
+<math id="Sx1.I1.i5.p1.m3" class="ltx_Math" alttext="J=A\varrho^{3}" display="inline"><mrow><mi>J</mi><mo>=</mo><mrow><mi>A</mi><mspace width=0.166em /><msup><mi>ϱ</mi><mn>3</mn></msup></mrow></mrow></math>, onde <math id="Sx1.I1.i5.p1.m4" class="ltx_Math" alttext="\varrho" display="inline"><mi>ϱ</mi></math> é a distância até o eixo do fio e
+<math id="Sx1.I1.i5.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> uma constante. Determine a expressão do campo magnético no
+interior e no exterior do fio.</p>
+</div>
+</li>
+<li id="Sx1.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.6.</span></span> 
+<div id="Sx1.I1.i6.p1" class="ltx_para">
+<p class="ltx_p">A figura representa três fios condutores retilíneos, muito compridos
+e paralelos ao eixo <math id="Sx1.I1.i6.p1.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, com correntes no sentido positivo desse
+eixo. O primeiro fio passa pelo ponto (<math id="Sx1.I1.i6.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="Sx1.I1.i6.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>) = (0, 1 cm) e tem
+corrente de 0.64 A, o segundo fio passa pelo pela origem e tem
+corrente de 0.63 A e o terceiro fio passa pelo ponto (<math id="Sx1.I1.i6.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="Sx1.I1.i6.p1.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>) =
+(2 cm, 0) e tem corrente de 0.43 A. Calcule o módulo da força
+magnética resultante, por unidade de comprimento, no fio que passa
+pela origem.</p>
+<img src="img/prob-three_parallel_wires.png" style="width:10.941em;max-width:100%;height:auto" id="Sx1.I1.i6.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.7.</span></span> 
+<div id="Sx1.I1.i7.p1" class="ltx_para">
+<p class="ltx_p">Considere dois fios de cobre, retilíneos e paralelos, de 60 cm
+de comprimento, distanciados de 9 cm e com raios de 2 mm e
+3 mm. Calcule o valor da força magnética entre os fios quando cada
+um deles for ligado a uma f.e.m. de 1.5 V. (Use o valor da
+resistividade do cobre à temperatura ambiente: <math id="Sx1.I1.i7.p1.m1" class="ltx_Math" alttext="17\;\mathrm{n\Omega\cdot m}" display="inline"><mrow><mrow><mn>17</mn><mspace width=0.166em /><mi mathvariant="normal">n</mi><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow><mo>⋅</mo><mi mathvariant="normal">m</mi></mrow></math>.)</p>
+</div>
+</li>
+<li id="Sx1.I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.8.</span></span> 
+<div id="Sx1.I1.i8.p1" class="ltx_para">
+<p class="ltx_p">A figura mostra as linhas de campo magnético de um fio com corrente,
+dentro de um campo magnético externo uniforme <math id="Sx1.I1.i8.p1.m1" class="ltx_Math" alttext="\vec{B}_{\text{ext}}" display="inline"><msub><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mtext>ext</mtext></msub></math>; o
+fio é perpendicular à folha e os eixos <math id="Sx1.I1.i8.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> e <math id="Sx1.I1.i8.p1.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> foram escolhidos sobre o
+plano da folha.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">a</em>) Escreva o versor na direção do campo externo, usando o
+sistema de eixos dado.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) Escreva o versor direção da corrente no fio.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">c</em>) Calcule e represente o vetor unitário na direção da força
+sobre o fio.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">d</em>) Considerando que <math id="Sx1.I1.i8.p1.m4" class="ltx_Math" alttext="I=0.5" display="inline"><mrow><mi>I</mi><mo>=</mo><mn>0.5</mn></mrow></math> A e se a força sobre o fio, por
+unidade de comprimento, for de <math id="Sx1.I1.i8.p1.m5" class="ltx_Math" alttext="2\times 10^{-5}" display="inline"><mrow><mn>2</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>5</mn></mrow></msup></mrow></math> N/m, calcule a distância
+desde o fio até o ponto P.</p>
+<img src="img/eic0014-prob_8_7.png" style="width:17.472em;max-width:100%;height:auto" id="Sx1.I1.i8.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.9.</span></span> 
+<div id="Sx1.I1.i9.p1" class="ltx_para">
+<p class="ltx_p">Calcule o módulo do campo magnético no centro de uma espira
+quadrada de aresta <math id="Sx1.I1.i9.p1.m1" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> percorrida por uma corrente <math id="Sx1.I1.i9.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>.</p>
+</div>
+</li>
+<li id="Sx1.I1.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.10.</span></span> 
+<div id="Sx1.I1.i10.p1" class="ltx_para">
+<p class="ltx_p">Três fios retilíneos e muito compridos, paralelos ao eixo
+dos <math id="Sx1.I1.i10.p1.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, transportam correntes de 1 A, 2 A e 3 A, todas no sentido
+positivo do eixo dos <math id="Sx1.I1.i10.p1.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. O fio com 1 A passa pelo ponto (2, 1) no
+plano <math id="Sx1.I1.i10.p1.m3" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mspace width=0.166em /><mi>y</mi></mrow></math> (todas as distâncias em cm), o fio com 2 A passa pelo
+ponto (4, 2) e o fio com 3 A passa pelo ponto (2, 4). Calcule o
+integral de linha do campo magnético no triângulo do plano <math id="Sx1.I1.i10.p1.m4" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mspace width=0.166em /><mi>y</mi></mrow></math>,
+com vértices nos pontos <math id="Sx1.I1.i10.p1.m5" class="ltx_Math" alttext="(x,y)=" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi></mi></mrow></math> (3, 0), (1, 5) e (5, 3).</p>
+</div>
+</li>
+<li id="Sx1.I1.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.11.</span></span> 
+<div id="Sx1.I1.i11.p1" class="ltx_para">
+<p class="ltx_p">Três fios retilíneos, compridos e paralelos, estão dispostos de tal
+modo que os seus eixos formam um triângulo equilátero de 5 cm de
+lado.</p>
+<img src="img/prob-three_phase_wires.png" style="width:11.949em;max-width:100%;height:auto" id="Sx1.I1.i11.p1.g1" class="ltx_graphics ltx_centering" alt="">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">a</em>) Os fios são atravessados por uma corrente trifásica;
+ num dado momento as correntes nos fios são:
+<math id="Sx1.I1.i11.p1.m1" class="ltx_Math" alttext="\vec{I}_{\mathrm{A}}=\vec{I}_{\mathrm{C}}=-10\hat{k}" display="inline"><mrow><msub><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mi mathvariant="normal">A</mi></msub><mo>=</mo><msub><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mi mathvariant="normal">C</mi></msub><mo>=</mo><mrow><mo>−</mo><mrow><mn>10</mn><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow></math> A e
+<math id="Sx1.I1.i11.p1.m2" class="ltx_Math" alttext="\vec{I}_{\mathrm{B}}=20\hat{k}" display="inline"><mrow><msub><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mi mathvariant="normal">B</mi></msub><mo>=</mo><mrow><mn>20</mn><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math> A. Calcule as forças, por unidade de
+comprimento, sobre os fios A e C.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) Considerando que no momento seguinte as correntes nos três fios
+variam de forma sinusoidal segundo as equações:</p>
+<table id="Sx2.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Sx1.Ex35"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.Ex35.m1" class="ltx_Math" alttext="\displaystyle\vec{I}_{\mathrm{A}}=I_{0}\cos(\omega t-2\pi/3)\hat{k}" display="inline"><mrow><msub><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mi mathvariant="normal">A</mi></msub><mo>=</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>−</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow><mo>/</mo><mn>3</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx1.Ex36"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.Ex36.m1" class="ltx_Math" alttext="\displaystyle\vec{I}_{\mathrm{B}}=I_{0}\cos\omega t\,\hat{k}" display="inline"><mrow><msub><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mi mathvariant="normal">B</mi></msub><mo>=</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Sx1.Ex37"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.Ex37.m1" class="ltx_Math" alttext="\displaystyle\vec{I}_{\mathrm{C}}=I_{0}\cos(\omega t+2\pi/3)\hat{k}" display="inline"><mrow><msub><mover accent="true"><mi>I</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mi mathvariant="normal">C</mi></msub><mo>=</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow><mo>/</mo><mn>3</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">com <math id="Sx1.I1.i11.p1.m3" class="ltx_Math" alttext="I_{0}=20" display="inline"><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>=</mo><mn>20</mn></mrow></math> A e <math id="Sx1.I1.i11.p1.m4" class="ltx_Math" alttext="\omega=200\pi\;\mathrm{s^{-1}}" display="inline"><mrow><mi>ω</mi><mo>=</mo><mrow><mn>200</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msup><mi mathvariant="normal">s</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></mrow></math>, calcule a força, por
+unidade de comprimento, sobre o fio A.</p>
+</div>
+</li>
+<li id="Sx1.I1.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.12.</span></span> 
+<div id="Sx1.I1.i12.p1" class="ltx_para">
+<p class="ltx_p">A figura representa o corte transversal de um sólido cilíndrico,
+muito comprido, de raio <math id="Sx1.I1.i12.p1.m1" class="ltx_Math" alttext="a=6" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>6</mn></mrow></math> cm e com uma cavidade cilíndrica de
+raio <math id="Sx1.I1.i12.p1.m2" class="ltx_Math" alttext="b=2" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>2</mn></mrow></math> cm. No cilindro flui uma corrente de densidade uniforme,
+<math id="Sx1.I1.i12.p1.m3" class="ltx_Math" alttext="J=127\;\mathrm{A/m}^{2}" display="inline"><mrow><mi>J</mi><mo>=</mo><mrow><mrow><mn>127</mn><mspace width=0.166em /><mi mathvariant="normal">A</mi></mrow><mo>/</mo><msup><mi mathvariant="normal">m</mi><mn>2</mn></msup></mrow></mrow></math>, dirigida para dentro da folha de papel.
+Calcule o campo magnético no ponto P na posição <math id="Sx1.I1.i12.p1.m4" class="ltx_Math" alttext="-8\,\hat{\imath}" display="inline"><mrow><mo>−</mo><mrow><mn>8</mn><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math>
+(cm). (Sugestão: O campo será igual ao campo produzido por um
+cilindro maciço, de raio <math id="Sx1.I1.i12.p1.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> e centro na origem, menos o campo de
+outro cilindro maciço, de raio <math id="Sx1.I1.i12.p1.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> e centro no ponto (0,2).)</p>
+<img src="img/cylinder_with_cavity.png" style="width:17.031em;max-width:100%;height:auto" id="Sx1.I1.i12.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.13.</span></span> 
+<div id="Sx1.I1.i13.p1" class="ltx_para">
+<p class="ltx_p">Os dois fios representados na figura são muito compridos e cada
+um transporta uma corrente de 3 A. Um dos fios e o ponto P
+encontram-se sobre o plano <math id="Sx1.I1.i13.p1.m1" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mspace width=0.166em /><mi>y</mi></mrow></math>, enquanto que o outro fio se
+encontra num plano paralelo a <math id="Sx1.I1.i13.p1.m2" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mspace width=0.166em /><mi>y</mi></mrow></math> mas 5 cm acima deste
+(<math id="Sx1.I1.i13.p1.m3" class="ltx_Math" alttext="z=5" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>5</mn></mrow></math>). Calcule o valor do campo vetorial <math id="Sx1.I1.i13.p1.m4" class="ltx_Math" alttext="\vec{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> no ponto P com
+coordenadas <math id="Sx1.I1.i13.p1.m5" class="ltx_Math" alttext="x=-1" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math> m, <math id="Sx1.I1.i13.p1.m6" class="ltx_Math" alttext="y=z=0" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+<img src="img/eic0014-prob_8_8.png" style="width:16.590em;max-width:100%;height:auto" id="Sx1.I1.i13.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.14.</span></span> 
+<div id="Sx1.I1.i14.p1" class="ltx_para">
+<p class="ltx_p">Um anel supercondutor de 5 cm de raio, transporta uma corrente de 4 A.
+Calcule o vetor de campo magnético, <math id="Sx1.I1.i14.p1.m1" class="ltx_Math" alttext="\vec{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math>, no centro do
+anel.</p>
+</div>
+</li>
+<li id="Sx1.I1.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.15.</span></span> 
+<div id="Sx1.I1.i15.p1" class="ltx_para">
+<p class="ltx_p">Exemplos de linhas de campo magnético retas, que se estendem
+desde menos infinito até infinito são o eixo de uma espira, bobina
+ou solenoide e, num sistema de dois fios retilíneos e paralelos com
+correntes em sentidos opostos, todas as retas perpendiculares aos
+fios e equidistantes dos dois fios. Nesses casos, a lei de Ampére
+implica que o integral de linha do campo, ao longo dessa linha de
+campo, desde menos infinito até infinito, deverá ser igual à
+corrente num dos lados dessa reta.
+<br class="ltx_break">
+(a) Num sistema de dois fios retilíneos, paralelos ao eixo
+<math id="Sx1.I1.i15.p1.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, que passam pelos pontos <math id="Sx1.I1.i15.p1.m2" class="ltx_Math" alttext="(x,y)=(0,a)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> e <math id="Sx1.I1.i15.p1.m3" class="ltx_Math" alttext="(x,y)=(0,-a)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> com
+correntes de intensidade e <math id="Sx1.I1.i15.p1.m4" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> mas em sentidos opostos, o
+campo ao longo do eixo <math id="Sx1.I1.i15.p1.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> aponta na direção desse eixo, com
+valor (ver problema 8.<a href="#Sx1.I1.i1" title="item 1 ‣ Problemas ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.1</span></a>):</p>
+<table id="Sx1.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex38.m1" class="ltx_Math" alttext="B_{x}=\dfrac{4k_{\mathrm{m}}I\,a}{x^{2}+a^{2}}" display="block"><mrow><msub><mi>B</mi><mi>x</mi></msub><mo>=</mo><mfrac><mrow><mn>4</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mi>a</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">mostre que o integral de <math id="Sx1.I1.i15.p1.m6" class="ltx_Math" alttext="B_{x}(x)" display="inline"><mrow><msub><mi>B</mi><mi>x</mi></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, desde menos infinito até
+infinito, é igual a <math id="Sx1.I1.i15.p1.m7" class="ltx_Math" alttext="4\pi k_{\mathrm{m}}I" display="inline"><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow></math>
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) O campo magnético de uma espira de raio <math id="Sx1.I1.i15.p1.m8" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, com corrente
+<math id="Sx1.I1.i15.p1.m9" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, ao longo do eixo da espira (eixo <math id="Sx1.I1.i15.p1.m10" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>) aponta na direção desse
+eixo, com valor (ver exemplo <a href="#Thmexample3" title="Exemplo 8.3 ‣ 4 Bobinas e solenoides ‣ Cálculo do campo magnético" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8.3</span></a>):</p>
+<table id="Sx1.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex39.m1" class="ltx_Math" alttext="B_{z}=\dfrac{2\pi k_{\mathrm{m}}a^{2}I}{\left(z^{2}+a^{2}\right)^{3/2}}" display="block"><mrow><msub><mi>B</mi><mi>z</mi></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><msup><mi>a</mi><mn>2</mn></msup><mspace width=0.166em /><mi>I</mi></mrow><msup><mrow><mo>(</mo><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">mostre que o integral de <math id="Sx1.I1.i15.p1.m11" class="ltx_Math" alttext="B_{z}(z)" display="inline"><mrow><msub><mi>B</mi><mi>z</mi></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math>, desde menos infinito até
+infinito, é igual a <math id="Sx1.I1.i15.p1.m12" class="ltx_Math" alttext="4\pi k_{\mathrm{m}}I" display="inline"><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow></math>
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">c</em>) Num solenoide de comprimento <math id="Sx1.I1.i15.p1.m13" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, com <math id="Sx1.I1.i15.p1.m14" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> espiras de raio
+<math id="Sx1.I1.i15.p1.m15" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, com corrente de intensidade <math id="Sx1.I1.i15.p1.m16" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, se <math id="Sx1.I1.i15.p1.m17" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> for muito maior do que
+<math id="Sx1.I1.i15.p1.m18" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, pode-se admitir que o campo ao longo do eixo do solenoide tem
+valor constante <math id="Sx1.I1.i15.p1.m19" class="ltx_Math" alttext="4\pi k_{\mathrm{m}}nI" display="inline"><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>n</mi><mspace width=0.166em /><mi>I</mi></mrow></math> dentro do solenoide e 0
+fora dele (<math id="Sx1.I1.i15.p1.m20" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> é o número de espiras por unidade de
+comprimento). Mostre que o integral do campo magnético ao longo do
+eixo do solenoide é igual a <math id="Sx1.I1.i15.p1.m21" class="ltx_Math" alttext="4\pi k_{\mathrm{m}}NI" display="inline"><mrow><mn>4</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>N</mi><mspace width=0.166em /><mi>I</mi></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Respostas</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<ol id="Sx2.I2" class="ltx_enumerate">
+<li id="Sx2.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.1.</span></span> 
+<div id="Sx2.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">a</em>)
+<span class="ltx_text" style="position:relative; bottom:-70.0pt;"><img src="img/eic0014-prob_8_3-sol-a.png" style="width:11.823em;max-width:100%;height:auto" id="Sx2.I2.i1.p1.g1" class="ltx_graphics" alt=""></span>
+<br><br><br><br><br>
+(<em class="ltx_emph ltx_font_italic">b</em>) <math id="Sx2.I2.i1.p1.m1" class="ltx_Math" alttext="B=\dfrac{4\,k_{\mathrm{m}}\,I\,a}{d^{2}}=\dfrac{4\,k_{\mathrm{m}}\,I\,a}{x^{2}%
++a^{2}}" display="inline"><mrow><mi>B</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mi>a</mi></mrow><msup><mi>d</mi><mn>2</mn></msup></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mi>a</mi></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></p>
+</div>
+</li>
+<li id="Sx2.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.2.</span></span> 
+<div id="Sx2.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i2.p1.m1" class="ltx_Math" alttext="\pi k_{\mathrm{m}}I\left(\dfrac{1}{R_{1}}-\dfrac{1}{R_{2}}\right)," display="inline"><mrow><mrow><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>R</mi><mn>1</mn></msub></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>R</mi><mn>2</mn></msub></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow><mo>,</mo></mrow></math>
+para fora da folha.</p>
+</div>
+</li>
+<li id="Sx2.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.3.</span></span> 
+<div id="Sx2.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">a</em>) <math id="Sx2.I2.i3.p1.m1" class="ltx_Math" alttext="B(z)=\dfrac{2\pi k_{\mathrm{m}}NIR^{2}}{\left((z-\frac{R}{2})^{2}+R^{2}\right)%
+^{3/2}}+\dfrac{2\pi k_{\mathrm{m}}NIR^{2}}{\left((z+\frac{R}{2})^{2}+R^{2}%
+\right)^{3/2}}" display="inline"><mrow><mrow><mi>B</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>N</mi><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><msup><mi>R</mi><mn>2</mn></msup></mrow><msup><mrow><mo>(</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>−</mo><mfrac><mi>R</mi><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>R</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>N</mi><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><msup><mi>R</mi><mn>2</mn></msup></mrow><msup><mrow><mo>(</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>+</mo><mfrac><mi>R</mi><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>R</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac></mstyle></mrow></mrow></math>
+(<em class="ltx_emph ltx_font_italic">c</em>) <math id="Sx2.I2.i3.p1.m2" class="ltx_Math" alttext="B(z)=\dfrac{32\pi k_{\mathrm{m}}NI}{5^{3/2}R}" display="inline"><mrow><mrow><mi>B</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>32</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>N</mi><mspace width=0.166em /><mi>I</mi></mrow><mrow><msup><mn>5</mn><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup><mspace width=0.166em /><mi>R</mi></mrow></mfrac></mstyle></mrow></math></p>
+</div>
+</li>
+<li id="Sx2.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.4.</span></span> 
+<div id="Sx2.I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i4.p1.m1" class="ltx_Math" alttext="\vec{B}=\dfrac{2k_{\mathrm{m}}I}{R}\left(\dfrac{\varrho^{2}-a^{2}}{b^{2}-a^{2}%
+}\right)\hat{\phi}" display="inline"><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mi>R</mi></mfrac></mstyle><mspace width=0.166em /><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi>ϱ</mi><mn>2</mn></msup><mo>−</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><msup><mi>a</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>)</mo></mrow><mspace width=0.166em /><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math></p>
+</div>
+</li>
+<li id="Sx2.I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.5.</span></span> 
+<div id="Sx2.I2.i5.p1" class="ltx_para">
+<p class="ltx_p">O campo <math id="Sx2.I2.i5.p1.m1" class="ltx_Math" alttext="\vec{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> é na direção azimutal <math id="Sx2.I2.i5.p1.m2" class="ltx_Math" alttext="\hat{\phi}" display="inline"><mover accent="true"><mi>ϕ</mi><mo stretchy="false">ˆ</mo></mover></math>, com
+módulo:
+<br class="ltx_break">
+<math id="Sx2.I2.i5.p1.m3" class="ltx_Math" alttext="B=\begin{cases}\dfrac{2k_{\mathrm{m}}I}{\varrho}&amp;\varrho\geq a\\[12.0pt]
+\dfrac{2k_{\mathrm{m}}I}{a^{5}}\varrho^{4}&amp;\varrho\leq a\end{cases}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mi>ϱ</mi></mfrac></mstyle></mtd><mtd columnalign="left"><mrow><mi>ϱ</mi><mo>≥</mo><mi>a</mi></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><msup><mi>a</mi><mn>5</mn></msup></mfrac></mstyle><mspace width=0.166em /><msup><mi>ϱ</mi><mn>4</mn></msup></mrow></mtd><mtd columnalign="left"><mrow><mi>ϱ</mi><mo>≤</mo><mi>a</mi></mrow></mtd></mtr></mtable></mrow></mrow></math></p>
+</div>
+</li>
+<li id="Sx2.I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.6.</span></span> 
+<div id="Sx2.I2.i6.p1" class="ltx_para">
+<p class="ltx_p">8.507 µN/m.</p>
+</div>
+</li>
+<li id="Sx2.I2.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.7.</span></span> 
+<div id="Sx2.I2.i7.p1" class="ltx_para">
+<p class="ltx_p">10.25 N.</p>
+</div>
+</li>
+<li id="Sx2.I2.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.8.</span></span> 
+<div id="Sx2.I2.i8.p1" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">a</em>) <math id="Sx2.I2.i8.p1.m1" class="ltx_Math" alttext="-\sqrt{3}/2\,\hat{\jmath}+1/2\,\hat{k}" display="inline"><mrow><mrow><mo>−</mo><mrow><mrow><msqrt><mn>3</mn></msqrt><mo>/</mo><mn>2</mn></mrow><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo>+</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math>. (<em class="ltx_emph ltx_font_italic">b</em>) <math id="Sx2.I2.i8.p1.m2" class="ltx_Math" alttext="\hat{\imath}" display="inline"><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></math>.
+<br class="ltx_break">(<em class="ltx_emph ltx_font_italic">c</em>) <math id="Sx2.I2.i8.p1.m3" class="ltx_Math" alttext="-1/2\,\hat{\jmath}-\sqrt{3}/2\,\hat{k}" display="inline"><mrow><mrow><mo>−</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo>−</mo><mrow><mrow><msqrt><mn>3</mn></msqrt><mo>/</mo><mn>2</mn></mrow><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow></math>. (<em class="ltx_emph ltx_font_italic">d</em>) 2.5 mm.</p>
+</div>
+</li>
+<li id="Sx2.I2.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.9.</span></span> 
+<div id="Sx2.I2.i9.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i9.p1.m1" class="ltx_Math" alttext="B=\dfrac{8\sqrt{2}\,k_{\mathrm{m}}I}{d}" display="inline"><mrow><mi>B</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>8</mn><mspace width=0.166em /><msqrt><mn>2</mn></msqrt><mspace width=0.166em /><msub><mi>k</mi><mi mathvariant="normal">m</mi></msub><mspace width=0.166em /><mi>I</mi></mrow><mi>d</mi></mfrac></mstyle></mrow></math></p>
+</div>
+</li>
+<li id="Sx2.I2.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.10.</span></span> 
+<div id="Sx2.I2.i10.p1" class="ltx_para">
+<p class="ltx_p">6.28 G·cm.</p>
+</div>
+</li>
+<li id="Sx2.I2.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.11.</span></span> 
+<div id="Sx2.I2.i11.p1" class="ltx_para">
+<p class="ltx_p">(a) <math id="Sx2.I2.i11.p1.m1" class="ltx_Math" alttext="\vec{F}_{\mathrm{A}}/l_{\mathrm{A}}=\vec{F}_{\mathrm{C}}/l_{\mathrm{C}}=(0.6\,%
+\hat{\imath}+0.3464\,\hat{\jmath})" display="inline"><mrow><mrow><msub><mover accent="true"><mi>F</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mi mathvariant="normal">A</mi></msub><mo>/</mo><msub><mi>l</mi><mi mathvariant="normal">A</mi></msub></mrow><mo>=</mo><mrow><msub><mover accent="true"><mi>F</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mi mathvariant="normal">C</mi></msub><mo>/</mo><msub><mi>l</mi><mi mathvariant="normal">C</mi></msub></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.6</mn><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow><mo>+</mo><mrow><mn>0.3464</mn><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> mN/m.
+<br class="ltx_break">
+(b) <math id="Sx2.I2.i11.p1.m2" class="ltx_Math" alttext="\vec{F}_{\mathrm{A}}/l_{\mathrm{A}}=0.8\sqrt{3}\cos\left(\omega t-\pi/3\right)%
+\left[\cos\left(\omega t-\pi/6\right)\hat{\imath}-\sin\left(\omega t-\pi/6%
+\right)\hat{\jmath}\right]" display="inline"><mrow><mrow><msub><mover accent="true"><mi>F</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mi mathvariant="normal">A</mi></msub><mo>/</mo><msub><mi>l</mi><mi mathvariant="normal">A</mi></msub></mrow><mo>=</mo><mrow><mn>0.8</mn><mspace width=0.166em /><msqrt><mn>3</mn></msqrt><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>−</mo><mrow><mi>π</mi><mo>/</mo><mn>3</mn></mrow></mrow><mo>)</mo></mrow></mrow><mspace width=0.166em /><mrow><mo>[</mo><mrow><mrow><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>−</mo><mrow><mi>π</mi><mo>/</mo><mn>6</mn></mrow></mrow><mo>)</mo></mrow></mrow><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow><mo>−</mo><mrow><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>−</mo><mrow><mi>π</mi><mo>/</mo><mn>6</mn></mrow></mrow><mo>)</mo></mrow></mrow><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo>]</mo></mrow></mrow></mrow></math> mN/m.</p>
+</div>
+</li>
+<li id="Sx2.I2.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.12.</span></span> 
+<div id="Sx2.I2.i12.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i12.p1.m1" class="ltx_Math" alttext="(9.39\times 10^{-8}\,\hat{\imath}+3.22\times 10^{-6}\,\hat{\jmath})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mn>9.39</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>8</mn></mrow></msup></mrow><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow><mo>+</mo><mrow><mrow><mn>3.22</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>6</mn></mrow></msup></mrow><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></math> T.</p>
+</div>
+</li>
+<li id="Sx2.I2.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.13.</span></span> 
+<div id="Sx2.I2.i13.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i13.p1.m1" class="ltx_Math" alttext="(-59.4\,\hat{\imath}-102.9\,\hat{\jmath}+2388.1\,\hat{k})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mo>−</mo><mrow><mn>59.4</mn><mspace width=0.166em /><mover accent="true"><mi>ı</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo>−</mo><mrow><mn>102.9</mn><mspace width=0.166em /><mover accent="true"><mi>ȷ</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo>+</mo><mrow><mn>2388.1</mn><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></math> nT.</p>
+</div>
+</li>
+<li id="Sx2.I2.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">8.14.</span></span> 
+<div id="Sx2.I2.i14.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i14.p1.m1" class="ltx_Math" alttext="50.3\,\hat{k}" display="inline"><mrow><mn>50.3</mn><mspace width=0.166em /><mover accent="true"><mi>k</mi><mo stretchy="false">ˆ</mo></mover></mrow></math> (µT).</p>
+</div>
+</li>
+</ol>
+</div>
+</section><div class="ltx_rdf" about="" property="dcterms:creator" content="Jaime E. Villate, Luís Miguel Martelo"></div>
+<div class="ltx_rdf" about="" property="dcterms:subject" content="Eletromagnetismo, Eletricidade, Magnetismo, Circuitos"></div>
+<div class="ltx_rdf" about="" property="dcterms:subject" content="Eletromagnetismo"></div>
+<div class="ltx_rdf" about="" property="dcterms:title" content="Eletromagnetismo e Circuitos"></div>
+
+</article>
+</div>
+<footer class="ltx_page_footer">
+<p>&copy; 2023, Jaime E. Villate &amp; Luís Miguel Martelo</p>
+<p>Publicado nos termos da <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição-Partilha</a> (versão 4.0).</p>
+<div class="ltx_page_logo">Generated  on Sun Nov 26 18:12:21 2023 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML </a>
+</div></footer>
+</div>
+</body>
+</html>
