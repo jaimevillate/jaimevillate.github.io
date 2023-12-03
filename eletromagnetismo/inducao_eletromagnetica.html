@@ -2,8 +2,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Indução eletromagnética</title>
-<!--Generated on Fri Dec  1 18:58:38 2023 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
-<!--Document created on 1 de dezembro de 2023.-->
+<!--Generated on Sun Dec  3 11:19:16 2023 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 3 de dezembro de 2023.-->
 
 <link rel="stylesheet" href="../css/latex-schola.css" type="text/css">
 <link rel="stylesheet" href="../css/ltx-article.css" type="text/css">
@@ -21,7 +21,7 @@
 <span class="ltx_personname">Jaime E. Villate e Luís Miguel Martelo
 </span></span>
 </div>
-<div class="ltx_dates">(1 de dezembro de 2023)</div>
+<div class="ltx_dates">(3 de dezembro de 2023)</div>
 
 <div class="ltx_pagination ltx_role_newpage"></div>
 <div id="p1" class="ltx_para ltx_align_center">
@@ -252,7 +252,7 @@ integral de superfície do campo magnético:</p>
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S2.E10.m1" class="ltx_Math" alttext="\boxed{\varPhi_{\mathrm{S}}=\iint_{\mathrm{S}}\vec{B}\cdot\hat{n}\,\mathrm{d}A}" display="block"><mrow><msub><mi mathvariant="normal">Φ</mi><mi mathvariant="normal">S</mi></msub><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mover accent="true"><mi>n</mi><mo stretchy="false">ˆ</mo></mover></mrow><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>A</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S2.E10.m1" class="ltx_Math" alttext="\boxed{\varPhi_{\mathrm{S}}=\iint_{\mathrm{S}}\vec{B}\cdot\mathrm{d}\vec{A}}" display="block"><mrow><msub><mi mathvariant="normal">Φ</mi><mi mathvariant="normal">S</mi></msub><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>A</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.10)</span></td>
 </tr>
@@ -362,12 +362,30 @@ seguindo a direção da curva C.</p>
 <figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 9.3: </span>Curva fechada e orientada e respetivo versor normal.</figcaption>
 </figure>
 <div id="S2.SS1.p4" class="ltx_para">
-<p class="ltx_p">Na equação (<a href="#S2.E12" title="(12) ‣ 2.1 Lei de Faraday ‣ 2 Fluxo magnético ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.12</span></a>), o sinal de <math id="S2.SS1.p4.m1" class="ltx_Math" alttext="\varepsilon_{\mathrm{i}}" display="inline"><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub></math>
+<p class="ltx_p">Como já foi referido, a f.e.m. induzida <math id="S2.SS1.p4.m1" class="ltx_Math" alttext="\varepsilon_{\mathrm{i}}" display="inline"><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub></math> é igual
+ao integral de linha do campo elétrico induzido, equação
+(<a href="#S1.E6" title="(6) ‣ 1 Campo elétrico induzido ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.6</span></a>). Neste caso o percurso de integração é a curva
+fechada C e, como o integral de linha do campo eletrostático numa
+curva fechada é nulo,podemos escrever:</p>
+<table id="S2.E13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E13.m1" class="ltx_Math" alttext="\varepsilon_{\mathrm{i}}=\oint_{\mathrm{C}}\vec{E}\cdot\mathrm{d}\vec{r}" display="block"><mrow><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.13)</span></td>
+</tr>
+</table>
+<p class="ltx_p">onde <math id="S2.SS1.p4.m2" class="ltx_Math" alttext="\vec{E}" display="inline"><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> é o campo elétrico total, soma do campo eletrostático
+mais o campo elétrico induzido.</p>
+</div>
+<div id="S2.SS1.p5" class="ltx_para">
+<p class="ltx_p">Na equação (<a href="#S2.E12" title="(12) ‣ 2.1 Lei de Faraday ‣ 2 Fluxo magnético ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.12</span></a>), o sinal de <math id="S2.SS1.p5.m1" class="ltx_Math" alttext="\varepsilon_{\mathrm{i}}" display="inline"><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub></math>
 é o sinal do integral de linha do campo elétrico induzido ao longo da
 curva C. Se na curva C houver um fio condutor por onde pode circular
 corrente, a corrente induzida será no sentido de C se
-<math id="S2.SS1.p4.m2" class="ltx_Math" alttext="\varepsilon_{\mathrm{i}}" display="inline"><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub></math> for positiva, ou no sentido oposto se
-<math id="S2.SS1.p4.m3" class="ltx_Math" alttext="\varepsilon_{\mathrm{i}}" display="inline"><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub></math> for negativa.</p>
+<math id="S2.SS1.p5.m2" class="ltx_Math" alttext="\varepsilon_{\mathrm{i}}" display="inline"><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub></math> for positiva, ou no sentido oposto se
+<math id="S2.SS1.p5.m3" class="ltx_Math" alttext="\varepsilon_{\mathrm{i}}" display="inline"><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub></math> for negativa.</p>
 </div>
 <div id="Thmexample3" class="ltx_theorem ltx_theorem_example">
 <h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Exemplo 9.3</span></span></h6><p></p>
@@ -410,14 +428,14 @@ bobina.</p>
 em ordem ao tempo). Se <math id="Thmexample3.p4.m3" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> for constante, o ângulo
 <math id="Thmexample3.p4.m4" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>, em função do tempo, é dado por <math id="Thmexample3.p4.m5" class="ltx_Math" alttext="\omega\,t+\theta_{0}" display="inline"><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></math>, e a
 f.e.m. induzida é uma função sinusoidal:</p>
-<table id="S2.E13" class="ltx_equation ltx_eqn_table">
+<table id="S2.E14" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E13.m1" class="ltx_Math" alttext="\varepsilon_{\mathrm{i}}(t)=\varepsilon_{\text{m\'{a}x}}\,\sin(\omega\,t+%
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E14.m1" class="ltx_Math" alttext="\varepsilon_{\mathrm{i}}(t)=\varepsilon_{\text{m\'{a}x}}\,\sin(\omega\,t+%
 \theta_{0})" display="block"><mrow><mrow><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>ε</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.13)</span></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.14)</span></td>
 </tr>
 </table>
 <p class="ltx_p">onde <math id="Thmexample3.p4.m6" class="ltx_Math" alttext="\varepsilon_{\text{m\'{a}x}}=NBA\omega" display="inline"><mrow><msub><mi>ε</mi><mtext>máx</mtext></msub><mo>=</mo><mrow><mi>N</mi><mspace width=0.166em /><mi>B</mi><mspace width=0.166em /><mi>A</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow></math>. Esse tipo de tensão
@@ -450,7 +468,7 @@ corrente induzida que contraria a variação do fluxo magnético</em>.</p>
 <div id="S2.SS2.p3" class="ltx_para">
 <p class="ltx_p">No exemplo apresentado na figura <a href="#S2.F4" title="Figura 9.4 ‣ 2.2 Lei de Lenz ‣ 2 Fluxo magnético ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.4</span></a>, em
 que um íman aproxima-se de uma espira condutora com velocidade <math id="S2.SS2.p3.m1" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>
-(ver problema <a href="#Sx1.I1.i9" title="item 9 ‣ Problemas ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.9</span></a>), o fluxo magnético no anel é
+(ver problema 9.<a href="#Sx1.I1.i9" title="item 9 ‣ Problemas ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.9</span></a>), o fluxo magnético no anel é
 no sentido da esquerda para a direita e está a aumentar. Aparece então
 corrente induzida no anel, dando origem a fluxo magnético da direita
 para a esquerda, que contraria o aumento do fluxo externo. A corrente
@@ -499,25 +517,25 @@ eletromotriz induzida que contraria a alteração da corrente.</p>
 <p class="ltx_p">O campo magnético produzido pela bobina é diretamente proporcional à
 corrente. Como tal, o fluxo magnético produzido pela bobina sobre si
 própria é proporcional à corrente:</p>
-<table id="S3.E14" class="ltx_equation ltx_eqn_table">
+<table id="S3.E15" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E14.m1" class="ltx_Math" alttext="\varPhi=L\,I" display="block"><mrow><mi mathvariant="normal">Φ</mi><mo>=</mo><mrow><mi>L</mi><mspace width=0.166em /><mi>I</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E15.m1" class="ltx_Math" alttext="\varPhi=L\,I" display="block"><mrow><mi mathvariant="normal">Φ</mi><mo>=</mo><mrow><mi>L</mi><mspace width=0.166em /><mi>I</mi></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.14)</span></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.15)</span></td>
 </tr>
 </table>
 <p class="ltx_p">e a constante <math id="S3.p2.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> chama-se <em class="ltx_emph ltx_font_italic">indutância</em>  da
 bobina. A f.e.m. autoinduzida  na bobina é
 igual a menos a derivada do fluxo magnético através dela:</p>
-<table id="S3.E15" class="ltx_equation ltx_eqn_table">
+<table id="S3.E16" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S3.E15.m1" class="ltx_Math" alttext="\boxed{\varepsilon_{\mathrm{i}}=-L\dfrac{\mathrm{d}\,I}{\mathrm{d}\,t}}" display="block"><mrow><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub><mo>=</mo><mrow><mo>−</mo><mrow><mi>L</mi><mspace width=0.166em /><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>I</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>t</mi></mrow></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S3.E16.m1" class="ltx_Math" alttext="\boxed{\varepsilon_{\mathrm{i}}=-L\dfrac{\mathrm{d}\,I}{\mathrm{d}\,t}}" display="block"><mrow><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub><mo>=</mo><mrow><mo>−</mo><mrow><mi>L</mi><mspace width=0.166em /><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>I</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>t</mi></mrow></mfrac></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.15)</span></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.16)</span></td>
 </tr>
 </table>
 </div>
@@ -529,13 +547,13 @@ módulo do campo magnético. A indutância de uma bobina com <math id="S3.p3.m2"
 é diretamente proporcional a <math id="S3.p3.m3" class="ltx_Math" alttext="N^{2}" display="inline"><msup><mi>N</mi><mn>2</mn></msup></math> (ver exemplo a seguir). A
 indutância da bobina é <math id="S3.p3.m4" class="ltx_Math" alttext="N^{2}" display="inline"><msup><mi>N</mi><mn>2</mn></msup></math> vezes a indutância de cada uma das suas
 espiras por separado:</p>
-<table id="S3.E16" class="ltx_equation ltx_eqn_table">
+<table id="S3.E17" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E16.m1" class="ltx_Math" alttext="L_{\text{bobina}}=N^{2}L_{\text{espira}}" display="block"><mrow><msub><mi>L</mi><mtext>bobina</mtext></msub><mo>=</mo><mrow><msup><mi>N</mi><mn>2</mn></msup><mspace width=0.166em /><msub><mi>L</mi><mtext>espira</mtext></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E17.m1" class="ltx_Math" alttext="L_{\text{bobina}}=N^{2}L_{\text{espira}}" display="block"><mrow><msub><mi>L</mi><mtext>bobina</mtext></msub><mo>=</mo><mrow><msup><mi>N</mi><mn>2</mn></msup><mspace width=0.166em /><msub><mi>L</mi><mtext>espira</mtext></msub></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.16)</span></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.17)</span></td>
 </tr>
 </table>
 </div>
@@ -546,18 +564,17 @@ bobinas ou solenoides. Um dispositivo com indutância não-desprezável
 é chamado <em class="ltx_emph ltx_font_italic">indutor</em>. Usaremos algum dos diagramas de circuito
 na figura <a href="#S3.F7" title="Figura 9.7 ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.7</span></a> para representar o indutor; no diagrama
 do lado esquerdo, o valor da f.e.m. autoinduzida é dada pela
-equação (<a href="#S3.E15" title="(15) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.15</span></a>) e no diagrama do lado direito a
+equação (<a href="#S3.E16" title="(16) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.16</span></a>) e no diagrama do lado direito a
 diferença de potencial, <math id="S3.p4.m1" class="ltx_Math" alttext="\Delta V" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><mi>V</mi></mrow></math>, entre os dois lados é dada pelo
-lado direito da equação (<a href="#S3.E15" title="(15) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.15</span></a>) (o sinal positivo é
-devido à troca dos sinais em relação ao diagrama do lado esquerdo):
-</p>
-<table id="S3.E17" class="ltx_equation ltx_eqn_table">
+lado direito da equação (<a href="#S3.E16" title="(16) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.16</span></a>) (o sinal positivo é
+devido à troca dos sinais em relação ao diagrama do lado esquerdo):</p>
+<table id="S3.E18" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E17.m1" class="ltx_Math" alttext="\Delta V=L\,\dfrac{\mathrm{d}\,I}{\mathrm{d}\,t}" display="block"><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><mi>V</mi></mrow><mo>=</mo><mrow><mi>L</mi><mspace width=0.166em /><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>I</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>t</mi></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E18.m1" class="ltx_Math" alttext="\Delta V=L\,\dfrac{\mathrm{d}\,I}{\mathrm{d}\,t}" display="block"><mrow><mrow><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><mi>V</mi></mrow><mo>=</mo><mrow><mi>L</mi><mspace width=0.166em /><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>I</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>t</mi></mrow></mfrac></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.17)</span></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.18)</span></td>
 </tr>
 </table>
 </div>
@@ -570,13 +587,13 @@ devido à troca dos sinais em relação ao diagrama do lado esquerdo):
 (figura <a href="#S3.F8" title="Figura 9.8 ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.8</span></a>). Admitindo <math id="S3.p5.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> positiva no sentido de
 indicado na figura <a href="#S3.F8" title="Figura 9.8 ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.8</span></a>, a relação entre a diferença
 de potencial na bobina e a corrente através dela é a seguinte:</p>
-<table id="S3.E18" class="ltx_equation ltx_eqn_table">
+<table id="S3.E19" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E18.m1" class="ltx_Math" alttext="V_{\mathrm{P}}-V_{\mathrm{Q}}=RI-L\dfrac{\mathrm{d}\,I}{\mathrm{d}\,t}" display="block"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">P</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">Q</mi></msub></mrow><mo>=</mo><mrow><mrow><mi>R</mi><mspace width=0.166em /><mi>I</mi></mrow><mo>−</mo><mrow><mi>L</mi><mspace width=0.166em /><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>I</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>t</mi></mrow></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E19.m1" class="ltx_Math" alttext="V_{\mathrm{P}}-V_{\mathrm{Q}}=RI-L\dfrac{\mathrm{d}\,I}{\mathrm{d}\,t}" display="block"><mrow><mrow><msub><mi>V</mi><mi mathvariant="normal">P</mi></msub><mo>−</mo><msub><mi>V</mi><mi mathvariant="normal">Q</mi></msub></mrow><mo>=</mo><mrow><mrow><mi>R</mi><mspace width=0.166em /><mi>I</mi></mrow><mo>−</mo><mrow><mi>L</mi><mspace width=0.166em /><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>I</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>t</mi></mrow></mfrac></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.18)</span></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.19)</span></td>
 </tr>
 </table>
 </div>
@@ -584,7 +601,7 @@ de potencial na bobina e a corrente através dela é a seguinte:</p>
 <figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 9.8: </span>Diagrama de circuito de uma bobina ou solenoide.</figcaption>
 </figure>
 <div id="S3.p6" class="ltx_para">
-<p class="ltx_p">O primeiro termo na equação (<a href="#S3.E18" title="(18) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.18</span></a>) é a lei de Ohm,
+<p class="ltx_p">O primeiro termo na equação (<a href="#S3.E19" title="(19) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.19</span></a>) é a lei de Ohm,
 consequência do efeito Joule na bobina (dissipação de energia elétrica
 em calor) e o segundo termo é a lei de Faraday, consequência da
 auto-indução na bobina.</p>
@@ -592,14 +609,14 @@ auto-indução na bobina.</p>
 <div id="S3.p7" class="ltx_para">
 <p class="ltx_p">No sistema internacional de unidades (SI), a unidade de indutância <math id="S3.p7.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>
 é o henry,representado pela letra H. A partir da
-equação (<a href="#S3.E17" title="(17) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.17</span></a>) podemos concluir que:</p>
-<table id="S3.E19" class="ltx_equation ltx_eqn_table">
+equação (<a href="#S3.E18" title="(18) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.18</span></a>) podemos concluir que:</p>
+<table id="S3.E20" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E19.m1" class="ltx_Math" alttext="1\;\mathrm{H}=1\;\mathrm{\dfrac{V\cdot s}{A}}" display="block"><mrow><mrow><mn>1</mn><mspace width=0.166em /><mi mathvariant="normal">H</mi></mrow><mo>=</mo><mrow><mn>1</mn><mspace width=0.166em /><mfrac><mrow><mi mathvariant="normal">V</mi><mo>⋅</mo><mi mathvariant="normal">s</mi></mrow><mi mathvariant="normal">A</mi></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E20.m1" class="ltx_Math" alttext="1\;\mathrm{H}=1\;\mathrm{\dfrac{V\cdot s}{A}}" display="block"><mrow><mrow><mn>1</mn><mspace width=0.166em /><mi mathvariant="normal">H</mi></mrow><mo>=</mo><mrow><mn>1</mn><mspace width=0.166em /><mfrac><mrow><mi mathvariant="normal">V</mi><mo>⋅</mo><mi mathvariant="normal">s</mi></mrow><mi mathvariant="normal">A</mi></mfrac></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.19)</span></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.20)</span></td>
 </tr>
 </table>
 </div>
@@ -658,7 +675,7 @@ através do solenoide é <math id="Thmexample4.p4.m1" class="ltx_Math" alttext="
 <div id="S4.p1" class="ltx_para">
 <p class="ltx_p">Num circuito com fontes de tensão contínua, as correntes atingem o
 estado estacionário em que permanecem constantes. No estado
-estacionário, a equação (<a href="#S3.E17" title="(17) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.17</span></a>) implica que em todos os
+estacionário, a equação (<a href="#S3.E18" title="(18) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.18</span></a>) implica que em todos os
 indutores no circuito a voltagem é nula, mas a corrente pode ter
 qualquer valor. Como tal, no estado estacionário os indutores são
 equivalentes curtos-circuitos (condutores com resistência nula).</p>
@@ -667,12 +684,13 @@ equivalentes curtos-circuitos (condutores com resistência nula).</p>
 <p class="ltx_p">Em qualquer instante em que se altera o estado estacionário, por ligar
 ou desligar alguma fonte, ou por abrir ou fechar algum interruptor, a
 corrente nos indutores não muda de forma instantânea porque, de acordo
-com a equação (<a href="#S3.E17" title="(17) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.17</span></a>), a derivada da corrente deve
+com a equação (<a href="#S3.E18" title="(18) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.18</span></a>), a derivada da corrente deve
 existir em qualquer instante, i.e., <math id="S4.p2.m1" class="ltx_Math" alttext="I(t)" display="inline"><mrow><mi>I</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> é uma função contínua. Já
 nas resistências, condensadores e fontes de tensão <math id="S4.p2.m2" class="ltx_Math" alttext="I(t)" display="inline"><mrow><mi>I</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> pode ter
 descontinuidades nos instantes em que se altera o estado
 estacionário. Mas a voltagem nos indutores nesses instantes não tem de
-ser nula.</p>
+ser nula.
+</p>
 </div>
 <div id="S4.p3" class="ltx_para">
 <p class="ltx_p">Conclui-se então que em qualquer instante <math id="S4.p3.m1" class="ltx_Math" alttext="t_{0}" display="inline"><msub><mi>t</mi><mn>0</mn></msub></math> em que é feita alguma
@@ -799,13 +817,13 @@ elevada.</p>
 estacionário, é equivalente a um curto-circuito. Não circula nenhuma
 corrente pela resistência <math id="S4.SS1.p2.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> e a corrente no indutor, igual à
 corrente na resistência <math id="S4.SS1.p2.m4" class="ltx_Math" alttext="R_{\mathrm{s}}" display="inline"><msub><mi>R</mi><mi mathvariant="normal">s</mi></msub></math> é igual a:</p>
-<table id="S4.E20" class="ltx_equation ltx_eqn_table">
+<table id="S4.E21" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E20.m1" class="ltx_Math" alttext="I_{0}=\dfrac{\varepsilon}{R_{\mathrm{s}}}" display="block"><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>=</mo><mfrac><mi>ε</mi><msub><mi>R</mi><mi mathvariant="normal">s</mi></msub></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E21.m1" class="ltx_Math" alttext="I_{0}=\dfrac{\varepsilon}{R_{\mathrm{s}}}" display="block"><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>=</mo><mfrac><mi>ε</mi><msub><mi>R</mi><mi mathvariant="normal">s</mi></msub></mfrac></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.20)</span></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.21)</span></td>
 </tr>
 </table>
 </div>
@@ -815,26 +833,26 @@ variável <math id="S4.SS1.p3.m2" class="ltx_Math" alttext="\varepsilon_{\mathrm
 porque o sentido da corrente inicial <math id="S4.SS1.p3.m3" class="ltx_Math" alttext="I_{0}" display="inline"><msub><mi>I</mi><mn>0</mn></msub></math> é de cima para baixo. A
 figura <a href="#S4.F10" title="Figura 9.10 ‣ 4.1 Circuito RL ‣ 4 Circuitos com indutores ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.10</span></a> mostra o circuito equivalente; a
 diferença de potencial na resistência é:</p>
-<table id="S4.E21" class="ltx_equation ltx_eqn_table">
-
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E21.m1" class="ltx_Math" alttext="\varepsilon_{\mathrm{i}}=RI" display="block"><mrow><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub><mo>=</mo><mrow><mi>R</mi><mspace width=0.166em /><mi>I</mi></mrow></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.21)</span></td>
-</tr>
-</table>
-</div>
-<div id="S4.SS1.p4" class="ltx_para">
-<p class="ltx_p">E substituindo a expressão (<a href="#S3.E15" title="(15) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.15</span></a>) para a f.e.m. induzida, obtém-se uma equação diferencial para corrente em função do
-tempo:</p>
 <table id="S4.E22" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E22.m1" class="ltx_Math" alttext="\dfrac{\mathrm{d}\,I}{\mathrm{d}\,t}=-\dfrac{R}{L}I" display="block"><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>I</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mi>R</mi><mi>L</mi></mfrac><mspace width=0.166em /><mi>I</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E22.m1" class="ltx_Math" alttext="\varepsilon_{\mathrm{i}}=RI" display="block"><mrow><msub><mi>ε</mi><mi mathvariant="normal">i</mi></msub><mo>=</mo><mrow><mi>R</mi><mspace width=0.166em /><mi>I</mi></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.22)</span></td>
+</tr>
+</table>
+</div>
+<div id="S4.SS1.p4" class="ltx_para">
+<p class="ltx_p">E substituindo a expressão (<a href="#S3.E16" title="(16) ‣ 3 Auto-indução ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.16</span></a>) para a f.e.m. induzida, obtém-se uma equação diferencial para corrente em função do
+tempo:</p>
+<table id="S4.E23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E23.m1" class="ltx_Math" alttext="\dfrac{\mathrm{d}\,I}{\mathrm{d}\,t}=-\dfrac{R}{L}I" display="block"><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>I</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mi>R</mi><mi>L</mi></mfrac><mspace width=0.166em /><mi>I</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.23)</span></td>
 </tr>
 </table>
 </div>
@@ -842,20 +860,20 @@ tempo:</p>
 <figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 9.10: </span>Diagrama do circuito RL em <math id="S4.F10.m2" class="ltx_Math" alttext="t\geq 0" display="inline"><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow></math>.</figcaption>
 </figure>
 <div id="S4.SS1.p5" class="ltx_para">
-<p class="ltx_p">A equação (<a href="#S4.E22" title="(22) ‣ 4.1 Circuito RL ‣ 4 Circuitos com indutores ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.22</span></a>) diz que <math id="S4.SS1.p5.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> é uma função que quando
+<p class="ltx_p">A equação (<a href="#S4.E23" title="(23) ‣ 4.1 Circuito RL ‣ 4 Circuitos com indutores ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.23</span></a>) diz que <math id="S4.SS1.p5.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> é uma função que quando
 derivada em ordem a <math id="S4.SS1.p5.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, o resultado é a mesma função multiplicada
 pela constante <math id="S4.SS1.p5.m3" class="ltx_Math" alttext="-R/L" display="inline"><mrow><mo>−</mo><mrow><mi>R</mi><mo>/</mo><mi>L</mi></mrow></mrow></math>. Como tal, <math id="S4.SS1.p5.m4" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> é uma
 função exponencial com expoente <math id="S4.SS1.p5.m5" class="ltx_Math" alttext="-Rt/L" display="inline"><mrow><mo>−</mo><mrow><mrow><mi>R</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>/</mo><mi>L</mi></mrow></mrow></math>, multiplicada por
 alguma constante; constante essa que deverá ser o valor de <math id="S4.SS1.p5.m6" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>
-no instante <math id="S4.SS1.p5.m7" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>, dada pela expressão (<a href="#S4.E20" title="(20) ‣ 4.1 Circuito RL ‣ 4 Circuitos com indutores ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.20</span></a>). A expressão da
+no instante <math id="S4.SS1.p5.m7" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>, dada pela expressão (<a href="#S4.E21" title="(21) ‣ 4.1 Circuito RL ‣ 4 Circuitos com indutores ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.21</span></a>). A expressão da
 corrente em função do tempo é:</p>
-<table id="S4.E23" class="ltx_equation ltx_eqn_table">
+<table id="S4.E24" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E23.m1" class="ltx_Math" alttext="I=\dfrac{\varepsilon}{R_{\mathrm{s}}}\,\mathrm{e}^{-\frac{R}{L}t}" display="block"><mrow><mi>I</mi><mo>=</mo><mrow><mfrac><mi>ε</mi><msub><mi>R</mi><mi mathvariant="normal">s</mi></msub></mfrac><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mrow><mfrac><mi>R</mi><mi>L</mi></mfrac><mspace width=0.166em /><mi>t</mi></mrow></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E24.m1" class="ltx_Math" alttext="I=\dfrac{\varepsilon}{R_{\mathrm{s}}}\,\mathrm{e}^{-\frac{R}{L}t}" display="block"><mrow><mi>I</mi><mo>=</mo><mrow><mfrac><mi>ε</mi><msub><mi>R</mi><mi mathvariant="normal">s</mi></msub></mfrac><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mrow><mfrac><mi>R</mi><mi>L</mi></mfrac><mspace width=0.166em /><mi>t</mi></mrow></mrow></msup></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.23)</span></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.24)</span></td>
 </tr>
 </table>
 </div>
@@ -863,13 +881,13 @@ corrente em função do tempo é:</p>
 <p class="ltx_p">A constante <math id="S4.SS1.p6.m1" class="ltx_Math" alttext="L/R" display="inline"><mrow><mi>L</mi><mo>/</mo><mi>R</mi></mrow></math> chama-se <em class="ltx_emph ltx_font_italic">constante de tempo</em> do
 circuito, porque tem unidades de tempo. Em unidades SI, um henry
 dividido por um ohm é igual a um segundo:</p>
-<table id="S4.E24" class="ltx_equation ltx_eqn_table">
+<table id="S4.E25" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E24.m1" class="ltx_Math" alttext="1\;\dfrac{\mathrm{H}}{\Omega}=1\,\mathrm{\dfrac{V\cdot s/A}{V/A}}=1\;\mathrm{s}" display="block"><mrow><mrow><mn>1</mn><mspace width=0.166em /><mfrac><mi mathvariant="normal">H</mi><mi mathvariant="normal">Ω</mi></mfrac></mrow><mo>=</mo><mrow><mn>1</mn><mspace width=0.166em /><mfrac><mrow><mrow><mi mathvariant="normal">V</mi><mo>⋅</mo><mi mathvariant="normal">s</mi></mrow><mo>/</mo><mi mathvariant="normal">A</mi></mrow><mrow><mi mathvariant="normal">V</mi><mo>/</mo><mi mathvariant="normal">A</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mn>1</mn><mspace width=0.166em /><mi mathvariant="normal">s</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E25.m1" class="ltx_Math" alttext="1\;\dfrac{\mathrm{H}}{\Omega}=1\,\mathrm{\dfrac{V\cdot s/A}{V/A}}=1\;\mathrm{s}" display="block"><mrow><mrow><mn>1</mn><mspace width=0.166em /><mfrac><mi mathvariant="normal">H</mi><mi mathvariant="normal">Ω</mi></mfrac></mrow><mo>=</mo><mrow><mn>1</mn><mspace width=0.166em /><mfrac><mrow><mrow><mi mathvariant="normal">V</mi><mo>⋅</mo><mi mathvariant="normal">s</mi></mrow><mo>/</mo><mi mathvariant="normal">A</mi></mrow><mrow><mi mathvariant="normal">V</mi><mo>/</mo><mi mathvariant="normal">A</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mn>1</mn><mspace width=0.166em /><mi mathvariant="normal">s</mi></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.24)</span></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.25)</span></td>
 </tr>
 </table>
 </div>
@@ -877,15 +895,15 @@ dividido por um ohm é igual a um segundo:</p>
 <p class="ltx_p">ã figura <a href="#S4.F11" title="Figura 9.11 ‣ 4.1 Circuito RL ‣ 4 Circuitos com indutores ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.11</span></a> mostra o gráfico da intensidade da
 corrente em função do tempo. A reta a tracejado é tangente à curva em
 <math id="S4.SS1.p7.m1" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>. O declive da curva em <math id="S4.SS1.p7.m2" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>, obtido a partir da
-equação (<a href="#S4.E22" title="(22) ‣ 4.1 Circuito RL ‣ 4 Circuitos com indutores ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.22</span></a>), é <math id="S4.SS1.p7.m3" class="ltx_Math" alttext="-R\epsilon/(LR_{\mathrm{s}})" display="inline"><mrow><mo>−</mo><mrow><mrow><mi>R</mi><mspace width=0.166em /><mi>ϵ</mi></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mspace width=0.166em /><msub><mi>R</mi><mi mathvariant="normal">s</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> e a equação
+equação (<a href="#S4.E23" title="(23) ‣ 4.1 Circuito RL ‣ 4 Circuitos com indutores ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.23</span></a>), é <math id="S4.SS1.p7.m3" class="ltx_Math" alttext="-R\epsilon/(LR_{\mathrm{s}})" display="inline"><mrow><mo>−</mo><mrow><mrow><mi>R</mi><mspace width=0.166em /><mi>ϵ</mi></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mspace width=0.166em /><msub><mi>R</mi><mi mathvariant="normal">s</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> e a equação
 dessa reta é,</p>
-<table id="S4.E25" class="ltx_equation ltx_eqn_table">
+<table id="S4.E26" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E25.m1" class="ltx_Math" alttext="I=\dfrac{\epsilon}{R_{\mathrm{s}}}\dfrac{-R\epsilon}{LR_{\mathrm{s}}}t" display="block"><mrow><mi>I</mi><mo>=</mo><mrow><mfrac><mi>ϵ</mi><msub><mi>R</mi><mi mathvariant="normal">s</mi></msub></mfrac><mspace width=0.166em /><mfrac><mrow><mo>−</mo><mrow><mi>R</mi><mspace width=0.166em /><mi>ϵ</mi></mrow></mrow><mrow><mi>L</mi><mspace width=0.166em /><msub><mi>R</mi><mi mathvariant="normal">s</mi></msub></mrow></mfrac><mspace width=0.166em /><mi>t</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E26.m1" class="ltx_Math" alttext="I=\dfrac{\epsilon}{R_{\mathrm{s}}}\dfrac{-R\epsilon}{LR_{\mathrm{s}}}t" display="block"><mrow><mi>I</mi><mo>=</mo><mrow><mfrac><mi>ϵ</mi><msub><mi>R</mi><mi mathvariant="normal">s</mi></msub></mfrac><mspace width=0.166em /><mfrac><mrow><mo>−</mo><mrow><mi>R</mi><mspace width=0.166em /><mi>ϵ</mi></mrow></mrow><mrow><mi>L</mi><mspace width=0.166em /><msub><mi>R</mi><mi mathvariant="normal">s</mi></msub></mrow></mfrac><mspace width=0.166em /><mi>t</mi></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.25)</span></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.26)</span></td>
 </tr>
 </table>
 <p class="ltx_p">que corta o eixo do tempo em <math id="S4.SS1.p7.m4" class="ltx_Math" alttext="L/R" display="inline"><mrow><mi>L</mi><mo>/</mo><mi>R</mi></mrow></math>.</p>
@@ -903,134 +921,77 @@ lenta será a diminuição exponencial da corrente.</p>
 </section>
 <section id="S5" class="ltx_section">
 <h2 class="ltx_title ltx_title_section">
-<span class="ltx_tag ltx_tag_section">9.5 </span>Forma diferencial da lei de Faraday</h2>
+<span class="ltx_tag ltx_tag_section">9.5 </span>Forma integral e diferencial da lei de Faraday</h2>
 
 <div id="S5.p1" class="ltx_para">
-<p class="ltx_p">Seja uma região onde existem campo elétrico <math id="S5.p1.m1" class="ltx_Math" alttext="\vec{E}" display="inline"><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> e campo
-magnético <math id="S5.p1.m2" class="ltx_Math" alttext="\vec{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> e uma curva fechada e orientada, como a da
-figura <a href="#S2.F3" title="Figura 9.3 ‣ 2.1 Lei de Faraday ‣ 2 Fluxo magnético ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.3</span></a>, que se desloca com velocidade
-<math id="S5.p1.m3" class="ltx_Math" alttext="\vec{v}" display="inline"><mover accent="true"><mi>v</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math>. Sejam o <math id="S5.p1.m4" class="ltx_Math" alttext="\vec{E}^{\prime}" display="inline"><msup><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></math> e <math id="S5.p1.m5" class="ltx_Math" alttext="\vec{B}^{\prime}" display="inline"><msup><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></math> os campos no referencial
-que se desloca com a curva C; o campo elétrico nesse referencial é
-igual ao campo <math id="S5.p1.m6" class="ltx_Math" alttext="\vec{E}" display="inline"><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> mais o campo elétrico induzido:</p>
-<table id="S5.E26" class="ltx_equation ltx_eqn_table">
-
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E26.m1" class="ltx_Math" alttext="\vec{E}^{\prime}=\vec{E}+\vec{v}\times\vec{B}" display="block"><mrow><msup><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup><mo>=</mo><mrow><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>+</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.26)</span></td>
-</tr>
-</table>
-<p class="ltx_p">No referencial em movimento com a curva C há f.e.m. induzida dada pela
-lei de Faraday (equação (<a href="#S1.E6" title="(6) ‣ 1 Campo elétrico induzido ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.6</span></a>)). A f.e.m. induzida é o
-integral de linha do campo <math id="S5.p1.m7" class="ltx_Math" alttext="\vec{E}^{\prime}" display="inline"><msup><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></math> ao longo da curva C e o fluxo
-magnético é o integral de superfície do campo <math id="S5.p1.m8" class="ltx_Math" alttext="\vec{B}^{\prime}" display="inline"><msup><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></math> na superfície
-S delimitada por C; admitindo que a curva C não se deforma, a derivada
-do fluxo magnético, em ordem ao tempo, será igual ao integral de
-superfície da derivada de <math id="S5.p1.m9" class="ltx_Math" alttext="\vec{B}^{\prime}" display="inline"><msup><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></math> em ordem ao tempo e obtém-se</p>
+<p class="ltx_p">Seja C uma curva fechada e orientada que delimita uma superfície
+S. Como a curva C é fixa, na derivada do fluxo magnético através de S
+(equação (<a href="#S2.E10" title="(10) ‣ 2 Fluxo magnético ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.10</span></a>)) basta derivar o campo, já que S e
+<math id="S5.p1.m1" class="ltx_Math" alttext="\mathrm{d}\vec{A}" display="inline"><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mover accent="true"><mi>A</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></math> permanecem constantes:
+</p>
 <table id="S5.E27" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E27.m1" class="ltx_Math" alttext="\oint_{\mathrm{C}}\vec{E}^{\prime}\cdot\mathrm{d}\vec{r}=-\iint_{\mathrm{S}}%
-\dfrac{\partial\vec{B}^{\prime}}{\partial t}\cdot\hat{n}\,\mathrm{d}A" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><msup><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><msup><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>t</mi></mrow></mfrac><mo>⋅</mo><mover accent="true"><mi>n</mi><mo stretchy="false">ˆ</mo></mover></mrow><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E27.m1" class="ltx_Math" alttext="\dfrac{\mathrm{d}\,\phantom{t}}{\mathrm{d}\,t}\iint_{\mathrm{S}}\vec{B}\cdot%
+\mathrm{d}\vec{A}=\iint_{\mathrm{S}}\dfrac{\partial\vec{B}}{\partial t}\cdot%
+\mathrm{d}\vec{A}" display="block"><mrow><mrow><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>t</mi></mrow></mfrac><mspace width=0.166em /><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>A</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>t</mi></mrow></mfrac><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>A</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.27)</span></td>
 </tr>
 </table>
-<p class="ltx_p">onde <math id="S5.p1.m10" class="ltx_Math" alttext="\hat{n}" display="inline"><mover accent="true"><mi>n</mi><mo stretchy="false">ˆ</mo></mover></math> é o versor normal a S, orientado de acordo com o
-sentido da curva C (ver figura <a href="#S2.F3" title="Figura 9.3 ‣ 2.1 Lei de Faraday ‣ 2 Fluxo magnético ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.3</span></a>).</p>
-</div>
-<div id="S5.p2" class="ltx_para">
-<p class="ltx_p">A derivada de <math id="S5.p2.m1" class="ltx_Math" alttext="\vec{B}^{\prime}" display="inline"><msup><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></math> em ordem ao tempo é igual à <em class="ltx_emph ltx_font_italic">derivada
-convectiva</em> de <math id="S5.p2.m2" class="ltx_Math" alttext="\vec{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math>, tal como se explica no
-apêndice <a href="analise_vetorial.html">A</a>, e usando as equações (<a href="analise_vetorial.html#S3.E88">A.88</a>) e
-(<a href="analise_vetorial.html#S4.E95">A.95</a>)</p>
+<p class="ltx_p">observe-se que a derivada temporal tornou-se derivada parcial, porque
+<math id="S5.p1.m2" class="ltx_Math" alttext="\vec{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> depende da posição e do tempo. Combinando as equações (<a href="#S2.E12" title="(12) ‣ 2.1 Lei de Faraday ‣ 2 Fluxo magnético ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.12</span></a>),
+(<a href="#S2.E13" title="(13) ‣ 2.1 Lei de Faraday ‣ 2 Fluxo magnético ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.13</span></a>) e (<a href="#S5.E27" title="(27) ‣ 5 Forma integral e diferencial da lei de Faraday ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.27</span></a>) a lei de
+Faraday pode ser escrita da forma seguinte:</p>
 <table id="S5.E28" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E28.m1" class="ltx_Math" alttext="\dfrac{\partial\vec{B}^{\prime}}{\partial t}=\dfrac{\mathrm{D}\,\vec{B}}{%
-\mathrm{D}\,t}=\dfrac{\partial\vec{B}}{\partial t}+\vec{v}(\vec{\nabla}\cdot%
-\vec{B})-\vec{\nabla}\times(\vec{v}\times\vec{B})" display="block"><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><msup><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi mathvariant="normal">D</mi><mspace width=0.166em /><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mrow><mi mathvariant="normal">D</mi><mspace width=0.166em /><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>t</mi></mrow></mfrac><mo>+</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>−</mo><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S5.E28.m1" class="ltx_Math" alttext="\boxed{\oint_{\mathrm{C}}\vec{E}\cdot\mathrm{d}\vec{r}=-\iint_{\mathrm{S}}%
+\dfrac{\partial\vec{B}}{\partial t}\cdot\mathrm{d}\vec{A}}" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>t</mi></mrow></mfrac><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>A</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.28)</span></td>
 </tr>
 </table>
-<p class="ltx_p">tendo em conta que a divergência de <math id="S5.p2.m3" class="ltx_Math" alttext="\vec{B}" display="inline"><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> é nula e substituindo na
-equação (<a href="#S5.E27" title="(27) ‣ 5 Forma diferencial da lei de Faraday ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.27</span></a>),</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">Que é uma relação fundamental entre os campos elétrico e magnético,
+válida em qualquer curva fechada e orientada, C, e respetiva
+superfície S delimitada por C.</p>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">Usando o teorema de Stokes (<a href="analise_vetorial.html#S3.E76">A.76</a>) no integral do
+lado esquerdo, obtém-se</p>
 <table id="S5.E29" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E29.m1" class="ltx_Math" alttext="\oint_{\mathrm{C}}\vec{E}^{\prime}\cdot\mathrm{d}\vec{r}=-\iint_{\mathrm{S}}%
-\dfrac{\partial\vec{B}}{\partial t}\cdot\hat{n}\,\mathrm{d}A+\iint_{\mathrm{S}%
-}\vec{\nabla}\times(\vec{v}\times\vec{B})\cdot\hat{n}\,\mathrm{d}A" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><msup><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo>−</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>t</mi></mrow></mfrac><mo>⋅</mo><mover accent="true"><mi>n</mi><mo stretchy="false">ˆ</mo></mover></mrow><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>A</mi></mrow></mrow></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mrow><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mover accent="true"><mi>n</mi><mo stretchy="false">ˆ</mo></mover></mrow><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E29.m1" class="ltx_Math" alttext="\iint_{\mathrm{S}}(\vec{\nabla}\times\vec{E})\cdot\mathrm{d}\vec{A}=-\iint_{%
+\mathrm{S}}\dfrac{\partial\vec{B}}{\partial t}\cdot\mathrm{d}{A}" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>A</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>t</mi></mrow></mfrac><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.29)</span></td>
 </tr>
 </table>
-</div>
-<div id="S5.p3" class="ltx_para">
-<p class="ltx_p">Aplicando o teorema de Stokes (<a href="analise_vetorial.html#S3.E76">A.76</a>) no último integral e passando o
-resultado para o lado esquerdo da equação,</p>
+<p class="ltx_p">e no limite em que a área de S aproxima-se de zero, ficando apenas um
+ponto, nesse ponto verifica-se:</p>
 <table id="S5.E30" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
 <td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E30.m1" class="ltx_Math" alttext="\oint_{\mathrm{C}}\left(\vec{E}^{\prime}-\vec{v}\times\vec{B}\right)\cdot%
-\mathrm{d}\vec{r}=-\iint_{\mathrm{S}}\dfrac{\partial\vec{B}}{\partial t}\cdot%
-\hat{n}\,\mathrm{d}A" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mrow><mo>(</mo><mrow><msup><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>′</mo></msup><mo>−</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow><mo>)</mo></mrow><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>t</mi></mrow></mfrac><mo>⋅</mo><mover accent="true"><mi>n</mi><mo stretchy="false">ˆ</mo></mover></mrow><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S5.E30.m1" class="ltx_Math" alttext="\boxed{\vec{\nabla}\times\vec{E}=-\dfrac{\partial\vec{B}}{\partial t}}" display="block"><mrow><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo>=</mo><mrow><mo>−</mo><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>t</mi></mrow></mfrac></mrow></mrow></math></td>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.30)</span></td>
 </tr>
 </table>
-<p class="ltx_p">e usando a equação (<a href="#S5.E26" title="(26) ‣ 5 Forma diferencial da lei de Faraday ‣ Indução eletromagnética" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.26</span></a>),</p>
-<table id="S5.E31" class="ltx_equation ltx_eqn_table">
-
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E31.m1" class="ltx_Math" alttext="\oint_{\mathrm{C}}\vec{E}\cdot\mathrm{d}\vec{r}=-\iint_{\mathrm{S}}\dfrac{%
-\partial\vec{B}}{\partial t}\cdot\hat{n}\,\mathrm{d}A" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi mathvariant="normal">C</mi></msub><mrow><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>⋅</mo><mrow><mo rspace="0pt">d</mo><mover accent="true"><mi>r</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>t</mi></mrow></mfrac><mo>⋅</mo><mover accent="true"><mi>n</mi><mo stretchy="false">ˆ</mo></mover></mrow><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.31)</span></td>
-</tr>
-</table>
 </div>
 <div id="S5.p4" class="ltx_para">
-<p class="ltx_p">Usando novamente o teorema de Stokes (<a href="analise_vetorial.html#S3.E76">A.76</a>) no integral do
-lado esquerdo, obtém-se</p>
-<table id="S5.E32" class="ltx_equation ltx_eqn_table">
-
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E32.m1" class="ltx_Math" alttext="\iint_{\mathrm{S}}(\vec{\nabla}\times\vec{E})\cdot\hat{n}\,\mathrm{d}A=-\iint_%
-{\mathrm{S}}\dfrac{\partial\vec{B}}{\partial t}\cdot\hat{n}\,\mathrm{d}A" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mover accent="true"><mi>n</mi><mo stretchy="false">ˆ</mo></mover></mrow><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>A</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi mathvariant="normal">S</mi></msub><mrow><mrow><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>t</mi></mrow></mfrac><mo>⋅</mo><mover accent="true"><mi>n</mi><mo stretchy="false">ˆ</mo></mover></mrow><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.32)</span></td>
-</tr>
-</table>
-<p class="ltx_p">e no limite em que a área de S se aproxima de zero, ficando apenas um
-ponto, nesse ponto verifica-se:</p>
-<table id="S5.E33" class="ltx_equation ltx_eqn_table">
-
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S5.E33.m1" class="ltx_Math" alttext="\boxed{\vec{\nabla}\times\vec{E}=-\dfrac{\partial\vec{B}}{\partial t}}" display="block"><mrow><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false" style="font-size:70%">→</mo></mover><mo>×</mo><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mo>=</mo><mrow><mo>−</mo><mfrac><mrow><mo>∂</mo><mspace width=0.11em /><mover accent="true"><mi>B</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></mrow><mrow><mo>∂</mo><mspace width=0.11em /><mi>t</mi></mrow></mfrac></mrow></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(9.33)</span></td>
-</tr>
-</table>
+<p class="ltx_p">Se o campo magnético depende do tempo, o rotacional do campo elétrico
+é diferente de zero e, como tal, não é um campo conservativo. Quando o
+campo magnético é estático, não há campo elétrico induzido e o
+rotacional de <math id="S5.p4.m1" class="ltx_Math" alttext="\vec{E}" display="inline"><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> é nulo; o campo elétrostático nesse caso é
+conservativo e é devido às cargas livres.</p>
 </div>
-<div id="S5.p5" class="ltx_para">
-<p class="ltx_p">Essa é a forma diferencial da lei de Faraday. Se o campo magnético
-depende do tempo, o rotacional do campo elétrico é diferente de zero
-e, como tal, não é um campo conservativo. Quando o campo magnético é
-estático, não há campo elétrico induzido e o rotacional de
-<math id="S5.p5.m1" class="ltx_Math" alttext="\vec{E}" display="inline"><mover accent="true"><mi>E</mi><mo stretchy="false" style="font-size:70%">→</mo></mover></math> é nulo; o campo elétrico nesse caso é conservativo e é
-produzido por cargas.</p>
-</div>
-<div class="ltx_pagination ltx_role_newpage"></div>
 </section>
 <section id="Sx1" class="ltx_section">
 <h2 class="ltx_title ltx_title_section">Problemas</h2>
@@ -1145,7 +1106,8 @@ instante <math id="Sx1.I1.i8.p1.m1" class="ltx_Math" alttext="t=0" display="inli
 3.4 k<math id="Sx1.I1.i8.p1.m4" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, em <math id="Sx1.I1.i8.p1.m5" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>.
 <br class="ltx_break">
 (<em class="ltx_emph ltx_font_italic">c</em>) Determine a voltagem na resistência de 3.4 k<math id="Sx1.I1.i8.p1.m6" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>,
-quando o circuito atingir o estado estacionário.</p>
+quando o circuito atingir o estado estacionário.
+</p>
 <img src="img/circ_30.png" style="width:16.275em;max-width:100%;height:auto" id="Sx1.I1.i8.p1.g1" class="ltx_graphics ltx_centering" alt="">
 </div>
 </li>
@@ -1216,8 +1178,7 @@ calcule a corrente e a f.e.m. médias na bobina.</p>
 campo magnético que aponta para lá da folha e com módulo que depende
 do tempo <math id="Sx1.I1.i13.p1.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> segundo a expressão <math id="Sx1.I1.i13.p1.m2" class="ltx_Math" alttext="0.6\,\mathrm{e}^{-t/15}" display="inline"><mrow><mn>0.6</mn><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mrow><mi>t</mi><mo>/</mo><mn>15</mn></mrow></mrow></msup></mrow></math> (unidades
 SI). Determine a intensidade, direção e sentido do campo elétrico
-induzido dentro do anel condutor de raio <math id="Sx1.I1.i13.p1.m3" class="ltx_Math" alttext="r=9" display="inline"><mrow><mi>r</mi><mo>=</mo><mn>9</mn></mrow></math> cm.
-</p>
+induzido dentro do anel condutor de raio <math id="Sx1.I1.i13.p1.m3" class="ltx_Math" alttext="r=9" display="inline"><mrow><mi>r</mi><mo>=</mo><mn>9</mn></mrow></math> cm.</p>
 <img src="img/eic0014-prob_9_6.png" style="width:14.049em;max-width:100%;height:auto" id="Sx1.I1.i13.p1.g1" class="ltx_graphics ltx_centering" alt="">
 </div>
 </li>
@@ -1270,7 +1231,8 @@ cada indutor, após o circuito atingir o estado estacionário.</p>
 <li id="Sx2.I2.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">9.1.</span></span> 
 <div id="Sx2.I2.i1.p1" class="ltx_para">
-<p class="ltx_p">0.33 V.</p>
+<p class="ltx_p">0.33 V.
+</p>
 </div>
 </li>
 <li id="Sx2.I2.i2" class="ltx_item" style="list-style-type:none;">
@@ -1342,8 +1304,7 @@ fluxo (sempre positivo) aumenta até um valor máximo, em
 <li id="Sx2.I2.i10" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">9.10.</span></span> 
 <div id="Sx2.I2.i10.p1" class="ltx_para">
-<p class="ltx_p"><math id="Sx2.I2.i10.p1.m1" class="ltx_Math" alttext="5.67\times 10^{-6}" display="inline"><mrow><mn>5.67</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>6</mn></mrow></msup></mrow></math> V.
-</p>
+<p class="ltx_p"><math id="Sx2.I2.i10.p1.m1" class="ltx_Math" alttext="5.67\times 10^{-6}" display="inline"><mrow><mn>5.67</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>6</mn></mrow></msup></mrow></math> V.</p>
 </div>
 </li>
 <li id="Sx2.I2.i11" class="ltx_item" style="list-style-type:none;">
@@ -1383,7 +1344,8 @@ não existe nenhuma resistência que dissipe energia.</p>
 resistências de 1.8 k<math id="Sx2.I2.i15.p1.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e 2.7 k<math id="Sx2.I2.i15.p1.m4" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. No estado
 estacionário, 2.56 mA na resistência de 1.8 k<math id="Sx2.I2.i15.p1.m5" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, 0.93 mA na
 resistência de 4.7 k<math id="Sx2.I2.i15.p1.m6" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, e 1.63 mA na resistência de 2.7
-k<math id="Sx2.I2.i15.p1.m7" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>.</p>
+k<math id="Sx2.I2.i15.p1.m7" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>.
+</p>
 </div>
 </li>
 <li id="Sx2.I2.i16" class="ltx_item" style="list-style-type:none;">
@@ -1406,7 +1368,7 @@ k<math id="Sx2.I2.i15.p1.m7" class="ltx_Math" alttext="\Omega" display="inline">
 <footer class="ltx_page_footer">
 <p>&copy; 2023, Jaime E. Villate &amp; Luís Miguel Martelo</p>
 <p>Publicado nos termos da <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição-Partilha</a> (versão 4.0).</p>
-<div class="ltx_page_logo">Generated  on Fri Dec  1 18:58:38 2023 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML </a>
+<div class="ltx_page_logo">Generated  on Sun Dec  3 11:19:16 2023 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML </a>
 </div></footer>
 </div>
 </body>
