@@ -1,0 +1,29 @@
+%!PS-Adobe-2.0
+%%Author: Jaime E. Villate <villate@fe.up.pt>
+%%CreationDate: Mar 3 1999
+%%BoundingBox: 170 475 400 720
+% Fondo
+0.15 0.4 0.9 sethsbcolor 170 475 moveto 230 245 Box fill
+% Cuerpo
+0.3 0.4 0.5 0.9 setcmykcolor
+{[200 500 0 0 222 524 2 10 220 554 0 10 234 603 0 20 213 627 -4 5
+215 642 5 5 252 631 7 -2 269 590 3 -12 297 546 10 -9 347 526 6 -3
+364 511 3 -2 380 500 0 0 357 502 -6 2 346 510 0 0 319 506 -8 0
+293 509 0 0 297 503 4 -3 307 500 0 0 281 501 -5 3 270 511 0 0
+249 507 -10 0 232 514 0 0 221 503 -8 -5] Bezier} 0.8 20 Bump
+% Ojo
+[239 631 2 4 250 626 -2 -4] Bezier 1 setgray fill
+244 629 2.5 0 360 arc 243 630 1 0 360 arc 0 setgray eofill
+[214 644 -1 -2 215 641 2 -1 221 643 -1 2] Bezier fill
+% Bigotes
+gsave 190 600 translate
+12 44 8 46 3 42 23 40 16 42 6 40 1 36 22 38 17 35 13 33 9 31 20 35 33 35
+37 33
+43 29 30 35 39 42 49 40 54 36 33 38 39 48 42 48 48 43 30 40
+6 {moveto curveto} repeat stroke grestore
+% Bola
+1 0 0 0.7 setcmykcolor 216 680 moveto 35 25 135 0.9 Sphere 
+showpage
+%%EOF
+
+

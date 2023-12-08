@@ -1,0 +1,42 @@
+0.6 0.6 scale /graylevels 300 def
+plotreset 1 setgray
+300 500 120 120 200 Box3d 50 50 70 Domain3d
+
+% Coordinates definition
+0 setgray 0.6 setlinewidth 16 /Times-Italic Font
+350 440 moveto 30 90 Arrow stroke
+300 420 moveto 40 210 cartesian rmoveto 20 210 cartesian rlineto stroke
+300 420 moveto 40 330 cartesian rmoveto 20 330 cartesian rlineto stroke
+300 420 moveto 50 330 cartesian rmoveto currentpoint  35 succ stroke
+300 420 55 40 220 260 Ellipse stroke 300 420 55 40 280 320 Ellipse stroke
+297 375 moveto ([q]) Show 358 455 moveto (z) show
+
+% disks on the back
+216 507 moveto currentpoint -120 boost1
+0.1 setgray 30 5 cylinder 0.1 0.3 0.4 sethsbcolor
+0 5 moveto 5 60 cylinder boost2
+384 507 moveto currentpoint  120 boost1
+0.1 setgray 30 5 cylinder 0.1 0.3 0.4 sethsbcolor
+0 5 moveto 5 60 cylinder boost2
+
+% cylinder
+0.6 0.3 0.4 sethsbcolor
+300 420 moveto 40 70 cylinder
+300 490 moveto 0.1 0.3 0.4 sethsbcolor 10 10 cylinder
+
+% spring
+0 setgray 2 setlinewidth
+[0 0 0 -90 5 4860{dup cos 18 mul exch dup sin 18 mul exch 36 div} for
+dup 0 exch 0 exch] Plot3d
+0.1 0.3 0.4 sethsbcolor
+300 884 moveto 10 40 cylinder
+
+% disks in the front
+328 439 moveto currentpoint -120 boost1 5 60 cylinder
+0.1 setgray 0 60 moveto 30 5 cylinder
+0.1 0.3 0.4 sethsbcolor 0 65 moveto 5 15 cylinder boost2
+272 439 moveto currentpoint  120 boost1 5 60 cylinder
+0.1 setgray 0 60 moveto 30 5 cylinder
+0.1 0.3 0.4 sethsbcolor 0 65 moveto 5 15 cylinder boost2
+showpage
+

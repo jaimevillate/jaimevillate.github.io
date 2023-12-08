@@ -1,0 +1,37 @@
+%!PS-Adobe-2.0
+%%Title: disco.ps
+%%Creator: Jaime E. Villate
+%%CreationDate: Jun 22 1999
+%%BoundingBox: 95 460 322 692
+0.5 setlinewidth
+200 465 moveto 0.3 0.1 0.1 1 setcmykcolor
+135 60 5 0.5 0.3 0.7 30 30 Block
+0 5 rmoveto 130 30 Cartesian rmoveto
+23 150 Cartesian rmoveto
+5 14 125 0.5 0.3 0.7 30 30 Block currentpoint
+200 470 moveto 0.2 0.2 0.1 1 setcmykcolor
+30 150 Cartesian rmoveto
+30 30 Cartesian rmoveto
+3 1.8 80 0.7 Cylinder
+0 80 rmoveto 0 0.2 0.3 0.8 setcmykcolor
+100 60 5 1.2 Cylinder
+0 5 rmoveto 0.2 0.2 0.1 1 setcmykcolor
+3 1.8 40 0.7 Cylinder
+0 45 rmoveto currentpoint
+4 2 roll moveto 0 125 rmoveto
+110 210 Cartesian rmoveto 0.3 0.1 0.1 1 setcmykcolor
+115 14 5 0.5 0.3 0.7 30 30 Block
+0.2 0.2 0.1 1 setcmykcolor
+moveto 3 1.8 30 0.7 Cylinder
+150 550 moveto 0.1 0.1 0.4 1 setcmykcolor
+10 10 10 0.7 0.6 0.85 30 30 Block
+0 15 rmoveto 0 20 rlineto 0 setgray
+0 -5 rmoveto currentpoint 210 Succ
+50 29 rlineto currentpoint 30 Succ stroke
+200 670 10 6 150 330 Ellipse  currentpoint 30 Succ stroke
+12 /Times-Roman Font
+198 673 moveto ([a]) Show 162 606 moveto (8 cm) show
+showpage
+
+
+

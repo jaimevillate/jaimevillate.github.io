@@ -1,0 +1,21 @@
+%!PS-Adobe-2.0
+%%Title: circuito2.ps
+%%Creator: Jaime E. Villate
+%%CreationDate: October 1999
+%%BoundingBox: 110 505 285 630
+
+12 /Times-Roman Font 120 610 moveto
+0 -80 rlineto 40 0 Resistor
+currentpoint -20 5 rmoveto
+(300 [W]) Center Show moveto
+60 0 Femp currentpoint -30 -20 rmoveto
+(1,5 V) Center show moveto 30 0 rlineto
+80 90 Inductor currentpoint
+5 -45 rmoveto (5 H) Show moveto -70 0 rlineto
+120 610 moveto 70 0 Resistor currentpoint
+-35 5 rmoveto (100 [W]) Center Show
+moveto 40 270 Openswitch 70 180 Condenser
+35 10 rmoveto (C_{3}) Center Show
+stroke showpage
+
+%%EOF

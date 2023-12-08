@@ -1,0 +1,496 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>PSImage: Macros Postscript para figuras y diagramas</TITLE>
+<META NAME="description" CONTENT="PSImage: Macros Postscript para figuras y diagramas">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.1 release">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+</HEAD>
+<body bgcolor="#ffffff">
+
+<H1 ALIGN="CENTER">PSImage: Macros Postscript para figuras y diagramas</H1>
+<P ALIGN="CENTER"><STRONG>
+<A HREF="http://www.fe.up.pt/~villate/bienvenido.html">Jaime E. Villate</A>
+<BR>
+<I>Faculdade de Engenharia</I>
+<BR>
+<I>Universidade do Porto</I>
+<BR>
+<I>Rua dos Bragas, 4050-123 Porto, Portugal</I>
+<BR>
+<A HREF="mailto:villate@fe.up.pt">villate@fe.up.pt</A></STRONG></P>
+<P ALIGN="CENTER"><STRONG>Octubre de 1999</STRONG></P>
+
+<P>
+
+<H3>Resumen:</H3>
+<DIV>
+Son discutidos algunos ejemplos de figuras y diagramas que pueden aparecer en
+un documento t&eacute;cnico o una tesis y se presenta una metodolog&iacute;a
+que permite obtener consistencia en todos los diagramas de un documento. Con
+la metodolog&iacute;a propuesta es posible tambi&eacute;n producir muchas
+figuras en un espacio de memoria reducido, y realizar cambios globales en el
+estilo de todas las figuras y diagramas de un documento. El lenguaje
+PostScript es usado por ser bastante apropiado para la creaci&oacute;n de
+gr&aacute;ficas vectoriales y por existir una implementaci&oacute;n libre
+(ghostscript) de uso muy extendido. Las macros presentadas pueden ser usadas
+en cualquier sistema operativo.</DIV>
+<P>
+
+<P>
+
+<H1><A NAME="SECTION00010000000000000000">
+Introducci&oacute;n</A>
+</H1>
+Existen actualmente varias herramientas que permiten crear figuras de elevada
+calidad. Sin embargo la mayor parte de manuales libres que han aparecido
+&uacute;ltimamente no presentan ninguna figura. La principal dificultad es que la
+creaci&oacute;n de una ilustraci&oacute;n requiere bastante tiempo y alg&uacute;n talento
+art&iacute;stico; el tipo de figura que suele aparecer con mayor frecuencia es el
+llamado ``screenshot'' que puede ser creado f&aacute;cilmente con unos pocos toques
+en los botones del rat&oacute;n, pero pueden producir figuras con tama&ntilde;os de varias
+centenas de kilo-bytes.
+
+<P>
+Para obtener un buen resultado gr&aacute;fico es conveniente usar un formato
+vectorial para crear diagramas y figuras. El sistema mas usado en Linux para
+producir documentos que ser&aacute;n imprimidos es el LaTeX[<A
+HREF="ponencia16.html#latex">1</A>], que puede ser obtenido a partir de una
+versi&oacute;n mas general del documento, por ejemplo en lenguaje SGML.
+Cuando existen figuras en un documento LaTeX, normalmente se usa el programa
+<I>dvips</I>[<A HREF="ponencia16.html#dvips">2</A>] para obtener un fichero
+PostScript que pueda ser imprimido. La especificaci&oacute;n del lenguaje
+PostScript es libre, y existe una implementaci&oacute;n libre de este
+lenguaje, llamado <I>ghostcript</I>[<A
+HREF="ponencia16.html#ghostscript">3</A>].  El lenguaje PostScript es muy
+flexible y permite producir la misma figura en muchas formas diferentes,
+incluso como un <I>bitmap</I>. Por ejemplo, la figura&nbsp;<A
+HREF="ponencia16.html#fig:barra">1</A> podr&iacute;a haber sido creada con
+<I>gimp</I>[<A HREF="ponencia16.html#gimp">4</A>], pero en ese caso el
+resultado seria una imagen <I>bitmap</I> (a pesar de haber sido exportada en
+PostScript) que ocupa mucho espacio, no es f&aacute;cil de modificar y su
+calidad puede ser bastante mala si la resoluci&oacute;n usada no es la
+apropiada; otro m&eacute;todo mas eficiente consiste en definir la figura en
+forma l&oacute;gica: por ejemplo los dos cilindros verticales pueden ser
+referidos en la figura &uacute;nicamente por las coordenadas de una de las
+esquinas, y una llamada a una macro <I>Cilindro</I> que puede ser definida en
+un pr&oacute;logo com&uacute;n a todo el documento.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:barra"></A><A NAME="38"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 1:</STRONG>
+Ejemplo de una ilustraci&oacute;n en un art&iacute;culo t&eacute;cnico.</CAPTION>
+<TR><TD><DIV ALIGN="CENTER"> 
+  
+<IMG ALIGN="BOTTOM" BORDER="0" SRC="barra.jpg"
+ ALT="barra.jpg">
+  
+  </DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+El programa <I>dvips</I> permite incluir un pr&oacute;logo PostScript, donde
+pueden estar definidas algunas macros que ser&aacute;n usadas en varias
+figuras del documento LaTeX. De esta forma se ahorra mucho espacio en disco y
+se pueden modificar varias figuras con una simple alteraci&oacute;n del
+pr&oacute;logo.
+
+<P>
+Otro ejemplo que aparece con mucha frecuencia en documentos t&eacute;cnicos
+son las gr&aacute;ficas de funciones. Consideremos por ejemplo la
+funci&oacute;n en la figura&nbsp;<A HREF="ponencia16.html#fig:funcion">2</A>;
+desde el punto de vista matem&aacute;tico, la informaci&oacute;n de la
+gr&aacute;fica puede ser resumida a una funci&oacute;n simple y a la
+especificaci&oacute;n de su dominio. Los pormenores de como dibujar los ejes o
+donde poner los nombres de las variables son secundarios, pero conviene que
+sean uniformes en todas las figuras del documento y que puedan ser alterados
+en forma global. Por ejemplo si el editor de un libro sugiere al autor que
+cambie el tipo de letra o el tipo de flechas que us&oacute; para los ejes de
+todas las gr&aacute;ficas en un libro, esa modificaci&oacute;n puede ser hecha
+muy f&aacute;cilmente si el autor defini&oacute; esos par&aacute;metros en un
+pr&oacute;logo com&uacute;n a todas las figuras.
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:funcion"></A><A NAME="45"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 2:</STRONG>
+Ejemplo de gr&aacute;fica de una funci&oacute;n en dos dimensiones.</CAPTION>
+<TR><TD><DIV ALIGN="CENTER"> 
+  
+<IMG ALIGN="BOTTOM" BORDER="0" SRC="funcion.jpg" ALT="funcion.jpg">
+  
+  </DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+El programa <I>gnuplot</I>[<A HREF="ponencia16.html#gnuplot">5</A>] es una
+ alternativa muy buena para crear gr&aacute;ficas como la de la figura&nbsp;<A
+ HREF="ponencia16.html#fig:funcion">2</A>, pero en el fichero PostScript
+ creado no queda la informaci&oacute;n l&oacute;gica que fue usada (a menos
+ que el autor se haya tomado el cuidado de guardar comandos de gnuplot en un
+ fichero) para generar cada gr&aacute;fica y si llega a ser necesario hacer
+ modificaciones globales, puede ser preciso volver a producir cada
+ gr&aacute;fica individualmente.
+
+<P>
+Los ejemplos presentados en este art&iacute;culo fueron creados con un
+conjunto de macros (<I>psimage</I>) que el autor ha ido escribiendo y
+coleccionando a lo largo de los &uacute;ltimos 15 a&ntilde;os, y que
+est&aacute;n disponibles (con licencia GPL) en la URL de <I>psimage</I>[<A
+HREF="ponencia16.html#psimage">6</A>]. Las macros est&aacute;n agrupadas en un
+pr&oacute;logo que ocupa unos pocos kilo-bytes y que ha sido usado para
+producir 233 figuras en un libro[<A HREF="ponencia16.html#Electro">7</A>]; las
+233 figuras ocupan &uacute;nicamente 674 Kbytes, a pesar de algunas ser mas
+complicadas que la figura&nbsp;<A HREF="ponencia16.html#fig:barra">1</A>.
+
+<P>
+
+<H1><A NAME="SECTION00020000000000000000">
+Macros en lenguaje PostScript</A>
+</H1>
+El lenguaje PostScript permite definir rutinas (macros) que pueden ser
+ejecutas repetidamente con diferentes valores de entrada. Los valores de
+entrada de la rutina pueden entrar a trav&eacute;s de variables o de un
+<I>stack</I> que mantiene el interpretador de PostScript. Una peculiaridad del
+lenguaje PostScript es que usa la notaci&oacute;n polaca inversa (RPN), en la
+cual primero se especifican los operandos (que entran en el <I>stack</I>) y
+luego el operador.  Por ejemplo, para sumar 3 mas 4 se usar&iacute;a el
+siguiente comando: 3 4 add. El n&uacute;mero 3 es ``empujado'' en el stack y
+luego el 4 por encima de el; el operador <I>add</I> saca los dos
+n&uacute;meros superiores en el stack, dejando su suma (7) en la parte
+superior del <I>stack</I>.
+
+<P>
+Tanto las variables como las macros se definen introduciendo un nombre
+simb&oacute;lico precedido de un <I>slash</I>, despu&eacute;s viene la
+definici&oacute;n y finalmente el operador <I>def</I>; por ejemplo las
+siguientes instrucciones definen una variable:
+``factor<code>_</code>conversi&oacute;n'' y una macro que usa esa variable
+para convertir de pulgadas a cent&iacute;metros:
+<PRE>
+
+/factor_conversion 2.54 def
+/pul_cm {factor_conversion mul} def
+</PRE>
+
+<P>
+En el segundo caso es obligatorio usar corchetes para indicar que lo que
+all&iacute; est&aacute; no debe ser interpretado (<I>mul</I> no causar&aacute;
+ning&uacute;n efecto a&uacute;n), sino guardado como una definici&oacute;n de
+una macro. Para utilizar la macro ``pul<code>_</code>cm'' se tiene que
+escribir primero un n&uacute;mero que ser&aacute; convertido a cm; por
+ejemplo: 3.78 pul<code>_</code>cm, convierte 3.78 pulgadas en
+cent&iacute;metros; el n&uacute;mero 3.78 entra en el <I>stack</I>, seguido
+del valor num&eacute;rico de la variable factor<code>_</code>conversion, que
+son luego multiplicados.
+
+<P>
+La especificaci&oacute;n completa del PostScript se encuentra en un libro
+publicado por la Adobe[<A HREF="ponencia16.html#PostScript">8</A>], y otras
+referencias actualizadas son dadas en la p&aacute;gina de <I>psimage</I>[<A
+HREF="ponencia16.html#psimage">6</A>].
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000">
+Algunos ejemplos</A>
+</H1>
+
+<P>
+Las figuras&nbsp;<A HREF="ponencia16.html#fig:triangular">3</A> y&nbsp;<A
+HREF="ponencia16.html#fig:circuito">4</A> muestran un par de ejemplos usando
+algunas de las macros que han sido definidas en el pr&oacute;logo
+<I>psimage.pro</I>[<A HREF="ponencia16.html#psimage">6</A>]. El fichero
+PostScript usado para producir la figura&nbsp;<A
+HREF="ponencia16.html#fig:triangular">3</A> es un fichero normal de texto, que
+puede ser creado con cualquier editor de texto (en cualquier sistema
+operativo), con el siguiente contenido:
+<PRE>
+
+0.5 setlinewidth
+Plotreset Setaxes
+0 0 3 4.5 Domain
+(t) Xlabel (f\(t\)) Ylabel
+(3) 3 Ymark (1) 1 Xmark (2) 2 Xmark
+1 setlinewidth
+[0 0 1 3 2 0] Plot
+showpage
+</PRE>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:triangular"></A><A NAME="80"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 3:</STRONG>
+Funci&oacute;n definida por las coordenadas de 3 puntos.</CAPTION>
+<TR><TD><DIV ALIGN="CENTER"> 
+  
+<IMG ALIGN="BOTTOM" BORDER="0" SRC="triangular.jpg" ALT="triangular.jpg">
+
+  </DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+PostScript distingue entre letras may&uacute;sculas y min&uacute;sculas, y los
+nombres de los comandos son normalmente en letras min&uacute;sculas; para
+distinguir las macros definidas en nuestro pr&oacute;logo, usaremos nombres
+que comienzan por letras may&uacute;sculas. La unidad de distancia usada por
+PostScript es el punto, que equivale a 1/72 pulgadas. El comando
+<I>setlinewidth</I> define el ancho de las l&iacute;neas que ser&aacute;n de
+0.5 puntos para los ejes y 1 punto para la funci&oacute;n. La macro
+<I>Plotreset</I> la usamos para ejecutar algunas cosas necesarias antes de
+comenzar una gr&aacute;fica. La macro <I>Domain</I> define el dominio de la
+funci&oacute;n. Las macros <I>Xlabel</I> y <I>Ylabel</I> se usan para indicar
+lo que debe ir en cada eje.  Las macros <I>Xmark</I> y <I>Ymark</I> colocan
+n&uacute;meros en algunas partes de los ejes, y finalmente la gr&aacute;fica
+de la funci&oacute;n se obtiene dando las coordenadas de los puntos a la macro
+<I>Plot</I>. Las coordenadas de los puntos se dan en una lista que en
+PostScript se crea usando los par&eacute;ntesis cuadrados. El comando
+<I>showpage</I> termina la definici&oacute;n de una p&aacute;gina y es
+necesario para ordenar al interprete de PostScript que dibuje la
+p&aacute;gina.
+
+<P>
+Para poder ver la figura, ser&aacute; preciso anexar al comienzo el
+pr&oacute;logo que define las macros. Si por ejemplo queremos ver la
+gr&aacute;fica usando el programa <I>gv</I>, podemos usar el siguiente
+comando:
+<PRE>
+
+cat psimage.pro triangular.ps | gv -
+</PRE>
+Donde <I>psimage.pro</I> es el pr&oacute;logo, disponible en la URL de
+<I>psimage</I>[<A
+ HREF="ponencia16.html#psimage">6</A>], y <I>triangular.ps</I> es el fichero donde
+creamos la figura.
+
+<P>
+El programa <I>gv</I> (o <I>ghostview</I>) es &uacute;til para identificar la
+<I>Bounding Box</I> de la figura: coordenadas de los puntos inferior izquierdo
+y superior derecho de una caja que envuelva a la figura. Por ejemplo, quien
+haya creado el fichero <I>triangular.ps</I> de la forma como se indic&oacute;
+arriba, puede mover el cursor sobre la figura y leer las coordenadas en una
+caja a la izquierda en la ventana de <I>gv</I>. Conviene introducir estas
+coordenadas en un comentario al comienzo del fichero <I>triangular.ps</I>, de
+la siguiente forma:
+<PRE>
+
+%%BoundingBox: 215 507 389 676
+</PRE>
+As&iacute; ser&aacute; posible introducir la figura en un documento LaTeX, por
+medio del comando:
+<PRE>
+
+\includegraphics{triangular.ps}
+</PRE>
+(o para quien prefiera usar <I>epsfig</I>:
+<code>\epsfig{file=triangular.ps}</code>).
+
+<P>
+En el pre&aacute;mbulo del documento LaTeX deber&aacute; ser indicado el
+fichero donde se encuentran las macros, despu&eacute;s de indicar que el
+paquete <I>graphics</I> (o <I>graphicx</I>, <I>epsfig</I>, etc) ser&aacute;
+usado:
+<PRE>
+
+\usepackage[dvips]{graphics}
+\special{header=psimage.pro}
+</PRE>
+
+<P>
+Hoy en dia es tambi&eacute;n muy usado el formato <I>pdf</I> (<I>Portable
+Document Format</I>) en vez del PostScript. En la p&aacute;gina <I>www</I> que
+acompa&ntilde;a este art&iacute;culo[<A HREF="ponencia16.html#psimage">6</A>],
+se encuentra disponible un programa en <I>perl</I> llamado
+<I>psimagetopdf</I>, que permite transformar cualquiera de las figuras creadas
+con <I>psimage</I> en un fichero <I>pdf</I>. Por ejemplo, para crear el
+fichero <I>triangular.pdf</I> a partir de <I>triangular.ps</I> (despu&eacute;s
+de haber definido una <I>Bounding Box</I> como se explic&oacute; arriba),
+usamos el siguiente comando:
+<PRE>
+
+psimagetopdf triangular.ps
+</PRE>
+
+<P>
+La figura&nbsp;<A HREF="ponencia16.html#fig:circuito">4</A> muestra otro
+ejemplo en el cual es muy &uacute;til el uso de macros: un circuito
+el&eacute;ctrico. El fichero usado para producir la figura&nbsp;<A
+HREF="ponencia16.html#fig:circuito">4</A> es el siguiente:
+<PRE>
+
+%!PS-Adobe-2.0
+%%Title: circuito.ps
+%%Creator: Jaime E. Villate
+%%CreationDate: October 1999
+%%BoundingBox: 110 505 285 630
+12 /Times-Roman Font 120 610 moveto
+0 -80 rlineto 40 0 Resistor
+currentpoint -20 5 rmoveto
+(300 [W]) Center Show moveto
+60 0 Femp currentpoint -30 -20 rmoveto
+(1,5 V) Center show moveto 30 0 rlineto
+80 90 Resistor currentpoint
+5 -45 rmoveto (50 [W]) Show moveto -70 0 rlineto
+120 610 moveto 70 0 Resistor currentpoint
+-35 5 rmoveto (100 [W]) Center Show
+moveto 40 270 Openswitch 70 180 Resistor
+35 10 rmoveto (R_{3}) Center Show
+stroke showpage
+%%EOF
+</PRE>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:circuito"></A><A NAME="134"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 4:</STRONG>
+Circuito el&eacute;ctrico con resistencias, interruptor y bater&iacute;a.</CAPTION>
+<TR><TD><DIV ALIGN="CENTER"> 
+  
+<IMG ALIGN="BOTTOM" BORDER="0" SRC="circuito.jpg" ALT="circuito.jpg">
+
+  </DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+En este ejemplo han sido usadas tres macros <I>Resistor</I>, <I>Femp</I> y
+<I>Openswitch</I> para dibujar resistencias, bater&iacute;as (pasando primero
+por el terminal positivo) y interruptores abiertos, a las cuales se les debe
+dar una distancia y un &aacute;ngulo. Las macros <I>Center</I> y <I>Font</I>
+sirven para escribir texto que puede tener sub&iacute;ndices o
+super&iacute;ndices y letras griegas (entre par&eacute;ntesis cuadrados). La
+letra griega en PostScript tiene el mismo c&oacute;digo que la letra W; para
+usar estas macros es preciso definir la fuente y el tama&ntilde;o de letra,
+por medio de <I>Font</I>. Note que existe tambi&eacute;n un comando
+<I>show</I> de PostScript que permite escribir texto, pero no acepta las
+extensiones de &iacute;ndices y letras griegas permitidas por <I>Show</I>. El
+comando <I>currentpoint</I> de PostSript guarda en el <I>stack</I> las
+coordenadas actuales del cursor, que ser&aacute;n usadas mas tarde para saltar
+a ese punto usando el comando <I>moveto</I>. El comando <I>rmoveto</I> mueve
+el cursor en relaci&oacute;n al punto actual, y <I>rlineto</I> hace lo mismo
+pero tambi&eacute;n dibujando una l&iacute;nea entre el punto anterior y el
+nuevo punto; este &uacute;ltimo comando y <I>show</I> realmente no dibujan
+nada, sino definen un conjunto de puntos de la p&aacute;gina (llamado
+<I>current path</I>) que solo ser&aacute;n dibujados cuando se d&eacute; el
+comando <I>stroke</I>, el cual dibuja lo que est&eacute; definido en el
+<I>current path</I>.
+
+<P>
+En este caso, si por ejemplo quisi&eacute;ramos cambiar el diagrama de
+circuito usado para todas las resistencias por algo diferente como un bloque
+rectangular, bastaba modificar la macro <I>Resistor</I> en el pr&oacute;logo
+<I>psimage.pro</I>, o redefinirla al comienzo de la figura.
+
+<P>
+
+<H1><A NAME="SECTION00040000000000000000">
+Conclusiones</A>
+</H1>
+
+<P>
+Hemos mostrado una metodolog&iacute;a para producir figuras de alta calidad
+usando PostScript en cualquier sistema operativo. Dimos algunos ejemplos que
+usan unas macros creadas por el autor, y que son distribuidas libremente
+(licencia GPL) a partir de la p&aacute;gina de <I>psimage</I>[<A
+HREF="ponencia16.html#psimage">6</A>]. Los ejemplos dados solo tocan una
+peque&ntilde;a parte de las posibles aplicaciones de las macros incluidas en
+<I>psimage.pro</I>.
+
+<P>
+Existen muchos sistemas que usan una metodolog&iacute;a semejante a la que fue
+usada aqu&iacute;. Los mas comunes son <I>Pstricks</I> y <I>Metapost</I>. Sin
+embargo debo admitir que no los he usado (<I>psimage</I> ha sido suficiente
+para producir las figuras que he necesitado en los &uacute;ltimos a&ntilde;os)
+y por eso no puedo hacer una comparaci&oacute;n exhaustiva; el esp&iacute;ritu
+del <I>software</I> libre no se basa en la competici&oacute;n entre programas
+de diferentes autores, sino que existen una infinidad de herramientas que son
+puestas a disposici&oacute;n por diversos autores, y de esta diversidad de
+m&eacute;todos para realizar una misma tarea van surgiendo proyectos de mayor
+dimensi&oacute;n que sintetizan lo mejor de cada herramienta.  Bajo ese
+esp&iacute;ritu de colaboraci&oacute;n pongo a disposici&oacute;n
+<I>psimage</I> esperando que seja &uacute;til para autores de documentos
+t&eacute;cnicos.
+
+<P>
+Un rasgo com&uacute;n que puedo identificar en varios de los sistemas usados
+para crear figuras vectoriales, es la tendencia a crear sus propios lenguajes,
+que no llegan a ser tan completos como el PostScript. Mi opini&oacute;n es que
+es mas conveniente usar directamente PostScript que es un lenguaje mas
+universal, libre y con muchas mas posibilidades.
+
+<P>
+Quiz&aacute;s la mayor dificultad para usar estas macros ser&aacute; la falta
+de un interfaz gr&aacute;fico que ayude a crear y modificar las figuras. En el
+futuro espero poder crear ese tipo de interfaz o aprovechar interfaces ya
+existentes como los de <I>gimp</I> o <I>xfig</I>, produciendo ficheros que
+usen macros existentes en <I>psimage.pro</I>.
+
+<P>
+ 
+<H2><A NAME="SECTION00050000000000000000">
+Bibliograf&#237;a</A>
+</H2><DL COMPACT><DD>
+<P>
+<P></P><DT><A NAME="latex">1</A>
+<DD>Ver por ejemplo <A HREF="http://www.tex.ac.uk/">http://www.tex.ac.uk/</A>
+
+<P>
+<P></P><DT><A NAME="dvips">2</A>
+<DD>Dvips es el programa usado para producir ficheros PostScript a
+  partir de ficheros <I>dvi</I>. Escrito por Tomas Rokicki.
+
+<P>
+<P></P><DT><A NAME="ghostscript">3</A>
+<DD>Ver: <A HREF="http://www.cs.wisc.edu/~ghost/">http://www.cs.wisc.edu/~ghost/</A>.
+
+<P>
+<P></P><DT><A NAME="gimp">4</A>
+<DD>Gimp es el programa de manipulaci&oacute;n de gr&aacute;ficos de GNU
+  (<I>GNU Image Manipulation Program</I>); fu&eacute; creado inicialmente por Peter
+  Mattis y Spencer Kimball. Ver: <A HREF="http://www.gimp.org">http://www.gimp.org</A>
+
+<P>
+<P></P><DT><A NAME="gnuplot">5</A>
+<DD>Gnuplot fu&eacute; escrito inicialmente por Thomas Williams y Colin Kelley. Ver: <A HREF="http://www.cs.dartmouth.edu/gnuplot_info.html">http://www.cs.dartmouth.edu/gnuplot_info.html</A>
+
+<P>
+<P></P><DT><A NAME="psimage">6</A>
+<DD><A HREF="http://www.fe.up.pt/~villate/psimage.html">http://www.fe.up.pt/~villate/psimage.html</A>
+
+<P>
+<P></P><DT><A NAME="Electro">7</A>
+<DD>J. E. Villate, <A HREF="http://www.fe.up.pt/deqwww/electromagnetismo/livro.html"><I>Electromagnetismo</I></A>, McGraw-Hill, Lisboa,
+  1999.
+
+<P>
+<P></P><DT><A NAME="PostScript">8</A>
+<DD>Adobe Systems Incorporated, <I>PostScript
+    Language Reference Manual</I>, Addison-Wesley, Reading, Massachusetts, 1985.
+</DL><HR>
+<ADDRESS>
+<I>Jaime E. Villate</I>
+<BR><I>1999-10-30</I>
+</ADDRESS>
+</BODY>
+</HTML>
+
+
+
+

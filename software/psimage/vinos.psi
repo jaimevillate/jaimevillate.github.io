@@ -1,0 +1,73 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 0 0 595 842
+%%Creator: Jaime Villate
+%%EndComments
+
+/ex5 {
+ 5 Xintervals
+ 5 Yintervals
+ 10 Xsubintervals
+ 10 Ysubintervals
+ (Mora) Xlabel
+ (Cuerpo) Ylabel
+ 0 0 1 setrgbcolor
+ [3.16      3.50] 0 Points
+ [0.80     -2.31] 1 Points
+ [-0.69    -2.18] 2 Points
+ [1.42     -1.06] 3 Points
+ [0.31     -1.85] 4 Points
+ [2.63      2.82] 5 Points
+ [0.86     -2.20] 6 Points
+ [-2.14     0.93] 7 Points
+ [-2.72     0.37] 8 Points
+ [-2.86     1.80] 9 Points
+ [1.92      0.42] 10 Points
+ [-2.70    -0.25] 11 Points
+ 1 0 0 setrgbcolor
+      [-.89      2.34] 0 Points
+      [2.20     -2.09] 1 Points
+     [-3.11       .09] 2 Points
+      [1.71     -2.46] 3 Points
+      [2.42      -.49] 4 Points
+      [2.89       .45] 5 Points
+      [1.83     -3.95] 6 Points
+     [-2.94      -.39] 7 Points
+     [-2.49      -.16] 8 Points
+     [-1.71      1.60] 9 Points
+      [1.32      3.31] 10 Points
+     [-1.23      1.77] 11 Points
+
+0.94 0.11 0 0 setcmykcolor
+ [.84      1.55] 0 Points
+ [3.37     -1.49] 1 Points
+ [-1.05     -2.24] 2 Points
+ [2.37     -2.37] 3 Points
+ [.47     -2.15] 4 Points
+ [3.16       .66] 5 Points
+ [2.42     -1.64] 6 Points
+ [-3.35      1.07] 7 Points
+ [-3.40      1.73] 8 Points
+ [-3.80      1.90] 9 Points
+ [2.60       .84] 10 Points
+ [-3.64      2.14] 11 Points
+} def
+
+Plotreset
+
+  6 cm 17 cm 16 cm 27 cm Plotbox 
+ -5 -5 5 5 Domain ex5
+
+0 setgray
+Plotreset
+
+  6 cm  4 cm 16 cm 14 cm Plotbox Setaxes /Oflag false def
+  -5 -5 5 5 Domain ex5
+
+showpage
+
+
+
+
+
+
+

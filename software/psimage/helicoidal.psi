@@ -1,0 +1,24 @@
+%!PS-Adobe-2.0
+%%Title: Helicoidal.ps
+%%Creator: Jaime E. Villate
+%%CreationDate: 1999/02/18
+%%BoundingBox: 227 494 464 683
+Plotreset
+0.6 setlinewidth
+300 600 70 175 70 Plotbox3d
+20 70 20 Domain3d (z) Xlabel3d (x) Ylabel3d (y) Zlabel3d
+0.2 setlinewidth
+[0 5 360{dup cos 10 mul exch sin 10 mul 0 exch}for] Plot3d
+[0 5 360{dup cos 10 mul exch sin 10 mul 50 exch}for] Plot3d
+[10 135 Cartesian 0 exch 2 index 50 2 index] Plot3d
+[10 -45 Cartesian 0 exch 2 index 50 2 index] Plot3d
+1 setlinewidth
+[90 -10 -510{dup cos 10 mul exch dup 90 sub neg 6 mul 72 div exch
+sin 10 mul}for] Plot3d
+/r 12 Zmax div Zaxis mul def 
+0 12 0 Project2d moveto r 240 Vector
+0 0 0 Project2d moveto r 6 div 5 mul 90 Vector
+showpage
+
+
+

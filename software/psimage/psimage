@@ -1,0 +1,930 @@
+#! /bin/bash
+# Copyright (C) 2005, 2006, 2007 Jaime Villate <villate@fe.up.pt>
+#
+# Converts a Psimage file into PostScript
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifht Floor, Boston,
+# MA 02110-1301, USA
+#
+#-------------------------------------------------------------------
+# Requirements: Ghostscript. If you want to produce PNG files, you
+#               also need Imagemagik.
+#
+#------------------------------------------------------------------- 
+# Usage:
+# psimage [-png] [-o FILE] [-s SCALE] file.psi
+#
+#    If the option -png is not given, a Postscript file will be created
+#    and saved in a file with the name of the input file.psi (or the name
+#    given by the option -o) with the extension .psi replaced by .ps
+#
+#    If the option -png is used, a PNG file will be created and saved in
+#    a file with the name of the input file.psi (or the name
+#    given by the option -o) with the extension .psi replaced by .png;
+#    in this case, the option -s can be used to specify an scaling factor
+#    SCALE for the PNG figure. The scaling gives good quality because it
+#    is done in the vector graphic, but parts of the figure may be lost
+#    if the scaling exceeds 4 (a page A4 is transformed into a maximum
+#    page size of A0).
+#
+# $Id: psimage,v 2.16 2007/07/05 13:57:24 villate Exp $
+
+revision='$Revision: 2.16 $'
+version=$(echo $revision| sed 's/\$//g'| sed 's/Revision: //')
+tmpfile=${TMPDIR:-/tmp}/psimage-$$.ps
+bboxfile=${TMPDIR:-/tmp}/psibbox-$$.txt
+gsoutfile=${TMPDIR:-/tmp}/psierr-$$.txt
+outfile=""
+gs="gs"
+convert="convert"
+papersize="-sPAPERSIZE=a4"
+bboxcmd="-sDEVICE=bbox -dNOPAUSE -dBATCH"
+date=$(date)
+png="0"
+scale=1
+antialiasing=""
+
+usage() {
+    echo "Usage:" 1>&2
+    echo $(basename $0)" [-png] [-o FILE] [-s SCALE] file.psi" 1>&2
+    echo " " 1>&2
+    exit 1
+}
+
+[ $# -lt 1 ] && usage
+
+while [ $# -gt 0 ]
+  do
+  case $1 in
+      -png)
+	  png="1"
+	  ;;
+      -o)
+	  shift
+	  if [ $# -eq 0 ]
+	      then
+	      usage
+	  fi
+	  outfile=$1
+	  ;;
+      -s)
+	  shift
+	  if [ $# -eq 0 ]
+	      then
+	      usage
+	  fi
+	  scale=$1
+	  ;;
+      -gs)
+	  shift
+	  if [ $# -eq 0 ]
+	      then
+	      usage
+	  fi
+	  gs=$1
+	  ;;
+      -convert)
+	  shift
+	  if [ $# -eq 0 ]
+	      then
+	      usage
+	  fi
+	  convert=$1
+	  ;;
+      -*)
+	  usage;;
+      *)
+	  if [ $# -eq 0 ]
+	      then
+	      usage
+	  fi
+	  psifile=$1
+  esac
+  shift
+done
+
+if [[ ! $psifile ]]
+    then
+    usage
+fi
+
+if [ $png -gt 0 ]
+    then
+    if [[ ! $outfile ]]
+	then
+	psfile=$(basename $psifile .psi)".ps"
+	pngfile=$(basename $psifile .psi)".png"
+    else
+	psfile=$(echo $outfile|sed 's/.png$//')".ps"
+	pngfile=$(echo $outfile|sed 's/.png$//')".png"
+    fi
+else
+    if [[ ! $outfile ]]
+	then
+	psfile=$(basename $psifile .psi)".ps"
+    else
+	psfile=$(echo $outfile|sed 's/.ps$//')".ps"
+    fi
+    
+fi
+
+
+cat > $tmpfile <<EOF
+% Constants and units
+/inch {72 mul} def
+/in {72 mul} def
+/cm {28.3465 mul} def
+/pi 3.141592 def
+/graylevels 50 def
+
+% Drawing commands
+/landscape {595 0 translate 90 rotate}def
+/box{2 copy 0 exch rlineto 0 rlineto 0 exch neg rlineto neg 0 rlineto}def
+/boost1{3 copy 3 1 roll translate rotate}def
+/boost2{neg rotate neg exch neg exch translate}def
+/succ{boost1 currentlinewidth dup -2 mul 1 index 10 mul dup 270 215 arcn
+   0 0 moveto dup -2 mul exch -10 mul dup neg 90 145 arc 0 0 moveto boost2}def
+/tip{boost1 currentlinewidth dup 0 0 moveto 0 exch  7 mul dup 270 220 arcn 0 0
+   moveto 0 exch -7 mul dup neg 90 140 arc 0 0 moveto boost2}def
+/Arrow{exch 1 index cartesian rlineto currentpoint 3 2 roll succ}def
+/arrow{exch 1 index cartesian rlineto currentpoint 3 2 roll tip}def
+/vector{2 copy gsave currentpoint translate rotate 10 sub 1 moveto
+   -1  2 rlineto 11 -3 rlineto -11 -3 rlineto 1 2 rlineto 0 0 1 270 90 arcn
+   closepath fill grestore cartesian rmoveto}def
+/cartesian{2 copy cos mul 3 1 roll sin mul}def
+/rcartesian{cartesian currentpoint 4 -1 roll 3 2 roll add 3 1 roll add}def
+/displacement{dup 0 eq{pop abs}{exch dup 0 eq{pop abs}{dup mul exch dup mul add
+	sqrt}ifelse}ifelse}def
+/polar{2 copy displacement 3 1 roll exch atan}def
+/rpolar{currentpoint 4 -1 roll 3 2 roll sub 3 1 roll sub 2 copy displacement
+   3 1 roll exch atan}def
+/circle{3 copy add moveto 90 450 arc}def
+
+/resistor {exch 24 boost3 3 index boost1 wigly         % <r><theta>
+           boost2 exch cartesian rlineto} def 
+
+/openswitch {exch 20 boost3 3 index boost1 1.5 0 2 circle    % <r><theta>
+         3.73 1 moveto 15.84 8 lineto 18 0 2 circle
+         20 0 moveto boost2 exch cartesian rlineto} def 
+
+/closedswitch {exch 20 boost3 3 index boost1 1.5 0 2 circle    % <r><theta>
+         3.5 0 moveto 16 0 lineto 18 0 2 circle
+         20 0 moveto boost2 exch cartesian rlineto} def 
+
+/femp {exch 5 boost3 3 index boost1 8 tick 4 0 rmoveto % <r><theta>
+       4 tick 1 0 rmoveto 4 tick boost2
+       exch cartesian rlineto} def 
+
+/femn {exch 5 boost3 3 index boost1 4 tick 1 0 rmoveto % <r><theta>
+       4 tick 4 0 rmoveto 8 tick boost2
+       exch cartesian rlineto} def 
+
+/diode {exch 7 boost3 3 index boost1 7 0 rmoveto -7 -4 rlineto 0 8
+   rlineto 7 -4 rlineto 4 tick boost2 exch cartesian rlineto} def
+
+/condenser {exch 4 boost3 3 index boost1 6 tick 4 0    % <r><theta>
+            rmoveto 6 tick boost2 exch cartesian rlineto} def 
+
+/ground{currentpoint 2 copy 4 index boost1 10 tick -3 0 rmoveto 7 tick
+	-3 0 rmoveto 4 tick boost2 moveto pop}def 
+
+/inductor {exch 32 boost3 3 index boost1          % <r><theta>
+	   4 {currentpoint exch 4 add exch 4 180 0 arcn
+	      currentpoint exch 1 sub exch 1 360 180 arcn} repeat
+	   currentpoint exch 4 add exch 4 180 0 arcn
+           boost2 exch cartesian rlineto} def 
+
+/wigly {4 {1.5 3 rlineto 3 -6 rlineto 1.5 3 rlineto} repeat} def
+
+/tick  {0 exch 2 copy 2 copy rmoveto 2 mul neg rlineto % <halfwidth>
+        rmoveto} def
+
+/boost3 {sub 2 div dup 2 index cartesian rlineto       % <theta><r><k>
+         currentpoint} def
+
+/particle {gsave translate 1 Setgray 0 0 4 circle fill 1 1 translate
+	 0.3 Setgray {-1 -1 4 circle} 0.99 0.8 shade grestore} def
+
+/Ellipse {matrix currentmatrix 7 1 roll  % <x> <y> <a> <b> <angle1> <angle2>
+	  6 4 roll translate 4 2 roll scale 0 0 1 5 3 roll arc
+	  setmatrix
+	 } def
+
+/Ellipsen {matrix currentmatrix 7 1 roll % <x> <y> <a> <b> <angle1> <angle2>
+	  6 4 roll translate 4 2 roll scale 0 0 1 5 3 roll arcn
+	  setmatrix
+	 } def
+
+/Setgray {currenthsbcolor pop 3 2 roll sethsbcolor} def
+
+/dimmer {currenthsbcolor 4 -1 roll mul sethsbcolor} def
+
+/cylinder {                                            % <radius> <height>
+	/height exch def
+	/a exch def
+	gsave
+	  currentpoint translate
+	  /b a 0.66 mul def
+	  /ang1 265.5 def
+	  /ang2 274.5 def newpath
+	  1 -.025 0.5 { 
+		Setgray
+		/ang1 ang1 4.5 add def
+		/ang2 ang2 4.5 sub def
+        	0 height a b ang1 0 Ellipse
+        	0 0 a b 0 ang1 Ellipsen closepath fill
+		0 height a b 180 ang2 Ellipse
+		0 0 a b ang2 180 Ellipsen closepath fill
+		0 height a b ang1 3 mul 990 sub
+		ang2 3 mul 450 sub Ellipse closepath fill
+		} for
+
+	  1 setlinewidth 0.6 Setgray
+	  0 height a b 0 360 Ellipse stroke
+	  0 0 a b 180 0 Ellipse stroke
+	  a neg 0 moveto a neg height lineto stroke
+	  a 0 moveto a height lineto stroke
+	grestore
+	} def
+
+/sphere {                                              % <x> <y> <radius>
+	gsave
+	  3 1 roll translate
+	  dup scale
+	  0 0 1 0 360 arc clip
+	  0.6 .01 .95 {
+		dup Setgray newpath
+		1 exch sub 4 mul 0.4 exch 0.4 exch
+		0 360 arc fill
+		} for
+	grestore
+	} def
+
+% Text commands
+/center {dup stringwidth pop 2 div neg 0 rmoveto} def  % (string)
+
+/flushright {dup stringwidth pop neg 0 rmoveto} def
+
+/ccenter      % (label)
+	   {dup stringwidth pop 2 div neg dup rmoveto
+	   } def
+ 
+/Center {dup Stringwidth 2 div neg 0 rmoveto} def      % (string)
+       
+/font {findfont exch scalefont setfont} def            % <size>(/font)
+
+/isofont {findfont dup length dict begin               % <size> </font>
+	{1 index /FID ne {def} {pop pop} ifelse} forall
+	/Encoding ISOLatin1Encoding def
+	currentdict end /ISOfont exch definefont pop
+	/ISOfont findfont exch scalefont setfont} def
+
+/Font {/fontactive exch def /fontheight exch def resetfont} def
+
+/resetfont {fontheight fontactive isofont} def
+
+/Show  {/line exch def                                 % (string)
+        1 1 line length
+         {line exch 1 sub 1 getinterval
+          /char exch def /Showflag true def
+          char ({) eq {/Showflag false def} if
+          char (@) eq {fontheight /Times-Italic Font /Showflag false def} if
+          char (#) eq {fontheight /Times-Roman Font /Showflag false def} if
+          char ([) eq {/Symbol findfont fontheight scalefont
+                       setfont /Showflag false def} if
+          char (]) eq {resetfont /Showflag false def} if
+          char (_) eq {/fontheight fontheight 0.65 mul def
+                       fontheight genericfont font
+                       0 0.22 fontheight mul neg rmoveto
+                       /Showflag false def /indexflag true def} if
+          char (^) eq {/fontheight fontheight 0.65 mul def
+                       fontheight genericfont font
+                       0 0.93 fontheight mul rmoveto
+                       /Showflag false def /indexflag false def} if
+          char (}) eq {indexflag {0 0.22 fontheight mul rmoveto}
+                           {0 0.93 fontheight mul neg rmoveto} ifelse
+                       /fontheight fontheight 0.65 div def resetfont
+                       /Showflag false def} if
+          Showflag {char show} if
+         } for
+       } def
+ 
+/Stringwidth                                           % (string)
+       {/line exch def /indexlevel 0 def /Width 0 def
+        1 1 line length
+         {line exch 1 sub 1 getinterval
+          /char exch def /Showflag true def
+          char ({) eq {/Showflag false def} if
+          char (@) eq {/Times-Italic findfont fontheight scalefont
+                       setfont /Showflag false def} if
+          char (#) eq {/Times-Roman findfont fontheight scalefont
+                       setfont /Showflag false def} if
+          char ([) eq {/Symbol findfont fontheight scalefont setfont
+                       /Showflag false def} if
+          char (]) eq {resetfont /Showflag false def} if
+          char (_) eq char (^) eq or
+                      {/indexlevel indexlevel 1 add def
+                       /Showflag false def} if
+          char (}) eq {/indexlevel indexlevel 1 sub def
+                       /Showflag false def} if
+          Showflag  {char stringwidth pop 0.65 indexlevel exp mul
+                     Width add /Width exch def} if
+         } for
+        Width
+       } def
+
+
+% XYgraph commands
+/plotreset {
+	/oflag true def
+	/aflag false def
+	/bflag true def
+        /xflag false def
+        /yflag false def
+	/xdecflag false def
+	/ydecflag false def
+	1 setlinewidth
+	245 530 385 670 plotbox
+        /xyscale 1 def
+	/fscale 5 7 div def
+	/genericfont /Times-Roman def
+	/romanfont /Times-Roman def
+	/boldfont /Times-Bold def
+        /italicfont /Times-Italic def
+	/Lines [[] [5 5] [20 6 6 6] [2 2] [10 2 2 2 2 2] []] def
+	/Objects [(k)(L)(F)(d)(R)(V)(J)(S)(G)(I)(B)(A)(t)(K)
+	  (Q)(b)(C)(l)(O)(Z)(e)(s)] def
+	} def
+
+/setframe {/bflag true def /aflag false def} def
+
+/setaxes {/aflag true def /bflag false def} def
+
+/plotbox {/pymax exch def /pxmax exch def
+	 /pymin exch def /pxmin exch def
+	/lowermargin pymin currentlinewidth 3 mul sub def
+	/leftmargin pxmin currentlinewidth 3 mul sub def} def
+
+/domain {/ymax exch def /xmax exch def /ymin exch def /xmin exch def
+	/xscale pxmax pxmin sub xmax xmin sub div def
+	/yscale pymax pymin sub ymax ymin sub div def
+	aflag {showaxes} if bflag {showbox} if
+	} def
+ 
+/showaxes {
+	/bflag false def
+	pxmin 0 yunits moveto
+	pxmax pxmin sub 0 Arrow    
+	0 xunits pymin moveto
+	pymax pymin sub 90 Arrow stroke
+	fscale 14 mul genericfont Font
+	oflag {(0) dup stringwidth pop fscale 8.4 mul add 
+	       0 xunits exch sub
+	       0 yunits fscale 21 mul sub moveto show} if
+   } def
+ 
+/showbox {
+    /bflag true def
+    gsave pxmin pymin moveto pxmax pxmin sub pymax pymin sub box
+    currentlinewidth 2 mul setlinewidth stroke grestore
+    xmin dup 20 string cvs exch xmark
+    xmax dup 20 string cvs exch xmark
+    ymin dup 20 string cvs exch ymark
+    ymax dup 20 string cvs exch ymark
+   }def
+ 
+/xunits {xmin sub xscale mul pxmin add} def
+ 
+/yunits {ymin sub yscale mul pymin add} def
+ 
+/background {pxmin pymin moveto pxmax pxmin sub pymax pymin sub box fill} def
+
+/xmark {                     % (string) <x>
+	xunits dup dup
+	bflag {pymin} {0 yunits} ifelse
+        moveto 0  2.5 currentlinewidth mul rlineto stroke
+	bflag {pymax} {0 yunits} ifelse
+        moveto 0 -2.5 currentlinewidth mul rlineto stroke
+	exch dup 3 1 roll
+	fscale 14 mul genericfont Font
+	Stringwidth 2 div sub
+	bflag {pymin} {0 yunits} ifelse
+        fscale xflag {6 mul add} {21 mul sub} ifelse
+	moveto Show
+   } def
+ 
+/ymark {                % (string) <y>
+	yunits dup dup
+	bflag {pxmin} {0 xunits} ifelse
+	exch moveto  2.5 currentlinewidth mul 0 rlineto stroke
+	bflag {pxmax} {0 xunits} ifelse
+	exch moveto -2.5 currentlinewidth mul 0 rlineto stroke
+	fscale 14 mul genericfont Font
+        yflag
+        {bflag {pxmin} {0 xunits} ifelse fscale 6 mul add}
+	{exch dup 3 1 roll
+	Stringwidth fscale 8.4 mul add
+	bflag {pxmin} {0 xunits} ifelse exch sub
+	dup leftmargin lt {dup /leftmargin exch def} if}
+        ifelse
+	exch fscale 5.6 mul sub
+	moveto Show
+   } def
+ 
+/xintervals
+   {/number exch def
+	bflag {currentlinewidth 2 mul setlinewidth} if
+	xmax xmin sub
+	number div
+	/delta exch def
+	1 1 number 1 sub
+	   {delta mul
+		xmin add dup
+		0 ne bflag or
+		  {dup xdecflag {xdec decstring} {20 string cvs} ifelse
+		  exch xmark}{pop} ifelse
+	   } for
+	bflag {currentlinewidth 2 div setlinewidth} if
+   } def
+
+/intxintervals
+   {/number exch def
+	bflag {currentlinewidth 2 mul setlinewidth} if
+	xmax xmin sub
+	number div
+	/delta exch def
+	1 1 number 1 sub
+	   {delta mul
+		xmin add cvi dup
+		0 ne bflag or
+		  {dup xdecflag {xdec decstring} {20 string cvs} ifelse
+		  exch xmark}{pop} ifelse
+	   } for
+	bflag {currentlinewidth 2 div setlinewidth} if
+   } def
+
+/xsubintervals
+   {/number exch def
+	xmax xmin sub
+	number div
+	/delta exch def
+	1 1 number 1 sub
+	   {delta mul xmin add () exch xmark
+	   } for
+   } def
+ 
+/yintervals
+   {/number exch def
+	bflag {currentlinewidth 2 mul setlinewidth} if
+	ymax ymin sub
+	number div
+	/delta exch def
+	1 1 number 1 sub
+	   {delta mul
+		ymin add dup
+		0 ne bflag or
+		  {dup ydecflag {ydec decstring} {20 string cvs} ifelse
+		  exch ymark}{pop
+			} ifelse
+	   } for
+	bflag {currentlinewidth 2 div setlinewidth} if
+   } def
+ 
+/intyintervals
+   {/number exch def
+	bflag {currentlinewidth 2 mul setlinewidth} if
+	ymax ymin sub
+	number div
+	/delta exch def
+	1 1 number 1 sub
+	   {delta mul
+		ymin add cvi dup
+		0 ne bflag or
+		  {dup ydecflag {ydec decstring} {20 string cvs} ifelse
+		  exch ymark}{pop
+			} ifelse
+	   } for
+	bflag {currentlinewidth 2 div setlinewidth} if
+   } def
+ 
+/ysubintervals
+   {/number exch def
+	ymax ymin sub
+	number div
+	/delta exch def
+	1 1 number 1 sub
+	   {delta mul ymin add () exch ymark
+	   } for
+   } def
+ 
+/xlabel {
+	fscale 14 mul genericfont Font
+	bflag   {/lowermargin lowermargin 41 fscale mul sub def
+		pxmax pxmin add 2 div lowermargin moveto Center}
+		{pxmax 0 yunits fscale 8 mul add moveto flushright}
+		ifelse Show
+	} def
+ 
+/ylabel {
+	fscale 14 mul genericfont Font
+	bflag   {gsave leftmargin pymin translate 90 rotate
+		pymax pymin sub 2 div fscale 7 mul moveto Center Show
+		grestore}
+		{0 xunits fscale 8 mul add pymax fscale 10 mul sub
+		moveto Show} ifelse
+	} def
+ 
+/dashplot
+   {gsave Lines exch get 0 setdash /data exch def 
+    newpath data 0 get xunits data 1 get yunits moveto
+    1 1 data length 2 idiv 1 sub
+	{2 mul dup data exch get xunits exch 1 add data exch get yunits lineto
+	} for stroke grestore} def
+
+/plot
+   {/data exch def gsave newpath data 0 get xunits data 1 get yunits moveto
+    1 1 data length 2 idiv 1 sub
+	{2 mul dup data exch get xunits exch 1 add data exch get yunits lineto
+	} for stroke grestore} def
+ 
+/plotpoints
+   {/number exch def /data exch def newpath
+    0 1 data length 2 idiv 1 sub
+	{2 mul dup data exch get xunits exch 1 add data exch get yunits
+	 number 0 360 arc fill
+	} for} def
+
+/points
+   {/number exch def
+    gsave
+      /ZapfDingbats findfont fscale 14 mul scalefont setfont
+      /object Objects number get def
+      counttomark 2 idiv
+         {newpath exch xunits exch yunits
+	  moveto object ccenter show
+         } repeat
+    grestore
+    pop /bflag 0 def
+   } def
+
+/point {newpath yunits exch xunits exch 2 currentlinewidth mul 0 360 arc
+    closepath fill} def
+
+/openpoint {newpath yunits exch xunits exch 2 currentlinewidth mul 0 360 arc
+    closepath gsave 1 Setgray fill grestore stroke} def
+
+/legend
+   {/yleg exch def /xleg exch def
+    gsave
+        /ZapfDingbats findfont fscale 14 mul scalefont setfont
+	counttomark 2 idiv
+	   {exch /number exch def
+	   /object Objects number get def
+	   newpath xleg yleg moveto object ccenter show
+	   xleg yleg moveto fscale 12 mul fscale 6 mul neg rmoveto  
+	   gsave fscale 14 mul genericfont Font Show grestore
+	   /yleg yleg fscale 21 mul sub def
+	   } repeat
+	pop
+    grestore
+   } def
+ 
+/dashlegend
+   {fscale 14 mul genericfont Font /yleg exch def
+	/xleg exch def
+	newpath
+	counttomark 2 idiv
+	   {exch /number exch def
+	Lines number get 0 setdash
+	xleg yleg moveto
+	70 0 rlineto stroke
+	xleg yleg moveto
+	76 fscale 4.2 mul neg rmoveto Show
+	/yleg yleg fscale 21 mul sub def
+	   } repeat
+	pop
+   } def
+ 
+/xdecimals
+   {/xdec exch def /xdecflag true def} def
+ 
+/ydecimals
+   {/ydec exch def /ydecflag true def} def
+ 
+/Length         % (string) ==>  actual length
+	   {1 string search
+	{length exch pop exch pop}{length} ifelse
+	   } def
+ 
+/decstring      % number, dec_places ==> -- Writes small numb. in fixed form
+	   {/numdec exch def
+	/number exch def
+	1 1 1 numdec {pop 10 mul} for
+	/auxil exch def
+	/number number auxil mul
+	number 0 lt {-0.5} {0.5} ifelse
+	add cvi def
+	/Number 20 string def
+	number 0 lt                %  minus sign
+	   {Number 0 45 put /number number neg def} if
+	Number dup Length          %  integer par
+	   number auxil div cvi
+	   19 string cvs putinterval
+	/Decimal                   %  decimal part
+	   number dup auxil div cvi auxil mul sub
+	   auxil add numdec 1 add string cvs
+	def
+	   Decimal 0 46 put       % decimal point
+	Number dup Length Decimal putinterval
+	Number dup Length 0 exch getinterval
+	   } def
+
+% XYZgraph commands
+
+/Domain {/zmax exch def /ymax exch def /xmax exch def
+        /porig pxmax pxmin sub xyscale 2 mul 1 add div def
+	/xscale porig xmax div 2 mul def
+	/yscale porig ymax div xyscale 2 mul mul def
+	/zscale pymax pymin sub porig sub zmax div def
+	Showaxes
+	} def
+ 
+/Showaxes {
+	0 0 0 xyzunits moveto xmax 0 0 xyzunits rpolar Arrow
+	0 0 0 xyzunits moveto 0 ymax 0 xyzunits rpolar Arrow
+	0 0 0 xyzunits moveto 0 0 zmax xyzunits rpolar Arrow stroke
+        } def
+ 
+/xyzunits {zscale mul exch yscale mul
+	3 2 roll xscale mul 2 div dup
+	3 1 roll sub pxmin add porig add
+	3 1 roll sub pymin add porig add} def
+
+/Ylabel {
+	fscale 14 mul genericfont Font
+	0 ymax 0 xyzunits exch fscale 7 mul sub exch
+	fscale 18 mul sub moveto Center Show
+	} def
+ 
+/Zlabel {
+	fscale 14 mul genericfont Font dup Stringwidth
+	0 0 zmax xyzunits 3 1 roll fscale 12 mul sub exch sub exch
+	fscale 10 mul sub moveto Show
+	} def
+ 
+/Xlabel {
+	fscale 14 mul genericfont Font dup Stringwidth
+	xmax 0 0 xyzunits 3 1 roll fscale 8 mul sub exch sub exch
+	fscale 10 mul add moveto Show
+	} def
+
+% IsoXYZgraph commands
+
+/Box3d {/zaxis exch def /yaxis exch def /xaxis exch def
+         /yorig exch def /xorig exch def} def
+
+/Region3d {/zmax exch def /ymax exch def /xmax exch def} def
+
+/Domain3d {Region3d Showaxes3d} def
+ 
+/Showaxes3d {xorig yorig moveto currentpoint xaxis 210 Arrow
+	moveto currentpoint yaxis 330 Arrow moveto zaxis 90 Arrow stroke} def
+ 
+/Project2d {zaxis mul zmax div exch yaxis mul ymax div 2 div dup
+	4 3 roll xaxis mul xmax div 2 div dup
+	3 1 roll sub 3 sqrt mul xorig add
+	4 1 roll add sub yorig add} def
+
+/YLabel {
+	fscale 14 mul genericfont Font
+	0 ymax 0 Project2d exch fscale 8 mul sub exch fscale 15 mul add
+	moveto Show
+	} def
+ 
+/ZLabel {
+	fscale 14 mul genericfont Font dup Stringwidth
+	0 0 zmax Project2d 3 1 roll fscale 10 mul sub exch sub exch fscale
+	8 mul sub moveto Show
+	} def
+ 
+/XLabel {
+	fscale 14 mul genericfont Font dup Stringwidth
+	xmax 0 0 Project2d 3 1 roll fscale 8 mul add exch sub exch fscale
+	15 mul add moveto Show
+	} def
+
+/Path3d
+   {/data exch def data 0 get data 1 get data 2 get Project2d moveto
+    1 1 data length 3 idiv 1 sub
+        {3 mul dup data exch get exch dup 1 add data exch get exch 2 add
+	 data exch get Project2d lineto
+        } for} def
+
+/Plot3d
+   {gsave newpath Path3d stroke grestore} def
+
+% beta version
+ 
+/rchord{dup sin abs 1e-5 lt{pop rlineto}
+         {3 1 roll polar exch 2 div 3 2 roll 2 copy 2 copy
+          dup cos exch sin div mul
+          3 1 roll sin div 5 1 roll
+          4 2 roll exch dup 4 3 roll currentpoint
+          6 2 roll 4 copy 10 4 roll 2 copy pop 12 11 roll 2 copy dup
+          0 gt {{arcn}}{{arc}} ifelse
+          15 1 roll sub 90 add 14 1 roll add 90 add 13 1 roll
+          4 2 roll sin mul 3 1 roll exch cos mul sub add
+          10 1 roll 5 1 roll exch sin mul 3 1 roll cos mul add add
+          6 1 roll exec
+         }ifelse
+       }def
+
+/pathlength{/l 0 def flattenpath {moveto}{ currentpoint 2 index sub exch
+       3 index sub displacement l add /l exch def moveto}{ }{ }pathforall l}def
+
+/shade {/r exch def /g2 exch def /g1 currentgray def /n g2 g1 sub abs
+        graylevels mul ceiling def /y r n 0 ne{n div}if def /s 1 def
+	g1 g2 g1 sub dup 0 eq{1 add}{n div}ifelse g2
+           {gsave Setgray matrix currentmatrix s dup scale exch dup exec
+            exch setmatrix /s s y sub def s 0 gt {s dup scale dup exec eofill}
+                {fill}ifelse grestore}for pop}def
+
+/shadetile{2 index xcheck{gsave 3 1 roll /g2 exch def /g1 currentgray def
+                gsave dup exec pathlength 3 2 roll mul g2 g1 sub exch div
+                /conv exch def grestore exec
+                flattenpath{newpath moveto}{currentpoint 4 3 roll
+		       3 2 roll sub 3 1 roll sub 2 copy displacement
+		       conv mul dup g1 add /g1 exch def 3 index 4 1 roll
+		       g1 g2 gt{g2 exch g1 g2 sub exch div 1 exch sub}
+			       {pop g1 1}ifelse shadetile
+                       g1 g2 ge{exit}{g1 Setgray}ifelse}{ }{ }pathforall
+                 pop grestore}
+                {3 1 roll /g4 exch def /g3 currentgray def
+                 /n g4 g3 sub abs graylevels mul ceiling def n 1 add div
+		 1 index mul /y exch def n 1 add div mul /x exch def
+		 g3 g4 g3 sub dup 0 eq{1 add}{n div}ifelse g4
+		     {gsave Setgray dup x y tile fill grestore x y rmoveto}for
+		 pop}ifelse}def
+
+/shadecone{4 index xcheck{gsave 5 4 roll 3 2 roll /g2 exch def /g1 currentgray
+                def gsave dup exec pathlength 3 2 roll mul g2 g1 sub exch div
+                /conv exch def grestore exec
+                flattenpath{newpath moveto}{currentpoint 4 3 roll
+		      3 2 roll sub 3 1 roll sub 2 copy displacement
+		      conv mul dup g1 add /g1 exch def 5 1 roll
+                      2{3 index 2 index sub}repeat 6 2 roll 4 2 roll 7 6 roll
+		      g1 g2 gt{g2 exch g1 g2 sub exch div 1 exch sub}
+			       {pop g1 1}ifelse shadecone
+                      g1 g2 ge{exit}{g1 Setgray}ifelse}{ }{ }pathforall
+                pop pop grestore}
+               {5 1 roll /g4 exch def /g3 currentgray def
+                currentpoint 3 2 roll add /vy exch def add /vx exch def
+                /n g4 g3 sub abs graylevels mul ceiling def n 1 add div
+		1 index mul /y exch def n 1 add div mul /x exch def
+		g3 g4 g3 sub dup 0 eq{1 add}{n div}ifelse g4
+		       {gsave Setgray currentpoint x y rlineto vx vy lineto
+                        lineto fill grestore x y rmoveto}for}ifelse}def
+
+/tile{dup xcheck{currentpoint moveto 2 copy exch exec exec reversepath exec 
+                 exec}
+                {currentpoint moveto 2 copy 4 index exec rlineto reversepath  
+                 rlineto exec}ifelse}def
+
+/rsplineto{currentpoint 2{neg 6 1 roll}repeat currentpoint translate splineto
+                translate}def 
+
+/rSplineto{currentpoint 2{neg 6 1 roll}repeat currentpoint translate Splineto
+                translate}def 
+
+/splineto{currentpoint 4 index sub exch 5 index sub displacement 2 div dup
+        4 3 roll rcartesian 4 2 roll exch 180 add cartesian 4 index add exch
+        5 index add exch 6 4 roll curveto}def
+
+/Splineto{currentpoint 4 index sub exch 5 index sub displacement 3 div dup
+        4 3 roll rcartesian 4 2 roll exch 180 add cartesian 4 index add exch
+        5 index add exch 6 4 roll curveto}def
+
+/tangentpoints{                         % x1 y1
+                2 copy                  % x1 y1 x1 y1
+                rpolar                  % x1 y1 r01 theta01
+                dup /tmin exch def      % x1 y1 r01 theta01
+                /tmax exch def          % x1 y1 r01
+                pop currentpoint        % x1 y1 x0 y0
+                dup /ymax exch def      % x1 y1 x0 y0
+                /ymin exch def          % x1 y1 x0
+                dup /xmax exch def      % x1 y1 x0
+                /xmin exch def          % x1 y1
+                gsave flattenpath       % x1 y1
+                       {moveto 2 copy rpolar    % x1 y1 ri1 thetai1
+                        dup tmax gt{            % x1 y1 ri1 thetai1
+                                /tmax exch def  % x1 y1 ri1
+                                pop currentpoint        % x1 y1 xi yi
+                                /ymax exch def          % x1 y1 xi
+                                /xmax exch def}         % x1 y1
+                                   {                    % x1 y1 ri1 thetai1
+                                dup tmin lt{            % x1 y1 ri1 thetai1
+                                        /tmin exch def  % x1 y1 ri1
+                                        pop currentpoint % x1 y1 xi yi
+                                        /ymin exch def  % x1 y1 xi
+                                        /xmin exch def} % x1 y1
+                                      {                 % x1 y1 ri1 thetai1
+                                        pop pop}ifelse  % x1 y1
+                                   }ifelse}             % x1 y1 
+                        dup {}{}pathforall              % x1 y1
+                pop pop grestore
+                xmin ymin xmax ymax} def                % x2 y2 x3 y3
+
+/rarrowchord{dup sin abs 1e-5 lt{pop 2 div exch 2 div exch 2 copy polar
+				 arrow rlineto}
+         {3 1 roll polar dup /theta exch def exch 2 div 3 2 roll 2 copy 2 copy
+          dup cos exch sin div mul
+          3 1 roll sin div 5 1 roll
+          4 2 roll exch dup 4 3 roll currentpoint
+          6 2 roll 4 copy 10 4 roll 2 copy pop 12 11 roll 2 copy dup
+          0 gt {{arcn}}{{arc}} ifelse
+          15 1 roll sub 90 add 14 1 roll add 90 add 13 1 roll
+          4 2 roll sin mul 3 1 roll exch cos mul sub add
+          10 1 roll 5 1 roll exch sin mul 3 1 roll cos mul add add
+          6 1 roll 6 copy 3 1 roll 1 index add 2 div 3 2 roll exec
+	  currentpoint theta tip 3 2 roll 2 index add 2 div 3 1 roll exec
+         }ifelse
+       }def
+
+/Radius {2 div exch dup mul 1 index div 4 div add} def 
+
+/Polyline {/data exch def data 0 get xunits data 1 get yunits moveto
+	1 1 data length 2 idiv 1 sub
+	    {2 mul dup data exch get xunits exch 1 add data exch get yunits
+	     lineto} for} def
+
+/displace {2 copy cos mul 5 4 roll add 4 1 roll sin mul add} def
+
+/prime {1 4 rmoveto currentpoint 2 copy newpath 0.3 175 355 arc 
+3.5 add exch 1 add exch 0.5 355 175 arc closepath fill} def
+
+/hat {currentpoint gsave newpath moveto 0.5 7.5 rmoveto currentpoint 0.755 sub
+     exch 1.307 sub exch 0.8 210 300 arc 0.907 0.524 rlineto currentpoint exch
+     1.307 add exch 0.169 add 0.8 240 330 arc closepath fill grestore} def
+
+/S {D exch N add get}def
+/Bezier {/D exch def D 0 get D 1 get moveto 0 1 D length 4 idiv 2 sub
+        {4 mul /N exch def 0 S 2 S add 1 S 3 S add 4 S 6 S sub 5 S 7 S sub
+         4 S 5 S curveto} for 4 S 6 S add 5 S 7 S add D 0 get D 2 get sub
+      D 1 get D 3 get sub D 0 get D 1 get curveto} def
+
+%%EndProlog
+EOF
+
+if [[ $scale != "1" ]]
+then
+    echo $scale $scale "scale" >> $tmpfile
+    if [[ $scale > 1 ]]
+	then
+	papersize="-sPAPERSIZE=a0"
+    fi
+fi 
+
+cat $psifile >> $tmpfile
+
+$gs $papersize $bboxcmd $tmpfile 1>> $gsoutfile 2>> $bboxfile || gserr="error"
+if [[ $gserr ]]
+    then
+    echo "The input file has syntax errors."
+    echo "The output from Ghostscript follows:"
+    echo
+    cat $gsoutfile
+    exit 1
+else
+    echo "%!PS-Adobe-2.0" >$psfile
+    echo "%%Title: "$psfile >>$psfile
+    echo "%%Date: $date" >>$psfile
+    echo "%%Creator: psimage $version" >>$psfile
+    cat $bboxfile >> $psfile
+    cat $tmpfile >> $psfile
+fi
+
+if [ $png -gt 0 ]
+    then
+    echo "Running convert to produce PNG, please wait ..." >&2
+    $convert $psfile $pngfile
+    trap "rm $psfile 2>/dev/null" 0
+    echo "Output written in "$pngfile
+else
+    echo "Output written in "$psfile
+fi
+
+trap "rm $tmpfile* 2>/dev/null" 0
+trap "rm $bboxfile* 2>/dev/null" 0
+trap "rm $gsoutfile* 2>/dev/null" 0
