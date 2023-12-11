@@ -2,8 +2,8 @@
    Asymptote programs to draw physics related diagrams
    Copyright (C) 2023 Jaime E. Villate
    
-   Version: 1.0
-   Time-stamp: "2023-12-05 10:49:18 villate"
+   Version: 1.1
+   Time-stamp: "2023-12-11 21:06:53 villate"
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License
@@ -110,14 +110,6 @@ void ring(picture pic=currentpicture, real r1=1, real r2=0.5, real h=2,
              c+(0,h-f*r2),evenodd+darkerpen(p,0.5),c+(0,h+f*r2));}
 
 void torus(picture pic=currentpicture, real r1=1, real r2=0.5, pair c=(0,0),
-           pen p=currentpen) {
-  real r=(r1+r2)/2;
-  path g1=shift(c)*scale(r1)*unitcircle;
-  path g2=shift(c)*scale(r2)*unitcircle;
-  radialshade(pic,g1^^g2,evenodd+p,c,r,evenodd+darkerpen(p,0.25),c,r2);
-  radialshade(pic,g1^^g2,evenodd+darkerpen(p,0.25),c,r1,evenodd+p,c,r,false);}
-
-void torus(picture pic=currentpicture, real r1, real r2, pair c=(0,0),
            pen p=currentpen) {
   real r=(r1+r2)/2;
   path g1=shift(c)*scale(r1)*unitcircle;

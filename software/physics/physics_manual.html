@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>physics: a module for Asymptote</title>
-<!--Generated on Sat Dec  9 15:37:01 2023 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Generated on Mon Dec 11 21:13:12 2023 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
 <!--Document created on December 9, 2023.-->
 
 <link rel="stylesheet" href="../../css/latex-schola.css" type="text/css">
@@ -156,26 +156,47 @@ void fieldline(picture pic=currentpicture, Label L="", path g,
 </pre>
 </div>
 <div id="S3.SS1.p8" class="ltx_para">
+<p class="ltx_p">Draws the curve defined by the path <span class="ltx_text ltx_font_typewriter">g</span>, using pen <span class="ltx_text ltx_font_typewriter">p</span>,
+and places and arrow at position <span class="ltx_text ltx_font_typewriter">pos</span> relative to its length;
+the default for <span class="ltx_text ltx_font_typewriter">pos</span> is 0.5, which means half of the total
+length. A label <span class="ltx_text ltx_font_typewriter">L</span> can be added to the curve, from its center,
+in the direction <span class="ltx_text ltx_font_typewriter">align</span>.
+</p>
+</div>
+<div id="S3.SS1.p9" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
 pen darkerpen (pen p=currentpen, real f)
 </pre>
 </div>
+<div id="S3.SS1.p10" class="ltx_para">
+<p class="ltx_p">Returns a pen with the same hue and saturation as pen <span class="ltx_text ltx_font_typewriter">p</span>, but
+with value <span class="ltx_text ltx_font_typewriter">t</span> times the value of <span class="ltx_text ltx_font_typewriter">p</span>.</p>
+</div>
 </section>
 <section id="S3.SS2" class="ltx_subsection">
 <h3 class="ltx_title ltx_title_subsection">
-<span class="ltx_tag ltx_tag_subsection">3.2 </span>3D objects projected into 2D</h3>
+<span class="ltx_tag ltx_tag_subsection">3.2 </span>3D isometric into 2D</h3>
 
 <div id="S3.SS2.p1" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+pair isometric(real x, real y, real z)
+</pre>
+</div>
+<div id="S3.SS2.p2" class="ltx_para">
+<p class="ltx_p">Projects the point with coordinates <span class="ltx_text ltx_font_typewriter">x</span>, <span class="ltx_text ltx_font_typewriter">y</span> and
+<span class="ltx_text ltx_font_typewriter">z</span> onto the xy plane, using isometric projection.</p>
+</div>
+<div id="S3.SS2.p3" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
 guide boxy(pair o=(0,0),real dx, real dz)
 guide boxz(pair o=(0,0),real dx, real dy)
 guide boxx(pair o=(0,0),real dy, real dz)
 </pre>
 </div>
-<div id="S3.SS2.p2" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-pair isometric(real x, real y, real z)
-</pre>
+<div id="S3.SS2.p4" class="ltx_para">
+<p class="ltx_p">Returns a path describing a rectangular box projected into one of the 3
+Cartesian planes, using isometric projection.
+</p>
 </div>
 </section>
 <section id="S3.SS3" class="ltx_subsection">
@@ -190,51 +211,88 @@ void centershade(picture pic=currentpicture, path p,
 </pre>
 </div>
 <div id="S3.SS3.p2" class="ltx_para">
+<p class="ltx_p">Creates a circular shading pattern inside the path <span class="ltx_text ltx_font_typewriter">p</span>,
+starting with pen <span class="ltx_text ltx_font_typewriter">in</span> and ending with pen <span class="ltx_text ltx_font_typewriter">out</span>. I
+<span class="ltx_text ltx_font_typewriter">stroke</span> is <span class="ltx_text ltx_font_typewriter">true</span>, the boundary of <span class="ltx_text ltx_font_typewriter">p</span> is drawn
+using pen <span class="ltx_text ltx_font_typewriter">drawpen</span>.</p>
+</div>
+<div id="S3.SS3.p3" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
 void sphere(picture pic=currentpicture, real r=1, pair c=(0,0),
             pen p=currentpen, pen q=darkerpen(p,0.25))
 </pre>
 </div>
-<div id="S3.SS3.p3" class="ltx_para">
+<div id="S3.SS3.p4" class="ltx_para">
+<p class="ltx_p">Draws a shaded sphere of radius <span class="ltx_text ltx_font_typewriter">r</span>, centered at <span class="ltx_text ltx_font_typewriter">t</span>,
+whose darker part will have the color of pen <span class="ltx_text ltx_font_typewriter">q</span> and brightest
+spot (to the right and above the center) with the color of pen
+<span class="ltx_text ltx_font_typewriter">p</span>.</p>
+</div>
+<div id="S3.SS3.p5" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
 void cylinder(picture pic=currentpicture, real r=1, real h=2,
          real f=0.3, pair c=(0,0), pen p=currentpen,
          pen q=darkerpen(p,0.4))
 </pre>
 </div>
-<div id="S3.SS3.p4" class="ltx_para">
+<div id="S3.SS3.p6" class="ltx_para">
+<p class="ltx_p">Draws a shaded cylinder with circular base of radius <span class="ltx_text ltx_font_typewriter">r</span> and
+height (in the vertical direction) <span class="ltx_text ltx_font_typewriter">h</span>; the circular base will
+be centered a <span class="ltx_text ltx_font_typewriter">c</span>. The shading will have brightest color given
+by pen <span class="ltx_text ltx_font_typewriter">p</span> and darkest color given by pen <span class="ltx_text ltx_font_typewriter">q</span>. The
+factor <span class="ltx_text ltx_font_typewriter">f</span>, between 0 and 1, is the foreshortening of the
+cylinder circular caps.</p>
+</div>
+<div id="S3.SS3.p7" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
 void hollow_cylinder(picture pic=currentpicture, real r=1,
                      real h=2, real f=0.3, pair c=(0,0),
                      pen p=currentpen, pen q=darkerpen(p,0.4))
 </pre>
 </div>
-<div id="S3.SS3.p5" class="ltx_para">
+<div id="S3.SS3.p8" class="ltx_para">
+<p class="ltx_p">Draws a shaded hollow cylinder with circular base of radius <span class="ltx_text ltx_font_typewriter">r</span> and
+height (in the vertical direction) <span class="ltx_text ltx_font_typewriter">h</span>; the circular base will
+be centered a <span class="ltx_text ltx_font_typewriter">c</span>. The shading will have brightest color
+given by pen <span class="ltx_text ltx_font_typewriter">p</span> and darkest color given by pen <span class="ltx_text ltx_font_typewriter">q</span>. The
+factor <span class="ltx_text ltx_font_typewriter">f</span>, between 0 and 1, is the foreshortening of the
+cylinder circular ends.</p>
+</div>
+<div id="S3.SS3.p9" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
 void ring(picture pic=currentpicture, real r1=1, real r2=0.5,
-          real h=2,
+          real h=2, real f=0.3, pair c=(0,0), pen p=currentpen)
 </pre>
 </div>
-<div id="S3.SS3.p6" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-real f=0.3, pair c=(0,0), pen p=currentpen)
-</pre>
+<div id="S3.SS3.p10" class="ltx_para">
+<p class="ltx_p">Draws a shaded cylindrical ring with outer radius <span class="ltx_text ltx_font_typewriter">r1</span>, inner
+radius <span class="ltx_text ltx_font_typewriter">r2</span> and height (in the vertical direction) <span class="ltx_text ltx_font_typewriter">h</span>;
+the circular base will be centered a <span class="ltx_text ltx_font_typewriter">c</span>. The factor
+<span class="ltx_text ltx_font_typewriter">f</span>, between 0 and 1, is the foreshortening of the cylinder
+circular caps.</p>
 </div>
-<div id="S3.SS3.p7" class="ltx_para">
+<div id="S3.SS3.p11" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
 void torus(picture pic=currentpicture, real r1=1, real r2=0.5,
            pair c=(0,0), pen p=currentpen)
-void torus(picture pic=currentpicture, real r1, real r2,
-           pair c=(0,0), pen p=currentpen)
 </pre>
 </div>
-<div id="S3.SS3.p8" class="ltx_para">
+<div id="S3.SS3.p12" class="ltx_para">
+<p class="ltx_p">Draws a shaded torus with inner radius <span class="ltx_text ltx_font_typewriter">r1</span> and outer
+radius <span class="ltx_text ltx_font_typewriter">r2</span>, centered at point <span class="ltx_text ltx_font_typewriter">c</span>.</p>
+</div>
+<div id="S3.SS3.p13" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
 void torus_arc(picture pic=currentpicture, real r1, real r2,
            real ang1, real ang2, pair c=(0,0), pen p=currentpen)
 </pre>
 </div>
-<div id="S3.SS3.p9" class="ltx_para">
+<div id="S3.SS3.p14" class="ltx_para">
+<p class="ltx_p">Draws a shaded torus arc with inner radius <span class="ltx_text ltx_font_typewriter">r1</span> and outer
+radius <span class="ltx_text ltx_font_typewriter">r2</span>, centered at point <span class="ltx_text ltx_font_typewriter">c</span> and extending from
+angle <span class="ltx_text ltx_font_typewriter">ang1</span> to angle <span class="ltx_text ltx_font_typewriter">ang2</span>.</p>
+</div>
+<div id="S3.SS3.p15" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
 void toroidal_cylinder(picture pic=currentpicture, real r1,
                        real r2, real ang1, real ang2,
@@ -250,304 +308,383 @@ void toroidal_cylinder(picture pic=currentpicture, real r1,
 <div id="S3.SS4.p1" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
 void resistor(picture pic=currentpicture, Label s="",
-              explicit pair orig, real mag, real ang, pair d=N,
+              explicit pair orig, explicit pair dest, pair d=N,
               pen p=currentpen)
 void resistor(picture pic=currentpicture, Label s="",
-              explicit pair orig, explicit pair dest, pair d=N,
+              explicit pair orig, real mag, real ang, pair d=N,
               pen p=currentpen)
 </pre>
 </div>
 <div id="S3.SS4.p2" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void inductor(picture pic=currentpicture, Label s="",
-              explicit pair orig, real mag, real ang, pair d=N,
-              pen p=currentpen)
-</pre>
+<p class="ltx_p">Draws the symbol for a resistor, using pen <span class="ltx_text ltx_font_typewriter">p</span>, between points
+<span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point orig and
+length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of <span class="ltx_text ltx_font_typewriter">ang</span>. If label
+<span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near the middle, in the
+direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
 </div>
 <div id="S3.SS4.p3" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
 void inductor(picture pic=currentpicture, Label s="",
               explicit pair orig, explicit pair dest, pair d=N,
               pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p4" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void emfp(picture pic=currentpicture, Label s="",
-          explicit pair orig, real mag, real ang, pair d=N,
-          pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p5" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void emfp(picture pic=currentpicture, Label s="",
-          explicit pair orig, explicit pair dest, pair d=N,
-          pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p6" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void emfn(picture pic=currentpicture, Label s="",
-          explicit pair orig, real mag, real ang, pair d=N,
-          pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p7" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void emfn(picture pic=currentpicture, Label s="",
-          explicit pair orig, explicit pair dest, pair d=N,
-          pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p8" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void capacitor(picture pic=currentpicture, Label s="",
-               explicit pair orig, real mag, real ang, pair d=N,
-               pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p9" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void capacitor(picture pic=currentpicture, Label s="",
-               explicit pair orig, explicit pair dest, pair d=N,
-               pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p10" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void ground(picture pic=currentpicture, explicit pair orig,
-            real mag, real ang, pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p11" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void ground(picture pic=currentpicture, explicit pair orig,
-            explicit pair dest, pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p12" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void openswitch(picture pic=currentpicture, Label s="",
-                explicit pair orig, real mag, real ang,
-                pair d=N, pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p13" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void openswitch(picture pic=currentpicture, Label s="",
-                explicit pair orig, explicit pair dest,
-                pair d=N, pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p14" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void closedswitch(picture pic=currentpicture, Label s="",
-                  explicit pair orig, real mag, real ang,
-                  pair d=N, pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p15" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void closedswitch(picture pic=currentpicture, Label s="",
-                  explicit pair orig, explicit pair dest,
-                  pair d=N, pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p16" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void ammeter(picture pic=currentpicture, explicit pair orig,
-             real mag, real ang, pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p17" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void ammeter(picture pic=currentpicture, explicit pair orig,
-             explicit pair dest, pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p18" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void voltmeter(picture pic=currentpicture, explicit pair orig,
-               real mag, real ang, pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p19" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void voltmeter(picture pic=currentpicture, explicit pair orig,
-               explicit pair dest, pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p20" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void meter(picture pic=currentpicture, Label s,
-           explicit pair orig, real mag, real ang,
-           pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p21" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void meter(picture pic=currentpicture, Label s,
-           explicit pair orig, explicit pair dest,
-           pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p22" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void vgaugep(picture pic=currentpicture, Label s="$V$",
-             explicit pair orig, real mag, real ang,
-             pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p23" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void vgaugep(picture pic=currentpicture, Label s="$V$",
-             explicit pair orig, explicit pair dest,
-             pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p24" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void vgaugen(picture pic=currentpicture, Label s="$V$",
-             explicit pair orig, real mag, real ang,
-             pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p25" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void vgaugen(picture pic=currentpicture, Label s="$V$",
-             explicit pair orig, explicit pair dest,
-             pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p26" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void vsourcep(picture pic=currentpicture, Label s="$V$",
-              explicit pair orig, real mag, real ang,
-              pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p27" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void vsourcep(picture pic=currentpicture, Label s="$V$",
-              explicit pair orig, explicit pair dest,
-              pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p28" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void vsourcen(picture pic=currentpicture, Label s="$V$",
-              explicit pair orig, real mag, real ang,
-              pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p29" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void vsourcen(picture pic=currentpicture, Label s="$V$",
-              explicit pair orig, explicit pair dest,
-              pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p30" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void isource(picture pic=currentpicture, Label s="",
-             explicit pair orig, real mag, real ang, pair d=N,
-             pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p31" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void isource(picture pic=currentpicture, Label s="",
-             explicit pair orig, explicit pair dest, pair d=N,
-             pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p32" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void acsource(picture pic=currentpicture, Label s="",
+void inductor(picture pic=currentpicture, Label s="",
               explicit pair orig, real mag, real ang, pair d=N,
               pen p=currentpen)
 </pre>
 </div>
-<div id="S3.SS4.p33" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void acsource(picture pic=currentpicture, Label s="",
-              explicit pair orig, explicit pair dest, pair d=N,
-              pen p=currentpen)
-</pre>
+<div id="S3.SS4.p4" class="ltx_para">
+<p class="ltx_p">Draws the symbol for an inductor, using pen <span class="ltx_text ltx_font_typewriter">p</span>, between points
+<span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point orig and
+length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of <span class="ltx_text ltx_font_typewriter">ang</span>. If label
+<span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near the middle, in the
+direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
 </div>
-<div id="S3.SS4.p34" class="ltx_para">
+<div id="S3.SS4.p5" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
-void acgauge(picture pic=currentpicture, Label s="$V$",
-             explicit pair orig, real mag, real ang,
-             pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p35" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void acgauge(picture pic=currentpicture, Label s="$V$",
-             explicit pair orig, explicit pair dest,
-             pen p=currentpen)
-</pre>
-</div>
-<div id="S3.SS4.p36" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void impedance(picture pic=currentpicture, Label s="",
+void capacitor(picture pic=currentpicture, Label s="",
+               explicit pair orig, explicit pair dest, pair d=N,
+               pen p=currentpen)
+void capacitor(picture pic=currentpicture, Label s="",
                explicit pair orig, real mag, real ang, pair d=N,
                pen p=currentpen)
 </pre>
 </div>
-<div id="S3.SS4.p37" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void impedance(picture pic=currentpicture, Label s="",
-               explicit pair orig, explicit pair dest, pair d=N,
-               pen p=currentpen)
-</pre>
+<div id="S3.SS4.p6" class="ltx_para">
+<p class="ltx_p">Draws the symbol for a capacitor, using pen <span class="ltx_text ltx_font_typewriter">p</span>, between points
+<span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point orig and
+length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of <span class="ltx_text ltx_font_typewriter">ang</span>. If label
+<span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near the middle, in the
+direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
 </div>
-<div id="S3.SS4.p38" class="ltx_para">
+<div id="S3.SS4.p7" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
+void diode(picture pic=currentpicture, Label s="",
+           explicit pair orig, explicit pair dest, pair d=N,
+           pen p=currentpen)
 void diode(picture pic=currentpicture, Label s="",
            explicit pair orig, real mag, real ang, pair d=N,
            pen p=currentpen)
 </pre>
 </div>
-<div id="S3.SS4.p39" class="ltx_para">
-<pre class="ltx_verbatim ltx_font_typewriter">
-void diode(picture pic=currentpicture, Label s="",
-           explicit pair orig, explicit pair dest, pair d=N,
-           pen p=currentpen)
-</pre>
+<div id="S3.SS4.p8" class="ltx_para">
+<p class="ltx_p">Draws the symbol for a diode, using pen <span class="ltx_text ltx_font_typewriter">p</span>, between points
+<span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point orig and
+length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of <span class="ltx_text ltx_font_typewriter">ang</span>. If label
+<span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near the middle, in the
+direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
 </div>
-<div id="S3.SS4.p40" class="ltx_para">
+<div id="S3.SS4.p9" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
+void LED(picture pic=currentpicture, Label s="",
+         explicit pair orig, explicit pair dest, pair d=N,
+         pen p=currentpen)
 void LED(picture pic=currentpicture, Label s="",
          explicit pair orig, real mag, real ang, pair d=N,
          pen p=currentpen)
 </pre>
 </div>
+<div id="S3.SS4.p10" class="ltx_para">
+<p class="ltx_p">Draws the symbol for a LED, using pen <span class="ltx_text ltx_font_typewriter">p</span>, between points
+<span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point orig and
+length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of <span class="ltx_text ltx_font_typewriter">ang</span>. If label
+<span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near the middle, in the
+direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
+</div>
+<div id="S3.SS4.p11" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void openswitch(picture pic=currentpicture, Label s="",
+                explicit pair orig, explicit pair dest,
+                pair d=N, pen p=currentpen)
+void openswitch(picture pic=currentpicture, Label s="",
+                explicit pair orig, real mag, real ang,
+                pair d=N, pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p12" class="ltx_para">
+<p class="ltx_p">Draws the symbol for an open switch, using pen <span class="ltx_text ltx_font_typewriter">p</span>, between
+points <span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point orig
+and length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of <span class="ltx_text ltx_font_typewriter">ang</span>. If label
+<span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near the middle, in the
+direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
+</div>
+<div id="S3.SS4.p13" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void closedswitch(picture pic=currentpicture, Label s="",
+                  explicit pair orig, explicit pair dest,
+                  pair d=N, pen p=currentpen)
+void closedswitch(picture pic=currentpicture, Label s="",
+                  explicit pair orig, real mag, real ang,
+                  pair d=N, pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p14" class="ltx_para">
+<p class="ltx_p">Draws the symbol for a closed switch, using pen <span class="ltx_text ltx_font_typewriter">p</span>, between
+points <span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point orig
+and length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of <span class="ltx_text ltx_font_typewriter">ang</span>. If label
+<span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near the middle, in the
+direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
+</div>
+<div id="S3.SS4.p15" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void ground(picture pic=currentpicture, explicit pair orig,
+            explicit pair dest, pen p=currentpen)
+void ground(picture pic=currentpicture, explicit pair orig,
+            real mag, real ang, pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p16" class="ltx_para">
+<p class="ltx_p">Draws the symbol for a ground connection, using pen <span class="ltx_text ltx_font_typewriter">p</span>, from
+point <span class="ltx_text ltx_font_typewriter">orig</span> to point <span class="ltx_text ltx_font_typewriter">dest</span>, or from point
+orig with length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of
+<span class="ltx_text ltx_font_typewriter">ang</span>.</p>
+</div>
+<div id="S3.SS4.p17" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void impedance(picture pic=currentpicture, Label s="",
+               explicit pair orig, explicit pair dest, pair d=N,
+               pen p=currentpen)
+void impedance(picture pic=currentpicture, Label s="",
+               explicit pair orig, real mag, real ang, pair d=N,
+               pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p18" class="ltx_para">
+<p class="ltx_p">Draws the symbol for a generic impedance, using pen <span class="ltx_text ltx_font_typewriter">p</span>,
+between points <span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point
+orig and length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of
+<span class="ltx_text ltx_font_typewriter">ang</span>. If label <span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near the
+middle, in the direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
+</div>
+<div id="S3.SS4.p19" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void emfp(picture pic=currentpicture, Label s="",
+          explicit pair orig, explicit pair dest, pair d=N,
+          pen p=currentpen)
+void emfp(picture pic=currentpicture, Label s="",
+          explicit pair orig, real mag, real ang, pair d=N,
+          pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p20" class="ltx_para">
+<p class="ltx_p">Draws the symbol for an ideal voltage source, using pen <span class="ltx_text ltx_font_typewriter">p</span>,
+between points <span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point
+orig and length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of
+<span class="ltx_text ltx_font_typewriter">ang</span>. The positive electrode will be closer to the initial
+point and the negative electrode closer to the final point. If label
+<span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near the middle, in the
+direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
+</div>
+<div id="S3.SS4.p21" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void emfn(picture pic=currentpicture, Label s="",
+          explicit pair orig, explicit pair dest, pair d=N,
+          pen p=currentpen)
+void emfn(picture pic=currentpicture, Label s="",
+          explicit pair orig, real mag, real ang, pair d=N,
+          pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p22" class="ltx_para">
+<p class="ltx_p">Draws the symbol for an ideal voltage source, using pen <span class="ltx_text ltx_font_typewriter">p</span>,
+between points <span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point
+orig and length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of
+<span class="ltx_text ltx_font_typewriter">ang</span>. The negative electrode will be closer to the initial
+point and the positive electrode closer to the final point. If label
+<span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near the middle, in the
+direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
+</div>
+<div id="S3.SS4.p23" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void vsourcep(picture pic=currentpicture, Label s="$V$",
+              explicit pair orig, explicit pair dest,
+              pen p=currentpen)
+void vsourcep(picture pic=currentpicture, Label s="$V$",
+              explicit pair orig, real mag, real ang,
+              pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p24" class="ltx_para">
+<p class="ltx_p">Draws a symbol for a voltage source, using pen <span class="ltx_text ltx_font_typewriter">p</span>,
+between points <span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point
+orig and length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of
+<span class="ltx_text ltx_font_typewriter">ang</span>. The symbol consists of a circle with label<span class="ltx_text ltx_font_typewriter">s</span>
+inside. The positive electrode will be closer to the initial
+point and the negative electrode closer to the final point.</p>
+</div>
+<div id="S3.SS4.p25" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void vsourcen(picture pic=currentpicture, Label s="$V$",
+              explicit pair orig, explicit pair dest,
+              pen p=currentpen)
+void vsourcen(picture pic=currentpicture, Label s="$V$",
+              explicit pair orig, real mag, real ang,
+              pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p26" class="ltx_para">
+<p class="ltx_p">Draws a symbol for a voltage source, using pen <span class="ltx_text ltx_font_typewriter">p</span>,
+between points <span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point
+orig and length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of
+<span class="ltx_text ltx_font_typewriter">ang</span>. The symbol consists of a circle with label<span class="ltx_text ltx_font_typewriter">s</span>
+inside. The positive electrode will be closer to the initial
+point and the negative electrode closer to the final point.</p>
+</div>
+<div id="S3.SS4.p27" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void isource(picture pic=currentpicture, Label s="",
+             explicit pair orig, explicit pair dest, pair d=N,
+             pen p=currentpen)
+void isource(picture pic=currentpicture, Label s="",
+             explicit pair orig, real mag, real ang, pair d=N,
+             pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p28" class="ltx_para">
+<p class="ltx_p">Draws the symbol for an ideal current source, using pen <span class="ltx_text ltx_font_typewriter">p</span>,
+from point <span class="ltx_text ltx_font_typewriter">orig</span> to point <span class="ltx_text ltx_font_typewriter">dest</span>, or from point
+orig and length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of
+<span class="ltx_text ltx_font_typewriter">ang</span>. The current points from the initial point to the final
+point. If label <span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near the middle,
+in the direction <span class="ltx_text ltx_font_typewriter">d</span>.
+</p>
+</div>
+<div id="S3.SS4.p29" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void acsource(picture pic=currentpicture, Label s="",
+              explicit pair orig, explicit pair dest, pair d=N,
+              pen p=currentpen)
+void acsource(picture pic=currentpicture, Label s="",
+              explicit pair orig, real mag, real ang, pair d=N,
+              pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p30" class="ltx_para">
+<p class="ltx_p">Draws the symbol for an alternating voltage source, using pen
+<span class="ltx_text ltx_font_typewriter">p</span>, between points <span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from
+point orig and length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of
+<span class="ltx_text ltx_font_typewriter">ang</span>. If label <span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near it,
+in the direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
+</div>
+<div id="S3.SS4.p31" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void ammeter(picture pic=currentpicture, explicit pair orig,
+             explicit pair dest, pen p=currentpen)
+void ammeter(picture pic=currentpicture, explicit pair orig,
+             real mag, real ang, pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p32" class="ltx_para">
+<p class="ltx_p">Draws the symbol for an ammeter, using pen <span class="ltx_text ltx_font_typewriter">p</span>, between points
+<span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point orig and
+length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of <span class="ltx_text ltx_font_typewriter">ang</span>.</p>
+</div>
+<div id="S3.SS4.p33" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void voltmeter(picture pic=currentpicture, explicit pair orig,
+               explicit pair dest, pen p=currentpen)
+void voltmeter(picture pic=currentpicture, explicit pair orig,
+               real mag, real ang, pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p34" class="ltx_para">
+<p class="ltx_p">Draws the symbol for a voltmeter, using pen <span class="ltx_text ltx_font_typewriter">p</span>, between points
+<span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point orig and
+length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of <span class="ltx_text ltx_font_typewriter">ang</span>.</p>
+</div>
+<div id="S3.SS4.p35" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void meter(picture pic=currentpicture, Label s,
+           explicit pair orig, explicit pair dest,
+           pen p=currentpen)
+void meter(picture pic=currentpicture, Label s,
+           explicit pair orig, real mag, real ang,
+           pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p36" class="ltx_para">
+<p class="ltx_p">Draws the symbol for a meter, using pen <span class="ltx_text ltx_font_typewriter">p</span>, between points
+<span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point orig and
+length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of <span class="ltx_text ltx_font_typewriter">ang</span>. The meter will
+be a circle with label <span class="ltx_text ltx_font_typewriter">s</span> inside it.</p>
+</div>
+<div id="S3.SS4.p37" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void vgaugep(picture pic=currentpicture, Label s="$V$",
+             explicit pair orig, real mag, real ang,
+             pen p=currentpen)
+void vgaugep(picture pic=currentpicture, Label s="$V$",
+             explicit pair orig, explicit pair dest,
+             pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p38" class="ltx_para">
+<p class="ltx_p">Draws a symbol for a voltage difference, using pen <span class="ltx_text ltx_font_typewriter">p</span>,
+between points <span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point
+orig and length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of
+<span class="ltx_text ltx_font_typewriter">ang</span>. Label <span class="ltx_text ltx_font_typewriter">s</span> will be displayed in between two
+rounded arrows pointing to the points. The first point is label with a
+positive sign and the second one with a negative sign.</p>
+</div>
+<div id="S3.SS4.p39" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+void vgaugen(picture pic=currentpicture, Label s="$V$",
+             explicit pair orig, explicit pair dest,
+             pen p=currentpen)
+void vgaugen(picture pic=currentpicture, Label s="$V$",
+             explicit pair orig, real mag, real ang,
+             pen p=currentpen)
+</pre>
+</div>
+<div id="S3.SS4.p40" class="ltx_para">
+<p class="ltx_p">Draws a symbol for a voltage difference, using pen <span class="ltx_text ltx_font_typewriter">p</span>, between
+points <span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or from point orig
+and length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of <span class="ltx_text ltx_font_typewriter">ang</span>. Label
+<span class="ltx_text ltx_font_typewriter">s</span> will be displayed in between two rounded arrows pointing to
+the points. The first point is label with a negative sign and the second
+one with a positive sign.</p>
+</div>
 <div id="S3.SS4.p41" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
-void LED(picture pic=currentpicture, Label s="",
-         explicit pair orig, explicit pair dest, pair d=N,
-         pen p=currentpen)
+void acgauge(picture pic=currentpicture, Label s="$V$",
+             explicit pair orig, real mag, real ang,
+             pen p=currentpen)
+void acgauge(picture pic=currentpicture, Label s="$V$",
+             explicit pair orig, explicit pair dest,
+             pen p=currentpen)
 </pre>
+</div>
+<div id="S3.SS4.p42" class="ltx_para">
+<p class="ltx_p">Draws the symbol for a resistor, using pen <span class="ltx_text ltx_font_typewriter">p</span>, between points <span class="ltx_text ltx_font_typewriter">orig</span> and
+<span class="ltx_text ltx_font_typewriter">dest</span>, or from point orig and length <span class="ltx_text ltx_font_typewriter">mag</span> in
+the direction of <span class="ltx_text ltx_font_typewriter">ang</span>. If label <span class="ltx_text ltx_font_typewriter">s</span> is given, it will
+be added near the middle, in the direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
+</div>
+<div id="S3.SS4.p43" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
 void cccc(picture pic=currentpicture, Label s="", path[] g,
           explicit pair orig, real mag, real ang, pair d,
           pen p=currentpen)
 </pre>
 </div>
+<div id="S3.SS4.p44" class="ltx_para">
+<p class="ltx_p">Draws the symbol for a generic device define by path <span class="ltx_text ltx_font_typewriter">g</span>, using
+pen <span class="ltx_text ltx_font_typewriter">p</span>, between points <span class="ltx_text ltx_font_typewriter">orig</span> and <span class="ltx_text ltx_font_typewriter">dest</span>, or
+from point orig and length <span class="ltx_text ltx_font_typewriter">mag</span> in the direction of
+<span class="ltx_text ltx_font_typewriter">ang</span>. If label <span class="ltx_text ltx_font_typewriter">s</span> is given, it will be added near the
+middle, in the direction <span class="ltx_text ltx_font_typewriter">d</span>.</p>
+</div>
 </section>
 </section><div class="ltx_rdf" about="" property="dcterms:creator" content="Jaime E. Villate"></div>
 <div class="ltx_rdf" about="" property="dcterms:subject" content="vector graphics,asymptote"></div>
 <div class="ltx_rdf" about="" property="dcterms:subject" content="graphics"></div>
-<div class="ltx_rdf" about="" property="dcterms:title" content="Motion on a Plane"></div>
+<div class="ltx_rdf" about="" property="dcterms:title" content="physics: a module for Asymptote"></div>
 
 </article>
 </div>
 <footer class="ltx_page_footer">
 <p>&copy; 2023, Jaime E. Villate</p>
 <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a></p>
-<div class="ltx_page_logo">Generated  on Sat Dec  9 15:37:01 2023 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML </a>
+<div class="ltx_page_logo">Generated  on Mon Dec 11 21:13:12 2023 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML </a>
 </div></footer>
 </div>
 </body>
