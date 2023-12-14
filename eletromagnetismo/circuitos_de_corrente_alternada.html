@@ -1,0 +1,1671 @@
+<!DOCTYPE html><html prefix="dcterms: http://purl.org/dc/terms/" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Circuitos de corrente alternada</title>
+<!--Generated on Thu Dec 14 13:42:00 2023 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 14 de dezembro de 2023.-->
+
+<link rel="stylesheet" href="../css/latex-schola.css" type="text/css">
+<link rel="stylesheet" href="../css/ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" lang="pt" content="Euler, Leonhard, LC, Tesla, Nikola, alternada, amplitude, angular, capacitiva, circuito, complexa, corrente, de corte, de fase, de ressonância, eficaz, em frequência, fator de
+potência, filtro, frequência, função, ganho, impedância, indutiva, instantânea, média, oscilador harmónico simples, passa-banda, período, potência, reatância, rejeita-banda, resistência, resposta, ressonância, sinusoidal, tensão, transitória, triângulo de
+impedância, ângulo">
+</head>
+<body>
+<nav><a href="./index.html">Eletromagnetismo e Circuitos</a><span>&rarr;</span><span>Circuitos de corrente alternada</span></nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line" lang="pt">
+<h1 class="ltx_title ltx_title_document">11. Circuitos de corrente alternada</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jaime E. Villate e Luís Miguel Martelo
+</span></span>
+</div>
+<div class="ltx_dates">(14 de dezembro de 2023)</div>
+
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="p1" class="ltx_para ltx_align_center">
+<img src="figs/Tesla.jpg" style="width:12.600em;max-width:100%;height:auto" id="p1.g1" class="ltx_graphics" alt="">
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Nikola Tesla (1856–1943)</span></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">No fim da década de 1880 viveu-se nos Estados Unidos da América um
+período conhecido como <em class="ltx_emph ltx_font_italic">Guerra das Correntes</em>. Nessa época já
+existia uma rede elétrica pública, com corrente contínua, usada
+principalmente para alimentar lâmpadas incandescentes e motores
+elétricos. A exploração dessa rede elétrica revertia grandes lucros a
+Thomas Alva Edison (1847–1931). Outras pessoas tentaram entrar nesse
+novo negócio milionário com as suas inovações; George Westinghouse
+(1846–1914) contratou Tesla, um jovem brilhante, imigrante da
+Croácia, quem tinha inventado geradores de corrente alternada. A
+guerra das correntes acabaria por ser ganha pelo sistema de corrente
+alternada de Tesla e Westinghouse. Uma das principais vantagens sobre
+o sistema de corrente contínua de Edison é que permite transmitir
+eletricidade a grandes voltagens, diminuindo perdas na transmissão,
+que por meio de transformadores pode ser convertida em voltagens
+menores, mais seguras, para uso doméstico.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">11.1 </span>Circuito LC</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">No circuito do lado esquerdo da figura <a href="#S1.F1" title="Figura 11.1 ‣ 1 Circuito LC ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.1</span></a>, o
+interruptor <math id="S1.p1.m1" class="ltx_Math" alttext="\mathrm{S}_{1}" display="inline"><msub><mi mathvariant="normal">S</mi><mn>1</mn></msub></math> está fechado (há muito tempo) e o
+interruptor <math id="S1.p1.m2" class="ltx_Math" alttext="\mathrm{S}_{2}" display="inline"><msub><mi mathvariant="normal">S</mi><mn>2</mn></msub></math> aberto. Num instante, <math id="S1.p1.m3" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>, abre-se o
+interruptor <math id="S1.p1.m4" class="ltx_Math" alttext="\mathrm{S}_{1}" display="inline"><msub><mi mathvariant="normal">S</mi><mn>1</mn></msub></math> e, simultaneamente, fecha-se o interruptor
+<math id="S1.p1.m5" class="ltx_Math" alttext="\mathrm{S}_{2}" display="inline"><msub><mi mathvariant="normal">S</mi><mn>2</mn></msub></math>. Assim, para <math id="S1.p1.m6" class="ltx_Math" alttext="t\geq 0" display="inline"><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow></math> o circuito equivalente é o
+representado no lado direito da figura <a href="#S1.F1" title="Figura 11.1 ‣ 1 Circuito LC ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.1</span></a>, denominado
+circuito LC.</p>
+</div>
+<figure id="S1.F1" class="ltx_figure"><img src="img/circ_LC2.png" style="width:19.971em;max-width:100%;height:auto" id="S1.F1.g1" class="ltx_graphics ltx_centering" alt="Circuito LC, em ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 11.1: </span>Circuito LC, em <math id="S1.F1.m5" class="ltx_Math" alttext="t&lt;0" display="inline"><mrow><mi>t</mi><mo>&lt;</mo><mn>0</mn></mrow></math> (lado esquerdo) e circuito
+equivalente para <math id="S1.F1.m6" class="ltx_Math" alttext="t\geq 0" display="inline"><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow></math> (lado direito) em que <math id="S1.F1.m7" class="ltx_Math" alttext="\mathrm{S}_{1}" display="inline"><msub><mi mathvariant="normal">S</mi><mn>1</mn></msub></math>
+está aberto e <math id="S1.F1.m8" class="ltx_Math" alttext="\mathrm{S}_{2}" display="inline"><msub><mi mathvariant="normal">S</mi><mn>2</mn></msub></math> fechado.</figcaption>
+</figure>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">A impedância do condensador é <math id="S1.p2.m1" class="ltx_Math" alttext="1/(Cs)" display="inline"><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>C</mi><mspace width=0.166em /><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> e a do indutor <math id="S1.p2.m2" class="ltx_Math" alttext="Ls" display="inline"><mrow><mi>L</mi><mspace width=0.166em /><mi>s</mi></mrow></math>. A
+transformada da voltagem no indutor, <math id="S1.p2.m3" class="ltx_Math" alttext="\tilde{V}" display="inline"><mover accent="true"><mi>V</mi><mo stretchy="false">~</mo></mover></math>, não é simplesmente
+<math id="S1.p2.m4" class="ltx_Math" alttext="Z\,\tilde{I}" display="inline"><mrow><mi>Z</mi><mspace width=0.166em /><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover></mrow></math>, porque no instante <math id="S1.p2.m5" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math> a corrente que o percorre não
+é nula. No domínio do tempo, a relação entre a voltagem e a corrente
+no indutor é,
+</p>
+<table id="S1.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E1.m1" class="ltx_Math" alttext="V=L\,\dfrac{\mathrm{d}\,I}{\mathrm{d}\,t}" display="block"><mrow><mi>V</mi><mo>=</mo><mrow><mi>L</mi><mspace width=0.166em /><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>I</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>t</mi></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">e a transformada de Laplace é então:</p>
+<table id="S1.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E2.m1" class="ltx_Math" alttext="\tilde{V}=L\,\left(s\,\tilde{I}-I_{0}\right)" display="block"><mrow><mover accent="true"><mi>V</mi><mo stretchy="false">~</mo></mover><mo>=</mo><mrow><mi>L</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mi>s</mi><mspace width=0.166em /><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover></mrow><mo>−</mo><msub><mi>I</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.2)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">No condensador não há que acrescentar nenhum termo adicional, porque a
+sua carga inicial é nula; a transformada da voltagem no condensador é
+<math id="S1.p3.m1" class="ltx_Math" alttext="Z\,\tilde{I}=\tilde{I}/(C\,s)" display="inline"><mrow><mrow><mi>Z</mi><mspace width=0.166em /><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover></mrow><mo>=</mo><mrow><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>C</mi><mspace width=0.166em /><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. A lei das malhas conduz à equação:</p>
+<table id="S1.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E3.m1" class="ltx_Math" alttext="L\,\left(s\,\tilde{I}-I_{0}\right)=\dfrac{\tilde{I}}{C\,s}\qquad%
+\Longrightarrow\qquad s^{2}\,\tilde{I}-s\,I_{0}=-\dfrac{\tilde{I}}{L\,C}" display="block"><mrow><mrow><mrow><mi>L</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mi>s</mi><mspace width=0.166em /><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover></mrow><mo>−</mo><msub><mi>I</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover><mrow><mi>C</mi><mspace width=0.166em /><mi>s</mi></mrow></mfrac><mo mathvariant="italic" separator="true">  </mo><mo>⟹</mo></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><mrow><msup><mi>s</mi><mn>2</mn></msup><mspace width=0.166em /><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover></mrow><mo>−</mo><mrow><mi>s</mi><mspace width=0.166em /><msub><mi>I</mi><mn>0</mn></msub></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mfrac><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover><mrow><mi>L</mi><mspace width=0.166em /><mi>C</mi></mrow></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.3)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Esta equação algébrica é a transformada de Laplace da equação
+diferencial do circuito (observe-se que <math id="S1.p4.m1" class="ltx_Math" alttext="I^{\prime}_{0}=0" display="inline"><mrow><msubsup><mi>I</mi><mn>0</mn><mo>′</mo></msubsup><mo>=</mo><mn>0</mn></mrow></math>, porque o circuito
+está no estado estacionário no instante <math id="S1.p4.m2" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>):</p>
+<table id="S1.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E4.m1" class="ltx_Math" alttext="\dfrac{\mathrm{d}^{2}I}{\mathrm{d}\,t^{2}}=-\dfrac{I}{LC}" display="block"><mrow><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mspace width=0.166em /><mi>I</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mfrac><mi>I</mi><mrow><mi>L</mi><mspace width=0.166em /><mi>C</mi></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">que é a equação de um <em class="ltx_emph ltx_font_italic">oscilador harmónico simples</em>. O polinómio caraterístico dessa equação linear
+tem duas raízes imaginárias <math id="S1.p4.m3" class="ltx_Math" alttext="\pm\mathrm{i}\,\sqrt{1/(LC)}" display="inline"><mrow><mo>±</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><msqrt><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mspace width=0.166em /><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mrow></math> e a
+solução da equação é</p>
+<table id="S1.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E5.m1" class="ltx_Math" alttext="I(t)=I_{0}\cos(\omega t)" display="block"><mrow><mrow><mi>I</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">em que <math id="S1.p4.m4" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> é a frequência angular do circuito,
+</p>
+<table id="S1.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E6.m1" class="ltx_Math" alttext="\omega=\dfrac{1}{\sqrt{LC}}" display="block"><mrow><mi>ω</mi><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><mi>L</mi><mspace width=0.166em /><mi>C</mi></mrow></msqrt></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.6)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">A carga no condensador, em função do tempo, é</p>
+<table id="S1.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E7.m1" class="ltx_Math" alttext="Q(t)=C\Delta V=-CL\,\dfrac{\mathrm{d}\,I}{\mathrm{d}\,t}=\dfrac{I_{0}}{\omega}%
+\sin(\omega t)" display="block"><mrow><mrow><mi>Q</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>C</mi><mspace width=0.166em /><mi mathvariant="normal">Δ</mi><mspace width=0.166em /><mi>V</mi></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>C</mi><mspace width=0.166em /><mi>L</mi><mspace width=0.166em /><mfrac><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>I</mi></mrow><mrow><mi mathvariant="normal">d</mi><mspace width=0.166em /><mi>t</mi></mrow></mfrac></mrow></mrow><mo>=</mo><mrow><mfrac><msub><mi>I</mi><mn>0</mn></msub><mi>ω</mi></mfrac><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.7)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">e como tal, a corrente e a carga oscilam com frequência
+<math id="S1.p6.m1" class="ltx_Math" alttext="f=\omega/(2\,\pi)" display="inline"><mrow><mi>f</mi><mo>=</mo><mrow><mi>ω</mi><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, desfasadas 180<math id="S1.p6.m2" class="ltx_Math" alttext="{}^{\circ}" display="inline"><msup><mi></mi><mo>∘</mo></msup></math>, de forma que quando uma
+delas é nula, a outra tem o seu valor absoluto máximo
+(figura <a href="#S1.F2" title="Figura 11.2 ‣ 1 Circuito LC ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.2</span></a>).</p>
+</div>
+<figure id="S1.F2" class="ltx_figure"><img src="img/circ_LC2-plot.png" style="width:21.105em;max-width:100%;height:auto" id="S1.F2.g1" class="ltx_graphics ltx_centering" alt="Corrente e carga no circuito LC (">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 11.2: </span>Corrente e carga no circuito LC (<math id="S1.F2.m2" class="ltx_Math" alttext="Q_{\text{m\'{a}x}}=I_{0}/\omega" display="inline"><mrow><msub><mi>Q</mi><mtext>máx</mtext></msub><mo>=</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>/</mo><mi>ω</mi></mrow></mrow></math>).</figcaption>
+</figure>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">A corrente (<a href="#S1.E5" title="(5) ‣ 1 Circuito LC ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.5</span></a>) chama-se <em class="ltx_emph ltx_font_italic">corrente
+alternada</em> e a carga (<a href="#S1.E7" title="(7) ‣ 1 Circuito LC ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.7</span></a>)
+é uma carga alternada. No capítulo <a href="inducao_eletromagnetica.html">9</a> mostrou-se um
+gerador que produz tensão alternada
+(equação (<a href="inducao_eletromagnetica.html#S2.E14">9.14</a>)). Em geral, uma função
+alternada é uma função periódica com valor
+médio igual a zero; a carga e a corrente no circuito LC, assim como a
+tensão do gerador de tensão alternada, são 3 exemplos particulares em
+que a função alternada é o seno ou cosseno.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">11.2 </span>Funções sinusoidais</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Uma <em class="ltx_emph ltx_font_italic">função sinusoidal</em> <math id="S2.p1.m1" class="ltx_Math" alttext="F(t)" display="inline"><mrow><mi>F</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> é uma
+função alternada que oscila entre dois valores <math id="S2.p1.m2" class="ltx_Math" alttext="-F_{\text{m\'{a}x}}" display="inline"><mrow><mo>−</mo><msub><mi>F</mi><mtext>máx</mtext></msub></mrow></math> e
+<math id="S2.p1.m3" class="ltx_Math" alttext="F_{\text{m\'{a}x}}" display="inline"><msub><mi>F</mi><mtext>máx</mtext></msub></math> e tem a mesma forma da função seno ou cosseno, tal como
+a função da figura <a href="#S2.F3" title="Figura 11.3 ‣ 2 Funções sinusoidais ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.3</span></a>. Basta saber os valores das 3
+distâncias <math id="S2.p1.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>, <math id="S2.p1.m5" class="ltx_Math" alttext="F_{\text{m\'{a}x}}" display="inline"><msub><mi>F</mi><mtext>máx</mtext></msub></math> e <math id="S2.p1.m6" class="ltx_Math" alttext="t_{\text{m\'{a}x}}" display="inline"><msub><mi>t</mi><mtext>máx</mtext></msub></math> referidas na figura,
+para caraterizar cada uma dessas funções.
+</p>
+</div>
+<figure id="S2.F3" class="ltx_figure"><img src="img/sinusoid.png" style="width:21.924em;max-width:100%;height:auto" id="S2.F3.g1" class="ltx_graphics ltx_centering" alt="Função sinusoidal com período ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 11.3: </span>Função sinusoidal com período <math id="S2.F3.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> e valor máximo <math id="S2.F3.m4" class="ltx_Math" alttext="F_{\text{m\'{a}x}}" display="inline"><msub><mi>F</mi><mtext>máx</mtext></msub></math>.</figcaption>
+</figure>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">O intervalo <math id="S2.p2.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> entre dois máximos ou dois mínimos sucessivos é o
+<em class="ltx_emph ltx_font_italic">período</em> da função e o seu inverso, <math id="S2.p2.m2" class="ltx_Math" alttext="f=1/T" display="inline"><mrow><mi>f</mi><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mi>T</mi></mrow></mrow></math>, é a
+<em class="ltx_emph ltx_font_italic">frequência</em>.
+</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Designando por <math id="S2.p3.m1" class="ltx_Math" alttext="t_{\text{m\'{a}x}}" display="inline"><msub><mi>t</mi><mtext>máx</mtext></msub></math> o valor absoluto da coordenada <math id="S2.p3.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> onde
+a função atinge o seu valor máximo <math id="S2.p3.m3" class="ltx_Math" alttext="F_{\text{m\'{a}x}}" display="inline"><msub><mi>F</mi><mtext>máx</mtext></msub></math>, pela última vez
+antes de <math id="S2.p3.m4" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>, define-se o <em class="ltx_emph ltx_font_italic">ângulo de fase</em> da função:
+</p>
+<table id="S2.E8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E8.m1" class="ltx_Math" alttext="\varphi=2\pi\left(\dfrac{t_{\text{m\'{a}x}}}{T}\right)" display="block"><mrow><mi>φ</mi><mo>=</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><mrow><mo>(</mo><mfrac><msub><mi>t</mi><mtext>máx</mtext></msub><mi>T</mi></mfrac><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.8)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">Uma função sinusoidal também pode ser caraterizada pelo seu valor
+máximo <math id="S2.p4.m1" class="ltx_Math" alttext="F_{\text{m\'{a}x}}" display="inline"><msub><mi>F</mi><mtext>máx</mtext></msub></math> (chamado <em class="ltx_emph ltx_font_italic">amplitude</em>),
+o seu ângulo de fase <math id="S2.p4.m2" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math> e a sua <em class="ltx_emph ltx_font_italic">frequência angular</em>,
+<math id="S2.p4.m3" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, definida por:
+</p>
+<table id="S2.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E9.m1" class="ltx_Math" alttext="\omega=\dfrac{2\pi}{T}" display="block"><mrow><mi>ω</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow><mi>T</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.9)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">As funções sinusoidais têm todas a forma geral:</p>
+<table id="S2.E10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E10.m1" class="ltx_Math" alttext="F(t)=F_{\text{m\'{a}x}}\cos\left(\omega t+\varphi\right)" display="block"><mrow><mrow><mi>F</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>F</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>φ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.10)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p">Note-se que é possível representar a mesma função de várias formas.
+Pode-se substituir o cosseno por seno e subtrair <math id="S2.p6.m1" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math> ao ângulo
+de fase, sem alterar o resultado. Pode-se também inverter os sinais da
+frequência angular e do ângulo de fase, simultaneamente, e ainda somar
+ou subtrair qualquer múltiplo de <math id="S2.p6.m2" class="ltx_Math" alttext="2\pi" display="inline"><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow></math> ao ângulo de fase. No
+entanto, para facilitar a caraterização dessas funções, usaremos
+apenas a função cosseno, frequências angulares positivas e ângulos de
+fase no intervalo <math id="S2.p6.m3" class="ltx_Math" alttext="0\leq\varphi&lt;2\pi" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>φ</mi><mo>&lt;</mo><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow></mrow></math>. Essas três escolhas, embora
+arbitrárias, são habituais.</p>
+</div>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p">Duas funções sinusoidais que não tenham o mesmo valor máximo, ângulo
+de fase e frequência angular, são necessariamente diferentes. E duas
+funções sinusoidais com a mesma frequência angular terão,
+necessariamente, a mesma frequência e o mesmo período.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">11.3 </span>Fasores</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">As funções sinusoidais com a forma (<a href="#S2.E10" title="(10) ‣ 2 Funções sinusoidais ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.10</span></a>) podem ainda ser escritas usando a fórmula de Euler e a função <math id="S3.p1.m1" class="ltx_Math" alttext="\mathrm{Re}(z)" display="inline"><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> que extrai a parte real de um número complexo <math id="S3.p1.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>:</p>
+<table id="S3.E11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E11.m1" class="ltx_Math" alttext="F_{\text{m\'{a}x}}\cos\left(\omega t+\varphi\right)=\mathrm{Re}\left[F_{\text{%
+m\'{a}x}}\mathrm{e}^{\mathrm{i}\,(\omega t+\varphi)}\right]" display="block"><mrow><mrow><msub><mi>F</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>φ</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo>[</mo><mrow><msub><mi>F</mi><mtext>máx</mtext></msub><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>φ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.11)</span></td>
+</tr>
+</table>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Esta forma facilita a identificação de uma propriedade importante na
+soma de duas funções sinusoidais com diferentes valores máximos e
+diferentes ângulos de fase, mas com a mesma frequência:</p>
+<table id="Sx2.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex1.m1" class="ltx_Math" alttext="\displaystyle F_{\text{m\'{a}x}}\cos\left(\omega t+\varphi\right)" display="inline"><mrow><msub><mi>F</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>φ</mi></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex1.m2" class="ltx_Math" alttext="\displaystyle+G_{\text{m\'{a}x}}\cos\left(\omega t+\phi\right)=" display="inline"><mrow><mrow><mo>+</mo><mrow><msub><mi>G</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>ϕ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.E12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.E12.m1" class="ltx_Math" alttext="\displaystyle\mathrm{Re}\left[\left(F_{\text{m\'{a}x}}\mathrm{e}^{\mathrm{i}\,%
+\varphi}+G_{\text{m\'{a}x}}\,\mathrm{e}^{\mathrm{i}\,\phi}\right)\mathrm{e}^{%
+\mathrm{i}\,\omega t}\right]" display="inline"><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo>[</mo><mrow><mrow><mo>(</mo><mrow><mrow><msub><mi>F</mi><mtext>máx</mtext></msub><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>φ</mi></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>G</mi><mtext>máx</mtext></msub><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ϕ</mi></mrow></msup></mrow></mrow><mo>)</mo></mrow><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup></mrow><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.12)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Ou seja, a soma de duas funções sinusoidais com a mesma frequência é
+também uma função sinusoidal com a mesma frequência. Os dois números
+complexos entre os parêntesis chmam-se os <em class="ltx_emph ltx_font_italic">fasores</em> das duas
+funções <math id="S3.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> e <math id="S3.p3.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> (ver apêndice <a href="transformada_de_Laplace.html">B</a>):</p>
+<table id="S3.E13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E13.m1" class="ltx_Math" alttext="\mathbf{F}=F_{\text{m\'{a}x}}\mathrm{e}^{\mathrm{i}\,\varphi}=F_{\text{m\'{a}x%
+}}\angle\,\varphi\qquad\mathbf{G}=G_{\text{m\'{a}x}}\mathrm{e}^{\mathrm{i}\,%
+\phi}=G_{\text{m\'{a}x}}\angle\,\phi" display="block"><mrow><mrow><mi>𝐅</mi><mo>=</mo><mrow><msub><mi>F</mi><mtext>máx</mtext></msub><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>φ</mi></mrow></msup></mrow><mo>=</mo><mrow><msub><mi>F</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>φ</mi></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mi>𝐆</mi><mo>=</mo><mrow><msub><mi>G</mi><mtext>máx</mtext></msub><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ϕ</mi></mrow></msup></mrow><mo>=</mo><mrow><msub><mi>G</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>ϕ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.13)</span></td>
+</tr>
+</table>
+<p class="ltx_p">onde o operador “ângulo” (<math id="S3.p3.m3" class="ltx_Math" alttext="\angle" display="inline"><mi mathvariant="normal">∠</mi></math>) seguido do ângulo <math id="S3.p3.m4" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math> é
+uma forma habitual em teoria de circuitos de representar a função
+<math id="S3.p3.m5" class="ltx_Math" alttext="\mathrm{e}^{\mathrm{i}\,\varphi}=\cos\varphi+\mathrm{i}\,\sin\varphi" display="inline"><mrow><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>φ</mi></mrow></msup><mo>=</mo><mrow><mrow><mi>cos</mi><mspace width=0.11em /><mi>φ</mi></mrow><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mi>φ</mi></mrow></mrow></mrow></mrow></math>. O lado esquerdo da
+figura <a href="#S3.F4" title="Figura 11.4 ‣ 3 Fasores ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.4</span></a> mostra a representação do fasor <math id="S3.p3.m6" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> no
+plano complexo, representado como um vetor com módulo igual a
+<math id="S3.p3.m7" class="ltx_Math" alttext="F_{\text{m\'{a}x}}" display="inline"><msub><mi>F</mi><mtext>máx</mtext></msub></math>.</p>
+</div>
+<figure id="S3.F4" class="ltx_figure"><img src="img/phasor.png" style="width:30.282em;max-width:100%;height:auto" id="S3.F4.g1" class="ltx_graphics ltx_centering" alt="Fasor ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 11.4: </span>Fasor <math id="S3.F4.m3" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> no plano complexo (esquerda) e
+valores de <math id="S3.F4.m4" class="ltx_Math" alttext="f(t)" display="inline"><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> em 4 instantes (direita).</figcaption>
+</figure>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">No instante <math id="S3.p4.m1" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math> o valor da função, <math id="S3.p4.m2" class="ltx_Math" alttext="f(0)" display="inline"><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>, é igual à parte real do
+fasor <math id="S3.p4.m3" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> (projeção do fasor no eixo real). Em <math id="S3.p4.m4" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, a
+função <math id="S3.p4.m5" class="ltx_Math" alttext="f(t)" display="inline"><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> é a parte real de <math id="S3.p4.m6" class="ltx_Math" alttext="\mathbf{F}\mathrm{e}^{\mathrm{i}\,\omega t}" display="inline"><mrow><mi>𝐅</mi><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup></mrow></math>, ou
+seja, a projeção no eixo real do fasor <math id="S3.p4.m7" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> após ter rodado um
+ângulo <math id="S3.p4.m8" class="ltx_Math" alttext="\omega t" display="inline"><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></math> no plano complexo. Em <math id="S3.p4.m9" class="ltx_Math" alttext="T=2\pi/\omega" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow><mo>/</mo><mi>ω</mi></mrow></mrow></math> (período da
+função <math id="S3.p4.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>), o fasor regressa à sua posição inicial. O lado direito da
+figura<a href="#S3.F4" title="Figura 11.4 ‣ 3 Fasores ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.4</span></a> mostra, no eixo real, os valores da função em
+quatro tempos equidistantes, <math id="S3.p4.m11" class="ltx_Math" alttext="f_{0}=f(0)" display="inline"><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>=</mo><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, <math id="S3.p4.m12" class="ltx_Math" alttext="f_{1}=f(T/4)" display="inline"><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>/</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, <math id="S3.p4.m13" class="ltx_Math" alttext="f_{2}=f(T/2)" display="inline"><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>=</mo><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> e
+<math id="S3.p4.m14" class="ltx_Math" alttext="f3=f(3T/4)" display="inline"><mrow><mrow><mi>f</mi><mspace width=0.166em /><mn>3</mn></mrow><mo>=</mo><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mspace width=0.166em /><mi>T</mi></mrow><mo>/</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, que correspondem a rodar o fasor <math id="S3.p4.m15" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math> em cada
+intervalo.</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">A equação (<a href="#S3.Ex1" title="3 Fasores ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.3</span></a>) mostra que o fasor da soma de duas
+funções sinusoidais com a mesma frequência angular é igual à soma dos
+fasores das dessas funções (soma de números complexos). No entanto
+multiplicando dois fasores como se fossem números complexos o
+resultado não corresponde ao produto das respetivas funções
+correspondentes aos dois fasores. Como tal, não é definido o produto
+entre fasores. (na secção <a href="#S6" title="6 Potência nos circuitos de corrente alternada ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.6</span></a> veremos como
+multiplicar funções sinusoidais).</p>
+</div>
+<div id="Thmexample1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Exemplo 11.1</span></span></h6><p></p>
+<div id="Thmexample1.p1" class="ltx_para">
+<p class="ltx_p">Num nó num circuito de corrente alternada entram duas correntes e
+saem outras duas correntes. Sabendo que as expressões das correntes
+que entram são <math id="Thmexample1.p1.m1" class="ltx_Math" alttext="\sqrt{2}\,\sin(\omega\,t+\pi/4)" display="inline"><mrow><msqrt><mn>2</mn></msqrt><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mrow><mi>π</mi><mo>/</mo><mn>4</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> e
+<math id="Thmexample1.p1.m2" class="ltx_Math" alttext="2\,\sqrt{2}\,\cos(\omega\,t+\pi/4)" display="inline"><mrow><mn>2</mn><mspace width=0.166em /><msqrt><mn>2</mn></msqrt><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mrow><mi>π</mi><mo>/</mo><mn>4</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, e uma das correntes que sai
+é <math id="Thmexample1.p1.m3" class="ltx_Math" alttext="(3-\sqrt{3})\,\cos(\omega\,t)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>−</mo><msqrt><mn>3</mn></msqrt></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, calcule a outra corrente que sai,
+indicando o seu valor máximo e o seu ângulo de fase.</p>
+</div>
+<div id="Thmexample1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Em termos matemáticos, o que está a ser pedido é
+o cálculo de</p>
+<table id="S3.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex2.m1" class="ltx_Math" alttext="\sqrt{2}\sin(\omega t+\pi/4)+2\sqrt{2}\cos(\omega t+\pi/4)-(3-\sqrt{3})\cos(%
+\omega t)" display="block"><mrow><mrow><mrow><msqrt><mn>2</mn></msqrt><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mrow><mi>π</mi><mo>/</mo><mn>4</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mspace width=0.166em /><msqrt><mn>2</mn></msqrt><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mrow><mi>π</mi><mo>/</mo><mn>4</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>−</mo><msqrt><mn>3</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">de forma a obter uma única função cosseno.</p>
+</div>
+<div id="Thmexample1.p3" class="ltx_para">
+<p class="ltx_p">Escrevem-se os fasores das 3 correntes; no caso da primeira corrente
+é necessário subtrair <math id="Thmexample1.p3.m1" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math> ao ângulo de fase, para substituir o
+seno por cosseno. O fasor da quarta corrente é a soma dos dois
+primeiros fasores, subtraído do terceiro:</p>
+<table id="S3.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex3.m1" class="ltx_Math" alttext="\mathbf{I}_{4}=\mathbf{I}_{1}+\mathbf{I}_{2}-\mathbf{I}_{3}=\left(\sqrt{2}%
+\angle-\pi/4\right)+\left(2\sqrt{2}\angle\,\pi/4\right)-\left(3-\sqrt{3}\right%
+)\angle\,0" display="block"><mrow><msub><mi>𝐈</mi><mn>4</mn></msub><mo>=</mo><mrow><mrow><msub><mi>𝐈</mi><mn>1</mn></msub><mo>+</mo><msub><mi>𝐈</mi><mn>2</mn></msub></mrow><mo>−</mo><msub><mi>𝐈</mi><mn>3</mn></msub></mrow><mo>=</mo><mrow><mrow><mrow><mo>(</mo><mrow><mrow><msqrt><mn>2</mn></msqrt><mspace width=0.166em /><mi mathvariant="normal">∠</mi></mrow><mo>−</mo><mrow><mi>π</mi><mo>/</mo><mn>4</mn></mrow></mrow><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><msqrt><mn>2</mn></msqrt><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>π</mi></mrow><mo>/</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mrow><mo>(</mo><mrow><mn>3</mn><mo>−</mo><msqrt><mn>3</mn></msqrt></mrow><mo>)</mo></mrow><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mn> 0</mn></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample1.p4" class="ltx_para">
+<p class="ltx_p">A seguir calculam-se as partes real e imaginária de cada fasor,
+tarefa que é facilitada usando a representação gráfica (lado
+esquerdo na figura seguinte).</p>
+<img src="img/phasors_sum.png" style="width:26.481em;max-width:100%;height:auto" id="Thmexample1.p4.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="Thmexample1.p5" class="ltx_para">
+<p class="ltx_p">O fasor da quarta corrente é:</p>
+<table id="S3.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex4.m1" class="ltx_Math" alttext="\mathbf{I}_{4}=(1-\mathrm{i})+(2+\mathrm{i}\,2)-(3-\sqrt{3})=\sqrt{3}+\mathrm{i}" display="block"><mrow><msub><mi>𝐈</mi><mn>4</mn></msub><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mn> 2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>−</mo><msqrt><mn>3</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msqrt><mn>3</mn></msqrt><mo>+</mo><mi mathvariant="normal">i</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample1.p6" class="ltx_para">
+<p class="ltx_p">O módulo desse fasor é a hipotenusa do triângulo retângulo com
+catetos de <math id="Thmexample1.p6.m1" class="ltx_Math" alttext="\sqrt{3}" display="inline"><msqrt><mn>3</mn></msqrt></math> e 1 unidades, que dá <math id="Thmexample1.p6.m2" class="ltx_Math" alttext="I_{\text{m\'{a}x}}=2" display="inline"><mrow><msub><mi>I</mi><mtext>máx</mtext></msub><mo>=</mo><mn>2</mn></mrow></math>. O
+ângulo de fase é o ângulo oposto ao cateto de comprimento 1 nesse
+triângulo retângulo, <math id="Thmexample1.p6.m3" class="ltx_Math" alttext="\varphi=\arctan(1/\sqrt{3})=\pi/6" display="inline"><mrow><mi>φ</mi><mo>=</mo><mrow><mi>arctan</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>/</mo><msqrt><mn>3</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>π</mi><mo>/</mo><mn>6</mn></mrow></mrow></math>. O
+resultado obtido é:</p>
+<table id="S3.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex5.m1" class="ltx_Math" alttext="I_{4}(t)=2\cos(\omega t+\pi/6)" display="block"><mrow><mrow><msub><mi>I</mi><mn>4</mn></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mrow><mi>π</mi><mo>/</mo><mn>6</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">11.4 </span>Tensão alternada</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Uma tensão alternada é um sinal sinusoidal:</p>
+<table id="S4.E14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E14.m1" class="ltx_Math" alttext="V=V_{\text{m\'{a}x}}\cos(\omega t+\varphi)" display="block"><mrow><mi>V</mi><mo>=</mo><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>φ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.14)</span></td>
+</tr>
+</table>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Nos diagramas de circuito, uma fonte ideal de tensão alternada
+representa-se pelo símbolo indicado na
+figura <a href="#S4.F5" title="Figura 11.5 ‣ 4 Tensão alternada ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.5</span></a>. Junto do símbolo podem indica-se a tensão
+máxima e a frequência. Os valores apresentados na figura são os que
+estão em uso na rede elétrica pública da União Europeia: frequência
+<math id="S4.p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> de 50 Hz e tensão máxima de 325 V.</p>
+</div>
+<figure id="S4.F5" class="ltx_figure"><img src="img/ac_source.png" style="width:7.056em;max-width:100%;height:auto" id="S4.F5.g1" class="ltx_graphics ltx_centering" alt="Representação de uma fonte ideal de tensão alternada com
+tensão máxima de 325 V e frequência de 50 Hz.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 11.5: </span>Representação de uma fonte ideal de tensão alternada com
+tensão máxima de 325 V e frequência de 50 Hz.</figcaption>
+</figure>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">11.5 </span>Impedância complexa</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">Se todas as fontes de tensão num circuito forem fontes de tensão
+alternada com a mesma frequência, em qualquer parte do circuito a
+tensão é também alternada, com a mesma frequência, já que a regra das
+malhas garante que a tensão é igual à soma das outras tensões na mesma
+malha, com sinal oposto e conclui-se que se a tensão em algum segmento
+da malha é sinusoidal, a tensão em qualquer outro segmento também será
+sinusoidal e com a mesma frequência.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">No capítulo anterior deduziu-se a lei de Ohm generalizada para as
+transformadas de Laplace da tensão e da corrente
+(equação (<a href="circuitos_de_corrente_variavel.html#S5.E27">10.27</a>)):</p>
+<table id="S5.E15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E15.m1" class="ltx_Math" alttext="\tilde{V}(s)=Z(s)\,\tilde{I}(s)" display="block"><mrow><mrow><mover accent="true"><mi>V</mi><mo stretchy="false">~</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mspace width=0.166em /><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.15)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">Como <math id="S5.p3.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> é uma função sinusoidal, a sua transformada de Laplace é (ver
+Apêndice <a href="transformada_de_Laplace.html">B</a>):</p>
+<table id="S5.E16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E16.m1" class="ltx_Math" alttext="\tilde{V}(s)=\dfrac{\mathbf{V}}{s-\mathrm{i}\,\omega}" display="block"><mrow><mrow><mover accent="true"><mi>V</mi><mo stretchy="false">~</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mi>𝐕</mi><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.16)</span></td>
+</tr>
+</table>
+<p class="ltx_p">e, portanto,</p>
+<table id="S5.E17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E17.m1" class="ltx_Math" alttext="\tilde{I}(s)=\dfrac{\mathbf{V}}{(s-\mathrm{i}\,\omega)\,Z(s)}" display="block"><mrow><mrow><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mi>𝐕</mi><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mspace width=0.166em /><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.17)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">Admitindo que <math id="S5.p4.m1" class="ltx_Math" alttext="Z(\mathrm{i}\,\omega)" display="inline"><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> não é igual a zero, a expansão em
+frações parciais da expressão no segundo membro deve incluir um termo
+com denominador <math id="S5.p4.m2" class="ltx_Math" alttext="(s-\mathrm{i}\,\omega)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math></p>
+<table id="S5.E18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E18.m1" class="ltx_Math" alttext="\tilde{I}(s)=\dfrac{\mathbf{I}}{s-\mathrm{i}\,\omega}+\tilde{I}_{\text{trans}}%
+(s)" display="block"><mrow><mrow><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mi>𝐈</mi><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac><mo>+</mo><mrow><msub><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover><mtext>trans</mtext></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.18)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p">em que o termo <math id="S5.p5.m1" class="ltx_Math" alttext="\tilde{I}_{\text{trans}}" display="inline"><msub><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover><mtext>trans</mtext></msub></math> é a corrente
+transitória, que não tem nenhum fator
+<math id="S5.p5.m2" class="ltx_Math" alttext="(s-\mathrm{i}\,\omega)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math> no denominador.</p>
+</div>
+<div id="S5.p6" class="ltx_para">
+<p class="ltx_p">Substituindo essa expressão e a transformada da tensão na lei de Ohm
+generalizada, obtém-se:
+</p>
+<table id="S5.E19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E19.m1" class="ltx_Math" alttext="\dfrac{\mathbf{V}}{s-\mathrm{i}\,\omega}=Z(s)\left(\dfrac{\mathbf{I}}{s-%
+\mathrm{i}\,\omega}+\tilde{I}_{\text{transit.}}\right)" display="block"><mrow><mfrac><mi>𝐕</mi><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac><mo>=</mo><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><mspace width=0.166em /><mrow><mo>(</mo><mrow><mfrac><mi>𝐈</mi><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac><mo>+</mo><msub><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover><mtext>transit.</mtext></msub></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.19)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.p7" class="ltx_para">
+<p class="ltx_p">Multiplicando ambos os membros da equação por <math id="S5.p7.m1" class="ltx_Math" alttext="(s-\mathrm{i}\,\omega)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math> e
+substituindo <math id="S5.p7.m2" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> por <math id="S5.p7.m3" class="ltx_Math" alttext="\mathrm{i}\,\omega" display="inline"><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></math> obtém-se:</p>
+<table id="S5.E20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S5.E20.m1" class="ltx_Math" alttext="\boxed{\mathbf{V}=Z(\mathrm{i}\,\omega)\,\mathbf{I}}" display="block"><mrow><mi>𝐕</mi><mo>=</mo><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mspace width=0.166em /><mi>𝐈</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.20)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.p8" class="ltx_para">
+<p class="ltx_p">Ou seja, os fasores da tensão e da corrente também verificam a lei de
+Ohm generalizada, com a frequência real <math id="S5.p8.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> substituída por uma
+frequência imaginária <math id="S5.p8.m2" class="ltx_Math" alttext="\mathrm{i}\,\omega" display="inline"><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></math>, o que conduz a uma
+<em class="ltx_emph ltx_font_italic">impedância complexa</em>
+<math id="S5.p8.m3" class="ltx_Math" alttext="Z(\mathrm{i}\,\omega)" display="inline"><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. Alguns autores preferem chamar <math id="S5.p8.m4" class="ltx_Math" alttext="Z(\mathrm{i}\,\omega)" display="inline"><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>
+simplesmente impedância; também pode-se usar a notação <math id="S5.p8.m5" class="ltx_Math" alttext="Z(\omega)" display="inline"><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, em
+vez de <math id="S5.p8.m6" class="ltx_Math" alttext="Z(\mathrm{i}\,\omega)" display="inline"><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, mas <math id="S5.p8.m7" class="ltx_Math" alttext="Z(\mathrm{i}\,\omega)" display="inline"><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> mostra em forma explícita
+a sua relação com a impedância generalizada <math id="S5.p8.m8" class="ltx_Math" alttext="Z(s)" display="inline"><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S5.p9" class="ltx_para">
+<p class="ltx_p">A impedância complexa <math id="S5.p9.m1" class="ltx_Math" alttext="Z(\mathrm{i}\,\omega)" display="inline"><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> é uma função complexa que pode
+ser dividida nas suas partes real e imaginária:</p>
+</div>
+<div id="S5.p10" class="ltx_para">
+<table id="S5.E21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S5.E21.m1" class="ltx_Math" alttext="\boxed{Z(\mathrm{i}\,\omega)=R(\omega)+\mathrm{i}\,X(\omega)}" display="block"><mrow><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>X</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.21)</span></td>
+</tr>
+</table>
+<p class="ltx_p">sendo a função real <math id="S5.p10.m1" class="ltx_Math" alttext="R(\omega)" display="inline"><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> designada de
+<em class="ltx_emph ltx_font_italic">resistência</em> e a função real <math id="S5.p10.m2" class="ltx_Math" alttext="X(\omega)" display="inline"><mrow><mi>X</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+designada de <em class="ltx_emph ltx_font_italic">reatância</em>. A resistência é
+sempre positiva, independentemente da frequência angular <math id="S5.p10.m3" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>,
+enquanto que a reatância pode ser positiva para algumas frequências
+(<em class="ltx_emph ltx_font_italic">reatância indutiva</em>) e negativa
+para outras frequências (<em class="ltx_emph ltx_font_italic">reatância
+capacitiva</em>).</p>
+</div>
+<div id="S5.p11" class="ltx_para">
+<p class="ltx_p">Para um determinado valor de <math id="S5.p11.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, o módulo <math id="S5.p11.m2" class="ltx_Math" alttext="|Z|" display="inline"><mrow><mo stretchy="false">|</mo><mi>Z</mi><mo stretchy="false">|</mo></mrow></math> e o argumento
+<math id="S5.p11.m3" class="ltx_Math" alttext="\varphi_{Z}" display="inline"><msub><mi>φ</mi><mi>Z</mi></msub></math> da impedância complexa <math id="S5.p11.m4" class="ltx_Math" alttext="Z(\mathrm{i}\,\omega)" display="inline"><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> podem ser
+calculados usando a representação gráfica de <math id="S5.p11.m5" class="ltx_Math" alttext="R+\mathrm{i}\,X" display="inline"><mrow><mi>R</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>X</mi></mrow></mrow></math> no plano
+complexo, obtendo-se o <em class="ltx_emph ltx_font_italic">triângulo de impedância</em> apresentado na
+figura <a href="#S5.F6" title="Figura 11.6 ‣ 5 Impedância complexa ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.6</span></a>. Como <math id="S5.p11.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> não pode ter valores
+negativos, o ângulo <math id="S5.p11.m7" class="ltx_Math" alttext="\varphi_{Z}" display="inline"><msub><mi>φ</mi><mi>Z</mi></msub></math> situa-se sempre entre <math id="S5.p11.m8" class="ltx_Math" alttext="-\pi/2" display="inline"><mrow><mo>−</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow></math> e
+<math id="S5.p11.m9" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math> radianos.</p>
+</div>
+<figure id="S5.F6" class="ltx_figure"><img src="img/impedance_triangle.png" style="width:16.443em;max-width:100%;height:auto" id="S5.F6.g1" class="ltx_graphics ltx_centering" alt="Triângulo de impedância, com a resistência ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 11.6: </span>Triângulo de impedância, com a resistência <math id="S5.F6.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> e a reatância <math id="S5.F6.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> nos catetos.</figcaption>
+</figure>
+<div id="S5.p12" class="ltx_para">
+<p class="ltx_p">Note-se que a impedância complexa <math id="S5.p12.m1" class="ltx_Math" alttext="Z(\mathrm{i}\,\omega)" display="inline"><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> não é um fasor mas
+sim um número complexo ordinário, que pode ser multiplicada e somada a
+outras impedâncias usando as regras do produto e a adição de números
+complexos. Também se pode multiplicar ou dividir um fasor por várias
+impedâncias e o resultado é outro fasor com a mesma frequência.</p>
+</div>
+<div id="S5.p13" class="ltx_para">
+<p class="ltx_p">Se os fasores da tensão e da corrente forem
+<math id="S5.p13.m1" class="ltx_Math" alttext="V_{\text{m\'{a}x}}\angle\,\varphi_{V}" display="inline"><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><msub><mi>φ</mi><mi>V</mi></msub></mrow></math> e <math id="S5.p13.m2" class="ltx_Math" alttext="I_{\text{m\'{a}x}}\angle\,\varphi_{I}" display="inline"><mrow><msub><mi>I</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><msub><mi>φ</mi><mi>I</mi></msub></mrow></math>, a
+lei de Ohm para fasores (equação (<a href="#S5.E20" title="(20) ‣ 5 Impedância complexa ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.20</span></a>)) conduz a</p>
+<table id="S5.E22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E22.m1" class="ltx_Math" alttext="V_{\text{m\'{a}x}}\,\angle\,\varphi_{V}=(|Z|\,I_{\text{m\'{a}x}})\,\angle(%
+\varphi_{Z}+\varphi_{I})" display="block"><mrow><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><msub><mi>φ</mi><mi>V</mi></msub></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">|</mo><mi>Z</mi><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mspace width=0.166em /><msub><mi>I</mi><mtext>máx</mtext></msub></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>φ</mi><mi>Z</mi></msub><mo>+</mo><msub><mi>φ</mi><mi>I</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.22)</span></td>
+</tr>
+</table>
+<p class="ltx_p">e a equação complexa (<a href="#S5.E20" title="(20) ‣ 5 Impedância complexa ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.20</span></a>) é equivalente às duas
+equações reais:</p>
+<table id="S5.E23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E23.m1" class="ltx_Math" alttext="V_{\text{m\'{a}x}}=|Z|\,I_{\text{m\'{a}x}}\hskip 56.905512pt\varphi_{V}=%
+\varphi_{Z}+\varphi_{I}" display="block"><mrow><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>Z</mi><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mspace width=0.166em /><msub><mi>I</mi><mtext>máx</mtext></msub></mrow></mrow><mo mathvariant="italic" separator="true">       </mo><mrow><msub><mi>φ</mi><mi>V</mi></msub><mo>=</mo><mrow><msub><mi>φ</mi><mi>Z</mi></msub><mo>+</mo><msub><mi>φ</mi><mi>I</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.23)</span></td>
+</tr>
+</table>
+</div>
+<section id="S5.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">11.5.1 </span>Resistências</h3>
+
+<div id="S5.SS1.p1" class="ltx_para">
+<p class="ltx_p">Numa resistência, a impedância generalizada é independente da
+frequência e igual a <math id="S5.SS1.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>; como tal, o módulo da impedância complexa é
+<math id="S5.SS1.p1.m2" class="ltx_Math" alttext="|Z|=R" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>Z</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>R</mi></mrow></math> e o seu ângulo de fase é nulo: <math id="S5.SS1.p1.m3" class="ltx_Math" alttext="\varphi_{Z}=0" display="inline"><mrow><msub><mi>φ</mi><mi>Z</mi></msub><mo>=</mo><mn>0</mn></mrow></math>. As
+equações (<a href="#S5.E23" title="(23) ‣ 5 Impedância complexa ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.23</span></a>) indicam que os ângulos de fase de
+<math id="S5.SS1.p1.m4" class="ltx_Math" alttext="\mathbf{V}" display="inline"><mi>𝐕</mi></math> e <math id="S5.SS1.p1.m5" class="ltx_Math" alttext="\mathbf{I}" display="inline"><mi>𝐈</mi></math> são iguais e os seus valores máximos
+verificam a relação,</p>
+<table id="S5.E24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E24.m1" class="ltx_Math" alttext="V_{\text{m\'{a}x}}=R\,I_{\text{m\'{a}x}}" display="block"><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mo>=</mo><mrow><mi>R</mi><mspace width=0.166em /><msub><mi>I</mi><mtext>máx</mtext></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.24)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.SS1.p2" class="ltx_para">
+<p class="ltx_p">Os vetores no lado esquerdo da figura <a href="#S5.F7" title="Figura 11.7 ‣ 5.1 Resistências ‣ 5 Impedância complexa ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.7</span></a> são os
+fasores no instante <math id="S5.SS1.p2.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> = 0, mas como os dois vetores rodam com a
+mesma velocidade angular, estarão sempre na mesma direção e sentido em
+qualquer instante. Imaginando esses dois vetores a rodar no sentido
+anti-horário, com a mesma velocidade angular, as suas projeções no
+eixo real (tensão e corrente em função do tempo) são as funções
+apresentadas no lado direito da figura. Diz-se que a tensão e a
+corrente estão <em class="ltx_emph ltx_font_italic">em fase</em>: os dois vetores têm sempre a mesma
+direção e sentido, de forma que ambas as funções atingem os respetivos
+valores máximo e mínimo em simultâneo.</p>
+</div>
+<figure id="S5.F7" class="ltx_figure"><img src="img/phasors_resistor.png" style="width:29.799em;max-width:100%;height:auto" id="S5.F7.g1" class="ltx_graphics ltx_centering" alt="Fasores da tensão e da corrente numa resistência.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 11.7: </span>Fasores da tensão e da corrente numa resistência.</figcaption>
+</figure>
+</section>
+<section id="S5.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">11.5.2 </span>Condensadores</h3>
+
+<div id="S5.SS2.p1" class="ltx_para">
+<p class="ltx_p">Nos condensadores, a impedância generalizada é <math id="S5.SS2.p1.m1" class="ltx_Math" alttext="1/(Cs)" display="inline"><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>C</mi><mspace width=0.166em /><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> e a
+impedância complexa é então:</p>
+<table id="S5.E25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E25.m1" class="ltx_Math" alttext="Z(\mathrm{i}\,\omega)=\dfrac{1}{\mathrm{i}\,\omega C}=\dfrac{1}{\omega C}\,%
+\angle-\dfrac{\pi}{2}" display="block"><mrow><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>C</mi></mrow></mfrac><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mrow><mi>ω</mi><mspace width=0.166em /><mi>C</mi></mrow></mfrac><mspace width=0.166em /><mi mathvariant="normal">∠</mi></mrow><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.25)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.SS2.p2" class="ltx_para">
+<p class="ltx_p">Em particular, a reatância de um condensador é negativa e inversamente
+proporcional à frequência angular,</p>
+<table id="S5.E26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E26.m1" class="ltx_Math" alttext="X_{C}=-\dfrac{1}{\omega C}" display="block"><mrow><msub><mi>X</mi><mi>C</mi></msub><mo>=</mo><mrow><mo>−</mo><mfrac><mn>1</mn><mrow><mi>ω</mi><mspace width=0.166em /><mi>C</mi></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.26)</span></td>
+</tr>
+</table>
+<p class="ltx_p">sendo a sua resistência nula.</p>
+</div>
+<div id="S5.SS2.p3" class="ltx_para">
+<p class="ltx_p">Aplicando as equações (<a href="#S5.E23" title="(23) ‣ 5 Impedância complexa ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.23</span></a>) obtém-se</p>
+<table id="S5.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex6.m1" class="ltx_Math" alttext="\mathbf{I}=V_{\text{m\'{a}x}}\,\omega\,C\,\angle(\varphi_{V}+\pi/2)" display="block"><mrow><mi>𝐈</mi><mo>=</mo><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>C</mi><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>φ</mi><mi>V</mi></msub><mo>+</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S5.SS2.p4" class="ltx_para">
+<p class="ltx_p">Ou seja, o ângulo de fase da corrente é <math id="S5.SS2.p4.m1" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math> maior que o da
+tensão. Na representação vetorial dos fasores, no lado esquerdo da
+figura <a href="#S5.F8" title="Figura 11.8 ‣ 5.2 Condensadores ‣ 5 Impedância complexa ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.8</span></a>, a corrente é perpendicular à tensão
+e está adiantada em relação ao sentido de rotação anti-horário. Os
+vetores estão nas posições em que estão os fasores em <math id="S5.SS2.p4.m2" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>; enquanto
+esses vetores rodam no sentido anti-horário, com velocidade angular
+constante, a projeção no eixo das abcissas produz as funções
+representadas no lado direito da figura. Como os dois vetores rodam
+com a mesma velocidade angular, são perpendiculares em qualquer
+instante. O desfasamento de <math id="S5.SS2.p4.m3" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math> entre a corrente e a tensão
+também observa-se nos gráficos do lado direito, pelo facto de <math id="S5.SS2.p4.m4" class="ltx_Math" alttext="I(t)" display="inline"><mrow><mi>I</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+ter valor máximo ou mínimo cada vez que <math id="S5.SS2.p4.m5" class="ltx_Math" alttext="V(t)" display="inline"><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> é nula. E o facto de
+ser a corrente a que está adiantada em relação à tensão descobre-se
+observando dois máximos (ou mínimos), das duas funções <math id="S5.SS2.p4.m6" class="ltx_Math" alttext="I(t)" display="inline"><mrow><mi>I</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> e
+<math id="S5.SS2.p4.m7" class="ltx_Math" alttext="V(t)" display="inline"><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, que estejam próximos entre si. O máximo de <math id="S5.SS2.p4.m8" class="ltx_Math" alttext="I(t)" display="inline"><mrow><mi>I</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> ocorre
+sempre antes do que o máximo de <math id="S5.SS2.p4.m9" class="ltx_Math" alttext="V(t" display="inline"><mrow><mi>V</mi><mrow><mo stretchy="false">(</mo><mi>t</mi></mrow></mrow></math>).</p>
+</div>
+<figure id="S5.F8" class="ltx_figure"><img src="img/phasors_capacitor.png" style="width:29.883em;max-width:100%;height:auto" id="S5.F8.g1" class="ltx_graphics ltx_centering" alt="Fasores da tensão e da corrente num condensador.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 11.8: </span>Fasores da tensão e da corrente num condensador.</figcaption>
+</figure>
+</section>
+<section id="S5.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">11.5.3 </span>Indutores</h3>
+
+<div id="S5.SS3.p1" class="ltx_para">
+<p class="ltx_p">Nos indutores a impedância generalizada, <math id="S5.SS3.p1.m1" class="ltx_Math" alttext="Ls" display="inline"><mrow><mi>L</mi><mspace width=0.166em /><mi>s</mi></mrow></math>, conduz a:
+</p>
+<table id="S5.E27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E27.m1" class="ltx_Math" alttext="Z(\mathrm{i}\,\omega)=\mathrm{i}\,\omega L=\omega L\angle\,\pi/2" display="block"><mrow><mrow><mi>Z</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>L</mi></mrow><mo>=</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>L</mi><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>π</mi></mrow><mo>/</mo><mn>2</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.27)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.SS3.p2" class="ltx_para">
+<p class="ltx_p">A resistência de um indutor é nula e a sua reatância é positiva e
+diretamente proporcional à frequência angular:</p>
+<table id="S5.E28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E28.m1" class="ltx_Math" alttext="X_{L}=\omega L" display="block"><mrow><msub><mi>X</mi><mi>L</mi></msub><mo>=</mo><mrow><mi>ω</mi><mspace width=0.166em /><mi>L</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.28)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.SS3.p3" class="ltx_para">
+<p class="ltx_p">As equações (<a href="#S5.E23" title="(23) ‣ 5 Impedância complexa ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.23</span></a>) implicam que o ângulo de fase
+da corrente é <math id="S5.SS3.p3.m1" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math> menor que a da tensão. Na representação
+gráfica dos fasores (lado esquerdo da figura <a href="#S5.F9" title="Figura 11.9 ‣ 5.3 Indutores ‣ 5 Impedância complexa ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.9</span></a>
+o fasor da corrente é perpendicular ao da tensão e está atrasado, em
+relação ao sentido da rotação. Como os dois vetores rodam com a mesma
+velocidade angular, em qualquer outro instante também são
+perpendiculares.</p>
+</div>
+<div id="S5.SS3.p4" class="ltx_para">
+<p class="ltx_p">As projeções no eixo real quando os vetores rodam no sentido
+anti-horário conduzem às duas funções representadas no lado direito da
+figura. O atraso em <math id="S5.SS3.p4.m1" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math> do fasor da corrente é visível no gráfico
+das funções, porque olhando para os valores máximos dessas duas
+funções, que estão mais próximos entre si, primeiro ocorre o máximo de
+<math id="S5.SS3.p4.m2" class="ltx_Math" alttext="V(t)" display="inline"><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> e a seguir o de <math id="S5.SS3.p4.m3" class="ltx_Math" alttext="I(t)" display="inline"><mrow><mi>I</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<figure id="S5.F9" class="ltx_figure"><img src="img/phasors_inductor.png" style="width:29.799em;max-width:100%;height:auto" id="S5.F9.g1" class="ltx_graphics ltx_centering" alt="Fasores da tensão e da corrente num indutor.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 11.9: </span>Fasores da tensão e da corrente num indutor.</figcaption>
+</figure>
+<div id="Thmexample2" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Exemplo 11.2</span></span></h6><p></p>
+<div id="Thmexample2.p1" class="ltx_para ltx_minipage ltx_align_middle" style="width:260.2pt;">
+<p class="ltx_p">Calcule a tensão e corrente instantâneas em todos os elementos do
+circuito representado no diagrama.</p>
+</div>
+<div id="Thmexample2.p2" class="ltx_para ltx_minipage ltx_align_middle" style="width:173.4pt;">
+<img src="img/circ_26.png" style="width:8.799em;max-width:100%;height:auto" id="Thmexample2.p2.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="Thmexample2.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Este é o circuito analisado no exemplo
+<a href="circuitos_de_corrente_variavel.html#Thmexample3">10.3</a> do capítulo anterior. Usando o mesmo sistema
+de unidades tem-se: impedância em k<math id="Thmexample2.p3.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, capacidade em <math id="Thmexample2.p3.m2" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>F,
+indutância em H, tempo em ms, frequência em kHz, tensão em V e
+corrente em mA. A frequência angular da fonte é:
+<math id="Thmexample2.p3.m3" class="ltx_Math" alttext="\omega=2\times\pi\times 50" display="inline"><mrow><mi>ω</mi><mo>=</mo><mrow><mn>2</mn><mo>×</mo><mi>π</mi><mo>×</mo><mn>50</mn></mrow></mrow></math> Hz, mas como deve ser convertida
+para kHz, tem o valor <math id="Thmexample2.p3.m4" class="ltx_Math" alttext="\pi/10" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>10</mn></mrow></math>.</p>
+</div>
+<div id="Thmexample2.p4" class="ltx_para">
+<p class="ltx_p">A impedância da resistência é 2.5, a do condensador
+<math id="Thmexample2.p4.m1" class="ltx_Math" alttext="10/(3.6\,\pi)\,\angle\,-\pi/2=0.884\,\angle\,-\pi/2" display="inline"><mrow><mrow><mrow><mrow><mn>10</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3.6</mn><mspace width=0.166em /><mi>π</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow><mspace width=0.166em /><mi mathvariant="normal">∠</mi></mrow><mo>−</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo>=</mo><mrow><mrow><mn>0.884</mn><mspace width=0.166em /><mi mathvariant="normal">∠</mi></mrow><mo>−</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow></mrow></math> e a do
+indutor é <math id="Thmexample2.p4.m2" class="ltx_Math" alttext="7.2\,\pi/10\,\angle\,\pi/2=2.26\,\angle\,\pi/2" display="inline"><mrow><mrow><mrow><mrow><mrow><mn>7.2</mn><mspace width=0.166em /><mi>π</mi></mrow><mo>/</mo><mn>10</mn></mrow><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>π</mi></mrow><mo>/</mo><mn>2</mn></mrow><mo>=</mo><mrow><mrow><mn>2.26</mn><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>π</mi></mrow><mo>/</mo><mn>2</mn></mrow></mrow></math>. Como a resistência está em série com o
+indutor, podem ser substituídos por um único elemento com impedância
+igual à soma das impedâncias:</p>
+<img src="img/circ_26-sol1.png" style="width:21.924em;max-width:100%;height:auto" id="Thmexample2.p4.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="Thmexample2.p5" class="ltx_para">
+<p class="ltx_p">Como os dois elementos no circuito simplificado estão em paralelo, o
+fasor da tensão é o mesmo para os dois e igual ao fasor da fonte:
+<math id="Thmexample2.p5.m1" class="ltx_Math" alttext="325\,\angle\,0" display="inline"><mrow><mn>325</mn><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mn> 0</mn></mrow></math>. Dividindo esse fasor pelas impedâncias dos dois
+elementos calculam-se as correntes correspondentes. Em seguida,
+multiplicando o fasor da segunda corrente pelas impedâncias da
+resistência e do indutor, calculam-se os fasores das tensões:</p>
+</div>
+<div id="Thmexample2.p6" class="ltx_para ltx_align_center">
+<img src="img/circ_26-sol2.png" style="width:26.313em;max-width:100%;height:auto" id="Thmexample2.p6.g1" class="ltx_graphics" alt="">
+</div>
+<div id="Thmexample2.p7" class="ltx_para">
+<p class="ltx_p">A partir dos fasores podem-se exprimir as tensões e correntes
+instantâneas:
+</p>
+<table id="S5.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex7.m1" class="ltx_Math" alttext="\begin{array}[]{lll}\text{condensador:}&amp;V=325\cos(0.1\pi t)&amp;I=368\cos(0.1\pi t%
++\pi/2)\\
+\text{resist\^{e}ncia:}&amp;V=241\cos(0.1\pi t-0.735)&amp;I=96.4\cos(0.1\pi t-0.735)\\
+\text{indutor:}&amp;V=218\cos(0.1\pi t+0.835)&amp;I=96.4\cos(0.1\pi t-0.735)\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mtext>condensador:</mtext></mtd><mtd columnalign="left"><mrow><mi>V</mi><mo>=</mo><mrow><mn>325</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mn>0.1</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi>I</mi><mo>=</mo><mrow><mn>368</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.1</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mtext>resistência:</mtext></mtd><mtd columnalign="left"><mrow><mi>V</mi><mo>=</mo><mrow><mn>241</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.1</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>−</mo><mn>0.735</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi>I</mi><mo>=</mo><mrow><mn>96.4</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.1</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>−</mo><mn>0.735</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mtext>indutor:</mtext></mtd><mtd columnalign="left"><mrow><mi>V</mi><mo>=</mo><mrow><mn>218</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.1</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mn>0.835</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi>I</mi><mo>=</mo><mrow><mn>96.4</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.1</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>−</mo><mn>0.735</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">11.6 </span>Potência nos circuitos de corrente alternada</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">Em qualquer ponto de um circuito de corrente alternada, a corrente é
+uma função sinusoidal; em cada período de oscilação, a mudança de
+sinal da função sinusoidal indica que o sentido da corrente muda. O
+integral da função, em cada período é nulo, o quer dizer que a carga
+total transferida é nula; durante metade do período há transporte de
+carga num sentido e no meio período seguinte a mesma carga é
+transportada no sentido oposto.</p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">Não há transferência efetiva de carga nos circuitos de corrente
+alternada. As cargas de condução simplesmente oscilam à volta de uma
+posição de equilíbrio. Apesar de não haver transferência efetiva de
+cargas, há dissipação efetiva de energia elétrica, pois a oscilação
+das cargas é contrariada pela resistência dos condutores e há efeito
+Joule, independentemente do sentido da corrente.</p>
+</div>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p">Em qualquer dispositivo passivo num circuito com fonte de tensão
+alternada, a tensão e a corrente são funções sinusoidais com a mesma
+frequência da fonte, após uma possível resposta transitória inicial:</p>
+<table id="S6.E29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.E29.m1" class="ltx_Math" alttext="V(t)=V_{\text{m\'{a}x}}\cos(\omega t+\varphi_{V})\qquad I(t)=I_{\text{m\'{a}x}%
+}\cos(\omega t+\varphi_{I})" display="block"><mrow><mrow><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><msub><mi>φ</mi><mi>V</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><mi>I</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>I</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><msub><mi>φ</mi><mi>I</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.29)</span></td>
+</tr>
+</table>
+</div>
+<div id="S6.p4" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">potência instantânea</em>, <math id="S6.p4.m1" class="ltx_Math" alttext="P(t)" display="inline"><mrow><mi>P</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, é a potência no dispositivo
+em qualquer instante <math id="S6.p4.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>
+</p>
+<table id="S6.E30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.E30.m1" class="ltx_Math" alttext="P(t)=V(t)\,I(t)=V_{\text{m\'{a}x}}I_{\text{m\'{a}x}}\cos(\omega t+\varphi_{V})%
+\cos(\omega t+\varphi_{I})" display="block"><mrow><mrow><mi>P</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mspace width=0.166em /><mi>I</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mspace width=0.166em /><msub><mi>I</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><msub><mi>φ</mi><mi>V</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><msub><mi>φ</mi><mi>I</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.30)</span></td>
+</tr>
+</table>
+</div>
+<div id="S6.p5" class="ltx_para">
+<p class="ltx_p">Usando uma relação trigonométrica para o produto de dois cossenos e o
+facto de ser <math id="S6.p5.m1" class="ltx_Math" alttext="(\varphi_{V}-\varphi_{I})=\varphi_{Z}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>φ</mi><mi>V</mi></msub><mo>−</mo><msub><mi>φ</mi><mi>I</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mi>φ</mi><mi>Z</mi></msub></mrow></math>
+(equação (<a href="#S5.E23" title="(23) ‣ 5 Impedância complexa ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.23</span></a>)), conclui-se que a expressão
+anterior é equivalente a:</p>
+<table id="S6.E31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.E31.m1" class="ltx_Math" alttext="P(t)=\dfrac{1}{2}\,V_{\text{m\'{a}x}}I_{\text{m\'{a}x}}\left[\cos(2\omega t+%
+\varphi_{V}+\varphi_{I})+\cos(\varphi_{Z})\right]" display="block"><mrow><mrow><mi>P</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mspace width=0.166em /><msub><mi>V</mi><mtext>máx</mtext></msub><mspace width=0.166em /><msub><mi>I</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mo>[</mo><mrow><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><msub><mi>φ</mi><mi>V</mi></msub><mo>+</mo><msub><mi>φ</mi><mi>I</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><msub><mi>φ</mi><mi>Z</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.31)</span></td>
+</tr>
+</table>
+</div>
+<div id="S6.p6" class="ltx_para">
+<p class="ltx_p">Note-se que o primeiro cosseno dentro dos parêntesis retos na equação
+(<a href="#S6.E31" title="(31) ‣ 6 Potência nos circuitos de corrente alternada ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.31</span></a>) é uma função sinusoidal, com frequência igual ao dobro
+da frequência da fonte, enquanto o segundo cosseno é uma função
+constante. Ou seja, o produto das duas funções sinusoidais (<math id="S6.p6.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> e <math id="S6.p6.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>)
+com a mesma frequência não conduz outra função sinusoidal com a mesma
+frequência, mas a uma função sinusoidal com o dobro da frequência,
+deslocada no eixo das ordenadas.</p>
+</div>
+<div id="S6.p7" class="ltx_para">
+<p class="ltx_p">A potência instantânea (<a href="#S6.E31" title="(31) ‣ 6 Potência nos circuitos de corrente alternada ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.31</span></a>) pode ser positiva ou negativa
+em alguns intervalos e nula em alguns instantes, dependendo do valor
+da constante <math id="S6.p7.m1" class="ltx_Math" alttext="\cos(\varphi_{Z})" display="inline"><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><msub><mi>φ</mi><mi>Z</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>, chamada <em class="ltx_emph ltx_font_italic">fator de potência</em>. Como <math id="S6.p7.m2" class="ltx_Math" alttext="\varphi_{Z}" display="inline"><msub><mi>φ</mi><mi>Z</mi></msub></math> está entre
+<math id="S6.p7.m3" class="ltx_Math" alttext="-\pi/2" display="inline"><mrow><mo>−</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow></math> e <math id="S6.p7.m4" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math>, o fator de potência situa-se entre 0 e 1.</p>
+</div>
+<div id="S6.p8" class="ltx_para">
+<p class="ltx_p">Se a reatância for nula (dispositivo resistivo) o argumento da
+impedância (<math id="S6.p8.m1" class="ltx_Math" alttext="\varphi_{Z}" display="inline"><msub><mi>φ</mi><mi>Z</mi></msub></math>) é nulo, o fator de potência é igual a 1 e a
+potência instantânea é sempre positiva, indicando que o dispositivo
+está sempre a dissipar energia. Já se a resistência for nula
+(dispositivo reativo), o argumento da impedância é <math id="S6.p8.m2" class="ltx_Math" alttext="\pm\pi/2" display="inline"><mrow><mo>±</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow></math>, o
+fator de potência é nulo e os intervalos em que a potência instantânea
+é positiva (dissipação de energia) são do mesmo comprimento que os
+intervalos em que é negativa (fornecimento de energia); a potência
+média é nula.</p>
+</div>
+<div id="S6.p9" class="ltx_para">
+<p class="ltx_p">No caso geral, em que o fator de potência é maior que 0 e menor que 1,
+os intervalos em que há dissipação de energia são mais compridos do
+que os intervalos em que há fornecimento de energia e, em média, o
+circuito dissipa energia.</p>
+</div>
+<div id="S6.p10" class="ltx_para">
+<p class="ltx_p">O valor médio da potência, <math id="S6.p10.m1" class="ltx_Math" alttext="\bar{P}" display="inline"><mover accent="true"><mi>P</mi><mo stretchy="false">¯</mo></mover></math>, calcula-se integrando a função
+(<a href="#S6.E31" title="(31) ‣ 6 Potência nos circuitos de corrente alternada ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.31</span></a>) durante um período e dividindo pelo valor do
+período. O integral do primeiro termo é nulo, durante um período,
+enquanto que o valor médio do termo constante é igual a si
+próprio. Consequentemente, a <em class="ltx_emph ltx_font_italic">potência média</em> é:
+</p>
+<table id="S6.E32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S6.E32.m1" class="ltx_Math" alttext="\boxed{\bar{P}=\dfrac{1}{2}\,V_{\text{m\'{a}x}}I_{\text{m\'{a}x}}\cos\varphi_{%
+Z}}" display="block"><mrow><mover accent="true"><mi>P</mi><mo stretchy="false">¯</mo></mover><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mspace width=0.166em /><msub><mi>V</mi><mtext>máx</mtext></msub><mspace width=0.166em /><msub><mi>I</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><msub><mi>φ</mi><mi>Z</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.32)</span></td>
+</tr>
+</table>
+<p class="ltx_p">e tem valor positivo ou nulo, indicando que, em média o dispositivo
+passivo não pode fornecer energia. É também habitual definir a
+<em class="ltx_emph ltx_font_italic">tensão eficaz</em> e a <em class="ltx_emph ltx_font_italic">corrente
+eficaz</em>:</p>
+<table id="S6.E33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S6.E33.m1" class="ltx_Math" alttext="\boxed{V_{\mathrm{ef}}=\dfrac{V_{\text{m\'{a}x}}}{\sqrt{2}}\qquad I_{\mathrm{%
+ef}}=\dfrac{I_{\text{m\'{a}x}}}{\sqrt{2}}}" display="block"><mrow><mrow><msub><mi>V</mi><mi>ef</mi></msub><mo>=</mo><mfrac><msub><mi>V</mi><mtext>máx</mtext></msub><msqrt><mn>2</mn></msqrt></mfrac></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><msub><mi>I</mi><mi>ef</mi></msub><mo>=</mo><mfrac><msub><mi>I</mi><mtext>máx</mtext></msub><msqrt><mn>2</mn></msqrt></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.33)</span></td>
+</tr>
+</table>
+</div>
+<div id="S6.p11" class="ltx_para">
+<p class="ltx_p">e como tal, a potência média é igual ao produto da tensão e corrente
+eficazes e o fator de potência:</p>
+<table id="S6.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex8.m1" class="ltx_Math" alttext="\bar{P}=V_{\mathrm{ef}}I_{\mathrm{ef}}\cos\varphi_{z}" display="block"><mrow><mover accent="true"><mi>P</mi><mo stretchy="false">¯</mo></mover><mo>=</mo><mrow><msub><mi>V</mi><mi>ef</mi></msub><mspace width=0.166em /><msub><mi>I</mi><mi>ef</mi></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><msub><mi>φ</mi><mi>z</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S6.p12" class="ltx_para">
+<p class="ltx_p">A tensão máxima de 325 V usada na União Europeia corresponde a uma
+tensão eficaz de 230 V. No continente americano usa-se tensão máxima
+de 170 V, a 60 Hz, que corresponde a uma tensão eficaz de 120 V.</p>
+</div>
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">11.7 </span>Filtros de frequência</h2>
+
+<div id="S7.p1" class="ltx_para">
+<p class="ltx_p">A equação (<a href="circuitos_de_corrente_variavel.html#S7.E35">10.35</a>), obtida no capítulo anterior, é
+válida para qualquer sinal de entrada. Para um sinal de entrada <math id="S7.p1.m1" class="ltx_Math" alttext="V_{e}" display="inline"><msub><mi>V</mi><mi>e</mi></msub></math>
+alternado, usando a expressão para a transformada de Laplace das
+funções sinusoidais (apêndice <a href="transformada_de_Laplace.html">B</a>) obtém-se,</p>
+<table id="S7.E34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.E34.m1" class="ltx_Math" alttext="\tilde{V}(s)=\dfrac{\mathbf{V}_{e}\,H(s)}{s-\mathrm{i}\,\omega}" display="block"><mrow><mrow><mover accent="true"><mi>V</mi><mo stretchy="false">~</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><msub><mi>𝐕</mi><mi>e</mi></msub><mspace width=0.166em /><mi>H</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.34)</span></td>
+</tr>
+</table>
+</div>
+<div id="S7.p2" class="ltx_para">
+<p class="ltx_p">Se <math id="S7.p2.m1" class="ltx_Math" alttext="H(\mathrm{i}\,\omega)" display="inline"><mrow><mi>H</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> tiver um valor finito, a sua expansão de
+<math id="S7.p2.m2" class="ltx_Math" alttext="\tilde{V}" display="inline"><mover accent="true"><mi>V</mi><mo stretchy="false">~</mo></mover></math> em frações parciais é</p>
+<table id="S7.E35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.E35.m1" class="ltx_Math" alttext="\tilde{V}(s)=\dfrac{\mathbf{V}}{s-\mathrm{i}\,\omega}+\tilde{V}_{\text{trans}}%
+(s)" display="block"><mrow><mrow><mover accent="true"><mi>V</mi><mo stretchy="false">~</mo></mover><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mi>𝐕</mi><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac><mo>+</mo><mrow><msub><mover accent="true"><mi>V</mi><mo stretchy="false">~</mo></mover><mtext>trans</mtext></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.35)</span></td>
+</tr>
+</table>
+<p class="ltx_p">onde <math id="S7.p2.m3" class="ltx_Math" alttext="\mathbf{V}" display="inline"><mi>𝐕</mi></math> é um número complexo, que corresponde ao fasor da
+saída (após a resposta transitória), e o termo
+<math id="S7.p2.m4" class="ltx_Math" alttext="\tilde{V}_{\text{trans}}" display="inline"><msub><mover accent="true"><mi>V</mi><mo stretchy="false">~</mo></mover><mtext>trans</mtext></msub></math> é a transformada da tensão de resposta
+transitória, que não tem o fator <math id="S7.p2.m5" class="ltx_Math" alttext="(s-\mathrm{i}\,\omega)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math> no denominador.</p>
+</div>
+<div id="S7.p3" class="ltx_para">
+<p class="ltx_p">Substituindo essa expansão na equação (<a href="#S7.E34" title="(34) ‣ 7 Filtros de frequência ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.34</span></a>),</p>
+<table id="S7.E36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.E36.m1" class="ltx_Math" alttext="\dfrac{\mathbf{V}}{s-\mathrm{i}\,\omega}+\tilde{V}_{\text{trans}}(s)=\dfrac{%
+\mathbf{V}_{e}\,H(s)}{s-\mathrm{i}\,\omega}" display="block"><mrow><mrow><mfrac><mi>𝐕</mi><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac><mo>+</mo><mrow><msub><mover accent="true"><mi>V</mi><mo stretchy="false">~</mo></mover><mtext>trans</mtext></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mfrac><mrow><msub><mi>𝐕</mi><mi>e</mi></msub><mspace width=0.166em /><mi>H</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.36)</span></td>
+</tr>
+</table>
+</div>
+<div id="S7.p4" class="ltx_para">
+<p class="ltx_p">Multiplicando ambos os membros da equação por <math id="S7.p4.m1" class="ltx_Math" alttext="(s-\mathrm{i}\,\omega)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math> e
+substituindo <math id="S7.p4.m2" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> por <math id="S7.p4.m3" class="ltx_Math" alttext="\mathrm{i}\,\omega" display="inline"><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></math> obtém-se:</p>
+<table id="S7.E37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center boxed"><math id="S7.E37.m1" class="ltx_Math" alttext="\boxed{\mathbf{V}=R(\omega)\,\mathbf{V}_{e}}" display="block"><mrow><mi>𝐕</mi><mo>=</mo><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mspace width=0.166em /><msub><mi>𝐕</mi><mi>e</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.37)</span></td>
+</tr>
+</table>
+<p class="ltx_p">onde a função complexa <math id="S7.p4.m4" class="ltx_Math" alttext="R(\omega)" display="inline"><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> é denominada <em class="ltx_emph ltx_font_italic">função de
+resposta em frequência</em>:</p>
+<table id="S7.E38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.E38.m1" class="ltx_Math" alttext="R(\omega)=H(\mathrm{i}\,\omega)" display="block"><mrow><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>H</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.38)</span></td>
+</tr>
+</table>
+</div>
+<div id="S7.p5" class="ltx_para">
+<p class="ltx_p">Como tal, se a tensão de entrada for a tensão alternada
+<math id="S7.p5.m1" class="ltx_Math" alttext="V_{\text{m\'{a}x}}\cos(\omega t+\varphi)" display="inline"><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>φ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, a tensão de saída será,</p>
+<table id="S7.E39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.E39.m1" class="ltx_Math" alttext="V=V_{\text{m\'{a}x}}|R(\omega)|\cos\left(\omega t+\varphi+\theta_{R}(\omega)\right)" display="block"><mrow><mi>V</mi><mo>=</mo><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mo stretchy="false">|</mo><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>φ</mi><mo>+</mo><mrow><msub><mi>θ</mi><mi>R</mi></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.39)</span></td>
+</tr>
+</table>
+<p class="ltx_p">onde <math id="S7.p5.m2" class="ltx_Math" alttext="|R(\omega)|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></math> e <math id="S7.p5.m3" class="ltx_Math" alttext="\theta_{R}(\omega)" display="inline"><mrow><msub><mi>θ</mi><mi>R</mi></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> são o módulo e o ângulo de
+fase da função complexa <math id="S7.p5.m4" class="ltx_Math" alttext="R(\omega)" display="inline"><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S7.p6" class="ltx_para">
+<p class="ltx_p">Por exemplo, no caso do filtro passa-alto, mostrou-se no capítulo
+anterior (<a href="circuitos_de_corrente_variavel.html#S7.E37">10.37</a>) que a função de transferência é:</p>
+<table id="S7.E40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.E40.m1" class="ltx_Math" alttext="H(s)=\dfrac{RCs}{RCs+1}" display="block"><mrow><mrow><mi>H</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mi>R</mi><mspace width=0.166em /><mi>C</mi><mspace width=0.166em /><mi>s</mi></mrow><mrow><mrow><mi>R</mi><mspace width=0.166em /><mi>C</mi><mspace width=0.166em /><mi>s</mi></mrow><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.40)</span></td>
+</tr>
+</table>
+</div>
+<div id="S7.p7" class="ltx_para">
+<p class="ltx_p">A função de resposta em frequência é então:</p>
+<table id="S7.E41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.E41.m1" class="ltx_Math" alttext="R(\omega)=\dfrac{\mathrm{i}\,RC\omega}{1+\mathrm{i}\,RC\omega}" display="block"><mrow><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>R</mi><mspace width=0.166em /><mi>C</mi><mspace width=0.166em /><mi>ω</mi></mrow><mrow><mn>1</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>R</mi><mspace width=0.166em /><mi>C</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.41)</span></td>
+</tr>
+</table>
+<p class="ltx_p">com módulo e ângulo de fase:</p>
+<table id="S7.E42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.E42.m1" class="ltx_Math" alttext="|R(\omega)|=\dfrac{RC\omega}{\sqrt{1+(RC\omega)^{2}}}\qquad\theta_{R}(\omega)=%
+\dfrac{\pi}{2}-\arctan(RC\omega)" display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mfrac><mrow><mi>R</mi><mspace width=0.166em /><mi>C</mi><mspace width=0.166em /><mi>ω</mi></mrow><msqrt><mrow><mn>1</mn><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>R</mi><mspace width=0.166em /><mi>C</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><msub><mi>θ</mi><mi>R</mi></msub><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>−</mo><mrow><mi>arctan</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mi>R</mi><mspace width=0.166em /><mi>C</mi><mspace width=0.166em /><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.42)</span></td>
+</tr>
+</table>
+</div>
+<div id="S7.p8" class="ltx_para">
+<p class="ltx_p">A frequência <math id="S7.p8.m1" class="ltx_Math" alttext="\omega_{\mathrm{c}}=1/(RC)" display="inline"><mrow><msub><mi>ω</mi><mi mathvariant="normal">c</mi></msub><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>R</mi><mspace width=0.166em /><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> chama-se <em class="ltx_emph ltx_font_italic">frequência
+angular de corte</em> do filtro. A figura <a href="#S7.F10" title="Figura 11.10 ‣ 7 Filtros de frequência ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.10</span></a>
+mostra o módulo e o ângulo de fase da função de resposta em frequência
+dum filtro passa-alto com frequência angular de corte igual a
+<math id="S7.p8.m2" class="ltx_Math" alttext="0.5" display="inline"><mn>0.5</mn></math> Hz. Observe-se que em <math id="S7.p8.m3" class="ltx_Math" alttext="\omega=\omega_{\mathrm{c}}" display="inline"><mrow><mi>ω</mi><mo>=</mo><msub><mi>ω</mi><mi mathvariant="normal">c</mi></msub></mrow></math>, <math id="S7.p8.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> tem módulo
+<math id="S7.p8.m5" class="ltx_Math" alttext="1/\sqrt{2}=0.707" display="inline"><mrow><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow><mo>=</mo><mn>0.707</mn></mrow></math> e ângulo de fase <math id="S7.p8.m6" class="ltx_Math" alttext="\pi/4" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>4</mn></mrow></math>.
+</p>
+</div>
+<figure id="S7.F10" class="ltx_figure"><img src="img/high-pass_response.png" style="width:36.246em;max-width:100%;height:auto" id="S7.F10.g1" class="ltx_graphics ltx_centering" alt="Módulo e ângulo de fase da função de resposta em frequência
+de um filtro passa-alto com frequência angular de corte ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 11.10: </span>Módulo e ângulo de fase da função de resposta em frequência
+de um filtro passa-alto com frequência angular de corte <math id="S7.F10.m2" class="ltx_Math" alttext="0.5" display="inline"><mn>0.5</mn></math> Hz.</figcaption>
+</figure>
+<div id="S7.p9" class="ltx_para">
+<p class="ltx_p">Vários filtros podem ser combinados de forma sequencial e a função de
+resposta é o produto das funções de todos os filtros na sequência. Por
+exemplo, o filtro <em class="ltx_emph ltx_font_italic">passa-banda</em> da figura <a href="#S7.F11" title="Figura 11.11 ‣ 7 Filtros de frequência ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.11</span></a> é
+a combinação dum filtro passa-alto, com frequência angular de corte
+<math id="S7.p9.m1" class="ltx_Math" alttext="\omega_{1}=1/(R_{1}\,C_{1})" display="inline"><mrow><msub><mi>ω</mi><mn>1</mn></msub><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>R</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>C</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> e um filtro passa-baixo, com frequência
+angular de corte <math id="S7.p9.m2" class="ltx_Math" alttext="\omega_{2}=1/(R_{2}\,C_{2})" display="inline"><mrow><msub><mi>ω</mi><mn>2</mn></msub><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>R</mi><mn>2</mn></msub><mspace width=0.166em /><msub><mi>C</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+</p>
+</div>
+<figure id="S7.F11" class="ltx_figure"><img src="img/circ_33.png" style="width:16.716em;max-width:100%;height:auto" id="S7.F11.g1" class="ltx_graphics ltx_centering" alt="Filtro passa-banda.,">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura 11.11: </span>Filtro passa-banda.,</figcaption>
+</figure>
+<div id="S7.p10" class="ltx_para">
+<p class="ltx_p">A função de resposta em frequência desse filtro é a seguinte (ver
+problema <a href="#Sx1.I1.i14" title="item 14 ‣ Problemas ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.14</span></a>):</p>
+<table id="S7.E43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.E43.m1" class="ltx_Math" alttext="R(\omega)=\dfrac{\mathrm{i}\,\omega_{2}\omega}{\omega_{1}\omega_{2}+\omega^{2}%
++\mathrm{i}\left(\omega_{1}+\omega_{2}+\omega 1/G\right)\omega}" display="block"><mrow><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><msub><mi>ω</mi><mn>2</mn></msub><mspace width=0.166em /><mi>ω</mi></mrow><mrow><mrow><msub><mi>ω</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>ω</mi><mn>2</mn></msub></mrow><mo>+</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><msub><mi>ω</mi><mn>1</mn></msub><mo>+</mo><msub><mi>ω</mi><mn>2</mn></msub><mo>+</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mn>1</mn></mrow><mo>/</mo><mi>G</mi></mrow></mrow><mo>)</mo></mrow><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(11.43)</span></td>
+</tr>
+</table>
+<p class="ltx_p">onde <math id="S7.p10.m1" class="ltx_Math" alttext="G=R_{2}/R_{1}" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>/</mo><msub><mi>R</mi><mn>1</mn></msub></mrow></mrow></math>, chamado <em class="ltx_emph ltx_font_italic">ganho</em> do filtro, é uma
+constante sem unidades. O módulo dessa função, <math id="S7.p10.m2" class="ltx_Math" alttext="|R|" display="inline"><mrow><mo stretchy="false">|</mo><mi>R</mi><mo stretchy="false">|</mo></mrow></math>, é nulo em
+<math id="S7.p10.m3" class="ltx_Math" alttext="\omega=0" display="inline"><mrow><mi>ω</mi><mo>=</mo><mn>0</mn></mrow></math> e no limite <math id="S7.p10.m4" class="ltx_Math" alttext="\omega\rightarrow\infty" display="inline"><mrow><mi>ω</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, e tem valor máximo
+<math id="S7.p10.m5" class="ltx_Math" alttext="\omega_{2}/(\omega_{1}+\omega_{2}+\omega 1/G)" display="inline"><mrow><msub><mi>ω</mi><mn>2</mn></msub><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ω</mi><mn>1</mn></msub><mo>+</mo><msub><mi>ω</mi><mn>2</mn></msub><mo>+</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mn>1</mn></mrow><mo>/</mo><mi>G</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> quando a frequência angular
+<math id="S7.p10.m6" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> for igual à média geométrica das duas frequências de corte:
+<math id="S7.p10.m7" class="ltx_Math" alttext="\sqrt{\omega_{1}\omega_{2}}" display="inline"><msqrt><mrow><msub><mi>ω</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>ω</mi><mn>2</mn></msub></mrow></msqrt></math>.</p>
+</div>
+<div id="S7.p11" class="ltx_para">
+<p class="ltx_p">Um filtro ideal deveria ter uma função de resposta nula, para as
+frequências que se pretende eliminar, e 1 nas outras frequências. Com
+circuitos mais complicados conseguem-se obter filtros com
+comportamento mais próximo do ideal. Outro fator a ter em conta é a
+resposta transitória, que tem sido ignorada por ser nula após algum
+tempo, mas num filtro de boa qualidade é necessário garantir que a
+resposta transitória desaparece o mais rapidamente possível.</p>
+</div>
+</section>
+<section id="S8" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">11.8 </span>Ressonância</h2>
+
+<div id="S8.p1" class="ltx_para">
+<p class="ltx_p">Quando um circuito com condensadores e indutores é ligado a diferentes
+fontes com a mesma tensão máxima <math id="S8.p1.m1" class="ltx_Math" alttext="V_{\text{m\'{a}x}}" display="inline"><msub><mi>V</mi><mtext>máx</mtext></msub></math>, mas com diferentes
+frequências, a potência absorvida pelo circuito varia em função da
+frequência. Normalmente, existe uma <em class="ltx_emph ltx_font_italic">frequência de
+ressonância</em> tal que a potência dissipada pelo circuito é máxima. Se
+a frequência da fonte é igual à frequência de ressonância do circuito,
+diz-se que o circuito está em <em class="ltx_emph ltx_font_italic">ressonância</em>
+com a fonte.</p>
+</div>
+<div id="S8.p2" class="ltx_para">
+<p class="ltx_p">No caso particular do circuito RLC, com uma resistência, um indutor e
+um condensador em série, a reatância equivalente <math id="S8.p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> é função contínua
+da frequência <math id="S8.p2.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. Quando <math id="S8.p2.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> se aproxima de infinito ou de zero, o
+valor absoluto da reatância aproxima-se de infinito. Como tal, a
+corrente nos 3 dispositivos é nula. A frequência de ressonância é a
+frequência que faz com que a reatância seja nula e o módulo da
+impedância seja mínimo. Isso implica que o ângulo de fase da
+impedância, <math id="S8.p2.m4" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math>, será nulo e o fator de potência, <math id="S8.p2.m5" class="ltx_Math" alttext="\cos\varphi" display="inline"><mrow><mi>cos</mi><mspace width=0.11em /><mi>φ</mi></mrow></math>,
+igual a 1. A corrente máxima e a potência média em função de <math id="S8.p2.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> são
+ambas máximas e a tensão e a corrente estão em fase.</p>
+</div>
+<div id="S8.p3" class="ltx_para">
+<p class="ltx_p">A frequência (ou frequências) de ressonância é um valor caraterístico
+de cada circuito. Nos circuitos em que os indutores e condensadores
+não estão em série, a frequência de ressonância pode surgir quando a
+reatância não é nula, com fator de potência diferente de 1, ou seja
+corrente desfasada da voltagem.</p>
+</div>
+<div id="Thmexample3" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Exemplo 11.3</span></span></h6><p></p>
+<div id="Thmexample3.p1" class="ltx_para">
+<p class="ltx_p">Determine a frequência de ressonância do circuito e a potência média
+máxima para uma tensão máxima <math id="Thmexample3.p1.m1" class="ltx_Math" alttext="V_{\text{m\'{a}x}}" display="inline"><msub><mi>V</mi><mtext>máx</mtext></msub></math> da fonte.</p>
+<img src="img/circ_27.png" style="width:13.965em;max-width:100%;height:auto" id="Thmexample3.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="Thmexample3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Resolução</span>. Com a resistência em M<math id="Thmexample3.p2.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e a capacidade em
+pF, convém usar µs para a unidade de tempo e, portanto, MHz para a
+frequência e H para a indutância.</p>
+</div>
+<div id="Thmexample3.p3" class="ltx_para">
+<p class="ltx_p">A impedância total do circuito é a soma das 3 impedâncias:</p>
+<table id="S8.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S8.Ex9.m1" class="ltx_Math" alttext="Z=3+\mathrm{i}\,8\omega-\dfrac{\mathrm{i}}{2\omega}=3+\mathrm{i}\left(8\omega-%
+\dfrac{1}{2\omega}\right)" display="block"><mrow><mi>Z</mi><mo>=</mo><mrow><mrow><mn>3</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mn> 8</mn><mspace width=0.166em /><mi>ω</mi></mrow></mrow><mo>−</mo><mfrac><mi mathvariant="normal">i</mi><mrow><mn>2</mn><mspace width=0.166em /><mi>ω</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mn>3</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mn>8</mn><mspace width=0.166em /><mi>ω</mi></mrow><mo>−</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mspace width=0.166em /><mi>ω</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample3.p4" class="ltx_para">
+<p class="ltx_p">Observe-se que a parte real da impedância equivalente não depende da
+frequência, porque o condensador e o indutor estão em série e, como
+tal, o valor mínimo do módulo da impedância obtém-se quando a parte
+imaginária seja igual a zero:</p>
+<table id="S8.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S8.Ex10.m1" class="ltx_Math" alttext="8\omega-\dfrac{1}{2\omega}=0\quad\Longrightarrow\quad\omega=\dfrac{1}{4}\quad%
+\Longrightarrow\quad f=\dfrac{\omega}{2\pi}=0.0398" display="block"><mrow><mrow><mrow><mrow><mn>8</mn><mspace width=0.166em /><mi>ω</mi></mrow><mo>−</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mspace width=0.166em /><mi>ω</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mn>0</mn><mo mathvariant="italic" separator="true"> </mo><mo>⟹</mo></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mi>ω</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo mathvariant="italic" separator="true"> </mo><mo>⟹</mo></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mi>f</mi><mo>=</mo><mfrac><mi>ω</mi><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow></mfrac><mo>=</mo><mn>0.0398</mn></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmexample3.p5" class="ltx_para">
+<p class="ltx_p">No sistema de unidades usado, a frequência de ressonância é
+<math id="Thmexample3.p5.m1" class="ltx_Math" alttext="0.0398" display="inline"><mn>0.0398</mn></math> MHz, igual a <math id="Thmexample3.p5.m2" class="ltx_Math" alttext="39.8" display="inline"><mn>39.8</mn></math> kHz.</p>
+</div>
+<div id="Thmexample3.p6" class="ltx_para">
+<p class="ltx_p">Se a fonte tivesse essa frequência, a impedância equivalente seria
+real, <math id="Thmexample3.p6.m1" class="ltx_Math" alttext="Z=3" display="inline"><mrow><mi>Z</mi><mo>=</mo><mn>3</mn></mrow></math> M<math id="Thmexample3.p6.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, e a corrente máxima teria o valor
+<math id="Thmexample3.p6.m3" class="ltx_Math" alttext="I_{\text{m\'{a}x}}=V_{\text{m\'{a}x}}/3" display="inline"><mrow><msub><mi>I</mi><mtext>máx</mtext></msub><mo>=</mo><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mo>/</mo><mn>3</mn></mrow></mrow></math> (µA, se <math id="Thmexample3.p6.m4" class="ltx_Math" alttext="V_{\text{m\'{a}x}}" display="inline"><msub><mi>V</mi><mtext>máx</mtext></msub></math> estiver
+em volts). A potência média máxima é
+<math id="Thmexample3.p6.m5" class="ltx_Math" alttext="\bar{P}=V_{\text{m\'{a}x}}I_{\text{m\'{a}x}}/2=V_{\text{m\'{a}x}}^{2}/6" display="inline"><mrow><mover accent="true"><mi>P</mi><mo stretchy="false">¯</mo></mover><mo>=</mo><mrow><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mspace width=0.166em /><msub><mi>I</mi><mtext>máx</mtext></msub></mrow><mo>/</mo><mn>2</mn></mrow><mo>=</mo><mrow><msubsup><mi>V</mi><mtext>máx</mtext><mn>2</mn></msubsup><mo>/</mo><mn>6</mn></mrow></mrow></math> (µW,
+se <math id="Thmexample3.p6.m6" class="ltx_Math" alttext="V_{\text{m\'{a}x}}" display="inline"><msub><mi>V</mi><mtext>máx</mtext></msub></math> estiver em volts).
+</div>
+</div>
+<div id="S8.p4" class="ltx_para">
+<p class="ltx_p">No circuito do exemplo anterior, a tensão de entrada carrega e
+descarrega o condensador. Inicialmente, a carga no condensador oscila
+com a frequência de oscilação da tensão na fonte; mas quando a carga
+no condensador é elevada, a diferença de potencial do condensador pode
+contrariar a tensão da fonte, impedindo a entrada de mais carga.</p>
+</div>
+<div id="S8.p5" class="ltx_para">
+<p class="ltx_p">A situação é semelhante a uma massa pendurada de uma mola elástica, na
+qual atua outra força externa que tenta manter a massa oscilando para
+cima e para baixo. Se a força externa não oscila com a uma frequência
+igual à frequência própria de oscilação da mola elástica, há momentos
+em que a força externa está a tentar fazer subir a massa, enquanto a
+mola elástica faz força no sentido oposto.</p>
+</div>
+<div id="S8.p6" class="ltx_para">
+<p class="ltx_p">No caso do circuito, se a fonte não existisse mas o condensador
+tivesse uma carga inicial, começaria a descarregar, produzindo
+corrente. No momento em que o condensador descarrega completamente, o
+indutor faz com que a corrente persista por alguns instantes,
+recarregando o condensador com cargas de sinais opostos à carga
+inicial. O ciclo repete-se, com uma frequência própria do circuito. No
+entanto, a resistência faz com que a carga do condensador seja menor
+em cada ciclo, até desaparecer (equilíbrio estável). Existe
+ressonância quando a fonte oscila com a frequência própria do
+circuito.</p>
+</div>
+<div id="S8.p7" class="ltx_para">
+<p class="ltx_p">Se a resistência fosse nula, quando a frequência da fonte fosse a
+frequência de ressonância, <math id="S8.p7.m1" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math> seria nula e aparentemente
+<math id="S8.p7.m2" class="ltx_Math" alttext="I_{\text{m\'{a}x}}=V_{\text{m\'{a}x}}/Z" display="inline"><mrow><msub><mi>I</mi><mtext>máx</mtext></msub><mo>=</mo><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mo>/</mo><mi>Z</mi></mrow></mrow></math> seria infinita. No entanto, a
+corrente não aumentaria instantaneamente até esse valor, mas sim
+gradualmente, com as oscilações da carga no condensador. Quando essa
+carga máxima fosse muito elevada, haveria rutura do dielétrico no
+condensador ou a corrente elevada queimaria o indutor.</p>
+</div>
+</section>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Problemas</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<ol id="Sx1.I1" class="ltx_enumerate">
+<li id="Sx1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.1.</span></span> 
+<div id="Sx1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">A resistência de uma bobina é 150 <math id="Sx1.I1.i1.p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e a sua indutância é
+1.4 H. A bobina é ligada à rede elétrica com tensão máxima 325 V e
+frequência de 50 Hz. Encontre a expressão para a corrente na bobina
+em função do tempo <math id="Sx1.I1.i1.p1.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.</p>
+</div>
+</li>
+<li id="Sx1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.2.</span></span> 
+<div id="Sx1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Nos dois circuitos representados na figura, calcule a corrente e
+a tensão em todos os elementos do circuito.</p>
+<img src="img/eic0014-prob_11_6.png" style="width:31.521em;max-width:100%;height:auto" id="Sx1.I1.i2.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.3.</span></span> 
+<div id="Sx1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">A figura mostra um filtro
+<em class="ltx_emph ltx_font_italic">rejeita-banda</em> que atenua as frequências angulares próximas
+de 1 kHz.</p>
+<img src="img/band-supress.png" style="width:16.716em;max-width:100%;height:auto" id="Sx1.I1.i3.p1.g1" class="ltx_graphics ltx_centering" alt="">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">a</em>) Determine a função de resposta em frequência, <math id="Sx1.I1.i3.p1.m1" class="ltx_Math" alttext="R(\omega)" display="inline"><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>,
+do circuito.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) Mostre que para <math id="Sx1.I1.i3.p1.m2" class="ltx_Math" alttext="\omega=1" display="inline"><mrow><mi>ω</mi><mo>=</mo><mn>1</mn></mrow></math> kHz, <math id="Sx1.I1.i3.p1.m3" class="ltx_Math" alttext="R(\omega)" display="inline"><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> é igual a zero.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">c</em>) Calcule o módulo de <math id="Sx1.I1.i3.p1.m4" class="ltx_Math" alttext="R(\omega)" display="inline"><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> e trace o seu gráfico para
+<math id="Sx1.I1.i3.p1.m5" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> entre 0 e 2 kHz.</p>
+</div>
+</li>
+<li id="Sx1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.4.</span></span> 
+<div id="Sx1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">A figura mostra o ecrã de um osciloscópio onde aparecem a tensão
+e a corrente num elemento de um circuito. As distâncias <math id="Sx1.I1.i4.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> e <math id="Sx1.I1.i4.p1.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>
+foram medidas diretamente no ecrã, obtendo-se os valores <math id="Sx1.I1.i4.p1.m3" class="ltx_Math" alttext="L=6" display="inline"><mrow><mi>L</mi><mo>=</mo><mn>6</mn></mrow></math> cm,
+<math id="Sx1.I1.i4.p1.m4" class="ltx_Math" alttext="d=1" display="inline"><mrow><mi>d</mi><mo>=</mo><mn>1</mn></mrow></math> cm. O osciloscópio também permite determinar que a tensão
+máxima é <math id="Sx1.I1.i4.p1.m5" class="ltx_Math" alttext="V_{\text{m\'{a}x}}=36" display="inline"><mrow><msub><mi>V</mi><mtext>máx</mtext></msub><mo>=</mo><mn>36</mn></mrow></math> V e a corrente máxima é
+<math id="Sx1.I1.i4.p1.m6" class="ltx_Math" alttext="I_{\text{m\'{a}x}}=12" display="inline"><mrow><msub><mi>I</mi><mtext>máx</mtext></msub><mo>=</mo><mn>12</mn></mrow></math> mA. Com esses dados, calcule a parte real e a
+parte imaginária da impedância do elemento do circuito.</p>
+<img src="img/oscilloscope.png" style="width:19.845em;max-width:100%;height:auto" id="Sx1.I1.i4.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.5.</span></span> 
+<div id="Sx1.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">No filtro de frequências representado no diagrama, o sinal de
+entrada é a tensão <math id="Sx1.I1.i5.p1.m1" class="ltx_Math" alttext="V_{e}" display="inline"><msub><mi>V</mi><mi>e</mi></msub></math> de uma fonte de tensão alternada, com
+frequência angular <math id="Sx1.I1.i5.p1.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, e o sinal de saída é a tensão <math id="Sx1.I1.i5.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>
+medida no indutor e no condensador, como indica a figura. Encontre a
+expressão da função de resposta em frequência.</p>
+<img src="img/circ_RLC6.png" style="width:12.642em;max-width:100%;height:auto" id="Sx1.I1.i5.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.6.</span></span> 
+<div id="Sx1.I1.i6.p1" class="ltx_para">
+<p class="ltx_p">No circuito representado no diagrama, determine a potência média
+fornecida pela fonte, sabendo que esta tem frequência de 30 Hz e
+voltagem máxima de 9 V.</p>
+<img src="img/prob-potencia_ac.png" style="width:18.942em;max-width:100%;height:auto" id="Sx1.I1.i6.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.7.</span></span> 
+<div id="Sx1.I1.i7.p1" class="ltx_para">
+<p class="ltx_p">No filtro de frequências representado no diagrama, o sinal de
+entrada é a tensão <math id="Sx1.I1.i7.p1.m1" class="ltx_Math" alttext="V_{\mathrm{e}}" display="inline"><msub><mi>V</mi><mi mathvariant="normal">e</mi></msub></math> de uma fonte de tensão alternada,
+com frequência angular <math id="Sx1.I1.i7.p1.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, e o sinal de saída é a tensão <math id="Sx1.I1.i7.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>
+medida no condensador, como indica a figura. Encontre a expressão da
+função de resposta em frequência, em função de <math id="Sx1.I1.i7.p1.m4" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>.</p>
+<img src="img/circ_RLC7.png" style="width:16.716em;max-width:100%;height:auto" id="Sx1.I1.i7.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.8.</span></span> 
+<div id="Sx1.I1.i8.p1" class="ltx_para">
+<p class="ltx_p">A fonte no circuito representado no diagrama tem voltagem máxima
+9 V e frequência angular <math id="Sx1.I1.i8.p1.m1" class="ltx_Math" alttext="\omega=125" display="inline"><mrow><mi>ω</mi><mo>=</mo><mn>125</mn></mrow></math> kHz. Determine a voltagem
+máxima no condensador de 2 nF.</p>
+<img src="img/circ_LC3.png" style="width:16.632em;max-width:100%;height:auto" id="Sx1.I1.i8.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.9.</span></span> 
+<div id="Sx1.I1.i9.p1" class="ltx_para">
+<p class="ltx_p">Sabendo que o fasor representado na figura <a href="#S3.F4" title="Figura 11.4 ‣ 3 Fasores ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.4</span></a> é
+<math id="Sx1.I1.i9.p1.m1" class="ltx_Math" alttext="\mathbf{F}=5.2\angle\,30^{\circ}" display="inline"><mrow><mi>𝐅</mi><mo>=</mo><mrow><mn>5.2</mn><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><msup><mn> 30</mn><mo>∘</mo></msup></mrow></mrow></math>, determine a expressão para a
+função sinusoidal, <math id="Sx1.I1.i9.p1.m2" class="ltx_Math" alttext="F(t)" display="inline"><mrow><mi>F</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, representada por esse fasor.</p>
+</div>
+</li>
+<li id="Sx1.I1.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.10.</span></span> 
+<div id="Sx1.I1.i10.p1" class="ltx_para">
+<p class="ltx_p">Uma bobina, com indutância de 36 mH e resistência de
+40 <math id="Sx1.I1.i10.p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, liga-se em paralelo com um condensador de 32 nF e com
+uma fonte de tensão alternada <math id="Sx1.I1.i10.p1.m2" class="ltx_Math" alttext="V(t)=345\cos(150\pi t)" display="inline"><mrow><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>345</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mn>150</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> (em
+volts, e o tempo <math id="Sx1.I1.i10.p1.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> em segundos). Calcule:
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">a</em>) A corrente máxima na bobina.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) A corrente eficaz no condensador.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">c</em>) As potências médias dissipadas na bobina e no condensador.</p>
+</div>
+</li>
+<li id="Sx1.I1.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.11.</span></span> 
+<div id="Sx1.I1.i11.p1" class="ltx_para">
+<p class="ltx_p">Demonstre que a transformada inversa da equação (<a href="#S1.E3" title="(3) ‣ 1 Circuito LC ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.3</span></a>)
+conduz à corrente alternada indicada na equação (<a href="#S1.E5" title="(5) ‣ 1 Circuito LC ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.5</span></a>).</p>
+</div>
+</li>
+<li id="Sx1.I1.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.12.</span></span> 
+<div id="Sx1.I1.i12.p1" class="ltx_para">
+<p class="ltx_p">No circuito LC do problema <a href="inducao_eletromagnetica.html#Sx1.I1.i14">14</a> do
+capítulo <a href="inducao_eletromagnetica.html">9</a>, determine a frequência do circuito e os
+valores máximos da corrente e da carga, após o interruptor
+<math id="Sx1.I1.i12.p1.m1" class="ltx_Math" alttext="\mathrm{S}_{2}" display="inline"><msub><mi mathvariant="normal">S</mi><mn>2</mn></msub></math> ter sido fechado e o interruptor <math id="Sx1.I1.i12.p1.m2" class="ltx_Math" alttext="\mathrm{S}_{1}" display="inline"><msub><mi mathvariant="normal">S</mi><mn>1</mn></msub></math>
+aberto.</p>
+</div>
+</li>
+<li id="Sx1.I1.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.13.</span></span> 
+<div id="Sx1.I1.i13.p1" class="ltx_para">
+<p class="ltx_p">Num segmento de um circuito de corrente alternada a tensão em
+função do tempo é dada pela expressão <math id="Sx1.I1.i13.p1.m1" class="ltx_Math" alttext="24\cos(\pi t/10+1.5)" display="inline"><mrow><mn>24</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>π</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>/</mo><mn>10</mn></mrow><mo>+</mo><mn>1.5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> (em
+volt, com <math id="Sx1.I1.i13.p1.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> em milissegundos) e a corrente é
+<math id="Sx1.I1.i13.p1.m3" class="ltx_Math" alttext="8\cos(\pi t/10+2.0)" display="inline"><mrow><mn>8</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>π</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>/</mo><mn>10</mn></mrow><mo>+</mo><mn>2.0</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> (µA, com <math id="Sx1.I1.i13.p1.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> em ms).
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">a</em>) Calcule a resistência e reatância desse segmento.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) O segmento do circuito pode ser substituído por apenas dois
+dispositivos. Diga quais são esses dispositivos e com que valores.</p>
+</div>
+</li>
+<li id="Sx1.I1.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.14.</span></span> 
+<div id="Sx1.I1.i14.p1" class="ltx_para">
+<p class="ltx_p">O seguinte diagrama mostra um filtro passa-banda:</p>
+<img src="img/circ_33.png" style="width:16.716em;max-width:100%;height:auto" id="Sx1.I1.i14.p1.g1" class="ltx_graphics ltx_centering" alt="">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">a</em>) Demonstre que a função de resposta em frequência é a
+expressão na equação (<a href="#S7.E43" title="(43) ‣ 7 Filtros de frequência ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.43</span></a>), onde <math id="Sx1.I1.i14.p1.m1" class="ltx_Math" alttext="G=R_{2}/R_{1}" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>/</mo><msub><mi>R</mi><mn>1</mn></msub></mrow></mrow></math>,
+<math id="Sx1.I1.i14.p1.m2" class="ltx_Math" alttext="\omega_{1}=1/(R_{1}\,C_{1})" display="inline"><mrow><msub><mi>ω</mi><mn>1</mn></msub><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>R</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>C</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> e <math id="Sx1.I1.i14.p1.m3" class="ltx_Math" alttext="\omega_{2}=1/(R_{2}\,C_{2})" display="inline"><mrow><msub><mi>ω</mi><mn>2</mn></msub><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>R</mi><mn>2</mn></msub><mspace width=0.166em /><msub><mi>C</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> (sugestão:
+encontre primeiro a função de transferência <math id="Sx1.I1.i14.p1.m4" class="ltx_Math" alttext="H(s)" display="inline"><mrow><mi>H</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math>, usando as
+expressões <math id="Sx1.I1.i14.p1.m5" class="ltx_Math" alttext="Z_{1}=R_{1}\omega_{1}/s" display="inline"><mrow><msub><mi>Z</mi><mn>1</mn></msub><mo>=</mo><mrow><mrow><msub><mi>R</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>ω</mi><mn>1</mn></msub></mrow><mo>/</mo><mi>s</mi></mrow></mrow></math> e <math id="Sx1.I1.i14.p1.m6" class="ltx_Math" alttext="Z_{2}=R_{2}\omega_{2}/s" display="inline"><mrow><msub><mi>Z</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><msub><mi>R</mi><mn>2</mn></msub><mspace width=0.166em /><msub><mi>ω</mi><mn>2</mn></msub></mrow><mo>/</mo><mi>s</mi></mrow></mrow></math> para as
+impedâncias dos dois condensadores).
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">b</em>) Determine o valor máximo de <math id="Sx1.I1.i14.p1.m7" class="ltx_Math" alttext="|R(\omega)|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></math> e a frequência
+angular <math id="Sx1.I1.i14.p1.m8" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> em que essa função é máxima.
+<br class="ltx_break">
+(<em class="ltx_emph ltx_font_italic">c</em>) Trace o gráfico de <math id="Sx1.I1.i14.p1.m9" class="ltx_Math" alttext="|R(\omega)|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></math>, com <math id="Sx1.I1.i14.p1.m10" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, entre 0
+e 3 kHz, no caso particular <math id="Sx1.I1.i14.p1.m11" class="ltx_Math" alttext="C_{1}=6" display="inline"><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mn>6</mn></mrow></math> µF, <math id="Sx1.I1.i14.p1.m12" class="ltx_Math" alttext="C_{2}=1" display="inline"><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn></mrow></math> µF, <math id="Sx1.I1.i14.p1.m13" class="ltx_Math" alttext="R_{1}=6" display="inline"><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>=</mo><mn>6</mn></mrow></math> k<math id="Sx1.I1.i14.p1.m14" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>
+e <math id="Sx1.I1.i14.p1.m15" class="ltx_Math" alttext="R_{2}=4" display="inline"><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><mn>4</mn></mrow></math> k<math id="Sx1.I1.i14.p1.m16" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math></p>
+</div>
+</li>
+<li id="Sx1.I1.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.15.</span></span> 
+<div id="Sx1.I1.i15.p1" class="ltx_para">
+<p class="ltx_p">Um condensador de <math id="Sx1.I1.i15.p1.m1" class="ltx_Math" alttext="1.6" display="inline"><mn>1.6</mn></math> µF, um indutor de <math id="Sx1.I1.i15.p1.m2" class="ltx_Math" alttext="1.1" display="inline"><mn>1.1</mn></math> H e
+uma resistência de <math id="Sx1.I1.i15.p1.m3" class="ltx_Math" alttext="1.8" display="inline"><mn>1.8</mn></math> k<math id="Sx1.I1.i15.p1.m4" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> ligam-se em série a uma fonte de
+tensão alternada, com voltagem máxima de <math id="Sx1.I1.i15.p1.m5" class="ltx_Math" alttext="80" display="inline"><mn>80</mn></math> V e frequência de
+<math id="Sx1.I1.i15.p1.m6" class="ltx_Math" alttext="60" display="inline"><mn>60</mn></math> Hz. Encontre a expressão da voltagem no indutor, em função do
+tempo.</p>
+</div>
+</li>
+<li id="Sx1.I1.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.16.</span></span> 
+<div id="Sx1.I1.i16.p1" class="ltx_para">
+<p class="ltx_p">No circuito representado no diagrama, determine a potência média
+fornecida pela fonte, sabendo que esta tem frequência de 30 Hz e
+voltagem máxima de 9 V.</p>
+<img src="img/ac_circuits-prob_14.png" style="width:17.094em;max-width:100%;height:auto" id="Sx1.I1.i16.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.17.</span></span> 
+<div id="Sx1.I1.i17.p1" class="ltx_para">
+<p class="ltx_p">No filtro de frequências representado no diagrama, o sinal de
+entrada é a tensão <math id="Sx1.I1.i17.p1.m1" class="ltx_Math" alttext="V_{\mathrm{e}}" display="inline"><msub><mi>V</mi><mi mathvariant="normal">e</mi></msub></math> de uma fonte de tensão alternada,
+com frequência angular <math id="Sx1.I1.i17.p1.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, e o sinal de saída é a tensão <math id="Sx1.I1.i17.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>
+medida no condensador, como indica a figura. Encontre a expressão da
+função de resposta em frequência, em função de <math id="Sx1.I1.i17.p1.m4" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>.</p>
+<img src="img/ac_circuits-prob_15.png" style="width:16.716em;max-width:100%;height:auto" id="Sx1.I1.i17.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx1.I1.i18" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.18.</span></span> 
+<div id="Sx1.I1.i18.p1" class="ltx_para">
+<p class="ltx_p">A fonte no circuito representado no diagrama tem tensão eficaz
+de 100 V e frequência de 2 kHz. Calcule a corrente eficaz na
+resistência de 56 <math id="Sx1.I1.i18.p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, quando o interruptor estiver aberto e
+quando estiver fechado.</p>
+<img src="img/eic0014_q11017_3.png" style="width:15.225em;max-width:100%;height:auto" id="Sx1.I1.i18.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+</ol>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Respostas</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<ol id="Sx2.I2" class="ltx_enumerate">
+<li id="Sx2.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.1.</span></span> 
+<div id="Sx2.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i1.p1.m1" class="ltx_Math" alttext="I(t)=0.669\sin(314.16t-1.2421)" display="inline"><mrow><mrow><mi>I</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>0.669</mn><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>314.16</mn><mspace width=0.166em /><mi>t</mi></mrow><mo>−</mo><mn>1.2421</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> A.</p>
+</div>
+</li>
+<li id="Sx2.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.2.</span></span> 
+<div id="Sx2.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">a</em>) Tensões em V, correntes em mA, tempo em ms.</p>
+</div>
+<div id="Sx2.I2.i2.p2" class="ltx_para">
+<p class="ltx_p">Condensador: <math id="Sx2.I2.i2.p2.m1" class="ltx_Math" alttext="V=113\cos(0.378t-0.847)\;I=2.5\cos(0.378t+0.724)" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mn>113</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.378</mn><mspace width=0.166em /><mi>t</mi></mrow><mo>−</mo><mn>0.847</mn></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mspace width=0.166em /><mi>I</mi></mrow><mo>=</mo><mrow><mn>2.5</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.378</mn><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mn>0.724</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></p>
+</div>
+<div id="Sx2.I2.i2.p3" class="ltx_para">
+<p class="ltx_p">Resistência: <math id="Sx2.I2.i2.p3.m1" class="ltx_Math" alttext="V=127\cos(0.378t+0.724)\;I=42.5\cos(0.378t+0.724)" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mn>127</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.378</mn><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mn>0.724</mn></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mspace width=0.166em /><mi>I</mi></mrow><mo>=</mo><mrow><mn>42.5</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.378</mn><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mn>0.724</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></p>
+</div>
+<div id="Sx2.I2.i2.p4" class="ltx_para">
+<p class="ltx_p">Indutor: <math id="Sx2.I2.i2.p4.m1" class="ltx_Math" alttext="V=170\cos(0.378t)\;I=225\cos(0.378t-\pi/2)" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mn>170</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mn>0.378</mn><mspace width=0.166em /><mi>t</mi></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mspace width=0.166em /><mi>I</mi></mrow><mo>=</mo><mrow><mn>225</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.378</mn><mspace width=0.166em /><mi>t</mi></mrow><mo>−</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></p>
+</div>
+<div id="Sx2.I2.i2.p5" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">b</em>) Tensões em V, correntes em mA, tempo em ms.</p>
+</div>
+<div id="Sx2.I2.i2.p6" class="ltx_para">
+<p class="ltx_p">Condensador: <math id="Sx2.I2.i2.p6.m1" class="ltx_Math" alttext="V=405\cos(0.314t)\;I=127\cos(0.314t+\pi/2)" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mn>405</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mn>0.314</mn><mspace width=0.166em /><mi>t</mi></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mspace width=0.166em /><mi>I</mi></mrow><mo>=</mo><mrow><mn>127</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.314</mn><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></p>
+</div>
+<div id="Sx2.I2.i2.p7" class="ltx_para">
+<p class="ltx_p">Resistência: <math id="Sx2.I2.i2.p7.m1" class="ltx_Math" alttext="V=325\cos(0.314t)\;I=108\cos(0.314t)" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mn>325</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mn>0.314</mn><mspace width=0.166em /><mi>t</mi></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mspace width=0.166em /><mi>I</mi></mrow><mo>=</mo><mrow><mn>108</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mn>0.314</mn><mspace width=0.166em /><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></p>
+</div>
+<div id="Sx2.I2.i2.p8" class="ltx_para">
+<p class="ltx_p">Indutor: <math id="Sx2.I2.i2.p8.m1" class="ltx_Math" alttext="V=79.9\cos(0.314t+\pi)\;I=127\cos(0.314t+\pi/2)" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mn>79.9</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.314</mn><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>π</mi></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mspace width=0.166em /><mi>I</mi></mrow><mo>=</mo><mrow><mn>127</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>0.314</mn><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="Sx2.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.3.</span></span> 
+<div id="Sx2.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">a</em>)
+<math id="Sx2.I2.i3.p1.m1" class="ltx_Math" alttext="\;R(\omega)=\dfrac{10\omega^{2}-10}{10\omega^{2}-10-\mathrm{i}\,\omega}\;" display="inline"><mrow><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>10</mn><mspace width=0.166em /><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo>−</mo><mn>10</mn></mrow><mrow><mrow><mn>10</mn><mspace width=0.166em /><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo>−</mo><mn>10</mn><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac></mstyle></mrow></math>
+(<em class="ltx_emph ltx_font_italic">c</em>)
+<math id="Sx2.I2.i3.p1.m2" class="ltx_Math" alttext="\;|R(\omega)|=\dfrac{\left|\omega^{2}-1\right|}{\sqrt{\omega^{4}-1.99\omega^{2%
+}+1}}" display="inline"><mrow><mrow><mo lspace="5.3pt" stretchy="false">|</mo><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mo>|</mo><mrow><msup><mi>ω</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo>|</mo></mrow><msqrt><mrow><mrow><msup><mi>ω</mi><mn>4</mn></msup><mo>−</mo><mrow><mn>1.99</mn><mspace width=0.166em /><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mn>1</mn></mrow></msqrt></mfrac></mstyle></mrow></math></p>
+<img src="img/band-supress-response.png" style="width:18.459em;max-width:100%;height:auto" id="Sx2.I2.i3.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx2.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.4.</span></span> 
+<div id="Sx2.I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i4.p1.m1" class="ltx_Math" alttext="z=(1.5+\mathrm{i}\,2.598)\;\mathrm{k}\Omega" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1.5</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mn> 2.598</mn></mrow></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mspace width=0.166em /><mi mathvariant="normal">k</mi><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math></p>
+</div>
+</li>
+<li id="Sx2.I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.5.</span></span> 
+<div id="Sx2.I2.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i5.p1.m1" class="ltx_Math" alttext="R(\omega)=\dfrac{1-15\omega^{2}}{1-15\omega^{2}+\mathrm{i}\,0.75\omega}" display="inline"><mrow><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>1</mn><mo>−</mo><mrow><mn>15</mn><mspace width=0.166em /><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow><mrow><mrow><mn>1</mn><mo>−</mo><mrow><mn>15</mn><mspace width=0.166em /><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mn> 0.75</mn><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac></mstyle></mrow></math></p>
+</div>
+</li>
+<li id="Sx2.I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.6.</span></span> 
+<div id="Sx2.I2.i6.p1" class="ltx_para">
+<p class="ltx_p">8.15 mW.</p>
+</div>
+</li>
+<li id="Sx2.I2.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.7.</span></span> 
+<div id="Sx2.I2.i7.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i7.p1.m1" class="ltx_Math" alttext="R(\omega)=\dfrac{1}{1-2\omega^{2}+\mathrm{i}\,0.42\omega}" display="inline"><mrow><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mrow><mn>1</mn><mo>−</mo><mrow><mn>2</mn><mspace width=0.166em /><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mn> 0.42</mn><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac></mstyle></mrow></math> (<math id="Sx2.I2.i7.p1.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> em kHz).</p>
+</div>
+</li>
+<li id="Sx2.I2.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.8.</span></span> 
+<div id="Sx2.I2.i8.p1" class="ltx_para">
+<p class="ltx_p">4 V.</p>
+</div>
+</li>
+<li id="Sx2.I2.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.9.</span></span> 
+<div id="Sx2.I2.i9.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i9.p1.m1" class="ltx_Math" alttext="F(t)=5.2\cos\left(\dfrac{\pi t}{2}+\dfrac{\pi}{6}\right)" display="inline"><mrow><mrow><mi>F</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>5.2</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>π</mi><mspace width=0.166em /><mi>t</mi></mrow><mn>2</mn></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mi>π</mi><mn>6</mn></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="Sx2.I2.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.10.</span></span> 
+<div id="Sx2.I2.i10.p1" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">a</em>) 7.94 A. (<em class="ltx_emph ltx_font_italic">b</em>) 3.68 mA (<em class="ltx_emph ltx_font_italic">c</em>) 1.261 kW na bobina e
+0 no condensador.</p>
+</div>
+</li>
+<li id="Sx2.I2.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.11.</span></span> 
+<div id="Sx2.I2.i11.p1" class="ltx_para">
+<p class="ltx_p">A expressão para a transformada da corrente é
+<math id="Sx2.I2.i11.p1.m1" class="ltx_Math" alttext="\tilde{I}=\dfrac{I_{0}s}{s^{2}+\omega^{2}}=\mathrm{Re}\left(\dfrac{I_{0}}{s-%
+\mathrm{i}\,\omega}\right)" display="inline"><mrow><mover accent="true"><mi>I</mi><mo stretchy="false">~</mo></mover><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><msub><mi>I</mi><mn>0</mn></msub><mspace width=0.166em /><mi>s</mi></mrow><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>+</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>=</mo><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>I</mi><mn>0</mn></msub><mrow><mi>s</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac></mstyle><mo>)</mo></mrow></mrow></mrow></math>, onde <math id="Sx2.I2.i11.p1.m2" class="ltx_Math" alttext="\omega=\sqrt{1/(LC)}" display="inline"><mrow><mi>ω</mi><mo>=</mo><msqrt><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mspace width=0.166em /><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></math>
+e a transformada inversa é a expressão (<a href="#S1.E5" title="(5) ‣ 1 Circuito LC ‣ Circuitos de corrente alternada" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11.5</span></a>).</p>
+</div>
+</li>
+<li id="Sx2.I2.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.12.</span></span> 
+<div id="Sx2.I2.i12.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i12.p1.m1" class="ltx_Math" alttext="f=1.779" display="inline"><mrow><mi>f</mi><mo>=</mo><mn>1.779</mn></mrow></math> kHz, <math id="Sx2.I2.i12.p1.m2" class="ltx_Math" alttext="I_{\text{m\'{a}x}}=20" display="inline"><mrow><msub><mi>I</mi><mtext>máx</mtext></msub><mo>=</mo><mn>20</mn></mrow></math> mA, <math id="Sx2.I2.i12.p1.m3" class="ltx_Math" alttext="Q_{\text{m\'{a}x}}=1.789" display="inline"><mrow><msub><mi>Q</mi><mtext>máx</mtext></msub><mo>=</mo><mn>1.789</mn></mrow></math> µC.</p>
+</div>
+</li>
+<li id="Sx2.I2.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.13.</span></span> 
+<div id="Sx2.I2.i13.p1" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">a</em>) resistência <math id="Sx2.I2.i13.p1.m1" class="ltx_Math" alttext="2.63\;\mathrm{M}\Omega" display="inline"><mrow><mn>2.63</mn><mspace width=0.166em /><mi mathvariant="normal">M</mi><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></math> e reatância
+<math id="Sx2.I2.i13.p1.m2" class="ltx_Math" alttext="-1.44\;\mathrm{M}\Omega" display="inline"><mrow><mo>−</mo><mrow><mn>1.44</mn><mspace width=0.166em /><mi mathvariant="normal">M</mi><mspace width=0.166em /><mi mathvariant="normal">Ω</mi></mrow></mrow></math>. (<em class="ltx_emph ltx_font_italic">b</em>) Uma resistência de 2.63 M<math id="Sx2.I2.i13.p1.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> e
+um condensador de 2.21 nF, ligados em série.</p>
+</div>
+</li>
+<li id="Sx2.I2.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.14.</span></span> 
+<div id="Sx2.I2.i14.p1" class="ltx_para">
+<p class="ltx_p">(<em class="ltx_emph ltx_font_italic">b</em>)
+<math id="Sx2.I2.i14.p1.m1" class="ltx_Math" alttext="|R(\omega)|_{\text{m\'{a}x}}=\omega_{2}/(\omega_{1}+\omega_{2}+\omega_{1}/G)" display="inline"><mrow><msub><mrow><mo stretchy="false">|</mo><mrow><mi>R</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mtext>máx</mtext></msub><mo>=</mo><mrow><msub><mi>ω</mi><mn>2</mn></msub><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ω</mi><mn>1</mn></msub><mo>+</mo><msub><mi>ω</mi><mn>2</mn></msub><mo>+</mo><mrow><msub><mi>ω</mi><mn>1</mn></msub><mo>/</mo><mi>G</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+<math id="Sx2.I2.i14.p1.m2" class="ltx_Math" alttext="\omega_{\text{m\'{a}x}}=\sqrt{\omega_{1}\omega_{2}}" display="inline"><mrow><msub><mi>ω</mi><mtext>máx</mtext></msub><mo>=</mo><msqrt><mrow><msub><mi>ω</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>ω</mi><mn>2</mn></msub></mrow></msqrt></mrow></math>.
+<br class="ltx_break">(<em class="ltx_emph ltx_font_italic">c</em>) O gráfico é o seguinte:
+<br class="ltx_break"></p>
+<img src="img/band-pass_response.png" style="width:18.459em;max-width:100%;height:auto" id="Sx2.I2.i14.p1.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+</li>
+<li id="Sx2.I2.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.15.</span></span> 
+<div id="Sx2.I2.i15.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i15.p1.m1" class="ltx_Math" alttext="V(t)=15.165\cos(120\pi t+2.175)" display="inline"><mrow><mrow><mi>V</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>15.165</mn><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>120</mn><mspace width=0.166em /><mi>π</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mn>2.175</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> (unidades SI).</p>
+</div>
+</li>
+<li id="Sx2.I2.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.16.</span></span> 
+<div id="Sx2.I2.i16.p1" class="ltx_para">
+<p class="ltx_p">8.15 mW.</p>
+</div>
+</li>
+<li id="Sx2.I2.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.17.</span></span> 
+<div id="Sx2.I2.i17.p1" class="ltx_para">
+<p class="ltx_p"><math id="Sx2.I2.i17.p1.m1" class="ltx_Math" alttext="R(\omega)==\frac{1}{1-2\omega^{2}+\mathrm{i}\,0.42\,\omega}" display="inline"><mrow><mi>R</mi><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mrow><mn>1</mn><mo>−</mo><mrow><mn>2</mn><mspace width=0.166em /><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mn> 0.42</mn><mspace width=0.166em /><mi>ω</mi></mrow></mrow></mfrac></mrow></math></p>
+</div>
+</li>
+<li id="Sx2.I2.i18" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">11.18.</span></span> 
+<div id="Sx2.I2.i18.p1" class="ltx_para">
+<p class="ltx_p">0.483 mA.</p>
+</div>
+</li>
+</ol>
+</div>
+</section><div class="ltx_rdf" about="" property="dcterms:creator" content="Jaime E. Villate, Luís Miguel Martelo"></div>
+<div class="ltx_rdf" about="" property="dcterms:subject" content="Eletromagnetismo, Eletricidade, Magnetismo, Circuitos"></div>
+<div class="ltx_rdf" about="" property="dcterms:subject" content="Eletromagnetismo"></div>
+<div class="ltx_rdf" about="" property="dcterms:title" content="Eletromagnetismo e Circuitos"></div>
+
+</article>
+</div>
+<footer class="ltx_page_footer">
+<p>&copy; 2023, Jaime E. Villate &amp; Luís Miguel Martelo</p>
+<p>Publicado nos termos da <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição-Partilha</a> (versão 4.0).</p>
+<div class="ltx_page_logo">Generated  on Thu Dec 14 13:42:00 2023 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML </a>
+</div></footer>
+</div>
+</body>
+</html>
