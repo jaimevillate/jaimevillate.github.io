@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2023. Jaime E. Villate
-   Version: 2023-12-15
+   Version: 2023-12-16
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 */
@@ -72,11 +72,11 @@ aside span {
     float: left; display: block; color: #f9f1e4; padding: 3px 10px 3px 10px;
 }
 aside span.current {
-    background-color: #546284; border-right: 1px solid #ffe998;
+    background-color: #546284; border-right: 1px solid #999;
 }
 aside a {
     float: left; display: block; text-decoration: none;
-    color: #ffe998; border-right: 1px solid #ffe998;
+    color: #ffe998; border-right: 1px solid #999;
     padding: 3px 10px 3px 10px;
 }
 aside a:hover {color: #f9f1e4}
