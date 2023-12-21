@@ -1,0 +1,460 @@
+<!DOCTYPE html><html prefix="dcterms: http://purl.org/dc/terms/" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Números complexos e fasores</title>
+<!--Generated on Thu Dec 21 10:09:49 2023 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 21 de dezembro de 2023.-->
+
+<link rel="stylesheet" href="../css/latex-schola.css" type="text/css">
+<link rel="stylesheet" href="../css/ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" lang="pt" content="Euler, Leonhard, complexo, fasor, número, ângulo de fase">
+</head>
+<body>
+<nav><a href="./index.html">Eletromagnetismo e Circuitos</a><span>&rarr;</span><span>Números complexos e fasores</span></nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line" lang="pt">
+<h1 class="ltx_title ltx_title_document">B. Números complexos e fasores</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jaime E. Villate e Luís Miguel Martelo
+</span></span>
+</div>
+<div class="ltx_dates">(21 de dezembro de 2023)</div>
+
+<div class="ltx_pagination ltx_role_newpage"></div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">B.1 </span>Números complexos</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">A forma retangular dum número complexo <math id="S1.p1.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> é</p>
+<table id="S1.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E1.m1" class="ltx_Math" alttext="z=x+\mathrm{i}\,y" display="block"><mrow><mi>z</mi><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>y</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">onde <math id="S1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> (parte real) e <math id="S1.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> (parte imaginária) são dois números reais,
+no campo dos números reais, <math id="S1.p1.m4" class="ltx_Math" alttext="\mathrm{i}=\sqrt{-1}" display="inline"><mrow><mi mathvariant="normal">i</mi><mo>=</mo><msqrt><mrow><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></math>, e o produto <math id="S1.p1.m5" class="ltx_Math" alttext="\mathrm{i}\,y" display="inline"><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>y</mi></mrow></math>
+representa um número imaginário. A figura <a href="#S1.F1" title="Figura B.1 ‣ 1 Números complexos ‣ Números complexos e fasores" class="ltx_ref"><span class="ltx_text ltx_ref_tag">B.1</span></a>
+mostra o chamado <em class="ltx_emph ltx_font_italic">plano complexo</em>, que é um plano onde cada
+ponto corresponde a um número complexo <math id="S1.p1.m6" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>; as suas partes real e
+imaginária são as projeções <math id="S1.p1.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> e <math id="S1.p1.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> em dois eixos perpendiculares,
+designados de Re (eixo real) e Im (eixo imaginário).</p>
+</div>
+<figure id="S1.F1" class="ltx_figure"><img src="img/complex_plane.png" style="width:15.918em;max-width:100%;height:auto" id="S1.F1.g1" class="ltx_graphics ltx_centering" alt="Número complexo ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura B.1: </span>Número complexo <math id="S1.F1.m2" class="ltx_Math" alttext="z=x+\mathrm{i}\,y" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>y</mi></mrow></mrow></mrow></math> representado no plano complexo.</figcaption>
+</figure>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Definem-se o <em class="ltx_emph ltx_font_italic">módulo</em> <math id="S1.p2.m1" class="ltx_Math" alttext="|z|" display="inline"><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow></math> e o <em class="ltx_emph ltx_font_italic">ângulo de fase</em>
+<math id="S1.p2.m2" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math> do número complexo <math id="S1.p2.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>:
+</p>
+<table id="S1.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E2.m1" class="ltx_Math" alttext="|z|=\sqrt{x^{2}+y^{2}}\qquad\varphi=\tan^{-1}\left(\dfrac{y}{x}\right)" display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mi>φ</mi><mo>=</mo><mrow><msup><mi>tan</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mspace width=0.11em /><mrow><mo>(</mo><mfrac><mi>y</mi><mi>x</mi></mfrac><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.2)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">No plano complexo, <math id="S1.p3.m1" class="ltx_Math" alttext="|z|" display="inline"><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow></math> é a distância desde o ponto onde se encontra
+<math id="S1.p3.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, até à origem e <math id="S1.p3.m3" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math> é o ângulo que o segmento desde <math id="S1.p3.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> até
+à origem faz com o semieixo Re positivo (ver
+figura <a href="#S1.F1" title="Figura B.1 ‣ 1 Números complexos ‣ Números complexos e fasores" class="ltx_ref"><span class="ltx_text ltx_ref_tag">B.1</span></a>).</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">O número complexo <math id="S1.p4.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> pode então ser escrito também na chamada
+<em class="ltx_emph ltx_font_italic">forma polar</em>,</p>
+<table id="S1.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E3.m1" class="ltx_Math" alttext="z=|z|\left(\cos\varphi+\mathrm{i}\,\sin\varphi\right)" display="block"><mrow><mi>z</mi><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><mi>cos</mi><mspace width=0.11em /><mi>φ</mi></mrow><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mi>φ</mi></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.3)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">A função complexa entre parêntesis na equação (<a href="#S1.E3" title="(3) ‣ 1 Números complexos ‣ Números complexos e fasores" class="ltx_ref"><span class="ltx_text ltx_ref_tag">B.3</span></a>)
+costuma ser designada <math id="S1.p5.m1" class="ltx_Math" alttext="\mathrm{cis}(\varphi)" display="inline"><mrow><mi>cis</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>φ</mi><mo stretchy="false">)</mo></mrow></mrow></math>, ou ainda,
+<math id="S1.p5.m2" class="ltx_Math" alttext="\mathrm{e}^{\mathrm{i}\,\varphi}" display="inline"><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>φ</mi></mrow></msup></math>, por ter propriedades semelhantes à função
+exponencial real <math id="S1.p5.m3" class="ltx_Math" alttext="\mathrm{e}^{x}" display="inline"><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup></math>. Para mostrar mais facilmente algumas
+operações entre números complexos, escreveremos a forma polar em
+algumas das duas notações seguintes:<span id="footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup><span class="ltx_tag ltx_tag_note">1</span>A expressão
+<math id="footnote1.m1" class="ltx_Math" alttext="\mathrm{e}^{\mathrm{i}\,\varphi}=\left(\cos\varphi+\mathrm{i}\,\sin\varphi\right)" display="inline"><mrow><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>φ</mi></mrow></msup><mo>=</mo><mrow><mo>(</mo><mrow><mrow><mi>cos</mi><mspace width=0.11em /><mi>φ</mi></mrow><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mi>φ</mi></mrow></mrow></mrow><mo>)</mo></mrow></mrow></math> é
+designada de <em class="ltx_emph ltx_font_italic">fórmula de Euler</em>.</span></span></span></p>
+<table id="S1.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E4.m1" class="ltx_Math" alttext="z=|z|\mathrm{e}^{\mathrm{i}\,\varphi}\qquad\qquad z=|z|\angle\,\varphi" display="block"><mrow><mrow><mi>z</mi><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>φ</mi></mrow></msup></mrow></mrow><mo mathvariant="italic" separator="true">    </mo><mrow><mi>z</mi><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>φ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.4)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">A soma de dois números complexos, <math id="S1.p6.m1" class="ltx_Math" alttext="z_{1}=x_{1}+\mathrm{i}\,y_{1}" display="inline"><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>=</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><msub><mi>y</mi><mn>1</mn></msub></mrow></mrow></mrow></math> e
+<math id="S1.p6.m2" class="ltx_Math" alttext="z_{2}=x_{2}+\mathrm{i}\,y_{2}" display="inline"><mrow><msub><mi>z</mi><mn>2</mn></msub><mo>=</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><msub><mi>y</mi><mn>2</mn></msub></mrow></mrow></mrow></math>, é outro número complexo, <math id="S1.p6.m3" class="ltx_Math" alttext="z_{1}+z_{2}" display="inline"><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>+</mo><msub><mi>z</mi><mn>2</mn></msub></mrow></math>, com partes
+real e imaginária iguais à soma das respetivas partes dos dois
+números:</p>
+<table id="S1.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E5.m1" class="ltx_Math" alttext="z_{1}+z_{2}=\left(x_{1}+x_{2}\right)+\mathrm{i}\left(y_{1}+y_{2}\right)" display="block"><mrow><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>+</mo><msub><mi>z</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>+</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">esta é a mesma forma da soma de dois vetores no plano <math id="S1.p6.m4" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mspace width=0.166em /><mi>y</mi></mrow></math>, em função
+das suas componentes. Como tal, a soma de números complexos segue a
+mesma regra do paralelogramo, no plano complexo, do que a soma de
+vetores, como mostra a figura <a href="#S1.F2" title="Figura B.2 ‣ 1 Números complexos ‣ Números complexos e fasores" class="ltx_ref"><span class="ltx_text ltx_ref_tag">B.2</span></a>. E a soma de
+números complexos tem as mesmas propriedades da soma de vetores.</p>
+</div>
+<figure id="S1.F2" class="ltx_figure"><img src="img/complex_addition.png" style="width:17.640em;max-width:100%;height:auto" id="S1.F2.g1" class="ltx_graphics ltx_centering" alt="Adição de números complexos no plano complexo.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura B.2: </span>Adição de números complexos no plano complexo.</figcaption>
+</figure>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">Em contraste com os vetores, no caso dos números complexos é possível
+definir um produto que dá como resultado outro número complexo e tem
+as mesmas propriedades do produto entre números reais (comutatividade,
+associatividade, distributividade, etc.). O produto entre dois números
+complexos, <math id="S1.p7.m1" class="ltx_Math" alttext="z_{1}=x_{1}+\mathrm{i}\,y_{1}" display="inline"><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>=</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><msub><mi>y</mi><mn>1</mn></msub></mrow></mrow></mrow></math> e <math id="S1.p7.m2" class="ltx_Math" alttext="z_{2}=x_{2}+\mathrm{i}\,y_{2}" display="inline"><mrow><msub><mi>z</mi><mn>2</mn></msub><mo>=</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><msub><mi>y</mi><mn>2</mn></msub></mrow></mrow></mrow></math>, é outro número
+complexo, <math id="S1.p7.m3" class="ltx_Math" alttext="z_{1}z_{2}" display="inline"><mrow><msub><mi>z</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>z</mi><mn>2</mn></msub></mrow></math>, que pode ser obtido usando a sua propriedade
+distributiva e o facto de que <math id="S1.p7.m4" class="ltx_Math" alttext="\mathrm{i}^{2}=-1" display="inline"><mrow><msup><mi mathvariant="normal">i</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>:</p>
+<table id="S2.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S1.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\displaystyle z_{1}z_{2}" display="inline"><mrow><msub><mi>z</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>z</mi><mn>2</mn></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex1.m2" class="ltx_Math" alttext="\displaystyle=\left(x_{1}+\mathrm{i}\,y_{1}\right)\left(x_{2}+\mathrm{i}\,y_{2%
+}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><msub><mi>y</mi><mn>1</mn></msub></mrow></mrow><mo>)</mo></mrow><mspace width=0.166em /><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><msub><mi>y</mi><mn>2</mn></msub></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\displaystyle=x_{1}x_{2}+\mathrm{i}^{2}y_{1}y_{2}+\mathrm{i}\,x_{1}y_{2}+%
+\mathrm{i}\,x_{2}y_{1}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><msup><mi mathvariant="normal">i</mi><mn>2</mn></msup><mspace width=0.166em /><msub><mi>y</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>y</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><msub><mi>x</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>y</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><msub><mi>x</mi><mn>2</mn></msub><mspace width=0.166em /><msub><mi>y</mi><mn>1</mn></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.E6.m1" class="ltx_Math" alttext="\displaystyle=\left(x_{1}x_{2}-y_{1}y_{2}\right)+\mathrm{i}\left(x_{1}y_{2}+x_%
+{2}y_{1}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>−</mo><mrow><msub><mi>y</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>y</mi><mn>2</mn></msub></mrow></mrow><mo>)</mo></mrow><mo>+</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>y</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mspace width=0.166em /><msub><mi>y</mi><mn>1</mn></msub></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.6)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S1.p8" class="ltx_para">
+<p class="ltx_p">Produto este que tem uma expressão mais simples em termos das
+componentes polares dos números complexos:</p>
+<table id="S1.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E7.m1" class="ltx_Math" alttext="z_{1}z_{2}=|z_{1}z_{2}|\mathrm{e}^{\mathrm{i}(\varphi_{1}+\varphi_{2})}=|z_{1}%
+z_{2}|\angle\,(\varphi_{1}+\varphi_{2})" display="block"><mrow><mrow><msub><mi>z</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>z</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>z</mi><mn>2</mn></msub></mrow><mo stretchy="false">|</mo></mrow><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>φ</mi><mn>1</mn></msub><mo>+</mo><msub><mi>φ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>z</mi><mn>2</mn></msub></mrow><mo stretchy="false">|</mo></mrow><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>φ</mi><mn>1</mn></msub><mo>+</mo><msub><mi>φ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.7)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.p9" class="ltx_para">
+<p class="ltx_p">Ou seja, o produto <math id="S1.p9.m1" class="ltx_Math" alttext="z_{1}z_{2}" display="inline"><mrow><msub><mi>z</mi><mn>1</mn></msub><mspace width=0.166em /><msub><mi>z</mi><mn>2</mn></msub></mrow></math> tem módulo igual ao produto dos módulos de
+<math id="S1.p9.m2" class="ltx_Math" alttext="z_{1}" display="inline"><msub><mi>z</mi><mn>1</mn></msub></math> e <math id="S1.p9.m3" class="ltx_Math" alttext="z_{2}" display="inline"><msub><mi>z</mi><mn>2</mn></msub></math> e ângulo de fase igual à soma dos ângulos de fase de
+<math id="S1.p9.m4" class="ltx_Math" alttext="z_{1}" display="inline"><msub><mi>z</mi><mn>1</mn></msub></math> e <math id="S1.p9.m5" class="ltx_Math" alttext="z_{2}" display="inline"><msub><mi>z</mi><mn>2</mn></msub></math>. E a divisão é feita dividindo os módulos e subtraindo
+as fases:</p>
+<table id="S1.E8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E8.m1" class="ltx_Math" alttext="\dfrac{z_{1}}{z_{2}}=\left|\dfrac{z_{1}}{z_{2}}\right|\mathrm{e}^{\mathrm{i}(%
+\varphi_{1}-\varphi_{2})}=\left|\dfrac{z_{1}}{z_{2}}\right|\angle\,(\varphi_{1%
+}-\varphi_{2})" display="block"><mrow><mfrac><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub></mfrac><mo>=</mo><mrow><mrow><mo>|</mo><mfrac><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub></mfrac><mo>|</mo></mrow><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>φ</mi><mn>1</mn></msub><mo>−</mo><msub><mi>φ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo>=</mo><mrow><mrow><mo>|</mo><mfrac><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub></mfrac><mo>|</mo></mrow><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><msub><mi>φ</mi><mn>1</mn></msub><mo>−</mo><msub><mi>φ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.8)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.p10" class="ltx_para">
+<p class="ltx_p">Define-se o <em class="ltx_emph ltx_font_italic">conjugado</em>, <math id="S1.p10.m1" class="ltx_Math" alttext="z^{*}" display="inline"><msup><mi>z</mi><mo>*</mo></msup></math>, do número <math id="S1.p10.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, mantendo o
+módulo igual mas trocando o sinal do ângulo de fase:</p>
+<table id="S1.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E9.m1" class="ltx_Math" alttext="z^{*}=|z|\mathrm{e}^{-\mathrm{i}\,\varphi}=|z|\angle-\varphi=x-\mathrm{i}\,y" display="block"><mrow><msup><mi>z</mi><mo>*</mo></msup><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>φ</mi></mrow></mrow></msup></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mspace width=0.166em /><mi mathvariant="normal">∠</mi></mrow><mo>−</mo><mi>φ</mi></mrow><mo>=</mo><mrow><mi>x</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>y</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.9)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.p11" class="ltx_para">
+<p class="ltx_p">O produto de um número complexo com o seu conjugado é igual ao seu
+módulo ao quadrado:</p>
+<table id="S1.E10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E10.m1" class="ltx_Math" alttext="zz^{*}=z^{*}z=|z|^{2}" display="block"><mrow><mrow><mi>z</mi><mspace width=0.166em /><msup><mi>z</mi><mo>*</mo></msup></mrow><mo>=</mo><mrow><msup><mi>z</mi><mo>*</mo></msup><mspace width=0.166em /><mi>z</mi></mrow><mo>=</mo><msup><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.10)</span></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">B.2 </span>Fasores</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">As funções sinusoidais com a forma geral:</p>
+<table id="S2.E11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E11.m1" class="ltx_Math" alttext="f(t)=f_{\text{m\'{a}x}}\cos\left(\omega t+\varphi\right)" display="block"><mrow><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>f</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>φ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.11)</span></td>
+</tr>
+</table>
+<p class="ltx_p">são caraterizadas pela sua amplitude <math id="S2.p1.m1" class="ltx_Math" alttext="f_{\text{m\'{a}x}}" display="inline"><msub><mi>f</mi><mtext>máx</mtext></msub></math>, frequência
+angular, <math id="S2.p1.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, e ângulo de fase <math id="S2.p1.m3" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">A forma polar (<a href="#S1.E3" title="(3) ‣ 1 Números complexos ‣ Números complexos e fasores" class="ltx_ref"><span class="ltx_text ltx_ref_tag">B.3</span></a>) dum número complexo mostra que a sua
+parte real é,</p>
+<table id="S2.E12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E12.m1" class="ltx_Math" alttext="\mathrm{Re}(z)=\mathrm{Re}(\mathrm{e}^{\mathrm{i}\,\varphi})=|z|\cos(\varphi)" display="block"><mrow><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>φ</mi></mrow></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo stretchy="false">(</mo><mi>φ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.12)</span></td>
+</tr>
+</table>
+<p class="ltx_p">o qual sugere uma outra representação para as funções sinusoidais
+(<a href="#S2.E11" title="(11) ‣ 2 Fasores ‣ Números complexos e fasores" class="ltx_ref"><span class="ltx_text ltx_ref_tag">B.11</span></a>):</p>
+<table id="S2.E13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E13.m1" class="ltx_Math" alttext="f(t)=\mathrm{Re}\left(f_{\text{m\'{a}x}}\mathrm{e}^{\mathrm{i}(\omega t+%
+\varphi)}\right)=\mathrm{Re}\left(f_{\text{m\'{a}x}}\mathrm{e}^{\mathrm{i}\,%
+\varphi}\mathrm{e}^{\mathrm{i}\,\omega t}\right)" display="block"><mrow><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><msub><mi>f</mi><mtext>máx</mtext></msub><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>φ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><msub><mi>f</mi><mtext>máx</mtext></msub><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>φ</mi></mrow></msup><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.13)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Define-se o <em class="ltx_emph ltx_font_italic">fasor</em> da função <math id="S2.p3.m1" class="ltx_Math" alttext="f(t)" display="inline"><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> como o número complexo,</p>
+<table id="S2.E14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E14.m1" class="ltx_Math" alttext="\mathbf{f}=f_{\text{m\'{a}x}}\mathrm{e}^{\mathrm{i}\,\varphi}=f_{\text{m\'{a}x%
+}}\angle\,\varphi" display="block"><mrow><mi>𝐟</mi><mo>=</mo><mrow><msub><mi>f</mi><mtext>máx</mtext></msub><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>φ</mi></mrow></msup></mrow><mo>=</mo><mrow><msub><mi>f</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>φ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.14)</span></td>
+</tr>
+</table>
+<p class="ltx_p">e a função escreve-se,</p>
+<table id="S2.E15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E15.m1" class="ltx_Math" alttext="f(t)=\mathrm{Re}\left(\mathbf{f}\,\mathrm{e}^{\mathrm{i}\,\omega t}\right)" display="block"><mrow><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mi>𝐟</mi><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.15)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">Consideremos uma segunda função sinusoidal, <math id="S2.p4.m1" class="ltx_Math" alttext="g(t)" display="inline"><mrow><mi>g</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, com a mesma
+frequência angular <math id="S2.p4.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, mas com outro fasor diferente,
+<math id="S2.p4.m3" class="ltx_Math" alttext="\mathbf{g}" display="inline"><mi>𝐠</mi></math>:</p>
+<table id="S2.E16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E16.m1" class="ltx_Math" alttext="g(t)=g_{\text{m\'{a}x}}\cos\left(\omega t+\varphi\right)=\mathrm{Re}\left(%
+\mathbf{g}\,\mathrm{e}^{\mathrm{i}\,\omega t}\right)" display="block"><mrow><mrow><mi>g</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>g</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>φ</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mi>𝐠</mi><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.16)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">A soma das funções <math id="S2.p5.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> e <math id="S2.p5.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> é:</p>
+<table id="S2.E17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E17.m1" class="ltx_Math" alttext="f(t)+g(t)=\mathrm{Re}\left(\mathbf{f}\,\mathrm{e}^{\mathrm{i}\,\omega t}\right%
+)+\mathrm{Re}\left(\mathbf{g}\,\mathrm{e}^{\mathrm{i}\,\omega t}\right)=%
+\mathrm{Re}\left[\left(\mathbf{f}+\mathbf{g}\right)\mathrm{e}^{\mathrm{i}\,%
+\omega t}\right]" display="block"><mrow><mrow><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>g</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mi>𝐟</mi><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mi>𝐠</mi><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo>[</mo><mrow><mrow><mo>(</mo><mrow><mi>𝐟</mi><mo>+</mo><mi>𝐠</mi></mrow><mo>)</mo></mrow><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup></mrow><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.17)</span></td>
+</tr>
+</table>
+<p class="ltx_p">onde usamos a propriedade de que a parte real da soma de dois números
+complexos é igual à soma das suas partes reais.</p>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p">Ou seja, a soma das duas funções sinusoidais com a mesma frequência é
+também uma função sinusoidal com a mesma frequência e com um fasor
+igual à soma dos fasores das duas funções, que é uma simples soma de
+números complexos. Note-se o uso da notação especial para os fasores,
+<math id="S2.p6.m1" class="ltx_Math" alttext="\mathbf{f}" display="inline"><mi>𝐟</mi></math>, devido a que a pesar de somarem-se como números
+complexos que são, dando outro fasor, o produto complexo entre dois
+fasores da um número complexo que já não representa o fasor de nenhuma
+função sinusoidal.</p>
+</div>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p">A derivada da função <math id="S2.p7.m1" class="ltx_Math" alttext="f(t)" display="inline"><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, igual a,</p>
+<table id="S2.E18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E18.m1" class="ltx_Math" alttext="f^{\prime}(t)=-\omega\,f_{\text{m\'{a}x}}\sin\left(\omega t+\varphi\right)" display="block"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>ω</mi><mspace width=0.166em /><msub><mi>f</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>sin</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>φ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.18)</span></td>
+</tr>
+</table>
+<p class="ltx_p">pode ser escrita também como:</p>
+<table id="S2.E19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E19.m1" class="ltx_Math" alttext="f^{\prime}(t)=\omega\,f_{\text{m\'{a}x}}\cos\left(\omega t+\varphi+\dfrac{\pi}%
+{2}\right)" display="block"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ω</mi><mspace width=0.166em /><msub><mi>f</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mrow><mi>cos</mi><mspace width=0.11em /><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow><mo>+</mo><mi>φ</mi><mo>+</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.19)</span></td>
+</tr>
+</table>
+<p class="ltx_p">que é outra função sinusoidal, com fasor
+<math id="S2.p7.m2" class="ltx_Math" alttext="\omega\,f_{\text{m\'{a}x}}\angle(\varphi+\pi/2)" display="inline"><mrow><mi>ω</mi><mspace width=0.166em /><msub><mi>f</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mrow><mi>φ</mi><mo>+</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. Isto é, o resultado da
+derivação de uma função sinusoidal é multiplicar o módulo do seu fasor
+por <math id="S2.p7.m3" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> e aumentar <math id="S2.p7.m4" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math> ao seu ângulo de fase.</p>
+</div>
+<div id="S2.p8" class="ltx_para">
+<p class="ltx_p">O mesmo resultado pode ser obtido mais facilmente derivando a
+expressão (<a href="#S2.E15" title="(15) ‣ 2 Fasores ‣ Números complexos e fasores" class="ltx_ref"><span class="ltx_text ltx_ref_tag">B.15</span></a>) (a derivada da parte real é igual à
+parte real da derivada):</p>
+<table id="S2.E20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E20.m1" class="ltx_Math" alttext="f^{\prime}(t)=\mathrm{Re}\left(\mathrm{i}\omega\,\mathbf{f}\,\mathrm{e}^{%
+\mathrm{i}\,\omega t}\right)" display="block"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>𝐟</mi><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.20)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.p9" class="ltx_para">
+<p class="ltx_p">O qual mostra que o fasor da derivada de <math id="S2.p9.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> é o fasor de <math id="S2.p9.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> vezes
+<math id="S2.p9.m3" class="ltx_Math" alttext="\mathrm{i}\omega" display="inline"><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></math>:</p>
+<table id="S2.E21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E21.m1" class="ltx_Math" alttext="\mathrm{i}\omega\,\mathbf{f}=\left(\omega\angle\,\pi/2\right)\left(f_{\text{m%
+\'{a}x}}\angle\,\varphi\right)=\omega\,f_{\text{m\'{a}x}}\angle\left(\varphi+%
+\dfrac{\pi}{2}\right)" display="block"><mrow><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>𝐟</mi></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>π</mi></mrow><mo>/</mo><mn>2</mn></mrow><mo>)</mo></mrow><mspace width=0.166em /><mrow><mo>(</mo><mrow><msub><mi>f</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>φ</mi></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>ω</mi><mspace width=0.166em /><msub><mi>f</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mi>φ</mi><mo>+</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.21)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.p10" class="ltx_para">
+<p class="ltx_p">De forma semelhante, a primitiva da expressão (<a href="#S2.E15" title="(15) ‣ 2 Fasores ‣ Números complexos e fasores" class="ltx_ref"><span class="ltx_text ltx_ref_tag">B.15</span></a>)
+conduz a:</p>
+<table id="S2.E22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E22.m1" class="ltx_Math" alttext="\int f\,\mathrm{d}t=\mathrm{Re}\left(\dfrac{\mathbf{f}}{\mathrm{i}\omega}\,%
+\mathrm{e}^{\mathrm{i}\,\omega t}\right)" display="block"><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo rspace="0pt">d</mo><mi>t</mi></mrow></mrow></mrow><mo>=</mo><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mfrac><mi>𝐟</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mfrac><mspace width=0.166em /><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.22)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.p11" class="ltx_para">
+<p class="ltx_p">E conclui-se que o fasor da primitiva de <math id="S2.p11.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> é o fasor de <math id="S2.p11.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>
+dividido por <math id="S2.p11.m3" class="ltx_Math" alttext="\mathrm{i}\omega" display="inline"><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></math>:</p>
+<table id="S2.E23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E23.m1" class="ltx_Math" alttext="\dfrac{\mathbf{f}}{\mathrm{i}\omega}=\dfrac{f_{\text{m\'{a}x}}\angle\,\varphi}%
+{\omega\angle\,\pi/2}=\dfrac{f_{\text{m\'{a}x}}}{\omega}\angle\left(\varphi-%
+\dfrac{\pi}{2}\right)" display="block"><mrow><mfrac><mi>𝐟</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msub><mi>f</mi><mtext>máx</mtext></msub><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>φ</mi></mrow><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>π</mi></mrow><mo>/</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mrow><mfrac><msub><mi>f</mi><mtext>máx</mtext></msub><mi>ω</mi></mfrac><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mrow><mo>(</mo><mrow><mi>φ</mi><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_righ">(B.23)</span></td>
+</tr>
+</table>
+</div>
+<div id="S2.p12" class="ltx_para">
+<p class="ltx_p">Em <math id="S2.p12.m1" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>, a expressão (<a href="#S2.E15" title="(15) ‣ 2 Fasores ‣ Números complexos e fasores" class="ltx_ref"><span class="ltx_text ltx_ref_tag">B.15</span></a>) mostra que
+<math id="S2.p12.m2" class="ltx_Math" alttext="f(0)=\mathrm{Re}(\mathbf{f})" display="inline"><mrow><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Re</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>𝐟</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Já em <math id="S2.p12.m3" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math>,
+<math id="S2.p12.m4" class="ltx_Math" alttext="\mathrm{e}^{\mathrm{i}\,\omega t}=1\angle\,\omega t" display="inline"><mrow><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup><mo>=</mo><mrow><mn>1</mn><mspace width=0.166em /><mi mathvariant="normal">∠</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></mrow></math> é um número complexo com módulo
+unitário e ângulo de fase <math id="S2.p12.m5" class="ltx_Math" alttext="\omega t" display="inline"><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></math> que aumenta diretamente
+proporcional ao tempo. O produto do fasor por <math id="S2.p12.m6" class="ltx_Math" alttext="\mathrm{e}^{\mathrm{i}\,\omega t}" display="inline"><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup></math>
+deixa o seu módulo igual mas faz rodar o seu ângulo de fase em
+<math id="S2.p12.m7" class="ltx_Math" alttext="\omega t" display="inline"><mrow><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></math>, no sentido positivo (do eixo Re para o eixo Im). Como tal,
+o fasor roda no plano complexo, com velocidade angular <math id="S2.p12.m8" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>
+constante e a cada instante <math id="S2.p12.m9" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> o valor da função <math id="S2.p12.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> é a projeção do
+fasor, após rodar, no eixo Re. O lado esquerdo da
+figura <a href="#S2.F3" title="Figura B.3 ‣ 2 Fasores ‣ Números complexos e fasores" class="ltx_ref"><span class="ltx_text ltx_ref_tag">B.3</span></a> mostra a representação do fasor <math id="S2.p12.m11" class="ltx_Math" alttext="\mathbf{f}" display="inline"><mi>𝐟</mi></math>,
+como um vetor no plano complexo, e o lado direito mostra o fasor
+multiplicado por <math id="S2.p12.m12" class="ltx_Math" alttext="\mathrm{e}^{\mathrm{i}\,\omega t}" display="inline"><msup><mi mathvariant="normal">e</mi><mrow><mi mathvariant="normal">i</mi><mspace width=0.166em /><mi>ω</mi><mspace width=0.166em /><mi>t</mi></mrow></msup></math>, em quatro instantes: <math id="S2.p12.m13" class="ltx_Math" alttext="t_{0}=0" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></math>,
+<math id="S2.p12.m14" class="ltx_Math" alttext="t_{1}=T/4" display="inline"><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>=</mo><mrow><mi>T</mi><mo>/</mo><mn>4</mn></mrow></mrow></math>, <math id="S2.p12.m15" class="ltx_Math" alttext="t_{2}=T/2" display="inline"><mrow><msub><mi>t</mi><mn>2</mn></msub><mo>=</mo><mrow><mi>T</mi><mo>/</mo><mn>2</mn></mrow></mrow></math> e <math id="S2.p12.m16" class="ltx_Math" alttext="t_{3}=3T/2" display="inline"><mrow><msub><mi>t</mi><mn>3</mn></msub><mo>=</mo><mrow><mrow><mn>3</mn><mspace width=0.166em /><mi>T</mi></mrow><mo>/</mo><mn>2</mn></mrow></mrow></math>, em que <math id="S2.p12.m17" class="ltx_Math" alttext="T=2\pi/\omega" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mrow><mn>2</mn><mspace width=0.166em /><mi>π</mi></mrow><mo>/</mo><mi>ω</mi></mrow></mrow></math> é o seu
+período de rotação (em cada intervalo <math id="S2.p12.m18" class="ltx_Math" alttext="T/4" display="inline"><mrow><mi>T</mi><mo>/</mo><mn>4</mn></mrow></math> o vetor roda
+<math id="S2.p12.m19" class="ltx_Math" alttext="\omega T/4=\pi/2" display="inline"><mrow><mrow><mrow><mi>ω</mi><mspace width=0.166em /><mi>T</mi></mrow><mo>/</mo><mn>4</mn></mrow><mo>=</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow></math> radianos).
+</p>
+</div>
+<figure id="S2.F3" class="ltx_figure"><img src="img/phasor.png" style="width:30.996em;max-width:100%;height:auto" id="S2.F3.g1" class="ltx_graphics ltx_centering" alt="Fasor ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figura B.3: </span>Fasor <math id="S2.F3.m3" class="ltx_Math" alttext="\mathbf{f}" display="inline"><mi>𝐟</mi></math> no plano complexo (esquerda) e
+valores de <math id="S2.F3.m4" class="ltx_Math" alttext="f(t)" display="inline"><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> em 4 instantes (direita).</figcaption>
+</figure>
+<div id="S2.p13" class="ltx_para">
+<p class="ltx_p">Os valores da função <math id="S2.p13.m1" class="ltx_Math" alttext="f(t)" display="inline"><mrow><mi>f</mi><mspace width=0.166em /><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> nos quatro instantes <math id="S2.p13.m2" class="ltx_Math" alttext="t_{0}" display="inline"><msub><mi>t</mi><mn>0</mn></msub></math>, <math id="S2.p13.m3" class="ltx_Math" alttext="t_{1}" display="inline"><msub><mi>t</mi><mn>1</mn></msub></math>, <math id="S2.p13.m4" class="ltx_Math" alttext="t_{2}" display="inline"><msub><mi>t</mi><mn>2</mn></msub></math> e
+<math id="S2.p13.m5" class="ltx_Math" alttext="t_{3}" display="inline"><msub><mi>t</mi><mn>3</mn></msub></math> são as quatro coordenadas <math id="S2.p13.m6" class="ltx_Math" alttext="f_{0}" display="inline"><msub><mi>f</mi><mn>0</mn></msub></math>, <math id="S2.p13.m7" class="ltx_Math" alttext="f_{1}" display="inline"><msub><mi>f</mi><mn>1</mn></msub></math>, <math id="S2.p13.m8" class="ltx_Math" alttext="f_{2}" display="inline"><msub><mi>f</mi><mn>2</mn></msub></math> e <math id="S2.p13.m9" class="ltx_Math" alttext="f_{3}" display="inline"><msub><mi>f</mi><mn>3</mn></msub></math> do vetor
+no eixo real. Os fasores são vetores que rodam no plano complexo, em
+função do tempo; os fasores de funções sinusoidais com a mesma
+frequência rodam com a mesma velocidade angular e, portanto, a soma
+deles também roda com a mesma frequência.</p>
+</div>
+</section><div class="ltx_rdf" about="" property="dcterms:creator" content="Jaime E. Villate, Luís Miguel Martelo"></div>
+<div class="ltx_rdf" about="" property="dcterms:subject" content="Eletromagnetismo, Eletricidade, Magnetismo, Circuitos"></div>
+<div class="ltx_rdf" about="" property="dcterms:subject" content="Eletromagnetismo"></div>
+<div class="ltx_rdf" about="" property="dcterms:title" content="Eletromagnetismo e Circuitos"></div>
+
+</article>
+</div>
+<footer class="ltx_page_footer">
+<p>&copy; 2023, Jaime E. Villate &amp; Luís Miguel Martelo</p>
+<p>Publicado nos termos da <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição-Partilha</a> (versão 4.0).</p>
+<div class="ltx_page_logo">Generated  on Thu Dec 21 10:09:49 2023 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML </a>
+</div></footer>
+</div>
+</body>
+</html>
