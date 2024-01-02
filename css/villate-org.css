@@ -1,6 +1,6 @@
 /*
-   Copyright, 2018-2023. Jaime E. Villate
-   Version: 2023-12-16
+   Copyright, 2018-2024. Jaime E. Villate
+   Version: 2024-01-02
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 */
@@ -12,13 +12,13 @@ body {
 }
 header {
     background-color: #546284; padding-left: 2em; padding-top: 0.5em;
-    border-bottom: 1px solid #3333aa; color:#eeeecc;
+    border-bottom: 1px solid #3333aa; color:#eeeeee;
 }
 header h1 { font-size: 2em; line-height: 1.2em; color: #ffe998; }
 header:after {
     content: ""; display: table; clear: both;
 }
-header a { color: #ffdd33; }
+header a { color: #bbccff; }
 div.menu { float: left; width: 100%; }
 div.menu ul {
     list-style-type: none; margin: 0 0 1em 0; overflow: hidden;
@@ -28,7 +28,7 @@ div.menu li { position: relative; }
 div.menu li.current {padding: 0 0.5em 0 0.5em; background-color: #adaaaf;}
 div.menu li a {
     padding: 0.5em; display: block; line-height: 1em;
-    background-color: #546284; color: #ffdd33;
+    background-color: #546284; color: #bbccff;
 }
 div.menu li a:hover { background-color: #a4b7d8; color: #3333aa; }
 main, section { width: 100%; background-color: #fff; }
@@ -76,7 +76,7 @@ aside span.current {
 }
 aside a {
     float: left; display: block; text-decoration: none;
-    color: #ffe998; border-right: 1px solid #999;
+    color: #bbccff; border-right: 1px solid #999;
     padding: 3px 10px 3px 10px;
 }
 aside a:hover {color: #f9f1e4}
