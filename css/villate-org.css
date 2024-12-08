@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2024. Jaime E. Villate
-   Version: 2024-01-02
+   Version: 2024-12-07
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 */
@@ -11,26 +11,28 @@ body {
     font-family: Helvetica, sans-serif;
 }
 header {
-    background-color: #546284; padding-left: 2em; padding-top: 0.5em;
-    border-bottom: 1px solid #3333aa; color:#eeeeee;
+    background-color: #546284; padding-left: 2em; padding-top: 1em;
+    border-bottom: 1px solid #3333aa; color:#eeeeee; padding-left: 5px;
 }
-header h1 { font-size: 2em; line-height: 1.2em; color: #ffe998; }
-header:after {
-    content: ""; display: table; clear: both;
-}
+header h1 { font-size: 1.5em; line-height: 1em; color: #ffe998; }
+header:after { content: ""; display: table; clear: both; }
 header a { color: #bbccff; }
-div.menu { float: left; width: 100%; }
-div.menu ul {
-    list-style-type: none; margin: 0 0 1em 0; overflow: hidden;
-    padding: 0;
+.menubtn {
+    background-color: #bbccff; padding: 0.5em 1em; font-size: 1em;
+    border: none; cursor: pointer;
 }
-div.menu li { position: relative; }
-div.menu li.current {padding: 0 0.5em 0 0.5em; background-color: #adaaaf;}
-div.menu li a {
-    padding: 0.5em; display: block; line-height: 1em;
-    background-color: #546284; color: #bbccff;
+.menu { position: relative; display: inline-block; float: right; }
+.menu-content {
+    display: none; position: absolute; right: 0;
+    background-color: #f9f9f9; min-width: 11em;
+    box-shadow: 0px 0.3em 0.6em 0px rgba(0,0,0,0.2); z-index: 1;
 }
-div.menu li a:hover { background-color: #a4b7d8; color: #3333aa; }
+.menu-content a { color: black; padding: 0.5em 1em;
+  text-decoration: none; display: block;
+}
+.menu-content a:hover {background-color: #a4b7d8; color: #3333aa;}
+.menu:hover .menu-content {display: block;}
+.menu:hover .menubtn {background-color: #546284; color: #bbccff;}
 main, section { width: 100%; background-color: #fff; }
 section { padding-left: 15px; padding-right: 15px; }
 main:after, section:after { content: ""; display: table; clear: both; }
@@ -51,15 +53,16 @@ div.site-map { display: none; line-height: 2em; padding-bottom: 2em; }
 .category a b:hover { color: #a4b7d8; }
 nav {
     margin: 0; position: -webkit-sticky; position: sticky; top: 0;
-    font-size: 0.8em; color: #000; background-color: #bdbab5;
-    border-bottom: 1px solid #000099; width: 100%; overflow: hidden;
+    font-size: 0.8em; font-weight: bold; color: #000;
+    background-color: #bdbab5; border-bottom: 1px solid #000099;
+    width: 100%; overflow: hidden;
 }
 nav span {
     float: left; display: block; color: #000000; text-align: center;
     padding: 3px 6px;
 }
 nav a {
-    float:left; display: block; color: #3333aa; padding: 3px 7.5px;
+    float:left; display: block; color: blue; padding: 3px 7.5px;
     text-align: center;
 }
 a { color: blue; text-decoration: none; }
@@ -270,17 +273,8 @@ p.bibitem { margin-left: 2em; text-indent: -2em; }
 
 @media (min-width: 600px) {
     header { padding-top: 30px; }
-    header p, header h1 { margin-left: 1em; }
+    header p, header h1,  header h2 { margin-left: 30px; }
     body { font-size: 1em; line-height: 1.5em; }
-    div.menu {
-        position: -webkit-sticky; position: sticky; top: 0; font-size: 0.8em;
-        padding: 15px;
-    }
-    div.menu ul { margin-top: 15px; }
-    div.menu li {
-        margin-top: 6px; margin-bottom: 6px;
-        box-shadow: 0.05em 0.05em 0.06em #777777;
-    }
     div.maxima, pre { padding: 0.5em 1em 0.5em 1em; }
     div.example { padding: 0 15px 15px 30px; }
     ul.multicol { columns: 2; -webkit-columns: 2; -moz-columns: 2; }
@@ -311,13 +305,24 @@ p.bibitem { margin-left: 2em; text-indent: -2em; }
     .img-19 { max-width: 100%; height: auto; }
     .img-20 { max-width: 100%; height: auto; }
     section {
-        float: left; width: 75%; padding-left: 20px; paddign-right: 30px;
+        float: left; width: 90%; padding-left: 20px; paddign-right: 30px;
     }
 }
 @media (min-width: 900px) {
-    header p, header h1 { margin-left: 50px; }
+    header p, header h1, header h2 { margin-left: 50px; }
     ul.multicol { columns: 3; -webkit-columns: 3; -moz-columns: 3; }
-    div.menu { float: left; padding: 1em; width: 20%; }
+    .menu {
+        position: -webkit-sticky; position: sticky; top: 0; font-size: 0.8em;
+        padding: 15px; float: left; padding: 1em; width: 20%; float: right;
+    }
+    .menubtn { display: none; }
+    .menu-content { display: block; margin-top: 15px; }
+    .menu-content a { 
+        background-color: #546284; color: #bbccff; padding: 0.3em 1em;
+        margin-top: 0.5em; text-decoration: none; display: block;
+    }
+    .menu-content a:hover { background-color: #a4b7d8; color: #3333aa; }
+    .menu:hover .menu-content { display: block; }
     div.maxima, pre { padding: 0.7em 1.5em 0.7em 1.5em; }
     div.category { width: 25%; }
     div.gallery { width: 23%; margin: 1%; }
@@ -348,7 +353,6 @@ p.bibitem { margin-left: 2em; text-indent: -2em; }
 }
 @media (min-width: 1200px) {
     ul.multicol { columns: 4; -webkit-columns: 4; -moz-columns: 4; }
-    div.menu { float: left; padding: 1em; width: 15%; }
     div.cols-5 { width: 17%; margin: 1%; }
     div.cols-4 { width: 23%; margin: 1%; }
     div.cols-3 { width: 31%; margin: 1%; }
@@ -357,7 +361,6 @@ p.bibitem { margin-left: 2em; text-indent: -2em; }
 @media (min-width: 2000px) {
     footer { font-size: 0.8em; line-height: 2.2em; }
     ul.multicol { columns: 5; -webkit-columns: 5; -moz-columns: 5; }
-    div.menu { float: left; padding: 1em; width: 15%; }
     div.cols-5 { width: 14%; margin: 1%; }
     div.cols-4 { width: 17%; margin: 1%; }
     div.cols-3 { width: 23%; margin: 1%; }

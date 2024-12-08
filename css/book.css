@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2024. Jaime E. Villate
-   Version: 2024-01-02
+   Version: 2024-12-07
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 */
@@ -11,10 +11,10 @@ body {
     font-family: Helvetica, sans-serif;
 }
 header {
-    background-color: #546284; padding-left: 2em; padding-top: 0.5em;
-    border-bottom: 1px solid #3333aa; color:#eeeeee;
+    background-color: #546284; padding-left: 2em; padding-top: 1em;
+    border-bottom: 1px solid #3333aa; color:#eeeeee; padding-left: 5px;
 }
-header h1 { font-size: 2em; line-height: 1.2em; color: #ffe998; }
+header h1 { font-size: 1.5em; line-height: 1em; color: #ffe998; }
 header:after {
     content: ""; display: table; clear: both;
 }
@@ -58,15 +58,16 @@ div.site-map { display: none; line-height: 2em; padding-bottom: 2em; }
 .category a b:hover { color: #a4b7d8; }
 nav {
     margin: 0; position: -webkit-sticky; position: sticky; top: 0;
-    font-size: 0.8em; color: #000; background-color: #bdbab5;
-    border-bottom: 1px solid #000099; width: 100%; overflow: hidden;
+    font-size: 0.8em; font-weight: bold; color: #000;
+    background-color: #bdbab5; border-bottom: 1px solid #000099;
+    width: 100%; overflow: hidden;
 }
 nav span {
     float: left; display: block; color: #000000; text-align: center;
     padding: 3px 6px;
 }
 nav a {
-    float:left; display: block; color: #3333aa; padding: 3px 7.5px;
+    float:left; display: block; color: blue; padding: 3px 7.5px;
     text-align: center;
 }
 a { color: blue; text-decoration: none; }
@@ -278,7 +279,7 @@ p.bibitem { margin-left: 2em; text-indent: -2em; }
 
 @media (min-width: 600px) {
     header { padding-top: 2em; }
-    header p, header h1 { margin-left: 30px; }
+    header p, header h1,  header h2 { margin-left: 30px; }
     body { font-size: 1em; line-height: 1.5em; }
     div.maxima, pre { padding: 0.5em 1em 0.5em 1em; }
     div.example { padding: 0 15px 15px 30px; }
@@ -311,7 +312,7 @@ p.bibitem { margin-left: 2em; text-indent: -2em; }
     .img-20 { max-width: 100%; height: auto; }
 }
 @media (min-width: 900px) {
-    header p, header h1 { margin-left: 50px; }
+    header p, header h1, header h2 { margin-left: 50px; }
     ul.multicol { columns: 3; -webkit-columns: 3; -moz-columns: 3; }
     section { padding-left: 2em; padding-right: 2em; }
     section.opening { padding: 20px 50px 20px 50px; }
