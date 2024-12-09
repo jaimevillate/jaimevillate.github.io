@@ -39,12 +39,12 @@ main:after, section:after { content: ""; display: table; clear: both; }
 footer {
     margin: 0; width: 100%; padding-top: 1.5em; padding-bottom: 1.5em;
     clear: both; text-align: center; border-top: 1px solid  #a4b7d8;
-    color: #aaaaaa; background-color: #303030;
+    color: #aaaaaa; background-color: #303030; font-size: 0.7em;
 }
-footer a { color: #5462d8}
+footer a { color: #5462d8; }
 div.site-map::before { content: ""; display: table; clear: both; }
 div.site-map:after { content: ""; display: table; clear: both; }
-div.site-map { display: none; line-height: 2em; padding-bottom: 2em; }
+div.site-map { display: block; line-height: 2em; padding-bottom: 2em; }
 .category { float: left; width: 50%; }
 .category ul { list-style-type: none; margin: 0; padding: 0; }
 .category a { color: #5462d8; }
