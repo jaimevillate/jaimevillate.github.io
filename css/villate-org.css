@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2024. Jaime E. Villate
-   Version: 2024-12-07
+   Version: 2025-01-02
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 */
@@ -187,8 +187,8 @@ div.bottom {
 }
 div.bottom a {display: block; color: #3333aa;}
 span.button {
-    font-size: 0.8em; padding: 5px; border: 1px solid #3333aa;;
-    background-color: #dee7f5; color: #3333aa;; border-radius: 5px;
+    font-size: 0.8em; padding: 5px; border: 1px solid #3333aa;
+    background-color: #dee7f5; color: #3333aa; border-radius: 5px;
 }
 span.button:hover {background-color: #828282; color: #a4b7d8;}
 div.example {
