@@ -1,11 +1,18 @@
 /*
-The TeX Gyre Schola fonts are released under the GUST font license, which is
-legally equivalent to the LaTeX Project Public License. See the files in this
-directory for details. The fonts can be obtained from several TeX distributions
-or package managers.
+Version: 2025-01-13
+
+This is a combination of the stylesheet from LaTeXML.css,
+from https://math.nist.gov/~BMiller/LaTeXML/, and the ScholaX
+fonts (https://www.ctan.org/tex-archive/fonts/scholax/) converted
+into WOFF format.
+
+The TeX Gyre Schola fonts are released under the GUST font license,
+which is legally equivalent to the LaTeX Project Public License.
 
 The WOFF fonts have been obtained from
-http://www.gust.org.pl/projects/e-foundry/
+http://www.gust.org.pl/projects/e-foundry/ and are icensed under the
+GUST Font License (GFL), which is legally identical to the
+ LaTeX Public Project License.
 */
 
 @namespace url('http://www.w3.org/1999/xhtml');
@@ -14,71 +21,136 @@ http://www.gust.org.pl/projects/e-foundry/
 @font-face {
     font-family: TeX Gyre Schola;
     src: local('TeXGyreSchola-Regular'),
-         url('texgyreschola-regular.woff2'),url('texgyreschola-regular.woff'); }
+         url('texgyreschola-regular.woff2'),url('texgyreschola-regular.woff');
+}
 @font-face {
     font-family: TeX Gyre Schola;
     src: local('TeXGyreSchola-Bold'),
          url('texgyreschola-bold.woff2'),url('texgyreschola-bold.woff');
-    font-weight: bold; }
+    font-weight: bold;
+}
 @font-face {
     font-family: TeX Gyre Schola;
     src: local('TeXGyreSchola-Italic'),
          url('texgyreschola-italic.woff2'),url('texgyreschola-italic.woff');
-    font-style: italic; }
+    font-style: italic;
+}
 @font-face {
     font-family: TeX Gyre Schola;
     src: local('TeXGyreSchola-BoldItalic'),
          url('texgyreschola-bolditalic.woff2'),
          url('texgyreschola-bolditalic.woff');
-    font-weight: bold; font-style: italic; }
+    font-weight: bold; font-style: italic;
+}
 @font-face {
     font-family: TeX Gyre Schola Math;
     src: local('TeX Gyre Schola Math'),local('TeXGyreScholaMath-Regular'),
-         url('texgyreschola-math.woff2'),url('texgyreschola-math.woff'); }
-body { margin: 0; }
+         url('texgyreschola-math.woff2'),url('texgyreschola-math.woff');
+}
+body {
+    background-color: #d4d4d4;
+    margin: 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid #3333aa;
+    border-right: 1px solid #3333aa;
+}
+.ltx_page_main { background-color: white; }
 nav {
-    margin: 0; position: -webkit-sticky; position: sticky; top: 0;
-    font-size: 0.8em; font-weight: bold; font-family: Helvetica, sans-serif;
-    color: #000; background-color: #bdbab5; border-bottom: 1px solid #000099;
-    width: 100%; overflow: hidden; opacity: 0.7;
+    margin: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    font-size: 0.8em;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #000;
+    background-color: #bdbab5;
+    border-top: 1px solid #000099;
+    width: 100%;
+    overflow: hidden;
 }
 nav span {
-    float: left; display: block; color: #000000; text-align: center;
-    padding: 3px 6px; }
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 3px 6px;
+}
 nav a {
-    float:left; display: block; color: #3333aa; padding: 3px 7.5px;
-    text-align: center; }
-nav a:hover { background-color: #334669; color: #dee7f5; }
-a { color: blue; text-decoration: none; }
-a:hover { background-color: #334669; color: #dee7f5; }
+    float:left;
+    display: block;
+    color: #3333aa;
+    padding: 3px 7.5px;
+    text-align: center;
+}
+nav a:hover {
+    background-color: #334669;
+    color: #dee7f5;
+}
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    background-color: #334669;
+    color: #dee7f5;
+}
 article { padding-bottom: 1em; }
 footer {
-    margin: 0; width: 100%; padding-top: 1.5em; padding-bottom: 1.5em;
-    clear: both; text-align: center; font-family: Arial, Helvetica, sans-serif;
-    border-top: 1px solid  #a4b7d8; color: #aaaaaa;
-    background-color: #303030; }
+    margin: 0;
+    width: 100%;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    clear: both;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    border-top: 1px solid  #a4b7d8;
+    color: #aaaaaa;
+    background-color: #303030;
+}
 footer a { color: #5462d8}
 div.ltx_theorem_example {
-    border: 1px solid blue; padding: 0; background-color: #cccccc;
-    width: 100%; }
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 0;
+    background-color: #dee7f5;
+    width: 100%;
+}
 div.ltx_theorem_example > div.ltx_para { margin: 1em; }
 span.ltx_tag_theorem {
-    display: block; width: 100%-1em; background: #b3b3ff;
-    padding: 0.5em 0 0.5em 1em; border-bottom: 0.5px solid blue; }
+    display: block;
+    width: 100%-1em;
+    background: #a4b7d8;
+    padding: 0.5em 0 0.5em 1em;
+    border-bottom: 0.5px solid blue;
+    border-radius: 10px 10px 0 0;
+}
 .htmlmathparagraph, m|mtext, .ltx_p, .ltx_quote, .ltx_block, .ltx_para, .ltx_caption {
-    font-family: TeX Gyre Schola; }
+    font-family: TeX Gyre Schola;
+}
 blockquote.ltx_role_verse {
-    border:1px solid #334669; line-height:2em; word-wrap:break-word;
-    padding-left:0.8em; background-color: #dee7f5; }
+    border:1px solid #334669;
+    line-height:2em;
+    word-wrap:break-word;
+    padding-left:0.8em;
+    background-color: #dee7f5;
+}
 blockquote.ltx_role_verse > p.ltx_p { font-family: Monospace; }
 m|math {
-    font-family: TeX Gyre Schola Math; }
-.boxed { border: 1px solid black; padding: 0.5em; }
+    font-family: TeX Gyre Schola Math;
+}
+.boxed {
+    border: 1px solid black;
+    padding: 0.5em;
+}
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums; /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */
     -moz-font-feature-settings: 'onum';    /* Gecko <= 33 syntax */
-    -webkit-font-feature-settings: 'onum'; /* Blink syntax */ }
+    -webkit-font-feature-settings: 'onum'; /* Blink syntax */
+}
 
 /* Calligraphic letters do not seem to be available */
 m|*.calligraphic {
@@ -132,7 +204,11 @@ m|*.calligraphic {
 
 /* undo bold here to remove the browser's native h# styling,
    at let all other styles override it (with more specific rules)*/
-.ltx_title { font-family:Helvetica; font-size:100%; font-weight:normal; }
+.ltx_title {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:100%;
+    font-weight:normal;
+}
 
 /* Hack to simulate run-in! put class="ltx_runin" on a title or tag
    for it to run-into the following text. */
@@ -434,7 +510,7 @@ span.ltx_rowspan { position:absolute; top:0; bottom:0; }
 /* Note that LaTeX(ML)'s font model doesn't map quite exactly to CSS's */
 /* Font Families => font-family */
 .ltx_font_serif      { font-family: STIX Two Text; }
-.ltx_font_sansserif  { font-family: Helvetica; }
+.ltx_font_sansserif  { font-family: Helvetica, Arial, sans-serif; }
 .ltx_font_typewriter { font-family: monospace; }
 /* dingbats should be converted to unicode? */
 /* Math font families handled within math: script, symbol, fraktur, blackboard ? */
