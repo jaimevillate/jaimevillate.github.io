@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-01-07
+   Version: 2025-01-15
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 */
@@ -46,16 +46,20 @@ header h2 {
 header a { color: #bbccff; }
 .menubtn {
     background-color: #bbccff;
-    padding: 0.5em 1em;
-    font-size: 1em;
-    border: none;
+    padding: 3px 8px;
+    font-size: 0.8em;
+    font-weight: bold;
     cursor: pointer;
+    border: 1px solid #3333aa;
     border-radius: 4px;
 }
-.menu { position: relative;
-        display: inline-block;
-        float: right;
-      }
+.menu {
+    position:  sticky;;
+    position: -webkit-sticky;
+    top: 0;
+    display: inline-block;
+    float: right;
+}
 .menu-content {
     display: none;
     position: absolute;

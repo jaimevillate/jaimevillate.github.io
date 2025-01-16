@@ -1,5 +1,5 @@
 /*
-Version: 2025-01-13
+Version: 2025-01-15
 
 This is a combination of the stylesheet from LaTeXML.css,
 from https://math.nist.gov/~BMiller/LaTeXML/, and the ScholaX
@@ -57,37 +57,45 @@ body {
     border-right: 1px solid #3333aa;
 }
 .ltx_page_main { background-color: white; }
-nav {
-    margin: 0;
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
+.menubtn {
+    background-color: #bbccff;
+    padding: 3px 8px;
     font-size: 0.8em;
     font-weight: bold;
-    font-family: Helvetica, Arial, sans-serif;
-    color: #000;
-    background-color: #bdbab5;
-    border-top: 1px solid #000099;
-    width: 100%;
-    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #3333aa;
+    border-radius: 4px;
 }
-nav span {
+.menu {
+    position:  sticky;;
+    position: -webkit-sticky;
+    top: 0;
+    display: inline-block;
     float: left;
-    display: block;
-    color: #000000;
-    text-align: center;
-    padding: 3px 6px;
 }
-nav a {
-    float:left;
+.menu-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 11em;
+    box-shadow: 0px 0.3em 0.6em 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.menu-content a {
+    color: black;
+    padding: 0.5em 1em;
+    text-decoration: none;
     display: block;
+}
+.menu-content a:hover {
+    background-color: #a4b7d8;
     color: #3333aa;
-    padding: 3px 7.5px;
-    text-align: center;
 }
-nav a:hover {
-    background-color: #334669;
-    color: #dee7f5;
+.menu:hover .menu-content { display: block; }
+.menu:hover .menubtn {
+    background-color: #546284;
+    color: #bbccff;
 }
 a {
     color: blue;
@@ -311,8 +319,8 @@ table.ltx_eqn_eqnarray tr.ltx_eqn_lefteqn + tr td.ltx_align_right { min-width:2e
 .ltx_eqn_eqno { max-width:0em; overflow:visible; white-space: nowrap; }
 .ltx_eqn_eqno.ltx_align_right .ltx_tag { float:right; }
 
-.ltx_eqn_center_padleft,
-.ltx_eqn_center_padright { width:50%; min-width:3.5em;}
+.ltx_eqn_center_padleft { width:30%; min-width:5px; }
+.ltx_eqn_center_padright { width:70%; min-width:5px; }
 .ltx_eqn_left_padleft,
 .ltx_eqn_right_padright { min-width:3.5em; }
 .ltx_eqn_left_padright,
@@ -545,3 +553,11 @@ cite                 { font-style: normal; }
     transform: scaleY(-1); }
 
 /* .ltx_phantom handled in xslt */
+
+/* Bigger screens */
+@media screen and (min-width: 600px) {
+    .ltx_eqn_center_padleft,
+    .ltx_eqn_center_padright { width:50%; min-width:3.5em; }
+    .ltx_eqn_left_padleft,
+    .ltx_eqn_right_padright { min-width:3.5em; }
+}
