@@ -1,5 +1,5 @@
 /*
-Version: 2025-01-15
+Version: 2025-01-24
 
 This is a combination of the stylesheet from LaTeXML.css,
 from https://math.nist.gov/~BMiller/LaTeXML/, and the ScholaX
@@ -48,6 +48,7 @@ GUST Font License (GFL), which is legally identical to the
          url('texgyreschola-math.woff2'),url('texgyreschola-math.woff');
 }
 body {
+    font-family: TeX Gyre Schola;
     background-color: #d4d4d4;
     margin: 0;
     max-width: 900px;
@@ -57,6 +58,17 @@ body {
     border-right: 1px solid #3333aa;
 }
 .ltx_page_main { background-color: white; }
+div.eqnalign {
+    text-align: center;
+    line-height: 2.5em;
+    word-wrap: break-word;
+}
+div.eqnalign:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+div.eqn { float: right; }
 .menubtn {
     background-color: #bbccff;
     padding: 3px 8px;
