@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-02-09
+   Version: 2025-02-10
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 */
@@ -47,6 +47,10 @@ body {
 math { font-family: TeX Gyre Schola Math; }
 section { font-family: TeX Gyre Schola; }
 span.concept { font-weight: bold; }
+.boxed {
+    border: 1px solid black;
+    padding: 0.5em;
+}
 a {
     color: blue;
     text-decoration: none;

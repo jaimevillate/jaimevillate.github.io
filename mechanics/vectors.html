@@ -26,7 +26,8 @@ University of Porto, Portugal, 2025.</p>
 </div>
 </div>
 <section class="opening">
-<p>You might probably be familiar with the idea that a list of 3 real
+<p>
+You might probably be familiar with the idea that a list of 3 real
 numbers (<em>x</em>, <em>y</em>, <em>z</em>) is a vector in space. If
 that is the case, I ask you to forget about that while you read this
 chapter, where vectors are introduced as geometrical objects
@@ -34,20 +35,23 @@ independent of any system of coordinates. Using the geometrical
 properties of vectors, without reference to any system of coordinates,
 will let you gain more insight into their physical meaning. After
 studying vectors from a geometrical point of view, we will introduce
-coordinate systems in the next chapter and we will make extensive
-use of vector components in later chapters.</p>
+coordinate systems in the next chapter and we will make extensive use
+of vector components in later chapters.
+</p>
 </section>
 <section id="vectors-scalars">
 <h2>1.1. Vectors and scalars</h2>
-<p>Physical quantities whose magnitude is given by a real value are
+<p>
+Physical quantities whose magnitude is given by a real value are
 called <span class="concept">scalars</span>. Examples of scalar
-quantities are time, temperature and pressure. Each scalar has
-units and if the units of two different scalars are compatible, they
-can be combined with the same rules as for real numbers: for example,
-we can add a mass, in kg, with other masses also in kg; we can divide
-a distance in km by a time in hours, to give a speed in km/h, and so
-on.</p>
-<p>In contrast to scalars, a <span class="concept">vector</span> is a
+quantities are time, temperature and pressure. Each scalar has units
+and if the units of two different scalars are compatible, they can be
+combined with the same rules as for real numbers: for example, we can
+add a mass, in kg, with other masses also in kg; we can divide a
+distance in km by a time in hours, to give a speed in km/h, and so on.
+</p>
+<p>
+In contrast to scalars, a <span class="concept">vector</span> is a
 physical quantity that in addition to
 its <span class="concept">magnitude</span> it also has
 a <span class="concept">direction</span>. The magnitude of the vector
@@ -63,152 +67,401 @@ scalar quantities, we will simply write the magnitude of <math id="eqn4" display
 <p>Figure 1.1 shows three forces; the weight <math id="eqn6" display="inline"><mrow><mover><mrow><mi>W</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> of a 10 kg
 sphere, which has magnitude of 98 N and points downwards in the
 vertical, and the forces <math id="eqn7" display="inline"><mrow><msub><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math> and <math id="eqn8" display="inline"><mrow><msub><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math> exerted by one
-the feet of a woman and a man on the ground.</p>
+the feet of a woman and a man on the ground.
+</p>
 <figure class="center" id="vectors-forces">
 <img class="fig" src="img/vectors-forces.png" style="width:25.326em;max-width:100%;height:auto">
-<figcaption><b>Figure 1.1:</b> Three examples of forces: the weight of
-an object and the forces exerted by two persons on the
-ground.</figcaption>
+<figcaption>
+<b>Figure 1.1:</b> Three examples of forces: the weight of an object
+and the forces exerted by two persons on the ground.
+</figcaption>
 </figure>
-<p>Two vectors are considered equal if their magnitude and direction
-are the same. In the example in figure 1.1, the two forces <math id="eqn9" display="inline"><mrow><msub><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math>
-and <math id="eqn10" display="inline"><mrow><msub><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math> might be equal if they have the same magnitude and
-direction.</p>
+<p>
+Two vectors are considered equal if their magnitude and direction are
+the same. In the example in figure 1.1, the two forces <math id="eqn9" display="inline"><mrow><msub><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math> and
+<math id="eqn10" display="inline"><mrow><msub><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math> might be equal if they have the same magnitude and
+direction.
+</p>
 </section>
 <section>
 <h2>1.2 Addition of vectors</h2>
-<p>The sum of two vectors is defined as another vector which can be
+<p>
+The sum of two vectors is defined as another vector which can be
 obtained by placing one of the vectors after the other and then
 joining the initial point of the first vector with the final point of
 the second one. The right-hand side of figure 1.2 shows the sum
 <math id="eqn11" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> of two vectors <math id="eqn12" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn13" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>, which was
 obtained by displacing <math id="eqn14" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> until its initial point is at the
-final point of <math id="eqn15" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.</p>
+final point of <math id="eqn15" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.
+</p>
 <figure class="center" id="vectors-addition">
 <img class="fig" src="img/vectors-addition.png" style="width:20.391em;max-width:100%;height:auto">
-<figcaption><b>Figure 1.2:</b> Addition of two vectors <math id="eqn16" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and
-<math id="eqn17" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.</figcaption>
+<figcaption>
+<b>Figure 1.2:</b> Addition of two vectors <math id="eqn16" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn17" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.
+</figcaption>
 </figure>
-<p>In the case of forces, the vector sum of two forces gives a force
-that produces the same effect as the two forces combined.</p>
+<p>
+In the case of forces, the vector sum of two forces gives a force that
+produces the same effect as the two forces combined.
+</p>
 <div class="example" id="ex1.1">
 <span class="example_heading">Example 1.1</span>
-<p>Two forces are applied on the two sides of a string that passes
-though a pulley, as shown in the figure.</p>
+<p>
+Two forces are applied on the two sides of a string that passes though
+a pulley, as shown in the figure.
+</p>
 <img class="fig center" src="img/vectors-pulley.png"
      style="width:11.487em;max-width:100%;height:auto">
-<p>If the friction on the pulley's axis is negligible, the magnitude
-of the forces on both sides of the string are equal (tension on the
-string) and in this case it was measured to be 400 N. Find the total
-force exerted by the string on the pulley.</p>
+<p>
+If the friction on the pulley's axle is negligible, the magnitude of
+the forces on both sides of the string are equal (and is called the
+tension on the string) and in this case it was measured to be 400
+N. Find the total force exerted by the string on the pulley.
+</p>
 </div>
-<p><b>Solution:</b> The following figure shows the sum <math id="eqn18" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> of the
-two forces, obtained by placing <math id="eqn19" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math> after
-<math id="eqn20" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math>.</p>
+<p>
+<b>Solution:</b> The following figure shows the sum <math id="eqn18" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> of the
+two forces, obtained by placing <math id="eqn19" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math> after <math id="eqn20" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math>.
+</p>
 <img class="fig center" src="img/vectors-pulley_solution.png"
      style="width:15.309em;max-width:100%;height:auto">
-<p>The distances PR and RS are equal and in units of N, they are both
-400. Thus, distances PQ and QR will be:</p>
+<p>
+The distances PR and RS are equal and in units of N, they are both
+400. Thus, distances PQ and QR will be:
+</p>
 <div class="eqnalign">
 <math id="eqn21" display="inline"><mrow><mrow><mrow><mi mathvariant="normal">P</mi><mi mathvariant="normal">Q</mi></mrow><mo>&#x0003D;</mo><mn>400</mn><mspace width="0.167em" /><mi>cos</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mn>200</mn><msqrt><mrow><mn>3</mn></mrow></msqrt><mspace width="2em" /><mrow><mi mathvariant="normal">Q</mi><mi mathvariant="normal">R</mi></mrow><mo>&#x0003D;</mo><mn>400</mn><mspace width="0.167em" /><mi>sin</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mn>200</mn></mrow></mrow></math>
 </div>
-<p>and the distance QS is then <math id="eqn22" display="inline"><mrow><mrow><mi mathvariant="normal">Q</mi><mi mathvariant="normal">R</mi></mrow><mo>&#x0002B;</mo><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">S</mi></mrow><mo>&#x0003D;</mo><mn>600</mn></mrow></math>. The
+<p>
+and the distance QS is then <math id="eqn22" display="inline"><mrow><mrow><mi mathvariant="normal">Q</mi><mi mathvariant="normal">R</mi></mrow><mo>&#x0002B;</mo><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">S</mi></mrow><mo>&#x0003D;</mo><mn>600</mn></mrow></math>. The
 magnitude of the total force is the hypotenuse of the triangle PQR
-which is obtained from the Pythagorean theorem:</p>
+which is obtained from the Pythagorean theorem:
+</p>
 <div class="eqnalign">
 <math id="eqn23" display="inline"><mrow><mrow><mi>F</mi><mo>&#x0003D;</mo><msqrt><mrow><msup><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mn>200</mn><msqrt><mrow><mn>3</mn></mrow></msqrt><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mn>600</mn><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><mn>692.8</mn><mspace width="0.278em" /><mi>&#x0004E;</mi></mrow></mrow></math>
 </div>
-<p>It is easy to see that the direction of the total force <math id="eqn24" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>
-will have to be 30° above the horizontal, since it has to make the
-same angle with the directions of <math id="eqn25" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math> and <math id="eqn26" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math>, because
-they both have the same magnitude. If you are not convinced you can
-compute the angles of the triangle PQS above.</p>
+<p>
+It is easy to see that the direction of the total force <math id="eqn24" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> will
+have to be 30° above the horizontal, since it has to make the same
+angle with the directions of <math id="eqn25" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math> and <math id="eqn26" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math>, because they
+both have the same magnitude. If you are not convinced you can compute
+the angles of the triangle PQS above.
+</p>
 <hr class="thin">
-<p>The addition of vectors has the following four important
-properties:</p>
+<p>
+The addition of vectors has the following four important properties:
+</p>
 <table class="center border" style="padding:8pt">
 <tbody>
-<tr><td class="left">Commutative law:</td>
-<td class="left"><math id="eqn27" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td></tr>
-<tr><td class="left">Associative law:</td>
-<td class="left"><math id="eqn28" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0002B;</mo><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td></tr>
-<tr><td class="left">Existence of a vector zero:&emsp;</td>
-<td class="left"><math id="eqn29" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mn>0</mn></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td></tr>
-<tr><td class="left">Existence of negatives:</td>
-<td class="left"><math id="eqn30" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mo>&#x02212;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mover><mrow><mn>0</mn></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td></tr>
+<tr>
+<td class="left">Commutative law:</td>
+<td class="left"><math id="eqn27" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td>
+</tr>
+<tr>
+<td class="left">Associative law:</td>
+<td class="left"><math id="eqn28" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0002B;</mo><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td>
+</tr>
+<tr>
+<td class="left">Existence of a vector zero:&emsp;</td>
+<td class="left"><math id="eqn29" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mn>0</mn></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td>
+</tr>
+<tr>
+<td class="left">Existence of negatives:</td>
+<td class="left"><math id="eqn30" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mo>&#x02212;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mover><mrow><mn>0</mn></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td>
+</tr>
 </tbody>
 </table>
 </div>
-<p>Tthe commutative law can be shown by completing a parallelogram
-with the two vectors <math id="eqn31" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn32" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> as shown in figure
-1.3. The sum of the vectors is the diagonal of the parallelogram,
-which is obtained by either placing <math id="eqn33" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> after <math id="eqn34" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> or by
-placing <math id="eqn35" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> after <math id="eqn36" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.</p>
+<p>
+The commutative law can be shown by completing a parallelogram with
+the two vectors <math id="eqn31" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn32" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> as shown in figure 1.3. The
+sum of the vectors is the diagonal of the parallelogram, which is
+obtained by either placing <math id="eqn33" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> after <math id="eqn34" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> or by placing
+<math id="eqn35" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> after <math id="eqn36" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.
+</p>
 <figure class="center" id="vectors-parallelogram">
-<img class="fig" src="img/vectors-parallelogram.png" style="width:9.891em;max-width:100%;height:auto">
-<figcaption><b>Figure 1.3:</b> Parallelogram rule for the addition of vectors.</figcaption>
+<img class="fig" src="img/vectors-parallelogram.png" style="width:10.101em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.3:</b> Parallelogram rule for the addition of vectors.
+</figcaption>
 </figure>
-<p>The <span class="concept">vector zero</span>, <math id="eqn37" display="inline"><mrow><mover><mrow><mn>0</mn></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is the only
-vector than when added to any vector <math id="eqn38" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> will not change that
+<p>
+The proof of the associative law is shown in figure 1.4, which shows
+three vectors <math id="eqn37" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>, <math id="eqn38" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn39" display="inline"><mrow><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>, together with the
+sums <math id="eqn40" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn41" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>. The sum of the three
+vectors can then be simply written <math id="eqn42" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> without
+any need for parenthesis.
+</p>
+<figure class="center" id="vectors-addition_associative">
+<img class="fig" src="img/vectors-addition_associative.png" style="width:12.684em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.4:</b> Associative law of the addition of vectors.
+</figcaption>
+</figure>
+<p>
+The <span class="concept">vector zero</span>, <math id="eqn43" display="inline"><mrow><mover><mrow><mn>0</mn></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is the only
+vector than when added to any vector <math id="eqn44" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> will not change that
 vector. It is unique and it has magnitude equal to zero; it is also
-the only vector that has no direction. For any vector <math id="eqn39" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> there
+the only vector that has no direction. For any vector <math id="eqn45" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> there
 is always a unique vector, called
 its <span class="concept">negative</span>, such that when added to
-<math id="eqn40" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> the result will be the vector zero. The negative of
-<math id="eqn41" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is denoted <math id="eqn42" display="inline"><mrow><mo>&#x02212;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and it is easy to see that it must be
-a vector with the same magnitude <math id="eqn43" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="false">&#x0007C;</mo></mrow></math>, but with opposite
-direction to <math id="eqn44" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> (see figure 1.4).</p>
+<math id="eqn46" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> the result will be the vector zero. The negative of
+<math id="eqn47" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is denoted <math id="eqn48" display="inline"><mrow><mo>&#x02212;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and it is easy to see that it must be
+a vector with the same magnitude <math id="eqn49" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="false">&#x0007C;</mo></mrow></math>, but with opposite
+direction to <math id="eqn50" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> (see figure 1.5).
+</p>
 <figure class="center" id="vectors-negative">
 <img class="fig" src="img/vectors-negative.png" style="width:7.140em;max-width:100%;height:auto">
-<figcaption><b>Figure 1.4:</b> Negative of a vector <math id="eqn45" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.</figcaption>
+<figcaption>
+<b>Figure 1.5:</b> Negative of a vector <math id="eqn51" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.
+</figcaption>
 </figure>
-<p>In the case of forces, the uniqueness of the negative means that
-the only way to cancel the effect of a force is by adding another
-force with the same magnitude but opposite direction.</p>
+<p>
+In the case of forces, the uniqueness of the negative means that the
+only way to cancel the effect of a force is by adding another force
+with the same magnitude but opposite direction.
+</p>
+<p>
+The subtraction of two vectors can be defined as the sum of the first
+vector and the negative of the second one:
+</p>
+<div class="eqnalign" id="eq1.1">
+<math id="eqn52" display="inline"><mrow><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x02212;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="false">&#x00029;</mo></mrow></mrow></math>
+<div class="eqn">
+(1.1)
+</div>
+</div>
+<p>
+Thus, <math id="eqn53" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x02212;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> can be obtained by placing <math id="eqn54" display="inline"><mrow><mo>&#x02212;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> at the
+final point of <math id="eqn55" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>, as in the left-hand side of figure 1.6. The
+right-hand side of figure 1.6 shows that <math id="eqn56" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x02212;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> can also be
+obtained as one of the diagonals of the parallelogram obtained with
+<math id="eqn57" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn58" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>. As we saw before, the diagonal that begins
+from the common point of the two vectors is <math id="eqn59" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>; and the
+diagonal that goes from the end point of <math id="eqn60" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> to the end point of
+<math id="eqn61" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is <math id="eqn62" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x02212;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.
+</p>
+<figure class="center" id="vectors-subtraction">
+<img class="fig" src="img/vectors-subtraction.png" style="width:23.142em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.6:</b> Subtraction of two vectors.
+</figcaption>
+</figure>
 <div class="example" id="ex1.2">
 <span class="example_heading">Example 1.2</span>
-<p>A box weighing 50 N is hanged from the ceiling by two strings, as
-shown in the figure. Find the forces in the two strings.</p>
+<p>
+A box weighing 50 N is hanged from the ceiling by two strings, as
+shown in the figure. Find the forces in the two strings.
+</p>
 <img class="fig center" src="img/vectors-equilibrium.png"
      style="width:19.950em;max-width:100%;height:auto;padding-bottom:6pt">
 <br>
 </div>
-<p><b>Solution:</b> Since the block remains at rest, its weight must be
+<p>
+<b>Solution:</b> Since the block remains at rest, its weight must be
 canceled by the sum of the forces in the two strings. Thus, if
-<math id="eqn46" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math> and <math id="eqn47" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math> are the forces exerted by the two strings
-and <math id="eqn48" display="inline"><mrow><mover><mrow><mi>W</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is weight of the box, we have:</p>
+<math id="eqn63" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math> and <math id="eqn64" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math> are the forces exerted by the two strings
+and <math id="eqn65" display="inline"><mrow><mover><mrow><mi>W</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is weight of the box, we have:
+</p>
 <div class="eqnalign">
-<math id="eqn49" display="inline"><mrow><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub><mo>&#x0002B;</mo><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub><mo>&#x0003D;</mo><mo>&#x02212;</mo><mover><mrow><mi>W</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></mrow></math>
+<math id="eqn66" display="inline"><mrow><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub><mo>&#x0002B;</mo><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub><mo>&#x0003D;</mo><mo>&#x02212;</mo><mover><mrow><mi>W</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></mrow></math>
 </div>
-<p>The left-hand side of the following image shows those three forces
-and the right-hand side shows a triangle similar to the triangle that
-the string on the right forms with the horizontal and vertical lines
-(the sides were divided by 20 cm for simplicity).</p>
+<p>
+The left-hand side of the following image shows those three forces and
+the right-hand side shows a triangle similar to the triangle that the
+string on the right forms with the horizontal and vertical lines (the
+sides were divided by 20 cm for simplicity).
+</p>
 <img class="fig center" src="img/vectors-equilibrium_solution.png" style="width:18.039em;max-width:100%;height:auto">
-<p>There are two right-angled triangles in the forces diagram above,
-PQS and QRS, and their hypotenuses are the magnitudes of the tensions
-in the two strings. We can then write two equations involving <math id="eqn50" display="inline"><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow></math>
-and <math id="eqn51" display="inline"><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow></math>:</p>
+<p>
+There are two right-angled triangles in the forces diagram above, PQS
+and QRS, and their hypotenuses are the magnitudes of the tensions in
+the two strings. We can then write two equations involving <math id="eqn67" display="inline"><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow></math> and
+<math id="eqn68" display="inline"><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow></math>:
+</p>
 <div class="eqnalign">
-<math id="eqn52" display="inline"><mrow><mtable displaystyle="true" rowspacing="3pt" columnspacing="0em 2em"><mtr><mtd columnalign="right" /><mtd columnalign="left"><mi /><mrow><mi mathvariant="normal">Q</mi><mi mathvariant="normal">S</mi></mrow><mo>&#x0003D;</mo><msub><mi>T</mi><mn>1</mn></msub><mspace width="0.167em" /><mi>sin</mi><msup><mn>45</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msub><mi>T</mi><mn>2</mn></msub><mspace width="0.167em" /><mi>cos</mi><mi>&#x003B8;</mi></mtd></mtr><mtr><mtd columnalign="right" /><mtd columnalign="left"><mi /><mrow><mi mathvariant="normal">P</mi><mi mathvariant="normal">S</mi></mrow><mo>&#x0002B;</mo><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">S</mi></mrow><mo>&#x0003D;</mo><msub><mi>T</mi><mn>1</mn></msub><mspace width="0.167em" /><mi>cos</mi><msup><mn>45</mn><mo>&#x02218;</mo></msup><mo>&#x0002B;</mo><msub><mi>T</mi><mn>2</mn></msub><mspace width="0.167em" /><mi>sin</mi><mi>&#x003B8;</mi><mo>&#x0003D;</mo><mn>50</mn></mtd></mtr></mtable></mrow></math>
+<math id="eqn69" display="inline"><mrow><mtable displaystyle="true" rowspacing="3pt" columnspacing="0em 2em"><mtr><mtd columnalign="right" /><mtd columnalign="left"><mi /><mrow><mi mathvariant="normal">Q</mi><mi mathvariant="normal">S</mi></mrow><mo>&#x0003D;</mo><msub><mi>T</mi><mn>1</mn></msub><mspace width="0.167em" /><mi>sin</mi><msup><mn>45</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><msub><mi>T</mi><mn>2</mn></msub><mspace width="0.167em" /><mi>cos</mi><mi>&#x003B8;</mi></mtd></mtr><mtr><mtd columnalign="right" /><mtd columnalign="left"><mi /><mrow><mi mathvariant="normal">P</mi><mi mathvariant="normal">S</mi></mrow><mo>&#x0002B;</mo><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">S</mi></mrow><mo>&#x0003D;</mo><msub><mi>T</mi><mn>1</mn></msub><mspace width="0.167em" /><mi>cos</mi><msup><mn>45</mn><mo>&#x02218;</mo></msup><mo>&#x0002B;</mo><msub><mi>T</mi><mn>2</mn></msub><mspace width="0.167em" /><mi>sin</mi><mi>&#x003B8;</mi><mo>&#x0003D;</mo><mn>50</mn></mtd></mtr></mtable></mrow></math>
 </div>
-<p>Both the sine and cosine of 45° are <math id="eqn53" display="inline"><mrow><mn>1</mn><mo>&#x0002F;</mo><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></math> and <math id="eqn54" display="inline"><mrow><mi>sin</mi><mi>&#x003B8;</mi></mrow></math>
-and <math id="eqn55" display="inline"><mrow><mi>cos</mi><mi>&#x003B8;</mi></mrow></math> are obtained from the triangle on the right-hand side 
-of the figure above. The two equations then become,</p>
+<p>
+The sine and cosine of 45° are both <math id="eqn70" display="inline"><mrow><mn>1</mn><mo>&#x0002F;</mo><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></math> and <math id="eqn71" display="inline"><mrow><mi>sin</mi><mi>&#x003B8;</mi></mrow></math> and
+<math id="eqn72" display="inline"><mrow><mi>cos</mi><mi>&#x003B8;</mi></mrow></math> are obtained from the triangle on the right-hand side of
+the figure above. The two equations then become,
+</p>
 <div class="eqnalign">
-<math id="eqn56" display="inline"><mrow><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>&#x0003D;</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>2</mn><msub><mi>T</mi><mn>2</mn></msub></mrow><mrow><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow></mfrac></mstyle><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>&#x0002B;</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><mrow><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>&#x0003D;</mo><mn>50</mn></mrow></mrow></math>
+<math id="eqn73" display="inline"><mrow><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>&#x0003D;</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>2</mn><msub><mi>T</mi><mn>2</mn></msub></mrow><mrow><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow></mfrac></mstyle><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>&#x0002B;</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><mrow><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>&#x0003D;</mo><mn>50</mn></mrow></mrow></math>
 </div>
-<p>Subtracting the two equations we eliminate <math id="eqn57" display="inline"><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow></math> and can find
-<math id="eqn58" display="inline"><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow></math>, which is then replaced in one of the two equations to obtain
-<math id="eqn59" display="inline"><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow></math>. The result is:</p>
+<p>
+Subtracting the two equations we eliminate <math id="eqn74" display="inline"><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow></math> and can find <math id="eqn75" display="inline"><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow></math>,
+which is then replaced in one of the two equations to obtain
+<math id="eqn76" display="inline"><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow></math>. The result is:
+</p>
 <div class="eqnalign">
-<math id="eqn60" display="inline"><mrow><mrow><msub><mi>T</mi><mn>1</mn></msub><mo>&#x0003D;</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>100</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mstyle><msqrt><mrow><mn>2</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>47.14</mn><mspace width="0.278em" /><mi>&#x0004E;</mi><mspace width="2em" /><msub><mi>T</mi><mn>2</mn></msub><mo>&#x0003D;</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>50</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mstyle><msqrt><mrow><mn>5</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>37.27</mn><mspace width="0.278em" /><mi>&#x0004E;</mi></mrow></mrow></math>
+<math id="eqn77" display="inline"><mrow><mrow><msub><mi>T</mi><mn>1</mn></msub><mo>&#x0003D;</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>100</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mstyle><msqrt><mrow><mn>2</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>47.14</mn><mspace width="0.278em" /><mi>&#x0004E;</mi><mspace width="2em" /><msub><mi>T</mi><mn>2</mn></msub><mo>&#x0003D;</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>50</mn></mrow><mrow><mn>3</mn></mrow></mfrac></mstyle><msqrt><mrow><mn>5</mn></mrow></msqrt><mo>&#x0003D;</mo><mn>37.27</mn><mspace width="0.278em" /><mi>&#x0004E;</mi></mrow></mrow></math>
 </div>
-<p>and the directions of <math id="eqn61" display="inline"><mrow><mover><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn62" display="inline"><mrow><mover><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> are pointing upwards along
-the two strings.</p>
+<p>
+and the directions of <math id="eqn78" display="inline"><mrow><mover><mrow><msub><mi>T</mi><mn>1</mn></msub></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn79" display="inline"><mrow><mover><mrow><msub><mi>T</mi><mn>2</mn></msub></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> are pointing upwards
+along the two strings.
+</p>
 </section>
 <section>
 <h2>Scalar multiplication</h2>
+<p>
+When we add a vector <math id="eqn80" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> with itself <math id="eqn81" display="inline"><mrow><mi>n</mi></mrow></math> times, the result is a
+vector in the same direction of <math id="eqn82" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> but with a magnitude <math id="eqn83" display="inline"><mrow><mi>n</mi></mrow></math>
+times bigger and we write the result as <math id="eqn84" display="inline"><mrow><mi>n</mi><mspace width="0.167em" /><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>. If <math id="eqn85" display="inline"><mrow><mi>n</mi></mrow></math> is a
+negative integer, we interpret <math id="eqn86" display="inline"><mrow><mi>n</mi><mspace width="0.167em" /><mover><mrow><mi>a</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> as summing <math id="eqn87" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mi>n</mi><mo stretchy="false">&#x0007C;</mo></mrow></math> times the
+negative of the vector, <math id="eqn88" display="inline"><mrow><mo>&#x02212;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>, thus leading to a vector in the
+opposite direction of <math id="eqn89" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and with magnitude <math id="eqn90" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mi>n</mi><mo stretchy="false">&#x0007C;</mo></mrow></math> times bigger
+than the magnitude of <math id="eqn91" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.
+</p>
+<p>
+The generalization to any scalar <math id="eqn92" display="inline"><mrow><mi>k</mi></mrow></math> is that the product
+<math id="eqn93" display="inline"><mrow><mi>k</mi><mspace width="0.167em" /><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> gives a vector with magnitude <math id="eqn94" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mi>k</mi><mo stretchy="false">&#x0007C;</mo><mspace width="0.167em" /><mi>A</mi></mrow></math>, in the same
+direction of <math id="eqn95" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>, when <math id="eqn96" display="inline"><mrow><mi>k</mi></mrow></math> is positive, or in the opposite
+direction when <math id="eqn97" display="inline"><mrow><mi>k</mi></mrow></math> is negative. When <math id="eqn98" display="inline"><mrow><mi>k</mi><mo>&#x0003D;</mo><mn>0</mn></mrow></math>, the product <math id="eqn99" display="inline"><mrow><mi>k</mi><mspace width="0.167em" /><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>
+gives the vector zero, <math id="eqn100" display="inline"><mrow><mover><mrow><mn>0</mn></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.
+</p>
+<p>
+The following table shows the important properties of the product of
+scalars with vectors.
+</p>
+<table class="center border" style="padding:8pt">
+<tbody>
+<tr>
+<td class="left">Unit multiplication:</td>
+<td class="left"><math id="eqn101" display="inline"><mrow><mn>1</mn><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td>
+</tr>
+<tr>
+<td class="left">Associative law:</td>
+<td class="left"><math id="eqn102" display="inline"><mrow><mi>k</mi><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mi>p</mi><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mi>k</mi><mi>p</mi><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td>
+</tr>
+<tr>
+<td class="left">Distributive law (vector addition):&ensp;</td>
+<td class="left"><math id="eqn103" display="inline"><mrow><mi>k</mi><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mi>k</mi><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mi>k</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td>
+</tr>
+<tr>
+<td class="left">Distributive law (scalar addition):</td>
+<td class="left"><math id="eqn104" display="inline"><mrow><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mi>k</mi><mo>&#x0002B;</mo><mi>p</mi><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mi>k</mi><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mi>p</mi><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>Dot product</h2>
+<p>
+The <span class="concept">dot product</span> between two vectors
+<math id="eqn105" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn106" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>, denoted by <math id="eqn107" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>, gives a
+real number (scalar) equal to the product of the magnitudes of the two
+vectors, times the cosine of the angle between the directions of the
+two vectors:
+</p>
+<div class="eqnalign" id="eq1.2">
+<math id="eqn108" display="inline"><mrow><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mi>A</mi><mspace width="0.167em" /><mi>B</mi><mspace width="0.167em" /><mi>cos</mi><mi>&#x003B8;</mi></mrow></mrow></math>
+<div class="eqn">
+(1.2)
+</div>
+</div>
+<p>
+Figure 1.7 shows two vectors <math id="eqn109" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn110" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and the angle
+<math id="eqn111" display="inline"><mrow><mi>&#x003B8;</mi></mrow></math> between their directions. The projection of <math id="eqn112" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> in the
+direction of <math id="eqn113" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is equal to <math id="eqn114" display="inline"><mrow><mi>A</mi><mspace width="0.167em" /><mi>cos</mi><mi>&#x003B8;</mi></mrow></math>; notice that it can
+be negative when <math id="eqn115" display="inline"><mrow><mi>&#x003B8;</mi><mo>&#x0003E;</mo><mi>&#x003C0;</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></math>, namely when that projection
+points in the opposite direction of <math id="eqn116" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>. The projection of
+<math id="eqn117" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> in the direction of <math id="eqn118" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is <math id="eqn119" display="inline"><mrow><mi>B</mi><mspace width="0.167em" /><mi>cos</mi><mi>&#x003B8;</mi></mrow></math>. Therefore,
+the dot product <math id="eqn120" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is also equal to the projection
+of one of the vectors along the direction of the other, times the
+magnitude of that second vector.  The dot product is also referred to
+as scalar product.
+</p>
+<figure class="center" id="vectors-dot_product">
+<img class="fig" src="img/vectors-dot_product.png" style="width:22.260em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.7:</b> Projection of each of two vectors <math id="eqn121" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and
+  <math id="eqn122" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> along the direction of the other.
+</figcaption>
+</figure>
+<p>
+Since the angle <math id="eqn123" display="inline"><mrow><mi>&#x003B8;</mi></mrow></math> between two vectors is between 0 and <math id="eqn124" display="inline"><mrow><mi>&#x003C0;</mi></mrow></math>
+radians. The cosine of that angle can be within ─1 and 1, so the
+dot product <math id="eqn125" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> will be within <math id="eqn126" display="inline"><mrow><mo>&#x02212;</mo><mi>A</mi><mspace width="0.167em" /><mi>B</mi></mrow></math> and
+<math id="eqn127" display="inline"><mrow><mi>A</mi><mspace width="0.167em" /><mi>B</mi></mrow></math>. It will be positive if <math id="eqn128" display="inline"><mrow><mi>&#x003B8;</mi></mrow></math> is an acute angle (less than
+<math id="eqn129" display="inline"><mrow><mi>&#x003C0;</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></math>), negative if that angle is obtuse (greater than <math id="eqn130" display="inline"><mrow><mi>&#x003C0;</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></math>) and
+zero when the two vectors are perpendicular (see
+figure 1.8).
+</p>
+<figure class="center" id="vectors-dot_product_sign">
+<img class="fig" src="img/vectors-dot_product_sign.png" style="width:32.298em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.8:</b> The dot product is positive if the angle between
+  the vectors is less than <math id="eqn131" display="inline"><mrow><mi>&#x003C0;</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></math> radians, zero if the vectors are
+  perpendicular, or negative if the angle between the vectors is
+  greater than <math id="eqn132" display="inline"><mrow><mi>&#x003C0;</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></math>.
+</figcaption>
+</figure>
+<p>
+If two vectors <math id="eqn133" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn134" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> have the same direction, then
+<math id="eqn135" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mi>A</mi><mspace width="0.167em" /><mi>B</mi></mrow></math>, while if they have opposite directions
+then <math id="eqn136" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>A</mi><mspace width="0.167em" /><mi>B</mi></mrow></math>.
+</p>
+<p>
+The dot product has the following properties:
+</p>
+<table class="center border">
+<tbody>
+<tr>
+<td class="left">Possible values:</td>
+<td class="left"><math id="eqn137" display="inline"><mrow><mo>&#x02212;</mo><mi>A</mi><mspace width="0.167em" /><mi>B</mi><mo>&#x02264;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x02264;</mo><mi>A</mi><mspace width="0.167em" /><mi>B</mi></mrow></math></td>
+</tr>
+<tr>
+<td class="left">Commutative law:</td>
+<td class="left"><math id="eqn138" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td>
+</tr>
+<tr>
+<td class="left">Distribute law:</td>
+<td class="left"><math id="eqn139" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td>
+</tr>
+<tr>
+<td class="left">Scalar associativity:&ensp;</td>
+<td class="left"><math id="eqn140" display="inline"><mrow><mi>k</mi><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mi>k</mi><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mi>k</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow></mrow></math></td>
+</tr>
+<tr><td class="left">Positiveness:</td>
+<td class="left"><math id="eqn141" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><msup><mi>A</mi><mn>2</mn></msup></mrow></math></td>
+</tr>
+</tbody>
+</table>
+<br>
+<div class="example" id="ex1.3">
+<span class="example_heading">Example 1.3</span>
+<p>
+Prove the law of cosines for a triangle.
+</p>
+</div>
+<p>
+<b>Solution:</b> Let us consider a triangle with sides <math id="eqn142" display="inline"><mrow><mi>A</mi></mrow></math>, <math id="eqn143" display="inline"><mrow><mi>B</mi></mrow></math> and
+<math id="eqn144" display="inline"><mrow><mi>C</mi></mrow></math> and an angle <math id="eqn145" display="inline"><mrow><mi>&#x003B8;</mi></mrow></math> between the sides of length <math id="eqn146" display="inline"><mrow><mi>A</mi></mrow></math> and <math id="eqn147" display="inline"><mrow><mi>B</mi></mrow></math>. We
+can define three vectors <math id="eqn148" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>, <math id="eqn149" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn150" display="inline"><mrow><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> along the
+triangle sides, as in the following figure:
+</p>
+<img class="fig center" src="img/vectors-law_of_cosines.png"
+     style="width:8.106em;max-width:100%;height:auto">
+<p>
+We then have <math id="eqn151" display="inline"><mrow><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x02212;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and applying the properties of
+the dot product, the square of the magnitude of <math id="eqn152" display="inline"><mrow><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is,
+</p>
+<div class="eqnalign">
+<math id="eqn153" display="inline"><mrow><mrow><msup><mi>C</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x02212;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="false">&#x00029;</mo><mi>&#x000B7;</mi><mo stretchy="false">&#x00028;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x02212;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x02212;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x02212;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mi>&#x000B7;</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></mrow></math>
+</div>
+<p>
+Which leads to the law of cosines:
+</p>
+<div class="eqnalign" id="eq1.3">
+<span class="boxed">
+<math id="eqn154" display="inline"><mrow><mrow><msup><mi>C</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>A</mi><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mi>B</mi><mn>2</mn></msup><mo>&#x02212;</mo><mn>2</mn><mspace width="0.167em" /><mi>A</mi><mspace width="0.167em" /><mi>B</mi><mspace width="0.167em" /><mi>cos</mi><mi>&#x003B8;</mi></mrow></mrow></math>
+</span>
+<div class="eqn">
+(1.3)
+</div>
+</div>
 </section>
 <footer>
 <p>&copy; 2025, Jaime E. Villate</p>
@@ -216,7 +469,7 @@ the two strings.</p>
 href="http://creativecommons.org/licenses/by-sa/4.0/"
 rel="license">Creative Commons Attribution-ShareAlike 4.0
 International License</a>.</p>
-<span>Last modified: 2025/02/10 18:55:40 UTC</span>
+<span>Last modified: 2025/02/10 21:44:10 UTC</span>
 </footer>
 </body>
 </html>
