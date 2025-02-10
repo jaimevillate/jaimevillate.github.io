@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mechanics - Vectors</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="alternate icon" href="../img/favicon.ico">
+</head>
+<body id="top">
+<header style="background-image:url(../img/projetil.png);
+               background-repeat:no-repeat;
+               background-position:right center">
+<h1>1. Vectors</h1>
+<p>Jaime E. Villate. Topics of Mechanics,<br>
+University of Porto, Portugal, 2025.</p>
+</header>
+<div class="menu">
+<button class="menubtn">&#9776;</button>
+<div class="menu-content">
+<a href="../index.html">Home</a>
+<a href="../courses/index.html">Courses</a>
+<a href="../courses/leq007/index.html">L.EQ007</a>
+<a href="index.html">Mechanics</a>
+</div>
+</div>
+<section class="opening">
+<p>You might probably be familiar with the idea that a list of 3 real
+numbers (<em>x</em>, <em>y</em>, <em>z</em>) is a vector in space. If
+that is the case, I ask you to forget about that while you read this
+chapter, where vectors are introduced as geometrical objects
+independent of any system of coordinates. Using the geometrical
+properties of vectors, without reference to any system of coordinates,
+will let you gain more insight into their physical meaning. After
+studying vectors from a geometrical point of view, we will introduce
+coordinate systems in the next chapter and we will make extensive
+use of vector components in later chapters.</p>
+</section>
+<section id="vectors-scalars">
+<h2>1.1. Vectors and scalars</h2>
+<p>Physical quantities whose magnitude is given by a real value are
+called <span class="concept">scalars</span>. Examples of scalar
+quantities are time, temperature and pressure. Each scalar has
+units and if the units of two different scalars are compatible, they
+can be combined with the same rules as for real numbers: for example,
+we can add a mass, in kg, with other masses also in kg; we can divide
+a distance in km by a time in hours, to give a speed in km/h, and so
+on.</p>
+
+<p>In contrast to scalars, a <span class="concept">vector</span> is a
+physical quantity that in addition to
+its <span class="concept">magnitude</span> it also has
+a <span class="concept">direction</span>. The magnitude of the vector
+is sometimes also called norm or module. A typical example of a vector
+is a force; the magnitude of a force is measured in units of force,
+i. e. newton (N) in the international system of units. The direction
+of the force is the direction in which it is exerted. We will denote
+vectors by letters with an arrow over them ,for instance a force
+<math id="eqn1" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>, and their magnitude by enclosing the symbol inside vertical
+bars: <math id="eqn2" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="false">&#x0007C;</mo></mrow></math>. In cases when <math id="eqn3" display="inline"><mrow><mi>F</mi></mrow></math> cannot be confused with other
+scalar quantities, we will simply write the magnitude of <math id="eqn4" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> as
+<math id="eqn5" display="inline"><mrow><mi>F</mi></mrow></math>. The magnitude of a vector is a scalar.</p>
+<p>Figure 1.1 shows three forces; the weight <math id="eqn6" display="inline"><mrow><mover><mrow><mi>P</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> of a 10 kg
+sphere, which has magnitude of 98 N and points downwards in the
+vertical, and the forces <math id="eqn7" display="inline"><mrow><msub><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math> and <math id="eqn8" display="inline"><mrow><msub><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math> exerted by one
+the feet of a woman and a man on the ground.</p>
+<figure class="center" id="vectors-forces">
+<img class="fig" src="img/vectors-forces.png" style="width:26.250em;max-width:100%;height:auto">
+<figcaption><b>Figure 1.1:</b> Three examples of forces: the weight of
+an object and the forces exerted by two persons on the
+ground.</figcaption>
+</figure>
+<p>Two vectors are considered equal if their magnitude and direction
+are the same. In the example in figure 1.1, the two forces <math id="eqn9" display="inline"><mrow><msub><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math>
+and <math id="eqn10" display="inline"><mrow><msub><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math> might be equal if they have the same magnitude and
+direction.</p>
+</section>
+<section>
+<h2>1.2 Addition of vectors</h2>
+<p>The sum of two vectors is defined as another vector which can be
+obtained by placing one of the vectors after the other and then
+joining the initial point of the first vector with the final point of
+the second one. The right-hand side of figure 1.2 shows the sum
+<math id="eqn11" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> of two vectors <math id="eqn12" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn13" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>, which was
+obtained by displacing <math id="eqn14" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> until its initial point is at the
+final point of <math id="eqn15" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.</p>
+<figure class="center" id="vectors-addition">
+<img class="fig" src="img/vectors-addition.png" style="width:20.391em;max-width:100%;height:auto">
+<figcaption><b>Figure 1.2:</b> Addition of two vectors <math id="eqn16" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and
+<math id="eqn17" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.</figcaption>
+</figure>
+<p>In the case of forces, the vector sum of two forces gives a force
+that produces the same effect as the two forces combined.</p>
+<div class="example" id="ex1.1">
+<span class="example_heading">Example 1.1</span>
+<p>Two forces are applied on the two sides of a string that passes
+though a pulley, as shown in the figure.</p>
+<img class="fig center" src="img/vectors-pulley.png"
+     style="width:11.487em;max-width:100%;height:auto">
+<p>If the friction on the pulley's axis is negligible, the magnitude
+of the forces on both sides of the string are equal (tension on the
+string) and in this case it was measured to be 400 N. Find the total
+force exerted by the string on the pulley.</p>
+</div>
+<p><b>Solution:</b> The following figure shows the sum <math id="eqn18" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> of the
+two forces, obtained by placing <math id="eqn19" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math> after
+<math id="eqn20" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math>.</p>
+<img class="fig center" src="img/vectors-pulley_solution.png"
+     style="width:15.309em;max-width:100%;height:auto">
+<p>The distances PR and RS are equal and in units of N, they are both
+400. Thus, distances PQ and QR will be:</p>
+<div class="eqnalign">
+<math id="eqn21" display="inline"><mrow><mrow><mrow><mi mathvariant="normal">P</mi><mi mathvariant="normal">Q</mi></mrow><mo>&#x0003D;</mo><mn>400</mn><mspace width="0.167em" /><mi>cos</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mn>200</mn><msqrt><mrow><mn>3</mn></mrow></msqrt><mspace width="2em" /><mrow><mi mathvariant="normal">Q</mi><mi mathvariant="normal">R</mi></mrow><mo>&#x0003D;</mo><mn>400</mn><mspace width="0.167em" /><mi>sin</mi><msup><mn>30</mn><mo>&#x02218;</mo></msup><mo>&#x0003D;</mo><mn>200</mn></mrow></mrow></math>
+</div>
+<p>and the distance QS is then <math id="eqn22" display="inline"><mrow><mrow><mi mathvariant="normal">Q</mi><mi mathvariant="normal">R</mi></mrow><mo>&#x0002B;</mo><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">S</mi></mrow><mo>&#x0003D;</mo><mn>600</mn></mrow></math>. The
+magnitude of the total force is the hypotenuse of the triangle PQR
+which is obtained from Pythagoras theorem:</p>
+<div class="eqnalign">
+<math id="eqn23" display="inline"><mrow><mrow><mi>F</mi><mo>&#x0003D;</mo><msqrt><mrow><msup><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mn>200</mn><msqrt><mrow><mn>3</mn></mrow></msqrt><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mn>2</mn></msup><mo>&#x0002B;</mo><msup><mn>600</mn><mn>2</mn></msup></mrow></msqrt><mo>&#x0003D;</mo><mn>692.8</mn><mspace width="0.278em" /><mi>&#x0004E;</mi></mrow></mrow></math>
+</div>
+<p>It is easy to see that the direction of the total force <math id="eqn24" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>
+will have to be 30° above the horizontal, since it has to make the
+same angle with the directions of <math id="eqn25" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>1</mn></msub></mrow></math> and <math id="eqn26" display="inline"><mrow><msub><mover><mrow><mi>T</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mn>2</mn></msub></mrow></math>, because
+they both have the same magnitude. If you are not convinced you can
+compute the angles of the triangle PQS above.</p>
+<hr class="thin">
+<p>The addition of vectors has the following four important
+properties:</p>
+<table class="center border" style="padding:8pt">
+<tbody>
+<tr><td class="left">Commutative law:</td>
+<td class="left"><math id="eqn27" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td></tr>
+<tr><td class="left">Associative law:</td>
+<td class="left"><math id="eqn28" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0002B;</mo><mover><mrow><mi>C</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td></tr>
+<tr><td class="left">Existence of a vector zero:&emsp;</td>
+<td class="left"><math id="eqn29" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mover><mrow><mn>0</mn></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0003D;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td></tr>
+<tr><td class="left">Existence of negatives:</td>
+<td class="left"><math id="eqn30" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo>&#x0002B;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mo>&#x02212;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mo>&#x0003D;</mo><mover><mrow><mn>0</mn></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math></td></tr>
+</tbody>
+</table>
+</div>
+<p>Tthe commutative law can be shown by completing a parallelogram
+with the two vectors <math id="eqn31" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and <math id="eqn32" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> as shown in figure
+1.3. The sum of the vectors is the diagonal of the parallelogram,
+which is obtained by either placing <math id="eqn33" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> after <math id="eqn34" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> or by
+placing <math id="eqn35" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> after <math id="eqn36" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.</p>
+<figure class="center" id="vectors-parallelogram">
+<img class="fig" src="img/vectors-parallelogram.png" style="width:9.891em;max-width:100%;height:auto">
+<figcaption><b>Figure 1.3:</b> Parallelogram rule for the addition of vectors.</figcaption>
+</figure>
+<p>The <span class="concept">vector zero</span>, <math id="eqn37" display="inline"><mrow><mover><mrow><mn>0</mn></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is the only
+vector than when added to any vector <math id="eqn38" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> will not change that
+vector. It is unique and it has magnitude equal to zero; it is also
+the only vector that has no direction. For any vector <math id="eqn39" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> there
+is always a unique vector, called
+its <span class="concept">negative</span>, such that when added to
+<math id="eqn40" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> the result will be the vector zero. The negative of
+<math id="eqn41" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> is denoted <math id="eqn42" display="inline"><mrow><mo>&#x02212;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> and it is easy to see that it must be
+a vector with the same magnitude <math id="eqn43" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover><mo stretchy="false">&#x0007C;</mo></mrow></math>, but with opposite
+direction to <math id="eqn44" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math> (see figure 1.4).</p>
+<figure class="center" id="vectors-negative">
+<img class="fig" src="img/vectors-negative.png" style="width:7.140em;max-width:100%;height:auto">
+<figcaption><b>Figure 1.4:</b> Negative of a vector <math id="eqn45" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">&#x02192;</mo></mover></mrow></math>.</figcaption>
+</figure>
+<p>In the case of forces, the uniqueness of the negative means that
+the only way to suppress the effect of a force is by adding another
+force with the same magnitude but opposite direction.</p>
+<div class="example" id="ex1.2">
+<span class="example_heading">Example 1.2</span>
+<p>A box weighing 50 N is hanged from the ceiling by two strings, as
+shown in the figure. Find the forces in the two strings.</p>
+<img class="fig center" src="img/vectors-equilibrium.png"
+     style="width:19.950em;max-width:100%;height:auto;padding-bottom:12pt">
+<br>
+</div>
+</section>
+<footer>
+<p>&copy; 2025, Jaime E. Villate</p>
+<p>This work is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/"
+rel="license">Creative Commons Attribution-ShareAlike 4.0
+International License</a>.</p>
+<span>Last modified: 2025/02/10 13:07:26 UTC</span>
+</footer>
+</body>
+</html>
