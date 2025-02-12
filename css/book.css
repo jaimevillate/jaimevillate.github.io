@@ -1,8 +1,16 @@
 /*
    Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-02-11
+   Version: 2025-02-12
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
+
+   The TeX Gyre Schola fonts are released under the GUST font license,
+   which is legally equivalent to the LaTeX Project Public License.
+
+   The WOFF fonts have been obtained from
+   http://www.gust.org.pl/projects/e-foundry/ and are icensed under the
+   GUST Font License (GFL), which is legally identical to the
+   LaTeX Public Project License.
 */
 
 * { box-sizing: border-box; }
@@ -697,4 +705,23 @@ figure {
     main section {
         width: 80%;
     }
+}
+@media print {
+    header {
+        background-color: white;
+        color: black;
+    }
+    header h1 {
+        font-size: 2em;
+        color: black;
+    }
+    header h2 {
+        font-size: 1.5em;
+        color: black;
+    }
+    footer {
+        color: black;
+        background-color: white;
+    }
+    .menubtn { display: none; }
 }
