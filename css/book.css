@@ -133,8 +133,8 @@ header a { color: #bbccff; }
 }
 .note-content {
     display:none;
-    max-width: 70%;
-    left:15%;
+    max-width: 90%;
+    left:5%;
     text-align:left;
     background-color: white;
     padding: 0.5em 1em 0.5em 1.5em;
@@ -724,6 +724,10 @@ figure {
     }
     main section {
         width: 80%;
+    }
+    .note-content {
+        max-width: 70%;
+        left:15%;
     }
 }
 @media print {
