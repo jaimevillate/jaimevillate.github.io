@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mechanics - Vector components</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="alternate icon" href="../img/favicon.ico">
+</head>
+<body id="top">
+<header style="background-image:url(../img/projetil.png);
+               background-repeat:no-repeat;
+               background-position:right center">
+<h1>Vector components</h1>
+<p>Jaime E. Villate. Topics of Mechanics,<br>
+University of Porto, Portugal, 2025.</p>
+</header>
+<div class="menu">
+<button class="menubtn">&#9776;</button>
+<div class="menu-content">
+<a href="../index.html">Home</a>
+<a href="../courses/index.html">Courses</a>
+<a href="../courses/leq007/index.html">L.EQ007</a>
+<a href="index.html">Mechanics</a>
+</div>
+</div>
+<section>
+<h2>2.1 Unit vectors</h2>
+<p>
+A <span class="concept">unit vector</span> is a vector with magnitude
+equal to 1. Thus, what characterizes different unit vectors is their
+direction and any possible direction in space can be characterized by
+a unit vector. If we divide a vector <math id="eqn1" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> by its magnitude, the
+result is a unit vector, in the direction of <math id="eqn2" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>, which we will
+dubbed as <math id="eqn3" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>, with a circumflex accent rather than an arrow, to
+distinguish it from <math id="eqn4" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>:
+</p>
+<div class="eqnalign">
+<math id="eqn5" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow><mrow><mi>A</mi></mrow></mfrac></mstyle></mrow></math>
+<div class="eqn">
+(2.1)
+</div>
+</div>
+<p>
+Vector <math id="eqn6" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> is then characterize with a positive scalar <math id="eqn7" display="inline"><mrow><mi>A</mi></mrow></math>, its
+magnitude, and a unit vector <math id="eqn8" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> which defines its direction
+(see figure 2.1). The vector is the product of its magnitude and its
+unit vector: <math id="eqn9" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mi>A</mi><mspace width="0.167em" /><mover><mrow><mi>A</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>.
+</p>
+<figure class="center" id="vectors-unit_vector">
+<img class="fig" src="img/vectors-unit_vector.png"
+     style="width:7.182em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 2.1</b>: Unit vector <math id="eqn10" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> in the direction of a vector
+<math id="eqn11" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>.
+</figcaption>
+</figure>
+</section>
+<section>
+<h2>2.2 Vectors on a plane</h2>
+<p>
+If we choose a particular direction on the plane and call the unit
+vector in that direction <math id="eqn12" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>, any other unit vectors
+<math id="eqn13" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>, <math id="eqn14" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>, etc. can be defined with just one number, the
+angle between those unit vectors and <math id="eqn15" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>. In figure 2.2,
+the unit vector <math id="eqn16" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> makes and angle <math id="eqn17" display="inline"><mrow><mi>α</mi></mrow></math> with the vector
+<math id="eqn18" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>, in the counter clock-wise direction. Rotating an angle
+<math id="eqn19" display="inline"><mrow><mi>α</mi></mrow></math> from the direction of <math id="eqn20" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> in the clock-wise
+direction leads to another direction different from <math id="eqn21" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>; to
+distinguish those two directions, we give a positive sign to one of
+them and a negative sign to the other. The unit vector <math id="eqn22" display="inline"><mrow><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>,
+perpendicular to <math id="eqn23" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> defines the direction in which we
+consider the angle with <math id="eqn24" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> positive. The angle <math id="eqn25" display="inline"><mrow><mi>β</mi></mrow></math> of
+unit vector <math id="eqn26" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> in figure 2.2 is then negative.
+</p>
+<figure class="center" id="vectors-direction_on_a_plane">
+<img class="fig" src="img/vectors-direction_on_a_plane.png"
+     style="width:22.932em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 2.2</b>: Unit vectors and their relation to unit vectors <math id="eqn27" display="inline"><mrow><mover><mrow><mi>i</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>
+and <math id="eqn28" display="inline"><mrow><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>.
+<math id="eqn29" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>.
+</figcaption>
+</figure>
+<p>
+The directions of the two unit vectors <math id="eqn30" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> and
+<math id="eqn31" display="inline"><mrow><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> are usually called the <math id="eqn32" display="inline"><mrow><mi>x</mi></mrow></math> and <math id="eqn33" display="inline"><mrow><mi>y</mi></mrow></math> directions. Notice
+that every direction in space can be defined by a positive or a
+negative angle. In figure 2.3 we show the direction +30°, which is
+the same as the -330° direction, and the direction −120°, which is
+the same as the direction 240°. Here we chose to use values between
+−180° and 180° (between <math id="eqn34" display="inline"><mrow><mo>−</mo><mi>π</mi></mrow></math> and <math id="eqn35" display="inline"><mrow><mi>π</mi></mrow></math> radians).
+</p>
+<figure class="center" id="vectors-plane_quadrants">
+<img class="fig" src="img/vectors-plane_quadrants.png"
+     style="width:22.806em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 2.3</b>: In an <math id="eqn36" display="inline"><mrow><mi>x</mi><mi>y</mi></mrow></math> axes system, all directions can be
+grouped into 4 quadrants.
+</figcaption>
+</figure>
+<p>
+Whatever value you choose for a direction with angle <math id="eqn37" display="inline"><mrow><mi>θ</mi></mrow></math>,
+<math id="eqn38" display="inline"><mrow><mi>cos</mi><mspace width="0.167em" /><mi>θ</mi></mrow></math> and <math id="eqn39" display="inline"><mrow><mi>sin</mi><mspace width="0.167em" /><mi>θ</mi></mrow></math> will give the correct
+values of the projections of a unit vector in that direction along
+the <math id="eqn40" display="inline"><mrow><mi>x</mi></mrow></math> and <math id="eqn41" display="inline"><mrow><mi>y</mi></mrow></math> axes. The projection along the <math id="eqn42" display="inline"><mrow><mi>x</mi></mrow></math> axis, <math id="eqn43" display="inline"><mrow><mi>cos</mi><mspace width="0.167em" /><mi>θ</mi></mrow></math>,
+will be positive if the direction is in the first or fourth
+quadrants (see figure 2.3), or negative if it is in the second or
+third quadrants. The projection along the <math id="eqn44" display="inline"><mrow><mi>y</mi></mrow></math> axis, <math id="eqn45" display="inline"><mrow><mi>sin</mi><mspace width="0.167em" /><mi>θ</mi></mrow></math>,
+is be positive in the first and second quadrants and negative in the
+third and fourth quadrants. Any unit vector <math id="eqn46" display="inline"><mrow><mover><mrow><mi>C</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> can then be
+written as,
+</p>
+<div class="eqnalign">
+<math id="eqn47" display="inline"><mrow><mover><mrow><mi>C</mi></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mi>cos</mi><mspace width="0.167em" /><mi>θ</mi><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mi>sin</mi><mspace width="0.167em" /><mi>θ</mi><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+<div class="eqn">
+(2.2)
+</div>
+</div>
+<p>
+where <math id="eqn48" display="inline"><mrow><mi>θ</mi></mrow></math> is the angle that <math id="eqn49" display="inline"><mrow><mover><mrow><mi>C</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> does with the <math id="eqn50" display="inline"><mrow><mi>x</mi></mrow></math> axis.
+Vector <math id="eqn51" display="inline"><mrow><mover><mrow><mi>C</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>, which is the product of its module <math id="eqn52" display="inline"><mrow><mi>C</mi></mrow></math> times the
+unit vector <math id="eqn53" display="inline"><mrow><mover><mrow><mi>C</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> can be written as the sum of two vectors
+<math id="eqn54" display="inline"><mrow><msub><mover><mrow><mi>C</mi></mrow><mo stretchy="false">→</mo></mover><mi>x</mi></msub></mrow></math> and <math id="eqn55" display="inline"><mrow><msub><mover><mrow><mi>C</mi></mrow><mo stretchy="false">→</mo></mover><mi>y</mi></msub></mrow></math>, in the directions of <math id="eqn56" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> and
+<math id="eqn57" display="inline"><mrow><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>:
+</p>
+<div class="eqnalign">
+<math id="eqn58" display="inline"><mrow><mover><mrow><mi>C</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><msub><mover><mrow><mi>C</mi></mrow><mo stretchy="false">→</mo></mover><mi>x</mi></msub><mo>+</mo><msub><mover><mrow><mi>C</mi></mrow><mo stretchy="false">→</mo></mover><mi>y</mi></msub><mo>=</mo><msub><mi>C</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>C</mi><mi>y</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+<div class="eqn">
+(2.3)
+</div>
+</div>
+<p>
+where <math id="eqn59" display="inline"><mrow><msub><mover><mrow><mi>C</mi></mrow><mo stretchy="false">→</mo></mover><mi>x</mi></msub></mrow></math> and <math id="eqn60" display="inline"><mrow><msub><mover><mrow><mi>C</mi></mrow><mo stretchy="false">→</mo></mover><mi>y</mi></msub></mrow></math> are called the
+<span class="concept">rectangular component vectors</span> of the
+vector and its <span class="concept">rectangular components</span> are
+</p>
+<div class="eqnalign">
+<span class="boxed">
+<math id="eqn61" display="inline"><mrow><msub><mi>C</mi><mi>x</mi></msub><mo>=</mo><mi>C</mi><mspace width="0.167em" /><mi>cos</mi><mspace width="0.167em" /><mi>θ</mi></mrow></math>
+</span>
+&emsp;
+<span class="boxed">
+<math id="eqn62" display="inline"><mrow><msub><mi>C</mi><mi>y</mi></msub><mo>=</mo><mi>C</mi><mspace width="0.167em" /><mi>sin</mi><mspace width="0.167em" /><mi>θ</mi></mrow></math>
+</span>
+<div class="eqn">
+(2.4)
+</div>
+</div>
+<p>
+Conversely, given the rectangular components <math id="eqn63" display="inline"><mrow><msub><mi>C</mi><mi>x</mi></msub></mrow></math> and <math id="eqn64" display="inline"><mrow><msub><mi>C</mi><mi>y</mi></msub></mrow></math> of a
+vector, we can find its magnitude and direction through,
+</p>
+<div class="eqnalign">
+<span class="boxed">
+<math id="eqn65" display="inline"><mrow><mi>C</mi><mo>=</mo><msqrt><mrow><msubsup><mi>C</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>C</mi><mi>y</mi><mn>2</mn></msubsup></mrow></msqrt></mrow></math>
+</span>
+&emsp;
+<span class="boxed">
+<math id="eqn66" display="inline"><mrow><mi>tan</mi><mspace width="0.167em" /><mi>θ</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>C</mi><mi>y</mi></msub></mrow><mrow><msub><mi>C</mi><mi>x</mi></msub></mrow></mfrac></mstyle></mrow></math>
+</span>
+<div class="eqn">
+(2.5)
+</div>
+</div>
+<p>
+But since <math id="eqn67" display="inline"><mrow><mi>tan</mi><mspace width="0.167em" /><mi>θ</mi><mo>=</mo><mi>tan</mi><mo stretchy="false">(</mo><mi>θ</mi><mo>+</mo><mi>π</mi><mo stretchy="false">)</mo></mrow></math>, there will be directions
+in the first and third quadrants with the same value of <math id="eqn68" display="inline"><mrow><mi>tan</mi><mspace width="0.167em" /><mi>θ</mi></mrow></math>
+and the same for directions in the second and fourth quadrant. The
+value of <math id="eqn69" display="inline"><mrow><mi>θ</mi></mrow></math> can then be computed as:
+</p>
+<div class="eqnalign">
+<math id="eqn70" display="inline"><mrow><mrow><mi>θ</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left"><mi>arctan</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>C</mi><mi>y</mi></msub></mrow><mrow><msub><mi>C</mi><mi>x</mi></msub></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mphantom><mrow><mo>+</mo><mi>π</mi></mrow></mphantom></mtd><mtd columnalign="left"><mi>x</mi><mo>≥</mo><mn>0</mn><mphantom><mrow><mo>,</mo><mspace width="0.278em" /><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mphantom></mtd></mtr><mtr><mtd columnalign="left"><mi>arctan</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>C</mi><mi>y</mi></msub></mrow><mrow><msub><mi>C</mi><mi>x</mi></msub></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>+</mo><mi>π</mi></mtd><mtd columnalign="left"><mi>x</mi><mo><</mo><mn>0</mn><mo>,</mo><mspace width="0.278em" /><mi>y</mi><mo>≥</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="left"><mi>arctan</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>C</mi><mi>y</mi></msub></mrow><mrow><msub><mi>C</mi><mi>x</mi></msub></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>−</mo><mi>π</mi></mtd><mtd columnalign="left"><mi>x</mi><mo><</mo><mn>0</mn><mo>,</mo><mspace width="0.278em" /><mi>y</mi><mo><</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow></mrow></math>
+<div class="eqn">
+(2.6)
+</div>
+</div>
+<p>
+Computer programs usually include and extra function to compute inverse
+tangents given two parameters, the two rectangular components,
+returning the result according to equation 2.6.
+</p>
+<h3>2.2.1 Scalar multiplication</h3>
+<p>
+Using the associative property of scalar multiplication, the product of
+scalar <math id="eqn71" display="inline"><mrow><mi>k</mi></mrow></math> by a vector <math id="eqn72" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><msub><mi>A</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+is equal to,
+</p>
+<div class="eqnalign">
+<span class="boxed">
+<math id="eqn73" display="inline"><mrow><mi>k</mi><mspace width="0.167em" /><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mi>k</mi><mspace width="0.167em" /><msub><mi>A</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mi>k</mi><mspace width="0.167em" /><msub><mi>A</mi><mi>y</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+</span>
+<div class="eqn">
+(2.7)
+</div>
+</div>
+<p>
+Thus, each rectangular component is multiplied by the scalar.
+</p>
+<h3>2.2.2 Vector addition in rectangular components</h3>
+<p>
+In rectangular components, the sum of <math id="eqn74" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> and
+<math id="eqn75" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> is,
+</p>
+<div class="eqnalign">
+<math id="eqn76" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover><mo>+</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><msub><mi>A</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>B</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>B</mi><mi>y</mi></msub><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+</div>
+<p>
+And using the commutative property of vector addition and the
+distributive law of scalar multiplication, we arrive at the result:
+</p>
+<div class="eqnalign">
+<span class="boxed">
+<math id="eqn77" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover><mo>+</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msub><mi>A</mi><mi>x</mi></msub><mo>+</mo><msub><mi>B</mi><mi>x</mi></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msub><mi>A</mi><mi>y</mi></msub><mo>+</mo><msub><mi>B</mi><mi>y</mi></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+</span>
+<div class="eqn">
+(2.8)
+</div>
+</div>
+<p>
+Namely, each rectangular component of the sum is equal to the sum of
+the corresponding components of vectors <math id="eqn78" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> and
+<math id="eqn79" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>. Figure 2.4 shows the vectors (in red), their component
+vectors (in blue) and the sum the vectors (in red). The same result is
+obtained by adding the vectors or by adding their component vectors
+instead.
+</p>
+<figure class="center" id="vectors-components_sum">
+<img class="fig" src="img/vectors-components_sum.png"
+     style="width:18.837em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 2.4</b>: The sum of two vectors is equal to the sum of their
+rectangular component vectors.
+</figcaption>
+</figure>
+<div class="example">
+<span class="example_heading">Example 2.1</span>
+<p>
+A plane moves 580 km in direction 56° north of the east during its
+first hour of flight and 740 km in direction 28° south of the west
+during its second hour of flight. Find the total displacement of the
+plane during those two hours, giving its magnitude and direction.
+</p>
+</div>
+<p>
+<b>Solution</b>: The following diagram shows the plane's displacements
+<math id="eqn80" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> and <math id="eqn81" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> during the first and the second hour, using
+<math id="eqn82" display="inline"><mrow><mi>x</mi></mrow></math> axis in the east direction and <math id="eqn83" display="inline"><mrow><mi>y</mi></mrow></math> axis in the north direction.
+</p>
+<img class="fig center" src="img/vectors-example_plane.png"
+     style="width:16.212em;max-width:100%;height:auto">
+<p>
+The rectangular components of those vectors, in km, are then,
+</p>
+<div class="eqnalign">
+<math id="eqn84" display="inline"><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>=</mo><mn>580</mn><mspace width="0.167em" /><mi>cos</mi><mspace width="0.167em" /><msup><mn>56</mn><mo>∘</mo></msup><mo>=</mo><mn>324.33</mn></mrow></math>&emsp;&emsp;<math id="eqn85" display="inline"><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>=</mo><mn>580</mn><mspace width="0.167em" /><mi>sin</mi><mspace width="0.167em" /><msup><mn>56</mn><mo>∘</mo></msup><mo>=</mo><mn>480.84</mn></mrow></math><br>
+<math id="eqn86" display="inline"><mrow><msub><mi>B</mi><mi>x</mi></msub><mo>=</mo><mn>740</mn><mspace width="0.167em" /><mi>cos</mi><mo stretchy="false">(</mo><mo>−</mo><msup><mn>152</mn><mo>∘</mo></msup><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mn>653.38</mn></mrow></math>&emsp;&emsp;<math id="eqn87" display="inline"><mrow><msub><mi>B</mi><mi>y</mi></msub><mo>=</mo><mn>740</mn><mspace width="0.167em" /><mi>sin</mi><mo stretchy="false">(</mo><mo>−</mo><msup><mn>152</mn><mo>∘</mo></msup><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mn>347.41</mn></mrow></math>
+</div>
+<p>
+And the total displacement is the sum of the two vectors:
+</p>
+<div class="eqnalign">
+<math id="eqn88" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover><mo>+</mo><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mo stretchy="false">(</mo><mn>324.33</mn><mo>−</mo><mn>653.38</mn><mo stretchy="false">)</mo><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mo stretchy="false">(</mo><mn>480.84</mn><mo>−</mo><mn>347.41</mn><mo stretchy="false">)</mo><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+<math id="eqn89" display="inline"><mrow><mo>=</mo><mo>−</mo><mn>329.0</mn><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mn>133.4</mn><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+</div>
+<p>
+The magnitude of that total displacement is,
+</p>
+<div class="eqnalign">
+<math id="eqn90" display="inline"><mrow><msqrt><mrow><msup><mn>329.0</mn><mn>2</mn></msup><mo>+</mo><msup><mn>133.4</mn><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mn>355</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">m</mi></mrow></mrow></math>
+</div>
+<p>
+And the angle it makes with the east direction is,
+</p>
+<div class="eqnalign">
+<math id="eqn91" display="inline"><mrow><mi>arctan</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>133.4</mn></mrow><mrow><mo>−</mo><mn>329.0</mn></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>+</mo><msup><mn>180</mn><mo>∘</mo></msup><mo>=</mo><msup><mn>158</mn><mo>∘</mo></msup></mrow></math>
+</div>
+<p>
+Namely, the total displacement was 22° north of the west.
+</p>
+<h3>2.2.3 Dot product in rectangular components</h3>
+<p>
+To derive the expression of the dot product in rectangular components,
+we first notice that since both <math id="eqn92" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> and <math id="eqn93" display="inline"><mrow><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> have
+magnitude equal to 1 and they are perpendicular to each other, we then
+have,
+</p>
+<div class="eqnalign">
+<math id="eqn94" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mi>·</mi><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mn>1</mn></mrow></math>&emsp;<math id="eqn95" display="inline"><mrow><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mi>·</mi><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mn>1</mn></mrow></math>&emsp;<math id="eqn96" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mi>·</mi><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mn>0</mn></mrow></math>
+<div class="eqn">
+(2.9)
+</div>
+</div>
+<p>
+We can then apply the distributive law for the dot product:
+</p>
+<div class="eqnalign">
+<math id="eqn97" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover><mi>·</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msub><mi>A</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mi>·</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msub><mi>B</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>B</mi><mi>y</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mrow></math><br>
+<math id="eqn98" display="inline"><mrow><mo>=</mo><msub><mi>A</mi><mi>x</mi></msub><msub><mi>B</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mi>·</mi><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>A</mi><mi>x</mi></msub><msub><mi>B</mi><mi>y</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mi>·</mi><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><msub><mi>B</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mi>·</mi><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><msub><mi>B</mi><mi>y</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mi>·</mi><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+</div>
+<p>
+Which leads us to the result,
+</p>
+<div class="eqnalign">
+<span class="boxed">
+<math id="eqn99" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover><mi>·</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><msub><mi>A</mi><mi>x</mi></msub><mspace width="0.167em" /><msub><mi>B</mi><mi>x</mi></msub><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><mspace width="0.167em" /><msub><mi>B</mi><mi>y</mi></msub></mrow></math>
+</span>
+<div class="eqn">
+(2.10)
+</div>
+</div>
+<h3>2.2.4 Cross product in rectangular components</h3>
+<p>
+Since the cross product of any vector with itself is zero, in
+particular we have,
+</p>
+<div class="eqnalign">
+<math id="eqn100" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mi>×</mi><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mover><mrow><mn>0</mn></mrow><mo stretchy="false">→</mo></mover></mrow></math>&emsp;
+<math id="eqn101" display="inline"><mrow><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mi>×</mi><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mover><mrow><mn>0</mn></mrow><mo stretchy="false">→</mo></mover></mrow></math>&emsp;
+<math id="eqn102" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mi>×</mi><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+<div class="eqn">
+(2.11)
+</div>
+</div>
+<p>
+Where <math id="eqn103" display="inline"><mrow><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> is the unit vector perpendicular to the plane <math id="eqn104" display="inline"><mrow><mi>x</mi><mi>y</mi></mrow></math>, in
+the direction of the right-hand rule from <math id="eqn105" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> to
+<math id="eqn106" display="inline"><mrow><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> (see figure 2.5).
+</p>
+<figure class="center" id="vectors-vector_k">
+<img class="fig" src="img/vectors-vector_k.png"
+     style="width:14.028em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 2.5</b>: Vectors <math id="eqn107" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> and <math id="eqn108" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> on the plane of
+<math id="eqn109" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> and <math id="eqn110" display="inline"><mrow><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> whose perpendicular unit-vector is
+<math id="eqn111" display="inline"><mrow><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>.
+</figcaption>
+</figure>
+<p>
+In rectangular coordinates, the cross product between vectors
+<math id="eqn112" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> and <math id="eqn113" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> is,
+</p>
+<div class="eqnalign">
+<math id="eqn114" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover><mi>×</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msub><mi>A</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mi>×</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msub><mi>B</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>B</mi><mi>y</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mrow></math><br>
+<math id="eqn115" display="inline"><mrow><mo>=</mo><msub><mi>A</mi><mi>x</mi></msub><msub><mi>B</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mi>×</mi><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>A</mi><mi>x</mi></msub><msub><mi>B</mi><mi>y</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mi>×</mi><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><msub><mi>B</mi><mi>x</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mi>×</mi><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><msub><mi>B</mi><mi>y</mi></msub><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mi>×</mi><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+</div>
+<p>
+And the result is:
+</p>
+<div class="eqnalign">
+<span class="boxed">
+<math id="eqn116" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover><mi>×</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mo stretchy="false">(</mo><msub><mi>A</mi><mi>x</mi></msub><mspace width="0.167em" /><msub><mi>B</mi><mi>y</mi></msub><mo>−</mo><msub><mi>A</mi><mi>y</mi></msub><mspace width="0.167em" /><msub><mi>B</mi><mi>x</mi></msub><mo stretchy="false">)</mo><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+</span>
+<div class="eqn">
+(2.12)
+</div>
+</div>
+<p>
+Therefore, the magnitude of the cross product between the two vectors
+can be written as the absolute value of a determinant where the fist
+row are the rectangular components of <math id="eqn117" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> and the second row are
+the rectangular components of <math id="eqn118" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>:
+</p>
+<div class="eqnalign">
+<math id="eqn119" display="inline"><mrow><mo stretchy="false">|</mo><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover><mi>×</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover><mo stretchy="false">|</mo><mo>=</mo><mtext>absolute value of </mtext><mrow><mo stretchy="true" fence="true" form="prefix">|</mo><mtable><mtr><mtd columnalign="center"><msub><mi>A</mi><mi>x</mi></msub></mtd><mtd columnalign="center"><msub><mi>A</mi><mi>y</mi></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>B</mi><mi>x</mi></msub></mtd><mtd columnalign="center"><msub><mi>B</mi><mi>y</mi></msub></mtd></mtr></mtable><mo stretchy="true" fence="true" form="postfix">|</mo></mrow></mrow></math>
+<div class="eqn">
+(2.13)
+</div>
+</div>
+<p>
+If the determinant above is positive, the cross product
+<math id="eqn120" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover><mi>×</mi><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> is in the direction <math id="eqn121" display="inline"><mrow><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> and if it is
+negative, the cross product is in the direction <math id="eqn122" display="inline"><mrow><mo>−</mo><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>.
+</p>
+</section>
+<section>
+<h2>2.3 Vectors in space</h2>
+</section>
+<section>
+<h2>2.4 Position</h2>
+</section>
+<section>
+<h2>Problems</h2>
+<ol class="problems spacious">
+<li>
+A methane molecule (<math id="eqn123" display="inline"><mrow><msub><mrow><mi mathvariant="normal">C</mi><mi mathvariant="normal">H</mi></mrow><mn>4</mn></msub></mrow></math>) is composed of a carbon atom
+bound to 4 hydrogen atoms. The hydrogen atoms arrange themselves so
+that they are as far apart as possible in a symmetric arrangement, as
+shown in the following figure.
+<img class="fig center" src="img/methane.png"
+     style="width:7.749em;max-width:100%;height:auto">
+<ol class="probitems">
+<li>
+Prove that if the carbon atom is placed at the origin, the four
+hydrogen atoms could be placed in the directions:
+<div class="eqnalign">
+<math id="eqn124" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover><mspace width="2em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover><mspace width="2em" /></mrow></math>
+<math id="eqn125" display="inline"><mrow><mo>−</mo><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover><mspace width="2em" /><mo>−</mo><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>.
+</div>
+</li>
+<li>
+Knowing that the distance between the carbon atom and any of the
+hydrogen atoms is 108.70 pm, find the distance between any two
+hydrogen atoms.
+</li>
+<li>
+Find the angle between any two carbon-hydrogen bonds.
+</li>
+</ol>
+<span class="note"><button class="menubtn">Answer</button>
+<span class="note-content">
+<em>b</em>. 177.5 pm. <em>c</em> 109.47°.
+</span>
+</span>
+</li>
+<li>
+A missile is following a straight-line trajectory. It is initially detected
+in a radar station at position
+<math id="eqn126" display="inline"><mrow><mn>87.188</mn><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mn>29.064</mn><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mn>232.494</mn><mspace width="0.167em" /><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+(distances in km) and some time later is is observed at
+<math id="eqn127" display="inline"><mrow><mn>43.595</mn><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mn>14.533</mn><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mn>116.247</mn><mspace width="0.167em" /><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>.
+<ol class="probitems">
+<li>
+Prove that the missile is approaching the radar station.
+</li>
+<li>
+Find the closest distance from the radar station that the missile will
+reach if it continues in its straight-line trajectory.
+</li>
+</ol>
+<span class="note"><button class="menubtn">Answer</button>
+<span class="note-content">
+<em>b</em>. 3 m.
+</span>
+</span>
+</li>
+</ol>
+</section>
+<footer>
+<p>&copy; 2025, Jaime E. Villate</p>
+<p>This work is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/"
+rel="license">Creative Commons Attribution-ShareAlike 4.0
+International License</a>.</p>
+<span>Last modified: 2025/02/16 12:10:53 UTC</span>
+</footer>
+</body>
+</html>
