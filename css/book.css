@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-02-13
+   Version: 2025-02-17
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 
@@ -67,7 +67,7 @@ a:hover, span.button:hover {
     background-color: #546284;
     color: #bbccff;
 }
-.clearfix:after, main:after, section:after, header:after, div.site-map::before, div.site-map:after, div.example:after {
+.clearfix:after, main:after, section:after, header:after, div.site-map::before, div.site-map:after, div.example:after, div.eqnalign:after {
     content: "";
     display: table;
     clear: both;
