@@ -367,7 +367,7 @@ estimativa muito rudimentar consiste em dizer que <math id="eqn152" display="inl
 <p>
 Com essa abordagem, a resolução da mesma equação <math id="eqn154" display="inline"><mrow><mi>y</mi><mi>′</mi><mo>=</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo>−</mo><mi>y</mi></mrow></math>
 considerada na secção anterior, com valor inicial <math id="eqn155" display="inline"><mrow><mi>y</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mrow></math> e com 5
-pontos no intervalo 0 &le; <math id="eqn156" display="inline"><mrow><mi>x</mi><mi>&</mi><mi>l</mi><mi>e</mi><mi>;</mi><mn>4</mn></mrow></math>, pode ser feita assim: começa-se
+pontos no intervalo <math id="eqn156" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>4</mn></mrow></math>, pode ser feita assim: começa-se
 por iniciar a lista de pontos e definir a função que calcula o declive
 </p>
 <pre>
@@ -399,15 +399,15 @@ resultado é muito melhor que o resultado obtido com o método de Euler.
      style="width:21.357em;max-width:100%;height:auto">
 <figcaption>
 <b>Figura 3.5:</b> Solução exata e solução obtida com o método usado
-em <span class="maxp">(%i15)</span>.
+em <span class="maxp"><kbd>(%i15)</kbd></span>.
 </figcaption>
 </figure>
 <p>
-O resultado obtido com <span class="maxp">(%i15)</span> pode ser
+O resultado obtido com <span class="maxp"><kbd>(%i15)</kbd></span> pode ser
 melhorado se a estimativa inicial <math id="eqn159" display="inline"><mrow><msub><mi>y</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>y</mi><mi>i</mi></msub></mrow></math> for melhorada com o
 resultado obtido a partir dessa primeira estimativa.  Se designarmos
 <math id="eqn160" display="inline"><mrow><msub><mi>y</mi><mrow><mn>1</mn><mo>,</mo><mn>0</mn></mrow></msub></mrow></math> à primeira estimativa do valor de <math id="eqn161" display="inline"><mrow><msub><mi>y</mi><mn>1</mn></msub></mrow></math>, então
-<math id="eqn162" display="inline"><mrow><msub><mi>y</mi><mrow><mn>1</mn><mo>,</mo><mn>0</mn></mrow></msub><mo>=</mo><msub><mi>y</mi><mn>0</mn></msub></mrow></math>, como foi usado em <span class="maxp">(%i15)</span>. A
+<math id="eqn162" display="inline"><mrow><msub><mi>y</mi><mrow><mn>1</mn><mo>,</mo><mn>0</mn></mrow></msub><mo>=</mo><msub><mi>y</mi><mn>0</mn></msub></mrow></math>, como foi usado em <span class="maxp"><kbd>(%i15)</kbd></span>. A
 segunda estimativa é: <math id="eqn163" display="inline"><mrow><msub><mi>y</mi><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>y</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi><mspace width="0.167em" /><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>y</mi><mrow><mn>1</mn><mo>,</mo><mn>0</mn></mrow></msub><mo stretchy="false">)</mo></mrow></math>. Esse valor
 estará mais próximo do valor real de <math id="eqn164" display="inline"><mrow><msub><mi>y</mi><mn>1</mn></msub></mrow></math> do que a estimativa inicial
 <math id="eqn165" display="inline"><mrow><msub><mi>y</mi><mrow><mn>1</mn><mo>,</mo><mn>0</mn></mrow></msub></mrow></math>; assim sendo, espera-se que a sequência
@@ -420,7 +420,7 @@ intervalo e o processo repete-se iterativamente em todo o intervalo de
 </p>
 <p>
 No caso do mesmo problema resolvido
-em <span class="maxp">(%i15)</span>, com <math id="eqn171" display="inline"><mrow><mi>h</mi><mo>=</mo><mn>1</mn></mrow></math> e usando precisão de
+em <span class="maxp"><kbd>(%i15)</kbd></span>, com <math id="eqn171" display="inline"><mrow><mi>h</mi><mo>=</mo><mn>1</mn></mrow></math> e usando precisão de
 0.0001 para <math id="eqn172" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>y</mi><mrow><mn>1</mn><mo>,</mo><mi>n</mi></mrow></msub><mo>−</mo><msub><mi>y</mi><mrow><mn>1</mn><mo>,</mo><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">|</mo></mrow></math>, o método pode ser implementado
 assim:
 </p>
@@ -530,7 +530,7 @@ próximo da solução exata da equação.
 <p>
 Para aplicar este método à mesma equação <math id="eqn184" display="inline"><mrow><mi>y</mi><mi>′</mi><mo>=</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo>−</mo><mi>y</mi></mrow></math>
 considerada nas secções anteriores, com valor inicial <math id="eqn185" display="inline"><mrow><mi>y</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> = 1 e com
-5 pontos no intervalo <math id="eqn186" display="inline"><mrow><mn>0</mn><mi>&</mi><mi>l</mi><mi>e</mi><mi>;</mi><mi>x</mi><mi>&</mi><mi>l</mi><mi>e</mi><mi>;</mi><mn>4</mn></mrow></math>, inicia-se a lista de pontos (a
+5 pontos no intervalo <math id="eqn186" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>4</mn></mrow></math>, inicia-se a lista de pontos (a
 função que define o declive em cada ponto é a função <math id="eqn187" display="inline"><mrow><mi>f</mi></mrow></math> que já está
 definida)
 </p>
@@ -588,9 +588,9 @@ acima, bastava indicar a expressão de <math id="eqn194" display="inline"><mrow>
 a variável dependente, o seu valor inicial e o intervalo em que se
 quer obter a solução, incluindo o valor dos incrementos <math id="eqn195" display="inline"><mrow><mi>h</mi></mrow></math>. Assim
 sendo, a mesma lista obtida com os
-comandos <span class="maxp">(%i17)</span>
-até <span class="maxp">(%i21)</span> podia ser obtida com um único
-comando:
+comandos <span class="maxp"><kbd>(%i17)</kbd></span>, <span class="maxp"><kbd>(%i21)</kbd></span>, <span class="maxp"><kbd>(%i22)</kbd></span>
+e <span class="maxp"><kbd>(%i23)</kbd></span> podia ser obtida com um
+único comando:
 </p>
 <pre>
 <span class="maxp">(%i25)</span> <span class="maxi">rk ((x-1)*(x-3)-y, y, 1, [x, 0, 4, 1]);</span><br>
@@ -613,9 +613,9 @@ função vetorial.
 Usando o método de Runge-Kutta de quarta ordem, encontre a solução do
 seguinte sistema de equações diferenciais:
 </p>
-<math id="eqn198" display="block"><mrow><mrow><mrow><mo stretchy="true" fence="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mn>4</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mspace width="0.167em" /><msup><mi>y</mi><mn>2</mn></msup></mtd></mtr><mtr><mtd columnalign="left"><mo stretchy="false">[</mo><mn>4pt</mn><mo stretchy="false">]</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><msup><mi>y</mi><mn>2</mn></msup><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mtd></mtr></mtable></mrow></mrow></mrow></math>
+<math id="eqn198" display="block"><mrow><mrow><mrow><mo stretchy="true" fence="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mn>4</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mspace width="0.167em" /><msup><mi>y</mi><mn>2</mn></msup></mtd></mtr><mtr><mtd columnalign="left"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><msup><mi>y</mi><mn>2</mn></msup><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mtd></mtr></mtable></mrow></mrow></mrow></math>
 <p>
-no intervalo, <math id="eqn199" display="inline"><mrow><mn>0</mn><mi>&</mi><mi>l</mi><mi>e</mi><mi>;</mi><mi>t</mi><mi>&</mi><mi>l</mi><mi>e</mi><mi>;</mi><mn>4</mn></mrow></math>, com condições iniciais <math id="eqn200" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mo>−</mo><mn>1.25</mn></mrow></math>
+no intervalo, <math id="eqn199" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>4</mn></mrow></math>, com condições iniciais <math id="eqn200" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mo>−</mo><mn>1.25</mn></mrow></math>
 e <math id="eqn201" display="inline"><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>=</mo><mn>0.75</mn></mrow></math>, em <math id="eqn202" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></math>.
 </p>
 </div>
@@ -749,7 +749,7 @@ Os resultados ficam gravados no ficheiro <kbd>resultados.csv</kbd>
 <footer>
 <p>&copy; 2016-2025, Jaime E. Villate</p>
 <p>Publicado nos termos da <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição-Partilha</a> (versão 4.0).</p>
-<span>Última modificação: 2025/03/08 12:10:45 UTC</span>
+<span>Última modificação: 2025/03/08 12:57:59 UTC</span>
 </footer>
 </body>
 </html>
