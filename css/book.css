@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-02-17
+   Version: 2025-02-22
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 
@@ -509,7 +509,7 @@ div.maxima {
     border: 1px solid #000099;
     line-height: 2em;
     word-wrap: break-word;
-    background-color:  #eeeedc;
+    background-color:  #faf2dc;
     border-radius: 10px;
     padding: 0.5em;
 }
@@ -534,10 +534,12 @@ pre.prog span.line::before {
 }
 pre {
     border: 1px solid #29639e;
-    line-height: 1.5em;
+    font-family: Monospace;
+    font-size: 1em;
+    line-height: 1em;
     white-space: pre-wrap;
     padding: 0.5em;
-    background-color: #ddeeff;
+    background-color:  #faf2dc;
     border-radius: 10px;
 }
 div.eqn { float: right; }
@@ -563,22 +565,8 @@ p.credits {
     font-size: 0.7em;
     color:#333;
 }
-span.maxv { color: #006699; }
-span.maxn { color: #006633; }
-span.maxd { color: black; }
-span.maxo { color: #3f2000; }
-span.maxf { color: #9900cc; }
-span.maxs { color: #cc3333; }
-span.maxk { color: #803300; }
-span.maxm { color: #000099; }
-span.maxi { color: #cc6600; }
-span.pytp { color: #903000; }
-span.pytr { color: #0000cc; }
-span.pytk { color: #ff6600; }
-span.pytc { color: #cc3333; }
-span.pytf { color: #cc00ff; }
-span.pyts { color: #00aa00; }
-span.pyto { color: black; }
+span.maxp { color: #cc3333; }
+span.maxi { color: #000099; }
 ul.plain { list-style-type: none; }
 ol.contents { list-style-position: inside; }
 ol.contents > li::marker {
