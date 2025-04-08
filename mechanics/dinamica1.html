@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leis de Newton</title>
+<link rel="stylesheet" href="../css/book.css">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="alternate icon" href="../img/favicon.ico">
+</head>
+<body id="top">
+<header style="background-image:url(../img/projetil.png);
+               background-repeat:no-repeat;
+               background-position:right center">
+<h1>Leis de Newton</h1>
+<p>Jaime E. Villate. Topics of Mechanics,<br>
+University of Porto, Portugal, 2025.</p>
+</header>
+<div class="menu">
+<button class="menubtn">&#9776;</button>
+<div class="menu-content">
+<a href="../index.html">Home</a>
+<a href="../courses/index.html">Courses</a>
+<a href="../courses/leq007/index.html">L.EQ007</a>
+<a href="index.html">Mechanics</a>
+</div>
+</div>
+<section>
+<h2>Problemas da terceira folha complementar</h2>
+<h3>(Professor Paulo Sá)</h3>
+<p>
+<b>1</b>. Uma partícula de massa 2 kg está sujeita a uma força
+definida pela expressão
+<math id="eqn1" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>4</mn><mi>t</mi><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mn>2</mn><msup><mi>t</mi><mn>2</mn></msup><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> (SI). Sabendo que a
+partícula se encontrava inicialmente em repouso e na origem dos eixos,
+determine os vetores aceleração, velocidade e posição da partícula em
+função do tempo e 8 particularize para o instante <math id="eqn2" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>2</mn></mrow></math> s.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content"><math id="eqn3" display="inline"><mrow><mover><mrow><mi>a</mi></mrow><mo stretchy="false">→</mo></mover><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>=</mo><mn>4</mn><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mn>4</mn><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+(m/s<sup>2</sup>; <math id="eqn4" display="inline"><mrow><mover><mrow><mi>v</mi></mrow><mo stretchy="false">→</mo></mover><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>=</mo><mn>4</mn><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mfrac><mrow><mn>8</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+(m/s); <math id="eqn5" display="inline"><mrow><mover><mrow><mi>r</mi></mrow><mo stretchy="false">→</mo></mover><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mn>8</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mfrac><mrow><mn>4</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+(m)</span>
+</span>
+</p>
+<p>
+<b>2</b>. Uma partícula material de massa 2 g move-se ao longo de uma
+curva definida pelo vetor posição
+<math id="eqn6" display="inline"><mrow><mover><mrow><mi>r</mi></mrow><mo stretchy="false">→</mo></mover><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mn>4</mn><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><msup><mi>t</mi><mn>3</mn></msup><mo stretchy="false">)</mo><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mn>5</mn><mi>t</mi><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mo stretchy="false">(</mo><msup><mi>t</mi><mn>4</mn></msup><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+(cm). Calcule a força que atua na partícula no instante <math id="eqn7" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>2</mn></mrow></math>
+s. Apresente o seu resultado em unidades SI e CGS.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content"><math id="eqn8" display="inline"><mrow><mo>−</mo><mn>8</mn><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mn>96</mn><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> (×10<sup>−5</sup>N)
+<math id="eqn9" display="inline"><mrow><mo>=</mo><mo>−</mo><mn>8</mn><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mn>96</mn><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> (dyn)</span>
+</span>
+</p>
+<p>
+<b>3</b>. Um disco de hóquei com massa de 0.160 kg está em repouso na
+origem (<math id="eqn10" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>) numa superfície horizontal sem atrito. No instante
+<math id="eqn11" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>, um jogador aplica sobre o disco uma força de 0.250 N paralela
+ao eixo <math id="eqn12" display="inline"><mrow><mrow><mi mathvariant="normal">O</mi></mrow><mi>x</mi></mrow></math>; ele continua a aplicar a força até <math id="eqn13" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>2.0</mn></mrow></math> s.
+</p>
+<ol class="probitems">
+<li>
+Qual é a posição e a velocidade do disco no instante <math id="eqn14" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>2.0</mn></mrow></math> s?
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content"><math id="eqn15" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>3.125</mn></mrow></math> m; <math id="eqn16" display="inline"><mrow><mi>v</mi><mo>=</mo><mn>3.125</mn></mrow></math> m/s.</span>
+</span>
+</li>
+<li>
+Se a mesma força for aplicada novamente no intervalo entre <math id="eqn17" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>5.0</mn></mrow></math> s e
+<math id="eqn18" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>7.0</mn></mrow></math> s, qual será a posição e a velocidade do disco no instante
+<math id="eqn19" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>7.0</mn></mrow></math> s?
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content"><math id="eqn20" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>21.875</mn></mrow></math> m; <math id="eqn21" display="inline"><mrow><mi>v</mi><mo>=</mo><mn>6.25</mn></mrow></math> m/s.</span>
+</span>
+</li>
+</ol>
+<p>
+<b>4</b>. Dois adultos e uma criança desejam empurrar uma caixa no
+sentido positivo do eixo dos <math id="eqn22" display="inline"><mrow><mi>x</mi></mrow></math> indicado na figura abaixo
+apresentada. A caixa está apoiada sobre rodas que lhe permitem
+deslocar-se com atrito desprezável na direção horizontal <math id="eqn23" display="inline"><mrow><mi>x</mi></mrow></math>. Os dois
+adultos empurram com forças horizontais <math id="eqn24" display="inline"><mrow><msub><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow></math> e <math id="eqn25" display="inline"><mrow><msub><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></math>
+conforme mostra a figura (os módulos das forças são <math id="eqn26" display="inline"><mrow><msub><mi>F</mi><mn>1</mn></msub><mo>=</mo><mn>100</mn></mrow></math> N e
+<math id="eqn27" display="inline"><mrow><msub><mi>F</mi><mn>2</mn></msub><mo>=</mo><mn>140</mn></mrow></math> N).
+</p>
+<img class="fig center"
+     style="width:10.059em;max-width:100%;height:auto;padding:12pt 0"
+     src="img/dynamics-prob4.png">
+<ol class="probitems">
+<li>
+Determine o módulo, a direção e o sentido da menor força horizontal
+que a criança deve exercer.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content">16.6 N.</span>
+</span>
+</li>
+<li>
+Se a criança exerce a menor força mencionada na alínea <em>a</em>, a
+caixa adquire uma aceleração de 2 m/s<sup>2</sup> no sentido positivo
+de <math id="eqn28" display="inline"><mrow><mi>x</mi></mrow></math>. Qual é o peso da caixa?
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content">839.08 N.</span>
+</span>
+</li>
+</ol>
+<p>
+<b>5</b>. Para cada um dos esquemas representados na figura que se
+segue, determine o valor das tensões nas cordas AC e BC se o corpo M
+tiver um peso de 50 N.
+</p>
+<img class="fig center"
+     style="width:23.856em;max-width:100%;height:auto;padding:12pt 0"
+     src="img/dynamics-prob5.png">
+<p>
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content">(<em>a</em>) 50 N e 70.7 N; (<em>b</em>) 25 N
+e 43.3 N.</span>
+</span>
+</p>
+<p>
+<b>6</b>. Imagine que está a sustentar um livro de 4 N em repouso
+sobre a palma da mão. Complete (ou responda) as seguintes frases:
+</p>
+<ol class="probitems">
+<li>
+Uma força de cima para baixo de módulo igual a 4 N é exercida sobre o livro
+pela <span style="border-bottom:1px solid">&emsp;&emsp;&emsp;&emsp;</span>.
+</li>
+<li>
+Uma força de baixo para cima de módulo <span style="border-bottom:1px
+solid">&emsp;&emsp;&emsp;&emsp;</span>, é exercida
+sobre <span style="border-bottom:1px solid">&emsp;&emsp;&emsp;&emsp;</span>
+palma da mão.
+</li>
+<li>
+É a força de baixo para cima referida em <em>b</em> a reação da força
+de cima para baixo referida em <em>a</em>?
+</li>
+<li>
+A reação da força referida em <em>a</em> é a força de módulo
+<span style="border-bottom:1px solid">&emsp;&emsp;&emsp;&emsp;</span>
+exercida sobre
+<span style="border-bottom:1px solid">&emsp;&emsp;&emsp;&emsp;</span> pelo
+<span style="border-bottom:1px solid">&emsp;&emsp;&emsp;&emsp;</span>.
+O seu sentido é
+<span style="border-bottom:1px solid">&emsp;&emsp;&emsp;&emsp;</span>.
+</li>
+<li>
+A reação da força referida em <em>b</em> é a força de módulo
+<span style="border-bottom:1px solid">&emsp;&emsp;&emsp;&emsp;</span>
+exercida sobre
+<span style="border-bottom:1px solid">&emsp;&emsp;&emsp;&emsp;</span> pelo
+<span style="border-bottom:1px solid">&emsp;&emsp;&emsp;&emsp;</span>.
+</li>
+<li>
+As forças referidas em <em>a</em> e <em>b</em> são iguais e opostas em virtude
+da <span style="border-bottom:1px solid">&emsp;&emsp;&emsp;&emsp;</span>
+lei de Newton.
+</li>
+<li>
+As forças referidas em <em>b</em> e <em>e</em> são iguais e opostas em virtude
+da <span style="border-bottom:1px solid">&emsp;&emsp;&emsp;&emsp;</span>
+lei de Newton.<br>
+Suponha agora que exerce uma força de baixo para cima sobre o livro de módulo igual a 5 N.
+</li>
+<li>
+O livro permanece em equilíbrio?
+</li>
+<li>
+É a força exercida sobre o livro pela mão igual e oposta à força
+exercida sobre o livro pela Terra?
+</li>
+<li>
+É a força exercida sobre o livro pela Terra igual e oposta à força
+exercida sobre a Terra pelo livro?
+</li>
+<li>
+É a força exercida sobre o livro pela sua mão igual e oposta à força
+exercida sobre a mão pelo livro?<br>
+Finalmente, suponha que retira subitamente a mão enquanto o livro se
+move para cima.
+</li>
+<li>
+Quantas forças atuam agora sobre o livro?
+</li>
+<li>
+O livro está em equilíbrio?
+</li>
+</ol>
+<p>
+<b>7</b>. Duas caixas, uma massa de 4.0 kg e outra de 6.0 kg, estão em
+repouso sobre a superfície sem atrito de um lago congelado, ligadas
+por uma corda leve (ver figura). Uma mulher, usando umas sapatilhas de
+sola áspera de modo a não escorregar, puxa horizontalmente a caixa de
+6.0 kg com uma força <math id="eqn29" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> que produz uma aceleração de 2.50
+m/s<sup>2</sup>. A corda que liga as duas massas permanece tensa e
+horizontal durante o movimento descrito.
+</p>
+<img class="fig center"
+     style="width:15.855em;max-width:100%;height:auto;padding:12pt 0"
+     src="img/dynamics-prob7.png">
+<ol class="probitems">
+<li>
+Qual é a aceleração da caixa de 4.0 kg?
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content">2.50 m/s<sup>2</sup>.</span>
+</span>
+</li>
+<li>
+Desenhe um diagrama do corpo livre para a caixa de 4.0 kg. Use esse
+diagrama e a segunda lei de Newton para calcular a tensão <math id="eqn30" display="inline"><mrow><mi>T</mi></mrow></math> na corda
+que liga as duas caixas.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content"><math id="eqn31" display="inline"><mrow><mi>T</mi><mo>=</mo><mn>10</mn></mrow></math> N.</span>
+</span>
+</li>
+<li>
+Desenhe um diagrama do corpo livre para a caixa de 6.0 kg. Qual é a
+direção da força resultante sobre a caixa de 6.0 kg? Qual tem o maior
+módulo, a força <math id="eqn32" display="inline"><mrow><mover><mrow><mi>T</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> ou a força <math id="eqn33" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>?
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content">Horizontal, para a direita; <math id="eqn34" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> tem maior
+módulo</span>
+</span>
+</li>
+<li>
+Use a parte <em>c</em> e a segunda lei de Newton para calcular o
+módulo da força <math id="eqn35" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content">25 N.</span>
+</span>
+</li>
+</ol>
+<p>
+<b>8</b>. De acordo com o esquema representado em baixo, um corpo com
+massa 80 kg está preso por um fio no ponto A. No ponto B do fio
+aplica-se uma força horizontal <math id="eqn36" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>, desviando-o 1 m da
+parede. Sabendo que AB é 2 m, determine a intensidade da força
+<math id="eqn37" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> e o valor da tensão no fio, <math id="eqn38" display="inline"><mrow><msub><mi>T</mi><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">B</mi></mrow></msub></mrow></math>.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content"><math id="eqn39" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mn>452.5</mn></mrow></math> N; <math id="eqn40" display="inline"><mrow><msub><mi>T</mi><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">B</mi></mrow></msub><mo>=</mo><mn>905</mn></mrow></math> N.</span>
+</span>
+</p>
+<img class="fig center"
+     style="width:9.135em;max-width:100%;height:auto;padding:12pt 0"
+     src="img/dynamics-prob8.png">
+<p>
+<b>9</b>. Um trabalhador está a tentar mover uma caixa de 500 N sobre
+um piso plano. Para iniciar o movimento, o trabalhador necessita de
+aplicar uma força horizontal de módulo igual a 230 N. Depois de se
+mover, isto é, após deixar o repouso e iniciar o movimento, a força
+que o trabalhador necessita de exercer para manter o movimento da
+caixa com velocidade constante é de apenas 200 N. Calcule o
+coeficiente de atrito estático e o coeficiente de atrito cinético.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content"><math id="eqn41" display="inline"><mrow><msub><mi>μ</mi><mi>e</mi></msub><mo>=</mo><mn>0.46</mn></mrow></math>; <math id="eqn42" display="inline"><mrow><msub><mi>μ</mi><mi>c</mi></msub><mo>=</mo><mn>0.40</mn></mrow></math>.</span>
+</span>
+</p>
+<p>
+<b>10</b>. Um trabalhador está a tentar mover uma caixa puxando uma
+corda amarrada a esta, que faz um ângulo de 30º com a
+horizontal. Considere que <math id="eqn43" display="inline"><mrow><mi>P</mi><mo>=</mo><mn>500</mn></mrow></math> N é o peso da caixa e <math id="eqn44" display="inline"><mrow><msub><mi>μ</mi><mi>c</mi></msub><mo>=</mo><mn>0.40</mn></mrow></math> o
+coeficiente de atrito cinético entre a superfície da caixa e a
+superfície sobre a qual desliza.
+</p>
+<ol class="probitems">
+<li>
+Qual é a força que o trabalhador deve fazer para manter o movimento
+com velocidade constante?
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content">188 N.</span>
+</span>
+</li>
+<li>
+O esforço que o trabalhador faz é maior ou menor do que no caso em que
+a força é aplicada na horizontal?
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content">Menor; a força horizontal seria 200 N.</span>
+</span>
+</li>
+</ol>
+<p>
+<b>11</b>. Um trenó, cheio de estudantes com uma massa total igual a
+<math id="eqn45" display="inline"><mrow><mi>M</mi></mrow></math>, escorrega para baixo numa encosta coberta de neve. A montanha
+possui uma inclinação <math id="eqn46" display="inline"><mrow><mi>α</mi></mrow></math> relativamente à horizontal. Em todas as
+alíneas represente o diagrama do corpo livre.
+</p>
+<ol class="probitems">
+<li>
+Considerando que o trenó está bem lubrificado de modo a não existir
+atrito entre este e a encosta, deduza uma expressão para a aceleração
+do trenó.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content"><math id="eqn47" display="inline"><mrow><msub><mi>a</mi><mi>x</mi></msub><mo>=</mo><mi>g</mi><mspace width="0.167em" /><mi>sin</mi><mi>α</mi></mrow></math></span>
+</span>
+</li>
+<li>
+Considerando agora que existe atrito entre o trenó e a encosta, e que
+o coeficiente de atrito é dado por <math id="eqn48" display="inline"><mrow><msub><mi>μ</mi><mi>c</mi></msub></mrow></math>, deduza uma expressão para
+a aceleração do trenó.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content"><math id="eqn49" display="inline"><mrow><msub><mi>a</mi><mi>x</mi></msub><mo>=</mo><mi>g</mi><mo stretchy="false">(</mo><mi>sin</mi><mi>α</mi><mo>−</mo><msub><mi>μ</mi><mi>c</mi></msub><mspace width="0.167em" /><mi>cos</mi><mi>α</mi><mo stretchy="false">)</mo></mrow></math></span>
+</span>
+</li>
+<li>
+Considerando agora que o trenó tem apenas metade dos estudantes, como
+irá variar a aceleração?
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content"></span>
+</span>
+</li>
+</ol>
+<p>
+<b>12</b>. Duas caixas A e B, de massas <math id="eqn50" display="inline"><mrow><msub><mi>m</mi><mrow><mi mathvariant="normal">A</mi></mrow></msub><mo>=</mo><mn>0.50</mn></mrow></math> kg e
+<math id="eqn51" display="inline"><mrow><msub><mi>m</mi><mrow><mi mathvariant="normal">B</mi></mrow></msub><mo>=</mo><mn>0.25</mn></mrow></math> kg, respetivamente, estão ligadas entre si por
+uma haste de massa desprezável, conforme se representa na figura em
+baixo.  Sabendo que o plano tem uma inclinação de 30º e que os
+coeficientes de atrito cinético entre as caixas A e B e a superfície
+do plano são, respetivamente, 0.2 e 0.3, determine a aceleração do
+conjunto, bem como a tensão na haste.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content"><math id="eqn52" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>2.9</mn></mrow></math> m/s<sup>2</sup>; <math id="eqn53" display="inline"><mrow><mi>T</mi><mo>=</mo><mn>0.14</mn></mrow></math> N.</span>
+</span>
+</p>
+<img class="fig center"
+     style="width:13.188em;max-width:100%;height:auto;padding:12pt 0"
+     src="img/dynamics-prob12.png">
+<p>
+<img class="fig right"
+     style="width:11.907em;max-width:100%;height:auto;padding:12pt 0"
+     src="img/dynamics-prob13.png">
+<b>13</b>. No esquema da figura ao lado, os corpos A e B têm massas de
+10 kg e 5 kg, respetivamente, estando ligados por um fio inextensível
+e de massa desprezável. O coeficiente de atrito (estático ou dinâmico,
+suponha que têm o mesmo valor) entre a superfície do corpo A e a
+superfície da mesa é 0.25.
+</p>
+<ol class="probitems">
+<li>
+Desenhe o diagrama do corpo livre de cada um dos corpos A, B e C.
+</li>
+<li>
+Determine o valor mínimo que a massa do corpo C tem de ter para que o
+conjunto dos corpos A, B e C se encontre em repouso.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content">10 kg</span>
+</span>
+</li>
+<li>
+Calcule a aceleração do sistema, bem como a tensão do fio, no caso do
+corpo C ser retirado.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content"><math id="eqn54" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>1.63</mn></mrow></math> m/s<sup>2</sup>; <math id="eqn55" display="inline"><mrow><mi>T</mi><mo>=</mo><mn>40.8</mn></mrow></math> N.</span>
+</span>
+</li>
+</ol>
+<p>
+<b>14</b>. Uma pessoa guiando uma bicicleta faz uma curva de raio
+constante, com velocidade constante de 29,0 km/h. Qual o menor raio
+para fazê-la sem derrapar, se o coeficiente de atrito estático entre
+os pneus da bicicleta e o asfalto for de 0.32?
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content">20.7 m.</span>
+</span>
+</p>
+<p>
+<b>15</b>. Devido à resistência do ar, as gotas de chuva caem com uma
+velocidade constante a partir de certa altura. O módulo da força de
+resistência que o ar exerce é dada por <math id="eqn56" display="inline"><mrow><mo stretchy="false">|</mo><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover><mo stretchy="false">|</mo><mo>=</mo><mi>A</mi><mspace width="0.167em" /><msup><mi>v</mi><mn>2</mn></msup></mrow></math>, onde <math id="eqn57" display="inline"><mrow><mi>A</mi></mrow></math> é
+uma constante de valor 8×10<sup>−6</sup> N·s<sup>2</sup>/m<sup>2</sup>
+e <math id="eqn58" display="inline"><mrow><mi>v</mi></mrow></math> é o módulo da velocidade. Nessas circunstâncias, calcule o
+módulo da velocidade, em m/s, com que uma gota da chuva atinge o solo,
+sabendo que uma gota possui peso, em módulo, igual a
+3.2×10<sup>−7</sup> N.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content">0.2 m/s.</span>
+</span>
+</p>
+<p>
+<b>16</b>. Uma corda é amarrada a um balde de água e o balde é posto a
+girar num círculo vertical de raio 0.600 m. Calcule o valor mínimo que
+a velocidade do balde deve ter no ponto mais elevado do círculo para
+que a água não seja expelida do balde.
+<span class="note"><button class="menubtn">Resposta</button>
+<span class="note-content">2.4 m/s.</span>
+</span>
+</p>
+<p>
+<b>17</b>. Os blocos da figura movem-se sobre uma superfície
+horizontal com atrito, sendo <math id="eqn59" display="inline"><mrow><msub><mi>μ</mi><mi>c</mi></msub></mrow></math> o coeficiente de atrito cinético
+entre o bloco com massa <math id="eqn60" display="inline"><mrow><mi>M</mi></mrow></math> e a superfície sobre a qual
+assenta. Existe igualmente atrito entre as superfícies de ambos os
+blocos, sendo o coeficiente de atrito estático entre eles <math id="eqn61" display="inline"><mrow><msub><mi>μ</mi><mi>e</mi></msub></mrow></math>.
+</p>
+<img class="fig center"
+     style="width:9.744em;max-width:100%;height:auto;padding:12pt 0"
+     src="img/dynamics-prob17.png">
+<ol class="probitems">
+<li>
+Represente, em separado, os diagramas de corpo livre para cada um dos
+dois corpos e escreva a legenda das forças, indicando, se for o caso,
+os pares ação-reação.
+</li>
+<li>
+Qual é o valor máximo da força horizontal <math id="eqn62" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>, <math id="eqn63" display="inline"><mrow><msub><mi>F</mi><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">x</mi></mrow></msub></mrow></math>,
+que se pode aplicar no bloco de cima, de modo a que os blocos
+permaneçam unidos, sem deslizar um relativamente ao outro?
+</li>
+<li>
+Mostre que no caso de não haver atrito na superfície horizontal, essa
+força máxima tem o valor:<br>
+<div class="eqnalign">
+<math id="eqn64" display="inline"><mrow><msub><mi>F</mi><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">x</mi></mrow></msub><mo>=</mo><msub><mi>μ</mi><mi>e</mi></msub><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>m</mi></mrow><mrow><mi>M</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mi>m</mi><mspace width="0.167em" /><mi>g</mi></mrow></math>
+</div>
+</li>
+</ol>
+</section>
+<footer>
+<p>&copy; 2025, Jaime E. Villate</p>
+<p>This work is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/"
+rel="license">Creative Commons Attribution-ShareAlike 4.0
+International License</a>.</p>
+<span>Last modified: 2025/04/08 11:01:20 UTC</span>
+</footer>
+</body>
+</html>
