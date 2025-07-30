@@ -645,7 +645,7 @@ figure {
         box-shadow: none;
     }
     .menu-content a:link {
-        color: #bcf;
+        color: #bef;
         background-color: #546284;
         padding: 0.3em 1em;
         margin-top: 0.5em;
@@ -653,7 +653,7 @@ figure {
         display: block;
         border-radius: 4px;
     }
-   .menu-content a:visited { color: #bef; }
+   .menu-content a:visited { color: #bfe; }
    .menu-content a:hover {
         background-color: #a4b7d8;
         color: #33a;
