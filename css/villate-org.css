@@ -446,7 +446,7 @@ pre.prog {
     border: 1px solid #29639e;
     line-height: 1.5em;
     padding: 0;
-    background-color: #ddeeff;
+    background-color: #def;
     border-radius: 0px;
     counter-reset: line;
 }
@@ -631,7 +631,7 @@ figure {
         position: -webkit-sticky;
         position: sticky;
         top: 15px;
-        font-size: 0.8em;
+        font-size: 0.9em;
         padding: 15px;
         float: left;
         padding: 1em;
