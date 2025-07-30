@@ -173,7 +173,7 @@ footer {
     background-color: #303030;
     font-size: 0.8em;
 }
-footer a { color: #5462d8; }
+footer a:link { color: #9df; }
 div.site-map {
     display: block;
     line-height: 2em;
