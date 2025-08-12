@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-07-30
+   Version: 2025-08-12
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 */
@@ -722,7 +722,7 @@ figure {
     .hint svg text, .hint svg rect { fill: black }
     footer {
         color: #ddd;
-    border-top: 1px solid  black;
+        border-top: 1px solid  black;
         background-color: #303030
     }
     a:link { color: #9df }

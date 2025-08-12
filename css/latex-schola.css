@@ -1,18 +1,17 @@
 /*
-Version: 2025-01-24
+Version: 2025-08-12
+   License: public domain: use it and modify it as you wish
+   Based on the HTML and CSS tutorials at https://www.w3schools.com
 
-This is a combination of the stylesheet from LaTeXML.css,
-from https://math.nist.gov/~BMiller/LaTeXML/, and the ScholaX
-fonts (https://www.ctan.org/tex-archive/fonts/scholax/) converted
-into WOFF format.
+   This is a combination of the stylesheet from LaTeXML.css, from
+   https://math.nist.gov/~BMiller/LaTeXML/, and the ScholaX fonts
+   (https://www.ctan.org/tex-archive/fonts/scholax/) converted into
+   WOFF format.
 
-The TeX Gyre Schola fonts are released under the GUST font license,
-which is legally equivalent to the LaTeX Project Public License.
-
-The WOFF fonts have been obtained from
-http://www.gust.org.pl/projects/e-foundry/ and are icensed under the
-GUST Font License (GFL), which is legally identical to the
- LaTeX Public Project License.
+   The TeX Gyre Schola fonts are released under the GUST font license,
+   which is legally equivalent to the LaTeX Project Public License.
+   The WOFF version of them was released from:
+   http://www.gust.org.pl/projects/e-foundry/
 */
 
 @namespace url('http://www.w3.org/1999/xhtml');
@@ -54,8 +53,8 @@ body {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    border-left: 1px solid #3333aa;
-    border-right: 1px solid #3333aa;
+    border-left: 1px solid #33a;
+    border-right: 1px solid #33a;
 }
 .ltx_page_main { background-color: white; }
 div.eqnalign {
@@ -70,12 +69,12 @@ div.eqnalign:after {
 }
 div.eqn { float: right; }
 .menubtn {
-    background-color: #bbccff;
+    background-color: #bcf;
     padding: 3px 8px;
     font-size: 0.8em;
     font-weight: bold;
     cursor: pointer;
-    border: 1px solid #3333aa;
+    border: 1px solid #33a;
     border-radius: 4px;
 }
 .menu {
@@ -102,20 +101,21 @@ div.eqn { float: right; }
 }
 .menu-content a:hover {
     background-color: #a4b7d8;
-    color: #3333aa;
+    color: #33a;
 }
 .menu:hover .menu-content { display: block; }
 .menu:hover .menubtn {
     background-color: #546284;
-    color: #bbccff;
+    color: #bcf;
 }
-a {
+a:link {
     color: blue;
-    text-decoration: none;
+    text-decoration: none
 }
-a:hover {
-    background-color: #334669;
-    color: #dee7f5;
+a:visited { color: #90e }
+a:hover, span.button:hover {
+    background-color: #eee;
+    color: #555;
 }
 article { padding-bottom: 1em; }
 footer {
@@ -127,35 +127,35 @@ footer {
     text-align: center;
     font-family: Helvetica, Arial, sans-serif;
     border-top: 1px solid  #a4b7d8;
-    color: #aaaaaa;
+    color: #aaa;
     background-color: #303030;
 }
 footer a { color: #5462d8}
 div.ltx_theorem_example {
-    border: 1px solid blue;
+    border: 1px solid brown;
     border-radius: 10px;
     padding: 0;
-    background-color: #dee7f5;
+    background-color: #faf2dc;
     width: 100%;
 }
 div.ltx_theorem_example > div.ltx_para { margin: 1em; }
 span.ltx_tag_theorem {
     display: block;
     width: 100%-1em;
-    background: #a4b7d8;
+    background: #ab8674;
     padding: 0.5em 0 0.5em 1em;
-    border-bottom: 0.5px solid blue;
+    border-bottom: 0.5px solid brown;
     border-radius: 10px 10px 0 0;
 }
 .htmlmathparagraph, m|mtext, .ltx_p, .ltx_quote, .ltx_block, .ltx_para, .ltx_caption {
     font-family: TeX Gyre Schola;
 }
 blockquote.ltx_role_verse {
-    border:1px solid #334669;
+    border:1px solid #brown;
     line-height:2em;
     word-wrap:break-word;
     padding-left:0.8em;
-    background-color: #dee7f5;
+    background-color: #faf2dc;
 }
 blockquote.ltx_role_verse > p.ltx_p { font-family: Monospace; }
 m|math {
@@ -253,7 +253,7 @@ m|*.calligraphic {
 .ltx_authors_1line .ltx_author_before,
 .ltx_authors_1line .ltx_author_after { display:inline;}
 .ltx_authors_1line .ltx_author_notes { display:inline-block; }
-.ltx_authors_1line .ltx_author_notes:before { content:"*"; color:blue;}
+.ltx_authors_1line .ltx_author_notes:before { content:"*"; color: blue;}
 .ltx_authors_1line .ltx_author_notes span { display:none; }
 .ltx_authors_1line .ltx_author_notes:hover span {
     display:block; position:absolute; z-index:10;
@@ -505,7 +505,7 @@ span.ltx_rowspan { position:absolute; top:0; bottom:0; }
      background-color: white;
      padding: 0.5em 1em 0.5em 1.5em;
      border: 1px solid black; border-radius: 0 5px 5px 5px; box-shadow: 5px 5px 10px gray; }
-.ltx_note_mark    { color:blue; }
+.ltx_note_mark    { color: blue; }
 .ltx_note_type    { font-weight: bold; }
 .ltx_note { display:inline-block; text-indent:0; } /* So we establish containing block */
 .ltx_note_content .ltx_note_mark { position:absolute; left:0.2em; top:-0.1em; }
@@ -513,10 +513,10 @@ span.ltx_rowspan { position:absolute; top:0; bottom:0; }
 .ltx_note .ltx_note_content:hover {
    display:block; position:absolute; z-index:10; }
 
-.ltx_ERROR        { color:red; }
-.ltx_rdf          { display:none; }
-.ltx_missing      { color:red;}
-.ltx_nounicode    { color:red; }
+.ltx_ERROR        { color: red; }
+.ltx_rdf          { display: none; }
+.ltx_missing      { color: red;}
+.ltx_nounicode    { color: red; }
 /*======================================================================
  SVG (pgf/tikz ?) basics */
 
@@ -550,7 +550,7 @@ span.ltx_rowspan { position:absolute; top:0; bottom:0; }
 */
 cite                 { font-style: normal; }
 
-.ltx_red        { color:red; }
+.ltx_red        { color: red; }
 /*.ltx_centering  { text-align:center; margin:auto; }*/
 /*.ltx_inline-block.ltx_centering,*/
 /* Hmm.... is this right in general? */
@@ -568,8 +568,89 @@ cite                 { font-style: normal; }
 
 /* Bigger screens */
 @media screen and (min-width: 600px) {
+    body {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
+    }
     .ltx_eqn_center_padleft,
     .ltx_eqn_center_padright { width:50%; min-width:3.5em; }
     .ltx_eqn_left_padleft,
     .ltx_eqn_right_padright { min-width:3.5em; }
+}
+
+@media (prefers-color-scheme: dark) {
+    body { background-color: #333 }
+    .ltx_page_main {
+        background-color: #555;
+        color: #eee;
+    }
+    a:link { color: #9df }
+    a:visited {color: #9fd }
+    a:hover, span.button:hover {
+        color: #fea;
+        background-color: #888
+    }
+    .menu-content { background-color: #aaa; }
+    footer {
+        color: #ddd;
+        border-top: 1px solid  black;
+        background-color: #303030
+    }
+    div.ltx_theorem_example {
+        border: 1px solid #ccc;
+        background-color: #5e534d;
+        color: #ddd
+    }
+    span.ltx_tag_theorem {
+        background: #a75;
+        border-bottom: 0.5px solid #ccc;
+    }
+    blockquote.ltx_role_verse {
+        border:1px solid #ccc;
+        background-color: #53534d;
+    }
+    .boxed { border: 1px solid white; }
+    .ltx_authors_1line .ltx_author_notes:before { content:"*"; color: #9df;}
+    .ltx_authors_1line .ltx_author_notes:hover span {
+        background: #555;
+        border: 1px solid white;
+    }
+    /*========= Borders and such */            
+    .ltx_framed  { border:1px solid white;}
+    /* regular lines */
+    .ltx_border_t  { border-top:1px solid white; }
+    .ltx_border_r  { border-right:1px solid white; }
+    .ltx_border_b  { border-bottom:1px solid white; }
+    .ltx_border_l  { border-left:1px solid white; }
+    /* double lines */
+    .ltx_border_tt { border-top:3px double white; }
+    .ltx_border_rr { border-right:3px double white; }
+    .ltx_border_bb { border-bottom:3px double white; }
+    .ltx_border_ll { border-left:3px double white; }
+    /* Light lines */
+    .ltx_border_T  { border-top:1px solid #ccc; }
+    .ltx_border_R  { border-right:1px solid #ccc; }
+    .ltx_border_B  { border-bottom:1px solid #ccc; }
+    .ltx_border_L  { border-left:1px solid #ccc; }
+    /* Framing */
+    .ltx_framed_rectangle { border-style:solid; border-width:1px; }
+    .ltx_framed_top       { border-top-style:solid; border-top-width:1px; }
+    .ltx_framed_left      { border-left-style:solid; border-left-width:1px; }
+    .ltx_framed_right     { border-right-style:solid; border-right-width:1px; }
+    .ltx_framed_bottom,
+    .ltx_framed_underline { border-bottom-style:solid; border-bottom-width:1px; }
+    .ltx_framed_topbottom { border-top-style:solid; border-top-width:1px;
+                            border-bottom-style:solid; border-bottom-width:1px; }
+    .ltx_framed_leftright { border-left-style:solid; border-left-width:1px;
+                            border-right-style:solid; border-right-width:1px; }
+    /*============================================================== */
+    .ltx_note_content { border: 1px solid white; }
+    .ltx_note_mark    { color: #9df; }
+    .ltx_ERROR        { color: #f99; }
+    .ltx_missing      { color: #f99;}
+    .ltx_nounicode    { color: #f99; }
+    .ltx_red        { color: #f99; }
 }
