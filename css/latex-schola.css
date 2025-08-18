@@ -1,5 +1,5 @@
 /*
-Version: 2025-08-12
+Version: 2025-08-16
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 
@@ -130,7 +130,12 @@ footer {
     color: #aaa;
     background-color: #303030;
 }
-footer a { color: #5462d8}
+footer a:link { color: #9df }
+footer a:visited {color: #9fd }
+footer a:hover, span.button:hover {
+        color: #fea;
+        background-color: #888
+    }
 div.ltx_theorem_example {
     border: 1px solid brown;
     border-radius: 10px;
