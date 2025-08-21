@@ -653,7 +653,7 @@ figure {
         display: block;
         border-radius: 4px;
     }
-   .menu-content a:visited { color: #bfe; }
+   .menu-content a:visited { color: #bcf; }
    .menu-content a:hover {
         background-color: #a4b7d8;
         color: #33a;
