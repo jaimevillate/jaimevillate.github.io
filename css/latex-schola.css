@@ -593,7 +593,7 @@ cite                 { font-style: normal; }
         color: #eee;
     }
     a:link { color: #9df }
-    a:visited {color: #9fd }
+    a:visited {color: #bcf }
     a:hover, span.button:hover {
         color: #fea;
         background-color: #888

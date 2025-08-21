@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-08-12
+   Version: 2025-08-21
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 
@@ -744,7 +744,7 @@ figure {
 @media (prefers-color-scheme: dark) {
     body { background-color: #333 }
     a:link { color: #9df }
-    a:visited {color: #9fd }
+    a:visited {color: #bcf }
     a:hover, span.button:hover {
         color: #fea;
         background-color: #888
