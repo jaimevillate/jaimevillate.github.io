@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à Mecânica Quântica</title>
+<!--Generated on Sun Sep 28 21:12:55 WEST 2025 by latextohtml.tcl, by J. Villate -->
+<link rel="stylesheet" href="../css/book.css">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="alternate icon" href="../img/favicon.ico">
+</head>
+<body id="top">
+<header style="background-image:url(../img/quantum.png);
+background-repeat:no-repeat;
+background-position:right center">
+<h1>Introdução à Mecânica Quântica</h1>
+<p>Jaime E. Villate.<br>
+Universidade do Porto, Portugal, 2025.</p>
+</header>
+<nav>
+<a href="../pt/index.html">Início</a><span>&rarr;</span>
+<a href="../pt/books.html">Livros</a><span>&rarr;</span>
+<a href="index.html">Introdução à Mecânica Quântica</a>
+</nav>
+<section>
+<h2>Lista de símbolos e notações</h2>
+<p>
+<h3>Notações</h3>
+<table>
+<tbody>
+<tr><td class="right"><math id="eqn1" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mi>…</mi><mi>a</mi><mo>,</mo><mi>b</mi><mi>…</mi></mrow></math></td><td>&ensp;variáveis e funções, reais ou complexas</td></tr>
+<tr><td class="right"><math id="eqn2" display="inline"><mrow><mrow><mi mathvariant="normal">A</mi><mo>,</mo><mi mathvariant="normal">B</mi></mrow><mi>…</mi><mrow><mi mathvariant="normal">a</mi><mo>,</mo><mi mathvariant="normal">b</mi></mrow><mi>…</mi></mrow></math></td><td>&ensp;unidades</td></tr>
+  <tr><td class="right"><math id="eqn3" display="inline"><mrow><mover><mrow><mi>A</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>, <math id="eqn4" display="inline"><mrow><mover><mrow><mi>B</mi></mrow><mo stretchy="false">→</mo></mover><mi>…</mi><mover><mrow><mi>a</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>, <math id="eqn5" display="inline"><mrow><mover><mrow><mi>b</mi></mrow><mo stretchy="false">→</mo></mover><mi>…</mi></mrow></math></td><td>&ensp;vetores</td></tr>
+  <tr><td class="right"><math id="eqn6" display="inline"><mrow><mo stretchy="false">|</mo><mi mathvariant="normal">Ψ</mi><mi>⟩</mi></mrow></math>, <math id="eqn7" display="inline"><mrow><mo stretchy="false">|</mo><m mathvariant="normal"i>Υ</mi><mi>⟩</mi><mi>…</mi></mrow></math></td><td>&ensp;kets (elementos de um espaço vetorial)</td></tr>
+  <tr><td class="right"><math id="eqn8" display="inline"><mrow><mi>⟨</mi><mi mathvariant="normal">Ψ</mi><mo stretchy="false">|</mo></mrow></math>, <math id="eqn9" display="inline"><mrow><mi>⟨</mi><mi mathvariant="normal">Υ</mi><mo stretchy="false">|</mo><mi>…</mi></mrow></math></td><td>&ensp;bras (elementos do espaço vetorial dual)</td></tr>
+  <tr><td class="right"><math id="eqn10" display="inline"><mrow><mover><mrow><mi mathvariant="normal">Ω</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mi>…</mi></mrow></math></td><td>&ensp;operadores no espaço vetorial</td></tr>
+  <tr><td class="right"><math id="eqn11" display="inline"><mrow><mo stretchy="false">|</mo><mi mathvariant="normal">Ψ</mi><mi>⟩</mi><mi>·</mi><mo stretchy="false">|</mo><mi mathvariant="normal">Υ</mi><mi>⟩</mi></mrow></math>, <math id="eqn12" display="inline"><mrow><mi>⟨</mi><mi mathvariant="normal">Ψ</mi><mo stretchy="false">|</mo><m mathvariant="normal"i>Υ</mi><mi>⟩</mi></mrow></math></td><td>&ensp;produto escalar entre kets</td></tr>
+  <tr><td class="right"><math id="eqn13" display="inline"><mrow><mo stretchy="false">|</mo><mo stretchy="false">|</mo><mi mathvariant="normal">Ψ</mi><mi>⟩</mi><mo stretchy="false">|</mo></mrow></math></td><td>&ensp;norma de um ket</td></tr>
+    <tr><td class="right"><math id="eqn14" display="inline"><mrow><mi>⟨</mi><mi>f</mi><mi>⟩</mi></mrow></math>, <math id="eqn15" display="inline"><mrow><mi>⟨</mi><mover><mrow><mi mathvariant="normal">Ω</mi><mi>⟩</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math></td><td>&ensp;valor esperado de uma função ou operador.</td></tr>
+  <tr><td class="right"><math id="eqn16" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mi>f</mi></mrow></math>, <math id="eqn17" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mover><mrow><mi mathvariant="normal">Ω</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math></td><td>&ensp;desvio padrão de uma função ou operador</td></tr>
+   <tr><td class="right"><math id="eqn18" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Δ</mi><mi>f</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></math>, <math id="eqn19" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Δ</mi><mover><mrow><mi mathvariant="normal">Ω</mi></mrow><mo stretchy="false">^</mo></mover><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></math></td><td>&ensp;variança de uma função ou operador</td></tr>
+  <tr><td class="right"><math id="eqn20" display="inline"><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mspace width="0.166em" /><mi>x</mi></mrow></mfrac></mstyle></math></td><td>&ensp;derivada ordinária</td></tr>
+  <tr><td class="right"><math id="eqn21" display="inline"><mstyle displaystyle="true"><mfrac><mo rspace="10pt">∂</mo><mrow><mo>∂</mo><mspace width="0.11em" /><mi>x</mi></mrow></mfrac></mstyle></math></td><td>&ensp;derivada parcial
+</tbody>
+</table>
+<h3>Símbolos</h3>
+<table>
+<tbody>
+  <tr><td class="right"><math id="eqn22" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub></mrow></math></td><td>&ensp;raio de Bohr</td></tr>
+  <tr><td class="right"><math id="eqn23" display="inline"><mrow><mi>c</mi></mrow></math></td><td>&ensp;velocidade da luz no vácuo</td></tr>
+  <tr><td class="right"><math id="eqn24" display="inline"><mrow><mi>E</mi></mrow></math></td><td>&ensp;Energia</td></tr>
+  <tr><td class="right"><math id="eqn25" display="inline"><mrow><mi>e</mi></mrow></math></td><td>&ensp;carga elementar</td></tr>
+  <tr><td class="right"><math id="eqn26" display="inline"><mrow><mrow><mi mathvariant="normal">e</mi></mrow></mrow></math></td><td>&ensp;número de Euler (base do logaritmo natural)</td></tr>
+  <tr><td class="right"><math id="eqn27" display="inline"><mrow><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">V</mi></mrow></mrow></math></td><td>&ensp;eletrão-volt (unidade de energia)</td></tr>
+  <tr><td class="right"><math id="eqn28" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math></td><td>&ensp;força</td></tr>
+  <tr><td class="right"><math id="eqn29" display="inline"><mrow><mi>f</mi></mrow></math></td><td>&ensp;frequência</td></tr>
+  <tr><td class="right"><math id="eqn30" display="inline"><mrow><mi>h</mi></mrow></math></td><td>&ensp;constante de Planck</td></tr>
+  <tr><td class="right"><math id="eqn31" display="inline"><mrow><mi>ℏ</mi></mrow></math></td><td>&ensp;constante de Planck dividida por <math id="eqn32" display="inline"><mrow><mn>2</mn><mi>π</mi></mrow></math></td></tr>
+  <tr><td class="right"><math id="eqn33" display="inline"><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow></math></td><td>&ensp;unidade imaginária <math id="eqn34" display="inline"><mrow><msqrt><mrow><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></math></td></tr>
+  <tr><td class="right"><math id="eqn35" display="inline"><mrow><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math></td><td>&ensp;versor na direção do eixo <math id="eqn36" display="inline"><mrow><mi>x</mi></mrow></math></td></tr>
+  <tr><td class="right"><math id="eqn37" display="inline"><mrow><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math></td><td>&ensp;versor na direção do eixo <math id="eqn38" display="inline"><mrow><mi>y</mi></mrow></math></td></tr>
+  <tr><td class="right"><math id="eqn39" display="inline"><mrow><mi>k</mi></mrow></math></td><td>&ensp;constante de Coulomb</td></tr>
+  <tr><td class="right"><math id="eqn40" display="inline"><mrow><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math></td><td>&ensp;versor na direção do eixo <math id="eqn41" display="inline"><mrow><mi>z</mi></mrow></math></td></tr>
+  <tr><td class="right"><math id="eqn42" display="inline"><mrow><mi>m</mi></mrow></math></td><td>&ensp;massa</td></tr>
+  <tr><td class="right"><math id="eqn43" display="inline"><mrow><mrow><mi mathvariant="normal">m</mi></mrow></mrow></math></td><td>&ensp;metro (unidade de comprimento)</td></tr>
+  <tr><td class="right"><math id="eqn44" display="inline"><mrow><mi>n</mi></mrow></math></td><td>&ensp;índice de refração</td></tr>
+  <tr><td class="right"><math id="eqn45" display="inline"><mrow><mi>P</mi></mrow></math></td><td>&ensp;potência</td></tr>
+  <tr><td class="right"><math id="eqn46" display="inline"><mrow><mi>q</mi></mrow></math></td><td>&ensp;carga elétrica</td></tr>
+  <tr><td class="right"><math id="eqn47" display="inline"><mrow><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">y</mi></mrow></mrow></math></td><td>&ensp;rydberg</td></tr>
+  <tr><td class="right"><math id="eqn48" display="inline"><mrow><mover><mrow><mi>r</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math></td><td>&ensp;vetor posição</td></tr>
+</tbody>
+</table>
+</section>
+<footer>
+<p>&copy; 2025, Jaime E. Villate</p>
+<p>Publicado nos termos da <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/">Licença
+Creative Commons Attribuição-Partilha</a> (versão 4.0).</p>
+<span>Última modificação: 2025/09/29 18:14:24 UTC</span>
+</footer>
+</body>
+</html>
