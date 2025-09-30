@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eletricidade, Magnetismo e Circuitos - Formulário</title>
+<link rel="stylesheet" href="../css/villate-org.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="alternate icon" href="../img/favicon.ico">
+</head>
+<body id="top">
+<aside>
+<span class="current">HTML</span>
+<a target="_blank" href="./formulario.pdf">PDF</a>
+</aside>
+<header style="background-image:url(../img/eletricidade.jpg);
+               background-repeat:no-repeat;
+               background-position:right center">
+<h1>Formulário</h1>
+<p>Jaime E. Villate. Eletricidade, Magnetismo e Circuitos,<br>
+Universidade do Porto, Portugal, 2019</p>
+</header>
+<nav>
+<a href="../pt/index.html">Início</a><span>&rarr;</span>
+<a href="../pt/books.html">Livros livres</a><span>&rarr;</span>
+<a href="../eletromagnetismo/index.html">Eletromagnetismo e Circuitos</a>
+</nav>
+<div class="content">
+<span class="button">&#9776;</span>
+<div class="content-items">
+<a href="#top">Formulário</a>
+<ol>
+<li><a href="#sec-1">Campo elétrico</a></li>
+<li><a href="#sec-2">Voltagem e corrente</a></li>
+<li><a href="#sec-3">Resistência</a></li>
+<li><a href="#sec-4">Capacidade</a></li>
+<li><a href="#sec-5">Circuitos de corrente contínua</a></li>
+<li><a href="#sec-6">Fluxo elétrico</a></li>
+<li><a href="#sec-7">Potencial</a></li>
+<li><a href="#sec-8">Campo magnético</a></li>
+<li><a href="#sec-9">Indução eletromagnética</a></li>
+<li><a href="#sec-10">Processamento de sinais</a></li>
+<li><a href="#sec-11">Circuitos de corrente alternada</a></li>
+<li><a href="#sec-12">Ondas eletromagnéticas e luz</a></li>
+</ol>
+</div>
+</div>
+<section id="sec-1">
+<h2>1. Campo elétrico</h2>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.4437343em' height='2.5756945em' viewBox='-0.6 -16.824229 64.437343 25.756945' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq1'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.780599' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='20.936043' y='-8.093642'>k</text>
+<text font-family='fourier-ms' font-size='10.957664' x='27.762441' y='-8.093642'>|</text>
+<text font-family='futri8r' font-size='10.957664' x='31.062068' y='-8.093642'>q</text>
+<text font-family='futr8r' font-size='8.218248' x='37.565676' y='-6.300379'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='42.439397' y='-8.093642'>||</text>
+<text font-family='futri8r' font-size='10.957664' x='48.799542' y='-8.093642'>q</text>
+<text font-family='futr8r' font-size='8.218248' x='55.303149' y='-6.300379'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='60.176871' y='-8.093642'>|</text>
+<rect x='20.936043' y='-3.415339' height='.637912' width='42.301301'/>
+<text font-family='futri8r' font-size='10.957664' x='31.184948' y='8.201225'>K</text>
+<text font-family='futri8r' font-size='10.957664' x='42.113247' y='8.201225'>r</text>
+<text font-family='futr8r' font-size='8.218248' x='48.114736' y='4.746194'>2</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.3180831em' height='2.5756945em' viewBox='-0.6 -16.824229 73.180831 25.756945' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq2'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>E</text>
+<text font-family='futr8r' font-size='8.218248' x='7.149185' y='1.942727'>pontual</text>
+<text font-family='fourier-ms' font-size='10.957664' x='39.021896' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='50.953087' y='-8.093642'>k</text>
+<text font-family='fourier-ms' font-size='10.957664' x='57.779486' y='-8.093642'>|</text>
+<text font-family='futri8r' font-size='10.957664' x='61.079112' y='-8.093642'>q</text>
+<text font-family='fourier-ms' font-size='10.957664' x='68.144608' y='-8.093642'>|</text>
+<rect x='50.17734' y='-3.415339' height='.637912' width='21.803491'/>
+<text font-family='futri8r' font-size='10.957664' x='50.17734' y='8.201225'>K</text>
+<text font-family='futri8r' font-size='10.957664' x='61.105639' y='8.201225'>r</text>
+<text font-family='futr8r' font-size='8.218248' x='67.107128' y='4.746194'>2</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.3716594em' height='3.0797748em' viewBox='-0.6 -19.344768 33.716594 30.797748' class='inline' style='vertical-align:-1.154398em'>
+<g id='eq3'>
+<text font-family='fourier-ml' font-size='10.957664' x='.077689' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>E</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.744723' y='0'>=</text>
+<text font-family='fourier-ml' font-size='10.957664' x='22.936514' y='-10.52652'></text>
+<text font-family='futri8r' font-size='10.957664' x='22.840887' y='-8.093642'>F</text>
+<rect x='20.900167' y='-3.415339' height='.637912' width='11.616427'/>
+<text font-family='futri8r' font-size='10.957664' x='21.139276' y='8.201225'>q</text>
+<text font-family='futr8r' font-size='8.218248' x='27.642883' y='9.994488'>0</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-2">
+<h2>2. Voltagem e corrente</h2>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.1349225em' height='4.1160398em' viewBox='-0.839109 -23.788956 81.349225 41.160398' class='inline' style='vertical-align:-1.853832em'>
+<g id='eq4'>
+<text font-family='futri8r' font-size='10.957664' x='-.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='6.886179' y='1.793263'>A</text>
+<text font-family='fourier-ms' font-size='10.957664' x='14.081821' y='0'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='23.21818' y='0'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='30.343468' y='1.793263'>B</text>
+<text font-family='fourier-ms' font-size='10.957664' x='38.213233' y='0'>=</text>
+<text font-family='futr8r' font-size='8.218248' x='52.939804' y='-17.49371'>B</text>
+<text font-family='fourier-mex' font-size='10.998733' x='48.173164' y='-15.293966'></text>
+<text font-family='futr8r' font-size='8.218248' x='48.277159' y='16.771442'>A</text>
+<text font-family='futri8r' font-size='10.957664' x='59.493916' y='0'>E</text>
+<text font-family='futr8r' font-size='10.957664' x='68.361952' y='0'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='75.176405' y='0'>s</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.41418em' height='1.1434458em' viewBox='-1.197761 -8.182704 44.1418 11.434458' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq5'>
+<text font-family='futri8r' font-size='10.957664' x='-.597761' y='0'>U</text>
+<text font-family='futr8r' font-size='8.218248' x='8.368615' y='1.793263'>e</text>
+<text font-family='fourier-ms' font-size='10.957664' x='15.153445' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='25.352484' y='0'>q</text>
+<text font-family='futri8r' font-size='10.957664' x='33.347797' y='0'>V</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12.0095564em' height='2.2995614em' viewBox='0.595514 -14.194389 120.095564 22.995614' class='inline' style='vertical-align:-0.8832em'>
+<g id='eq6'>
+<text font-family='futri8r' font-size='10.957664' x='1.195514' y='-8.093642'>m</text>
+<rect x='1.195514' y='-3.415339' height='.637912' width='10.628144'/>
+<text font-family='futr8r' font-size='10.957664' x='3.592531' y='8.201225'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='13.25828' y='0'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='19.905328' y='-4.339714'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='26.240199' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='35.854776' y='0'>q</text>
+<text font-family='futri8r' font-size='10.957664' x='43.850089' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.957664' x='55.137047' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='66.292491' y='-8.093642'>m</text>
+<rect x='66.292491' y='-3.415339' height='.637912' width='10.628144'/>
+<text font-family='futr8r' font-size='10.957664' x='68.689508' y='8.201225'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='78.355258' y='0'>v</text>
+<text font-family='futr8r' font-size='8.218248' x='85.002305' y='-4.339714'>2<tspan x='84.559979' y='3.735215'>0</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='91.337177' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='100.951753' y='0'>q</text>
+<text font-family='futri8r' font-size='10.957664' x='108.947066' y='0'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='116.072354' y='1.793263'>0</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.974428em' height='2.5373427em' viewBox='-0.241348 -16.44071 59.74428 25.373427' class='inline' style='vertical-align:-0.940746em'>
+<g id='eq7'>
+<text font-family='futri8r' font-size='10.957664' x='.358652' y='0'>I</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.580851' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='20.517625' y='0'>lim</text>
+<text font-family='fourier-ml' font-size='8.218248' x='17.540782' y='7.602974'>∆</text>
+<text font-family='futri8r' font-size='8.218248' x='23.602057' y='7.602974'>t</text>
+<text font-family='fourier-ms' font-size='8.218248' x='27.296187' y='7.602974'>→</text>
+<text font-family='futr8r' font-size='8.218248' x='35.545254' y='7.602974'>0</text>
+<text font-family='fourier-ml' font-size='10.957664' x='42.28527' y='-8.093642'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='49.76921' y='-8.093642'>Q</text>
+<rect x='42.28527' y='-3.415339' height='.637912' width='16.617661'/>
+<text font-family='fourier-ml' font-size='10.957664' x='44.090497' y='8.201225'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='52.172198' y='8.201225'>t</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.0349695em' height='4.1486658em' viewBox='-0.6 -23.523441 60.349695 41.486658' class='inline' style='vertical-align:-1.913232em'>
+<g id='eq8'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='7.48394' y='0'>Q</text>
+<text font-family='fourier-ms' font-size='10.957664' x='18.663293' y='0'>=</text>
+<text font-family='futri8r' font-size='8.218248' x='32.649655' y='-17.861'>t</text>
+<text font-family='futr8r' font-size='6.391971' x='35.734087' y='-16.516052'>2</text>
+<text font-family='fourier-mex' font-size='10.998733' x='28.623223' y='-15.293966'></text>
+<text font-family='futri8r' font-size='8.218248' x='27.94218' y='16.01827'>t</text>
+<text font-family='futr8r' font-size='6.391971' x='31.026612' y='17.363217'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='40.302627' y='0'>I</text>
+<text font-family='futr8r' font-size='10.957664' x='47.524827' y='0'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='54.33928' y='0'>t</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.6838663em' height='2.522002em' viewBox='-0.6 -16.287303 66.838663 25.22002' class='inline' style='vertical-align:-0.940746em'>
+<g id='eq9'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>P</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.983831' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='22.920605' y='0'>lim</text>
+<text font-family='fourier-ml' font-size='8.218248' x='19.943762' y='7.602974'>∆</text>
+<text font-family='futri8r' font-size='8.218248' x='26.005037' y='7.602974'>t</text>
+<text font-family='fourier-ms' font-size='8.218248' x='29.699167' y='7.602974'>→</text>
+<text font-family='futr8r' font-size='8.218248' x='37.948234' y='7.602974'>0</text>
+<text font-family='fourier-ml' font-size='10.957664' x='44.68825' y='-8.093642'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='51.933081' y='-8.093642'>U</text>
+<text font-family='futr8r' font-size='8.218248' x='60.899458' y='-6.300379'>e</text>
+<rect x='44.68825' y='-3.415339' height='.637912' width='20.950412'/>
+<text font-family='fourier-ml' font-size='10.957664' x='48.659853' y='8.201225'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='56.741553' y='8.201225'>t</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4447652em' height='0.8793661em' viewBox='-0.6 -8.193661 44.447652 8.793661' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq10'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>P</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.983831' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='20.302414' y='0'>I</text>
+<text font-family='fourier-ml' font-size='10.957664' x='26.647926' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='34.25141' y='0'>V</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.3739217em' height='1.0840486em' viewBox='-0.6 -8.182704 53.739217 10.840486' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq11'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>P</text>
+<text font-family='futr8r' font-size='8.218248' x='7.232871' y='1.942727'>f.e<tspan x='16.127516'>.m.</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='30.659274' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='40.977856' y='0'>I</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='47.323369' y='0'>ε</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-3">
+<h2>3. Resistência</h2>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.4553717em' height='0.8793661em' viewBox='-0.6 -8.193661 44.553717 8.793661' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq12'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='7.603483' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.957664' x='18.890442' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='28.850372' y='0'>R</text>
+<text font-family='futri8r' font-size='10.957664' x='38.280319' y='0'>I</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.6421889em' height='1.2725204em' viewBox='-0.6 -8.193661 86.421889 12.725204' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq13'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='7.603483' y='0'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='14.728771' y='1.942727'>ger<tspan x='26.385043'>ador</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='46.144167' y='0'>=</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='56.104097' y='0'>ε</text>
+<text font-family='fourier-ms' font-size='10.957664' x='63.243956' y='0'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='72.619424' y='0'>r</text>
+<text font-family='futri8r' font-size='10.957664' x='80.14849' y='0'>I</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.3974067em' height='1.070198em' viewBox='-0.6 -8.193661 83.974067 10.70198' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq14'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='7.603483' y='0'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='14.728771' y='1.793263'>r<tspan x='17.777335'>ecetor</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='43.696345' y='0'>=</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='53.656276' y='0'>ε</text>
+<text font-family='fourier-ms' font-size='10.957664' x='60.796135' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='70.171602' y='0'>r</text>
+<text font-family='futri8r' font-size='10.957664' x='77.700669' y='0'>I</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.8643453em' height='2.507757em' viewBox='-0.6 -16.276345 38.643453 25.07757' class='inline' style='vertical-align:-0.8832em'>
+<g id='eq15'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.947982' y='0'>=</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='19.907912' y='0'>ρ</text>
+<text font-family='futri8r' font-size='10.957664' x='29.989411' y='-8.093642'>L</text>
+<rect x='29.266126' y='-3.415339' height='.637912' width='8.177328'/>
+<text font-family='futri8r' font-size='10.957664' x='30.102984' y='8.201225'>A</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.7664295em' height='1.0674586em' viewBox='-0.6 -8.182704 117.664295 10.674586' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq16'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.947982' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='19.907912' y='0'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='27.308166' y='1.793263'>20</text>
+<text font-family='futr8r' font-size='10.957664' x='37.726404' y='.098644'>(<tspan x='41.575951' y='0'>1</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='48.871222' y='0'>+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='58.24669' y='0'>α</text>
+<text font-family='futr8r' font-size='8.218248' x='65.933858' y='1.793263'>20</text>
+<text font-family='futr8r' font-size='10.957664' x='75.18317' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='79.032729' y='0'>T</text>
+<text font-family='fourier-ms' font-size='10.957664' x='88.886399' y='0'>−</text>
+<text font-family='futr8r' font-size='10.957664' x='98.261866' y='0'>20)<tspan y='.098644'>)</tspan>
+</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.2784886em' height='1.0674586em' viewBox='-0.6 -8.182704 82.784886 10.674586' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq17'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='7.400254' y='1.793263'>s</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.539509' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='23.49944' y='0'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='30.899694' y='1.793263'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='37.234565' y='0'>+<tspan x='46.610033'>·</tspan>
+<tspan x='50.839477'>·</tspan>
+<tspan x='55.06892'>·</tspan>
+<tspan x='59.590576'>+</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='68.966044' y='0'>R</text>
+<text font-family='futri8r' font-size='8.218248' x='76.366298' y='1.793263'>n</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.9173255em' height='2.9715484em' viewBox='-0.6 -19.022377 109.173255 29.715484' class='inline' style='vertical-align:-1.074012em'>
+<g id='eq18'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='7.400254' y='1.793263'>p</text>
+<text font-family='fourier-ms' font-size='10.957664' x='14.956194' y='0'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='24.916124' y='-15.855049'></text>
+<text font-family='futr8r' font-size='10.957664' x='34.247997' y='-8.093642'>1</text>
+<rect x='31.028062' y='-3.415339' height='.637912' width='12.273965'/>
+<text font-family='futri8r' font-size='10.957664' x='31.028062' y='8.201225'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='38.428316' y='9.994488'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='45.95869' y='0'>+<tspan x='55.334157'>·</tspan>
+<tspan x='59.563601'>·</tspan>
+<tspan x='63.793045'>·</tspan>
+<tspan x='68.314701'>+</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='82.692908' y='-8.093642'>1</text>
+<rect x='78.885682' y='-3.415339' height='.637912' width='13.448546'/>
+<text font-family='futri8r' font-size='10.957664' x='78.885682' y='8.201225'>R</text>
+<text font-family='futri8r' font-size='8.218248' x='86.285936' y='9.994488'>n</text>
+<text font-family='fourier-mex' font-size='10.998733' x='93.529741' y='-15.855049'></text>
+<text font-family='fourier-ms' font-size='8.218248' x='98.446142' y='-12.833968'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='104.381881' y='-12.833968'>1</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-4">
+<h2>4. Capacidade</h2>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.8451779em' height='2.8925395em' viewBox='-0.958652 -16.44071 78.451779 28.925395' class='inline' style='vertical-align:-1.248597em'>
+<g id='eq19'>
+<text font-family='futri8r' font-size='10.957664' x='-.358652' y='0'>C</text>
+<text font-family='futr8r' font-size='8.218248' x='7.507849' y='1.942727'>condutor</text>
+<text font-family='fourier-ms' font-size='10.957664' x='44.742441' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='61.649316' y='-8.093642'>Q</text>
+<rect x='55.897885' y='-3.415339' height='.637912' width='20.995242'/>
+<text font-family='futri8r' font-size='10.957664' x='55.658776' y='8.201225'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='62.784064' y='9.994488'>sup</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.096274em' height='2.5241935em' viewBox='-0.958652 -16.44071 40.96274 25.241935' class='inline' style='vertical-align:-0.8832em'>
+<g id='eq20'>
+<text font-family='futri8r' font-size='10.957664' x='-.358652' y='0'>C</text>
+<text font-family='fourier-ms' font-size='10.957664' x='10.234896' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='25.651024' y='-8.093642'>Q</text>
+<rect x='21.390341' y='-3.415339' height='.637912' width='18.013747'/>
+<text font-family='fourier-ml' font-size='10.957664' x='21.390341' y='8.201225'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='30.16275' y='8.201225'>V</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.8601278em' height='1.1222469em' viewBox='-0.839109 -8.730587 68.601278 11.222469' class='inline' style='vertical-align:-0.244497em'>
+<g id='eq21'>
+<text font-family='futri8r' font-size='10.957664' x='-.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='6.886179' y='1.793263'>máx</text>
+<text font-family='fourier-ms' font-size='10.957664' x='25.363155' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='35.323086' y='0'>E</text>
+<text font-family='futr8r' font-size='8.218248' x='42.472271' y='1.793263'>máx</text>
+<text font-family='futri8r' font-size='10.957664' x='60.07256' y='0'>d</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.9173725em' height='2.4946078em' viewBox='-1.197761 -16.144854 59.173725 24.946078' class='inline' style='vertical-align:-0.8832em'>
+<g id='eq22'>
+<text font-family='futri8r' font-size='10.957664' x='-.597761' y='0'>U</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.478231' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='22.633675' y='-8.093642'>1</text>
+<rect x='22.633675' y='-3.415339' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='22.633675' y='8.201225'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='30.473573' y='0'>Q</text>
+<text font-family='fourier-ml' font-size='10.957664' x='40.776239' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='48.379722' y='0'>V</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.4308372em' height='2.6870833em' viewBox='-0.958652 -16.276345 84.308372 26.870833' class='inline' style='vertical-align:-1.063198em'>
+<g id='eq23'>
+<text font-family='futri8r' font-size='10.957664' x='-.358652' y='0'>C</text>
+<text font-family='futr8r' font-size='8.218248' x='7.507849' y='1.942727'>esf</text>
+<text font-family='fourier-ms' font-size='10.957664' x='20.51533' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='39.91049' y='-8.093642'>K</text>
+<text font-family='futri8r' font-size='10.957664' x='49.962102' y='-8.093642'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='57.362356' y='-6.300379'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='62.236078' y='-8.093642'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='69.636332' y='-6.300379'>2</text>
+<rect x='31.670774' y='-3.415339' height='.637912' width='51.078947'/>
+<text font-family='futri8r' font-size='10.957664' x='31.670774' y='8.201225'>k</text>
+<text font-family='futr8r' font-size='10.957664' x='39.666098' y='8.201225'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='43.515657' y='8.201225'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='50.915911' y='9.994488'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='57.250783' y='8.201225'>−</text>
+<text font-family='futri8r' font-size='10.957664' x='66.62625' y='8.201225'>R</text>
+<text font-family='futr8r' font-size='8.218248' x='74.026504' y='9.994488'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='78.900226' y='8.201225'>)</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.4974767em' height='2.5241935em' viewBox='-0.958652 -16.276345 74.974767 25.241935' class='inline' style='vertical-align:-0.899398em'>
+<g id='eq24'>
+<text font-family='futri8r' font-size='10.957664' x='-.358652' y='0'>C</text>
+<text font-family='futr8r' font-size='8.218248' x='7.507849' y='1.942727'>plano</text>
+<text font-family='fourier-ms' font-size='10.957664' x='31.543964' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='48.943298' y='-8.093642'>K</text>
+<text font-family='futri8r' font-size='10.957664' x='59.831768' y='-8.093642'>A</text>
+<rect x='42.699409' y='-3.415339' height='.637912' width='30.716706'/>
+<text font-family='futr8r' font-size='10.957664' x='42.699409' y='8.201225'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='49.702456' y='8.201225'>π</text>
+<text font-family='futri8r' font-size='10.957664' x='57.853195' y='8.201225'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='65.848519' y='8.201225'>d</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.4883005em' height='1.2630529em' viewBox='-0.958652 -8.347069 84.883005 12.630529' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq25'>
+<text font-family='futri8r' font-size='10.957664' x='-.358652' y='0'>C</text>
+<text font-family='futr8r' font-size='8.218248' x='7.507849' y='1.793263'>p</text>
+<text font-family='fourier-ms' font-size='10.957664' x='15.063788' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='24.665067' y='0'>C</text>
+<text font-family='futr8r' font-size='8.218248' x='32.531567' y='1.793263'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='38.866439' y='0'>+<tspan x='48.241906'>·</tspan>
+<tspan x='52.47135'>·</tspan>
+<tspan x='56.700794'>·</tspan>
+<tspan x='61.22245'>+</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='70.239265' y='0'>C</text>
+<text font-family='futri8r' font-size='8.218248' x='78.105766' y='1.793263'>n</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.8438013em' height='2.9715484em' viewBox='-0.958652 -19.022377 108.438013 29.715484' class='inline' style='vertical-align:-1.074012em'>
+<g id='eq26'>
+<text font-family='futri8r' font-size='10.957664' x='-.358652' y='0'>C</text>
+<text font-family='futr8r' font-size='8.218248' x='7.507849' y='1.793263'>s</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.647104' y='0'>=</text>
+<text font-family='fourier-mex' font-size='10.998733' x='23.607034' y='-15.855049'></text>
+<text font-family='futr8r' font-size='10.957664' x='32.992706' y='-8.093642'>1</text>
+<rect x='29.718971' y='-3.415339' height='.637912' width='12.381563'/>
+<text font-family='futri8r' font-size='10.957664' x='29.36032' y='8.201225'>C</text>
+<text font-family='futr8r' font-size='8.218248' x='37.22682' y='9.994488'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='44.757198' y='0'>+<tspan x='54.132665'>·</tspan>
+<tspan x='58.362109'>·</tspan>
+<tspan x='62.591553'>·</tspan>
+<tspan x='67.113209'>+</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='81.545215' y='-8.093642'>1</text>
+<rect x='77.68419' y='-3.415339' height='.637912' width='13.556144'/>
+<text font-family='futri8r' font-size='10.957664' x='77.325538' y='8.201225'>C</text>
+<text font-family='futri8r' font-size='8.218248' x='85.192039' y='9.994488'>n</text>
+<text font-family='fourier-mex' font-size='10.998733' x='92.435848' y='-15.855049'></text>
+<text font-family='fourier-ms' font-size='8.218248' x='97.352249' y='-12.833968'>−</text>
+<text font-family='futr8r' font-size='8.218248' x='103.287987' y='-12.833968'>1</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-5">
+<h2>5. Circuitos de corrente contínua</h2>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.1381875em' height='1.0674586em' viewBox='-0.241348 -8.182704 71.381875 10.674586' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq27'>
+<text font-family='futri8r' font-size='10.957664' x='.358652' y='0'>I</text>
+<text font-family='futr8r' font-size='8.218248' x='4.746205' y='1.793263'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.081077' y='0'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='20.456544' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='24.542537' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='28.628529' y='0'>.</text>
+<text font-family='fourier-ms' font-size='10.957664' x='33.00671' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='42.74083' y='0'>I</text>
+<text font-family='futri8r' font-size='8.218248' x='47.128383' y='1.793263'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='55.222299' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='65.182229' y='0'>0</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.1705659em' height='1.0685543em' viewBox='-0.6 -8.193661 91.705659 10.685543' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq28'>
+<text font-family='fourier-ml' font-size='10.957664' x='0' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='7.603483' y='0'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='14.728771' y='1.793263'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='21.063643' y='0'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='30.43911' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='34.525102' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='38.611094' y='0'>.</text>
+<text font-family='fourier-ms' font-size='10.957664' x='42.989276' y='0'>+</text>
+<text font-family='fourier-ml' font-size='10.957664' x='52.364744' y='0'>∆</text>
+<text font-family='futri8r' font-size='10.957664' x='59.968227' y='0'>V</text>
+<text font-family='futri8r' font-size='8.218248' x='67.093515' y='1.793263'>n</text>
+<text font-family='fourier-ms' font-size='10.957664' x='75.18743' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='85.147361' y='0'>0</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13.3040495em' height='3.0972318em' viewBox='-0.196454 -16.857389 133.040495 30.972318' class='inline' style='vertical-align:-1.530732em'>
+<g id='eq29'>
+<text font-family='futri8r' font-size='8.218248' x='4.635616' y='-12.131828'>n</text>
+<text font-family='fourier-mex' font-size='10.998733' x='1.339414' y='-9.932085'></text>
+<text font-family='futri8r' font-size='8.218248' x='.896641' y='11.526113'>j</text>
+<text font-family='fourier-ms' font-size='8.218248' x='4.510084' y='11.526113'>=</text>
+<text font-family='futr8r' font-size='8.218248' x='10.445822' y='11.526113'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='15.990329' y='0'>R</text>
+<text font-family='futri8r' font-size='8.218248' x='23.390583' y='1.793263'>i</text>
+<text font-family='futri8r' font-size='8.218248' x='27.891704' y='1.793263'>j</text>
+<text font-family='futri8r' font-size='10.957664' x='33.530853' y='0'>I</text>
+<text font-family='futri8r' font-size='8.218248' x='38.815047' y='1.793263'>j</text>
+<text font-family='fourier-ms' font-size='10.957664' x='44.972231' y='0'>=</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='54.932161' y='0'>ε</text>
+<text font-family='futri8r' font-size='8.218248' x='60.610871' y='1.793263'>i</text>
+<text font-family='futr8r' font-size='10.957664' x='75.234028' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='79.083586' y='0'>i</text>
+<text font-family='fourier-ms' font-size='10.957664' x='85.935182' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='95.895112' y='0'>1</text>
+<text font-family='futr8r' font-size='10.957664' x='101.729233' y='0'>,</text>
+<text font-family='futr8r' font-size='10.957664' x='105.815225' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='109.901217' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='113.987209' y='0'>.</text>
+<text font-family='futr8r' font-size='10.957664' x='118.073167' y='0'>,</text>
+<text font-family='futri8r' font-size='10.957664' x='122.159159' y='0'>n</text>
+<text font-family='futr8r' font-size='10.957664' x='129.559414' y='0'>)</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-6">
+<h2>6. Fluxo elétrico</h2>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.9686485em' height='2.9315957em' viewBox='-0.6 -17.091225 89.686485 29.315957' class='inline' style='vertical-align:-1.334532em'>
+<g id='eq30'>
+<text font-family='fourier-ml' font-size='10.957664' x='.077689' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>E</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.744723' y='0'>=</text>
+<text font-family='futri8r' font-size='8.218248' x='23.887469' y='-12.131828'>n</text>
+<text font-family='fourier-mex' font-size='10.998733' x='20.591266' y='-9.932085'></text>
+<text font-family='futri8r' font-size='8.218248' x='19.704653' y='11.526113'>i</text>
+<text font-family='fourier-ms' font-size='8.218248' x='23.309132' y='11.526113'>=</text>
+<text font-family='futr8r' font-size='8.218248' x='29.244871' y='11.526113'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='35.984895' y='-8.093642'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='44.219328' y='-8.093642'>q</text>
+<text font-family='futri8r' font-size='8.218248' x='50.722936' y='-6.300379'>i</text>
+<text font-family='futr8r' font-size='10.957664' x='54.825547' y='-8.093642'>(</text>
+<text font-family='fourier-ml' font-size='10.957664' x='57.605106' y='-8.272977'></text>
+<text font-family='futri8r' font-size='10.957664' x='58.675106' y='-8.093642'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='66.137737' y='-8.093642'>−</text>
+<text font-family='fourier-ml' font-size='10.957664' x='74.443204' y='-8.272977'></text>
+<text font-family='futri8r' font-size='10.957664' x='75.513205' y='-8.093642'>r</text>
+<text font-family='futri8r' font-size='8.218248' x='80.534376' y='-6.300379'>i</text>
+<text font-family='futr8r' font-size='10.957664' x='84.63698' y='-8.093642'>)</text>
+<rect x='35.984895' y='-3.415339' height='.637912' width='52.50159'/>
+<text font-family='fourier-ms' font-size='10.957664' x='43.757384' y='9.483541'>|</text>
+<text font-family='fourier-ml' font-size='10.957664' x='45.747898' y='9.417763'></text>
+<text font-family='futri8r' font-size='10.957664' x='46.817898' y='9.597098'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='54.280529' y='9.597098'>−</text>
+<text font-family='fourier-ml' font-size='10.957664' x='62.585996' y='9.417763'></text>
+<text font-family='futri8r' font-size='10.957664' x='63.655997' y='9.597098'>r</text>
+<text font-family='futri8r' font-size='8.218248' x='68.677168' y='11.390361'>i</text>
+<text font-family='fourier-ms' font-size='10.957664' x='72.779772' y='9.483541'>|</text>
+<text font-family='futr8r' font-size='8.218248' x='75.840275' y='4.65959'>3</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.415505em' height='0.9473037em' viewBox='-0.6 -8.730587 64.15505 9.473037' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq31'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>Φ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='10.151222' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='20.948011' y='0'>A</text>
+<text font-family='futri8r' font-size='10.957664' x='29.457413' y='0'>E</text>
+<text font-family='futr8r' font-size='10.957664' x='39.494375' y='0'>cos</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='57.257065' y='0'>θ</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.7002329em' height='1.1982342em' viewBox='-0.6 -8.730587 117.002329 11.982342' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq32'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>Φ</text>
+<text font-family='futr8r' font-size='10.957664' x='8.105609' y='0'>(S<tspan x='20.383557'>fechada</tspan>
+<tspan x='59.739904'>)</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='65.635075' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='75.595005' y='0'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='82.598052' y='0'>π</text>
+<text font-family='futri8r' font-size='10.957664' x='90.748792' y='0'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='98.983225' y='0'>q</text>
+<text font-family='futr8r' font-size='8.218248' x='105.486833' y='1.793263'>int</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.2726401em' height='1.3163511em' viewBox='-0.6 -8.730587 72.726401 13.163511' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq33'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>E</text>
+<text font-family='futr8r' font-size='8.218248' x='7.149185' y='1.942727'>plano</text>
+<text font-family='fourier-ms' font-size='10.957664' x='31.185301' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='41.145232' y='0'>2</text>
+<text font-family='fourier-ml' font-size='10.957664' x='48.148278' y='0'>π</text>
+<text font-family='futri8r' font-size='10.957664' x='56.299018' y='0'>k</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='64.294342' y='0'>σ</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.3951321em' height='2.5625453em' viewBox='-0.6 -16.824229 53.951321 25.625453' class='inline' style='vertical-align:-0.8832em'>
+<g id='eq34'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>E</text>
+<text font-family='futr8r' font-size='8.218248' x='7.149185' y='1.942727'>ﬁo</text>
+<text font-family='fourier-ms' font-size='10.957664' x='19.4842' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='30.639645' y='-8.093642'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='37.642692' y='-8.093642'>k</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='45.638016' y='-8.093642'>λ</text>
+<rect x='30.639645' y='-3.415339' height='.637912' width='22.111677'/>
+<text font-family='futri8r' font-size='10.957664' x='37.744304' y='8.201225'>R</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.2273225em' height='2.5756945em' viewBox='-0.6 -16.824229 92.273225 25.756945' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq35'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>E</text>
+<text font-family='futr8r' font-size='8.218248' x='7.149185' y='1.942727'>esf</text>
+<text font-family='fourier-ms' font-size='10.957664' x='20.156667' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='31.312111' y='-8.093642'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='37.779857' y='-8.093642'>Q</text>
+<rect x='31.312111' y='-3.415339' height='.637912' width='15.601468'/>
+<text font-family='futri8r' font-size='10.957664' x='33.675243' y='8.201225'>r</text>
+<text font-family='futr8r' font-size='8.218248' x='39.676732' y='4.746194'>2</text>
+<text font-family='futr8r' font-size='10.957664' x='58.629638' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='62.479196' y='0'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='70.526298' y='0'>></text>
+<text font-family='futri8r' font-size='10.957664' x='80.486228' y='0'>R</text>
+<text font-family='futr8r' font-size='10.957664' x='88.388597' y='0'>)</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-7">
+<h2>7. Potencial</h2>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.2809958em' height='1.1982618em' viewBox='-0.6 -11.251126 62.809958 11.982618' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq36'>
+<text font-family='futr8r' font-size='10.957664' x='0' y='0'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='6.336236' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.957664' x='17.623194' y='0'>=<tspan x='27.583125'>−</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.957664' x='35.575131' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='35.497443' y='0'>E</text>
+<text font-family='fourier-ms' font-size='10.957664' x='44.657702' y='0'>·</text>
+<text font-family='futr8r' font-size='10.957664' x='49.17937' y='0'>d</text>
+<text font-family='fourier-ml' font-size='10.957664' x='54.684714' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='55.754715' y='0'>r</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.9440629em' height='2.5756945em' viewBox='-0.6 -16.824229 49.440629 25.756945' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq37'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>E</text>
+<text font-family='futri8r' font-size='8.218248' x='7.328517' y='1.793263'>s</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.593297' y='0'>=<tspan x='23.553227'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='32.663059' y='-8.093642'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='38.999295' y='-8.093642'>V</text>
+<rect x='32.663059' y='-3.415339' height='.637912' width='15.57757'/>
+<text font-family='futr8r' font-size='10.957664' x='34.563935' y='8.201225'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='41.378389' y='8.201225'>s</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.995567em' height='4.0179803em' viewBox='-0.839109 -23.780737 69.95567 40.179803' class='inline' style='vertical-align:-1.75263em'>
+<g id='eq38'>
+<text font-family='futri8r' font-size='10.957664' x='-.239109' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.04785' y='0'>=<tspan x='21.00778'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='8.218248' x='35.045969' y='-17.49371'>P</text>
+<text font-family='fourier-mex' font-size='10.998733' x='30.091024' y='-15.293966'></text>
+<text font-family='fourier-ms' font-size='8.218248' x='28.603499' y='15.700446'>∞</text>
+<text font-family='fourier-ml' font-size='10.957664' x='41.489465' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='41.411776' y='0'>E</text>
+<text font-family='fourier-ms' font-size='10.957664' x='50.572035' y='0'>·</text>
+<text font-family='futri8r' font-size='10.957664' x='55.093703' y='0'>d</text>
+<text font-family='fourier-ml' font-size='10.957664' x='61.591317' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='62.661318' y='0'>r</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.0810022em' height='2.9082121em' viewBox='-0.839109 -16.857389 70.810022 29.082121' class='inline' style='vertical-align:-1.334532em'>
+<g id='eq39'>
+<text font-family='futri8r' font-size='10.957664' x='-.239109' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.04785' y='0'>=</text>
+<text font-family='futri8r' font-size='8.218248' x='25.190596' y='-12.131828'>n</text>
+<text font-family='fourier-mex' font-size='10.998733' x='21.894394' y='-9.932085'></text>
+<text font-family='futri8r' font-size='8.218248' x='21.00778' y='11.526113'>i</text>
+<text font-family='fourier-ms' font-size='8.218248' x='24.61226' y='11.526113'>=</text>
+<text font-family='futr8r' font-size='8.218248' x='30.547998' y='11.526113'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='43.909159' y='-8.093642'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='52.143592' y='-8.093642'>q</text>
+<text font-family='futri8r' font-size='8.218248' x='58.647199' y='-6.300379'>i</text>
+<rect x='37.288023' y='-3.415339' height='.637912' width='32.08289'/>
+<text font-family='fourier-ms' font-size='10.957664' x='37.288023' y='8.201225'>|</text>
+<text font-family='fourier-ml' font-size='10.957664' x='39.27854' y='8.021889'></text>
+<text font-family='futri8r' font-size='10.957664' x='40.34854' y='8.201225'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='47.811171' y='8.201225'>−</text>
+<text font-family='fourier-ml' font-size='10.957664' x='56.116639' y='8.021889'></text>
+<text font-family='futri8r' font-size='10.957664' x='57.186639' y='8.201225'>r</text>
+<text font-family='futri8r' font-size='8.218248' x='62.20781' y='9.994488'>i</text>
+<text font-family='fourier-ms' font-size='10.957664' x='66.310414' y='8.201225'>|</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.2249328em' height='2.5756945em' viewBox='-0.839109 -16.824229 92.249328 25.756945' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq40'>
+<text font-family='futri8r' font-size='10.957664' x='-.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='6.886179' y='1.942727'>esf</text>
+<text font-family='fourier-ms' font-size='10.957664' x='19.89366' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='31.049105' y='-8.093642'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='37.516851' y='-8.093642'>Q</text>
+<rect x='31.049105' y='-3.415339' height='.637912' width='15.601468'/>
+<text font-family='futri8r' font-size='10.957664' x='35.849098' y='8.201225'>r</text>
+<text font-family='futr8r' font-size='10.957664' x='58.366632' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='62.21619' y='0'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='70.263292' y='0'>></text>
+<text font-family='futri8r' font-size='10.957664' x='80.223222' y='0'>R</text>
+<text font-family='futr8r' font-size='10.957664' x='88.125591' y='0'>)</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-8">
+<h2>8. Campo magnético</h2>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.3575867em' height='1.1851126em' viewBox='-0.6 -11.251126 53.575867 11.851126' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq41'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.780599' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='19.740529' y='0'>L</text>
+<text font-family='fourier-ml' font-size='10.957664' x='27.811528' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='28.87555' y='0'>I</text>
+<text font-family='fourier-ms' font-size='10.957664' x='35.513275' y='0'>×</text>
+<text font-family='fourier-ml' font-size='10.957664' x='45.450623' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='44.888743' y='0'>B</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.2214348em' height='1.5353914em' viewBox='-0.6 -11.251126 82.214348 15.353914' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq42'>
+<text font-family='fourier-ml' font-size='10.957664' x='.095627' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.780599' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='19.979638' y='0'>q</text>
+<text font-family='fourier-mex' font-size='10.998733' x='29.382985' y='-9.255742'></text>
+<text font-family='fourier-ml' font-size='10.957664' x='33.728164' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='33.650475' y='0'>E</text>
+<text font-family='fourier-ms' font-size='10.957664' x='42.810735' y='0'>+</text>
+<text font-family='fourier-ml' font-size='10.957664' x='51.857411' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='52.425311' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='60.533501' y='0'>×</text>
+<text font-family='fourier-ml' font-size='10.957664' x='70.470849' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='69.908969' y='0'>B</text>
+<text font-family='fourier-mex' font-size='10.998733' x='77.978698' y='-9.255742'></text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.3407219em' height='1.1982618em' viewBox='-0.360891 -11.251126 53.407219 11.982618' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq43'>
+<text font-family='fourier-ml' font-size='10.957664' x='1.972591' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='.239109' y='0'>M</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.534512' y='0'>=</text>
+<text font-family='fourier-ml' font-size='10.957664' x='24.737773' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='23.494442' y='0'>m</text>
+<text font-family='fourier-ms' font-size='10.957664' x='35.583736' y='0'>×</text>
+<text font-family='fourier-ml' font-size='10.957664' x='45.521084' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='44.959203' y='0'>B</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.6842229em' height='0.9729076em' viewBox='-0.6 -8.997584 46.842229 9.729076' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq44'>
+<text font-family='fourier-ml' font-size='10.957664' x='1.243331' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>m</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.673756' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='23.470545' y='0'>A</text>
+<text font-family='futri8r' font-size='10.957664' x='32.3386' y='0'>I</text>
+<text font-family='futr8r' font-size='10.957664' x='40.782232' y='-.179335'>ˆ</text>
+<text font-family='futri8r' font-size='10.957664' x='38.684112' y='0'>n</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.9085764em' height='2.5647369em' viewBox='-0.6 -14.194389 39.085764 25.647369' class='inline' style='vertical-align:-1.154398em'>
+<g id='eq45'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='8.047102' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='19.202546' y='-8.093642'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='31.238735' y='-8.093642'>v</text>
+<rect x='19.202546' y='-3.415339' height='.637912' width='18.683219'/>
+<text font-family='futri8r' font-size='10.957664' x='20.511647' y='8.201225'>q</text>
+<text font-family='futri8r' font-size='10.957664' x='28.746069' y='8.201225'>B</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.9002086em' height='2.522002em' viewBox='-0.6 -16.287303 39.002086 25.22002' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq46'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ω</text>
+<text font-family='fourier-ms' font-size='10.957664' x='10.103393' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='21.497946' y='-8.093642'>q</text>
+<text font-family='futri8r' font-size='10.957664' x='29.732368' y='-8.093642'>B</text>
+<rect x='21.258838' y='-3.415339' height='.637912' width='16.543248'/>
+<text font-family='futri8r' font-size='10.957664' x='24.21639' y='8.201225'>m</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.7455258em' height='3.3399681em' viewBox='-0.697747 -15.904965 97.455258 33.399681' class='inline' style='vertical-align:-1.870481em'>
+<g id='eq47'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-15.293966'></text>
+<text font-family='futr8r' font-size='8.218248' x='-.097747' y='16.771442'>C</text>
+<text font-family='fourier-ml' font-size='10.957664' x='11.882633' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='11.320752' y='0'>B</text>
+<text font-family='fourier-ms' font-size='10.957664' x='20.851631' y='0'>·</text>
+<text font-family='futr8r' font-size='10.957664' x='25.373299' y='0'>d</text>
+<text font-family='fourier-ml' font-size='10.957664' x='30.878643' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='31.948644' y='0'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='39.995737' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='49.955668' y='0'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='56.958715' y='0'>π</text>
+<text font-family='futri8r' font-size='10.957664' x='65.109454' y='0'>k</text>
+<text font-family='futri8r' font-size='8.218248' x='71.45765' y='1.793263'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='81.45446' y='0'>I</text>
+<text font-family='futr8r' font-size='8.218248' x='85.842014' y='1.793263'>int</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.7020748em' height='2.5756945em' viewBox='-0.6 -16.824229 77.020748 25.756945' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq48'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>B</text>
+<text font-family='futr8r' font-size='8.218248' x='7.424163' y='1.942727'>ﬁo<tspan x='19.071477'>r</tspan>
+<tspan x='22.12004'>eto</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='36.49935' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='47.654794' y='-8.093642'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='54.657841' y='-8.093642'>k</text>
+<text font-family='futr8r' font-size='8.218248' x='61.006037' y='-6.300379'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='70.644191' y='-8.093642'>I</text>
+<rect x='47.654794' y='-3.415339' height='.637912' width='28.165954'/>
+<text font-family='futri8r' font-size='10.957664' x='58.737031' y='8.201225'>r</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.619594em' height='2.5756945em' viewBox='-0.6 -16.824229 106.19594 25.756945' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq49'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>F</text>
+<text font-family='futr8r' font-size='8.218248' x='6.635122' y='1.942727'>ﬁos<tspan x='21.877953'>r</tspan>
+<tspan x='24.926516'>etos</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='42.90133' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='54.056774' y='-8.093642'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='61.059821' y='-8.093642'>k</text>
+<text font-family='futr8r' font-size='8.218248' x='67.408017' y='-6.300379'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='76.687519' y='-8.093642'>L</text>
+<text font-family='futri8r' font-size='10.957664' x='84.945854' y='-8.093642'>I</text>
+<text font-family='futr8r' font-size='8.218248' x='89.333407' y='-6.300379'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='95.734707' y='-8.093642'>I</text>
+<text font-family='futr8r' font-size='8.218248' x='100.12226' y='-6.300379'>2</text>
+<rect x='54.056774' y='-3.415339' height='.637912' width='50.939166'/>
+<text font-family='futri8r' font-size='10.957664' x='76.525617' y='8.201225'>r</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.2825291em' height='2.9354218em' viewBox='0.595514 -17.901239 102.825291 29.354218' class='inline' style='vertical-align:-1.154398em'>
+<g id='eq50'>
+<text font-family='fourier-mlit' font-size='10.957664' x='1.195514' y='-8.093642'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='7.244824' y='-8.093642'>B</text>
+<text font-family='futri8r' font-size='8.218248' x='14.848318' y='-6.300379'>x</text>
+<rect x='1.195514' y='-3.415339' height='.637912' width='18.983788'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='4.321289' y='8.201225'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='10.609708' y='8.201225'>x</text>
+<text font-family='fourier-ms' font-size='10.957664' x='22.835965' y='0'>+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='33.406947' y='-9.148737'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='39.456257' y='-9.148737'>B</text>
+<text font-family='futri8r' font-size='8.218248' x='47.32874' y='-7.355474'>y</text>
+<rect x='33.406947' y='-3.415339' height='.637912' width='19.037587'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='36.523768' y='8.201225'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='43.170839' y='8.201225'>y</text>
+<text font-family='fourier-ms' font-size='10.957664' x='55.101198' y='0'>+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='65.672179' y='-8.093642'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='71.721489' y='-8.093642'>B</text>
+<text font-family='futri8r' font-size='8.218248' x='79.324983' y='-6.300379'>z</text>
+<rect x='65.672179' y='-3.415339' height='.637912' width='18.589272'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='68.863717' y='8.201225'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='75.152136' y='8.201225'>z</text>
+<text font-family='fourier-ms' font-size='10.957664' x='87.502577' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='97.462507' y='0'>0</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-9">
+<h2>9. Indução eletromagnética</h2>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.8465727em' height='1.3644389em' viewBox='-0.6 -11.251126 48.465727 13.644389' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq51'>
+<text font-family='fourier-ml' font-size='10.957664' x='.077689' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>E</text>
+<text font-family='futr8r' font-size='8.218248' x='7.149185' y='1.793263'>i</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.095906' y='0'>=</text>
+<text font-family='fourier-ml' font-size='10.957664' x='21.727045' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='22.294945' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='30.403135' y='0'>×</text>
+<text font-family='fourier-ml' font-size='10.957664' x='40.340483' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='39.778603' y='0'>B</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.1580447em' height='1.3743008em' viewBox='-0.6 -11.251126 61.580447 13.743008' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq52'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ε</text>
+<text font-family='futri8r' font-size='8.218248' x='5.678709' y='1.793263'>i</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.826933' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='21.786864' y='0'>L</text>
+<text font-family='fourier-ms' font-size='10.957664' x='29.686546' y='0'>|</text>
+<text font-family='fourier-ml' font-size='10.957664' x='32.418272' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='32.986173' y='0'>v</text>
+<text font-family='fourier-ms' font-size='10.957664' x='41.094363' y='0'>×</text>
+<text font-family='fourier-ml' font-size='10.957664' x='51.031711' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='50.46983' y='0'>B</text>
+<text font-family='fourier-ms' font-size='10.957664' x='58.539559' y='0'>|</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.7901411em' height='2.5756945em' viewBox='-0.6 -16.824229 47.901411 25.756945' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq53'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ε</text>
+<text font-family='futri8r' font-size='8.218248' x='5.678709' y='1.793263'>i</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.826933' y='0'>=<tspan x='21.786864'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='30.896695' y='-8.093642'>d</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='37.47204' y='-8.093642'>Ψ</text>
+<rect x='30.896695' y='-3.415339' height='.637912' width='15.804715'/>
+<text font-family='futr8r' font-size='10.957664' x='32.929082' y='8.201225'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='39.743536' y='8.201225'>t</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.564945em' height='0.9473037em' viewBox='-0.6 -8.730587 65.64945 9.473037' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq54'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>Ψ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.274995' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='22.071783' y='0'>A</text>
+<text font-family='futri8r' font-size='10.957664' x='30.581186' y='0'>B</text>
+<text font-family='futr8r' font-size='10.957664' x='40.988775' y='0'>cos</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='58.751465' y='0'>θ</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.2106938em' height='2.5756945em' viewBox='-0.6 -16.824229 52.106938 25.756945' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq55'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ε</text>
+<text font-family='futri8r' font-size='8.218248' x='5.678709' y='1.793263'>i</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.826933' y='0'>=<tspan x='21.786864'>−</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='29.701182' y='0'>L</text>
+<text font-family='futr8r' font-size='10.957664' x='38.796378' y='-8.093642'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='45.730374' y='-8.093642'>I</text>
+<rect x='38.796378' y='-3.415339' height='.637912' width='12.110561'/>
+<text font-family='futr8r' font-size='10.957664' x='38.981687' y='8.201225'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='45.796141' y='8.201225'>t</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-10">
+<h2>10. Processamento de sinais</h2>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.6372613em' height='1.2508586em' viewBox='-0.839109 -10.506005 76.372613 12.508586' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq56'>
+<text font-family='futr8r' font-size='10.957664' x='2.899117' y='-2.432878'>˜</text>
+<text font-family='futri8r' font-size='10.957664' x='-.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='10.957664' x='9.002237' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='13.090905' y='0'>s</text>
+<text font-family='futr8r' font-size='10.957664' x='18.052299' y='0'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='23.94747' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='34.385607' y='0'>Z</text>
+<text font-family='futr8r' font-size='10.957664' x='42.718354' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='46.807021' y='0'>s</text>
+<text font-family='futr8r' font-size='10.957664' x='51.768416' y='0'>)<tspan x='59.426963' y='-2.432878'>˜</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='58.022239' y='0'>I</text>
+<text font-family='futr8r' font-size='10.957664' x='63.198815' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='67.287482' y='0'>s</text>
+<text font-family='futr8r' font-size='10.957664' x='72.248876' y='0'>)</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.4126238em' height='1.0575967em' viewBox='-0.121794 -8.182704 34.126238 10.575967' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq57'>
+<text font-family='futri8r' font-size='10.957664' x='.478206' y='0'>Z</text>
+<text font-family='futri8r' font-size='8.218248' x='7.555666' y='1.793263'>R</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.026175' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='25.986105' y='0'>R</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.8701693em' height='1.0575967em' viewBox='-0.121794 -8.182704 38.701693 10.575967' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq58'>
+<text font-family='futri8r' font-size='10.957664' x='.478206' y='0'>Z</text>
+<text font-family='futri8r' font-size='8.218248' x='7.555666' y='1.793263'>L</text>
+<text font-family='fourier-ms' font-size='10.957664' x='15.147466' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='25.107397' y='0'>L</text>
+<text font-family='futri8r' font-size='10.957664' x='33.246188' y='0'>s</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.2677311em' height='2.5110443em' viewBox='-0.121794 -16.144854 42.677311 25.110443' class='inline' style='vertical-align:-0.9em'>
+<g id='eq59'>
+<text font-family='futri8r' font-size='10.957664' x='.478206' y='0'>Z</text>
+<text font-family='futri8r' font-size='8.218248' x='7.286677' y='1.793263'>C</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.241371' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='31.759119' y='-8.093642'>1</text>
+<rect x='27.396816' y='-3.415339' height='.637912' width='14.558701'/>
+<text font-family='futri8r' font-size='10.957664' x='27.038164' y='8.201225'>C</text>
+<text font-family='futri8r' font-size='10.957664' x='36.994134' y='8.201225'>s</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.9184166em' height='1.0674586em' viewBox='-0.121794 -8.182704 59.184166 10.674586' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq60'>
+<text font-family='futri8r' font-size='10.957664' x='.478206' y='0'>Z</text>
+<text font-family='futr8r' font-size='8.218248' x='7.555666' y='1.793263'>s</text>
+<text font-family='fourier-ms' font-size='10.957664' x='13.694921' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='24.133058' y='0'>Z</text>
+<text font-family='futr8r' font-size='8.218248' x='31.210517' y='1.793263'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='37.545389' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='47.399062' y='0'>Z</text>
+<text font-family='futr8r' font-size='8.218248' x='54.476522' y='1.793263'>2</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.2684225em' height='2.6870833em' viewBox='-0.121794 -16.276345 62.684225 26.870833' class='inline' style='vertical-align:-1.063198em'>
+<g id='eq61'>
+<text font-family='futri8r' font-size='10.957664' x='.478206' y='0'>Z</text>
+<text font-family='futr8r' font-size='8.218248' x='7.555666' y='1.793263'>p</text>
+<text font-family='fourier-ms' font-size='10.957664' x='15.111605' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='32.163566' y='-8.093642'>Z</text>
+<text font-family='futr8r' font-size='8.218248' x='39.241026' y='-6.300379'>1</text>
+<text font-family='futri8r' font-size='10.957664' x='44.592954' y='-8.093642'>Z</text>
+<text font-family='futr8r' font-size='8.218248' x='51.670414' y='-6.300379'>2</text>
+<rect x='26.26705' y='-3.415339' height='.637912' width='35.695381'/>
+<text font-family='futri8r' font-size='10.957664' x='26.745256' y='8.201225'>Z</text>
+<text font-family='futr8r' font-size='8.218248' x='33.822715' y='9.994488'>1</text>
+<text font-family='fourier-ms' font-size='10.957664' x='40.157587' y='8.201225'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='50.011261' y='8.201225'>Z</text>
+<text font-family='futr8r' font-size='8.218248' x='57.08872' y='9.994488'>2</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.3768877em' height='1.2997887em' viewBox='-0.839109 -10.506005 83.768877 12.997887' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq62'>
+<text font-family='futr8r' font-size='10.957664' x='2.899117' y='-2.432878'>˜</text>
+<text font-family='futri8r' font-size='10.957664' x='-.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='10.957664' x='9.002237' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='13.090905' y='0'>s</text>
+<text font-family='futr8r' font-size='10.957664' x='18.052299' y='0'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='23.94747' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='34.266053' y='0'>H</text>
+<text font-family='futr8r' font-size='10.957664' x='43.92582' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='48.014488' y='0'>s</text>
+<text font-family='futr8r' font-size='10.957664' x='52.975882' y='0'>)<tspan x='61.77017' y='-2.432878'>˜</tspan>
+</text>
+<text font-family='futri8r' font-size='10.957664' x='58.631944' y='0'>V</text>
+<text font-family='futri8r' font-size='8.218248' x='65.757233' y='1.793263'>e</text>
+<text font-family='futr8r' font-size='10.957664' x='70.595078' y='0'>(</text>
+<text font-family='futri8r' font-size='10.957664' x='74.683746' y='0'>s</text>
+<text font-family='futr8r' font-size='10.957664' x='79.64514' y='0'>)</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-11">
+<h2>11. Circuitos de corrente alternada</h2>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.3191632em' height='1.1434458em' viewBox='-0.839109 -8.182704 103.191632 11.434458' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq63'>
+<text font-family='futri8r' font-size='10.957664' x='-.239109' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.04785' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='20.768671' y='0'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='27.89396' y='1.793263'>máx</text>
+<text font-family='futr8r' font-size='10.957664' x='45.494249' y='0'>cos<tspan x='62.088013'>(</tspan>
+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='65.937571' y='0'>ω</text>
+<text font-family='futri8r' font-size='10.957664' x='75.403387' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='81.790059' y='0'>+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='91.165526' y='0'>ϕ</text>
+<text font-family='futr8r' font-size='10.957664' x='99.067895' y='0'>)</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.7635567em' height='2.4946078em' viewBox='-0.6 -16.144854 87.635567 24.946078' class='inline' style='vertical-align:-0.8832em'>
+<g id='eq64'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ω</text>
+<text font-family='fourier-ms' font-size='10.957664' x='10.103393' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='20.063324' y='0'>2</text>
+<text font-family='fourier-ml' font-size='10.957664' x='27.066371' y='0'>π</text>
+<text font-family='futri8r' font-size='10.957664' x='36.412632' y='0'>f</text>
+<text font-family='futri8r' font-size='10.957664' x='58.697058' y='0'>f</text>
+<text font-family='fourier-ms' font-size='10.957664' x='66.887614' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='79.322258' y='-8.093642'>1</text>
+<rect x='78.043059' y='-3.415339' height='.637912' width='8.392509'/>
+<text font-family='futri8r' font-size='10.957664' x='78.043059' y='8.201225'>T</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.4426109em' height='1.0437311em' viewBox='-0.775323 -8.43473 54.426109 10.437311' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq65'>
+<text font-family='futb8r' font-size='10.957664' x='0' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.135032' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='19.573169' y='0'>Z</text>
+<text font-family='futr8r' font-size='10.957664' x='27.905916' y='0'>(i</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='36.128381' y='0'>ω</text>
+<text font-family='futr8r' font-size='10.957664' x='44.186162' y='0'>)</text>
+<text font-family='futb8r' font-size='10.957664' x='49.204647' y='0'>I</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10.4286498em' height='1.0437311em' viewBox='-0.121794 -8.43473 104.286498 10.437311' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq66'>
+<text font-family='futri8r' font-size='10.957664' x='.478206' y='0'>Z</text>
+<text font-family='futr8r' font-size='10.957664' x='8.810953' y='0'>(i</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='17.033419' y='0'>ω</text>
+<text font-family='futr8r' font-size='10.957664' x='25.091199' y='0'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='30.986371' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='40.946301' y='0'>R</text>
+<text font-family='futr8r' font-size='10.957664' x='48.84867' y='0'>(</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='52.698229' y='0'>ω</text>
+<text font-family='futr8r' font-size='10.957664' x='60.75601' y='0'>)</text>
+<text font-family='fourier-ms' font-size='10.957664' x='66.066718' y='0'>+</text>
+<text font-family='futr8r' font-size='10.957664' x='75.442186' y='0'>i</text>
+<text font-family='futri8r' font-size='10.957664' x='80.293299' y='0'>X</text>
+<text font-family='futr8r' font-size='10.957664' x='88.972737' y='0'>(</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='92.822296' y='0'>ω</text>
+<text font-family='futr8r' font-size='10.957664' x='100.880077' y='0'>)</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.918839em' height='2.4946078em' viewBox='-0.6 -16.144854 119.18839 24.946078' class='inline' style='vertical-align:-0.8832em'>
+<g id='eq67'>
+<text font-family='fourier-ms' font-size='10.957664' x='0' y='0'>〈</text>
+<text font-family='futri8r' font-size='10.957664' x='4.279948' y='0'>P</text>
+<text font-family='fourier-ms' font-size='10.957664' x='12.218167' y='0'>〉<tspan x='18.543727'>=</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='29.699171' y='-8.093642'>1</text>
+<rect x='29.699171' y='-3.415339' height='.637912' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='29.699171' y='8.201225'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='37.658612' y='0'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='44.7839' y='1.793263'>máx</text>
+<text font-family='futri8r' font-size='10.957664' x='62.742841' y='0'>I</text>
+<text font-family='futr8r' font-size='8.218248' x='67.130395' y='1.793263'>máx</text>
+<text font-family='futr8r' font-size='10.957664' x='85.89961' y='0'>cos</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='103.662299' y='0'>ϕ</text>
+<text font-family='futri8r' font-size='8.218248' x='111.923323' y='1.793263'>Z</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='12.0938028em' height='2.7799265em' viewBox='-0.839109 -16.276345 120.938028 27.799265' class='inline' style='vertical-align:-1.160108em'>
+<g id='eq68'>
+<text font-family='futri8r' font-size='10.957664' x='-.239109' y='0'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='6.886179' y='1.942727'>ef</text>
+<text font-family='fourier-ms' font-size='10.957664' x='16.29815' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='27.214485' y='-8.093642'>V</text>
+<text font-family='futr8r' font-size='8.218248' x='34.339774' y='-6.300379'>máx</text>
+<rect x='27.453594' y='-3.415339' height='.637912' width='23.317543'/>
+<text font-family='fourier-ms' font-size='10.957664' x='31.616496' y='.403562'></text>
+<rect x='40.774141' y='-.230064' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='40.774141' y='9.762645'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='73.366394' y='0'>I</text>
+<text font-family='futr8r' font-size='8.218248' x='77.753947' y='1.942727'>ef</text>
+<text font-family='fourier-ms' font-size='10.957664' x='87.165918' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='98.680014' y='-8.093642'>I</text>
+<text font-family='futr8r' font-size='8.218248' x='103.067568' y='-6.300379'>máx</text>
+<rect x='98.321362' y='-3.415339' height='.637912' width='21.177557'/>
+<text font-family='fourier-ms' font-size='10.957664' x='101.414271' y='.403562'></text>
+<rect x='110.571916' y='-.230064' height='.633625' width='5.83411'/>
+<text font-family='futr8r' font-size='10.957664' x='110.571916' y='9.762645'>2</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.3035289em' height='1.0926612em' viewBox='-0.775323 -8.43473 63.035289 10.926612' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq69'>
+<text font-family='futb8r' font-size='10.957664' x='0' y='0'>V</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.135032' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='19.453614' y='0'>H</text>
+<text font-family='futr8r' font-size='10.957664' x='29.113382' y='0'>(i</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='37.335847' y='0'>ω</text>
+<text font-family='futr8r' font-size='10.957664' x='45.393628' y='0'>)</text>
+<text font-family='futb8r' font-size='10.957664' x='50.412113' y='0'>V</text>
+<text font-family='futri8r' font-size='8.218248' x='57.501532' y='1.793263'>e</text>
+</g>
+</svg>
+</div>
+</section>
+<section id="sec-12">
+<h2>12. Ondas eletromagnéticas e luz</h2>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.7002329em' height='1.1982342em' viewBox='-0.6 -8.730587 117.002329 11.982342' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq70'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>Φ</text>
+<text font-family='futr8r' font-size='10.957664' x='8.105609' y='0'>(S<tspan x='20.383557'>fechada</tspan>
+<tspan x='59.739904'>)</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='65.635075' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='75.595005' y='0'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='82.598052' y='0'>π</text>
+<text font-family='futri8r' font-size='10.957664' x='90.748792' y='0'>k</text>
+<text font-family='futri8r' font-size='10.957664' x='98.983225' y='0'>q</text>
+<text font-family='futr8r' font-size='8.218248' x='105.486833' y='1.793263'>int</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.3277076em' height='1.0733168em' viewBox='-0.6 -8.730587 83.277076 10.733168' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq71'>
+<text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>Ψ</text>
+<text font-family='futr8r' font-size='10.957664' x='9.229382' y='0'>(S<tspan x='21.50733'>fechada</tspan>
+<tspan x='60.863676'>)</tspan>
+</text>
+<text font-family='fourier-ms' font-size='10.957664' x='66.758848' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='76.718778' y='0'>0</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.1337572em' height='3.4318945em' viewBox='-0.697747 -16.824229 81.337572 34.318945' class='inline' style='vertical-align:-1.870481em'>
+<g id='eq72'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-15.293966'></text>
+<text font-family='futr8r' font-size='8.218248' x='-.097747' y='16.771442'>C</text>
+<text font-family='fourier-ml' font-size='10.957664' x='11.398441' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='11.320752' y='0'>E</text>
+<text font-family='fourier-ms' font-size='10.957664' x='20.481012' y='0'>·</text>
+<text font-family='futr8r' font-size='10.957664' x='25.002679' y='0'>d</text>
+<text font-family='fourier-ml' font-size='10.957664' x='30.508024' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='31.578024' y='0'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='39.625118' y='0'>=<tspan x='49.585048'>−</tspan>
+</text>
+<text font-family='futr8r' font-size='10.957664' x='58.69488' y='-8.093642'>d</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='65.270225' y='-8.093642'>Ψ</text>
+<text font-family='futr8r' font-size='8.218248' x='73.901857' y='-6.300379'>C</text>
+<rect x='58.69488' y='-3.415339' height='.637912' width='21.344944'/>
+<text font-family='futr8r' font-size='10.957664' x='63.497381' y='8.201225'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='70.311835' y='8.201225'>t</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13.3333824em' height='3.4318945em' viewBox='-0.697747 -16.824229 133.333824 34.318945' class='inline' style='vertical-align:-1.870481em'>
+<g id='eq73'>
+<text font-family='fourier-mex' font-size='10.998733' x='0' y='-15.293966'></text>
+<text font-family='futr8r' font-size='8.218248' x='-.097747' y='16.771442'>C</text>
+<text font-family='fourier-ml' font-size='10.957664' x='11.882633' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='11.320752' y='0'>B</text>
+<text font-family='fourier-ms' font-size='10.957664' x='20.851631' y='0'>·</text>
+<text font-family='futr8r' font-size='10.957664' x='25.373299' y='0'>d</text>
+<text font-family='fourier-ml' font-size='10.957664' x='30.878643' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='31.948644' y='0'>r</text>
+<text font-family='fourier-ms' font-size='10.957664' x='39.995737' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='49.955668' y='0'>4</text>
+<text font-family='fourier-ml' font-size='10.957664' x='55.789789' y='0'>π</text>
+<text font-family='futri8r' font-size='10.957664' x='62.771603' y='0'>k</text>
+<text font-family='futri8r' font-size='8.218248' x='69.119799' y='1.793263'>m</text>
+<text font-family='futri8r' font-size='10.957664' x='77.947683' y='0'>I</text>
+<text font-family='futr8r' font-size='8.218248' x='82.335236' y='1.793263'>C</text>
+<text font-family='fourier-ms' font-size='10.957664' x='89.934364' y='0'>+</text>
+<text font-family='futri8r' font-size='10.957664' x='100.505345' y='-8.093642'>k</text>
+<text font-family='futr8r' font-size='8.218248' x='106.853541' y='-6.300379'>m</text>
+<rect x='100.505345' y='-3.415339' height='.637912' width='14.458765'/>
+<text font-family='futri8r' font-size='10.957664' x='104.32154' y='8.201225'>k</text>
+<text font-family='futr8r' font-size='10.957664' x='117.355138' y='-8.093642'>d</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='123.930482' y='-8.093642'>Φ</text>
+<rect x='117.355138' y='-3.415339' height='.637912' width='14.680939'/>
+<text font-family='futr8r' font-size='10.957664' x='118.825636' y='8.201225'>d</text>
+<text font-family='futri8r' font-size='10.957664' x='125.64009' y='8.201225'>t</text>
+</g>
+</svg>
+</div>
+<div class="eqbox">&emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='4.064362em' height='2.5756945em' viewBox='0.595514 -16.824229 40.64362 25.756945' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq74'>
+<text font-family='futri8r' font-size='10.957664' x='1.195514' y='-8.093642'>k</text>
+<text font-family='futr8r' font-size='8.218248' x='7.54371' y='-6.300379'>m</text>
+<rect x='1.195514' y='-3.415339' height='.637912' width='14.458765'/>
+<text font-family='futri8r' font-size='10.957664' x='5.011708' y='8.201225'>k</text>
+<text font-family='fourier-ms' font-size='10.957664' x='18.895405' y='0'>=</text>
+<text font-family='futr8r' font-size='10.957664' x='32.427937' y='-8.093642'>1</text>
+<rect x='30.050849' y='-3.415339' height='.637912' width='10.588285'/>
+<text font-family='futri8r' font-size='10.957664' x='30.050849' y='8.201225'>c</text>
+<text font-family='futr8r' font-size='8.218248' x='35.765416' y='4.746194'>2</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.459806em' height='3.0074744em' viewBox='0.595514 -18.621764 64.59806 30.074744' class='inline' style='vertical-align:-1.154398em'>
+<g id='eq75'>
+<text font-family='fourier-mlit' font-size='10.957664' x='1.195514' y='-8.093642'>∂</text>
+<text font-family='futr8r' font-size='8.218248' x='7.244824' y='-12.433355'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='12.118545' y='-8.093642'>E</text>
+<rect x='1.195514' y='-3.415339' height='.637912' width='18.622138'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='2.462765' y='8.201225'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='8.751183' y='8.201225'>t</text>
+<text font-family='futr8r' font-size='8.218248' x='13.676705' y='4.746194'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='23.058778' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='33.018708' y='0'>c</text>
+<text font-family='futr8r' font-size='8.218248' x='38.733275' y='-4.339714'>2</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='45.971436' y='-8.093642'>∂</text>
+<text font-family='futr8r' font-size='8.218248' x='52.020746' y='-12.433355'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='56.894468' y='-8.093642'>E</text>
+<rect x='45.971436' y='-3.415339' height='.637912' width='18.622138'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='46.443665' y='8.201225'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='53.090735' y='8.201225'>y</text>
+<text font-family='futr8r' font-size='8.218248' x='59.247628' y='4.746194'>2</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='6.5339299em' height='3.0074744em' viewBox='0.595514 -18.621764 65.339299 30.074744' class='inline' style='vertical-align:-1.154398em'>
+<g id='eq76'>
+<text font-family='fourier-mlit' font-size='10.957664' x='1.195514' y='-8.093642'>∂</text>
+<text font-family='futr8r' font-size='8.218248' x='7.244824' y='-12.433355'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='12.118545' y='-8.093642'>B</text>
+<rect x='1.195514' y='-3.415339' height='.637912' width='18.992757'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='2.648074' y='8.201225'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='8.936493' y='8.201225'>t</text>
+<text font-family='futr8r' font-size='8.218248' x='13.862015' y='4.746194'>2</text>
+<text font-family='fourier-ms' font-size='10.957664' x='23.429397' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='33.389328' y='0'>c</text>
+<text font-family='futr8r' font-size='8.218248' x='39.103894' y='-4.339714'>2</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='46.342056' y='-8.093642'>∂</text>
+<text font-family='futr8r' font-size='8.218248' x='52.391366' y='-12.433355'>2</text>
+<text font-family='futri8r' font-size='10.957664' x='57.265088' y='-8.093642'>B</text>
+<rect x='46.342056' y='-3.415339' height='.637912' width='18.992757'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='46.999594' y='8.201225'>∂</text>
+<text font-family='futri8r' font-size='10.957664' x='53.646664' y='8.201225'>y</text>
+<text font-family='futr8r' font-size='8.218248' x='59.803557' y='4.746194'>2</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.0169904em' height='2.5209062em' viewBox='-0.6 -16.276345 30.169904 25.209062' class='inline' style='vertical-align:-0.892799em'>
+<g id='eq77'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>B</text>
+<text font-family='fourier-ms' font-size='10.957664' x='10.11535' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='21.270794' y='-8.093642'>E</text>
+<rect x='21.270794' y='-3.415339' height='.637912' width='7.69911'/>
+<text font-family='futri8r' font-size='10.957664' x='22.263075' y='8.201225'>c</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.5652807em' height='1.1982618em' viewBox='-0.6 -11.251126 55.652807 11.982618' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq78'>
+<text font-family='fourier-ml' font-size='10.957664' x='.077689' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>E</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.16026' y='0'>×</text>
+<text font-family='fourier-ml' font-size='10.957664' x='19.097608' y='-2.432878'></text>
+<text font-family='futri8r' font-size='10.957664' x='18.535727' y='0'>B</text>
+<text font-family='fourier-ms' font-size='10.957664' x='28.651069' y='0'>−<tspan x='34.811987'>→</tspan>
+</text>
+<text font-family='fourier-ml' font-size='10.957664' x='47.527563' y='-.179335'></text>
+<text font-family='futri8r' font-size='10.957664' x='48.095464' y='0'>v</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13.8287229em' height='2.7299993em' viewBox='-0.6 -16.752014 138.287229 27.299993' class='inline' style='vertical-align:-1.074012em'>
+<g id='eq79'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>E</text>
+<text font-family='fourier-ms' font-size='10.957664' x='9.744723' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='19.704653' y='0'>E</text>
+<text font-family='futr8r' font-size='8.218248' x='26.853838' y='1.793263'>máx</text>
+<text font-family='futr8r' font-size='10.957664' x='45.623053' y='0'>sin</text>
+<text font-family='fourier-mex' font-size='10.998733' x='61.592465' y='-15.855049'></text>
+<text font-family='futr8r' font-size='10.957664' x='67.704402' y='-8.093642'>2</text>
+<text font-family='fourier-ml' font-size='10.957664' x='73.538523' y='-8.093642'>π</text>
+<text font-family='futri8r' font-size='10.957664' x='81.928372' y='-8.093642'>x</text>
+<rect x='67.704402' y='-3.415339' height='.637912' width='20.667781'/>
+<text font-family='fourier-mlit' font-size='10.957664' x='74.481631' y='8.201225'>λ</text>
+<text font-family='fourier-ms' font-size='10.957664' x='91.028847' y='0'>−</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='100.404314' y='0'>ω</text>
+<text font-family='futri8r' font-size='10.957664' x='109.87013' y='0'>t</text>
+<text font-family='fourier-ms' font-size='10.957664' x='116.256801' y='0'>+</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='125.632269' y='0'>ϕ</text>
+<text font-family='fourier-mex' font-size='10.998733' x='133.534638' y='-15.855049'></text>
+</g>
+</svg>
+</div>
+<div class="eqbox">&emsp;&emsp;<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='5.7093146em' height='2.5614496em' viewBox='-0.6 -16.813271 57.093146 25.614496' class='inline' style='vertical-align:-0.8832em'>
+<g id='eq80'>
+<text font-family='futri8r' font-size='10.957664' x='0' y='0'>c</text>
+<text font-family='fourier-ms' font-size='10.957664' x='7.760179' y='0'>=</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='19.555223' y='-8.093642'>λ</text>
+<rect x='18.915623' y='-3.415339' height='.637912' width='8.392509'/>
+<text font-family='futri8r' font-size='10.957664' x='18.915623' y='8.201225'>T</text>
+<text font-family='fourier-ms' font-size='10.957664' x='30.549259' y='0'>=</text>
+<text font-family='fourier-mlit' font-size='10.957664' x='40.509189' y='0'>λ</text>
+<text font-family='futri8r' font-size='10.957664' x='49.986964' y='0'>f</text>
+</g>
+</svg>
+</div>
+<div class="eqbox"><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='3.8775302em' height='1.1982342em' viewBox='-1.197761 -8.730587 38.775302 11.982342' class='inline' style='vertical-align:-0.973535em'>
+<g id='eq81'>
+<text font-family='futri8r' font-size='10.957664' x='-.597761' y='0'>U</text>
+<text font-family='fourier-ms' font-size='10.957664' x='11.478231' y='0'>=</text>
+<text font-family='futri8r' font-size='10.957664' x='21.438162' y='0'>h</text>
+<text font-family='futri8r' font-size='10.957664' x='31.07136' y='0'>f</text>
+</g>
+</svg>
+</div> 
+</section>
+<footer>
+<p>&copy; 2016-2021, Jaime E. Villate</p>
+<p>Publicado nos termos da <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição-Partilha</a> (versão 4.0).</p>
+<span>Última modificação: 2025/09/30 17:42:46 UTC</span>
+</footer>
+</body>
+</html>

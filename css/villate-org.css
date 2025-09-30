@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-08-21
+   Version: 2025-09-30
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 */
@@ -11,7 +11,10 @@ a:link {
     text-decoration: none
 }
 a:visited { color: #90e }
-a:hover, span.button:hover { color: #69f; }
+a:hover, span.button:hover {
+    background-color: #eee;
+    color: #555;
+}
 .clearfix:after, main:after, section:after, header:after, div.site-map::before, div.site-map:after, div.example:after {
     content: "";
     display: table;

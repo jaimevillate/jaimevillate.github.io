@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-08-21
+   Version: 2025-09-30
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 
@@ -597,6 +597,12 @@ ol.shortanswers {
 ol.problems > li::marker { font-weight: bold; }
 ol.probitems { list-style-type: lower-alpha; }
 ol.probitems > li::marker { font-style: italic; }
+ol.parentheses { counter-reset: list; }
+ol.parentheses > li { list-style: none; }
+ol.parentheses > li::before {
+    content: "(" counter(list) ") ";
+    counter-increment: list;
+}
 ol.nested {
     counter-reset: item;
     list-style-type: none;
@@ -752,7 +758,7 @@ figure {
     div.content { background-color: #555 }
     div.content-items { background-color:  #777 }
     div.content-items a:link { color: #9df }
-    .menu-content { background-color: #aaa }
+    .menu-content { background-color: #777 }
     .menu.content a:link { color: #9df }
     main, section {
         background-color: #555;
