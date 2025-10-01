@@ -1,5 +1,5 @@
 /*
-Version: 2025-08-16
+Version: 2025-10-01
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 
@@ -107,6 +107,30 @@ div.eqn { float: right; }
 .menu:hover .menubtn {
     background-color: #546284;
     color: #bcf;
+}
+header {
+    background-color: #546284;
+    color: white;
+    padding-left: 0.5em;
+    padding-top: 1em;
+    border-bottom: 1px solid #3333aa;
+}
+header h1 {
+    font-size: 1.5em;
+    color: #dedab5;
+    text-shadow: 1px 1px 2px black;
+
+}
+header h2 {
+    font-size: 1.2em;
+    color: #dedab5;
+}
+header a:link { color: #bcf; }
+header a:visited { color: #bef; }
+header:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 a:link {
     color: blue;
@@ -579,6 +603,17 @@ cite                 { font-style: normal; }
         margin-right: auto;
         border-left: 1px solid #333;
         border-right: 1px solid #333;
+    }
+    header {
+        padding-left: 1.5em;
+        padding-top: 2em;
+    }
+    header h1 {
+        font-size: 2em;
+        line-height: 1.2em;
+    }
+    header h2 {
+        font-size: 1.6em;
     }
     .ltx_eqn_center_padleft,
     .ltx_eqn_center_padright { width:50%; min-width:3.5em; }
