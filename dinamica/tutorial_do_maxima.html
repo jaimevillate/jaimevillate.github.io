@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dinâmica e Sistemas Dinâmicos &ndash; Tutorial do Maxima</title>
+<title>Dinâmica e Sistemas Dinâmicos &ndash; A. Tutorial do Maxima</title>
 <link rel="stylesheet" href="../css/villate-org.css">
 <link rel="stylesheet" href="../css/fonts.css">
 <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
@@ -18,9 +18,9 @@
 <header style="background-image:url(../img/dinamica.jpg);
                background-repeat:no-repeat;
                background-position:right center">
-<h1 id="title">A. Tutorial do Maxima</h1>
-<p>Jaime E. Villate. Dinâmica e Sistemas Dinâmicos,<br>
-Universidade do Porto, Portugal, 2019</p>
+<h1>Dinâmica e Sistemas Dinâmicos</h1>
+<p>Jaime E. Villate. Quinta edição, Universidade do Porto, Portugal,<br>
+ISBN: 978-972-99396-5-5, DOI: 10.24840/978-972-99396-5-5, 2019</p>
 </header>
 <nav>
 <a href="../pt/index.html">Início</a><span>&rarr;</span>
@@ -50,10 +50,14 @@ A. <a href="#top">Tutorial do Maxima</a>
 <li><a href="#Problemas">Problemas</a></li>
 <li><a href="#Respostas">Respostas</a></li>
 </ul>
+</li>
+</ul>
 </div>
 </div>
-<section id="sec-A.1">
-<h2>A.1. Introdução</h2>
+<section>
+<h2>A. Tutorial do Maxima</h2>
+<div id="sec-A.1">
+<h3>A.1. Introdução</h3>
 <p>
 <i class="notranslate">Maxima</i> é um pacote de software livre. Pode ser descarregado
 livremente, funciona em vários sistemas diferentes e existe muita
@@ -94,9 +98,9 @@ documentação dos métodos envolvidos esteja disponível e que não
 existam impedimentos legais que nos proíbam de tentar descobrir ou
 modificar esses métodos.
 </p>
-</section>
-<section id="sec-A.2">
-<h2>A.2. Interfaces do Maxima</h2>
+</div>
+<div id="sec-A.2">
+<h3>A.2. Interfaces do Maxima</h3>
 <p>
 Existem várias interfaces diferentes para trabalhar com o Maxima. Pode ser
 executado desde uma &quot;consola&quot;, ou a partir de alguma das suas várias
@@ -133,9 +137,9 @@ funções próprias de um editor de texto avançado. Diferentes cores são
 usadas para distinguir os comandos de entrada e de saída e os comandos
 que já foram processados aparecem em negrito.
 </p>
-</section>
-<section id="sec-A.3">
-<h2>A.3. Entrada e saída de dados</h2>
+</div>
+<div id="sec-A.3">
+<h3>A.3. Entrada e saída de dados</h3>
 <p>
 Quando se inicia uma sessão do Maxima, aparece a
 marca <span class="maxm">(%i1)</span>, que quer
@@ -218,9 +222,9 @@ or other bases.  'log10(x) := log(x) / log(10)' is a useful
 definition.<br>
 &hellip;
 </div>
-</section>
-<section id="sec-A.4">
-<h2>A.4. Números</h2>
+</div>
+<div id="sec-A.4">
+<h3>A.4. Números</h3>
 <p>
 Maxima aceita números reais e complexos. Os números reais podem ser
 inteiros, racionais, por exemplo 3/5, ou números de vírgula flutuante,
@@ -427,9 +431,9 @@ algarismos significativos. Se em algum momento se pretende ver todos
 os algarismos associados internamente a um número, será necessário dar
 a <span class="maxv">fpprintprec</span> o seu valor habitual de 0.
 </p>
-</section>
-<section id="sec-A.5">
-<h2>A.5. Variáveis</h2>
+</div>
+<div id="sec-A.5">
+<h3>A.5. Variáveis</h3>
 <p>
 Para associar uma variável a um valor usa-se o símbolo
 &quot;<span id=":" class="index verb notranslate">:</span>&quot; e não
@@ -692,11 +696,10 @@ equação associada a <span class="maxv notranslate">segundalei</span>:
 <text font-family='futri8r' font-size='10.957664' x='26.982685' y='0'>a</text>
 </g>
 </svg>
-
 </div>
-</section>
-<section id="sec-A.6">
-<h2>A.6. Listas</h2>
+</div>
+<div id="sec-A.6">
+<h3>A.6. Listas</h3>
 <p>
 Uma variável pode também ser associada a uma lista de valores, que são
 colocados entre parêntesis retos, separados por vírgulas. Por exemplo,
@@ -851,11 +854,10 @@ e <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.
 <text font-family='fourier-mex' font-size='10.998733' x='88.391163' y='-9.255742'></text>
 </g>
 </svg>
-
 </div>
-</section>
-<section id="sec-A.7">
-<h2>A.7. Constantes</h2>
+</div>
+<div id="sec-A.7">
+<h3>A.7. Constantes</h3>
 <p>
 Existem algumas constantes importantes já predefinidas no Maxima. Os
 seus nomes costumam começar com o símbolo <span class="verb
@@ -936,11 +938,10 @@ significa <i class="notranslate">rectangular form</i>):
 <text font-family='futr8r' font-size='10.957664' x='36.095199' y='0'>14</text>
 </g>
 </svg>
-
 </div>
-</section>
-<section id="sec-A.8">
-<h2>A.8. Ficheiros de comandos</h2>
+</div>
+<div id="sec-A.8">
+<h3>A.8. Ficheiros de comandos</h3>
 <p>
 As interfaces gráficas têm opções no menu que permitem guardar todos
 os comandos escritos durante uma sessão de trabalho no Maxima ou
@@ -1046,9 +1047,9 @@ válido do Maxima pode ser incluído nesse ficheiro, mas há que ter
 cuidado de não incluir comandos que produzam erros que podem bloquear
 o arranque do Maxima.
 </p>
-</section>
-<section id="sec-A.9">
-<h2>A.9. Álgebra</h2>
+</div>
+<div id="sec-A.9">
+<h3>A.9. Álgebra</h3>
 <p>
 As expressões podem incluir operações matemáticas com variáveis
 abstratas. Por exemplo:
@@ -1763,11 +1764,10 @@ separado:
 <text font-family='futr8r' font-size='8.218248' x='62.789628' y='4.746194'>2</text>
 </g>
 </svg>
-
 </div>
-</section>
-<section id="sec-A.10">
-<h2>A.10. Trigonometria</h2>
+</div>
+<div id="sec-A.10">
+<h3>A.10. Trigonometria</h3>
 <p>
 A tabela&nbsp;<a href="#tab-A.1">A.1</a> mostra os nomes das
 principais funções trigonométricas no Maxima. As funções que esperam
@@ -2043,11 +2043,10 @@ cosseno. Por exemplo:
 <text font-family='futri8r' font-size='10.957664' x='40.815509' y='8.201225'>x</text>
 </g>
 </svg>
-
 </div>
-</section>
-<section id="sec-A.11">
-<h2>A.11. Cálculo</h2>
+</div>
+<div id="sec-A.11">
+<h3>A.11. Cálculo</h3>
 <p>
 A forma mais simples de representar funções matemáticas no Maxima
 consiste em usar expressões. Por exemplo, para representar a função
@@ -2368,11 +2367,10 @@ a seguir à variável de integração; por exemplo:
 <text font-family='futr8r' font-size='10.957664' x='7.830636' y='8.201225'>4</text>
 </g>
 </svg>
-
 </div>
-</section>
-<section id="sec-A.12">
-<h2>A.12. Funções </h2>
+</div>
+<div id="sec-A.12">
+<h3>A.12. Funções </h3>
 <p>
 Uma função no Maxima é um programa com algumas variáveis de entrada e
 uma saída. O Maxima tem uma linguagem simples de programação que
@@ -2543,11 +2541,10 @@ vírgula flutuante 2.0, o logaritmo já será calculado:
 <text font-family='futr8r' font-size='10.957664' x='8.751187' y='0'>197</text>
 </g>
 </svg>
-
 </div>
-</section>
-<section id="sec-A.13">
-<h2>A.13. Gráficos</h2>
+</div>
+<div id="sec-A.13">
+<h3>A.13. Gráficos</h3>
 <div id="sec-A.13.1">
 <h3>A.13.1. Funções de uma variável</h3>
 <p>
@@ -2854,14 +2851,14 @@ foi produzida com os seguintes comandos:
 <span class="maxm">(%i90)</span> <span class="maxv">V</span><span class="maxm">:</span><span class="maxo"> -</span><span class="maxf">integrate</span><span class="maxd"> (</span><span class="maxv">Ft</span><span class="maxd">,</span><span class="maxv">s</span><span class="maxd">,</span><span class="maxn">0</span><span class="maxd">,</span><span class="maxv">s</span><span class="maxd">)</span><span class="maxo">/</span><span class="maxn">0.3</span><span class="maxm">$</span><br>
 <span class="maxm">(%i91)</span> <span class="maxv">se</span><span class="maxm">:</span><span class="maxf"> map</span><span class="maxd"> (</span><span class="maxm">lambda</span><span class="maxd">([</span><span class="maxv">x</span><span class="maxd">],</span><span class="maxf">rhs</span><span class="maxd">(</span><span class="maxv">x</span><span class="maxd">)), </span><span class="maxf">float</span><span class="maxd"> (</span><span class="maxf">realroots</span><span class="maxd"> (</span><span class="maxv">Ft</span><span class="maxd">)))</span><span class="maxm">$</span><br>
 <span class="maxm">(%i92)</span> <span class="maxv">He</span><span class="maxm">:</span><span class="maxf"> makelist</span><span class="maxd"> (</span><span class="maxf">subst</span><span class="maxd"> (</span><span class="maxv">s</span><span class="maxo"> = </span><span class="maxv">v</span><span class="maxd">,</span><span class="maxv"> V</span><span class="maxd">),</span><span class="maxv"> v</span><span class="maxd">,</span><span class="maxv"> se</span><span class="maxd">)</span><span class="maxm">$</span><br>
-<span class="maxm">(%i93)</span> <span class="maxv">p</span><span class="maxm">:</span><span class="maxf"> makelist</span><span class="maxd">(</span><span class="maxf">map</span><span class="maxd">(</span><span class="maxm">lambda</span><span class="maxd">([</span><span class="maxv">x</span><span class="maxd">],</span><span class="maxf">rhs</span><span class="maxd">(</span><span class="maxv">x</span><span class="maxd">)),</span><span class="maxf">float</span><span class="maxd">(</span><span class="maxf">realroots</span><span class="maxd">(</span><span class="maxv">V</span><span class="maxo">=</span><span class="maxv">H</span><span class="maxd">))), </span>H</span><span class="maxd">, [</span><span class="maxv">He</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxn">250</span><span class="maxd">,</span><span class="maxv">He</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">], </span><span class="maxn">70</span><span class="maxd">])</span><span class="maxm">$</span><br>
+<span class="maxm">(%i93)</span> <span class="maxv">p</span><span class="maxm">:</span><span class="maxf"> makelist</span><span class="maxd">(</span><span class="maxf">map</span><span class="maxd">(</span><span class="maxm">lambda</span><span class="maxd">([</span><span class="maxv">x</span><span class="maxd">],</span><span class="maxf">rhs</span><span class="maxd">(</span><span class="maxv">x</span><span class="maxd">)),</span><span class="maxf">float</span><span class="maxd">(</span><span class="maxf">realroots</span><span class="maxd">(</span><span class="maxv">V</span><span class="maxo">=</span><span class="maxv">H</span><span class="maxd">))), </span><span class="maxv">H</span><span class="maxd">, [</span><span class="maxv">He</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxn">250</span><span class="maxd">,</span><span class="maxv">He</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">], </span><span class="maxn">70</span><span class="maxd">])</span><span class="maxm">$</span><br>
 <span class="maxm">(%i94)</span> <span class="maxv">l1</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxk">discrete</span><span class="maxd">, [[</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxd">,</span><span class="maxv">He</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">]], [</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">He</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">]]]]</span><span class="maxm">$</span><br>
 <span class="maxm">(%i95)</span> <span class="maxv">l2</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxk">discrete</span><span class="maxd">, [[</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxd">,</span><span class="maxn">250</span><span class="maxd">], [</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxn">250</span><span class="maxd">]]]</span><span class="maxm">$</span><br>
 <span class="maxm">(%i96)</span> <span class="maxv">l3</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxk">discrete</span><span class="maxd">, [[</span><span class="maxv">p[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxn">250</span><span class="maxd">], [</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">3</span><span class="maxd">],</span><span class="maxn">250</span><span class="maxd">]]]</span><span class="maxm">$</span><br>
 <span class="maxm">(%i97)</span> <span class="maxv">l4</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxk">discrete</span><span class="maxd">, [[</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">He</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]], [</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">][</span><span class="maxn">5</span><span class="maxd">],</span><span class="maxv">He</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]]]]</span><span class="maxm">$</span><br>
 <span class="maxm">(%i98)</span> <span class="maxv">l5</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxk">discrete</span><span class="maxd">, [[</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">4</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxn">70</span><span class="maxd">], [</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">4</span><span class="maxd">][</span><span class="maxn">3</span><span class="maxd">],</span><span class="maxn">70</span><span class="maxd">]]]</span><span class="maxm">$</span><br>
 <span class="maxm">(%i99)</span> <span class="maxv">l6</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxk">discrete</span><span class="maxd">, [[</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">4</span><span class="maxd">][</span><span class="maxn">4</span><span class="maxd">],</span><span class="maxn">70</span><span class="maxd">], [</span><span class="maxv">p</span><span class="maxd">[</span><span class="maxn">4</span><span class="maxd">][</span><span class="maxn">5</span><span class="maxd">],</span><span class="maxn">70</span><span class="maxd">]]]</span><span class="maxm">$</span><br>
-<span class="maxm">(%i100)</span> <span class="maxv">rep</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxk">discrete</span><span class="maxd">,[</span><span class="maxv">l1</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">l2</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">l3</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">l3</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],<span class="maxv">l4</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">l4</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">l5</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">l5</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">l6</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">l6</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">]]]</span><span class="maxm">$</span><br>
+<span class="maxm">(%i100)</span> <span class="maxv">rep</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxk">discrete</span><span class="maxd">,[</span><span class="maxv">l1</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">l2</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">l3</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">l3</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">l4</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">l4</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">l5</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">l5</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">l6</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">l6</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">][</span><span class="maxn">2</span><span class="maxd">]]]</span><span class="maxm">$</span><br>
 <span class="maxm">(%i101)</span> <span class="maxv">max</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxk">discrete</span><span class="maxd">,[[</span><span class="maxv">se</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">],</span><span class="maxv">He</span><span class="maxd">[</span><span class="maxn">1</span><span class="maxd">]],[</span><span class="maxv">se</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">],</span><span class="maxv">He</span><span class="maxd">[</span><span class="maxn">3</span><span class="maxd">]]]]</span><span class="maxm">$</span><br>
 <span class="maxm">(%i102)</span> <span class="maxv">min</span><span class="maxm">:</span><span class="maxd"> [</span><span class="maxk">discrete</span><span class="maxd">,[[</span><span class="maxv">se</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">],</span><span class="maxv">He</span><span class="maxd">[</span><span class="maxn">2</span><span class="maxd">]],[</span><span class="maxv">se</span><span class="maxd">[</span><span class="maxn">4</span><span class="maxd">],</span><span class="maxv">He</span><span class="maxd">[</span><span class="maxn">4</span><span class="maxd">]]]]</span><span class="maxm">$</span><br>
 <span class="maxm">(%i103)</span> <span class="maxf">plot2d</span><span class="maxd"> ([</span><span class="maxv">V</span><span class="maxd">,</span><span class="maxv">l1</span><span class="maxd">,</span><span class="maxv">l2</span><span class="maxd">,</span><span class="maxv">l3</span><span class="maxd">,</span><span class="maxv">l4</span><span class="maxd">,</span><span class="maxv">l5</span><span class="maxd">,</span><span class="maxv">l6</span><span class="maxd">,</span><span class="maxv">rep</span><span class="maxd">,</span><span class="maxv">max</span><span class="maxd">,</span><span class="maxv">min</span><span class="maxd">], [</span><span class="maxv">s</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">4</span><span class="maxd">,</span><span class="maxn">7.5</span><span class="maxd">], [</span><span class="maxk">ylabel</span><span class="maxd">,</span><span class="maxs">"V(s)"</span><span class="maxd">], [</span><span class="maxk">legend</span><span class="maxd">,</span><span class="maxm">false</span><span class="maxd">], [</span><span class="maxk">color</span><span class="maxd">,</span><span class="maxk">blue</span><span class="maxd">,</span><span class="maxk">red</span><span class="maxd">,</span><span class="maxk">red</span><span class="maxd">,</span><span class="maxk">red</span><span class="maxd">,</span><span class="maxk">red</span><span class="maxd">,</span><span class="maxk">red</span><span class="maxd">,</span><span class="maxk">red</span><span class="maxd">,</span><span class="maxk">red</span><span class="maxd">,</span><span class="maxk">black</span><span class="maxd">,</span><span class="maxk">black</span><span class="maxd">], [</span><span class="maxk">style</span><span class="maxd">,</span><span class="maxk">lines</span><span class="maxd">,</span><span class="maxk">lines</span><span class="maxd">,</span><span class="maxk">lines</span><span class="maxd">,</span><span class="maxk">lines</span><span class="maxd">,</span><span class="maxk">lines</span><span class="maxd">,</span><span class="maxk">lines</span><span class="maxd">,</span><span class="maxk">lines,</span><span class="maxk">points</span><span class="maxd">,</span><span class="maxk">points</span><span class="maxd">,</span><span class="maxk">points</span><span class="maxd">], [</span><span class="maxk">point_type</span><span class="maxd">,</span><span class="maxk">bullet</span><span class="maxd">,</span><span class="maxk">asterisk</span><span class="maxd">,</span><span class="maxk">circle</span><span class="maxd">],[</span><span class="maxk">label</span><span class="maxd">,[</span><span class="maxs">"-32.9"</span><span class="maxd">,</span><span class="maxn">0.3</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">65</span><span class="maxd">], [</span><span class="maxs">"51.1"</span><span class="maxd">,</span><span class="maxn">5.5</span><span class="maxd">,</span><span class="maxn">20</span><span class="maxd">], [</span><span class="maxs">"70"</span><span class="maxd">,</span><span class="maxn">0.8</span><span class="maxd">,</span><span class="maxn">85</span><span class="maxd">], [</span><span class="maxs">"70"</span><span class="maxd">,</span><span class="maxn">5.6</span><span class="maxd">,</span><span class="maxn">85</span><span class="maxd">], [</span><span class="maxs">"114.7"</span><span class="maxd">,</span><span class="maxn">0.6</span><span class="maxd">,</span><span class="maxn">132</span><span class="maxd">], [</span><span class="maxs">"114.7"</span><span class="maxd">,</span><span class="maxn">5.4</span><span class="maxd">,</span><span class="maxn">132</span><span class="maxd">], [</span><span class="maxs">"250"</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">3.99</span><span class="maxd">,</span><span class="maxn">270</span><span class="maxd">], [</span><span class="maxs">"250"</span><span class="maxd">,</span><span class="maxn">3.5</span><span class="maxd">,</span><span class="maxn">270</span><span class="maxd">], [</span><span class="maxs">"356.4"</span><span class="maxd">,</span><span class="maxo">-</span><span class="maxn">3.9</span><span class="maxd">,</span><span class="maxn">375</span><span class="maxd">], [</span><span class="maxs">"356.4"</span><span class="maxd">,</span><span class="maxn">3.4</span><span class="maxd">,</span><span class="maxn">375</span><span class="maxd">]])</span><span class="maxm">$</span>
@@ -2925,9 +2922,9 @@ foi usada a opção <span class="maxk notranslate">label</span> para
 escrever alguns números em algumas partes do gráfico.
 </p>
 </div>
-</section>
-<section id="Problemas">
-<h2>Problemas</h2>
+</div>
+<div id="Problemas">
+<h3>Problemas</h3>
 <ol class="spacious">
 <li id="prob-A.1">Trace o gráfico de cada uma das seguintes funções,
 usando intervalos que mostrem bem a forma das funções.
@@ -3128,8 +3125,7 @@ Determine a relação <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmln
 </text>
 </g>
 </svg>
-. O
-número <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.084103em' height='1.3816512em' viewBox='-0.6 -10.564757 70.84103 13.816512' class='inline' style='vertical-align:-0.331199em'>
+. O número <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='7.084103em' height='1.3816512em' viewBox='-0.6 -10.564757 70.84103 13.816512' class='inline' style='vertical-align:-0.331199em'>
 <g id='eq162'>
 <text font-family='fourier-mlit' font-size='10.957664' x='0' y='0'>ϕ</text>
 <text font-family='fourier-ms' font-size='10.957664' x='9.947982' y='0'>=</text>
@@ -3147,9 +3143,9 @@ notranslate">%phi</span>.</li>
 <li id="prob-A.5">Crie uma função &quot;maximo&quot; que encontre o
 máximo de todos os números que lhe sejam dados.</li>
 </ol>
-</section>
-<section id="Respostas">
-<h2>Respostas</h2>
+</div>
+<div id="Respostas">
+<h3>Respostas</h3>
 <p>
 2. O máximo local encontra-se em (0.709, 4.30), e o mínimo local em
 (3.29, -4.30).
@@ -3172,13 +3168,13 @@ máximo de todos os números que lhe sejam dados.</li>
 <text font-family='futr8r' font-size='10.957664' x='94.766908' y='0'>50</text>
 </g>
 </svg>
-
 </p>
+</div>
 </section>
 <footer>
 <p>&copy; 2017-2022, Jaime E. Villate</p>
 <p>Publicado nos termos da <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição-Partilha</a> (versão 4.0).</p>
-<span>Última modificação: 2025/10/01 12:10:01 UTC</span>
+<span>Última modificação: 2025/10/02 08:51:02 UTC</span>
 </footer>
 </body>
 </html>
