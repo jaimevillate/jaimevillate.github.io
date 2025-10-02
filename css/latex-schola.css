@@ -1,5 +1,5 @@
 /*
-Version: 2025-10-01
+Version: 2025-10-02
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 
@@ -109,6 +109,7 @@ div.eqn { float: right; }
     color: #bcf;
 }
 header {
+    font-family: Helvetica, Verdana, Arial, sans-serif;
     background-color: #546284;
     color: white;
     padding-left: 0.5em;
