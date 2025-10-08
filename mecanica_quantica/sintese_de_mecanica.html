@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à Mecânica Quântica &ndash; Capítulo 3</title>
+<!--Generated on Wed Oct 08 12:12:14 WEST 2025 by latextohtml.tcl, by J. Villate -->
+<link rel="stylesheet" href="../css/book.css">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="alternate icon" href="../img/favicon.ico">
+</head>
+<body id="top">
+<header style="background-image:url(../img/quantum.png);
+background-repeat:no-repeat;
+background-position:right center">
+<h1>Introdução à Mecânica Quântica</h1>
+<p>Jaime E. Villate.<br>
+Universidade do Porto, Portugal, 2025.</p>
+</header>
+<div class="menu">
+<button class="menubtn">&#9776;</button>
+<div class="menu-content">
+<a href="../pt/index.html">Início</a>
+<a href="../pt/books.html">Livros livres</a>
+<a href="index.html">Mecânica Quântica</a>
+</div>
+</div>
+<section>
+<h1>3. Síntese de mecânica analítica</h1>
+<h2>3.1. Movimento no espaço de fase</h2>
+<p>
+Na mecânica clássica, o movimento de uma partícula determina-se a
+partir da segunda lei de Newton: a força resultante sobre um corpo é
+igual à variação da sua quantidade de movimento, <math id="eqn1" display="inline"><mrow><mover><mrow><mi>p</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>, em ordem
+ao tempo:
+</p>
+<div id="eq:lei_Newton" class="eqnalign">
+<math id="eqn2" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mover><mrow><mi>p</mi></mrow><mo stretchy="false">→</mo></mover></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(3.1)</div>
+</div>
+<p>
+Se a massa do corpo é constante, a derivada da sua quantidade de
+movimento é igual à sua massa vezes a sua aceleração.  No século XVII,
+Kepler determinou as acelerações dos planetas nas suas órbitas em
+torno do Sol. Newton, baseado nos resultados de Kepler, determinou a
+expressão da força gravítica do Sol sobre qualquer objeto em qualquer
+posição do sistema solar e mostrou que tem a mesma forma da força que
+a Terra exerce nos corpos na sua &quot;esfera de influência&quot; (vizinhança
+da Terra onde a atração do Sol é praticamente igual em todos os pontos
+mas a atração da Terra varia significativamente) e estudou como seria
+o movimento de qualquer corpo sob a ação de uma força gravítica.
+</p>
+<p>
+Conhecida a expressão de uma força <math id="eqn3" display="inline"><mrow><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>, a equação
+(<a href="#eq:lei_Newton">3.1</a>) permite determinar o movimento de um corpo sob a
+ação dessa força. Consideremos o caso em que o corpo só pode
+deslocar-se ao longo de uma curva. A posição do corpo ao longo da
+curva é dada por um comprimento de arco <math id="eqn4" display="inline"><mrow><mi>s</mi></mrow></math> ao longo da curva. A cada
+instante <math id="eqn5" display="inline"><mrow><mi>t</mi></mrow></math>, o <span class="concept">estado</span> do corpo é dado pela sua posição,
+<math id="eqn6" display="inline"><mrow><mi>s</mi></mrow></math>, e a sua quantidade de movimento <math id="eqn7" display="inline"><mrow><mi>p</mi></mrow></math>. Podemos representar os
+diferentes estados, em diferentes instantes, como pontos num plano com
+coordenadas <math id="eqn8" display="inline"><mrow><mi>s</mi></mrow></math> e <math id="eqn9" display="inline"><mrow><mi>p</mi></mrow></math>, designado por <span class="concept">espaço de fase</span>
+(figura <a href="#fig:espaco_fase">3.1</a>).
+</p>
+<figure class="center" id="fig:espaco_fase">
+<img class="fig" src="img/espaco_fase.png" style="width:14.931em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 3.1:</b>  Espaço de fase de um corpo em movimento numa dimensão.
+</figcaption>
+</figure>
+<p>
+Em cada instante <math id="eqn10" display="inline"><mrow><mi>t</mi></mrow></math>, o estado corresponde a um ponto P no espaço de
+fase, com coordenadas:
+</p>
+<div id="eq:coordenadas_estado" class="eqnalign">
+<math id="eqn11" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>P</mi><mo>=</mo><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+<div class="eqn">(3.2)</div>
+</div>
+<p>
+A figura <a href="#fig:espaco_fase">3.1</a> mostra o estado <math id="eqn12" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>0</mn></msub></mrow></math>
+num instante <math id="eqn13" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub></mrow></math>, e o estado <math id="eqn14" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>1</mn></msub></mrow></math> num instante posterior
+<math id="eqn15" display="inline"><mrow><msub><mi>t</mi><mn>1</mn></msub></mrow></math>. O estado só pode mudar de forma contínua no espaço de fase;
+como tal, existe uma curva contínua entre <math id="eqn16" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>0</mn></msub></mrow></math> e
+<math id="eqn17" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>1</mn></msub></mrow></math>, designada por <span class="concept">curva de evolução</span>, que inclui
+todos os estados no intervalo de tempo entre <math id="eqn18" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub></mrow></math> e <math id="eqn19" display="inline"><mrow><msub><mi>t</mi><mn>1</mn></msub></mrow></math>. A cada
+instante, a derivada das coordenadas do estado P definem um vetor
+<math id="eqn20" display="inline"><mrow><mover><mrow><mi>u</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>, tangente à curva de evolução, designado por
+<span class="concept">velocidade de fase</span>:
+</p>
+<div id="eq:velocidade_fase" class="eqnalign">
+<math id="eqn21" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mi>u</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>s</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>,</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>p</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.3)</div>
+</div>
+<p>
+A figura <a href="#fig:velocidade_fase">3.2</a> mostra a velocidade de fase <math id="eqn22" display="inline"><mrow><msub><mover><mrow><mi>u</mi></mrow><mo stretchy="false">→</mo></mover><mn>0</mn></msub></mrow></math>
+no instante <math id="eqn23" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub></mrow></math>, e a velocidade de fase <math id="eqn24" display="inline"><mrow><mover><mrow><mi>u</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> num instante
+intermédio entre <math id="eqn25" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub></mrow></math> e <math id="eqn26" display="inline"><mrow><msub><mi>t</mi><mn>1</mn></msub></mrow></math>.
+</p>
+<figure class="center" id="fig:velocidade_fase">
+<img class="fig" src="img/velocidade_fase.png" style="width:14.931em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 3.2:</b>  Velocidade de fase de um corpo em movimento numa dimensão.
+</figcaption>
+</figure>
+<p>
+A derivada da posição <math id="eqn27" display="inline"><mrow><mi>s</mi></mrow></math> em ordem ao tempo é a velocidade, <math id="eqn28" display="inline"><mrow><mi>v</mi></mrow></math>, igual à sua
+quantidade de movimento, <math id="eqn29" display="inline"><mrow><mi>p</mi></mrow></math>, dividida pela sua massa, <math id="eqn30" display="inline"><mrow><mi>m</mi></mrow></math>. E de
+acordo com a segunda lei de Newton (<a href="#eq:lei_Newton">3.1</a>), a derivada
+da quantidade de movimento é a força resultante <math id="eqn31" display="inline"><mrow><mi>F</mi></mrow></math>. Como tal, as
+componentes da velocidade de fase são:
+</p>
+<div id="eq:evolução" class="eqnalign">
+<math id="eqn32" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mi>u</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>p</mi></mrow><mrow><mi>m</mi></mrow></mfrac></mstyle><mo>,</mo><mi>F</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.4)</div>
+</div>
+<p>
+Basta então conhecer a expressão de <math id="eqn33" display="inline"><mrow><mi>F</mi></mrow></math>, que, em geral, é uma função
+que depende do tempo <math id="eqn34" display="inline"><mrow><mi>t</mi></mrow></math>, da posição <math id="eqn35" display="inline"><mrow><mi>s</mi></mrow></math> e da quantidade de movimento
+<math id="eqn36" display="inline"><mrow><mi>p</mi></mrow></math>, para determinar a velocidade de fase em qualquer ponto do espaço
+de fase. A partir de um estado inicial (<math id="eqn37" display="inline"><mrow><msub><mi>s</mi><mn>0</mn></msub></mrow></math>, <math id="eqn38" display="inline"><mrow><msub><mi>p</mi><mi>o</mi></msub></mrow></math>), a descrição do
+movimento do corpo obtém-se integrando a expressão da velocidade de
+fase, desde <math id="eqn39" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub></mrow></math> até um tempo <math id="eqn40" display="inline"><mrow><mi>t</mi></mrow></math> posterior:
+</p>
+<div id="eq:curva_evolucao" class="eqnalign">
+<math id="eqn41" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo><mi>p</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><msub><mi>s</mi><mn>0</mn></msub><mo>,</mo><msub><mi>p</mi><mn>0</mn></msub><mo stretchy="false">)</mo><mo>+</mo><msubsup><mo>∫</mo><mrow><msub><mi>t</mi><mn>0</mn></msub></mrow><mi>t</mi></msubsup><mover><mrow><mi>u</mi></mrow><mo stretchy="false">→</mo></mover><mspace width="0.167em" /><mrow><mi mathvariant="normal">d</mi></mrow><mi>t</mi></mstyle></mrow></math>
+<div class="eqn">(3.5)</div>
+</div>
+<p>
+Observe-se que dois estados diferentes, nunca podem evoluir para o
+mesmo estado. Se assim fosse, as duas curvas de evolução, diferentes,
+encontravam-se num ponto comum, onde teríamos então duas direções
+tangentes á duas curvas e, como tal, duas velocidades de fase
+diferentes no mesmo ponto, que é impossível; em cada ponto a
+velocidade de fase está definida de forma única pela
+expressão (<a href="#eq:evolução">3.4</a>).
+</p>
+<p>
+O <span class="concept">retrato de fase</span> de um sistema mostra algumas curvas de
+evolução no espaço de fase. Por exemplo, a
+figura <a href="#fig:equilibrio_estavel">3.3</a> mostra um sistema com quatro
+curvas de evolução que se aproximam do ponto <math id="eqn42" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>0</mn></msub></mrow></math>. Se o
+estado inicial do sistema estiver num dos pontos <math id="eqn43" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>1</mn></msub></mrow></math>,
+<math id="eqn44" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>2</mn></msub></mrow></math>, <math id="eqn45" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>3</mn></msub></mrow></math> ou <math id="eqn46" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>4</mn></msub></mrow></math>, após algum tempo o
+estado estará muito próximo do ponto <math id="eqn47" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>0</mn></msub></mrow></math>. No entanto, as
+curvas de evolução aproximam-se assimptoticamente desse ponto, sem
+chegar exatamente a ele. A velocidade de fase no ponto <math id="eqn48" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>0</mn></msub></mrow></math>
+é nula, e esse ponto está isolado: nenhuma curva de evolução passa por
+ele. Se num instante o sistema estiver no estado <math id="eqn49" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>0</mn></msub></mrow></math>,
+permanecerá sempre nesse mesmo estado, sem evoluir. Um ponto como
+<math id="eqn50" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>0</mn></msub></mrow></math>, onde a velocidade de fase é nula, é designado por
+<span class="concept">ponto de equilíbrio</span>.
+</p>
+<figure class="center" id="fig:equilibrio_estavel">
+<img class="fig" src="img/equilibrio_estavel.png" style="width:14.931em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 3.3:</b>  Ponto de equilíbrio, <math id="eqn51" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>0</mn></msub></mrow></math> e quatro curvas de evolução que se aproximam assimptoticamente desse estado.
+</figcaption>
+</figure>
+<p>
+O retrato de fase de um sistema pode ser traçado calculando a
+velocidade de fase em alguns pontos, e identificando os pontos onde a
+velocidade de fase é nula (pontos de equilíbrio). Um retrato de fase
+permite saber como evoluirá o sistema em diferentes regiões do espaço
+de fase, sem ter de resolver a equação (<a href="#eq:curva_evolucao">3.5</a>). Uma
+curva de evolução que regressa ao ponto inicial representa um
+movimento oscilatório, em que os valores da posição e da velocidade
+repetem-se periodicamente. Na secção seguinte veremos um exemplo
+muito importante.
+</p>
+</section>
+<section>
+<h2>3.2. O oscilador harmónico simples</h2>
+<p>
+A figura <a href="#fig:mola_e_massa">3.4</a> mostra um cilindro de massa <math id="eqn52" display="inline"><mrow><mi>m</mi></mrow></math>
+pendurado de uma mola com constante elástica <math id="eqn53" display="inline"><mrow><mi>k</mi></mrow></math>. Se a massa se
+desloca na vertical, sem oscilar, o movimento é ao longo de uma reta
+vertical, e basta uma variável, a altura <math id="eqn54" display="inline"><mrow><mi>y</mi></mrow></math> do cilindro, para
+determinar a sua posição em qualquer instante..
+</p>
+<figure class="center" id="fig:mola_e_massa">
+<img class="fig" src="img/mola_e_massa.png" style="width:21.000em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 3.4:</b>  Massa pendurada de uma mola elástica.
+</figcaption>
+</figure>
+<p>
+Há duas forças a atuar no objeto: o seu peso <math id="eqn55" display="inline"><mrow><mi>m</mi><mi>g</mi></mrow></math>, para baixo, e a
+força da mola, dada pela lei de Hooke e apontando para a posição em
+que a mola não está alongada. Se a altura <math id="eqn56" display="inline"><mrow><mi>y</mi></mrow></math> for medida de baixo
+para cima, com origem no ponto onde a mola não está alongada, a força
+resultante sobre o objeto é, 
+</p>
+<div id="eq:F_mola_e_massa" class="eqnalign">
+<math id="eqn57" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>F</mi><mo>=</mo><mo>−</mo><mi>m</mi><mspace width="0.167em" /><mi>g</mi><mo>−</mo><mi>k</mi><mspace width="0.167em" /><mi>y</mi></mstyle></mrow></math>
+<div class="eqn">(3.6)</div>
+</div>
+<p>
+as componentes da velocidade e fase são então,
+</p>
+<div id="eq:uy_ohs" class="eqnalign">
+<math id="eqn58" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mi>u</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>y</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>,</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>p</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>p</mi></mrow><mrow><mi>m</mi></mrow></mfrac></mstyle><mo>,</mo><mo>−</mo><mi>m</mi><mspace width="0.167em" /><mi>g</mi><mo>−</mo><mi>k</mi><mspace width="0.167em" /><mi>y</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.7)</div>
+</div>
+<p>
+Existe um <span class="concept">ponto de equilíbrio</span> no espaço de fase, onde a
+velocidade de fase é nula:
+</p>
+<div id="eq:equil_ohs" class="eqnalign">
+<math id="eqn59" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mrow><mi mathvariant="normal">P</mi></mrow><mrow><mi mathvariant="normal">e</mi></mrow></msub><mo>=</mo><mo stretchy="false">(</mo><msub><mi>y</mi><mrow><mi mathvariant="normal">e</mi></mrow></msub><mo>,</mo><msub><mi>p</mi><mrow><mi mathvariant="normal">e</mi></mrow></msub><mo stretchy="false">)</mo><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mrow><mi>k</mi></mrow></mfrac></mstyle><mo>,</mo><mn>0</mn><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.8)</div>
+</div>
+<p>
+que corresponde ao ponto onde a mola desceu <math id="eqn60" display="inline"><mrow><mi>m</mi><mi>g</mi><mo>/</mo><mi>k</mi></mrow></math> unidades, pela ação
+do peso, e ficou em repouso. É útil mudar a variável <math id="eqn61" display="inline"><mrow><mi>y</mi></mrow></math> para
+uma nova variável <math id="eqn62" display="inline"><mrow><mi>s</mi></mrow></math>, de forma a que o ponto de equilíbrio fique na
+origem do espaço de fase, e a expressão da velocidade de fase fique
+mais simples. A mudança de variável que usaremos é:
+</p>
+<div id="eq:y_vs-s_ohs" class="eqnalign">
+<math id="eqn63" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>y</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>s</mi></mrow><mrow><msqrt><mrow><mi>m</mi><mi>k</mi></mrow></msqrt></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mrow><mi>k</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(3.9)</div>
+</div>
+<p>
+Com essa mudança de variável a velocidade de fase passa a ser:
+</p>
+<div id="eq:u_ohs" class="eqnalign">
+<math id="eqn64" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mi>u</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>s</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>,</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>p</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>k</mi></mrow><mrow><mi>m</mi></mrow></mfrac></mstyle></mrow></msqrt><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mo>−</mo><mi>s</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+<div class="eqn">(3.10)</div>
+</div>
+<p>
+com módulo constante,
+</p>
+<div id="eq:w_ohs" class="eqnalign">
+<math id="eqn65" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>ω</mi><mo>=</mo><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>k</mi></mrow><mrow><mi>m</mi></mrow></mfrac></mstyle></mrow></msqrt></mstyle></mrow></math>
+<div class="eqn">(3.11)</div>
+</div>
+<p>
+e perpendicular ao segmento desde a origem até o ponto
+<math id="eqn66" display="inline"><mrow><mrow><mi mathvariant="normal">P</mi></mrow><mo>=</mo><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></math> no espaço de fase.
+</p>
+<figure class="center" id="fig:retrato_ohs">
+<img class="fig" src="img/retrato_ohs.png" style="width:17.325em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 3.5:</b>  Retrato de fase do oscilador harmónico simples.
+</figcaption>
+</figure>
+<p>
+A figura <a href="#fig:retrato_ohs">3.5</a>
+é o <span class="concept">retrato de fase</span> do oscilador harmónico, que mostra as
+possíveis curvas de evolução. Todos os possíveis movimentos são
+circumferências no espaço de fase, percorridas com velocidade
+<math id="eqn67" display="inline"><mrow><mover><mrow><mi>u</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> de módulo constante, igual a <math id="eqn68" display="inline"><mrow><mi>ω</mi></mrow></math>.
+</p>
+<p>
+Arbitrando <math id="eqn69" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math> no instante em que o estado passa pelo semieixo
+positivo <math id="eqn70" display="inline"><mrow><mi>s</mi></mrow></math>, em <math id="eqn71" display="inline"><mrow><msub><mi>s</mi><mn>0</mn></msub></mrow></math>, o ângulo que o estado faz com esse semieixo,
+em <math id="eqn72" display="inline"><mrow><mi>t</mi><mo>></mo><mn>0</mn></mrow></math>, é <math id="eqn73" display="inline"><mrow><mi>θ</mi><mo>=</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi></mrow></math>, e a posição <math id="eqn74" display="inline"><mrow><mi>s</mi></mrow></math> é,
+</p>
+<div class="eqnalign">
+<math id="eqn75" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>s</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>s</mi><mn>0</mn></msub><mi>cos</mi><mo stretchy="false">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+<div class="eqn">(3.12)</div>
+</div>
+<p>
+Substituindo na equação (<a href="#eq:y_vs-s_ohs">3.9</a>), a altura do
+cilindro, em função do tempo, é:
+</p>
+<div class="eqnalign">
+<math id="eqn76" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>y</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>y</mi><mrow><mi mathvariant="normal">e</mi></mrow></msub><mo>+</mo><mi>A</mi><mspace width="0.167em" /><mi>cos</mi><mo stretchy="false">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+<div class="eqn">(3.13)</div>
+</div>
+<p>
+onde a amplitude <math id="eqn77" display="inline"><mrow><mi>A</mi></mrow></math> do movimento é uma constante, <math id="eqn78" display="inline"><mrow><msub><mi>s</mi><mn>0</mn></msub><mo>/</mo><msqrt><mrow><mi>m</mi><mi>k</mi></mrow></msqrt></mrow></math>,
+que depende da posição inicial, e o movimento é oscilatório com
+frequência:
+</p>
+<div id="eq:f_ohs" class="eqnalign">
+<math id="eqn79" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>f</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>ω</mi></mrow><mrow><mn>2</mn><mspace width="0.167em" /><mrow><mi mathvariant="normal">π</mi></mrow></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mspace width="0.167em" /><mrow><mi mathvariant="normal">π</mi></mrow></mrow></mfrac></mstyle><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>k</mi></mrow><mrow><mi>m</mi></mrow></mfrac></mstyle></mrow></msqrt></mstyle></mrow></math>
+<div class="eqn">(3.14)</div>
+</div>
+</section>
+<section>
+<h2>3.3. Função hamiltoniana</h2>
+<p>
+Nos sistemas em que a força resultante depende apenas da posição e é
+conservativa, existe uma função energia potencial. No caso do
+movimento em uma dimensão, se a força resultante depende apenas da
+posição <math id="eqn80" display="inline"><mrow><mi>s</mi></mrow></math>, é conservativa e a energia potencial <math id="eqn81" display="inline"><mrow><mi>U</mi></mrow></math> é uma primitiva
+da força:
+</p>
+<div id="eq:energia_potencial" class="eqnalign">
+<math id="eqn82" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>U</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mo>∫</mo><mi>F</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mspace width="0.167em" /><mrow><mi mathvariant="normal">d</mi></mrow><mi>s</mi></mstyle></mrow></math>
+<div class="eqn">(3.15)</div>
+</div>
+<p>
+Define-se a função hamiltoniana,
+</p>
+<div id="eq:hamiltoniana" class="eqnalign">
+<math id="eqn83" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>H</mi><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mi>p</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mi>m</mi></mrow></mfrac></mstyle><mo>+</mo><mi>U</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+<div class="eqn">(3.16)</div>
+</div>
+<p>
+e as duas componentes da velocidade de fase, são obtidas a partir das
+derivadas da função hamiltoniana:
+</p>
+<div id="eq:hamilton" class="eqnalign">
+<span class="boxed">
+<math id="eqn84" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><menclose notation="box"><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>s</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>p</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle></mrow></menclose></mstyle></mrow></math>
+</span>
+<div class="eqn">(3.17)</div>
+</div>
+<p>
+No caso geral, um sistema com variáveis de estado <math id="eqn85" display="inline"><mrow><mi>s</mi></mrow></math> e <math id="eqn86" display="inline"><mrow><mi>p</mi></mrow></math> é
+designado por sistema hamiltoniano, se existe uma função hamiltoniana
+<math id="eqn87" display="inline"><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></math> que permite calcular as expressões das derivadas temporais de
+<math id="eqn88" display="inline"><mrow><mi>s</mi></mrow></math> e <math id="eqn89" display="inline"><mrow><mi>p</mi></mrow></math> a partir das derivadas parciais de <math id="eqn90" display="inline"><mrow><mi>H</mi></mrow></math>, de acordo com as
+<span class="concept">equações de Hamilton</span> (<a href="#eq:hamilton">3.17</a>).
+</p>
+<p>
+No caso do oscilador harmónico simples da secção anterior, a energia
+potencial associada à força (<a href="#eq:F_mola_e_massa">3.6</a>) é,
+</p>
+<div id="eq:U_ohs" class="eqnalign">
+<math id="eqn91" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>U</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>m</mi><mi>g</mi><mi>y</mi><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mi>k</mi><msup><mi>y</mi><mn>2</mn></msup></mstyle></mrow></math>
+<div class="eqn">(3.18)</div>
+</div>
+<p>
+e a função hamiltoniana é,
+</p>
+<div id="eq:H_ohs" class="eqnalign">
+<math id="eqn92" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>H</mi><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mi>p</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mi>m</mi></mrow></mfrac></mstyle><mo>+</mo><mi>m</mi><mi>g</mi><mi>y</mi><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mi>k</mi><msup><mi>y</mi><mn>2</mn></msup></mstyle></mrow></math>
+<div class="eqn">(3.19)</div>
+</div>
+<p>
+e as duas equações de Hamilton são:
+</p>
+<div id="eq:hamilton_ohs" class="eqnalign">
+<math id="eqn93" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>y</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>p</mi></mrow><mrow><mi>m</mi></mrow></mfrac></mstyle><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>p</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mi>y</mi></mrow></mfrac></mstyle><mo>=</mo><mo>−</mo><mi>m</mi><mspace width="0.167em" /><mi>g</mi><mo>−</mo><mi>k</mi><mspace width="0.167em" /><mi>y</mi></mstyle></mrow></math>
+<div class="eqn">(3.20)</div>
+</div>
+</section>
+<section>
+<h2>3.4. Parênteses de Poisson</h2>
+<p>
+Num sistema com variáveis de estado (<math id="eqn94" display="inline"><mrow><mi>s</mi></mrow></math>, <math id="eqn95" display="inline"><mrow><mi>p</mi></mrow></math>), definem-se os
+parênteses de Poisson de duas funções <math id="eqn96" display="inline"><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></math> e <math id="eqn97" display="inline"><mrow><mi>G</mi><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></math> igual à
+expressão,
+</p>
+<div id="eq:parenteses_Poisson" class="eqnalign">
+<span class="boxed">
+<math id="eqn98" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><menclose notation="box"><mrow><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle></mrow></menclose></mstyle></mrow></math>
+</span>
+<div class="eqn">(3.21)</div>
+</div>
+<p>
+Algumas propriedades importantes dos parênteses de Poisson são as
+seguintes:
+</p>
+</p>
+<ol class="parentheses">
+<li> <b>Anticomutatividade</b>: <span style="margin-right:4pt"></span><math id="eqn99" display="inline"><mrow><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo><mo>=</mo><mo>−</mo><mo stretchy="false">{</mo><mi>G</mi><mo>,</mo><mi>F</mi><mo stretchy="false">}</mo></mrow></math><br>
+</li>
+<li> <b>Linearidade</b>: <span style="margin-right:44pt"></span><math id="eqn100" display="inline"><mrow><mo stretchy="false">{</mo><mi>a</mi><mi>F</mi><mo>+</mo><mi>b</mi><mi>G</mi><mo>,</mo><mi>J</mi><mo stretchy="false">}</mo><mo>=</mo><mi>a</mi><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mi>J</mi><mo stretchy="false">}</mo><mo>+</mo><mi>b</mi><mo stretchy="false">{</mo><mi>G</mi><mo>,</mo><mi>J</mi><mo stretchy="false">}</mo></mrow></math><br>
+</li>
+<li> <b>Regra da cadeia</b>: <span style="margin-right:24pt"></span><math id="eqn101" display="inline"><mrow><mo stretchy="false">{</mo><mi>F</mi><mi>G</mi><mo>,</mo><mi>J</mi><mo stretchy="false">}</mo><mo>=</mo><mi>F</mi><mo stretchy="false">{</mo><mi>G</mi><mo>,</mo><mi>J</mi><mo stretchy="false">}</mo><mo>+</mo><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mi>J</mi><mo stretchy="false">}</mo><mi>F</mi></mrow></math><br>
+</li>
+<li> <b>Identidade de Jacobi</b>:
+  <math id="eqn102" display="inline"><mrow><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mo stretchy="false">{</mo><mi>G</mi><mo>,</mo><mi>J</mi><mo stretchy="false">}</mo><mo stretchy="false">}</mo><mo>+</mo><mo stretchy="false">{</mo><mi>G</mi><mo>,</mo><mo stretchy="false">{</mo><mi>J</mi><mo>,</mo><mi>F</mi><mo stretchy="false">}</mo><mo stretchy="false">}</mo><mo>+</mo><mo stretchy="false">{</mo><mi>J</mi><mo>,</mo><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo><mo stretchy="false">}</mo><mo>=</mo><mn>0</mn></mrow></math>
+</li>
+</ol>
+<p>
+A anticomutatividade implica que os parênteses de qualquer função com
+si própria são nulos: <math id="eqn103" display="inline"><mrow><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mi>F</mi><mo stretchy="false">}</mo><mo>=</mo><mn>0</mn></mrow></math>. A derivada em ordem ao tempo de
+qualquer função do estado, <math id="eqn104" display="inline"><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></math> pode ser calculada pela regra da
+cadeia:
+</p>
+<div class="eqnalign">
+<math id="eqn105" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>F</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>s</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>p</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(3.22)</div>
+</div>
+<p>
+e, se o sistema é hamiltoniano, usando as equações de Hamilton temos,
+</p>
+<div class="eqnalign">
+<math id="eqn106" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>F</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(3.23)</div>
+</div>
+<p>
+conclui-se que a derivada temporal da função é igual aos parênteses
+de Poisson da função com a função hamiltoniana:
+</p>
+<div id="eq:Poisson" class="eqnalign">
+<span class="boxed">
+<math id="eqn107" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><menclose notation="box"><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>F</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mi>H</mi><mo stretchy="false">}</mo></mrow></menclose></mstyle></mrow></math>
+</span>
+<div class="eqn">(3.24)</div>
+</div>
+<p>
+Isto é, a evolução temporal de qualquer função do estado é dada pelos
+parênteses de Poisson da função com a função hamiltoniana.  As
+equações de Hamilton são dois casos particulares da equação
+geral (<a href="#eq:Poisson">3.24</a>), quando <math id="eqn108" display="inline"><mrow><mi>f</mi></mrow></math> for igual a uma das variáveis de
+estado.
+</p>
+<p>
+No caso mais geral, o estado de um sistema é dado por <math id="eqn109" display="inline"><mrow><mi>n</mi></mrow></math> variáveis de
+posição: <math id="eqn110" display="inline"><mrow><msub><mi>s</mi><mn>1</mn></msub></mrow></math>, <math id="eqn111" display="inline"><mrow><msub><mi>s</mi><mn>2</mn></msub></mrow></math>,&hellip;, <math id="eqn112" display="inline"><mrow><msub><mi>s</mi><mi>n</mi></msub></mrow></math> e <math id="eqn113" display="inline"><mrow><mi>n</mi></mrow></math> quantidades de movimento
+associadas a essas variáveis de posição: <math id="eqn114" display="inline"><mrow><msub><mi>p</mi><mn>1</mn></msub></mrow></math>, <math id="eqn115" display="inline"><mrow><msub><mi>p</mi><mn>2</mn></msub></mrow></math>,&hellip;,
+<math id="eqn116" display="inline"><mrow><msub><mi>p</mi><mi>n</mi></msub></mrow></math>. As funções de estado dependem dessas <math id="eqn117" display="inline"><mrow><mn>2</mn><mi>n</mi></mrow></math> variáveis, e os
+parênteses de Poisson entre duas variáveis de estado são:
+</p>
+<div id="eq:parenteses_Poisson_n" class="eqnalign">
+<math id="eqn118" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><msub><mi>s</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><msub><mi>s</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.25)</div>
+</div>
+<p>
+A função hamiltoniana é também uma função das <math id="eqn119" display="inline"><mrow><mn>2</mn><mi>n</mi></mrow></math> variáveis de
+estado, e a derivada temporal de qualquer função de estado é igual aos
+parênteses de Poisson da função com a função hamiltoniana.
+</p>
+<h2>Exercícios</h2>
+<b>3.1.</b> Demonstre a identidade de Jacobi para parênteses de Poisson.
+</p>
+<p>
+  <b>Resolução</b>. Desenvolvendo o primeiro termo na identidade de
+  Jacobi temos:
+</p>
+<div class="eqnalign">
+<math id="eqn120" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mo stretchy="false">{</mo><mi>G</mi><mo>,</mo><mi>J</mi><mo stretchy="false">}</mo><mo stretchy="false">}</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mo stretchy="false">{</mo><mi>G</mi><mo>,</mo><mi>J</mi><mo stretchy="false">}</mo></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mo stretchy="false">{</mo><mi>G</mi><mo>,</mo><mi>J</mi><mo stretchy="false">}</mo></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<br><math id="eqn121" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mphantom><mrow><mi>p</mi></mrow></mphantom></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mphantom><mrow><mi>s</mi></mrow></mphantom></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</div>
+<p>
+  e calculando as derivadas dos produtos obtêm-se oito termos:
+</p>
+<div class="eqnalign">
+
+<math id="eqn122" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mo stretchy="false">{</mo><mi>G</mi><mo>,</mo><mi>J</mi><mo stretchy="false">}</mo><mo stretchy="false">}</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>G</mi></mrow><mrow><mo>∂</mo><mi>p</mi><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>J</mi></mrow><mrow><mo>∂</mo><msup><mi>p</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>G</mi></mrow><mrow><mo>∂</mo><msup><mi>p</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>J</mi></mrow><mrow><mo>∂</mo><mi>p</mi><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<br><math id="eqn123" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>G</mi></mrow><mrow><mo>∂</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>J</mi></mrow><mrow><mo>∂</mo><mi>s</mi><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>G</mi></mrow><mrow><mo>∂</mo><mi>s</mi><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>J</mi></mrow><mrow><mo>∂</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.26)</div>
+</div>
+<p>
+  O segundo e terceiro termos na identidade de Jacobi obtêm-se
+  permutando as funções <math id="eqn124" display="inline"><mrow><mi>F</mi></mrow></math>, <math id="eqn125" display="inline"><mrow><mi>G</mi></mrow></math> e <math id="eqn126" display="inline"><mrow><mi>J</mi></mrow></math>, de forma cíclica no resultado
+  anterior:
+</p>
+<div class="eqnalign">
+
+<math id="eqn127" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><mi>G</mi><mo>,</mo><mo stretchy="false">{</mo><mi>J</mi><mo>,</mo><mi>F</mi><mo stretchy="false">}</mo><mo stretchy="false">}</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>J</mi></mrow><mrow><mo>∂</mo><mi>p</mi><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>F</mi></mrow><mrow><mo>∂</mo><msup><mi>p</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>J</mi></mrow><mrow><mo>∂</mo><msup><mi>p</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>F</mi></mrow><mrow><mo>∂</mo><mi>p</mi><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<br><math id="eqn128" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>J</mi></mrow><mrow><mo>∂</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>F</mi></mrow><mrow><mo>∂</mo><mi>s</mi><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>J</mi></mrow><mrow><mo>∂</mo><mi>s</mi><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>F</mi></mrow><mrow><mo>∂</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.27)</div>
+</div>
+</p>
+<div class="eqnalign">
+
+<math id="eqn129" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><mi>J</mi><mo>,</mo><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo><mo stretchy="false">}</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>F</mi></mrow><mrow><mo>∂</mo><mi>p</mi><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>G</mi></mrow><mrow><mo>∂</mo><msup><mi>p</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>F</mi></mrow><mrow><mo>∂</mo><msup><mi>p</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>G</mi></mrow><mrow><mo>∂</mo><mi>p</mi><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<br><math id="eqn130" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>J</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>F</mi></mrow><mrow><mo>∂</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>G</mi></mrow><mrow><mo>∂</mo><mi>s</mi><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>F</mi></mrow><mrow><mo>∂</mo><mi>s</mi><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>G</mi></mrow><mrow><mo>∂</mo><mi>s</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>G</mi></mrow><mrow><mo>∂</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.28)</div>
+</div>
+<p>
+  Observando os oito termos em cada uma das expressões
+  (<a href="#eq:expF">3.26</a>), (<a href="#eq:expG">3.27</a>) e (<a href="#eq:expJ">3.28</a>), observa-se que
+  os termos 1 e 6 anulam-se entre as equações (<a href="#eq:expF">3.26</a>) e
+  (<a href="#eq:expJ">3.28</a>), e entre (<a href="#eq:expJ">3.28</a>) e (<a href="#eq:expG">3.27</a>); os termos
+  2 e 3 anulam-se entre (<a href="#eq:expF">3.26</a>) e (<a href="#eq:expG">3.27</a>), e entre
+  (<a href="#eq:expG">3.27</a>) e (<a href="#eq:expJ">3.28</a>); os termos 4 e 7 anulam-se entre
+  (<a href="#eq:expF">3.26</a>) e (<a href="#eq:expG">3.27</a>), e entre (<a href="#eq:expJ">3.28</a>) e
+  (<a href="#eq:expF">3.26</a>); e, finalmente, os termos 5 e 8 anulam-se entre
+  (<a href="#eq:expF">3.26</a>) e (<a href="#eq:expJ">3.28</a>), e entre (<a href="#eq:expG">3.27</a>) e
+  (<a href="#eq:expF">3.26</a>).
+</p>
+<p>
+<b>3.2.</b> O momento angular <math id="eqn131" display="inline"><mrow><mover><mrow><mi>L</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> de um corpo é o produto
+  vetorial entre o seu vetor posição e a sua quantidade de
+  movimento:
+</p>
+<div class="eqnalign">
+<math id="eqn132" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mi>L</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mover><mrow><mi>r</mi></mrow><mo stretchy="false">→</mo></mover><mi>×</mi><mover><mrow><mi>p</mi></mrow><mo stretchy="false">→</mo></mover></mstyle></mrow></math>
+</div>
+<p>
+  Calcule os três parênteses de Poisson:
+</p>
+<div class="eqnalign">
+<math id="eqn133" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><msub><mi>L</mi><mi>x</mi></msub><mo>,</mo><msub><mi>L</mi><mi>y</mi></msub><mo stretchy="false">}</mo><mspace width="2em" /><mo stretchy="false">{</mo><msub><mi>L</mi><mi>y</mi></msub><mo>,</mo><msub><mi>L</mi><mi>z</mi></msub><mo stretchy="false">}</mo><mspace width="2em" /><mo stretchy="false">{</mo><msub><mi>L</mi><mi>z</mi></msub><mo>,</mo><msub><mi>L</mi><mi>x</mi></msub><mo stretchy="false">}</mo></mstyle></mrow></math>
+</div>
+<p>
+  <b>Resolução</b>. Há seis variáveis de estado, as três
+  coordenadas cartesianas, <math id="eqn134" display="inline"><mrow><mi>x</mi></mrow></math>, <math id="eqn135" display="inline"><mrow><mi>y</mi></mrow></math> e <math id="eqn136" display="inline"><mrow><mi>z</mi></mrow></math>, e as três componentes da
+  quantidade de movimento, <math id="eqn137" display="inline"><mrow><msub><mi>p</mi><mi>x</mi></msub></mrow></math>, <math id="eqn138" display="inline"><mrow><msub><mi>p</mi><mi>y</mi></msub></mrow></math> e <math id="eqn139" display="inline"><mrow><msub><mi>p</mi><mi>z</mi></msub></mrow></math>.
+</p>
+<p>
+  O produto vetorial entre <math id="eqn140" display="inline"><mrow><mover><mrow><mi>r</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mi>x</mi><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mi>y</mi><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mi>z</mi><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> e
+  <math id="eqn141" display="inline"><mrow><mover><mrow><mi>p</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><msub><mi>p</mi><mi>x</mi></msub><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>p</mi><mi>y</mi></msub><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msub><mi>p</mi><mi>z</mi></msub><mover><mrow><mi>k</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> conduz às componentes do momento
+  angular:
+</p>
+<div id="eq:componentes_L" class="eqnalign">
+<math id="eqn142" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>L</mi><mi>x</mi></msub><mo>=</mo><mi>y</mi><mspace width="0.167em" /><msub><mi>p</mi><mi>z</mi></msub><mo>−</mo><mi>z</mi><mspace width="0.167em" /><msub><mi>p</mi><mi>y</mi></msub><mspace width="2em" /><msub><mi>L</mi><mi>y</mi></msub><mo>=</mo><mi>z</mi><mspace width="0.167em" /><msub><mi>p</mi><mi>x</mi></msub><mo>−</mo><mi>x</mi><mspace width="0.167em" /><msub><mi>p</mi><mi>z</mi></msub><mspace width="2em" /><msub><mi>L</mi><mi>z</mi></msub><mo>=</mo><mi>x</mi><mspace width="0.167em" /><msub><mi>p</mi><mi>y</mi></msub><mo>−</mo><mi>y</mi><mspace width="0.167em" /><msub><mi>p</mi><mi>x</mi></msub></mstyle></mrow></math>
+<div class="eqn">(3.29)</div>
+</div>
+<p>
+  Os parênteses entre <math id="eqn143" display="inline"><mrow><msub><mi>L</mi><mi>x</mi></msub></mrow></math> e <math id="eqn144" display="inline"><mrow><msub><mi>L</mi><mi>y</mi></msub></mrow></math> são iguais a:
+</p>
+<div class="eqnalign">
+<math id="eqn145" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><msub><mi>L</mi><mi>x</mi></msub><mo>,</mo><msub><mi>L</mi><mi>y</mi></msub><mo stretchy="false">}</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><mi>x</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>x</mi></msub></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>x</mi></msub></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><mi>y</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>y</mi></msub></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>y</mi></msub></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><mi>y</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<br><math id="eqn146" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><mi>z</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>z</mi></msub></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>z</mi></msub></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><mi>z</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  e derivando as expressões (<a href="#eq:componentes_L">3.29</a>) obtém-se:
+</p>
+<div class="eqnalign">
+<math id="eqn147" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><msub><mi>L</mi><mi>x</mi></msub><mo>,</mo><msub><mi>L</mi><mi>y</mi></msub><mo stretchy="false">}</mo><mo>=</mo><mn>0</mn><mi>×</mi><mi>z</mi><mo>−</mo><mn>0</mn><mi>×</mi><mo stretchy="false">(</mo><mo>−</mo><msub><mi>p</mi><mi>z</mi></msub><mo stretchy="false">)</mo><mo>+</mo><msub><mi>p</mi><mi>z</mi></msub><mi>×</mi><mn>0</mn><mo>−</mo><mo stretchy="false">(</mo><mo>−</mo><mi>z</mi><mo stretchy="false">)</mo><mi>×</mi><mn>0</mn><mo>+</mo><mo stretchy="false">(</mo><mo>−</mo><msub><mi>p</mi><mi>y</mi></msub><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><mo>−</mo><mi>y</mi><mspace width="0.167em" /><msub><mi>p</mi><mi>x</mi></msub></mstyle></mrow></math>
+<br><math id="eqn148" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>=</mo><mi>x</mi><mspace width="0.167em" /><msub><mi>p</mi><mi>y</mi></msub><mo>−</mo><mi>y</mi><mspace width="0.167em" /><msub><mi>p</mi><mi>x</mi></msub><mo>=</mo><msub><mi>L</mi><mi>z</mi></msub></mstyle></mrow></math>
+</div>
+<p>
+  De forma análoga,
+</p>
+<div class="eqnalign">
+<math id="eqn149" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><msub><mi>L</mi><mi>y</mi></msub><mo>,</mo><msub><mi>L</mi><mi>z</mi></msub><mo stretchy="false">}</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><mi>x</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>x</mi></msub></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>x</mi></msub></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><mi>y</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>y</mi></msub></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>y</mi></msub></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><mi>y</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<br><math id="eqn150" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><mi>z</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>z</mi></msub></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>y</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>z</mi></msub></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><mi>z</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  e a partir de (<a href="#eq:componentes_L">3.29</a>) unicamente os dois
+  primeiros termos são diferentes de zero e são iguais a:
+</p>
+<div class="eqnalign">
+<math id="eqn151" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><msub><mi>L</mi><mi>y</mi></msub><mo>,</mo><msub><mi>L</mi><mi>z</mi></msub><mo stretchy="false">}</mo><mo>=</mo><mo stretchy="false">(</mo><mo>−</mo><msub><mi>p</mi><mi>z</mi></msub><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mo>−</mo><mi>y</mi><mo stretchy="false">)</mo><mo>−</mo><mi>z</mi><mspace width="0.167em" /><msub><mi>p</mi><mi>y</mi></msub><mo>=</mo><msub><mi>L</mi><mi>x</mi></msub></mstyle></mrow></math>
+</div>
+<p>
+  Finalmente,
+</p>
+<div class="eqnalign">
+<math id="eqn152" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><msub><mi>L</mi><mi>z</mi></msub><mo>,</mo><msub><mi>L</mi><mi>x</mi></msub><mo stretchy="false">}</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><mi>x</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>x</mi></msub></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>x</mi></msub></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><mi>y</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>y</mi></msub></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>y</mi></msub></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><mi>y</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<br><math id="eqn153" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><mi>z</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>z</mi></msub></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>z</mi></msub></mrow><mrow><mo>∂</mo><msub><mi>p</mi><mi>z</mi></msub></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><msub><mi>L</mi><mi>x</mi></msub></mrow><mrow><mo>∂</mo><mi>z</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  em que unicamente os terceiro e quarto termos são diferentes de
+  zero e conduzem  a:
+</p>
+<div class="eqnalign">
+<math id="eqn154" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><msub><mi>L</mi><mi>z</mi></msub><mo>,</mo><msub><mi>L</mi><mi>x</mi></msub><mo stretchy="false">}</mo><mo>=</mo><mo stretchy="false">(</mo><mo>−</mo><msub><mi>p</mi><mi>x</mi></msub><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mo>−</mo><mi>z</mi><mo stretchy="false">)</mo><mo>−</mo><mi>x</mi><mspace width="0.167em" /><msub><mi>p</mi><mi>z</mi></msub><mo>=</mo><msub><mi>L</mi><mi>y</mi></msub></mstyle></mrow></math>
+</div>
+</section>
+<footer>
+<p>&copy; 2025, Jaime E. Villate</p>
+<p>Publicado nos termos da <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/">Licença
+Creative Commons Attribuição-Partilha</a> (versão 4.0).</p>
+<span>Última modificação: Wed Oct 08 12:12:14 WEST 2025</span>
+</footer>
+</body>
+</html>
