@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Introdução à Mecânica Quântica &ndash; Capítulo 2</title>
-<!--Generated on Mon Oct 20 16:06:05 WEST 2025 by latextohtml.tcl, by J. Villate -->
+<!--Generated on Tue Oct 21 09:50:00 WEST 2025 by latextohtml.tcl, by J. Villate -->
 <link rel="stylesheet" href="../css/book.css">
 <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
 <link rel="alternate icon" href="../img/favicon.ico">
@@ -180,7 +180,7 @@ Cauchy-Schwarz:
 </p>
 <div id="eq:C-S" class="eqnalign">
 <span class="boxed">
-<math id="eqn50" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><menclose notation="box"><mrow><mrow><mo stretchy="true" fence="true" form="prefix">|</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>,</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo stretchy="true" fence="true" form="postfix">|</mo></mrow><mo>≤</mo><mrow><mo stretchy="true" fence="true" form="prefix">‖</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="true" fence="true" form="postfix">‖</mo></mrow><mspace width="0.167em" /><mrow><mo stretchy="true" fence="true" form="prefix">‖</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="true" fence="true" form="postfix">‖</mo></mrow></mrow></menclose></mstyle></mrow></math>
+<math id="eqn50" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mo stretchy="true" fence="true" form="prefix">|</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>,</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo stretchy="true" fence="true" form="postfix">|</mo></mrow><mo>≤</mo><mrow><mo stretchy="true" fence="true" form="prefix">‖</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="true" fence="true" form="postfix">‖</mo></mrow><mspace width="0.167em" /><mrow><mo stretchy="true" fence="true" form="prefix">‖</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="true" fence="true" form="postfix">‖</mo></mrow></mstyle></mrow></math>
 </span>
 <div class="eqn">(2.2)</div>
 </div>
@@ -392,8 +392,8 @@ A expressão (<a href="#eq:prod_componentes">2.19</a>), no caso particular
 um ket:
 </p>
 <div id="eq:norma_componentes" class="eqnalign">
-<span class="boxed" style="padding-bottom:12pt">
-<math id="eqn128" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><menclose notation="box"><mrow><msup><mrow><mo stretchy="true" fence="true" form="prefix">‖</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="true" fence="true" form="postfix">‖</mo></mrow><mn>2</mn></msup><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo stretchy="false">|</mo><msub><mi>Ψ</mi><mi>i</mi></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup></mrow></menclose></mstyle></mrow></math>
+<span class="boxed" style="padding-bottom:14pt;padding-top:8pt">
+<math id="eqn128" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msup><mrow><mo stretchy="true" fence="true" form="prefix">‖</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="true" fence="true" form="postfix">‖</mo></mrow><mn>2</mn></msup><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo stretchy="false">|</mo><msub><mi>Ψ</mi><mi>i</mi></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup></mstyle></mrow></math>
 </span>
 <div class="eqn">(2.20)</div>
 </div>
@@ -507,152 +507,226 @@ entre os kets <math id="eqn168" display="inline"><mrow><mo stretchy="false">|</m
 <div class="eqn">(2.30)</div>
 </div>
 <p>
-Os resultados obtidos nas secções anteriores podem ser escritos de
-forma mais compacta usando a notação de brackets para o produto interno.
-A condição de ortonormalidade da base <math id="eqn173" display="inline"><mrow><mo stretchy="false">{</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">}</mo></mrow></math> é,
+O papeis de espaço dos kets e dos bras podem ser trocados, usando a
+propriedade anticomutativa do produto interno:
 </p>
-<div id="eq:ortonormal2" class="eqnalign">
+<div id="eq:bras_kets" class="eqnalign">
 <span class="boxed">
-<math id="eqn174" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><menclose notation="box"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></menclose></mstyle></mrow></math>
+<math id="eqn173" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><msup><mi>⟩</mi><mo>⋆</mo></msup></mstyle></mrow></math>
 </span>
 <div class="eqn">(2.31)</div>
 </div>
 <p>
-e as componentes (<a href="#eq:componente">2.17</a>) dum ket <math id="eqn175" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> na base
-ortonormal <math id="eqn176" display="inline"><mrow><mo stretchy="false">{</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">}</mo></mrow></math> são,
+isto é, o espaço dual do dual é o espaço original.
 </p>
-<div id="eq:componente2" class="eqnalign">
+<p>
+Os resultados obtidos nas secções anteriores podem ser escritos de
+forma mais compacta usando a notação de brackets para o produto interno.
+A condição de ortonormalidade da base <math id="eqn174" display="inline"><mrow><mo stretchy="false">{</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">}</mo></mrow></math> é,
+</p>
+<div id="eq:ortonormal2" class="eqnalign">
 <span class="boxed">
-<math id="eqn177" display="inline"><mrow><msub><mi>Ψ</mi><mi>j</mi></msub><mo>=</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math></span>&emsp;
-<span class="boxed">
-<math id="eqn177a" display="inline">
-<mrow><msubsup><mi>Ψ</mi><mi>j</mi><mo>⋆</mo></msubsup><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math>
+<math id="eqn175" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mstyle></mrow></math>
 </span>
 <div class="eqn">(2.32)</div>
 </div>
 <p>
+e as componentes (<a href="#eq:componente">2.17</a>) dum ket <math id="eqn176" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> na base
+ortonormal <math id="eqn177" display="inline"><mrow><mo stretchy="false">{</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">}</mo></mrow></math> são,
+</p>
+<div id="eq:componente2" class="eqnalign">
+<span class="boxed">
+<math id="eqn178" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>Ψ</mi><mi>j</mi></msub><mo>=</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mspace width="2em" /><msubsup><mi>Ψ</mi><mi>j</mi><mo>⋆</mo></msubsup><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mstyle></mrow></math>
+</span>
+<div class="eqn">(2.33)</div>
+</div>
+<p>
 O que mostra que o efeito da função correspondente ao bra
-<math id="eqn178" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mo stretchy="false">|</mo></mrow></math> é extrair a componente <math id="eqn179" display="inline"><mrow><mi>j</mi></mrow></math> de um ket. A expressão de um
+<math id="eqn179" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mo stretchy="false">|</mo></mrow></math> é extrair a componente <math id="eqn180" display="inline"><mrow><mi>j</mi></mrow></math> de um ket. A expressão de um
 ket como combinação linear da base é:
 </p>
 <div id="eq:ket_componentes2" class="eqnalign">
-<span class="boxed" style="padding-bottom:14pt">
-<math id="eqn180" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><menclose notation="box"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi></mrow></menclose></mstyle></mrow></math>
+<span class="boxed" style="padding-bottom:14pt;padding-top:8pt">
+<math id="eqn181" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi></mstyle></mrow></math>
 </span>
-<div class="eqn">(2.33)</div>
+<div class="eqn">(2.34)</div>
 </div>
 <p>
 E o produto interno em função das componentes dos kets é,
 </p>
 <div id="eq:prod_componentes2" class="eqnalign">
-<span class="boxed" style="padding-bottom:14pt">
-<math id="eqn181" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><menclose notation="box"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>Φ</mi><mi>i</mi><mo>⋆</mo></msubsup><msub><mi>Ψ</mi><mi>i</mi></msub></mrow></menclose></mstyle></mrow></math>
-</span>
-<div class="eqn">(2.34)</div>
-</div>
-<p>
-e, como a componente <math id="eqn182" display="inline"><mrow><msub><mi>Ψ</mi><mi>i</mi></msub></mrow></math> nessa soma é igual a
-<math id="eqn183" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>, concluímos que a combinação linear do bra
-<math id="eqn184" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo></mrow></math> associado ao ket (<a href="#eq:ket_componentes2">2.33</a>), em função da
-base, é:
-</p>
-<div id="eq:bra_componentes" class="eqnalign">
-<span class="boxed" style="padding-bottom:14pt">
-<math id="eqn185" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><menclose notation="box"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo></mrow></menclose></mstyle></mrow></math>
+<span class="boxed" style="padding-bottom:14pt;padding-top:8pt">
+<math id="eqn182" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>Φ</mi><mi>i</mi><mo>⋆</mo></msubsup><msub><mi>Ψ</mi><mi>i</mi></msub></mstyle></mrow></math>
 </span>
 <div class="eqn">(2.35)</div>
 </div>
 <p>
-O conjunto de <math id="eqn186" display="inline"><mrow><mi>n</mi></mrow></math> bras <math id="eqn187" display="inline"><mrow><mo stretchy="false">{</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mo stretchy="false">}</mo></mrow></math> é a base ortonormal do espaço
-dual dos bras, associada à base <math id="eqn188" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi><mo stretchy="false">}</mo></mrow></math> no espaço dos kets.
+e, como a componente <math id="eqn183" display="inline"><mrow><msub><mi>Ψ</mi><mi>i</mi></msub></mrow></math> nessa soma é igual a
+<math id="eqn184" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>, concluímos que a combinação linear do bra
+<math id="eqn185" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo></mrow></math> associado ao ket (<a href="#eq:ket_componentes2">2.34</a>), em função da
+base, é:
+</p>
+<div id="eq:bra_componentes" class="eqnalign">
+<span class="boxed" style="padding-bottom:14pt;padding-top:8pt">
+<math id="eqn186" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo></mstyle></mrow></math>
+</span>
+<div class="eqn">(2.36)</div>
+</div>
+<p>
+O conjunto de <math id="eqn187" display="inline"><mrow><mi>n</mi></mrow></math> bras <math id="eqn188" display="inline"><mrow><mo stretchy="false">{</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mo stretchy="false">}</mo></mrow></math> é a base ortonormal do espaço
+dual dos bras, associada à base <math id="eqn189" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi><mo stretchy="false">}</mo></mrow></math> no espaço dos kets.
 </p>
 <p>
 O bracket de um ket com si próprio é igual à sua norma ao quadrado:
 </p>
 <div id="eq:norma2" class="eqnalign">
 <span class="boxed">
-<math id="eqn189" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><menclose notation="box"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><msup><mrow><mo stretchy="true" fence="true" form="prefix">‖</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="true" fence="true" form="postfix">‖</mo></mrow><mn>2</mn></msup></mrow></menclose></mstyle></mrow></math>
+<math id="eqn190" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><msup><mrow><mo stretchy="true" fence="true" form="prefix">‖</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="true" fence="true" form="postfix">‖</mo></mrow><mn>2</mn></msup></mstyle></mrow></math>
 </span>
-<div class="eqn">(2.36)</div>
+<div class="eqn">(2.37)</div>
 </div>
 </section>
 <section>
 <h2>2.9. Operadores lineares</h2>
 <p>
-Um operador <math id="eqn190" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> no espaço dos kets associa a cada ket
-<math id="eqn191" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> um outro ket <math id="eqn192" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi></mrow></math>:
+Um operador <math id="eqn191" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> no espaço dos kets associa a cada ket
+<math id="eqn192" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> um outro ket <math id="eqn193" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi></mrow></math>:
 </p>
 <div id="eq:operador" class="eqnalign">
-<math id="eqn193" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
-<div class="eqn">(2.37)</div>
-</div>
-<p>
-A expressão <math id="eqn194" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> é o produto interno entre o
-ket <math id="eqn195" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math> e o ket <math id="eqn196" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>.
-</p>
-<p>
-O operador é linear se, para quaisquer dois kets <math id="eqn197" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> e <math id="eqn198" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math>,
-e números complexos <math id="eqn199" display="inline"><mrow><mi>u</mi></mrow></math> e <math id="eqn200" display="inline"><mrow><mi>w</mi></mrow></math>,
-</p>
-<div id="eq:operador_linear" class="eqnalign">
-<math id="eqn201" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>u</mi><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>+</mo><mi>w</mi><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mi>u</mi><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>+</mo><mi>w</mi><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
+<math id="eqn194" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
 <div class="eqn">(2.38)</div>
 </div>
 <p>
-O resultado do operador <math id="eqn202" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> atuando em cada elemento da
-base <math id="eqn203" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi><mo stretchy="false">}</mo></mrow></math> é um ket que pode ser escrito como combinação
-linear da própria base:
+A expressão <math id="eqn195" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> é o produto interno entre o
+ket <math id="eqn196" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math> e o ket <math id="eqn197" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>.
 </p>
-<div id="eq:operador_base" class="eqnalign">
-<math id="eqn204" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mi>Ω</mi><mrow><mi>k</mi><mi>j</mi></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>k</mi></msub><mi>⟩</mi></mstyle></mrow></math>
+<p>
+O operador é linear se, para quaisquer dois kets <math id="eqn198" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> e <math id="eqn199" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math>,
+e números complexos <math id="eqn200" display="inline"><mrow><mi>u</mi></mrow></math> e <math id="eqn201" display="inline"><mrow><mi>w</mi></mrow></math>,
+</p>
+<div id="eq:operador_linear" class="eqnalign">
+<math id="eqn202" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>u</mi><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>+</mo><mi>w</mi><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mi>u</mi><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>+</mo><mi>w</mi><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
 <div class="eqn">(2.39)</div>
 </div>
 <p>
-onde <math id="eqn205" display="inline"><mrow><msub><mi>Ω</mi><mrow><mi>k</mi><mi>j</mi></mrow></msub></mrow></math> são as componentes do operador (<math id="eqn206" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow></math> números
-complexos). Multiplicando <math id="eqn207" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo></mrow></math> por cada um dos lados da
-equação anterior, vemos que cada componente do operador é:
+O resultado do operador <math id="eqn203" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> atuando em cada elemento da
+base <math id="eqn204" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi><mo stretchy="false">}</mo></mrow></math> é um ket que pode ser escrito como combinação
+linear da própria base:
 </p>
-<div id="eq:operador_components" class="eqnalign">
-<math id="eqn208" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mstyle></mrow></math>
+<div id="eq:operador_base" class="eqnalign">
+<math id="eqn205" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msub><mi>Ω</mi><mrow><mi>k</mi><mi>j</mi></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>k</mi></msub><mi>⟩</mi></mstyle></mrow></math>
 <div class="eqn">(2.40)</div>
 </div>
 <p>
-Usando a propriedade de linearidade do operador <math id="eqn209" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, o
-resultado da sua aplicação a um ket <math id="eqn210" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> é:
+onde <math id="eqn206" display="inline"><mrow><msub><mi>Ω</mi><mrow><mi>k</mi><mi>j</mi></mrow></msub></mrow></math> são as componentes do operador (<math id="eqn207" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow></math> números
+complexos). Multiplicando <math id="eqn208" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo></mrow></math> por cada um dos lados da
+equação anterior, vemos que cada componente do operador é:
 </p>
-<div id="eq:operador_ket" class="eqnalign">
-<math id="eqn211" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>Ψ</mi><mi>j</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>Ψ</mi><mi>i</mi></msub><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>Ψ</mi><mi>j</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi></mstyle></mrow></math>
+<div id="eq:operador_components" class="eqnalign">
+<math id="eqn209" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mstyle></mrow></math>
 <div class="eqn">(2.41)</div>
 </div>
 <p>
-E o produto com um bra <math id="eqn212" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo></mrow></math> é igual a,
+Usando a propriedade de linearidade do operador <math id="eqn210" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, o
+resultado da sua aplicação a um ket <math id="eqn211" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> é:
 </p>
-<div id="eq:bra_operador_ket" class="eqnalign">
-<span class="boxed" style="padding-bottom:14pt">
-<math id="eqn213" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><menclose notation="box"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>Φ</mi><mi>i</mi><mo>⋆</mo></msubsup><msub><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>Ψ</mi><mi>j</mi></msub></mrow></menclose></mstyle></mrow></math>
-</span>
+<div id="eq:operador_ket" class="eqnalign">
+<math id="eqn212" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>Ψ</mi><mi>j</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>Ψ</mi><mi>i</mi></msub><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>Ψ</mi><mi>j</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi></mstyle></mrow></math>
 <div class="eqn">(2.42)</div>
 </div>
+<p>
+E o produto com um bra <math id="eqn213" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo></mrow></math> é igual a,
+</p>
+<div id="eq:bra_operador_ket" class="eqnalign">
+<span class="boxed" style="padding-bottom:14pt;padding-top:8pt">
+<math id="eqn214" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>Φ</mi><mi>i</mi><mo>⋆</mo></msubsup><msub><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>Ψ</mi><mi>j</mi></msub></mstyle></mrow></math>
+</span>
+<div class="eqn">(2.43)</div>
+</div>
+<p>
+No caso em que o bra na expressão (<a href="#eq:bra_operador_ket">2.43</a>) for
+<math id="eqn215" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo></mrow></math> correspondente ao ket <math id="eqn216" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>, essa expressão define
+<math id="eqn217" display="inline"><mrow><mi>⟨</mi><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>⟩</mi></mrow></math>, designado por <span class="concept">valor esperado</span> do
+operador <math id="eqn218" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> no ket <math id="eqn219" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>:
+</p>
+<div id="eq:expected_value_operator" class="eqnalign">
+<math id="eqn220" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>⟩</mi><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>Ψ</mi><mi>i</mi><mo>⋆</mo></msubsup><msub><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>Ψ</mi><mi>j</mi></msub></mstyle></mrow></math>
+<div class="eqn">(2.44)</div>
+</div>
+<h3>2.9.3. Operador adjunto</h3>
+<p>
+A cada operador linear <math id="eqn221" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> associa-se um outro operador
+<span class="concept">adjunto</span>, denotado por <math id="eqn222" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mrow></math>, que verifica a
+seguinte propriedade, para quaisquer dois kets <math id="eqn223" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math> e
+<math id="eqn224" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>:
+</p>
+<div id="eq:adjunto" class="eqnalign">
+<span class="boxed">
+<math id="eqn225" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><msup><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><msup><mi>⟩</mi><mo>⋆</mo></msup></mstyle></mrow></math>
+</span>
+<div class="eqn">(2.45)</div>
+</div>
+<p>
+Substituindo o operador <math id="eqn226" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mrow></math> na expressão
+(<a href="#eq:bra_operador_ket">2.43</a>), valida para qualquer operador linear,
+obtemos,
+</p>
+<div class="eqnalign">
+<math id="eqn227" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><msup><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><msup><mi>⟩</mi><mo>⋆</mo></msup><mo>=</mo><msup><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>Ψ</mi><mi>i</mi><mo>⋆</mo></msubsup><msubsup><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow><mi>†</mi></msubsup><msub><mi>Φ</mi><mi>j</mi></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>⋆</mo></msup><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>Ψ</mi><mi>j</mi></msub><msup><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msubsup><mi>Ω</mi><mrow><mi>j</mi><mi>i</mi></mrow><mi>†</mi></msubsup><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>⋆</mo></msup><msubsup><mi>Φ</mi><mi>i</mi><mo>⋆</mo></msubsup></mstyle></mrow></math>
+<div class="eqn">(2.46)</div>
+</div>
+<p>
+onde trocamos os nomes dos índices <math id="eqn228" display="inline"><mrow><mi>i</mi></mrow></math> e <math id="eqn229" display="inline"><mrow><mi>j</mi></mrow></math> na última
+expressão. Como, de acordo com a definição (<a href="#eq:adjunto">2.45</a>), este
+resultado deverá ser igual à expressão (<a href="#eq:bra_operador_ket">2.43</a>),
+conclui-se que a relação entre as componentes do operador adjunto e o
+operador original é:
+</p>
+<div id="eq:componentes_adjunto" class="eqnalign">
+<math id="eqn230" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msubsup><mi>Ω</mi><mrow><mi>j</mi><mi>i</mi></mrow><mi>†</mi></msubsup><mo>=</mo><msubsup><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow><mo>⋆</mo></msubsup></mstyle></mrow></math>
+<div class="eqn">(2.47)</div>
+</div>
+<h3>2.9.4. Operadores hermíticos</h3>
+<p>
+Um operador hermítico é um operador que é igual ao seu operador
+adjunto:
+</p>
+<div id="eq:hermítico" class="eqnalign">
+<math id="eqn231" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msup><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+<div class="eqn">(2.48)</div>
+</div>
+<p>
+A partir das equações (<a href="#eq:adjunto">2.45</a>) e (<a href="#eq:hermítico">2.48</a>)
+obtém-se:
+</p>
+<div id="eq:esperado_hermítico" class="eqnalign">
+<math id="eqn232" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>⟩</mi><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><msup><mi>⟩</mi><mo>⋆</mo></msup><mo>=</mo><mi>⟨</mi><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><msup><mi>⟩</mi><mo>⋆</mo></msup></mstyle></mrow></math>
+<div class="eqn">(2.49)</div>
+</div>
+<p>
+isto é, o valor esperado de um operador hermítico, em qualquer ket
+<math id="eqn233" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>, é sempre um valor real.
+</p>
 </section>
 <section>
 <h2>2.10. Representação matricial</h2>
 <p>
 Uma forma útil de trabalhar com kets, bras e brackets consiste em
-representar as <math id="eqn214" display="inline"><mrow><mi>n</mi></mrow></math> componentes de um ket <math id="eqn215" display="inline"><mrow><mrow><mi mathvariant="normal">Ψ</mi></mrow></mrow></math> por uma matriz com uma
-coluna e <math id="eqn216" display="inline"><mrow><mi>n</mi></mrow></math> linhas:
+representar as <math id="eqn234" display="inline"><mrow><mi>n</mi></mrow></math> componentes de um ket <math id="eqn235" display="inline"><mrow><mrow><mi mathvariant="normal">Ψ</mi></mrow></mrow></math> por uma matriz com uma
+coluna e <math id="eqn236" display="inline"><mrow><mi>n</mi></mrow></math> linhas:
 </p>
 <div class="eqnalign">
-<math id="eqn217" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>Ψ</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>Ψ</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ψ</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
-<div class="eqn">(2.43)</div>
+<math id="eqn237" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>Ψ</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>Ψ</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ψ</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+<div class="eqn">(2.50)</div>
 </div>
 <p>
-E o bra associado a um ket <math id="eqn218" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math> é a matriz de uma linha e <math id="eqn219" display="inline"><mrow><mi>n</mi></mrow></math>,
+E o bra associado a um ket <math id="eqn238" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math> é a matriz de uma linha e <math id="eqn239" display="inline"><mrow><mi>n</mi></mrow></math>,
 transpota da matriz do ket, com todos os seus elementos trocados pelo
 respetivo conjugado complexo:
 </p>
 <div class="eqnalign">
-<math id="eqn220" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><msubsup><mi>Φ</mi><mn>1</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><msubsup><mi>Φ</mi><mn>2</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><mi>…</mi><mspace width="0.278em" /><msubsup><mi>Φ</mi><mi>n</mi><mo>⋆</mo></msubsup><mo stretchy="true" fence="true" form="postfix">]</mo></mrow></mstyle></mrow></math>
-<div class="eqn">(2.44)</div>
+<math id="eqn240" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><msubsup><mi>Φ</mi><mn>1</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><msubsup><mi>Φ</mi><mn>2</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><mi>…</mi><mspace width="0.278em" /><msubsup><mi>Φ</mi><mi>n</mi><mo>⋆</mo></msubsup><mo stretchy="true" fence="true" form="postfix">]</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(2.51)</div>
 </div>
 <p>
 assim, um bracket e igual ao produto entre uma matriz linha e uma
@@ -660,56 +734,67 @@ matriz coluna, dando como resultado um número complexo:
 </p>
 </p>
 <div class="eqnalign">
-<math id="eqn221" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><msubsup><mi>Φ</mi><mn>1</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><msubsup><mi>Φ</mi><mn>2</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><mi>…</mi><mspace width="0.278em" /><msubsup><mi>Φ</mi><mi>n</mi><mo>⋆</mo></msubsup><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>[</mo><mtable><mtr><mtd><msub><mi>Ψ</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>Ψ</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ψ</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>Φ</mi><mi>i</mi><mo>⋆</mo></msubsup><msub><mi>Ψ</mi><mi>i</mi></msub></mstyle></mrow></math>
-<div class="eqn">(2.45)</div>
+<math id="eqn241" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><msubsup><mi>Φ</mi><mn>1</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><msubsup><mi>Φ</mi><mn>2</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><mi>…</mi><mspace width="0.278em" /><msubsup><mi>Φ</mi><mi>n</mi><mo>⋆</mo></msubsup><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>[</mo><mtable><mtr><mtd><msub><mi>Ψ</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>Ψ</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ψ</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>Φ</mi><mi>i</mi><mo>⋆</mo></msubsup><msub><mi>Ψ</mi><mi>i</mi></msub></mstyle></mrow></math>
+<div class="eqn">(2.52)</div>
 </div>
 <p>
-Nessa representação, um operador é uma matriz de <math id="eqn222" display="inline"><mrow><mi>n</mi></mrow></math> linhas e <math id="eqn223" display="inline"><mrow><mi>n</mi></mrow></math>
+Nessa representação, um operador é uma matriz de <math id="eqn242" display="inline"><mrow><mi>n</mi></mrow></math> linhas e <math id="eqn243" display="inline"><mrow><mi>n</mi></mrow></math>
 colunas, em que cada elemento da matriz é a respectiva componente do
 operador: 
 </p>
 <div class="eqnalign">
-<math id="eqn224" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>2</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
-<div class="eqn">(2.46)</div>
+<math id="eqn244" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>2</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+<div class="eqn">(2.53)</div>
 </div>
 <p>
-A equação (<a href="#eq:operador_base">2.39</a>) indica que cada coluna da matriz do
+A equação (<a href="#eq:operador_base">2.40</a>) indica que cada coluna da matriz do
 operador são os coeficientes do resultado do operador atuando no
 respetivo elemento da base, escrito como combinação linear da
 base. Por exemplo, a terceira coluna serão os coeficientes do
-resultado <math id="eqn225" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi></mrow></math> escrito como combinação linear dos
+resultado <math id="eqn245" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi></mrow></math> escrito como combinação linear dos
 kets da base.
 </p>
 <p>
-A forma matricial da expressão (<a href="#eq:bra_operador_ket">2.42</a>) é:
+A forma matricial da expressão (<a href="#eq:bra_operador_ket">2.43</a>) é:
+</p>
+<div id="eq:bra_operador_ket_matrices" class="eqnalign">
+<math id="eqn246" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><msubsup><mi>Φ</mi><mn>1</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><msubsup><mi>Φ</mi><mn>2</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><mi>…</mi><mspace width="0.278em" /><msubsup><mi>Φ</mi><mi>n</mi><mo>⋆</mo></msubsup><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>[</mo><mtable><mtr><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>2</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>Ψ</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>Ψ</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ψ</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+<div class="eqn">(2.54)</div>
+</div>
+<p>
+A equação (<a href="#eq:componentes_adjunto">2.47</a>) implica que a matriz do
+operador adjunto é a matriz transposta e conjugada da matriz do
+operador original, e a equação (<a href="#eq:adjunto">2.45</a>) implica que a
+expressão (<a href="#eq:bra_operador_ket_matrices">2.54</a>) também pode ser escrita
+como:
 </p>
 <div class="eqnalign">
-<math id="eqn226" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><msubsup><mi>Φ</mi><mn>1</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><msubsup><mi>Φ</mi><mn>2</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><mi>…</mi><mspace width="0.278em" /><msubsup><mi>Φ</mi><mi>n</mi><mo>⋆</mo></msubsup><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>[</mo><mtable><mtr><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>2</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>Ψ</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>Ψ</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ψ</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
-<div class="eqn">(2.47)</div>
+<math id="eqn247" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><msup><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><msubsup><mi>Ψ</mi><mn>1</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><msubsup><mi>Ψ</mi><mn>2</mn><mo>⋆</mo></msubsup><mspace width="0.278em" /><mi>…</mi><mspace width="0.278em" /><msubsup><mi>Ψ</mi><mi>n</mi><mo>⋆</mo></msubsup><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>[</mo><mtable><mtr><mtd><msubsup><mi>Ω</mi><mrow><mn>11</mn></mrow><mo>⋆</mo></msubsup></mtd><mtd><msubsup><mi>Ω</mi><mrow><mn>21</mn></mrow><mo>⋆</mo></msubsup></mtd><mtd><mi>…</mi></mtd><mtd><msubsup><mi>Ω</mi><mrow><mi>n</mi><mn>1</mn></mrow><mo>⋆</mo></msubsup></mtd></mtr><mtr><mtd><msubsup><mi>Ω</mi><mrow><mn>12</mn></mrow><mo>⋆</mo></msubsup></mtd><mtd><msubsup><mi>Ω</mi><mrow><mn>22</mn></mrow><mo>⋆</mo></msubsup></mtd><mtd><mi>…</mi></mtd><mtd><msubsup><mi>Ω</mi><mrow><mi>n</mi><mn>2</mn></mrow><mo>⋆</mo></msubsup></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msubsup><mi>Ω</mi><mrow><mn>1</mn><mi>n</mi></mrow><mo>⋆</mo></msubsup></mtd><mtd><msubsup><mi>Ω</mi><mrow><mn>2</mn><mi>n</mi></mrow><mo>⋆</mo></msubsup></mtd><mtd><mi>…</mi></mtd><mtd><msubsup><mi>Ω</mi><mrow><mi>n</mi><mi>n</mi></mrow><mo>⋆</mo></msubsup></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>Φ</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>Φ</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Φ</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>⋆</mo></msup></mstyle></mrow></math>
+<div class="eqn">(2.55)</div>
 </div>
 </section>
 <section>
 <h2>2.11. Valores e vetores próprios</h2>
 <p>
-Os vetores próprios de um operador <math id="eqn227" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> são todos os kets
-<math id="eqn228" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math> (diferentes do ket nul <math id="eqn229" display="inline"><mrow><mo stretchy="false">|</mo><mn>0</mn><mi>⟩</mi></mrow></math>), que verificam a
+Os vetores próprios de um operador <math id="eqn248" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> são todos os kets
+<math id="eqn249" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math> (diferentes do ket nul <math id="eqn250" display="inline"><mrow><mo stretchy="false">|</mo><mn>0</mn><mi>⟩</mi></mrow></math>), que verificam a
 condição:
 </p>
 <div id="eq:vetor_próprio" class="eqnalign">
-<math id="eqn230" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><msub><mi>Ω</mi><mi>j</mi></msub><mspace width="0.167em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mstyle></mrow></math>
-<div class="eqn">(2.48)</div>
+<math id="eqn251" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><msub><mi>Ω</mi><mi>j</mi></msub><mspace width="0.167em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(2.56)</div>
 </div>
 <p>
-onde <math id="eqn231" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math> é um número complexo, designado por valor
-próprio. A definição (<a href="#eq:vetor_próprio">2.48</a>) é equivalente a dizer
+onde <math id="eqn252" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math> é um número complexo, designado por valor
+próprio. A definição (<a href="#eq:vetor_próprio">2.56</a>) é equivalente a dizer
 que o resultado de aplicar o operador num ket que seja um dos seus
 vetores próprios, é o mesmo ket multiplicado por uma constante.
 </p>
 <p>
-Se um ket <math id="eqn232" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math> é vetor próprio de <math id="eqn233" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, com
-valor próprio <math id="eqn234" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math>, qualquer número complexo multiplicado por
-<math id="eqn235" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math> é também vetor próprio, com o mesmo valor próprio
-<math id="eqn236" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math>. Os vetores próprios formam assim um subespaço
+Se um ket <math id="eqn253" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math> é vetor próprio de <math id="eqn254" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, com
+valor próprio <math id="eqn255" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math>, qualquer número complexo multiplicado por
+<math id="eqn256" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math> é também vetor próprio, com o mesmo valor próprio
+<math id="eqn257" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math>. Os vetores próprios formam assim um subespaço
 vetorial. Em alguns casos, existem dois ou mais vetores próprios
 linearmente independentes, correspondentes ao mesmo valor próprio; a
 dimensão dos espaço dos vetores próprios correspondentes a um valor
@@ -717,63 +802,71 @@ próprio é o número máximo desses vetores que seja linearmente
 independente.
 </p>
 <p>
-Usando a representação matricial do operador <math id="eqn237" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, e do ket
-<math id="eqn238" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math>, a expressão (<a href="#eq:vetor_próprio">2.48</a>) é um sistema de
-<math id="eqn239" display="inline"><mrow><mi>n</mi></mrow></math> equações:
+Usando a representação matricial do operador <math id="eqn258" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, e do ket
+<math id="eqn259" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math>, a expressão (<a href="#eq:vetor_próprio">2.56</a>) é um sistema de
+<math id="eqn260" display="inline"><mrow><mi>n</mi></mrow></math> equações:
 </p>
 <div class="eqnalign">
-<math id="eqn240" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo>[</mo><mtable><mtr><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>2</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>x</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo><mo>=</mo><msub><mi>Ω</mi><mi>j</mi></msub><mo>[</mo><mtable><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>x</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
-<div class="eqn">(2.49)</div>
+<math id="eqn261" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo>[</mo><mtable><mtr><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>2</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>x</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo><mo>=</mo><msub><mi>Ω</mi><mi>j</mi></msub><mo>[</mo><mtable><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>x</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+<div class="eqn">(2.57)</div>
 </div>
 <p>
-em que <math id="eqn241" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></math>, <math id="eqn242" display="inline"><mrow><msub><mi>x</mi><mn>2</mn></msub></mrow></math>, &hellip;, <math id="eqn243" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub></mrow></math> são as componentes do ket próprio
-<math id="eqn244" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math>. Encontrar os valores próprios da matriz de
-<math id="eqn245" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> consiste em determinar para que valores <math id="eqn246" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math> o
-esse sistema tem soluções para as variáveis <math id="eqn247" display="inline"><mrow><msub><mi>x</mi><mi>k</mi></msub></mrow></math>, dadas as <math id="eqn248" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow></math>
-constantes <math id="eqn249" display="inline"><mrow><msub><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></math>. E caso existam soluções para um número
-<math id="eqn250" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math>, cada uma dessas soluções define um ket próprio
-correspondente a esse valor próprio <math id="eqn251" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math>.
+em que <math id="eqn262" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub></mrow></math>, <math id="eqn263" display="inline"><mrow><msub><mi>x</mi><mn>2</mn></msub></mrow></math>, &hellip;, <math id="eqn264" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub></mrow></math> são as componentes do ket próprio
+<math id="eqn265" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math>. Encontrar os valores próprios da matriz de
+<math id="eqn266" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> consiste em determinar para que valores <math id="eqn267" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math> o
+esse sistema tem soluções para as variáveis <math id="eqn268" display="inline"><mrow><msub><mi>x</mi><mi>k</mi></msub></mrow></math>, dadas as <math id="eqn269" display="inline"><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow></math>
+constantes <math id="eqn270" display="inline"><mrow><msub><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></math>. E caso existam soluções para um número
+<math id="eqn271" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math>, cada uma dessas soluções define um ket próprio
+correspondente a esse valor próprio <math id="eqn272" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math>.
 </p>
 <p>
-As <math id="eqn252" display="inline"><mrow><mi>n</mi></mrow></math> equações, agrupando as variáveis <math id="eqn253" display="inline"><mrow><msub><mi>x</mi><mi>k</mi></msub></mrow></math> no lado esquerdo são:
+As <math id="eqn273" display="inline"><mrow><mi>n</mi></mrow></math> equações, agrupando as variáveis <math id="eqn274" display="inline"><mrow><msub><mi>x</mi><mi>k</mi></msub></mrow></math> no lado esquerdo são:
 </p>
 <div id="eq:sistema_próprio" class="eqnalign">
-<math id="eqn254" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mtable displaystyle="true" columnspacing="0em" rowspacing="3pt"><mtr><mtd columnalign="right"><mo stretchy="false">(</mo><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub><mo>−</mo><msub><mi>Ω</mi><mi>j</mi></msub><mo stretchy="false">)</mo><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub><msub><mi>x</mi><mn>2</mn></msub><mi>…</mi><mo>+</mo><msub><mi>Ω</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mo stretchy="false">(</mo><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub><mo>−</mo><msub><mi>Ω</mi><mi>j</mi></msub><mo stretchy="false">)</mo><msub><mi>x</mi><mn>2</mn></msub><mi>…</mi><mo>+</mo><msub><mi>Ω</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mo>⋮</mo></mtd></mtr><mtr><mtd columnalign="right"><msub><mi>Ω</mi><mrow><mi>n</mi><mn>1</mn></mrow></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>Ω</mi><mrow><mi>n</mi><mn>2</mn></mrow></msub><msub><mi>x</mi><mn>2</mn></msub><mi>…</mi><mo>+</mo><mo stretchy="false">(</mo><msub><mi>Ω</mi><mrow><mi>n</mi><mi>n</mi></mrow></msub><mo>−</mo><msub><mi>Ω</mi><mi>j</mi></msub><mo stretchy="false">)</mo><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mtd></mtr></mtable></mstyle></mrow></math>
-<div class="eqn">(2.50)</div>
+<math id="eqn275" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mtable displaystyle="true" columnspacing="0em" rowspacing="3pt"><mtr><mtd columnalign="right"><mo stretchy="false">(</mo><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub><mo>−</mo><msub><mi>Ω</mi><mi>j</mi></msub><mo stretchy="false">)</mo><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub><msub><mi>x</mi><mn>2</mn></msub><mi>…</mi><mo>+</mo><msub><mi>Ω</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mo stretchy="false">(</mo><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub><mo>−</mo><msub><mi>Ω</mi><mi>j</mi></msub><mo stretchy="false">)</mo><msub><mi>x</mi><mn>2</mn></msub><mi>…</mi><mo>+</mo><msub><mi>Ω</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mo>⋮</mo></mtd></mtr><mtr><mtd columnalign="right"><msub><mi>Ω</mi><mrow><mi>n</mi><mn>1</mn></mrow></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>Ω</mi><mrow><mi>n</mi><mn>2</mn></mrow></msub><msub><mi>x</mi><mn>2</mn></msub><mi>…</mi><mo>+</mo><mo stretchy="false">(</mo><msub><mi>Ω</mi><mrow><mi>n</mi><mi>n</mi></mrow></msub><mo>−</mo><msub><mi>Ω</mi><mi>j</mi></msub><mo stretchy="false">)</mo><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mtd></mtr></mtable></mstyle></mrow></math>
+<div class="eqn">(2.58)</div>
 </div>
 <p>
-Obviamente <math id="eqn255" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mo>⋯</mo><mo>=</mo><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow></math> é solução desse sistema de
+Obviamente <math id="eqn276" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mo>⋯</mo><mo>=</mo><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow></math> é solução desse sistema de
 equações. Para que existam outras soluções é necessário que pelo menos
 uma das equações no sistema seja uma combinação das outras, ficando
 pelo menos uma <span class="concept">variável livre</span> que pode ter qualquer valor. O
 número de variáveis livres será a dimensão do espaço desses vetores
 próprios. Uma condição necessária, e suficiente, para que as equações
 sejam linearmente dependentes entre si, é que o determinante do
-sistema de equações (<a href="#eq:sistema_próprio">2.50</a>) seja nulo:
+sistema de equações (<a href="#eq:sistema_próprio">2.58</a>) seja nulo:
 </p>
 <div class="eqnalign">
-<math id="eqn256" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo>|</mo><mtable><mtr><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub><mo>−</mo><msub><mi>Ω</mi><mi>j</mi></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub><mo>−</mo><msub><mi>Ω</mi><mi>j</mi></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>2</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mi>n</mi></mrow></msub><mo>−</mo><msub><mi>Ω</mi><mi>j</mi></msub></mtd></mtr></mtable><mo>|</mo><mo>=</mo><mn>0</mn></mstyle></mrow></math>
-<div class="eqn">(2.51)</div>
+<math id="eqn277" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="true" fence="true" form="prefix">|</mo><mtable><mtr><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub><mo>−</mo><msub><mi>Ω</mi><mi>j</mi></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub><mo>−</mo><msub><mi>Ω</mi><mi>j</mi></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd><mo>⋱</mo></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mn>2</mn></mrow></msub></mtd><mtd><mi>…</mi></mtd><mtd><msub><mi>Ω</mi><mrow><mi>n</mi><mi>n</mi></mrow></msub><mo>−</mo><msub><mi>Ω</mi><mi>j</mi></msub></mtd></mtr></mtable><mo stretchy="true" fence="true" form="postfix">|</mo><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+<div class="eqn">(2.59)</div>
 </div>
 <p>
-A expressão anterior conduz a um polinómio de grau <math id="eqn257" display="inline"><mrow><mi>n</mi></mrow></math> para a variável
-<math id="eqn258" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math>. Cada raiz desse polinómio é um possível valor
+A expressão anterior conduz a um polinómio de grau <math id="eqn278" display="inline"><mrow><mi>n</mi></mrow></math> para a variável
+<math id="eqn279" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math>. Cada raiz desse polinómio é um possível valor
 próprio. Substituindo um valor próprio no
-sistema (<a href="#eq:sistema_próprio">2.50</a>) obtém-se um sistema com variáveis
+sistema (<a href="#eq:sistema_próprio">2.58</a>) obtém-se um sistema com variáveis
 livres; um possível valor das variáveis livre dá um dos possíveis
 vetores próprios.
 </p>
+<p>
+Se o operador <math id="eqn280" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> for hermítico, todos os seus valores
+próprios serão reais, e os vetores próprios correspondentes a valores
+próprios diferentes serão perpendiculares entre si (a demonstração é
+feita no exercício <a href="#exe:hermitico">2.3</a>). Os vetores próprios de um
+operador hermítico, normalizados, constituem assim uma base ortonormal
+do espaço vetorial.
+</p>
 <h2>Exercícios</h2>
   <b>2.1.</b> Em função da base ortonormal
-    <math id="eqn259" display="inline"><mrow><mrow><mo stretchy="true" fence="true" form="prefix">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>,</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">}</mo></mrow></mrow></math> a
+    <math id="eqn281" display="inline"><mrow><mrow><mo stretchy="true" fence="true" form="prefix">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>,</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">}</mo></mrow></mrow></math> a
     representação de dois kets é:
 </p>
 <div class="eqnalign">
-<math id="eqn260" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>−</mo><mn>3</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mspace width="2em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mn>2</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mstyle></mrow></math>
+<math id="eqn282" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>−</mo><mn>3</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mspace width="2em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mn>2</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mstyle></mrow></math>
 </div>
 <p>
-  Calcule: (<i>a</i>) A sua diferença, <math id="eqn261" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>−</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math>.
-  (<i>b</i>) O seu produto interno, <math id="eqn262" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math>.
+  Calcule: (<i>a</i>) A sua diferença, <math id="eqn283" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>−</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math>.
+  (<i>b</i>) O seu produto interno, <math id="eqn284" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math>.
 </p>
 <p>
   <b>Resolução</b>. Este problema pode ser resolvido trabalhando
@@ -781,17 +874,17 @@ vetores próprios.
   primeiro método é:
 </p>
 <p>
-    (<i>a</i>) <math id="eqn263" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>−</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>−</mo><mn>3</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>−</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mn>2</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mrow></math><br>
+    (<i>a</i>) <math id="eqn285" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>−</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>−</mo><mn>3</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>−</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mn>2</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mrow></math><br>
     <span style="margin-right:44pt"></span>
-    <math id="eqn264" display="inline"><mrow><mo>=</mo><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>−</mo><mo stretchy="false">(</mo><mn>3</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn><mo stretchy="false">)</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mrow></math>
+    <math id="eqn286" display="inline"><mrow><mo>=</mo><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>−</mo><mo stretchy="false">(</mo><mn>3</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn><mo stretchy="false">)</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mrow></math>
 </p>
 <p>
-  (<i>b</i>) <math id="eqn265" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mo stretchy="false">|</mo><mo>−</mo><mn>3</mn><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mo stretchy="false">|</mo><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mn>2</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mrow></math><br>
+  (<i>b</i>) <math id="eqn287" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mo stretchy="false">|</mo><mo>−</mo><mn>3</mn><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mo stretchy="false">|</mo><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mn>2</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mrow></math><br>
     <span style="margin-right:29pt"></span>
-    <math id="eqn266" display="inline"><mrow><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>+</mo><mn>4</mn><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>−</mo><mn>6</mn><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>12</mn><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mrow></math><br>
-    Como <math id="eqn267" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>=</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>=</mo><mn>0</mn></mrow></math>,
-    e <math id="eqn268" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>=</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>=</mo><mn>1</mn></mrow></math>, então:<br>
-    <math id="eqn269" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>12</mn><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>14</mn></mrow></math>
+    <math id="eqn288" display="inline"><mrow><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>+</mo><mn>4</mn><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>−</mo><mn>6</mn><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>12</mn><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mrow></math><br>
+    Como <math id="eqn289" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>=</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>=</mo><mn>0</mn></mrow></math>,
+    e <math id="eqn290" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>=</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>=</mo><mn>1</mn></mrow></math>, então:<br>
+    <math id="eqn291" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>12</mn><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>14</mn></mrow></math>
 </p>
 <p>
     Usando matrizes a resolução é:
@@ -800,135 +893,197 @@ vetores próprios.
     (<i>a</i>)
 </p>
 <div class="eqnalign">
-<math id="eqn270" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>−</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow></mtd></mtr><mtr><mtd><mo>−</mo><mn>3</mn></mtd></mtr></mtable><mo>]</mo><mo>−</mo><mo>[</mo><mtable><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mo>−</mo><mn>2</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow></mtd></mtr><mtr><mtd><mo>−</mo><mn>3</mn><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>−</mo><mo stretchy="false">(</mo><mn>3</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn><mo stretchy="false">)</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mstyle></mrow></math>
+<math id="eqn292" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>−</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow></mtd></mtr><mtr><mtd><mo>−</mo><mn>3</mn></mtd></mtr></mtable><mo>]</mo><mo>−</mo><mo>[</mo><mtable><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mo>−</mo><mn>2</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow></mtd></mtr><mtr><mtd><mo>−</mo><mn>3</mn><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>−</mo><mo stretchy="false">(</mo><mn>3</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn><mo stretchy="false">)</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mstyle></mrow></math>
 </div>
 <p>
     (<i>b</i>)
 </p>
 <div class="eqnalign">
-<math id="eqn271" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.278em" /><mo>−</mo><mn>3</mn><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>[</mo><mtable><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>12</mn><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>14</mn></mstyle></mrow></math>
+<math id="eqn293" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.278em" /><mo>−</mo><mn>3</mn><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>[</mo><mtable><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>4</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>12</mn><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>14</mn></mstyle></mrow></math>
 </div>
 <p>
 <b>2.2.</b> Num espaço de kets com base ortonormal
-  <math id="eqn272" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>,</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>,</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo stretchy="false">}</mo></mrow></math> (dimensão 3), o operador
-  <math id="eqn273" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">R</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> que roda todos os kets <math id="eqn274" display="inline"><mrow><msup><mn>90</mn><mo>∘</mo></msup></mrow></math> no plano dos
-  kets <math id="eqn275" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mrow></math> e <math id="eqn276" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi></mrow></math>, tem o seguinte efeito sobre os
+  <math id="eqn294" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>,</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>,</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo stretchy="false">}</mo></mrow></math> (dimensão 3), o operador
+  <math id="eqn295" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">R</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> que roda todos os kets <math id="eqn296" display="inline"><mrow><msup><mn>90</mn><mo>∘</mo></msup></mrow></math> no plano dos
+  kets <math id="eqn297" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mrow></math> e <math id="eqn298" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi></mrow></math>, tem o seguinte efeito sobre os
   elementos da base:
 </p>
 <div class="eqnalign">
-<math id="eqn277" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">R</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>=</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mspace width="1em" /><mover><mrow><mrow><mi mathvariant="normal">R</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>=</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mspace width="1em" /><mover><mrow><mrow><mi mathvariant="normal">R</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo>=</mo><mo>−</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mspace width="1em" /></mstyle></mrow></math>
+<math id="eqn299" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">R</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>=</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mspace width="1em" /><mover><mrow><mrow><mi mathvariant="normal">R</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>=</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mspace width="1em" /><mover><mrow><mrow><mi mathvariant="normal">R</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo>=</mo><mo>−</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mspace width="1em" /></mstyle></mrow></math>
 </div>
 <p>
-    Escreva a representação matricial do operador <math id="eqn278" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">R</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> e
+    Escreva a representação matricial do operador <math id="eqn300" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">R</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> e
     determine os seus valores e vetores próprios.
 </p>
 <p>
     <b>Resolução</b>. As três colunas da matriz são os lados
     direitos das três expressões dadas, tendo em conta que o número
-    que multiplica ao ket <math id="eqn279" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi></mrow></math> é o número na linha <math id="eqn280" display="inline"><mrow><mi>i</mi></mrow></math> da
+    que multiplica ao ket <math id="eqn301" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi></mrow></math> é o número na linha <math id="eqn302" display="inline"><mrow><mi>i</mi></mrow></math> da
     respetiva coluna. A matriz do operador é:
 </p>
 <div class="eqnalign">
-<math id="eqn281" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">R</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+<math id="eqn303" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">R</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
 </div>
 <p>
     Para determinar os valores próprios, resolve-se a equação:
 </p>
 <div class="eqnalign">
-<math id="eqn282" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo>|</mo><mtable><mtr><mtd><mn>1</mn><mo>−</mo><msub><mi>R</mi><mi>i</mi></msub></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mo>−</mo><msub><mi>R</mi><mi>i</mi></msub></mtd><mtd><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mo>−</mo><msub><mi>R</mi><mi>i</mi></msub></mtd></mtr></mtable><mo>|</mo><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+<math id="eqn304" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="true" fence="true" form="prefix">|</mo><mtable><mtr><mtd><mn>1</mn><mo>−</mo><msub><mi>R</mi><mi>i</mi></msub></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mo>−</mo><msub><mi>R</mi><mi>i</mi></msub></mtd><mtd><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mo>−</mo><msub><mi>R</mi><mi>i</mi></msub></mtd></mtr></mtable><mo stretchy="true" fence="true" form="postfix">|</mo><mo>=</mo><mn>0</mn></mstyle></mrow></math>
 </div>
 <p>
     que conduz a uma equação quadrática com 3 raízes diferentes:
 </p>
 <div class="eqnalign">
-<math id="eqn283" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msubsup><mi>R</mi><mi>i</mi><mn>2</mn></msubsup><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><msub><mi>R</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn><mo>−</mo><msub><mi>R</mi><mi>i</mi></msub><mo>=</mo><mn>0</mn><mspace width="1em" /><mi>⟺</mi><mspace width="1em" /><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><msub><mi>R</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo stretchy="false">(</mo><msubsup><mi>R</mi><mi>i</mi><mn>2</mn></msubsup><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mstyle></mrow></math>
-<br><math id="eqn284" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><msub><mi>R</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn><mo>,</mo><mspace width="1em" /><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo>,</mo><mspace width="1em" /><msub><mi>R</mi><mn>3</mn></msub><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow></mstyle></mrow></math>
+<math id="eqn305" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msubsup><mi>R</mi><mi>i</mi><mn>2</mn></msubsup><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><msub><mi>R</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn><mo>−</mo><msub><mi>R</mi><mi>i</mi></msub><mo>=</mo><mn>0</mn><mspace width="1em" /><mi>⟺</mi><mspace width="1em" /><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><msub><mi>R</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo stretchy="false">(</mo><msubsup><mi>R</mi><mi>i</mi><mn>2</mn></msubsup><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+<br><math id="eqn306" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><msub><mi>R</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn><mo>,</mo><mspace width="1em" /><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo>,</mo><mspace width="1em" /><msub><mi>R</mi><mn>3</mn></msub><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow></mstyle></mrow></math>
 </div>
 <p>
-    Os vetores próprios correspondentes a <math id="eqn285" display="inline"><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow></math> são as
+    Os vetores próprios correspondentes a <math id="eqn307" display="inline"><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow></math> são as
     soluções do sistema:
 </p>
 <div class="eqnalign">
-<math id="eqn286" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo>[</mo><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mo>−</mo><mn>1</mn></mtd><mtd><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mo>−</mo><mn>1</mn></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mi>z</mi></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+<math id="eqn308" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo>[</mo><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mo>−</mo><mn>1</mn></mtd><mtd><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mo>−</mo><mn>1</mn></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mi>z</mi></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
 </div>
 <p>
-    A primeira equação é trivial (<math id="eqn287" display="inline"><mrow><mn>0</mn><mo>=</mo><mn>0</mn></mrow></math>); as segunda e terceira
+    A primeira equação é trivial (<math id="eqn309" display="inline"><mrow><mn>0</mn><mo>=</mo><mn>0</mn></mrow></math>); as segunda e terceira
     equação são,
 </p>
 <div class="eqnalign">
-<math id="eqn288" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>0</mn><mspace width="2em" /><mi>y</mi><mo>−</mo><mi>z</mi><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+<math id="eqn310" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>0</mn><mspace width="2em" /><mi>y</mi><mo>−</mo><mi>z</mi><mo>=</mo><mn>0</mn></mstyle></mrow></math>
 </div>
 <p>
-    que conduzem a <math id="eqn289" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math> e <math id="eqn290" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>. A componente <math id="eqn291" display="inline"><mrow><mi>x</mi></mrow></math> pode ter qualquer
+    que conduzem a <math id="eqn311" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math> e <math id="eqn312" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>. A componente <math id="eqn313" display="inline"><mrow><mi>x</mi></mrow></math> pode ter qualquer
     valor; um possível valor próprio, com norma igual a 1, obtém-se
-    com <math id="eqn292" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math>:
+    com <math id="eqn314" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math>:
 </p>
 <div class="eqnalign">
-<math id="eqn293" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo><mspace width="1em" /><mi>⟺</mi><mspace width="1em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>=</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi></mstyle></mrow></math>
+<math id="eqn315" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo><mspace width="1em" /><mi>⟺</mi><mspace width="1em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>=</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>1</mn></msub><mi>⟩</mi></mstyle></mrow></math>
 </div>
 <p>
-    Os vetores próprios correspondentes a <math id="eqn294" display="inline"><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><mi>I</mi></mrow></math> são as
+    Os vetores próprios correspondentes a <math id="eqn316" display="inline"><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><mi>I</mi></mrow></math> são as
     soluções do sistema:
 </p>
 <div class="eqnalign">
-<math id="eqn295" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo>[</mo><mtable><mtr><mtd><mn>1</mn><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow></mtd><mtd><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mi>z</mi></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+<math id="eqn317" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo>[</mo><mtable><mtr><mtd><mn>1</mn><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow></mtd><mtd><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mi>z</mi></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
 </div>
 <p>
-    A primeira equação, <math id="eqn296" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">)</mo><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>, implica que <math id="eqn297" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>. As segunda e terceira
+    A primeira equação, <math id="eqn318" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">)</mo><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>, implica que <math id="eqn319" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>. As segunda e terceira
     equação são,
 </p>
 <div class="eqnalign">
-<math id="eqn298" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>y</mi><mo>=</mo><mo>−</mo><mi>z</mi><mspace width="2em" /><mi>y</mi><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>z</mi></mstyle></mrow></math>
+<math id="eqn320" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>y</mi><mo>=</mo><mo>−</mo><mi>z</mi><mspace width="2em" /><mi>y</mi><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>z</mi></mstyle></mrow></math>
 </div>
 <p>
-    que são iguais (a primeira dividida por <math id="eqn299" display="inline"><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow></math> dá a segunda). Usando
+    que são iguais (a primeira dividida por <math id="eqn321" display="inline"><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow></math> dá a segunda). Usando
     a primeira equação, o quadrado da norma dos vetores próprios é:
 </p>
 <div class="eqnalign">
-<math id="eqn300" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>2</mn></msub><mi>⟩</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><mo stretchy="false">|</mo><mi>x</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mi>y</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mi>z</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>y</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><mn>2</mn><mspace width="0.167em" /><msup><mi>y</mi><mn>2</mn></msup></mstyle></mrow></math>
+<math id="eqn322" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>2</mn></msub><mi>⟩</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><mo stretchy="false">|</mo><mi>x</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mi>y</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mi>z</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>y</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><mn>2</mn><mspace width="0.167em" /><msup><mi>y</mi><mn>2</mn></msup></mstyle></mrow></math>
 </div>
 <p>
     um possível valor próprio, com norma igual a 1, obtém-se
-    com <math id="eqn301" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>1</mn><mo>/</mo><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></math>:
+    com <math id="eqn323" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>1</mn><mo>/</mo><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></math>:
 </p>
 <div class="eqnalign">
-<math id="eqn302" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>[</mo><mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow></mtd></mtr></mtable><mo>]</mo><mspace width="1em" /><mi>⟺</mi><mspace width="1em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+<math id="eqn324" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>[</mo><mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow></mtd></mtr></mtable><mo>]</mo><mspace width="1em" /><mi>⟺</mi><mspace width="1em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
 </div>
 <p>
-    Finalmente vetores próprios correspondentes a <math id="eqn303" display="inline"><mrow><msub><mi>R</mi><mn>3</mn></msub><mo>=</mo><mo>−</mo><mi>I</mi></mrow></math> são as
+    Finalmente vetores próprios correspondentes a <math id="eqn325" display="inline"><mrow><msub><mi>R</mi><mn>3</mn></msub><mo>=</mo><mo>−</mo><mi>I</mi></mrow></math> são as
     soluções do sistema:
 </p>
 <div class="eqnalign">
-<math id="eqn304" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo>[</mo><mtable><mtr><mtd><mn>1</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mrow><mi mathvariant="normal">i</mi></mrow></mtd><mtd><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mi mathvariant="normal">i</mi></mrow></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mi>z</mi></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+<math id="eqn326" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo>[</mo><mtable><mtr><mtd><mn>1</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mrow><mi mathvariant="normal">i</mi></mrow></mtd><mtd><mo>−</mo><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mi mathvariant="normal">i</mi></mrow></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mi>z</mi></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
 </div>
 <p>
-    A primeira equação implica <math id="eqn305" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>. As segunda e terceira equação
+    A primeira equação implica <math id="eqn327" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>. As segunda e terceira equação
     são,
 </p>
 <div class="eqnalign">
-<math id="eqn306" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>y</mi><mo>=</mo><mi>z</mi><mspace width="2em" /><mi>y</mi><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>z</mi></mstyle></mrow></math>
+<math id="eqn328" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>y</mi><mo>=</mo><mi>z</mi><mspace width="2em" /><mi>y</mi><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>z</mi></mstyle></mrow></math>
 </div>
 <p>
     que são iguais. Usando a primeira equação, o quadrado da norma dos
     vetores próprios é:
 </p>
 <div class="eqnalign">
-<math id="eqn307" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>3</mn></msub><mi>⟩</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><mo stretchy="false">|</mo><mi>x</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mi>y</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mi>z</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>y</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><mn>2</mn><mspace width="0.167em" /><msup><mi>y</mi><mn>2</mn></msup></mstyle></mrow></math>
+<math id="eqn329" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>3</mn></msub><mi>⟩</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><mo stretchy="false">|</mo><mi>x</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mi>y</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mi>z</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>y</mi><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><mn>2</mn><mspace width="0.167em" /><msup><mi>y</mi><mn>2</mn></msup></mstyle></mrow></math>
 </div>
 <p>
-    e podemos escolher <math id="eqn308" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>1</mn><mo>/</mo><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></math> para que a norma seja 1, o que
+    e podemos escolher <math id="eqn330" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>1</mn><mo>/</mo><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></math> para que a norma seja 1, o que
     conduz a:
 </p>
 <div class="eqnalign">
-<math id="eqn309" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>[</mo><mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow></mtd></mtr></mtable><mo>]</mo><mspace width="1em" /><mi>⟺</mi><mspace width="1em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+<math id="eqn331" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>[</mo><mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow></mtd></mtr></mtable><mo>]</mo><mspace width="1em" /><mi>⟺</mi><mspace width="1em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">R</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
 </div>
+<p>
+    <b id="exe:hermitico">2.3.</b> Demonstre que os valores próprios de
+      um operador hermítico são todos números reais, e que dois vetores
+      próprios correspondentes a valores próprios diferentes são
+      perpendiculares entre si.
+</p>
+<p>
+      <b>Resolução</b>. Seja <math id="eqn332" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mi>⟩</mi></mrow></math> um vetor próprio do
+      operador hermítico <math id="eqn333" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>. De acordo com a equação
+      (<a href="#eq:esperado_hermítico">2.49</a>), o valor esperado de
+      <math id="eqn334" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> nesse ket,
+</p>
+<div class="eqnalign">
+<math id="eqn335" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mi>⟩</mi></mstyle></mrow></math>
+</div>
+<p>
+      é um número real. Mas como o produto do operador e o ket próprio
+      é igual ao respetivo valor próprio vezes o ket, temos que:
+</p>
+<div class="eqnalign">
+<math id="eqn336" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mi>⟩</mi><mo>=</mo><msub><mi>Ω</mi><mi>i</mi></msub><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mi>⟩</mi></mstyle></mrow></math>
+</div>
+<p>
+      E, como <math id="eqn337" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mi>⟩</mi></mrow></math> é um número real e
+      positivo (norma <math id="eqn338" display="inline"><mrow><mrow><mo stretchy="true" fence="true" form="prefix">‖</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mo stretchy="true" fence="true" form="postfix">‖</mo></mrow></mrow></math> ao quadrado), então o valor
+      próprio <math id="eqn339" display="inline"><mrow><msub><mi>Ω</mi><mi>i</mi></msub></mrow></math> deverá ser um número real.
+</p>
+<p>
+      Para demostrar que vetores próprios correspondentes a valores
+      próprios diferentes são perpendiculares, consideremos dois
+      valores próprios diferentes, <math id="eqn340" display="inline"><mrow><msub><mi>Ω</mi><mi>i</mi></msub></mrow></math> e <math id="eqn341" display="inline"><mrow><msub><mi>Ω</mi><mi>j</mi></msub></mrow></math>,
+      ambos números reais, e dois vetores próprios <math id="eqn342" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mi>⟩</mi></mrow></math> e
+      <math id="eqn343" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math> correspondentes a esses valores próprios. Temos
+      que,
+</p>
+<div class="eqnalign">
+<math id="eqn344" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><msub><mi>Ω</mi><mi>j</mi></msub><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mstyle></mrow></math>
+</div>
+<p>
+      E, usando a expressão (<a href="#eq:adjunto">2.45</a>) e o facto de que
+      <math id="eqn345" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> é hermítico,
+</p>
+<div class="eqnalign">
+<math id="eqn346" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><msup><mi>⟩</mi><mo>⋆</mo></msup><mo>=</mo><msup><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msub><mi>Ω</mi><mi>i</mi></msub><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>⋆</mo></msup><mo>=</mo><msub><mi>Ω</mi><mi>i</mi></msub><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mstyle></mrow></math>
+</div>
+<p>
+      Subtraindo estas duas últimas equações, obtemos:
+</p>
+<div class="eqnalign">
+<math id="eqn347" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msub><mi>Ω</mi><mi>j</mi></msub><mo>−</mo><msub><mi>Ω</mi><mi>i</mi></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+</div>
+<p>
+        e como os dois valores próprios são diferentes,
+        <math id="eqn348" display="inline"><mrow><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msub><mi>Ω</mi><mi>j</mi></msub><mo>−</mo><msub><mi>Ω</mi><mi>i</mi></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mrow></math> é diferente de zero e,
+        como tal:
+</p>
+<div class="eqnalign">
+<math id="eqn349" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+</div>
+<p>
+        ou seja, os vetores próprios <math id="eqn350" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>i</mi></msub><mi>⟩</mi></mrow></math> e
+        <math id="eqn351" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ω</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math> são perpendiculares.
 </section>
 <footer>
 <p>&copy; 2025, Jaime E. Villate</p>
 <p>Publicado nos termos da <a rel="license"
 href="http://creativecommons.org/licenses/by-sa/4.0/">Licença
 Creative Commons Attribuição-Partilha</a> (versão 4.0).</p>
-<span>Última modificação: 2025/10/20 15:17:00 UTC</span>
+<span>Última modificação: 2025/10/21 10:39:45 UTC</span>
 </footer>
 </body>
 </html>
