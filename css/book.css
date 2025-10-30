@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-09-30
+   Version: 2025-10-30
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 
@@ -53,7 +53,7 @@ math { font-family: "TeX Gyre Schola Math"; }
 section { font-family: "TeX Gyre Schola"; }
 pre, tt, code { font-family: "Courier New", "DejaVu Sans Mono", monospace }
 
-span.concept { font-weight: bold; }
+span.concept { font-style: italic; }
 .boxed {
     border: 1px solid black;
     padding: 0.5em;

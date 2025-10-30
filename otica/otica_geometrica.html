@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ótica e Ondas &ndash; Capítulo 1</title>
+<!--Generated on Thu Oct 30 09:26:48 WET 2025 by latextohtml.tcl, by J. Villate -->
+<link rel="stylesheet" href="../css/book.css">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="alternate icon" href="../img/favicon.ico">
+</head>
+<body id="top">
+<header style="background-image:url(../img/otica.png);
+background-repeat:no-repeat;
+background-position:right center">
+<h1>Ótica e Ondas</h1>
+<p>Jaime E. Villate.<br>
+Universidade do Porto, Portugal, 2025.</p>
+</header>
+<div class="menu">
+<button class="menubtn">&#9776;</button>
+<div class="menu-content">
+<a href="../pt/index.html">Início</a>
+<a href="../pt/books.html">Livros livres</a>
+<a href="index.html">Ótica e Ondas</a>
+</div>
+</div>
+<section>
+<h1>1. Ótica geométrica</h1>
+<h2>1.1. Raios luminosos</h2>
+<p>
+Um ponto luminoso emite luz que se propaga em linha reta nas direções
+radiais com centro nesse ponto. Cada uma dessas linhas retas é o que
+designamos por raio de luz. Trata-se de uma ferramenta matemática,
+mais do que um conceito físico, que já tinha sido proposta por
+Euclides no seu livro &quot;Ótica&quot; (c. 300 a.C.). Num meio isótropo
+(igual em todas as direções) e homogéneo (igual em todos os pontos),
+os raios luminosos são linhas retas uma vez que não se podem curvar em
+nenhuma direção preferencial.
+</p>
+<p>
+Uma primeira evidência da propagação da luz em linha reta são as
+sombras bem definidas produzidas pelos objetos iluminados por uma
+fonte luminosa. A região escura na sombra do objeto são os pontos em
+que a reta desde o ponto até a fonte interseta o objeto; como tal,
+nenhum dos raios que saem da fonte consegue atingir esses pontos na
+sombra.
+</p>
+<figure class="center" id="fig:Camara_escura">
+<img class="fig" src="img/Camara_escura.jpg" style="width:21.000em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.1:</b>  Câmara escura no Castelo de São Jorge em Lisboa.
+</figcaption>
+</figure>
+<p>
+Outra evidência da propagação da luz em linha reta é a câmara escura,
+que consiste numa caixa escura com um pequeno orifício numa das suas
+paredes; a luz que passa pelo orifício produz uma imagem dos objetos
+fora da caixa, na parede oposta da caixa. A figura
+<a href="#fig:Camara_escura">1.1</a> mostra a imagem da paisagem de Lisboa,
+produzida na câmara escura do Castelo de São Jorge. Cada ponto
+luminoso na paisagem produz um ponto na imagem, na posição que está na
+reta que passa pelo ponto luminoso e pelo orifício. Na câmara do
+Castelo de São Jorge o orifício encontra-se no teto de um quarto
+escuro, e fora da cobertura há um sistema de espelhos (periscópio) que
+permite desviar os raios de luz horizontais na direção vertical
+passando pelo orifício e produzindo a imagem no chão. A propagação dos
+raios de luz em linha reta conduz a imagens muito realistas na câmara
+escura, que já têm sido aproveitadas pelos pintores desde há vários
+séculos.
+</p>
+<p>
+Os raios luminosos, que saem de um ponto luminoso nas direções
+radiais, podem ser desviados produzindo um feixe com raios paralelos,
+tal como na figura <a href="#fig:feixe_paralelo">1.2</a>. Coloca-se uma lente
+convergente frente da fonte, a uma distância apropriada, que faz com
+que o feixe de luz cónico que sai da fonte e atinge a lente seja
+desviado formando um feixe cilíndrico. O tamanho do feixe pode ser
+reduzido colocando uma barreira com um pequeno orifício circular; o
+feixe paralelo é composto por raios de luz paralelos.
+</p>
+<figure class="center" id="fig:feixe_paralelo">
+<img class="fig" src="img/feixe_paralelo.png" style="width:23.226em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.2:</b>  Produção de um feixe de luz paralelo.
+</figcaption>
+</figure>
+<p>
+A velocidade da luz tem sido medida com precisão, e o seu valor, no
+vácuo é,
+</p>
+<div id="eq:c" class="eqnalign">
+<math id="eqn1" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>c</mi><mo>=</mo><mn>2.99792458</mn><mi>×</mi><msup><mn>10</mn><mrow><mn>8</mn></mrow></msup><mspace width="0.278em" /><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi mathvariant="normal">m</mi></mrow><mrow><mi mathvariant="normal">s</mi></mrow></mfrac></mstyle></mrow></mstyle></mrow></math>
+<div class="eqn">(1.1)</div>
+</div>
+<p>
+No entanto, neste livro usaremos apenas 4 algarismos significativos,
+aproximando o valor para <math id="eqn2" display="inline"><mrow><mi>c</mi><mo>=</mo><mn>2.998</mn><mi>×</mi><msup><mn>10</mn><mrow><mn>8</mn></mrow></msup></mrow></math> m/s.
+</p>
+</section>
+<section>
+<h2>1.2. Reflexão da luz</h2>
+<p>
+Alguns objetos, como o ecrã do televisor na
+figura <a href="#fig:Luz_objetos">1.3</a>, emitem raios de luz que se propagam em
+linha reta em várias direções. Cada ponto luminoso no ecrã emite raios
+nas direções radiais da esfera com centro no ponto. 
+</p>
+<figure class="center" id="fig:Luz_objetos">
+<img class="fig" src="img/Luz_objetos.jpg" style="width:21.000em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.3:</b>  Alguns objetos produzem a sua própria luz, enquanto outros simplesmente refletem a luz das fontes luminosas.
+</figcaption>
+</figure>
+<p>
+Os raios de luz provenientes de uma fonte luminosa são refletidos
+pelos objetos à sua volta. Em alguns objetos a luz que incide em cada
+ponto da sua superfície diverge propagando-se nas direções radiais da
+esfera com centro nesse ponto, de forma semelhante à luz que sai de um
+ponto luminoso. Esse tipo de reflexão é designada de <span class="concept">difusa</span>.
+</p>
+<p>
+Na figura <a href="#fig:Luz_objetos">1.3</a> todos os objetos diferentes do ecrã
+do televisor produzem reflexão difusa; a luz do Sol após ser refletida
+por outros corpos no exterior do quarto, entra pela janela sendo
+refletida pelos objetos no quarto. Cada objeto absorve algumas partes
+da luz incidente e reflete outras partes, dando origem às diferentes
+cores dos diferentes objetos; há ainda outros objetos, como as folhas
+da árvore na figura <a href="#fig:Luz_objetos">1.3</a>, que para além de refletir a
+luz verde, deixam passar também parte dessa luz através deles (objetos
+translúcidos).
+</p>
+<p>
+Quando a superfície do objeto que reflete a luz é completamente lisa,
+a reflexão designa-se de <span class="concept">especular</span>. O ângulo
+<math id="eqn3" display="inline"><mrow><msub><mi>θ</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub></mrow></math> (ângulo de incidência) que cada raio de luz faz
+com a perpendicular à superfície, no ponto onde é refletido, é igual
+ao ângulo  <math id="eqn4" display="inline"><mrow><msub><mi>θ</mi><mrow><mi mathvariant="normal">r</mi></mrow></msub></mrow></math> (ângulo de reflexão) que o raio faz com
+a mesma perpendicular após ser refletido (ver
+figura <a href="#fig:reflexao_luz">1.4</a>):
+</p>
+<figure class="center" id="fig:reflexao_luz">
+<img class="fig" src="img/reflexao_luz.png" style="width:19.215em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.4:</b>  Reflexão da luz de uma fonte numa superfície lisa.
+</figcaption>
+</figure>
+</p>
+<div id="eq:lei_reflexao" class="eqnalign">
+<math id="eqn5" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>θ</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub><mo>=</mo><msub><mi>θ</mi><mrow><mi mathvariant="normal">r</mi></mrow></msub></mstyle></mrow></math>
+<div class="eqn">(1.2)</div>
+</div>
+<p>
+Na figura <a href="#fig:Luz_objetos">1.3</a>, alguns há alguns objetos lisos a
+produzirem reflexão especular: a secção mais luminosa no chão é a
+reflexão especular da luz do céu e a barra de som por baixo do ecrã do
+televisor produz reflexão especular da luz do ecrã. Esses dois objetos
+que produzem reflexão especular produzem também reflexão difusa. Essa
+dupla reflexão pode ser compreendida mais facilmente no caso da capa
+plastificada do livro da figura <a href="#fig:livro">1.5</a>. A película plástica
+que cobre a capa é lisa e produz a reflexão especular observada na
+parte de baixo. Mas o plástico transparente também deixa passar parte
+da luz para a superfície pintada sobre o cartão da capa, onde é
+produzida a reflexão difusa que observamos no resto da capa. 
+</p>
+<figure class="center" id="fig:livro">
+<img class="fig" src="img/Livro.jpg" style="width:21.000em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.5:</b>  Reflexão especular e reflexão difusa na capa de um livro.
+</figcaption>
+</figure>
+<p>
+A figura <a href="#fig:reflexao_difusa_especular">1.6</a> mostra uma superfície
+áspera coberta por uma película transparente e lisa. Uma parte de cada raio que
+atinge a superfície lisa da película é refletido, e a
+parte restante penetra a película transparente sendo depois refletido
+na superfície áspera por baixo da película transparente.
+</p>
+<figure class="center" id="fig:reflexao_difusa_especular">
+<img class="fig" src="img/reflexao_difusa_especular.png" style="width:19.215em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.6:</b>  Reflexão especular (a vermelho) e difusa (azul) da luz numa superfície áspera coberta por uma película transparente e lisa.
+</figcaption>
+</figure>
+<p>
+A luz refletida na superfície plana é mais intensa, mas cada raio
+refletido ilumina uma zona específica; já a luz da reflexão difusa na
+superfície áspera é mais fraca mas dispersa-se em várias direções,
+iluminando toda região por cima da superfície.
+</p>
+</section>
+<section>
+<h2>1.3. Refração da luz</h2>
+<p>
+Num meio diferente do vácuo, a luz propaga-se com velocidade menor do
+que a sua velocidade <math id="eqn6" display="inline"><mrow><mi>c</mi></mrow></math> no vácuo. Define-se o <span class="concept">índice de refração</span>
+de um material:
+</p>
+<div id="eq:def_n" class="eqnalign">
+<math id="eqn7" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>n</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>c</mi></mrow><mrow><mi>v</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(1.3)</div>
+</div>
+<p>
+onde <math id="eqn8" display="inline"><mrow><mi>v</mi></mrow></math> é a velocidade da luz nesse material. Como tal, <math id="eqn9" display="inline"><mrow><mi>n</mi></mrow></math> será
+sempre maior que 1. O índice de refração do ar é aproximadamente
+1.0003 e, como estamos a usar quatro algarismos significativos para as
+constantes, admitiremos que o índice de refração do ar é 1 (velocidade
+da luz no ar igual à velocidade da luz no vácuo).
+</p>
+<p>
+Quando um raio de luz passa de um meio 1 para outro meio 2 como na
+figura <a href="#fig:refracao_luz">1.7</a>, parte da luz é refletida no meio 1 e
+outra parte é refratada, passando para meio 2. O ângulo que o raio
+refratado faz com a perpendicular, <math id="eqn10" display="inline"><mrow><msub><mi>θ</mi><mrow><mn>2</mn></mrow></msub></mrow></math>, é diferente
+do ângulo que o raio incidente faz com a perpendicular à superfície de
+separação entre os dois meios, <math id="eqn11" display="inline"><mrow><msub><mi>θ</mi><mrow><mn>1</mn></mrow></msub></mrow></math>.
+</p>
+<figure class="center" id="fig:refracao_luz">
+<img class="fig" src="img/refracao_luz.png" style="width:17.514em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.7:</b>  Refração de um raio de luz que passa de um meio para outro.
+</figcaption>
+</figure>
+<p>
+Mudando o ângulo <math id="eqn12" display="inline"><mrow><msub><mi>θ</mi><mrow><mn>1</mn></mrow></msub></mrow></math>, observa-se que a relação,
+</p>
+<div id="eq:snell" class="eqnalign">
+<math id="eqn13" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>n</mi><mn>1</mn></msub><mspace width="0.167em" /><mi>sin</mi><msub><mi>θ</mi><mn>1</mn></msub><mo>=</mo><msub><mi>n</mi><mn>2</mn></msub><mspace width="0.167em" /><mi>sin</mi><msub><mi>θ</mi><mn>2</mn></msub></mstyle></mrow></math>
+<div class="eqn">(1.4)</div>
+</div>
+<p>
+designada por Lei de Snell.
+</p>
+<p>
+A simetria da lei da reflexão (<a href="#eq:lei_reflexao">1.2</a>) e da lei da
+refração (<a href="#eq:snell">1.4</a>), em relação à troca dos índices i e r, ou 1
+e 2, mostra que se a direção dum raio de luminoso for invertida, o
+raio percorrerá o percurso inverso: <span class="concept">princípio de reversibilidade</span>.
+</p>
+</section>
+<section>
+<h2>1.4. Princípio do tempo mínimo de Fermat</h2>
+<p>
+Antes da era de Cristo, Hero de Alexandria explicou a lei da reflexão
+afirmando que o raio de luz refletido percorre o caminho mais curto
+entre o ponto inicial e final. Entre esses dois pontos existem outros
+percursos possíveis, formados por um segmento desde o ponto inicial até
+um ponto na superfície refletora e um segundo segmento desde esse
+ponto até o ponto final, mas os percursos em que os ângulos de
+incidência e de reflexão são diferentes conduzem a tempos maiores.
+</p>
+<p>
+No século XVII, Pierre de Fermat estendeu esse princípio à propagação
+em meios com diferentes índices de refração. O princípio de Fermat
+estabelece que:
+<i>A trajetória seguida por um raio luminoso entre dois pontos é aquela que é percorrida no menor tempo possível.</i>
+No exercício <a href="#exe:nadador">1.7</a> mostra-se que esse princípio conduz à
+lei de Snell, usando como analogia o percurso que um nadador-salvador
+deverá seguir para alcançar uma pessoa em dificuldades no menor tempo
+possível.
+</p>
+<p>
+O que dá origem às miragens é o facto de que em dias quentes de verão
+a temperatura do ar é maior quanto mais próximo do solo, fazendo com
+que a densidade do ar diminua quanto mais próximo do solo. Com menor
+densidade o índice de refração também é menor.
+</p>
+<p>
+Consideremos um raio luminoso atravessa <math id="eqn14" display="inline"><mrow><mi>n</mi></mrow></math> camadas com índices de
+refração diferentes. Na camada em que o índice de refração é <math id="eqn15" display="inline"><mrow><msub><mi>n</mi><mi>i</mi></msub></mrow></math>, a
+velocidade da luz é <math id="eqn16" display="inline"><mrow><msub><mi>v</mi><mi>i</mi></msub><mo>=</mo><mi>c</mi><mo>/</mo><msub><mi>n</mi><mi>i</mi></msub></mrow></math>; a trajetória nessa camada será um
+segmento de reta de comprimento <math id="eqn17" display="inline"><mrow><msub><mi>s</mi><mi>i</mi></msub></mrow></math> e o tempo que o raio demora a
+percorrer esse segmento é <math id="eqn18" display="inline"><mrow><msub><mi>s</mi><mi>i</mi></msub><mo>/</mo><msub><mi>v</mi><mi>i</mi></msub><mo>=</mo><msub><mi>n</mi><mi>i</mi></msub><msub><mi>s</mi><mi>i</mi></msub><mo>/</mo><mi>c</mi></mrow></math>. O tempo total <math id="eqn19" display="inline"><mrow><mi>t</mi></mrow></math> será a
+soma dos tempos em todas as <math id="eqn20" display="inline"><mrow><mi>n</mi></mrow></math> camadas e define-se o
+<span class="concept">percurso ótico</span>, <math id="eqn21" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow></mrow></math>, igual a esse tempo vezes <math id="eqn22" display="inline"><mrow><mi>c</mi></mrow></math>:
+</p>
+<div class="eqnalign">
+<math id="eqn23" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mi mathvariant="normal">Δ</mi></mrow><mo>=</mo><mi>c</mi><mspace width="0.167em" /><mi>t</mi><mo>=</mo><msub><mi>n</mi><mn>1</mn></msub><mspace width="0.167em" /><msub><mi>s</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>2</mn></msub><mspace width="0.167em" /><msub><mi>s</mi><mn>2</mn></msub><mo>+</mo><mo>⋯</mo><mo>+</mo><msub><mi>n</mi><mi>n</mi></msub><mspace width="0.167em" /><msub><mi>s</mi><mi>n</mi></msub></mstyle></mrow></math>
+<div class="eqn">(1.5)</div>
+</div>
+<p>
+e, no caso em que o índice de refração varia continuamente com a
+posição, o somatório é substituído por um integral:
+</p>
+<div id="eq:percurso_otico" class="eqnalign">
+<math id="eqn24" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mi mathvariant="normal">Δ</mi></mrow><mo>=</mo><msubsup><mo>∫</mo><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mrow><mrow><mi mathvariant="normal">Q</mi></mrow></mrow></msubsup><mi>n</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mspace width="0.167em" /><mrow><mi mathvariant="normal">d</mi></mrow><mi>s</mi></mstyle></mrow></math>
+<div class="eqn">(1.6)</div>
+</div>
+<p>
+O percurso ótico é a distância que o raio percorreria no vácuo durante
+o mesmo intervalo de tempo entre o ponto inicial P e o ponto final
+Q. O comprimento do percurso real do raio luminoso é maior do que o
+percurso ótico. O princípio do tempo mínimo entre P e Q implica também
+o percurso ótico mínimo entre esses pontos.
+</p>
+<p>
+As miragens, observadas nas estradas nos dias quentes, são devidas a
+que o ar quente das camadas mais baixas, próximas da estrada, têm
+menor densidade e menor índice de refração do que as camadas mais
+altas. A luz de um objeto por cima da estrada curva-se, devido a essa
+variação do índice de refração, e chega aos olhos dum condutor como se
+tivesse partido de um objeto por debaixo da estrada (figura
+<a href="#fig:miragem">1.8</a>). A curvatura dos raios luminosos fazem parecer como
+se houvesse um espelho sobre a estrada, que reflete os raios luminosos
+do objeto, produzindo uma imagem virtual, tal como num espelho.
+</p>
+<figure class="center" id="fig:miragem">
+<img class="fig" src="img/miragem.png" style="width:21.063em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.8:</b>  Miragem formada pela refração da luz em camadas de ar a diferentes temperaturas.
+</figcaption>
+</figure>
+<p>
+A curvatura dos raios luminosos que atravessam regiões de ar com
+variações no índice de refração explica também porque conseguimos
+continuar a ver o Sol mesmo depois de ter descido abaixo do
+horizonte. Neste caso as camadas de ar menos densas, com menor índice
+de refração, são as que estão a maior altura na atmosfera; a menor
+densidade é devida à menor pressão, e não a temperatura maior como no
+caso da miragem. O resultado é que os raios solares curvam-se no
+sentido indicado na figura <a href="#fig:por_do_sol">1.9</a>. Um observador na
+superfície da Terra vê a imagem do Sol na prolongação da tangente à
+curva no ponto em que o raio solar chega à superfície solar, um certo
+ângulo por cima do horizonte, quando o Sol está realmente por baixo do
+horizonte.
+</p>
+<figure class="center" id="fig:por_do_sol">
+<img class="fig" src="img/por_do_sol.png" style="width:22.008em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.9:</b>  Posição aparente do Sol quando já está debaixo do horizonte.
+</figcaption>
+</figure>
+<p>
+Tal como foi enunciado por Fermat, o princípio do tempo mínimo não é
+sempre correto. Existem situações em que o percurso ótico de um raio
+luminoso não corresponde a um valor mínimo; em algumas circunstâncias
+pode corresponder a um ponto de inflexão ou até a um máximo. O que sim
+é sempre verdadeiro é que a luz segue sempre uma trajetória para a
+qual o percurso ótico não varia em relação a pequenas variações dessa
+trajetória.
+</p>
+</section>
+<section>
+<h2>1.5. Reflexão interna total</h2>
+<p>
+Quando a luz passa de um meio com índice de refração maior para outro
+com menor índice de refração, o ângulo de refração é maior do que o
+ângulo de incidência. Aumentando o ângulo de incidência, chega-se a
+uma situação em que o ângulo de refração é igual a <math id="eqn25" display="inline"><mrow><mrow><mi mathvariant="normal">π</mi></mrow><mo>/</mo><mn>2</mn></mrow></math>, como no
+lado direito da figura <a href="#fig:reflexao_total">1.10</a>.
+</p>
+<figure class="center" id="fig:reflexao_total">
+<img class="fig" src="img/reflexao_total.png" style="width:31.080em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.10:</b>  Ângulo crítico <math id="eqn26" display="inline"><mrow><msub><mi>θ</mi><mrow><mi mathvariant="normal">c</mi></mrow></msub></mrow></math>.
+</figcaption>
+</figure>
+<p>
+Nesse caso, o raio refratado é paralelo à superfície de separação
+entre os dois meios, e não chega a passar para o segundo meio. O
+ângulo de incidência <math id="eqn27" display="inline"><mrow><msub><mi>θ</mi><mrow><mi mathvariant="normal">c</mi></mrow></msub></mrow></math> que faz com que o ângulo de
+refração seja igual a <math id="eqn28" display="inline"><mrow><mrow><mi mathvariant="normal">π</mi></mrow><mo>/</mo><mn>2</mn></mrow></math> é designado por <span class="concept">ângulo crítico</span>.
+Como o seno de <math id="eqn29" display="inline"><mrow><mrow><mi mathvariant="normal">π</mi></mrow><mo>/</mo><mn>2</mn></mrow></math> é igual a 1, substituindo na lei
+de Snell (<a href="#eq:snell">1.4</a>) obtém-se a expressão do ãngulo crítico em
+função dos índices de refração:
+</p>
+<div id="eq:angulo_critico" class="eqnalign">
+<math id="eqn30" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>θ</mi><mrow><mi mathvariant="normal">c</mi></mrow></msub><mo>=</mo><mi>arcsin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>n</mi><mn>2</mn></msub></mrow><mrow><msub><mi>n</mi><mn>1</mn></msub></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(1.7)</div>
+</div>
+<p>
+Observe-se que para que exista ângulo crítico é necessário que o
+índice de refração <math id="eqn31" display="inline"><mrow><msub><mi>n</mi><mn>1</mn></msub></mrow></math> do primeiro meio seja maior do que o índice de
+refração <math id="eqn32" display="inline"><mrow><msub><mi>n</mi><mn>2</mn></msub></mrow></math> do segundo meio. Se o ângulo de incidência for maior do
+que o ângulo crítico, já não existirá refração, apenas reflexão
+interna e, diz-se que há reflexão interna total.
+</p>
+<p>
+O princípio de reflexão total é usado nos refratómetros, que são
+instrumentos usados para medir o índice de refração de uma substância,
+que realmente medem o ângulo crítico. Outra aplicação é na construção
+de prismas de reflexão total, como os da figura <a href="#fig:prismas">1.11</a>. No
+primeiro prisma, a luz que entra perpendicular a uma das faces
+perpendiculares do prisma, é refletida saindo na direção perpendicular
+à outra face perpendicular; no segundo prisma, a luz que incide
+perpendicular à face oposta ao ângulo reto é refletida nas outras duas
+faces, saindo na direção oposta à que entrou.
+</p>
+<figure class="center" id="fig:prismas">
+<img class="fig" src="img/prismas.png" style="width:30.975em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 1.11:</b>  Prismas de reflexão interna total.
+</figcaption>
+</figure>
+<p>
+Para que exista reflexão total nos prismas da figura <a href="#fig:prismas">1.11</a>, o
+ângulo crítico do vidro do prisma, em relação ao ar, deverá ser menor
+do que <math id="eqn33" display="inline"><mrow><msup><mn>45</mn><mo>∘</mo></msup></mrow></math>. Substituindo <math id="eqn34" display="inline"><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn></mrow></math> para o ar, na equação
+(<a href="#eq:angulo_critico">1.7</a>), e <math id="eqn35" display="inline"><mrow><msub><mi>θ</mi><mi>c</mi></msub><mo>=</mo><msup><mn>45</mn><mo>∘</mo></msup></mrow></math>, obtém-se que o
+índice de refração que conduz a ângulo crítico de <math id="eqn36" display="inline"><mrow><msup><mn>45</mn><mo>∘</mo></msup></mrow></math> é
+<math id="eqn37" display="inline"><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>=</mo><msqrt><mrow><mn>2</mn></mrow></msqrt><mo>≈</mo><mn>1.414</mn></mrow></math>. O vidro costuma ter índice de refração
+maior do que esse valor e, como tal angulo crítico menor do que
+<math id="eqn38" display="inline"><mrow><msup><mn>45</mn><mo>∘</mo></msup></mrow></math>; qualquer tipo de vidro pode ser usado para o prisma de
+reflexão total.
+</p>
+<p>
+As fibras óticas são fios de vidro. Desde que a fibra não seja dobrada
+para além do ângulo crítico, os raios luminosos batem nas paredes
+interiores do fio com ângulo maior do que o ângulo crítico, sofrendo
+múltiplas reflexões internas, que permite transportar os raios
+luminosos ao longo da fibra.
+</p>
+</section>
+<section>
+<h2>1.6. Espelhos planos</h2>
+<p>
+Um espelho plano é uma superfície plana e lisa, que produz unicamente
+reflexão especular, e não difusa. Os espelhos usados em casa costumam
+estar cobertos de vidro, para proteger a superfície metálica, mas
+vamos admitir espelhos sem nenhum vidro por cima. Como será
+demonstrado no exercício <a href="#exe:espelho_plano">1.4</a>, qualquer ponto
+luminoso colocado a uma distância <math id="eqn39" display="inline"><mrow><mi>d</mi></mrow></math> do espelho produz uma imagem
+<span class="concept">virtual</span>, do outro lado do espelho, à mesma distância <math id="eqn40" display="inline"><mrow><mi>d</mi></mrow></math> do
+espelho, e na mesma reta perpendicular ao espelho que passa pelo ponto
+luminoso.
+</p>
+<p>
+Cada objeto produz assim uma imagem virtual no lado oposto do espelho,
+sem nenhuma distorção, e com o mesmo tamanho do objeto. Uma imagem
+virtual pode ser observada, mas não pode ser projetada num ecrã, como
+a imagem real produzida numa câmara escura.
+</p>
+<h2>Exercícios resolvidos</h2>
+</p>
+<p>
+<b>1.1.</b> Numa câmara escura, a parede onde se forma a imagem é vertical e
+  está a uma distância <math id="eqn41" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub></mrow></math> do orifício. (<i>a</i>)
+  Demonstre que a relação entre o tamanho <math id="eqn42" display="inline"><mrow><msub><mi>h</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow></math> de um objeto
+  vertical e o tamanho da sua imagem, <math id="eqn43" display="inline"><mrow><msub><mi>h</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub></mrow></math>, é igual à
+  relação entre a distância do objeto até o orifício, <math id="eqn44" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow></math>,
+  e a distância desde o orifício até à imagem,
+  <math id="eqn45" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub></mrow></math>. (<i>b</i>) Se a distância do orifício até a imagem
+  for igual a 90 cm, calcule o tamanho que terá a imagem do Sol (o Sol
+  tem diâmetro de <math id="eqn46" display="inline"><mrow><mn>1.394</mn><mi>×</mi><msup><mn>10</mn><mrow><mn>6</mn></mrow></msup></mrow></math> km e está a uma distância de
+  <math id="eqn47" display="inline"><mrow><mn>149.6</mn><mi>×</mi><msup><mn>10</mn><mrow><mn>6</mn></mrow></msup></mrow></math> km da Terra).
+</p>
+<img class="fig center" src="img/camara_escura.png" style="width:20.517em;max-width:100%;height:auto">
+<p>
+  <b>Resolução</b>. (<i>a</i>) A figura acima mostra os raios que
+  produzem as imagens dos dois extremos do objeto. como o ângulo entre
+  esses raios é o mesmo nos dois lados do orifício, o triângulo
+  formado pelo objeto e o orifício é semelhante ao triângulo formado
+  pela imagem e o orifício. A semelhança de triângulos implica:
+</p>
+<div class="eqnalign">
+<math id="eqn48" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>h</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow><mrow><msub><mi>h</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  (<i>b</i>) Substituindo na expressão da alínea anterior a distância
+  até o Sol, <math id="eqn49" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow></math>, o tamanho do Sol, <math id="eqn50" display="inline"><mrow><msub><mi>h</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow></math>, e a
+  distância até a imagem, <math id="eqn51" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub><mo>=</mo><mn>90</mn></mrow></math> cm, obtém-se:
+</p>
+<div class="eqnalign">
+<math id="eqn52" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>h</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1.391</mn><mi>×</mi><msup><mn>10</mn><mrow><mn>6</mn></mrow></msup><mspace width="0.167em" /><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">m</mi></mrow><mi>×</mi><mn>90</mn><mspace width="0.167em" /><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">m</mi></mrow></mrow><mrow><mn>149.6</mn><mi>×</mi><msup><mn>10</mn><mrow><mn>6</mn></mrow></msup><mspace width="0.167em" /><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">m</mi></mrow></mrow></mfrac></mstyle><mo>=</mo><mn>0.839</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">m</mi></mrow></mstyle></mrow></math>
+</div>
+<p>
+  o resultado anterior pode ser corroborado experimentalmente, e
+  mostra que a luz propaga-se em linha reta até a distâncias tão
+  elevadas como a distância da Terra ao Sol.
+</p>
+<p>
+<b>1.2.</b> Um raio de luz, no ar, entra na água formando um ângulo de
+  incidência de 30<math id="eqn53" display="inline"><mrow><msup><mi /><mo>∘</mo></msup></mrow></math> com a superfície da água. Sabendo que o
+  índice de refração da água é 1.333, determine o ângulo de refração.
+</p>
+<p>
+  <b>Resolução</b>. Aplicando a lei de Snell, com índices de refração
+  <math id="eqn54" display="inline"><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>=</mo><mn>1.00</mn></mrow></math>, para o ar, e <math id="eqn55" display="inline"><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>=</mo><mn>1.333</mn></mrow></math>, para a água, temos:
+</p>
+<div class="eqnalign">
+<math id="eqn56" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>sin</mi><msup><mn>30</mn><mo>∘</mo></msup><mo>=</mo><mn>1.333</mn><mspace width="0.167em" /><mi>sin</mi><msub><mi>θ</mi><mn>2</mn></msub></mstyle></mrow></math>
+</div>
+<p>
+  e o valor do ângulo de refração é:
+</p>
+<div class="eqnalign">
+<math id="eqn57" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>θ</mi><mn>2</mn></msub><mo>=</mo><mi>arcsin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>sin</mi><msup><mn>30</mn><mo>∘</mo></msup></mrow><mrow><mn>1.333</mn></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mn>22.0</mn><mo>∘</mo></msup></mstyle></mrow></math>
+</div>
+<p>
+<b>1.3.</b> A figura mostra um método gráfico para determinar o ângulo de
+  refração de um raio de luz que passa de um meio para outro. 
+</p>
+<img class="fig center" src="img/snell_grafico.png" style="width:10.605em;max-width:100%;height:auto">
+<p>
+  Desde um centro comum O traçam-se dois arcos de círculo com raios
+  proporcionais aos índices de refração <math id="eqn58" display="inline"><mrow><msub><mi>n</mi><mn>1</mn></msub></mrow></math> e <math id="eqn59" display="inline"><mrow><msub><mi>n</mi><mn>2</mn></msub></mrow></math> dos dois meios,
+  e uma reta que representa a normal à interface entre os meios. A
+  seguir, traça-se o segmento OP, com um ângulo <math id="eqn60" display="inline"><mrow><msub><mi>θ</mi><mn>1</mn></msub></mrow></math> igual ao
+  ângulo de incidência do raio no meio 1. Traça-se o segmento PQ,
+  paralelo à normal entre os dois meios. O ângulo <math id="eqn61" display="inline"><mrow><msub><mi>θ</mi><mn>2</mn></msub></mrow></math> que o
+  segmento PQ faz com a normal entre os dois meios é igual ao ângulo
+  de refração. Demonstre que com essa construção geométrica, os
+  ângulos <math id="eqn62" display="inline"><mrow><msub><mi>θ</mi><mn>1</mn></msub></mrow></math> e <math id="eqn63" display="inline"><mrow><msub><mi>θ</mi><mn>2</mn></msub></mrow></math> verificam a lei de Snell.
+</p>
+<p>
+  <b>Resolução</b>. A figura seguinte mostra os dois triângulos
+  retângulos com hipotenusas OP e OQ, iguais aos índices de refração
+  <math id="eqn64" display="inline"><mrow><msub><mi>n</mi><mn>1</mn></msub></mrow></math> e <math id="eqn65" display="inline"><mrow><msub><mi>n</mi><mn>2</mn></msub></mrow></math> dos dois meios, e um dos catetos na direção da normal
+  ao meio, OS.
+</p>
+<img class="fig center" src="img/snell_triangulos.png" style="width:9.177em;max-width:100%;height:auto">
+<p>
+   Os comprimentos dos catetos RP e SQ são,
+</p>
+<div class="eqnalign">
+<math id="eqn66" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">P</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">O</mi><mi mathvariant="normal">P</mi></mrow><mi>sin</mi><msub><mi>θ</mi><mn>1</mn></msub><mo>=</mo><msub><mi>n</mi><mn>1</mn></msub><mi>sin</mi><msub><mi>θ</mi><mn>1</mn></msub></mstyle></mrow></math>
+<br><math id="eqn67" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">Q</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">O</mi><mi mathvariant="normal">Q</mi></mrow><mi>sin</mi><msub><mi>θ</mi><mn>1</mn></msub><mo>=</mo><msub><mi>n</mi><mn>2</mn></msub><mi>sin</mi><msub><mi>θ</mi><mn>2</mn></msub></mstyle></mrow></math>
+</div>
+<p>
+  Como RS é paralelo a PQ, então <math id="eqn68" display="inline"><mrow><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">P</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">Q</mi></mrow></mrow></math>, e
+  igualando as duas expressões anteriores obtém-se a lei de Snell:
+</p>
+<div class="eqnalign">
+<math id="eqn69" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>n</mi><mn>1</mn></msub><mi>sin</mi><msub><mi>θ</mi><mn>1</mn></msub><mo>=</mo><msub><mi>n</mi><mn>2</mn></msub><mi>sin</mi><msub><mi>θ</mi><mn>2</mn></msub></mstyle></mrow></math>
+</div>
+<p>
+<b id="exe:espelho_plano">1.4.</b> Demostre que qualquer ponto luminoso
+  próximo de um espelho plano produz uma imagem virtual, no outro lado
+  do espelho, e que a distância desde o ponto (objeto) até à
+  superfície do espelho, <math id="eqn70" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow></math>, é igual à distância
+  <math id="eqn71" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub></mrow></math>, desde a imagem até à superfície do espelho.
+</p>
+<p>
+  <b>Resolução</b>. A figura seguinte mostra dois raios de luz que
+  saem do ponto luminoso O, sendo refletidos no espelho, nos pontos R e
+  S.
+</p>
+<img class="fig center" src="img/espelho_plano.png" style="width:19.635em;max-width:100%;height:auto">
+<p>
+  Os dois raios refletidos em R e em S parecem vir do ponto comum I,
+  no outro lado do espelho. Os ângulos de incidência e reflexão do
+  raio em R são iguais, e são iguais também ao ângulo que o segmento
+  RI faz com a perpendicular ao espelho (<math id="eqn72" display="inline"><mrow><mi>α</mi></mrow></math> na figura). E os
+  ângulos de incidência e reflexão do raio em S são iguais, e são
+  iguais também ao ângulo que o segmento SI faz com a perpendicular ao
+  espelho (<math id="eqn73" display="inline"><mrow><mi>β</mi></mrow></math> na figura).  Os ângulos <math id="eqn74" display="inline"><mrow><mi>ζ</mi></mrow></math> e <math id="eqn75" display="inline"><mrow><mi>η</mi></mrow></math> são ambos
+  iguais a <math id="eqn76" display="inline"><mrow><msup><mn>90</mn><mo>∘</mo></msup><mo>−</mo><mi>α</mi></mrow></math> e, como tal <math id="eqn77" display="inline"><mrow><mi>ζ</mi><mo>=</mo><mi>η</mi></mrow></math>. De forma
+  semelhante, <math id="eqn78" display="inline"><mrow><mi>ϕ</mi><mo>=</mo><mi>ψ</mi></mrow></math>, porque ambos ângulos são iguais a
+  <math id="eqn79" display="inline"><mrow><msup><mn>90</mn><mo>∘</mo></msup><mo>−</mo><mi>β</mi></mrow></math>. A igualdade da base, RS, e dos dois ângulos nessa
+  base, implica que os dois triângulos, ORS e IRS, são semelhantes. As
+  distâncias do ponto e da sua imagem até a superfície do espelho
+  (<math id="eqn80" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow></math> e <math id="eqn81" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub></mrow></math>) são as alturas desses triângulos,
+  que são iguais, porque os triângulos são semelhantes:
+</p>
+<img class="fig center" src="img/triangulos_ponto_imagem.png" style="width:19.635em;max-width:100%;height:auto">
+<p>
+  Como não assumimos nenhum ângulo especial <math id="eqn82" display="inline"><mrow><mi>α</mi></mrow></math> ou <math id="eqn83" display="inline"><mrow><mi>β</mi></mrow></math>,
+  quaisquer outros dois raios que considerarmos formarão outros dois
+  triângulos semelhantes com altura <math id="eqn84" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow></math> (igual a
+  <math id="eqn85" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub></mrow></math>). A conclusão é que todos os raios refletidos no
+  espelho parecem vir dum ponto único I, imagem de O, que está à mesma
+  distância do espelho do que o ponto O.
+</p>
+<p>
+<b>1.5.</b> Qual é a altura mínima que deverá ter um espelho vertical para
+  que uma pessoa consiga ver a imagem do seu corpo completo, e como
+  deverá ser posicionado?
+</p>
+<p>
+  <b>Resolução</b>. A figura seguinte mostra um homem, no lado
+  direito de um espelho plano e vertical, e a sua imagem no lado
+  esquerdo do espelho.
+<img class="fig center" src="img/homem_espelho.png" style="width:20.580em;max-width:100%;height:auto">
+<p>
+  Para que o homem possa ver a sua imagem completa, deverá
+  poder ver os raios DFB e AEB, que partem da parte mais baixa dos
+  seus pés, e da parte mais alta do seu cabelo, e chegam aos seus
+  olhos em B. O tamanho mínimo do espelho deverá ser então a distância
+  entre E e F, onde esses dois raios são refletidos no espelho.
+</p>
+<p>
+  A altura do ponto F, desde o chão, é FJ, igual a CD, que é metade da
+  altura dos olhos B do homem: FJ=BD/2. E a altura do ponto E é EJ,
+  igual à altura do homem, AD, menos metade da distância AB entre os
+  olhos e o ponto mais alto A: EJ=AD-AB/2. O tamanho mínimo do
+  espelho é:
+</p>
+<div class="eqnalign">
+<math id="eqn86" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">J</mi></mrow><mo>−</mo><mrow><mi mathvariant="normal">F</mi><mi mathvariant="normal">J</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">D</mi></mrow><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">B</mi></mrow></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">D</mi></mrow></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mo>=</mo><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">D</mi></mrow><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">D</mi></mrow></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">D</mi></mrow></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  que é exatamente metade da altura do homem.
+</p>
+<p>
+  A posição onde debe ser colocado o espelho é o o seu ponto mais
+  baixo à altura HI, ou seja, a uma altura igual a metade da altura
+  dos olhos do homem.
+</p>
+<p>
+<b>1.6.</b> Um peixe está nadar a 1 m por debaixo da superfície da
+  água. Determine a que profundidade parece estar a nadar o peixe,
+  quando visto por uma pessoa fora da água.
+</p>
+<p>
+  <b>Resolução</b>. A figura seguinte mostra dois raios luminosos
+  que partem de um ponto &quot;o&quot; no peixe: um primeiro raio vertical,
+  perpendicular à superfície da água, que atravessa para o ar sem ser
+  desviado, e um segundo raio que atinge a superfície da água a um
+  ângulo <math id="eqn87" display="inline"><mrow><msub><mi>θ</mi><mn>2</mn></msub></mrow></math> com a vertical, e sai para o ar formando um ângulo
+  <math id="eqn88" display="inline"><mrow><msub><mi>θ</mi><mn>1</mn></msub></mrow></math> com a vertical.
+</p>
+<img class="fig center" src="img/peixe_a_nadar.png" style="width:15.750em;max-width:100%;height:auto">
+<p>
+  A imagem &quot;i&quot; do ponto &quot;o&quot; encontra-se na interseção entre a
+  prolongação do raio que sai da água com ângulo <math id="eqn89" display="inline"><mrow><msub><mi>θ</mi><mn>1</mn></msub></mrow></math>, e o raio
+  vertical. Os raios mais luminosos, que contribuem mais para a
+  formação da imagem, são os que estão mais próximos da vertical (<math id="eqn90" display="inline"><mrow><mi>x</mi></mrow></math>
+  próximo de zero). Como tal, podemos admitir que os ângulos
+  <math id="eqn91" display="inline"><mrow><msub><mi>θ</mi><mn>1</mn></msub></mrow></math> e <math id="eqn92" display="inline"><mrow><msub><mi>θ</mi><mn>2</mn></msub></mrow></math> são suficientemente pequenos para podermos
+  aproximar o seno desses ângulos pelas sua tangentes, que podem ser
+  calculadas a partir das distâncias <math id="eqn93" display="inline"><mrow><mi>x</mi></mrow></math>, <math id="eqn94" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow></math> e
+  <math id="eqn95" display="inline"><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub></mrow></math> na figura:
+</p>
+<div class="eqnalign">
+<math id="eqn96" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>sin</mi><msub><mi>θ</mi><mn>2</mn></msub><mo>≈</mo><mi>tan</mi><msub><mi>θ</mi><mn>2</mn></msub><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>x</mi></mrow><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  enquanto que o seno do ângulo <math id="eqn97" display="inline"><mrow><msub><mi>θ</mi><mn>1</mn></msub></mrow></math> é aproximadamente,
+</p>
+<div class="eqnalign">
+<math id="eqn98" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>sin</mi><msub><mi>θ</mi><mn>1</mn></msub><mo>≈</mo><mi>tan</mi><msub><mi>θ</mi><mn>1</mn></msub><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>x</mi></mrow><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  Substituindo esses senos na lei de Snell (<a href="#eq:snell">1.4</a>),
+  obtém-se:
+</p>
+<div class="eqnalign">
+<math id="eqn99" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>n</mi><mn>1</mn></msub></mrow><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>n</mi><mn>2</mn></msub></mrow><mrow><msub><mi>d</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  onde <math id="eqn100" display="inline"><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow></math> é o índice de refração do ar, <math id="eqn101" display="inline"><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>=</mo><mn>1.333</mn></mrow></math> é o índice de
+  refração da água e <math id="eqn102" display="inline"><mrow><msub><mi>d</mi><mi>o</mi></msub><mo>=</mo><mn>1</mn></mrow></math> m é a profundidade à que se encontra o
+  peixe. O valor obtido para a profundidade da imagem do peixe é:
+</p>
+<div class="eqnalign">
+<math id="eqn103" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>d</mi><mrow><mi mathvariant="normal">i</mi></mrow></msub><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>n</mi><mn>1</mn></msub><msub><mi>d</mi><mrow><mi mathvariant="normal">o</mi></mrow></msub></mrow><mrow><msub><mi>n</mi><mn>2</mn></msub></mrow></mfrac></mstyle><mo>=</mo><mn>0.750</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">m</mi></mrow><mo>=</mo><mn>75.0</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">m</mi></mrow></mstyle></mrow></math>
+</div>
+<p>
+<b id="exe:nadador">1.7.</b> No ponto A de uma praia encontra-se um
+  nadador-salvador, enquanto que num ponto B do mar encontra-se um
+  banhista em dificuldades (ver figura). O nadador-salvador corre na
+  praia a uma velocidade <math id="eqn104" display="inline"><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub></mrow></math> e nada no mar a uma velocidade
+  menor, <math id="eqn105" display="inline"><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">m</mi></mrow></msub></mrow></math>. Qual a trajectória que o nadador-salvador
+  deve seguir, desde A, para chegar o mais rapidamente possível ao
+  banhista em B?
+</p>
+<img class="fig center" src="img/nadador-salvador.png" style="width:17.556em;max-width:100%;height:auto">
+<p>
+  <b>Resolução</b>. Não há duvida que se os pontos inicial e final
+  estão ambos na praia ou ambos no mar, a trajetória mais rápida é um
+  segmento de reta. Como tal, a trajetória ótima desde A até B serão
+  dois segmentos de reta, um na praia e outro no mar. Mas os esses
+  dois segmentos, AR e BR na figura acima, não têm de ser parte dum
+  mesmo segmento de reta entre A e B. O ponto R encontra-se <math id="eqn106" display="inline"><mrow><mi>x</mi></mrow></math>
+  unidades à direita de B, e o valor ótimo de <math id="eqn107" display="inline"><mrow><mi>x</mi></mrow></math> é o que faz com que
+  o tempo desde A até B seja mínimo.
+</p>
+<p>
+  A distância que o nadador-salvador percorre na praia é a hipotenusa
+  do triângulo APR, igual a,
+</p>
+<div class="eqnalign">
+<math id="eqn108" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">R</mi></mrow><mo>=</mo><msqrt><mrow><msup><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">P</mi></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mstyle></mrow></math>
+</div>
+<p>
+  e o tempo <math id="eqn109" display="inline"><mrow><msub><mi>t</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub></mrow></math> do percurso na praia, desde A até R, é:
+</p>
+<div class="eqnalign">
+<math id="eqn110" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>t</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>t</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub></mrow><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msqrt><mrow><msup><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">P</mi></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  De forma semelhante, a distância percorrida no mar é a hipotenusa do
+  triângulo BQR e o tempo necessário para percorrer essa distância é:
+</p>
+<div class="eqnalign">
+<math id="eqn111" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>t</mi><mrow><mi mathvariant="normal">m</mi></mrow></msub><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>t</mi><mrow><mi mathvariant="normal">m</mi></mrow></msub></mrow><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">m</mi></mrow></msub></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msqrt><mrow><msup><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">Q</mi></mrow><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><mi>d</mi><mo>−</mo><mi>x</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt></mrow><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">m</mi></mrow></msub></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  Como as distâncias AP, BQ, <math id="eqn112" display="inline"><mrow><mi>d</mi></mrow></math> e as velocidades <math id="eqn113" display="inline"><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub></mrow></math> e
+  <math id="eqn114" display="inline"><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">m</mi></mrow></msub></mrow></math> têm valores fixos (não dependem da posição do ponto
+  R), a expressão do tempo total, <math id="eqn115" display="inline"><mrow><mi>t</mi><mo>=</mo><msub><mi>t</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub><mo>+</mo><msub><mi>t</mi><mrow><mi mathvariant="normal">m</mi></mrow></msub></mrow></math> em
+  função da variável <math id="eqn116" display="inline"><mrow><mi>x</mi></mrow></math> é a seguinte:
+</p>
+<div class="eqnalign">
+<math id="eqn117" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msqrt><mrow><msup><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">P</mi></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msqrt><mrow><msup><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">Q</mi></mrow><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><mi>d</mi><mo>−</mo><mi>x</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt></mrow><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">m</mi></mrow></msub></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  E o valor de <math id="eqn118" display="inline"><mrow><mi>x</mi></mrow></math> que faz com que <math id="eqn119" display="inline"><mrow><mi>t</mi></mrow></math> seja mínimo obtém-se derivando
+  a expressão anterior e igualando o resultado a zero:
+</p>
+<div class="eqnalign">
+<math id="eqn120" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>x</mi></mrow><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub><msqrt><mrow><msup><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">P</mi></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo stretchy="false">(</mo><mi>d</mi><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">m</mi></mrow></msub><msqrt><mrow><msup><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">Q</mi></mrow><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><mi>d</mi><mo>−</mo><mi>x</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mstyle><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+</div>
+<p>
+  a expressão <math id="eqn121" display="inline"><mrow><mi>x</mi><mo>/</mo><msqrt><mrow><msup><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">P</mi></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></math> é igual ao seno do ângulo
+  <math id="eqn122" display="inline"><mrow><msub><mi>θ</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub></mrow></math> (ver gráfico acima), e
+  <math id="eqn123" display="inline"><mrow><mo stretchy="false">(</mo><mi>d</mi><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><mo>/</mo><msqrt><mrow><msup><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">Q</mi></mrow><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><mi>d</mi><mo>−</mo><mi>x</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt></mrow></math> é o seno de
+  <math id="eqn124" display="inline"><mrow><msub><mi>θ</mi><mrow><mi mathvariant="normal">m</mi></mrow></msub></mrow></math>. Como tal, o tempo será mínimo quando a relação
+  entre os dois ângulos for:
+</p>
+<div class="eqnalign">
+<math id="eqn125" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>sin</mi><msub><mi>θ</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub></mrow><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">p</mi></mrow></msub></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>sin</mi><msub><mi>θ</mi><mrow><mi mathvariant="normal">m</mi></mrow></msub></mrow><mrow><msub><mi>v</mi><mrow><mi mathvariant="normal">m</mi></mrow></msub></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  que é igual à lei de Snell para os raios de luz (substituindo a
+  definição (<a href="#eq:def_n">1.3</a>) do índice de refração na equação
+  (<a href="#eq:snell">1.4</a>), obtém-se: <math id="eqn126" display="inline"><mrow><mi>sin</mi><msub><mi>θ</mi><mn>1</mn></msub><mo>/</mo><msub><mi>v</mi><mn>1</mn></msub><mo>=</mo><mi>sin</mi><msub><mi>θ</mi><mn>2</mn></msub><mo>/</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></math>).
+</p>
+<p>
+<b>1.8.</b> Determine o ângulo crítico para a luz que passa de vidro, com
+  índice de refração 1.56, para água, com índice de refração 1.333.
+</p>
+<p>
+  <b>Resolução</b>. Usando a lei de Snell, com ângulo de incidência
+  <math id="eqn127" display="inline"><mrow><msub><mi>θ</mi><mrow><mi mathvariant="normal">c</mi></mrow></msub></mrow></math> e ângulo de refração igual a 90<math id="eqn128" display="inline"><mrow><msup><mi /><mo>∘</mo></msup></mrow></math>,
+</p>
+<div class="eqnalign">
+<math id="eqn129" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mn>1.56</mn><mspace width="0.167em" /><mi>sin</mi><msub><mi>θ</mi><mrow><mi mathvariant="normal">c</mi></mrow></msub><mo>=</mo><mn>1.333</mn><mspace width="0.167em" /><mi>sin</mi><msup><mn>90</mn><mo>∘</mo></msup><mspace width="1em" /><mi>⟹</mi><mspace width="1em" /><msub><mi>θ</mi><mrow><mi mathvariant="normal">c</mi></mrow></msub><mo>=</mo><mi>arcsin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1.333</mn></mrow><mrow><mn>1.56</mn></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mn>58.7</mn><mo>∘</mo></msup></mstyle></mrow></math>
+</div>
+<p>
+<b>1.9.</b> Uma placa de vidro tem 3 cm de espessura e índice de refração de
+  <math id="eqn130" display="inline"><mrow><mn>1.5</mn></mrow></math>. Determine o deslocamento lateral de um raio luminoso que
+  incide na superfície da placa com ângulo de incidência de
+  <math id="eqn131" display="inline"><mrow><msup><mn>50</mn><mo>∘</mo></msup></mrow></math>.
+</p>
+<p>
+  <b>Resolução</b>. Como pode ver-se na figura seguinte, o ângulo
+  de refração <math id="eqn132" display="inline"><mrow><msub><mi>θ</mi><mn>2</mn></msub></mrow></math> do raio quando penetra no vidro é o mesmo
+  ângulo com que incide no outro lado, quando sai novamente para o
+  ar. Como tal, o ângulo de refração do raio quando sai para o ar é o
+  mesmo ângulo <math id="eqn133" display="inline"><mrow><msub><mi>θ</mi><mn>1</mn></msub></mrow></math> com que entrou na placa, e os raios que
+  entram e saem na placa são paralelos.
+</p>
+<img class="fig center" src="img/placa_transparente.png" style="width:21.021em;max-width:100%;height:auto">
+<p>
+  O desvio lateral é a distância <math id="eqn134" display="inline"><mrow><mi>d</mi></mrow></math> entre a prolongação do raio
+  que entra e o raio que sai da placa; <math id="eqn135" display="inline"><mrow><mi>d</mi></mrow></math> é também igual ao cateto QR
+  no triângulo retângulo PQR. Como o ângulo no vértice P desse
+  triângulo é igual a <math id="eqn136" display="inline"><mrow><msub><mi>θ</mi><mn>1</mn></msub><mo>−</mo><msub><mi>θ</mi><mn>2</mn></msub></mrow></math>, o cateto oposto é igual a:
+</p>
+<div class="eqnalign">
+<math id="eqn137" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>d</mi><mo>=</mo><mrow><mi mathvariant="normal">Q</mi><mi mathvariant="normal">R</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">P</mi><mi mathvariant="normal">Q</mi></mrow><mspace width="0.167em" /><mi>sin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msub><mi>θ</mi><mn>1</mn></msub><mo>−</mo><msub><mi>θ</mi><mn>2</mn></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</div>
+<p>
+  No triângulo PQS, a hipotenusa é igual a:
+</p>
+<div class="eqnalign">
+<math id="eqn138" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>P</mi><mi>Q</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>ℓ</mi></mrow><mrow><mi>cos</mi><msub><mi>θ</mi><mn>2</mn></msub></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  E substituindo na equação anterior,
+</p>
+<div class="eqnalign">
+<math id="eqn139" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>d</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>ℓ</mi><mspace width="0.167em" /><mi>sin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msub><mi>θ</mi><mn>1</mn></msub><mo>−</mo><msub><mi>θ</mi><mn>2</mn></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mrow><mrow><mi>cos</mi><msub><mi>θ</mi><mn>2</mn></msub></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  Neste caso <math id="eqn140" display="inline"><mrow><msub><mi>θ</mi><mn>1</mn></msub><mo>=</mo><msup><mn>50</mn><mo>∘</mo></msup></mrow></math>, e substituindo o índice de refração
+  do ar, <math id="eqn141" display="inline"><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow></math>, e o índice de refração do vidro, <math id="eqn142" display="inline"><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>=</mo><mn>1.5</mn></mrow></math>, na lei
+  de Snell, obtém-se:
+</p>
+<div class="eqnalign">
+<math id="eqn143" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>θ</mi><mn>2</mn></msub><mo>=</mo><mi>arcsin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>n</mi><mn>1</mn></msub><mi>sin</mi><msub><mi>θ</mi><mn>1</mn></msub></mrow><mrow><msub><mi>n</mi><mn>2</mn></msub></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mi>arcsin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>sin</mi><msup><mn>50</mn><mo>∘</mo></msup></mrow><mrow><mn>1.5</mn></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mn>30.71</mn><mo>∘</mo></msup></mstyle></mrow></math>
+</div>
+<p>
+  e o desvio lateral do feixe é:
+</p>
+<div class="eqnalign">
+<math id="eqn144" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>d</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>0.03</mn><mspace width="0.167em" /><mi>sin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msup><mn>50</mn><mo>∘</mo></msup><mo>−</mo><msup><mn>30.71</mn><mo>∘</mo></msup><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mrow><mrow><mi>cos</mi><msup><mn>30.71</mn><mo>∘</mo></msup></mrow></mfrac></mstyle><mo>=</mo><mn>0.0115</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">m</mi></mrow><mo>=</mo><mn>1.15</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">m</mi></mrow></mstyle></mrow></math>
+</div>
+</p>
+<h2>Exercícios adicionais</h2>
+<b>1.10.</b> A figura mostra dois espelhos planos e perpendiculares entre
+  si. Um raio de luz incide no primeiro espelho, com ângulo de
+  incidência <math id="eqn145" display="inline"><mrow><msub><mi>θ</mi><mn>1</mn></msub></mrow></math>, sendo refletido para o segundo espelho, com
+  ângulo de incidência <math id="eqn146" display="inline"><mrow><msub><mi>θ</mi><mn>2</mn></msub></mrow></math>. Demonstre que, independentemente do
+  valor de ângulo <math id="eqn147" display="inline"><mrow><msub><mi>θ</mi><mn>1</mn></msub></mrow></math>, o raio que sai do sistema dos dois
+  espelhos é sempre paralelo ao raio que entrou.
+<img class="fig center" src="img/espelhos_perpendiculares.png" style="width:12.621em;max-width:100%;height:auto">
+<p>
+<b>1.11.</b> Considere uma pessoa que se encontra imersa numa piscina com
+  água (n = 1.333).  A pessoa vê objectos num círculo de raio R = 2.0 m
+  por cima da sua cabeça e fora deste círculo a pessoa repara que a
+  cor da água é da cor das paredes da piscina. A que profundidade se
+  encontra a pessoa?
+</p>
+<p>
+<b>1.12.</b> Um homem caminha a 1.3 m/s, aproximando-se de um espelho
+  plano. Com que velocidade se aproximará a sua imagem dele?
+</p>
+<p>
+<b>1.13.</b> Para medir o índice de refração de um líquido, preenche-se
+  completamente com esse líquido um recipiente retangular de 15 cm de
+  lado e 20 cm de profundidade, e determina-se que o mínimo ângulo
+  por cima da horizontal em que é possível observar o canto inferior
+  do recipiente é de <math id="eqn148" display="inline"><mrow><msup><mn>20</mn><mo>∘</mo></msup></mrow></math>. Com essa informação, calcule o índice
+  de refração do líquido.
+<img class="fig center" src="img/indice_refracao.png" style="width:14.784em;max-width:100%;height:auto">
+</p>
+<h2>Respostas dos exercícios adicionais</h2>
+<b>1.10.</b> Sugestão: comece por demonstrar que o ângulo <math id="eqn149" display="inline"><mrow><msub><mi>θ</mi><mn>2</mn></msub></mrow></math> é igual a
+  <math id="eqn150" display="inline"><mrow><msup><mn>90</mn><mo>∘</mo></msup><mo>−</mo><msub><mi>θ</mi><mn>1</mn></msub></mrow></math>, e depois demonstre que o raio que entra e o
+  raio que sai fazem o mesmo ângulo com a horizontal.
+</p>
+<p>
+<b>1.11.</b> <math id="eqn151" display="inline"><mrow><mn>1.76</mn></mrow></math> m.
+</p>
+<p>
+<b>1.12.</b> 2.6 m/s.
+</p>
+<p>
+<b>1.13.</b> 1.566.
+</p>
+</section>
+<footer>
+<p>&copy; 2025, Jaime E. Villate</p>
+<p>Publicado nos termos da <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/">Licença
+Creative Commons Attribuição-Partilha</a> (versão 4.0).</p>
+<span>Última modificação: 2025/10/30 09:55:09 UTC</span>
+</footer>
+</body>
+</html>
