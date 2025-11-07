@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à Mecânica Quântica &ndash; Capítulo 4</title>
+<!--Generated on Fri Nov 07 19:01:28 WET 2025 by latextohtml.tcl, by J. Villate -->
+<link rel="stylesheet" href="../css/book.css">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="alternate icon" href="../img/favicon.ico">
+</head>
+<body id="top">
+<header style="background-image:url(../img/quantum.png);
+background-repeat:no-repeat;
+background-position:right center">
+<h1>Introdução à Mecânica Quântica</h1>
+<p>Jaime E. Villate.<br>
+Universidade do Porto, Portugal, 2025.</p>
+</header>
+<div class="menu">
+<button class="menubtn">&#9776;</button>
+<div class="menu-content">
+<a href="../pt/index.html">Início</a>
+<a href="../pt/books.html">Livros livres</a>
+<a href="index.html">Mecânica Quântica</a>
+</div>
+</div>
+<section>
+<h1>4. Postulados da mecânica quântica</h1>
+<h2>4.1. Comutadores</h2>
+<p>
+O produto entre matrizes não é comutativo. A ordem em que forem
+multiplicadas duas matrizes pode dar resultados diferentes. Como tal,
+a ordem em que forem aplicados dos operadores também conduz, em geral,
+a resultados diferentes.  Define-se o comutador de dois operadores
+<math id="eqn1" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> e <math id="eqn2" display="inline"><mrow><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>, igual ao operador:
+</p>
+<div id="eq:comutador" class="eqnalign">
+<math id="eqn3" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+<div class="eqn">(4.1)</div>
+</div>
+<p>
+a forma como o comutador atua num ket <math id="eqn4" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> é,
+</p>
+<div class="eqnalign">
+<math id="eqn5" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>−</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(4.2)</div>
+</div>
+<p>
+Essa definição conduz às seguintes propriedades, análogas às
+propriedades dos parênteses de Poisson:
+</p>
+</p>
+<ol class="parentheses">
+<li> <b>Anticomutatividade</b>: <span style="margin-right:4pt"></span><math id="eqn6" display="inline"><mrow><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mo>−</mo><mo stretchy="false">[</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo></mrow></math><br>
+</li>
+<li> <b>Linearidade</b>: <span style="margin-right:44pt"></span><math id="eqn7" display="inline"><mrow><mo stretchy="false">[</mo><mi>w</mi><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mi>z</mi><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mi>w</mi><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>+</mo><mi>z</mi><mo stretchy="false">[</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo></mrow></math><br>
+</li>
+<li> <b>Regra da cadeia</b>: <span style="margin-right:24pt"></span><math id="eqn8" display="inline"><mrow><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">[</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math><br>
+</li>
+<li> <b>Identidade de Jacobi</b>:
+  <math id="eqn9" display="inline"><mrow><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mo stretchy="false">[</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mo stretchy="false">[</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo stretchy="false">]</mo><mo>=</mo><mover><mrow><mn>0</mn></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+</li>
+</ol>
+<p>
+O operador nulo, <math id="eqn10" display="inline"><mrow><mover><mrow><mn>0</mn></mrow><mo stretchy="false">^</mo></mover></mrow></math>, é o operador que atuando em qualquer ket
+produz o ket nulo. A anticomutatividade implica que o comutador de
+qualquer operador com si próprio é nulo:
+<math id="eqn11" display="inline"><mrow><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mover><mrow><mn>0</mn></mrow><mo stretchy="false">^</mo></mover></mrow></math>.
+</p>
+<p>
+A semelhança das propriedades do comutador entre dois operadores com
+as propriedades dos parênteses de Poisson, será aproveitada para
+construir a mecânica quântica a partir da mecânica clássica, como
+veremos numa próxima secção.
+</p>
+<p>
+Se o comutador entre dois operadores for nulo, os operadores comutam,
+isto é, a ordem em que sejam aplicados os dois operadores é
+indiferente.
+</p>
+<p>
+Quando dois operadores <math id="eqn12" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> e <math id="eqn13" display="inline"><mrow><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> comutam, têm os
+mesmos valores e vetores próprios.
+</p>
+<p>
+Outra forma de escrever a equação (<a href="#eq:comutador">4.1</a>) é,
+</p>
+<div class="eqnalign">
+<math id="eqn14" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0" /></mrow></math>
+<div class="eqn">(4.3)</div>
+</div>
+<p>
+ou seja, podemos trocar a ordem de dois operadore, se adicionarmos
+também o comutador entre eles.
+</p>
+</section>
+<section>
+<h2>4.2. Operadores unitários</h2>
+<p>
+Diz-se que um operador <math id="eqn15" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> é unitário, se quando multiplicado pelo seu
+operador adjunto o resultado for o operador identidade:
+</p>
+<div id="eq:operador_unitario" class="eqnalign">
+<math id="eqn16" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo>=</mo><mover><mrow><mn>1</mn></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+<div class="eqn">(4.4)</div>
+</div>
+<p>
+isto é, o operador adjunto <math id="eqn17" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mrow></math> é o operador inverso de
+<math id="eqn18" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>. Note-se que o adjunto do operador adjunto é o operador inicial,
+e a ordem do produto na equação anterior é indiferente.
+</p>
+<p>
+A propriedade importante dos operadores unitários é que atuando sobre
+dois kets quaisquer não alteram o seu produto interno. Para o
+demonstrar, sejam <math id="eqn19" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>u</mi></msub><mi>⟩</mi></mrow></math> e <math id="eqn20" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>u</mi></msub><mi>⟩</mi></mrow></math> os kets obtidos após
+aplicar o operador <math id="eqn21" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> nos kets <math id="eqn22" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> e <math id="eqn23" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math>:
+</p>
+<div class="eqnalign">
+<math id="eqn24" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>u</mi></msub><mi>⟩</mi><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mspace width="2em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>u</mi></msub><mi>⟩</mi><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(4.5)</div>
+</div>
+<p>
+A segunda expressão implica <math id="eqn25" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>u</mi></msub><mo stretchy="false">|</mo><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mrow></math>, e
+o produto interno entre os kets transformados é:
+</p>
+<div class="eqnalign">
+<math id="eqn26" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>u</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>u</mi></msub><mi>⟩</mi><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(4.6)</div>
+</div>
+<p>
+que é o mesmo produto interno antes dos kets serem transformados. Em
+particular, como a norma de um ket é a raiz quadrada do produto
+interno do ket com si próprio, as normas dos kets também não são
+alteradas pela ação do operador.  Como tal, um operador unitário
+transforma todos os kets sem alterar os ângulo entre eles nem as suas
+normas; a estrutura do espaço vetorial continua igual, tal como uma
+rotação no espaço euclidiano.
+</p>
+<p>
+A matriz que representa um operador unitário é uma matriz unitária;
+cada coluna dessa matriz são as componentes do ket obtido após aplicar
+o operador <math id="eqn27" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> em cada um dos elementos da base <math id="eqn28" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><msub><mi>e</mi><mi>i</mi></msub><mi>⟩</mi><mo stretchy="false">}</mo></mrow></math>,
+e as linhas da matriz de <math id="eqn29" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mrow></math> (matriz conjugado
+transposto) são as componentes dos respectivos bras. Como o produto
+interno não é alterado após a transformação, o produto da linha <math id="eqn30" display="inline"><mrow><mi>i</mi></mrow></math> da
+matriz de <math id="eqn31" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mrow></math> com a coluna <math id="eqn32" display="inline"><mrow><mi>j</mi></mrow></math> da matriz de <math id="eqn33" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> é
+igual a <math id="eqn34" display="inline"><mrow><mi>⟨</mi><msub><mi>e</mi><mi>i</mi></msub><mo stretchy="false">|</mo><msub><mi>e</mi><mi>j</mi></msub><mi>⟩</mi></mrow></math>, que é 0, se <math id="eqn35" display="inline"><mrow><mi>i</mi></mrow></math> for diferente de <math id="eqn36" display="inline"><mrow><mi>j</mi></mrow></math>, ou
+1, se <math id="eqn37" display="inline"><mrow><mi>i</mi><mo>=</mo><mi>j</mi></mrow></math>.
+</p>
+</section>
+<section>
+<h2>4.3. Postulados da mecânica quântica</h2>
+<p>
+A mecânica quântica é construída a partir dos seguintes
+postulados. Há 100 anos, Max Born e outros físicos da época mostraram
+que a teoria obtida partindo desses postulados explica perfeitamente
+os fenómenos conhecidos na época, que não podiam ser explicados na
+mecânica clássica. Os postulados básicos continuam sendo os mesmos que
+foram propostos há 100 anos, embora existam diferentes formas de serem
+enunciados. Nesta secção vamos enunciar cinco primeiros postulados e
+na secção seguinte enunciaremos um sexto postulado.
+</p>
+</p>
+<div class="border">
+<ol class="problems" type="I">
+<li> Em cada instante, o estado de um sistema físico é descrito por
+  um ket <math id="eqn38" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>, normalizado: <math id="eqn39" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mn>1</mn></mrow></math>.
+</li>
+<li> Dois estados diferentes, sem ambiguidade,
+  <math id="eqn40" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>≠</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math>, são descritos por kets ortogonais:
+  <math id="eqn41" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mn>0</mn></mrow></math>
+</li>
+<li> Qualquer variável dinâmica que possa ser medida no sistema é
+  representada por um operador hermítico <math id="eqn42" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, designado por
+  <span class="concept">observável</span>.
+</li>
+<li> Cada medição de um observável <math id="eqn43" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> dá, aleatoriamente, algum
+  dos seus valores próprios <math id="eqn44" display="inline"><mrow><msub><mi>F</mi><mi>j</mi></msub></mrow></math>. Quando o estado do sistema for
+  <math id="eqn45" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>, a probabilidade de se obter <math id="eqn46" display="inline"><mrow><msub><mi>F</mi><mi>j</mi></msub></mrow></math> será:
+<div id="eq:probabilidade_j" class="eqnalign">
+<math id="eqn47" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>P</mi><mi>j</mi></msub><mo>=</mo><msup><mrow><mo stretchy="true" fence="true" form="prefix">|</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">F</mi></mrow><mi>j</mi></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">|</mo></mrow><mn>2</mn></msup></mstyle></mrow></math>
+<div class="eqn">(4.7)</div>
+</div>
+  onde <math id="eqn48" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">F</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math> é o vetor próprio correspondente ao valor próprio
+  <math id="eqn49" display="inline"><mrow><msub><mi>F</mi><mi>j</mi></msub></mrow></math>, normalizado.
+</li>
+<li> Se a medição de um observável <math id="eqn50" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> dá como resultado o
+  seu valor próprio <math id="eqn51" display="inline"><mrow><msub><mi>F</mi><mi>j</mi></msub></mrow></math>, imediatamente após a medição o
+  estado do sistema passa a ser o vetor próprio <math id="eqn52" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">F</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math>.
+</li>
+</ol>
+</div>
+</p>
+<p>
+No postulado II, se dois estados <math id="eqn53" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> e <math id="eqn54" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math> não são
+ortogonais, então <math id="eqn55" display="inline"><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mi>z</mi></mrow></math> (diferente de zero) e a
+combinação linear <math id="eqn56" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>−</mo><mi>z</mi><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> é perpendicular a
+<math id="eqn57" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>. Isso mostra que, nesse caso, <math id="eqn58" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math> tem uma
+componente que corresponde ao estado <math id="eqn59" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>, e subtraindo essa
+componente, obtém-se um estado diferente de <math id="eqn60" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>.
+</p>
+<p>
+No postulado IV, como os vetores próprios <math id="eqn61" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">F</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mrow></math> de um operador
+hermítico, normalizados, são ortonormais (ver exercício
+<a href="espacos_vetoriais.html#exe:hermitico">2.3</a>), <math id="eqn62" display="inline"><mrow><mi>⟨</mi><msub><mrow><mi mathvariant="normal">F</mi></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">F</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></math>, e o estado do
+sistema pode ser escrito como:
+</p>
+<div class="eqnalign">
+<math id="eqn63" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>⟨</mi><msub><mrow><mi mathvariant="normal">F</mi></mrow><mi>j</mi></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">F</mi></mrow><mi>j</mi></msub><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(4.8)</div>
+</div>
+<p>
+O quadrado da norma do estado é:
+</p>
+<div class="eqnalign">
+<math id="eqn64" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="true" fence="true" form="prefix">|</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">F</mi></mrow><mi>j</mi></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">|</mo></mrow><mn>2</mn></msup></mstyle></mrow></math>
+<div class="eqn">(4.9)</div>
+</div>
+<p>
+que é igual a 1. Isso garante que a soma das probabilidades <math id="eqn65" display="inline"><mrow><msub><mi>P</mi><mi>j</mi></msub></mrow></math> é
+igual a 1.
+</p>
+<p>
+A cada variável dinâmica está associada um operador hermítico
+<math id="eqn66" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, e os possíveis valores obtidos quando essa variável for
+medida, são os valores próprios do operador <math id="eqn67" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, que são números
+reais. Por exemplo, se o estado <math id="eqn68" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> do sistema for a seguinte
+combinação de estados prórios de <math id="eqn69" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>:
+</p>
+<div class="eqnalign">
+<math id="eqn70" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">F</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>3</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">F</mi></mrow><mn>4</mn></msub><mi>⟩</mi><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>6</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">F</mi></mrow><mn>8</mn></msub><mi>⟩</mi></mstyle></mrow></math>
+</div>
+<p>
+os possíveis resultados da medição do observável <math id="eqn71" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> seriam
+<math id="eqn72" display="inline"><mrow><msub><mi>F</mi><mn>1</mn></msub></mrow></math>, com probabilidade 1/2, <math id="eqn73" display="inline"><mrow><msub><mi>F</mi><mn>4</mn></msub></mrow></math>, com probabilidade 1/3, ou <math id="eqn74" display="inline"><mrow><msub><mi>F</mi><mn>8</mn></msub></mrow></math>,
+com probabilidade 1/6. O valor esperado da medição seria,
+</p>
+<div class="eqnalign">
+<math id="eqn75" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>F</mi><mn>1</mn></msub></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>F</mi><mn>4</mn></msub></mrow><mrow><mn>3</mn></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>F</mi><mn>8</mn></msub></mrow><mrow><mn>6</mn></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+e se o resultado da medição for <math id="eqn76" display="inline"><mrow><msub><mi>F</mi><mn>4</mn></msub></mrow></math>, o estado mudará ficando igual a
+<math id="eqn77" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">F</mi></mrow><mn>4</mn></msub><mi>⟩</mi></mrow></math>.
+</p>
+</section>
+<section>
+<h2>4.4. Evolução temporal do estado quântico</h2>
+<p>
+A mecânica quântica foi desenvolvida de forma independente por
+Schrödinger e Heisenberg, usando duas abordagens
+diferentes. Schrödinger encontrou uma equação que permite determinar a
+função de onda de um sistema, que descreve o estado do sistema. O
+método usado por Heisenberg é baseado na álgebra de matrizes. Mais tarde
+ficou claro que as duas abordagens são duas formas diferentes de
+estudar o mesmo problema.
+</p>
+<h3>4.4.1. Descrição de Schrödinger</h3>
+<p>
+Na descrição de Schrödinger, os operadores correspondentes a
+observáveis não dependem do tempo, mas o estado do sistema sim. Dado o
+estado do sistema num instante <math id="eqn78" display="inline"><mrow><mi>t</mi></mrow></math>, existe um operador <math id="eqn79" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>,
+designado por <span class="concept">operador de evolução</span>, que permite calcular o
+estado em outro instante <math id="eqn80" display="inline"><mrow><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi></mrow></math>:
+</p>
+<div id="eq:evolucao_estado" class="eqnalign">
+<math id="eqn81" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mi>⟩</mi><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(4.10)</div>
+</div>
+<p>
+O quadrado da norma de <math id="eqn82" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mi>⟩</mi></mrow></math> é,
+</p>
+<div id="eq:evolucao_norma" class="eqnalign">
+<math id="eqn83" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mi>⟩</mi><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">|</mo><msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(4.11)</div>
+</div>
+<p>
+Para que a descrição probabilística continue válida em qualquer
+instante, é então necessário que:
+</p>
+<div class="eqnalign">
+<math id="eqn84" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mover><mrow><mn>1</mn></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+<div class="eqn">(4.12)</div>
+</div>
+<p>
+para qualquer valor de <math id="eqn85" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi></mrow></math>. Isto é, o operador de evolução tem
+de ser unitário.
+</p>
+<p>
+O valor esperado de um observável <math id="eqn86" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, no instante <math id="eqn87" display="inline"><mrow><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi></mrow></math>,
+é dado pela expressão:
+</p>
+<div id="eq:evolucao_valor_esperado" class="eqnalign">
+<math id="eqn88" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><msub><mi>⟩</mi><mrow><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi></mrow></msub><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">|</mo><msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(4.13)</div>
+</div>
+<h3>4.4.2. Descrição de Heisenberg</h3>
+<p>
+Na descrição de Heisenberg o estado do sistema não depende do tempo,
+mas o operador associado a um observável varia com o tempo. O mesmo
+valor esperado (<a href="#eq:evolucao_valor_esperado">4.13</a>) é obtido admitindo
+que <math id="eqn89" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mi>⟩</mi><mo>=</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mi>⟩</mi><mo>=</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> e o operador em
+<math id="eqn90" display="inline"><mrow><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi></mrow></math> é:
+</p>
+<div id="eq:evolucao_operador" class="eqnalign">
+<math id="eqn91" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+<div class="eqn">(4.14)</div>
+</div>
+<p>
+É claro que <math id="eqn92" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> é igual ao operador identidade
+<math id="eqn93" display="inline"><mrow><mover><mrow><mn>1</mn></mrow><mo stretchy="false">^</mo></mover></mrow></math>. No limite <math id="eqn94" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo>→</mo><mn>0</mn></mrow></math>, <math id="eqn95" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo></mrow></math>
+deverá ter outro termo proporcional a <math id="eqn96" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi></mrow></math>:
+</p>
+<div id="eq:expansao:U" class="eqnalign">
+<math id="eqn97" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mover><mrow><mn>1</mn></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+<div class="eqn">(4.15)</div>
+</div>
+<p>
+Como <math id="eqn98" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo></mrow></math> é unitário, temos,
+</p>
+<div class="eqnalign">
+<math id="eqn99" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mn>1</mn></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mn>1</mn></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mspace width="0.167em" /><msup><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mn>1</mn></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mover><mrow><mn>1</mn></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><msup><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(4.16)</div>
+</div>
+<p>
+onde o termo que multiplica a <math id="eqn100" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><msup><mi>t</mi><mn>2</mn></msup></mrow></math> foi ignorado, porque
+estamos a considerar que <math id="eqn101" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi></mrow></math> é aproximadamente zero. A
+conclusão é que <math id="eqn102" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mo>−</mo><msup><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mrow></math>, ou seja, o
+operador <math id="eqn103" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> deverá ser anti-hermítico. Substituindo
+<math id="eqn104" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> por <math id="eqn105" display="inline"><mrow><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">G</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, o adjunto de <math id="eqn106" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> é
+<math id="eqn107" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><msup><mover><mrow><mrow><mi mathvariant="normal">G</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mrow></math>, e
+<math id="eqn108" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mo>−</mo><msup><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mrow></math> implica
+<math id="eqn109" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">G</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><msup><mover><mrow><mrow><mi mathvariant="normal">G</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mrow></math>. O operador <math id="eqn110" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">G</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> é um observável
+(hermítico), com unidades de inverso de tempo.
+</p>
+<p>
+A constante de Planck, <math id="eqn111" display="inline"><mrow><mi>h</mi></mrow></math>, deverá aparecer na expressão do operador
+de evolução <math id="eqn112" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, e como as unidades de <math id="eqn113" display="inline"><mrow><mi>h</mi></mrow></math> são energia vezes
+tempo, podemos introduzir outro operador <math id="eqn114" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, com unidades de
+energia, tal que <math id="eqn115" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">G</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>/</mo><mi>ℏ</mi></mrow></math>, onde <math id="eqn116" display="inline"><mrow><mi>ℏ</mi></mrow></math> é a constante
+de Planck dividida por <math id="eqn117" display="inline"><mrow><mn>2</mn><mspace width="0.167em" /><mrow><mi mathvariant="normal">π</mi></mrow></mrow></math>. A expressão (<a href="#eq:expansao:U">4.15</a>)
+para o operador de evolução, no limite <math id="eqn118" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo>→</mo><mn>0</mn></mrow></math> é
+então:
+</p>
+<div id="eq:aprox_U" class="eqnalign">
+<math id="eqn119" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mover><mrow><mn>1</mn></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow><mrow><mi>ℏ</mi></mrow></mfrac></mstyle><mspace width="0.167em" /><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+<div class="eqn">(4.17)</div>
+</div>
+<p>
+O fator de <math id="eqn120" display="inline"><mrow><mn>2</mn><mspace width="0.167em" /><mrow><mi mathvariant="normal">π</mi></mrow></mrow></math> foi introduzido por conveniência, porque se não
+fosse introduzido, em vários resultados mais para a frente apareciam
+factores de <math id="eqn121" display="inline"><mrow><mn>2</mn><mspace width="0.167em" /><mrow><mi mathvariant="normal">π</mi></mrow></mrow></math> (veja, por exemplo o exercício <a href="introducao.html#exe:Bohr">1.1</a>
+sobre o modelo de Bohr). O valor da constante <math id="eqn122" display="inline"><mrow><mi>ℏ</mi></mrow></math>, no sistema
+internacional de unidades e com 6 algarismos significativos, é:
+</p>
+<div id="eq:hbar" class="eqnalign">
+<math id="eqn123" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>ℏ</mi><mo>=</mo><mn>1.05457</mn><mi>×</mi><msup><mn>10</mn><mrow><mo>−</mo><mn>34</mn></mrow></msup><mspace width="0.278em" /><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">·</mi><msup><mi mathvariant="normal">m</mi><mn>2</mn></msup></mrow><mrow><mi mathvariant="normal">s</mi></mrow></mfrac></mstyle></mrow></mstyle></mrow></math>
+<div class="eqn">(4.18)</div>
+</div>
+<p>
+Usando a equação (<a href="#eq:aprox_U">4.17</a>), a expressão
+(<a href="#eq:evolucao_operador">4.14</a>), no limite <math id="eqn124" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo>→</mo><mn>0</mn></mrow></math>, é,
+</p>
+<div id="eq:operador_Dt" class="eqnalign">
+<math id="eqn125" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mn>1</mn></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow><mrow><mi>ℏ</mi></mrow></mfrac></mstyle><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mn>1</mn></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow><mrow><mi>ℏ</mi></mrow></mfrac></mstyle><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow><mrow><mi>ℏ</mi></mrow></mfrac></mstyle><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mspace width="0.167em" /><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo></mstyle></mrow></math>
+<div class="eqn">(4.19)</div>
+</div>
+<p>
+onde o termo que multiplica a <math id="eqn126" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><msup><mi>t</mi><mn>2</mn></msup></mrow></math> foi ignorado porque
+<math id="eqn127" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi></mrow></math> aproxima-se de zero.
+</p>
+<p>
+A derivada do operador <math id="eqn128" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math> em ordem ao tempo, é então:
+</p>
+<div id="eq:derivada_operador" class="eqnalign">
+<math id="eqn129" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><msub><mo>lim</mo><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo>→</mo><mn>0</mn></mrow></msub><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mo>−</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow><mrow><mi>ℏ</mi></mrow></mfrac></mstyle><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo></mstyle></mrow></math>
+<div class="eqn">(4.20)</div>
+</div>
+<p>
+Observe-se a semelhança desta expressão com a expressão
+(<a href="sintese_de_mecanica.html#eq:Poisson">3.24</a>) no caso da mecânica clássica. Tendo também em conta
+que o comutador de dois operadores tem as mesmas propriedades dos
+parênteses de Poisson, a equação (<a href="#eq:derivada_operador">4.20</a>) usa-se
+como base para o sexto postulado da mecânica quântica:
+</p>
+</p>
+<div class="border">
+<ol class="problems" type="I">
+<li> O comutador de dois observáveis <math id="eqn130" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> e <math id="eqn131" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">G</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+  é igual a:
+<div id="eq:comutador_Poisson" class="eqnalign">
+<math id="eqn132" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">G</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>ℏ</mi><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo></mstyle></mrow></math>
+<div class="eqn">(4.21)</div>
+</div>
+  onde <math id="eqn133" display="inline"><mrow><mi>F</mi></mrow></math> e <math id="eqn134" display="inline"><mrow><mi>G</mi></mrow></math> são as expressões dos observáveis na mecânica
+  clássica, e <math id="eqn135" display="inline"><mrow><mo stretchy="false">{</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo></mrow></math> são os parênteses de Poisson entre elas.
+</li>
+</ol>
+</div>
+</p>
+<p>
+Na mecânica clássica os parênteses de Poisson da posição, <math id="eqn136" display="inline"><mrow><mi>x</mi></mrow></math>, e a
+quantidade de movimento, <math id="eqn137" display="inline"><mrow><mi>p</mi></mrow></math>, de uma partícula que se desloca em uma
+dimensão, é igual a 1:
+</p>
+<div id="eq:Poisson_xp" class="eqnalign">
+<math id="eqn138" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><mi>x</mi><mo>,</mo><mi>p</mi><mo stretchy="false">}</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mi>x</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>p</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>p</mi></mrow><mrow><mo>∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>=</mo><mn>1</mn><mo>−</mo><mn>0</mn><mo>=</mo><mn>1</mn></mstyle></mrow></math>
+<div class="eqn">(4.22)</div>
+</div>
+<p>
+Como tal o postulado VI implica que o comutador dos operadores de
+posição, <math id="eqn139" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">x</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, e quantidade de movimento,
+<math id="eqn140" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">p</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, de uma partícula que se desloca em uma direção, é:
+</p>
+</p>
+<div class="eqnalign">
+<span class="boxed">
+<math id="eqn141" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><menclose notation="box"><mrow><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">x</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">p</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>ℏ</mi></mrow></menclose></mstyle></mrow></math>
+</span>
+<div class="eqn">(4.23)</div>
+</div>
+<h2>Exercícios</h2>
+<b>4.1.</b> Demonstre a regra da cadeia para comutadores.
+</p>
+<p>
+  <b>Resolução</b>. Usando a definição do comutador temos,
+</p>
+<div class="eqnalign">
+<math id="eqn142" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+</div>
+<p>
+  podemos subtrair e somar <math id="eqn143" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> sem
+  alterar nada:
+</p>
+<div class="eqnalign">
+<math id="eqn144" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+</div>
+<p>
+  e agrupando os dois primeiros termos e os dois últimos em
+  comutadores, obtém-se o resultado:
+</p>
+<div class="eqnalign">
+<math id="eqn145" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">[</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mover><mrow><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+</div>
+<p>
+<b>4.2.</b> A representações matriciais do estado de um sistema,
+  <math id="eqn146" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>, e de um observável, <math id="eqn147" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, são:
+</p>
+<div class="eqnalign">
+<math id="eqn148" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>0.96</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.28</mn></mtd></mtr></mtable><mo>]</mo><mspace width="2em" /><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>2.64</mn></mtd><mtd><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.48</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.48</mn></mtd><mtd><mn>2.36</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+</div>
+<p>
+  (<i>a</i>) Mostre que a norma do estado, <math id="eqn149" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>, é igual a 1.
+</p>
+<p>
+  (<i>b</i>)  Determine o valor esperado de <math id="eqn150" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>.
+</p>
+<p>
+  (<i>c</i>) Mostre que os dois kets.
+</p>
+<div class="eqnalign">
+<math id="eqn151" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>0.8</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.6</mn></mtd></mtr></mtable><mo>]</mo><mspace width="2em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.6</mn></mtd></mtr><mtr><mtd><mn>0.8</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+</div>
+<p>
+  são estados próprios do observável <math id="eqn152" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, com norma igual a 1, e
+  determine os respetivos valores próprios.
+</p>
+<p>
+  (<i>d</i>) Quais são os possíveis resultados da medição do observável
+  <math id="eqn153" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> no sistema com estado <math id="eqn154" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>, e qual a
+  probabilidade de se obter cada um desses resultados?
+</p>
+<p>
+  (<i>e</i>) Confira que o valor esperado calculado na alínea <i>b</i> é
+  igual à soma dos produtos dos possíveis resultados vezes a
+  respetiva probabilidade.
+</p>
+<p>
+  <b>Resolução</b>. (<i>a</i>) O quadrado da norma do ket <math id="eqn155" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> é:
+</p>
+<div class="eqnalign">
+<math id="eqn156" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><mn>0.96</mn><mspace width="0.278em" /><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.28</mn><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>[</mo><mtable><mtr><mtd><mn>0.96</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.28</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mn>0.9216</mn><mo>+</mo><mn>0.0784</mn><mo>=</mo><mn>1</mn></mstyle></mrow></math>
+</div>
+<p>
+  e, como tal, <math id="eqn157" display="inline"><mrow><mo stretchy="false">|</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo stretchy="false">|</mo><mo>=</mo><msqrt><mrow><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></msqrt><mo>=</mo><mn>1</mn></mrow></math>.
+</p>
+<p>
+  (<i>b</i>) O valor esperado do operador <math id="eqn158" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> é:
+</p>
+<div class="eqnalign">
+<math id="eqn159" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><mn>0.96</mn><mspace width="0.278em" /><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.28</mn><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>[</mo><mtable><mtr><mtd><mn>2.64</mn></mtd><mtd><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.48</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.48</mn></mtd><mtd><mn>2.36</mn></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><mn>0.96</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.28</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+</div>
+</p>
+<div class="eqnalign">
+<math id="eqn160" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟹</mi><mspace width="1em" /><mi>⟨</mi><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>⟩</mi><mo>=</mo><mn>2.876096</mn></mstyle></mrow></math>
+</div>
+<p>
+  (<i>c</i>) A norma desses dois kets é igual a um, porque a norma
+  ao quadrado é <math id="eqn161" display="inline"><mrow><msup><mn>0.8</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0.6</mn><mn>2</mn></msup></mrow></math>, que é igual a 1. Para determinar se um
+  ket é estado próprio de um operador, aplica-se o operador
+  ao ket e, se o resultado por um número vezes o ket original,
+  então esse ket é estado próprio e o número é o respetivo valor
+  próprio. aplicando o operador ao ket <math id="eqn162" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math> obtemos,
+</p>
+<div class="eqnalign">
+<math id="eqn163" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>2.64</mn></mtd><mtd><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.48</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.48</mn></mtd><mtd><mn>2.36</mn></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><mn>0.8</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.6</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>2.112</mn><mo>+</mo><mn>0.288</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.384</mn><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>1.416</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>2.4</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>1.8</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+</div>
+</p>
+<div class="eqnalign">
+<math id="eqn164" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟹</mi><mspace width="1em" /><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mn>3</mn><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
+</div>
+<p>
+  e isto mostra que <math id="eqn165" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math> é vetor próprio com valor próprio
+  3. Já para o ket <math id="eqn166" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi></mrow></math> temos,
+</p>
+<div class="eqnalign">
+<math id="eqn167" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mn>2.64</mn></mtd><mtd><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.48</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.48</mn></mtd><mtd><mn>2.36</mn></mtd></mtr></mtable><mo>]</mo><mo>[</mo><mtable><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.6</mn></mtd></mtr><mtr><mtd><mn>0.8</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>1.584</mn><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.384</mn></mtd></mtr><mtr><mtd><mo>−</mo><mn>0.288</mn><mo>+</mo><mn>1.888</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>[</mo><mtable><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>1.2</mn></mtd></mtr><mtr><mtd><mn>1.6</mn></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+</div>
+</p>
+<div class="eqnalign">
+<math id="eqn168" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟹</mi><mspace width="1em" /><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi><mo>=</mo><mn>2</mn><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
+</div>
+<p>
+  o que mostra que <math id="eqn169" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi></mrow></math> é vetor próprio com valor próprio 2.
+</p>
+<p>
+  (<i>d</i>) Os possíveis resultados são os valores próprios do
+  operador, que como mostramos na alínea anterior são 2 e 3. A
+  probabilidade de obter cada um desses resultados é igual ao quadrado
+  do módulo do produto interno entre o estado <math id="eqn170" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> e respetivo
+  estado próprio normalizado. O produto interno entre o vetor próprio
+  correspondente a 2 e o estado do sistema é: valor 2 é:
+</p>
+<div class="eqnalign">
+<math id="eqn171" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Υ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.6</mn><mspace width="0.278em" /><mn>0.8</mn><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>[</mo><mtable><mtr><mtd><mn>0.96</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.28</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.352</mn></mstyle></mrow></math>
+</div>
+<p>
+    E a probabilidade da medição dar o valor 2 é o módulo desse número ao
+    quadrado:
+</p>
+<div class="eqnalign">
+<math id="eqn172" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>P</mi><mn>2</mn></msub><mo>=</mo><msup><mn>0.352</mn><mn>2</mn></msup><mo>=</mo><mn>0.123904</mn></mstyle></mrow></math>
+</div>
+<p>
+    Já no caso do estado próprio com valor próprio 3,
+</p>
+<div class="eqnalign">
+<math id="eqn173" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Φ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><mn>0.8</mn><mspace width="0.278em" /><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.8</mn><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>[</mo><mtable><mtr><mtd><mn>0.96</mn></mtd></mtr><mtr><mtd><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.28</mn></mtd></mtr></mtable><mo>]</mo><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>0.936</mn></mstyle></mrow></math>
+</div>
+<p>
+    E a probabilidade da medição dar o valor 3 é o módulo desse número ao
+    quadrado:
+</p>
+<div class="eqnalign">
+<math id="eqn174" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>P</mi><mn>3</mn></msub><mo>=</mo><msup><mn>0.936</mn><mn>2</mn></msup><mo>=</mo><mn>0.876096</mn></mstyle></mrow></math>
+</div>
+<p>
+    Observe que <math id="eqn175" display="inline"><mrow><msub><mi>P</mi><mn>2</mn></msub><mo>+</mo><msub><mi>P</mi><mn>3</mn></msub></mrow></math> é igual a 1, como deveria ser.
+</p>
+<p>
+    (<i>e</i>) A soma dos produtos dos possíveis resultados vezes a
+    respetiva probabilidade é:
+</p>
+<div class="eqnalign">
+<math id="eqn176" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mn>2</mn><mspace width="0.167em" /><msub><mi>P</mi><mn>2</mn></msub><mo>+</mo><mn>3</mn><mspace width="0.167em" /><msub><mi>P</mi><mn>3</mn></msub><mo>=</mo><mn>2</mn><mi>×</mi><mn>0.123904</mn><mo>+</mo><mn>3</mn><mi>×</mi><mn>0.876096</mn><mo>=</mo><mn>2.876096</mn></mstyle></mrow></math>
+</div>
+<p>
+    que é o mesmo valor esperado obtido na alínea <i>b</i>.
+</p>
+<p>
+  <b id="exe:momento_angular">4.3.</b> Uma função de estado que na
+    mecânica clássica seja representada por um vetor, na mecânica
+    quântica passa a ser representada por três operadores hermíticos,
+    de forma que os possíveis valores obtidos na medição desse
+    operador são os vetores com componentes iguais aos possíveis
+    valores próprios desses operadores. No caso da posição de uma
+    partícula, em coordenadas Cartesianas, os operadores das
+    componentes são <math id="eqn177" display="inline"><mrow><mover><mrow><mi>x</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>, <math id="eqn178" display="inline"><mrow><mover><mrow><mi>y</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math> e <math id="eqn179" display="inline"><mrow><mover><mrow><mi>z</mi></mrow><mo stretchy="false">^</mo></mover></mrow></math>, e a quantidade
+    de movimento corresponde é representada pelos operadores
+    <math id="eqn180" display="inline"><mrow><msub><mover><mrow><mi>p</mi></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub></mrow></math>, <math id="eqn181" display="inline"><mrow><msub><mover><mrow><mi>p</mi></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub></mrow></math> e <math id="eqn182" display="inline"><mrow><msub><mover><mrow><mi>p</mi></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub></mrow></math>. Definem-se as três
+    componentes do operador de momento angular, em analogia com a
+    mecânica clássica:
+</p>
+<div class="eqnalign">
+<math id="eqn183" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>=</mo><mover><mrow><mi>y</mi></mrow><mo stretchy="false">^</mo></mover><msub><mover><mrow><mi>p</mi></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo>−</mo><msub><mover><mrow><mi>p</mi></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mover><mrow><mi>x</mi></mrow><mo stretchy="false">^</mo></mover><mspace width="2em" /><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo>=</mo><mover><mrow><mi>z</mi></mrow><mo stretchy="false">^</mo></mover><msub><mover><mrow><mi>p</mi></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>−</mo><msub><mover><mrow><mi>p</mi></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mover><mrow><mi>z</mi></mrow><mo stretchy="false">^</mo></mover><mspace width="2em" /><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo>=</mo><mover><mrow><mi>x</mi></mrow><mo stretchy="false">^</mo></mover><msub><mover><mrow><mi>p</mi></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo>−</mo><msub><mover><mrow><mi>p</mi></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mover><mrow><mi>x</mi></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+</div>
+<p>
+    E o operador correspondente ao quadrado do módulo do momento
+    angular é:
+</p>
+<div class="eqnalign">
+<math id="eqn184" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo>=</mo><msubsup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi><mn>2</mn></msubsup></mstyle></mrow></math>
+</div>
+</p>
+<ol>
+  <b>4.4.</b> Encontre as expressões dos comutadores entre os três
+    operadores <math id="eqn185" display="inline"><mrow><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub></mrow></math>, <math id="eqn186" display="inline"><mrow><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub></mrow></math> e <math id="eqn187" display="inline"><mrow><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub></mrow></math>.
+  <b>4.5.</b> Mostre que o comutador de <math id="eqn188" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup></mrow></math> com qualquer uma das
+    componentes <math id="eqn189" display="inline"><mrow><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub></mrow></math>, <math id="eqn190" display="inline"><mrow><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub></mrow></math> e <math id="eqn191" display="inline"><mrow><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub></mrow></math> é zero.
+</li>
+</ol>
+<p>
+  <b>Resolução</b>. (<i>a</i>) De acordo como o postulado VI, os
+  comutadores obtêm-se multiplicando por <math id="eqn192" display="inline"><mrow><mrow><mi mathvariant="normal">i</mi></mrow><mi>ℏ</mi></mrow></math> o lado
+  direito de cada um dos parênteses de Poisson já calculados no
+  exercício <a href="sintese_de_mecanica.html#exe:momento_angular_Poisson">3.2</a>:
+</p>
+<div class="eqnalign">
+<math id="eqn193" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mi>ℏ</mi><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mspace width="2em" /><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mi>ℏ</mi><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mspace width="2em" /><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mi>ℏ</mi><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mspace width="2em" /></mstyle></mrow></math>
+</div>
+<p>
+  (<i>b</i>) O comutador de <math id="eqn194" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup></mrow></math> com <math id="eqn195" display="inline"><mrow><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub></mrow></math> é:
+</p>
+<div class="eqnalign">
+<math id="eqn196" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><msup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo><mo>=</mo><mo stretchy="false">[</mo><msubsup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi><mn>2</mn></msubsup><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msubsup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi><mn>2</mn></msubsup><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msubsup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi><mn>2</mn></msubsup><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo></mstyle></mrow></math>
+<br><math id="eqn197" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>=</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>+</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub></mstyle></mrow></math>
+<br><math id="eqn198" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>+</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub></mstyle></mrow></math>
+<br><math id="eqn199" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mi>ℏ</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo>−</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo>−</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo>+</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo>+</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+</div>
+<p>
+  E, de forma análoga,
+</p>
+<div class="eqnalign">
+<math id="eqn200" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><msup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo><mo>=</mo><mo stretchy="false">[</mo><msubsup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi><mn>2</mn></msubsup><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msubsup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi><mn>2</mn></msubsup><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msubsup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi><mn>2</mn></msubsup><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo></mstyle></mrow></math>
+<br><math id="eqn201" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>=</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>+</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub></mstyle></mrow></math>
+<br><math id="eqn202" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>+</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub></mstyle></mrow></math>
+<br><math id="eqn203" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mi>ℏ</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo>+</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>−</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>−</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+</div>
+</p>
+<div class="eqnalign">
+<math id="eqn204" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><msup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo><mo>=</mo><mo stretchy="false">[</mo><msubsup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi><mn>2</mn></msubsup><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msubsup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi><mn>2</mn></msubsup><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msubsup><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi><mn>2</mn></msubsup><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo></mstyle></mrow></math>
+<br><math id="eqn205" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>=</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>+</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub></mstyle></mrow></math>
+<br><math id="eqn206" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>+</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo>,</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub></mstyle></mrow></math>
+<br><math id="eqn207" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mi>ℏ</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo>−</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo>−</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>+</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><mo>+</mo><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub><msub><mover><mrow><mrow><mi mathvariant="normal">L</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+</div>
+</section>
+<footer>
+<p>&copy; 2025, Jaime E. Villate</p>
+<p>Publicado nos termos da <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/">Licença
+Creative Commons Attribuição-Partilha</a> (versão 4.0).</p>
+<span>Última modificação: 2025/11/07 19:10:12 UTC</span>
+</footer>
+</body>
+</html>
