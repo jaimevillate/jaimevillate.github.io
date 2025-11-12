@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à Mecânica Quântica &ndash; Capítulo 5</title>
+<!--Generated on Wed Nov 12 10:34:59 WET 2025 by latextohtml.tcl, by J. Villate -->
+<link rel="stylesheet" href="../css/book.css">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="alternate icon" href="../img/favicon.ico">
+</head>
+<body id="top">
+<header style="background-image:url(../img/quantum.png);
+background-repeat:no-repeat;
+background-position:right center">
+<h1>Introdução à Mecânica Quântica</h1>
+<p>Jaime E. Villate.<br>
+Universidade do Porto, Portugal, 2025.</p>
+</header>
+<div class="menu">
+<button class="menubtn">&#9776;</button>
+<div class="menu-content">
+<a href="../pt/index.html">Início</a>
+<a href="../pt/books.html">Livros livres</a>
+<a href="index.html">Mecânica Quântica</a>
+</div>
+</div>
+<section>
+<h1>5. Oscilador harmónico quântico</h1>
+<h2>5.1. Hamiltoniano do oscilador harmónico</h2>
+<p>
+Na mecânica clássica, a função hamiltoniana de um objeto de massa <math id="eqn1" display="inline"><mrow><mi>m</mi></mrow></math>
+que oscila no eixo <math id="eqn2" display="inline"><mrow><mi>x</mi></mrow></math> devido a uma força elástica com constante
+elástica <math id="eqn3" display="inline"><mrow><mi>k</mi></mrow></math>, é:
+</p>
+</p>
+<div id="eq:H_oscilador_classico" class="eqnalign">
+<math id="eqn4" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>H</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mspace width="0.167em" /><mi>m</mi></mrow></mfrac></mstyle><mspace width="0.167em" /><msup><mi>p</mi><mn>2</mn></msup><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>k</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mspace width="0.167em" /><msup><mi>x</mi><mn>2</mn></msup></mstyle></mrow></math>
+<div class="eqn">(5.1)</div>
+</div>
+<p>
+O respetivo operador hamiltoniano será então:
+</p>
+<div id="eq:H_oscilador_quantico" class="eqnalign">
+<math id="eqn5" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mspace width="0.167em" /><mi>m</mi></mrow></mfrac></mstyle><mspace width="0.167em" /><msup><mover><mrow><mrow><mi mathvariant="normal">p</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>k</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mspace width="0.167em" /><msup><mover><mrow><mrow><mi mathvariant="normal">x</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup></mstyle></mrow></math>
+<div class="eqn">(5.2)</div>
+</div>
+<p>
+onde <math id="eqn6" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">x</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> e <math id="eqn7" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">p</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> são os operadores de
+posição e quantidade de movimento.
+</p>
+<p>
+Os valores próprios desse operador são os possíveis valores da energia
+mecânica do sistema, <math id="eqn8" display="inline"><mrow><mi>E</mi></mrow></math>. Para determinar esses possíveis valores,
+teremos de resolver o problema de valores próprios do hamiltoniano:
+</p>
+</p>
+<div class="eqnalign">
+<math id="eqn9" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi><mo>=</mo><mi>E</mi><mspace width="0.167em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(5.3)</div>
+</div>
+<p>
+onde <math id="eqn10" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi></mrow></math> é um vetor próprio, normalizado.
+</p>
+<p>
+Aparentemente o hamiltoniano depende de dois parámetros, <math id="eqn11" display="inline"><mrow><mi>m</mi></mrow></math> e <math id="eqn12" display="inline"><mrow><mi>k</mi></mrow></math>,
+mas na realidade é necessário apenas um parámetro <math id="eqn13" display="inline"><mrow><mi>ω</mi></mrow></math>. Isso pode
+ser demonstrado introduzindo novos operadores de posição e quantidade
+de movimento, definidos da forma seguinte:
+</p>
+<div id="eq:operadores_X_P" class="eqnalign">
+<math id="eqn14" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mo stretchy="false">(</mo><mi>m</mi><mspace width="0.167em" /><mi>k</mi><msup><mo stretchy="false">)</mo><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></msup><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">x</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="2em" /><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mo stretchy="false">(</mo><mi>m</mi><mspace width="0.167em" /><mi>k</mi><msup><mo stretchy="false">)</mo><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></msup></mrow></mfrac></mstyle><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">p</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+<div class="eqn">(5.4)</div>
+</div>
+<p>
+e a expressão do hamiltoniano em função desses novos operadores é,
+</p>
+<div id="eq:H_oscilador" class="eqnalign">
+<math id="eqn15" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>ω</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msup><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo>+</mo><msup><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(5.5)</div>
+</div>
+<p>
+onde a <span class="concept">frequência angular</span> <math id="eqn16" display="inline"><mrow><mi>ω</mi></mrow></math> é definida por:
+</p>
+<div id="eq:omega" class="eqnalign">
+<math id="eqn17" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>ω</mi><mo>=</mo><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>k</mi></mrow><mrow><mi>m</mi></mrow></mfrac></mstyle></mrow></msqrt></mstyle></mrow></math>
+<div class="eqn">(5.6)</div>
+</div>
+<p>
+Observe-se que <math id="eqn18" display="inline"><mrow><mi>ω</mi></mrow></math> tem unidades de frequência (inverso do tempo)
+e os operadores <math id="eqn19" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup></mrow></math> e <math id="eqn20" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup></mrow></math> têm ambos unidades
+de energia vezes tempo. Os valores próprios de <math id="eqn21" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup></mrow></math> e <math id="eqn22" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup></mrow></math>
+são os valores próprios de <math id="eqn23" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> e <math id="eqn24" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, ao quadrado, que são
+números positivos ou zero. Como tal, os valores próprios do
+hamiltoniano não poderão ser valores negativos: <math id="eqn25" display="inline"><mrow><mi>E</mi><mo>≥</mo><mn>0</mn></mrow></math>. 
+</p>
+<p>
+Usando a definição (<a href="#eq:operadores_X_P">5.4</a>) dos operadores
+<math id="eqn26" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> e <math id="eqn27" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> o seu comutador é:
+</p>
+<div class="eqnalign">
+<math id="eqn28" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">x</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mover><mrow><mrow><mi mathvariant="normal">p</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mover><mrow><mrow><mi mathvariant="normal">p</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mover><mrow><mrow><mi mathvariant="normal">x</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">x</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">p</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo></mstyle></mrow></math>
+<div class="eqn">(5.7)</div>
+</div>
+<p>
+e, como vimos no capítulo anterior, o comutador dos operadores de
+posição e quantidade de movimento é igual <math id="eqn29" display="inline"><mrow><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>ℏ</mi></mrow></math>:
+</p>
+<div id="eq:comutador_X_P" class="eqnalign">
+<math id="eqn30" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>ℏ</mi></mstyle></mrow></math>
+<div class="eqn">(5.8)</div>
+</div>
+</section>
+<section>
+<h2>5.2. Operadores de escada</h2>
+<p>
+A forma do hamiltoniano (<a href="#eq:H_oscilador">5.5</a>) faz lembrar o produto entre
+um número complexo e o seu conjugado; neste caso:
+</p>
+<div class="eqnalign">
+<math id="eqn31" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo>+</mo><msup><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(5.9)</div>
+</div>
+<p>
+o ultimo termo, entre parênteses, é o comutador de <math id="eqn32" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>
+e <math id="eqn33" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, que é igual a <math id="eqn34" display="inline"><mrow><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mi>ℏ</mi></mrow></math>. Como tal,
+</p>
+<div id="eq:X2_P2" class="eqnalign">
+<math id="eqn35" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><msup><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo>+</mo><msup><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo>−</mo><mi>ℏ</mi></mstyle></mrow></math>
+<div class="eqn">(5.10)</div>
+</div>
+<p>
+Vamos definir um operador, designado por <span class="concept">operador de abaixamento</span>
+(o fator <math id="eqn36" display="inline"><mrow><msqrt><mrow><mi>ℏ</mi></mrow></msqrt></mrow></math> no denominador garante que seja um operador
+sem unidades):
+</p>
+<div id="eq:abaixamento" class="eqnalign">
+<span class="boxed" style="padding-bottom:14pt;">
+<math id="eqn37" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn><mspace width="0.167em" /><mi>ℏ</mi></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</span>
+<div class="eqn">(5.11)</div>
+</div>
+<p>
+e o seu operador adjunto, designado por <span class="concept">operador de levantamento</span>, é:
+</p>
+<div id="eq:levantamento" class="eqnalign">
+<span class="boxed" style="padding-bottom:14pt;">
+<math id="eqn38" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn><mspace width="0.167em" /><mi>ℏ</mi></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</span>
+<div class="eqn">(5.12)</div>
+</div>
+<p>
+Conjuntamente, estes dois operadores designam-se
+<span class="concept">operadores de escada</span> e, em função deles, a expressão (<a href="#eq:X2_P2">5.10</a>)
+escreve-se:
+</p>
+<div class="eqnalign">
+<math id="eqn39" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msup><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo>+</mo><msup><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msup><mo>−</mo><mi>ℏ</mi><mo>=</mo><mn>2</mn><mspace width="0.167em" /><mi>ℏ</mi><mspace width="0.167em" /><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+<div class="eqn">(5.13)</div>
+</div>
+<p>
+E o hamiltoniano (<a href="#eq:H_oscilador">5.5</a>) é então:
+</p>
+<div id="eq:H_escada" class="eqnalign">
+<span class="boxed" style="padding-bottom:12pt;padding-top:8pt">
+<math id="eqn40" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</span>
+<div class="eqn">(5.14)</div>
+</div>
+<p>
+Os operadores de escada não são hermíticos, mas o operador
+<math id="eqn41" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> sim é hermítico, e sem unidades.
+</p>
+<p>
+O comutador dos operadores de escada é igual a 1, como pode
+mostrar-se substituindo as suas definições e usando o valor do
+comutador dos operadores de posição e quantidade de movimento:
+</p>
+<div class="eqnalign">
+<math id="eqn42" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">]</mo><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mspace width="0.167em" /><mi>ℏ</mi></mrow></mfrac></mstyle><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow><mrow><mi>ℏ</mi></mrow></mfrac></mstyle><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">X</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">P</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mn>1</mn></mstyle></mrow></math>
+<div class="eqn">(5.15)</div>
+</div>
+<p>
+E o comutador do hamiltoniano (<a href="#eq:H_escada">5.14</a>) com os operadores de
+escada é:
+</p>
+<div id="eq:comutador_H_abaixamento" class="eqnalign">
+<math id="eqn43" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>=</mo><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>=</mo><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mo>−</mo><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+<div class="eqn">(5.16)</div>
+</div>
+</p>
+<div id="eq:comutador_H_levantamento" class="eqnalign">
+<math id="eqn44" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">]</mo><mo>=</mo><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mo>,</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="true" fence="true" form="postfix">]</mo></mrow><mo>=</mo><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">]</mo><mo>+</mo><mo stretchy="false">[</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo>,</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">]</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mspace width="0.167em" /><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mstyle></mrow></math>
+<div class="eqn">(5.17)</div>
+</div>
+</section>
+<section>
+<h2>5.3. Espetro de energia do oscilador harmónico</h2>
+<p>
+Se <math id="eqn45" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi></mrow></math> for vetor próprio do hamiltoniano,
+correspondente ao valor próprio <math id="eqn46" display="inline"><mrow><mi>E</mi></mrow></math> de energia,
+</p>
+<div class="eqnalign">
+<math id="eqn47" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi><mo>=</mo><mi>E</mi><mspace width="0.167em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(5.18)</div>
+</div>
+<p>
+Consideremos agora o ket <math id="eqn48" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi></mrow></math>. O
+hamiltoniano atuando nesse ket é igual a:
+</p>
+<div class="eqnalign">
+<math id="eqn49" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo><mo>+</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(5.19)</div>
+</div>
+<p>
+e, usando a expressão (<a href="#eq:comutador_H_abaixamento">5.16</a>) obtém-se:
+</p>
+<div class="eqnalign">
+<math id="eqn50" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi><mo>=</mo><mo stretchy="false">(</mo><mi>E</mi><mo>−</mo><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mo stretchy="false">)</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(5.20)</div>
+</div>
+<p>
+Isto mostra que <math id="eqn51" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi></mrow></math> é também vetor próprio do
+hamiltoniano, mas com energia <math id="eqn52" display="inline"><mrow><mi>E</mi><mo>−</mo><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi></mrow></math>. O quadrado da norma
+de <math id="eqn53" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> é:
+</p>
+<div id="eq:norma_abaixamento" class="eqnalign">
+<math id="eqn54" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">E</mi></mrow><mo stretchy="false">|</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">E</mi></mrow><mo stretchy="false">|</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow><mrow><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>E</mi></mrow><mrow><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(5.21)</div>
+</div>
+<p>
+Aplicando sucessivamente o operador de abaixamento ao ket
+<math id="eqn55" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">E</mi></mrow><mi>⟩</mi></mrow></math>, conclui-se que <math id="eqn56" display="inline"><mrow><mi>E</mi><mo>−</mo><mn>2</mn><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi></mrow></math>,
+<math id="eqn57" display="inline"><mrow><mi>E</mi><mo>−</mo><mn>3</mn><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi></mrow></math>, &hellip; também são valores próprios da
+energia. Como esses valores próprios da energia não podem ser
+negativos, deverá existir um valor mínimo da energia, <math id="eqn58" display="inline"><mrow><msub><mi>E</mi><mi>o</mi></msub></mrow></math>, que
+quando aplicarmos no respetivo vetor próprio o operador de
+abaixamento, o resultado seja o ket nulo, com norma igual a
+zero. Igualando a zero a expressão (<a href="#eq:norma_abaixamento">5.21</a>) do
+quadrado da norma de <math id="eqn59" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mn>0</mn></msub><mi>⟩</mi></mrow></math>, obtemos o valor
+mínimo da energia:
+</p>
+<div id="eq:energia_minima" class="eqnalign">
+<math id="eqn60" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>E</mi><mn>0</mn></msub><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(5.22)</div>
+</div>
+<p>
+Seja <math id="eqn61" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mn>0</mn></msub><mi>⟩</mi><mo>=</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mn>0</mn></msub><mi>⟩</mi></mrow></math>. O hamiltoniano
+atuando nesse ket dá:
+</p>
+<div class="eqnalign">
+<math id="eqn62" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mn>0</mn></msub><mi>⟩</mi><mo>=</mo><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mspace width="0.167em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mn>0</mn></msub><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">[</mo><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>,</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">]</mo><mo>+</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mn>0</mn></msub><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(5.23)</div>
+</div>
+<p>
+e, usando a expressão (<a href="#eq:comutador_H_levantamento">5.17</a>) obtém-se:
+</p>
+<div class="eqnalign">
+<math id="eqn63" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mn>0</mn></msub><mi>⟩</mi><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mspace width="0.167em" /><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mn>0</mn></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>3</mn><mspace width="0.167em" /><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mn>0</mn></msub><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(5.24)</div>
+</div>
+<p>
+Isto mostra que <math id="eqn64" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mn>0</mn></msub><mi>⟩</mi></mrow></math> é também vetor próprio do
+hamiltoniano, mas com energia <math id="eqn65" display="inline"><mrow><mn>3</mn><mspace width="0.167em" /><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mo>/</mo><mn>2</mn></mrow></math>. Aplicando
+sucessivamente o operador de elevamento, <math id="eqn66" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mrow></math>, obtemos
+que <math id="eqn67" display="inline"><mrow><mn>5</mn><mspace width="0.167em" /><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mo>/</mo><mn>2</mn></mrow></math>, <math id="eqn68" display="inline"><mrow><mn>7</mn><mspace width="0.167em" /><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi><mo>/</mo><mn>2</mn></mrow></math>, &hellip; também são valores
+próprios. Como tal, os valores próprios do hamiltoniano do oscilador
+harmónico simples são:
+</p>
+</p>
+<div class="eqnalign">
+<span class="boxed" style="padding-bottom:12pt;padding-top:8pt">
+<math id="eqn69" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>E</mi><mi>n</mi></msub><mo>=</mo><mi>ℏ</mi><mi>ω</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>n</mi><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mspace width="1em" /><mo stretchy="false">(</mo><mi>n</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi>…</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+</span>
+<div class="eqn">(5.25)</div>
+</div>
+<p>
+O efeito do operador de abaixamento num dos estados próprios
+<math id="eqn70" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mi>n</mi></msub><mi>⟩</mi></mrow></math> é o estado <math id="eqn71" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mi>⟩</mi></mrow></math> multiplicado
+por uma constante, constante essa igual à raiz quadrada do valor
+calculado na equação (<a href="#eq:norma_abaixamento">5.21</a>). Temos assim que,
+</p>
+<div id="eq:opa_En" class="eqnalign">
+<span class="boxed" style="padding-bottom:12pt;padding-top:8pt">
+<math id="eqn72" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mi>n</mi></msub><mi>⟩</mi><mo>=</mo><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>E</mi><mi>n</mi></msub></mrow><mrow><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></msqrt><mspace width="0.278em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mi>⟩</mi></mstyle></mrow></math>
+</span>
+<div class="eqn">(5.26)</div>
+</div>
+<p>
+Já <math id="eqn73" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>n</mi></msub><mi>⟩</mi><mo>=</mo><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mi>n</mi></msub><mi>⟩</mi></mrow></math> é proporcional a
+<math id="eqn74" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mi>⟩</mi></mrow></math>, e como,
+</p>
+<div id="eq:norma_levantamento" class="eqnalign">
+<math id="eqn75" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>n</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>n</mi></msub><mi>⟩</mi><mo>=</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">E</mi></mrow><mi>n</mi></msub><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mi>n</mi></msub><mi>⟩</mi><mo>=</mo><mi>⟨</mi><msub><mrow><mi mathvariant="normal">E</mi></mrow><mi>n</mi></msub><mo stretchy="false">|</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mover><mrow><mrow><mi mathvariant="normal">H</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow><mrow><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mi>n</mi></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>E</mi><mi>n</mi></msub></mrow><mrow><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(5.27)</div>
+</div>
+<p>
+O efeito do operador de levantamento num estado próprio da energia é:
+</p>
+</p>
+<div class="eqnalign">
+<span class="boxed" style="padding-bottom:12pt;padding-top:8pt">
+<math id="eqn76" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msup><mover><mrow><mrow><mi mathvariant="normal">a</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mi>n</mi></msub><mi>⟩</mi><mo>=</mo><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>E</mi><mi>n</mi></msub></mrow><mrow><mi>ℏ</mi><mspace width="0.167em" /><mi>ω</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mrow></msqrt><mspace width="0.278em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">E</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mi>⟩</mi></mstyle></mrow></math>
+</span>
+<div class="eqn">(5.28)</div>
+</div>
+</section>
+<footer>
+<p>&copy; 2025, Jaime E. Villate</p>
+<p>Publicado nos termos da <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/">Licença
+Creative Commons Attribuição-Partilha</a> (versão 4.0).</p>
+<span>Última modificação: 2025/11/12 10:46:14 UTC</span>
+</footer>
+</body>
+</html>
