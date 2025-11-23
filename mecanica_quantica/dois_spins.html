@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introdução à Mecânica Quântica &ndash; Capítulo 7</title>
+<!--Generated on Sun Nov 23 18:14:04 WET 2025 by latextohtml.tcl, by J. Villate -->
+<link rel="stylesheet" href="../css/book.css">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="alternate icon" href="../img/favicon.ico">
+</head>
+<body id="top">
+<header style="background-image:url(../img/quantum.png);
+background-repeat:no-repeat;
+background-position:right center">
+<h1>Introdução à Mecânica Quântica</h1>
+<p>Jaime E. Villate.<br>
+Universidade do Porto, Portugal, 2025.</p>
+</header>
+<div class="menu">
+<button class="menubtn">&#9776;</button>
+<div class="menu-content">
+<a href="../pt/index.html">Início</a>
+<a href="../pt/books.html">Livros livres</a>
+<a href="index.html">Mecânica Quântica</a>
+</div>
+</div>
+<section>
+<h1>7. Combinação de spins</h1>
+<h2>7.1. Produto externo de espaços vetoriais</h2>
+<p>
+Vamos considerar um sistema que é a combinação de dois sistemas com
+spin. Em cada um desses sistemas usaremos como base os dois estados
+próprios da matriz <math id="eqn1" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub></mrow></math>:
+<math id="eqn2" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mo>+</mo></msub><mi>⟩</mi><mo>,</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mo>−</mo></msub><mi>⟩</mi><mo stretchy="false">}</mo></mrow></math>. Para distinguir os
+operadores que atuam no primeiro sistema dos que atuam no segundo
+sistema, usaremos índices 1 e 2. Assim por exemplo, os operadores de
+spin no primeiro sistema são <math id="eqn3" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>x</mi></mrow></msub></mrow></math>,
+<math id="eqn4" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>y</mi></mrow></msub></mrow></math> e <math id="eqn5" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub></mrow></math>, e os operadores de spin
+no segundo sistema são <math id="eqn6" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>2</mn><mi>x</mi></mrow></msub></mrow></math>,
+<math id="eqn7" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>2</mn><mi>y</mi></mrow></msub></mrow></math> e <math id="eqn8" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>2</mn><mi>z</mi></mrow></msub></mrow></math>. Ambos são representados
+pelas matrizes de Pauli.
+</p>
+<p>
+O sistema combinado, de dimensão 4, é o <span class="concept">produto externo</span> dos
+dois espaços de dimensão 2. A base que usaremos nesse espaço é a combinação
+das bases dos dois sistemas, representada por:
+</p>
+<div id="eq:base_4" class="eqnalign">
+<math id="eqn9" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mo>+</mo></msub><mo>,</mo><mrow><msub><mi mathvariant="normal">z</mi><mo>+</mo></msub></mrow><mi>⟩</mi><mo>,</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mo>+</mo></msub><mo>,</mo><mrow><msub><mi mathvariant="normal">z</mi><mo>−</mo></msub></mrow><mi>⟩</mi><mo>,</mo><mo stretchy="false">|</mo><mrow><msub><mi mathvariant="normal">z</mi><mo>−</mo></msub></mrow><mo>,</mo><mrow><msub><mi mathvariant="normal">z</mi><mo>+</mo></msub></mrow><mi>⟩</mi><mo>,</mo><mo stretchy="false">|</mo><mrow><msub><mi mathvariant="normal">z</mi><mo>−</mo></msub></mrow><mo>,</mo><mrow><msub><mi mathvariant="normal">z</mi><mo>−</mo></msub></mrow><mi>⟩</mi><mo stretchy="false">}</mo></mstyle></mrow></math>
+<div class="eqn">(7.1)</div>
+</div>
+<p>
+Cada ket <math id="eqn10" display="inline"><mrow><mo stretchy="false">|</mo><mrow><msub><mi mathvariant="normal">z</mi><mi mathvariant="normal">j</mi></msub></mrow><mo>,</mo><mrow><msub><mi mathvariant="normal">z</mi><mi mathvariant="normal">k</mi></msub></mrow><mi>⟩</mi></mrow></math> é o produto externo
+<math id="eqn11" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>j</mi></msub><mi>⟩</mi><mo>⊗</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>k</mi></msub><mi>⟩</mi></mrow></math> de um ket da base do
+primeiro sistema e um ket da base do segundo sistema. O produto
+interno entre dois desses kets calcula-se da forma seguinte:
+</p>
+<div class="eqnalign">
+<math id="eqn12" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mrow><msub><mi mathvariant="normal">z</mi><mi mathvariant="normal">j</mi></msub></mrow><mo>,</mo><mrow><msub><mi mathvariant="normal">z</mi><mi mathvariant="normal">k</mi></msub></mrow><mo stretchy="false">|</mo><mrow><msub><mi mathvariant="normal">z</mi><mi mathvariant="normal">l</mi></msub></mrow><mo>,</mo><mrow><msub><mi mathvariant="normal">z</mi><mi mathvariant="normal">m</mi></msub></mrow><mi>⟩</mi><mo>=</mo><mi>⟨</mi><mrow><msub><mi mathvariant="normal">z</mi><mi mathvariant="normal">j</mi></msub></mrow><mo stretchy="false">|</mo><mrow><msub><mi mathvariant="normal">z</mi><mi mathvariant="normal">l</mi></msub></mrow><mi>⟩</mi><mi>⟨</mi><mrow><msub><mi mathvariant="normal">z</mi><mi mathvariant="normal">k</mi></msub></mrow><mo stretchy="false">|</mo><mrow><msub><mi mathvariant="normal">z</mi><mi mathvariant="normal">m</mi></msub></mrow><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(7.2)</div>
+</div>
+<p>
+Como tal, a base do sistema combinado é também uma base ortonormal:
+</p>
+<div id="eq:ortonormal_4" class="eqnalign">
+<math id="eqn13" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>j</mi></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>k</mi></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>l</mi></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>m</mi></msub><mi>⟩</mi><mo>=</mo><msub><mi>δ</mi><mrow><mi>j</mi><mi>l</mi></mrow></msub><msub><mi>δ</mi><mrow><mi>k</mi><mi>m</mi></mrow></msub><mspace width="2em" /><mo stretchy="false">(</mo><mi>j</mi><mo>,</mo><mi>k</mi><mo>,</mo><mi>l</mi><mo>,</mo><mi>m</mi><mo>=</mo><mo>+</mo><mo>,</mo><mo>−</mo><mo stretchy="false">)</mo></mstyle></mrow></math>
+<div class="eqn">(7.3)</div>
+</div>
+<p>
+Um operador linear nesse espaço de dimensão 4 é definido pelo seu
+resultado quando atua nos 4 elementos da base (<a href="#eq:base_4">7.1</a>). Em
+particular, um operador escrito como <math id="eqn14" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mn>1</mn></msub><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">Λ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msub></mrow></math>,
+corresponde a dois operadores no espaço de dimensão 2; o primeiro
+operador, <math id="eqn15" display="inline"><mrow><mover><mrow><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, atua na primeira parte do ket
+<math id="eqn16" display="inline"><mrow><mo stretchy="false">|</mo><mrow><msub><mi mathvariant="normal">z</mi><mi mathvariant="normal">j</mi></msub></mrow><mo>,</mo><mrow><msub><mi mathvariant="normal">z</mi><mi mathvariant="normal">k</mi></msub></mrow><mi>⟩</mi></mrow></math>, e o segundo operador,
+<math id="eqn17" display="inline"><mrow><mover><mrow><mrow><mrow><mi mathvariant="normal">Λ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math>, atua na segunda parte. Dois exemplos são os seguintes:
+</p>
+</p>
+<div class="eqnalign">
+<math id="eqn18" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>2</mn><mi>z</mi></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>j</mi></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>k</mi></msub><mi>⟩</mi><mo>=</mo><mi>j</mi><mi>k</mi><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>j</mi></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>k</mi></msub><mi>⟩</mi><mspace width="2em" /><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>x</mi></mrow></msub><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>2</mn><mi>y</mi></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>j</mi></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>k</mi></msub><mi>⟩</mi><mo>=</mo><mi>k</mi><mspace width="0.167em" /><mrow><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo><mi>j</mi></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo><mi>k</mi></mrow></msub><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(7.4)</div>
+</div>
+<p>
+Um ket qualquer no espaço dos dois spins pode ser escrito como
+combinação geral da base (<a href="#eq:base_4">7.1</a>):
+</p>
+</p>
+<div id="eq:estado_4" class="eqnalign">
+<math id="eqn19" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi><mo>=</mo><msub><mi>Υ</mi><mrow><mo>+</mo><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Υ</mi><mrow><mo>+</mo><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Υ</mi><mrow><mo>−</mo><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Υ</mi><mrow><mo>−</mo><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(7.5)</div>
+</div>
+<p>
+com quatro componentes <math id="eqn20" display="inline"><mrow><msub><mi>Υ</mi><mrow><mi>j</mi><mi>k</mi></mrow></msub></mrow></math> que podem ser quaisquer
+números complexos.
+</p>
+<p>
+O módulo ao quadrado de cada um desses números,
+<math id="eqn21" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>Υ</mi><mrow><mi>j</mi><mi>k</mi></mrow></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup></mrow></math>, é a probabilidade de se obterem os valores <math id="eqn22" display="inline"><mrow><mi>j</mi></mrow></math>
+e <math id="eqn23" display="inline"><mrow><mi>k</mi></mrow></math> na medição simultânea das componentes <math id="eqn24" display="inline"><mrow><mi>z</mi></mrow></math> dos spins dos dois
+sistemas. Após esse resultado, o estado <math id="eqn25" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi></mrow></math> colapsa para
+<math id="eqn26" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>j</mi></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mi>k</mi></msub><mi>⟩</mi></mrow></math>.
+</p>
+<p>
+A probabilidade de obter, por exemplo, o resultado <math id="eqn27" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math> quando apenas
+a componente <math id="eqn28" display="inline"><mrow><mi>z</mi></mrow></math> do spin do primeiro sistema for medida, seria
+<math id="eqn29" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>Υ</mi><mrow><mo>−</mo><mo>+</mo></mrow></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><msub><mi>Υ</mi><mrow><mi>&</mi><mi>n</mi><mi>d</mi><mi>a</mi><mi>s</mi><mi>h</mi><mi>;</mi></mrow></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup></mrow></math>, e nesse caso o sistema
+colapsava para as duas componentes em que aparece <math id="eqn30" display="inline"><mrow><msub><mi>z</mi><mo>−</mo></msub></mrow></math> na primeira
+posição; esse estado, normalizado, seria:
+</p>
+<div class="eqnalign">
+<math id="eqn31" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>Υ</mi><mrow><mo>−</mo><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Υ</mi><mrow><mo>−</mo><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi></mrow><mrow><msqrt><mrow><mo stretchy="false">|</mo><msub><mi>Υ</mi><mrow><mo>−</mo><mo>+</mo></mrow></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><msub><mi>Υ</mi><mrow><mo>−</mo><mo>−</mo></mrow></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(7.6)</div>
+</div>
+</section>
+<section>
+<h2>7.2. Estados independentes</h2>
+<p>
+Se o estado do primeiro sistema for <math id="eqn32" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> e o estado do segundo
+sistema for <math id="eqn33" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math>, cada um desses estados pode ser escrito em
+função das componentes na base do respetivo espaço de dimensão 2:
+</p>
+</p>
+<div class="eqnalign">
+<math id="eqn34" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mspace width="2em" /><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><msub><mi>Φ</mi><mrow><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Φ</mi><mrow><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(7.7)</div>
+</div>
+<p>
+E a combinação desses dois estados conduz ao seguinte estado no espaço
+combinado dos dois spins:
+</p>
+<div id="eq:estado_combinado" class="eqnalign">
+<math id="eqn35" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo>,</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(7.8)</div>
+</div>
+<p>
+Trata-se de um caso particular do estado geral (<a href="#eq:estado_4">7.5</a>),
+com <math id="eqn36" display="inline"><mrow><msub><mi>Υ</mi><mrow><mi>j</mi><mi>k</mi></mrow></msub><mo>=</mo><msub><mi>Ψ</mi><mrow><mi>j</mi></mrow></msub><msub><mi>Φ</mi><mrow><mi>k</mi></mrow></msub></mrow></math>. Dado um ket geral, escrito na
+forma (<a href="#eq:estado_4">7.5</a>), podemos determinar se corresponde ao
+produto externo de dois estados independentes, se as quatro
+componentes verificam as seguintes duas condições:
+</p>
+</p>
+<div id="eq:prod_externo" class="eqnalign">
+<math id="eqn37" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>Υ</mi><mrow><mo>+</mo><mo>+</mo></mrow></msub></mrow><mrow><msub><mi>Υ</mi><mrow><mo>−</mo><mo>+</mo></mrow></msub></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>Υ</mi><mrow><mo>+</mo><mo>−</mo></mrow></msub></mrow><mrow><msub><mi>Υ</mi><mrow><mo>−</mo><mo>−</mo></mrow></msub></mrow></mfrac></mstyle><mspace width="2em" /><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>Υ</mi><mrow><mo>+</mo><mo>+</mo></mrow></msub></mrow><mrow><msub><mi>Υ</mi><mrow><mo>+</mo><mo>−</mo></mrow></msub></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>Υ</mi><mrow><mo>−</mo><mo>+</mo></mrow></msub></mrow><mrow><msub><mi>Υ</mi><mrow><mo>−</mo><mo>−</mo></mrow></msub></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(7.9)</div>
+</div>
+<p>
+A primeira expressão é igual à relação <math id="eqn38" display="inline"><mrow><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><mo>/</mo><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub></mrow></math> entre
+as componentes do estado do primeiro sistema, e a segunda expressão é
+a relação <math id="eqn39" display="inline"><mrow><msub><mi>Φ</mi><mrow><mo>+</mo></mrow></msub><mo>/</mo><msub><mi>Φ</mi><mrow><mo>−</mo></mrow></msub></mrow></math> entre as componentes do estado do
+segundo sistema. Com essas relações e a condição de que os estados
+estejam normalizados, determinam-se cada um dos estados
+independentes.
+</p>
+</section>
+<section>
+<h2>7.3. Estados entrelaçados</h2>
+<p>
+Quando alguma das duas condições (<a href="#eq:prod_externo">7.9</a>), ou as duas,
+não forem verdadeiras, é impossível escrever o estado como o produto
+externo de dois estados independentes. Nesse caso o estado é
+designado por <span class="concept">entrelaçado</span>. Um exemplo são os seguintes 4
+estados:
+</p>
+<div id="eq:singlet" class="eqnalign">
+<math id="eqn40" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">S</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo>−</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(7.10)</div>
+</div>
+</p>
+<div id="eq:triplet1" class="eqnalign">
+<math id="eqn41" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo>+</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(7.11)</div>
+</div>
+</p>
+<div id="eq:triplet2" class="eqnalign">
+<math id="eqn42" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>2</mn></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(7.12)</div>
+</div>
+</p>
+<div id="eq:triplet3" class="eqnalign">
+<math id="eqn43" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>3</mn></msub><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>−</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(7.13)</div>
+</div>
+<p>
+Por exemplo, no caso de <math id="eqn44" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mrow></math>, o quociente
+<math id="eqn45" display="inline"><mrow><msub><mi>Υ</mi><mrow><mo>+</mo><mo>+</mo></mrow></msub><mo>/</mo><msub><mi>Υ</mi><mrow><mo>−</mo><mo>+</mo></mrow></msub></mrow></math> é igual a infinito, enquanto que
+<math id="eqn46" display="inline"><mrow><msub><mi>Υ</mi><mrow><mo>+</mo><mo>−</mo></mrow></msub><mo>/</mo><msub><mi>Υ</mi><mrow><mi>&</mi><mi>n</mi><mi>d</mi><mi>a</mi><mi>s</mi><mi>h</mi><mi>;</mi></mrow></msub></mrow></math> é igual a zero.  A designação S e
+T é habitual. S vem do inglês <span class="concept">singlet</span> e T do inglês
+<span class="concept">triplet</span>.
+</p>
+<p>
+Quando o estado do sistema combinado é entrelaçado, nada pode ser concluído
+sobre o estado de cada sistema por separado. Mas a medição do spin de
+um dos sistemas permite concluir com que spin ficará o outro
+sistema. Por exemplo, se o estado do sistema combinado for o ket da
+equação (<a href="#eq:singlet">7.10</a>) e medirmos a componente <math id="eqn47" display="inline"><mrow><mi>z</mi></mrow></math> do spin do
+primeiro sistema obtendo o resultado <math id="eqn48" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math>, o estado colapsa para
+<math id="eqn49" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi></mrow></math> e podemos concluir que a
+componente <math id="eqn50" display="inline"><mrow><mi>z</mi></mrow></math> do spin do segundo sistema é igual a <math id="eqn51" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math>.
+</p>
+<p>
+Os quatro estados <math id="eqn52" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">S</mi></mrow><mi>⟩</mi></mrow></math>, <math id="eqn53" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>1</mn></msub><mi>⟩</mi></mrow></math>,
+<math id="eqn54" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mrow></math> e <math id="eqn55" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>3</mn></msub><mi>⟩</mi></mrow></math> são ortogonais entre si e
+têm norma igual a 1. Como tal, constituem uma base ortonormal do
+espaço dos dois spins combinados. Todos os elementos da base são
+estados entrelaçados, mas obviamente algumas combinações lineares
+deles conduzem a estados não entrelaçados.
+</p>
+</section>
+<section>
+<h2>7.4. Valores esperados do spin</h2>
+<p>
+O resultado de aplicar o operador <math id="eqn56" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>x</mi></mrow></msub></mrow></math> no estado
+(<a href="#eq:estado_combinado">7.8</a>) é:
+</p>
+<div class="eqnalign">
+<math id="eqn57" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>x</mi></mrow></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo>,</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(7.14)</div>
+</div>
+<p>
+e, multiplicando pelo bra correspondente ao ket
+(<a href="#eq:estado_combinado">7.8</a>), obtém-se o valor esperado de
+<math id="eqn58" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mi>x</mi></msub></mrow></math> nesse estado:
+</p>
+<div id="eq:esperado_sx" class="eqnalign">
+<math id="eqn59" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>x</mi></mrow></msub><mi>⟩</mi><mo>=</mo><msubsup><mi>Ψ</mi><mrow><mo>+</mo></mrow><mo>*</mo></msubsup><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><mo>+</mo><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><msubsup><mi>Ψ</mi><mrow><mo>−</mo></mrow><mo>*</mo></msubsup></mstyle></mrow></math>
+<div class="eqn">(7.15)</div>
+</div>
+<p>
+onde foi usada a condição de normalizaçao de <math id="eqn60" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math>,
+nomeadamente, <math id="eqn61" display="inline"><mrow><msubsup><mi>Φ</mi><mrow><mo>+</mo></mrow><mo>*</mo></msubsup><msub><mi>Φ</mi><mrow><mo>+</mo></mrow></msub><mo>+</mo><msubsup><mi>Φ</mi><mrow><mo>−</mo></mrow><mo>*</mo></msubsup><msub><mi>Φ</mi><mrow><mo>−</mo></mrow></msub><mo>=</mo><mn>1</mn></mrow></math>.
+</p>
+<p>
+De forma análoga, aplicando <math id="eqn62" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>y</mi></mrow></msub></mrow></math> no estado
+(<a href="#eq:estado_combinado">7.8</a>) obtém-se:
+</p>
+<div class="eqnalign">
+<math id="eqn63" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>y</mi></mrow></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo>,</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(7.16)</div>
+</div>
+<p>
+E o valor esperado de <math id="eqn64" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mi>y</mi></msub></mrow></math> nesse estado é:
+</p>
+<div id="eq:esperado_sy" class="eqnalign">
+<math id="eqn65" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>y</mi></mrow></msub><mi>⟩</mi><mo>=</mo><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><msubsup><mi>Ψ</mi><mrow><mo>+</mo></mrow><mo>*</mo></msubsup><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><msubsup><mi>Ψ</mi><mrow><mo>−</mo></mrow><mo>*</mo></msubsup></mstyle></mrow></math>
+<div class="eqn">(7.17)</div>
+</div>
+<p>
+Já no caso do operador <math id="eqn66" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub></mrow></math>,
+</p>
+<div class="eqnalign">
+<math id="eqn67" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo>,</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo>−</mo><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>+</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>−</mo><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><msub><mi>Φ</mi><mrow><mo>−</mo></mrow></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(7.18)</div>
+</div>
+<p>
+E o valor esperado de <math id="eqn68" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mi>z</mi></msub></mrow></math> é:
+</p>
+<div id="eq:esperado_sz" class="eqnalign">
+<math id="eqn69" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub><mi>⟩</mi><mo>=</mo><msubsup><mi>Ψ</mi><mrow><mo>+</mo></mrow><mo>*</mo></msubsup><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><mo>−</mo><msubsup><mi>Ψ</mi><mrow><mo>−</mo></mrow><mo>*</mo></msubsup><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub></mstyle></mrow></math>
+<div class="eqn">(7.19)</div>
+</div>
+<p>
+Os resultados (<a href="#eq:esperado_sx">7.15</a>), (<a href="#eq:esperado_sy">7.17</a>) e
+(<a href="#eq:esperado_sz">7.19</a>) mostram que os valores esperados das
+componentes do spin do primeiro sistema são independentes do estado do
+segundo sistema.
+</p>
+<p>
+A soma dos quadrados dos valores esperados dos três operadores de spin
+é:
+</p>
+<div class="eqnalign">
+<math id="eqn70" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>x</mi></mrow></msub><msup><mi>⟩</mi><mn>2</mn></msup><mo>+</mo><mi>⟨</mi><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>y</mi></mrow></msub><msup><mi>⟩</mi><mn>2</mn></msup><mo>+</mo><mi>⟨</mi><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub><msup><mi>⟩</mi><mn>2</mn></msup><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msubsup><mi>Ψ</mi><mrow><mo>+</mo></mrow><mo>*</mo></msubsup><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><mo>+</mo><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><msubsup><mi>Ψ</mi><mrow><mo>−</mo></mrow><mo>*</mo></msubsup><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>−</mo><msup><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msubsup><mi>Ψ</mi><mrow><mo>+</mo></mrow><mo>*</mo></msubsup><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><mo>−</mo><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><msubsup><mi>Ψ</mi><mrow><mo>−</mo></mrow><mo>*</mo></msubsup><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mstyle></mrow></math>
+<br><math id="eqn71" display="inline"><mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mo>+</mo><msup><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><msubsup><mi>Ψ</mi><mrow><mo>+</mo></mrow><mo>*</mo></msubsup><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub><mo>−</mo><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub><msubsup><mi>Ψ</mi><mrow><mo>−</mo></mrow><mo>*</mo></msubsup><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>1</mn></mstyle></mrow></math>
+<div class="eqn">(7.20)</div>
+</div>
+<p>
+Dependendo dos valores das componentes <math id="eqn72" display="inline"><mrow><msub><mi>Ψ</mi><mrow><mo>+</mo></mrow></msub></mrow></math> e <math id="eqn73" display="inline"><mrow><msub><mi>Ψ</mi><mrow><mo>−</mo></mrow></msub></mrow></math> o
+valor esperado do vetor spin terá diferentes componentes <math id="eqn74" display="inline"><mrow><mi>x</mi></mrow></math>, <math id="eqn75" display="inline"><mrow><mi>y</mi></mrow></math> e
+<math id="eqn76" display="inline"><mrow><mi>z</mi></mrow></math>, mas o seu módulo será sempre igual a 1.
+</p>
+<p>
+Vejamos agora como será o valor esperado do spin do primeiro
+sistema, se o estado combinado dos dois sistemas for um estado
+entrelaçado. Por exemplo, se o estado for o ket <math id="eqn77" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">S</mi></mrow><mi>⟩</mi></mrow></math> da equação
+(<a href="#eq:singlet">7.10</a>), os valores esperados das três componentes do spin
+do primeiro sistema serão:
+</p>
+<div class="eqnalign">
+<math id="eqn78" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>x</mi></mrow></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">S</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo>−</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mspace width="1em" /><mi>⟹</mi><mspace width="1em" /><mi>⟨</mi><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>x</mi></mrow></msub><mi>⟩</mi><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+<div class="eqn">(7.21)</div>
+</div>
+</p>
+<div class="eqnalign">
+<math id="eqn79" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>y</mi></mrow></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">S</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo>+</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mspace width="1em" /><mi>⟹</mi><mspace width="1em" /><mi>⟨</mi><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>y</mi></mrow></msub><mi>⟩</mi><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+<div class="eqn">(7.22)</div>
+</div>
+</p>
+<div class="eqnalign">
+<math id="eqn80" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">S</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo>+</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mspace width="1em" /><mi>⟹</mi><mspace width="1em" /><mi>⟨</mi><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub><mi>⟩</mi><mo>=</mo><mn>0</mn></mstyle></mrow></math>
+<div class="eqn">(7.23)</div>
+</div>
+<p>
+O valor esperado de cada uma das três componentes é nulo, e o valor
+esperado do vetor é também nulo. O mesmo acontece se o estado for
+qualquer outro dos estados entrelaçados <math id="eqn81" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>1</mn></msub><mi>⟩</mi></mrow></math>,
+<math id="eqn82" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mrow></math> ou <math id="eqn83" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>3</mn></msub><mi>⟩</mi></mrow></math>.
+</p>
+<p>
+Aplicando simultaneamente os operadores <math id="eqn84" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub></mrow></math> e
+<math id="eqn85" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>2</mn><mi>z</mi></mrow></msub></mrow></math>, ao estado (<a href="#eq:singlet">7.10</a>) obtém-se:
+</p>
+<div class="eqnalign">
+<math id="eqn86" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>2</mn><mi>z</mi></mrow></msub><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">S</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo>−</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo>+</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mo>−</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">S</mi></mrow><mi>⟩</mi></mstyle></mrow></math>
+<div class="eqn">(7.24)</div>
+</div>
+<p>
+isto é, <math id="eqn87" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">S</mi></mrow><mi>⟩</mi></mrow></math> é vetor próprio de
+<math id="eqn88" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>2</mn><mi>z</mi></mrow></msub></mrow></math> com valor próprio <math id="eqn89" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math>. A
+medição simultânea da componente <math id="eqn90" display="inline"><mrow><mi>z</mi></mrow></math> do spin dos dois sistemas dá
+metade das vezes <math id="eqn91" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math> para o primeiro sistema e <math id="eqn92" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math> para o segundo
+sistema, e a outra metade das vezes dá <math id="eqn93" display="inline"><mrow><mn>1</mn></mrow></math> para o primeiro sistema e
+<math id="eqn94" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math> para o segundo sistema. O produto dos resultados obtidos para os dois
+sistemas é sempre <math id="eqn95" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math>. 
+</p>
+<p>
+O mesmo resultado obtém-se para o estado <math id="eqn96" display="inline"><mrow><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>1</mn></msub></mrow></math>, que também é
+vetor próprio de <math id="eqn97" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>2</mn><mi>z</mi></mrow></msub></mrow></math> com valor
+próprio <math id="eqn98" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math>. Já <math id="eqn99" display="inline"><mrow><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>2</mn></msub></mrow></math> e <math id="eqn100" display="inline"><mrow><msub><mrow><mi mathvariant="normal">T</mi></mrow><mn>3</mn></msub></mrow></math> são vetores próprios
+de <math id="eqn101" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>1</mn><mi>z</mi></mrow></msub><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">σ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mrow><mn>2</mn><mi>z</mi></mrow></msub></mrow></math> com valor próprio <math id="eqn102" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math>. A
+medição da componente <math id="eqn103" display="inline"><mrow><mi>z</mi></mrow></math> dos spins dos dois sistemas dá sempre o
+mesmo resultado nos dois sistemas; metade das vezes obtém-se <math id="eqn104" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math> em
+ambos sistemas, e a outra metade das vezes obtém-se <math id="eqn105" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math> nos dois.
+Esta propriedade dos estados entrelaçados é usada em criptografia
+quântica e em <span class="concept">teleportação</span> (envio de informação entre locais
+remotos, de forma instantânea).
+</p>
+</section>
+<section>
+<h2>7.5. Representação matricial</h2>
+<p>
+Os kets no espaço de dimensão 4 podem ser representados por matrizes
+com uma coluna e quatro linhas, que são as quatro componentes do ket
+na base usada. O respetivo bra será uma matriz de uma linha e quatro
+colunas, em que cada coluna é o conjugado complexo da respetiva
+componente:
+</p>
+</p>
+<div class="eqnalign">
+<math id="eqn106" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi><mo>=</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>Υ</mi><mrow><mo>+</mo><mo>+</mo></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Υ</mi><mrow><mo>+</mo><mo>−</mo></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Υ</mi><mrow><mo>−</mo><mo>+</mo></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Υ</mi><mrow><mo>−</mo><mo>−</mo></mrow></msub></mtd></mtr></mtable><mo>]</mo><mspace width="2em" /><mspace width="2em" /><mi>⟨</mi><mrow><mi mathvariant="normal">Υ</mi></mrow><mo stretchy="false">|</mo><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">[</mo><msubsup><mi>Υ</mi><mrow><mo>+</mo><mo>+</mo></mrow><mo>*</mo></msubsup><mspace width="0.278em" /><msubsup><mi>Υ</mi><mrow><mo>+</mo><mo>−</mo></mrow><mo>*</mo></msubsup><mspace width="0.278em" /><msubsup><mi>Υ</mi><mrow><mo>−</mo><mo>+</mo></mrow><mo>*</mo></msubsup><mspace width="0.278em" /><msubsup><mi>Υ</mi><mrow><mo>+</mo><mo>−</mo></mrow><mo>*</mo></msubsup><mo stretchy="true" fence="true" form="postfix">]</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(7.25)</div>
+</div>
+<p>
+Se as matrizes de dois operadores <math id="eqn107" display="inline"><mrow><mover><mrow><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> e <math id="eqn108" display="inline"><mrow><mover><mrow><mrow><mrow><mi mathvariant="normal">Λ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> que
+atuam em cada um dos sistemas por separado são:
+</p>
+<div class="eqnalign">
+<math id="eqn109" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub></mtd></mtr></mtable><mo>]</mo><mspace width="2em" /><mover><mrow><mrow><mrow><mi mathvariant="normal">Λ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mo>=</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>Λ</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>Λ</mi><mrow><mn>12</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Λ</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Λ</mi><mrow><mn>22</mn></mrow></msub></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+<div class="eqn">(7.26)</div>
+</div>
+<p>
+O efeito do produto externo <math id="eqn110" display="inline"><mrow><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mn>1</mn></msub><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">Λ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msub></mrow></math> entre esses
+operadores, num ket do espaço combinado é o de multiplicar a matriz do
+ket, à esquerda, pela matriz:
+</p>
+</p>
+<div class="eqnalign">
+<math id="eqn111" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mn>1</mn></msub><msub><mover><mrow><mrow><mrow><mi mathvariant="normal">Λ</mi></mrow></mrow></mrow><mo stretchy="false">^</mo></mover><mn>2</mn></msub><mo>=</mo><mo>[</mo><mtable><mtr><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>12</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>12</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>11</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>22</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>12</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>22</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>12</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>11</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>12</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>21</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>22</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>21</mn></mrow></msub></mtd><mtd><msub><mi>Ω</mi><mrow><mn>22</mn></mrow></msub><msub><mi>Λ</mi><mrow><mn>22</mn></mrow></msub></mtd></mtr></mtable><mo>]</mo></mstyle></mrow></math>
+<div class="eqn">(7.27)</div>
+</div>
+<h2>Exercícios</h2>
+</p>
+<p>
+<b>7.1.</b> O estado de um sistema de dois spins é:
+</p>
+<div class="eqnalign">
+<math id="eqn112" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow><mrow><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>2</mn></mrow><mrow><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn></mrow><mrow><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi></mstyle></mrow></math>
+</div>
+<p>
+  Mostre que pode ser escrito como produto externo de dois estados
+  independentes dos dois spins, e encontre cada um desses dois
+  estados.
+</p>
+<p>
+  <b>Resolução</b>. As relações entre as componentes é:
+</p>
+<div class="eqnalign">
+<math id="eqn113" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>Υ</mi><mrow><mo>−</mo><mo>+</mo></mrow></msub></mrow><mrow><msub><mi>Υ</mi><mrow><mo>+</mo><mo>+</mo></mrow></msub></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>−</mo><mn>1</mn><mo>/</mo><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow><mrow><mrow><mi mathvariant="normal">i</mi></mrow><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>Υ</mi><mrow><mo>−</mo><mo>−</mo></mrow></msub></mrow><mrow><msub><mi>Υ</mi><mrow><mo>+</mo><mo>−</mo></mrow></msub></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow><mrow><mo>−</mo><mn>2</mn><mo>/</mo><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow></mstyle></mrow></math>
+</div>
+</p>
+<div class="eqnalign">
+<math id="eqn114" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>Υ</mi><mrow><mo>+</mo><mo>−</mo></mrow></msub></mrow><mrow><msub><mi>Υ</mi><mrow><mo>+</mo><mo>+</mo></mrow></msub></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>−</mo><mn>2</mn><mo>/</mo><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow><mrow><mrow><mi mathvariant="normal">i</mi></mrow><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>Υ</mi><mrow><mo>−</mo><mo>−</mo></mrow></msub></mrow><mrow><msub><mi>Υ</mi><mrow><mo>−</mo><mo>+</mo></mrow></msub></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow><mrow><mo>−</mo><mn>1</mn><mo>/</mo><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow></mfrac></mstyle><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn></mstyle></mrow></math>
+</div>
+<p>
+  Como as duas igualdades (<a href="#eq:prod_externo">7.9</a>) são válidas, fica
+  demonstrado que o estado é o produto externo de dois estados
+  independentes. A relação entre as componentes do estado do primeiro
+  sistema, <math id="eqn115" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>, é <math id="eqn116" display="inline"><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow></math>:
+</p>
+<div class="eqnalign">
+<math id="eqn117" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>Ψ</mi><mo>−</mo></msub><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><msub><mi>Ψ</mi><mo>+</mo></msub><mspace width="1em" /><mi>⟹</mi><mspace width="1em" /><mo stretchy="false">|</mo><msub><mi>Ψ</mi><mo>−</mo></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><mo stretchy="false">|</mo><msub><mi>Ψ</mi><mo>+</mo></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup></mstyle></mrow></math>
+</div>
+<p>
+  e como a soma <math id="eqn118" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>Ψ</mi><mo>−</mo></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><msub><mi>Ψ</mi><mo>+</mo></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup></mrow></math> deverá ser igual a 1, as
+  duas componentes têm módulo igual a <math id="eqn119" display="inline"><mrow><mn>1</mn><mo>/</mo><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></math>, e para garantir
+  <math id="eqn120" display="inline"><mrow><msub><mi>Ψ</mi><mo>−</mo></msub><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><msub><mi>Ψ</mi><mo>+</mo></msub></mrow></math> podemos escolher <math id="eqn121" display="inline"><mrow><msub><mi>Ψ</mi><mo>+</mo></msub></mrow></math> real
+  positiva, e <math id="eqn122" display="inline"><mrow><msub><mi>Ψ</mi><mo>−</mo></msub></mrow></math> imaginária positiva:
+</p>
+<div class="eqnalign">
+<math id="eqn123" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>2</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mo>+</mo></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mo>−</mo></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</div>
+<p>
+  A relação entre as componentes do estado do segundo sistema,
+  <math id="eqn124" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math>, é <math id="eqn125" display="inline"><mrow><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn></mrow></math>:
+</p>
+<div class="eqnalign">
+<math id="eqn126" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>Φ</mi><mo>−</mo></msub><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><mspace width="0.167em" /><msub><mi>Φ</mi><mo>+</mo></msub><mspace width="1em" /><mi>⟹</mi><mspace width="1em" /><mo stretchy="false">|</mo><msub><mi>Φ</mi><mo>−</mo></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>=</mo><mn>4</mn><mo stretchy="false">|</mo><msub><mi>Φ</mi><mo>+</mo></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup></mstyle></mrow></math>
+</div>
+<p>
+  e como a soma <math id="eqn127" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>Φ</mi><mo>−</mo></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><msub><mi>Φ</mi><mo>+</mo></msub><msup><mo stretchy="false">|</mo><mn>2</mn></msup></mrow></math> deve ser 1,
+  <math id="eqn128" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>Φ</mi><mo>+</mo></msub><mo stretchy="false">|</mo><mo>=</mo><mn>1</mn><mo>/</mo><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow></math> e <math id="eqn129" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>Φ</mi><mo>+</mo></msub><mo stretchy="false">|</mo><mo>=</mo><mn>2</mn><mo>/</mo><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow></math>. A condição
+  <math id="eqn130" display="inline"><mrow><msub><mi>Φ</mi><mo>−</mo></msub><mo>=</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><mspace width="0.167em" /><msub><mi>Φ</mi><mo>+</mo></msub></mrow></math> pode ser garantida escolhendo
+  <math id="eqn131" display="inline"><mrow><msub><mi>Φ</mi><mo>+</mo></msub></mrow></math> real positiva, e <math id="eqn132" display="inline"><mrow><msub><mi>Φ</mi><mo>−</mo></msub></mrow></math> imaginária positiva:
+</p>
+<div class="eqnalign">
+<math id="eqn133" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mo>+</mo></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><mspace width="0.167em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mo>−</mo></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</div>
+<p>
+<b>7.2.</b> O estado de um sistema de dois spins é o mesmo do exercício
+  anterior. Qual é a probabilidade de obter o valor <math id="eqn134" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math> quando for
+  medida a componente <math id="eqn135" display="inline"><mrow><mi>z</mi></mrow></math> do spin do primeiro sistema? Imediatamente
+  após esse resultado, qual seria o estado do sistema?
+</p>
+<p>
+  <b>Resolução</b>. A probabilidade é igual à soma dos quadrados dos
+  módulos das componentes onde aparece <math id="eqn136" display="inline"><mrow><msub><mrow><mi mathvariant="normal">z</mi></mrow><mo>+</mo></msub></mrow></math> na primeira
+  posição:
+</p>
+<div class="eqnalign">
+<math id="eqn137" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mrow><mi mathvariant="normal">P</mi></mrow><mrow><mn>1</mn><mo>+</mo></mrow></msub><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>10</mn></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>4</mn></mrow><mrow><mn>10</mn></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  Observe-se que, tal como foi demostrado no exercício anterior, o
+  estado deste sistema combinado é o produto externo dos estados
+  independentes dos dois sistemas. Como tal, a probabilidade também
+  podia ter sido calculada como a probabilidade de obter o resultado
+  <math id="eqn138" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math> no estado <math id="eqn139" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> do primeiro sistema.
+</p>
+<p>
+  Após a medição, o estado colapsa para as duas primeiras componentes
+  do estado <math id="eqn140" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi></mrow></math>. Normalizando o estado, o resultado fica:
+</p>
+<div class="eqnalign">
+<math id="eqn141" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">i</mi></mrow></mrow><mrow><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>2</mn></mrow><mrow><msqrt><mrow><mn>10</mn></mrow></msqrt></mrow></mfrac></mstyle><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi></mrow><mrow><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>10</mn></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>4</mn></mrow><mrow><mn>10</mn></mrow></mfrac></mstyle></mrow></msqrt></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>−</mo><mn>2</mn><mspace width="0.167em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</div>
+<p>
+  Observe-se que este estado é equivalente a qualquer outro obtido
+  multiplicando por um número complexo de módulo 1. Para comparar com
+  o resultado do problema anterior, multiplicaremos por <math id="eqn142" display="inline"><mrow><mo>−</mo><mrow><mi mathvariant="normal">i</mi></mrow></mrow></math> para
+  obter:
+</p>
+<div class="eqnalign">
+<math id="eqn143" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Υ</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><mspace width="0.167em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</div>
+<p>
+  que é igual ao produto externo de <math id="eqn144" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mo>+</mo></msub><mi>⟩</mi></mrow></math> com o estado
+  <math id="eqn145" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi></mrow></math> obtido no problema anterior:
+</p>
+<div class="eqnalign">
+<math id="eqn146" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mo>+</mo></msub><mi>⟩</mi><mo>⊗</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi></mrow><mi>⟩</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mn>5</mn></mrow></msqrt></mrow></mfrac></mstyle><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mi>⟩</mi><mo>+</mo><mrow><mi mathvariant="normal">i</mi></mrow><mspace width="0.167em" /><mn>2</mn><mspace width="0.167em" /><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>+</mo></mrow></msub><mo>,</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mrow><mo>−</mo></mrow></msub><mi>⟩</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</div>
+<p>
+  Isto mostra que outra forma de ter obtido o resultado consiste em
+  colapsar o estado do primeiro sistema para <math id="eqn147" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">z</mi></mrow><mo>+</mo></msub><mi>⟩</mi></mrow></math>, e
+  calcular o produto externo com o estado do segundo sistema, que
+  permanece inalterado.
+</p>
+</section>
+<footer>
+<p>&copy; 2025, Jaime E. Villate</p>
+<p>Publicado nos termos da <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/">Licença
+Creative Commons Attribuição-Partilha</a> (versão 4.0).</p>
+<span>Última modificação: Sun Nov 23 18:14:04 WET 2025</span>
+</footer>
+</body>
+</html>
