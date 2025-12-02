@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ótica e Ondas &ndash; Capítulo 3</title>
+<!--Generated on Tue Dec 02 08:53:49 WET 2025 by latextohtml.tcl, by J. Villate -->
+<link rel="stylesheet" href="../css/book.css">
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<link rel="alternate icon" href="../img/favicon.ico">
+</head>
+<body id="top">
+<header style="background-image:url(../img/otica.png);
+background-repeat:no-repeat;
+background-position:right center">
+<h1>Ótica e Ondas</h1>
+<p>Jaime E. Villate.<br>
+Universidade do Porto, Portugal, 2025.</p>
+</header>
+<div class="menu">
+<button class="menubtn">&#9776;</button>
+<div class="menu-content">
+<a href="../pt/index.html">Início</a>
+<a href="../pt/books.html">Livros livres</a>
+<a href="index.html">Ótica e Ondas</a>
+</div>
+</div>
+<section>
+<h1>3. Oscilações</h1>
+<h2>3.1. Funções oscilatórias</h2>
+<p>
+Uma função oscilatória é uma função do tempo <math id="eqn1" display="inline"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math>, contínua, que
+varia entre dois valores limites, como no gráfico da figura
+<a href="#fig:oscilacao">3.1</a>, que pode representar o registo das vibrações num
+sismógrafo, ou um sinal elétrico num circuito, ou as variações de
+temperatura em torno de um valor médio, etc.
+</p>
+<figure class="center" id="fig:oscilacao">
+<img class="fig" src="img/oscilacao.png" style="width:27.069em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 3.1:</b>  Função oscilatória.
+</figcaption>
+</figure>
+<p>
+A função oscilatória <math id="eqn2" display="inline"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math> pode ser periódica, quando a oscilação
+durante um intervalo (período) repete-se indefinidamente. Nesse caso,
+a função pode ser decomposta numa <span class="concept">série de Fourier</span>, que é
+uma soma de funções seno e cosseno. Na secção seguinte estudaremos
+essas oscilações elementares em que <math id="eqn3" display="inline"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math> é uma função seno ou
+cosseno.
+</p>
+</section>
+<section>
+<h2>3.2. Oscilações harmónicas</h2>
+<p>
+A oscilação periódica mais simples é quando a função oscilatória tem a
+forma de uma função seno:
+</p>
+</p>
+<div id="eq:f_harmonica" class="eqnalign">
+<math id="eqn4" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>f</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><mspace width="0.167em" /><mi>sin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>+</mo><msub><mi>φ</mi><mn>0</mn></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.1)</div>
+</div>
+<p>
+A <span class="concept">amplitude</span> <math id="eqn5" display="inline"><mrow><mi>A</mi></mrow></math> é o valor máximo da função; o valor mínimo é
+<math id="eqn6" display="inline"><mrow><mo>−</mo><mi>A</mi></mrow></math>. a constante <math id="eqn7" display="inline"><mrow><mi>ω</mi></mrow></math> é a <span class="concept">frequência angular</span>, e
+<math id="eqn8" display="inline"><mrow><msub><mi>φ</mi><mn>0</mn></msub></mrow></math> é a <span class="concept">fase inicial</span>. A figura
+<a href="#fig:oscilacao_harmonica">3.2</a> mostra o gráfico da função. O tempo <math id="eqn9" display="inline"><mrow><mi>T</mi></mrow></math>
+entre dois instantes sucessivos em que a função tem o seu valor máximo
+é o <span class="concept">período</span> de oscilação. 
+</p>
+<figure class="center" id="fig:oscilacao_harmonica">
+<img class="fig" src="img/oscilacao_harmonica.png" style="width:24.717em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 3.2:</b>  oscilação harmónica.
+</figcaption>
+</figure>
+<p>
+A variação do argumento da função seno durante um período é
+<math id="eqn10" display="inline"><mrow><mi>ω</mi><mspace width="0.167em" /><mi>T</mi></mrow></math>, que deverá ser igual a <math id="eqn11" display="inline"><mrow><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow></math> radianos. Como tal, a
+relação entre o período e a frequência angular é a seguinte:
+</p>
+<div id="eq:periodo" class="eqnalign">
+<math id="eqn12" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>T</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow><mrow><mi>ω</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(3.2)</div>
+</div>
+<p>
+A <span class="concept">frequência</span> <math id="eqn13" display="inline"><mrow><mi>f</mi></mrow></math> é o número de oscilações por unidade de
+tempo, igual ao inverso do período:
+</p>
+<div id="eq:frequencia" class="eqnalign">
+<math id="eqn14" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>f</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mi>T</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>ω</mi></mrow><mrow><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(3.3)</div>
+</div>
+<p>
+No instante inicial <math id="eqn15" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>, o valor da função é <math id="eqn16" display="inline"><mrow><msub><mi>f</mi><mi>o</mi></msub><mo>=</mo><mi>A</mi><mspace width="0.167em" /><mi>sin</mi><msub><mi>φ</mi><mn>0</mn></msub></mrow></math>
+e assim, a fase inicial é o arco seno da relação entre o valor inicial
+da função e a amplitude:
+</p>
+<div id="eq:fase_inicial" class="eqnalign">
+<math id="eqn17" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>φ</mi><mn>0</mn></msub><mo>=</mo><mi>arcsin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>f</mi><mn>0</mn></msub></mrow><mrow><mi>A</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.4)</div>
+</div>
+</section>
+<section>
+<h2>3.3. Movimento harmónico simples</h2>
+<p>
+Um objeto tem movimento harmónico simples quando se desloca ao longo
+de um eixo, por exemplo o eixo <math id="eqn18" display="inline"><mrow><mi>x</mi></mrow></math>, de forma que a sua posição em
+função do tempo é uma função harmónica:
+</p>
+</p>
+<div id="eq:x_MHS" class="eqnalign">
+<math id="eqn19" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><mspace width="0.167em" /><mi>sin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>+</mo><msub><mi>φ</mi><mn>0</mn></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.5)</div>
+</div>
+<p>
+A velocidade instantânea, derivada da posição em ordem ao tempo, é:
+</p>
+</p>
+<div id="eq:v_MHS" class="eqnalign">
+<math id="eqn20" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>v</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><mspace width="0.167em" /><mi>ω</mi><mspace width="0.167em" /><mi>cos</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>+</mo><msub><mi>φ</mi><mn>0</mn></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.6)</div>
+</div>
+<p>
+E consequentemente, em qualquer instante <math id="eqn21" display="inline"><mrow><mi>t</mi></mrow></math> a seguinte expressão
+permanece constante, igual ao quadrado da amplitude:
+</p>
+<div class="eqnalign">
+<math id="eqn22" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>v</mi></mrow><mrow><mi>ω</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mi>A</mi><mn>2</mn></msup></mstyle></mrow></math>
+<div class="eqn">(3.7)</div>
+</div>
+<p>
+em particular, no instante inicial <math id="eqn23" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math> a expressão anterior permite
+determinar a amplitude em função da posição incial <math id="eqn24" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow></math>, e da
+velocidade incial <math id="eqn25" display="inline"><mrow><msub><mi>v</mi><mn>0</mn></msub></mrow></math>:
+</p>
+<div id="eq:amplitude" class="eqnalign">
+<math id="eqn26" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>A</mi><mo>=</mo><msqrt><mrow><msubsup><mi>x</mi><mn>0</mn><mn>2</mn></msubsup><mo>+</mo><msup><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>v</mi><mn>0</mn></msub></mrow><mrow><mi>ω</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mstyle></mrow></math>
+<div class="eqn">(3.8)</div>
+</div>
+<p>
+e a fase inicial é o arco seno da posição inicial sobre a
+amplitude:
+</p>
+<div id="eq:fase" class="eqnalign">
+<math id="eqn27" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>φ</mi><mn>0</mn></msub><mo>=</mo><mi>arcsin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><mrow><mi>A</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.9)</div>
+</div>
+</section>
+<section>
+<h2>3.4. Vetores de rotação</h2>
+<p>
+O movimento harmónico simples pode ser visualizado como a projeção de
+um movimento circular uniforme. O lado esquerdo da figura
+<a href="#fig:mov_circular_harmonico">3.3</a> mostra uma roda, de raio <math id="eqn28" display="inline"><mrow><mi>A</mi></mrow></math>, que
+roda em torno do seu eixo com velocidade angular <math id="eqn29" display="inline"><mrow><mi>ω</mi></mrow></math>, constante,
+no sentido contrário ao movimento dos ponteiros do relógio.
+</p>
+<figure class="center" id="fig:mov_circular_harmonico">
+<img class="fig" src="img/mov_circular_harmonico.png" style="width:31.668em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 3.3:</b>  Projeção de um movimento circular uniforme num eixo.
+</figcaption>
+</figure>
+<p>
+Na periferia da roda há um pino P. A projeção da posição do pino no
+plano horizontal desloca-se entre dois pontos à distância <math id="eqn30" display="inline"><mrow><mi>A</mi></mrow></math> da
+projeção do eixo da roda no ponto O. Num eixo <math id="eqn31" display="inline"><mrow><mi>x</mi></mrow></math> com origem no ponto
+O e na direção do movimento da projeção de P, a posição da projeção de
+P é dada pela função <math id="eqn32" display="inline"><mrow><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math>, que verifica a equação (<a href="#eq:x_MHS">3.5</a>)
+do movimento harmónico simples.
+</p>
+<p>
+Se colocarmos o eixo <math id="eqn33" display="inline"><mrow><mi>x</mi></mrow></math> passando pelo centro da roda (lado direito da figura
+<a href="#fig:mov_circular_harmonico">3.3</a>), o vetor <math id="eqn34" display="inline"><mrow><mover><mrow><mi>r</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math>, desde a origem O
+até o ponto P, tem módulo igual a <math id="eqn35" display="inline"><mrow><mi>A</mi></mrow></math> e componentes:
+</p>
+<div class="eqnalign">
+<math id="eqn36" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mi>r</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mi>A</mi><mspace width="0.167em" /><mi>sin</mi><mi>φ</mi><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>−</mo><mi>A</mi><mspace width="0.167em" /><mi>cos</mi><mi>φ</mi><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+<div class="eqn">(3.10)</div>
+</div>
+<p>
+onde o ângulo <math id="eqn37" display="inline"><mrow><mi>φ</mi></mrow></math> é o ângulo que o vetor faz com o semieixo
+<math id="eqn38" display="inline"><mrow><mi>y</mi></mrow></math> negativo. A velocidade angular do ponto P é <math id="eqn39" display="inline"><mrow><mi>ω</mi></mrow></math>, constante,
+igual à derivada do ângulo <math id="eqn40" display="inline"><mrow><mi>φ</mi></mrow></math> em ordem ao tempo. Como tal,
+<math id="eqn41" display="inline"><mrow><mi>φ</mi></mrow></math> é a primitiva de <math id="eqn42" display="inline"><mrow><mi>ω</mi></mrow></math> que em <math id="eqn43" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math> tem o valor inicial
+<math id="eqn44" display="inline"><mrow><msub><mi>φ</mi><mn>0</mn></msub></mrow></math>:
+</p>
+<div class="eqnalign">
+<math id="eqn45" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>φ</mi><mo>=</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>+</mo><msub><mi>φ</mi><mn>0</mn></msub></mstyle></mrow></math>
+<div class="eqn">(3.11)</div>
+</div>
+<p>
+e a componente <math id="eqn46" display="inline"><mrow><mi>x</mi></mrow></math> do vetor <math id="eqn47" display="inline"><mrow><mover><mrow><mi>r</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> é a expressão (<a href="#eq:x_MHS">3.5</a>) do
+movimento harmónico simples.
+</p>
+<p>
+Se em vez do ângulo <math id="eqn48" display="inline"><mrow><mi>φ</mi></mrow></math> usarmos o ângulo <math id="eqn49" display="inline"><mrow><mi>θ</mi></mrow></math> que o vetor
+<math id="eqn50" display="inline"><mrow><mover><mrow><mi>r</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> faz com o semieixo <math id="eqn51" display="inline"><mrow><mi>x</mi></mrow></math> positivo, a expressão do vetor
+<math id="eqn52" display="inline"><mrow><mover><mrow><mi>r</mi></mrow><mo stretchy="false">→</mo></mover></mrow></math> será,
+</p>
+<div class="eqnalign">
+<math id="eqn53" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mi>r</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mi>A</mi><mspace width="0.167em" /><mi>cos</mi><mi>θ</mi><mspace width="0.167em" /><mover><mrow><mi>ı</mi></mrow><mo stretchy="false">^</mo></mover><mo>+</mo><mi>A</mi><mspace width="0.167em" /><mi>sin</mi><mi>θ</mi><mspace width="0.167em" /><mi>j</mi></mstyle></mrow></math>
+<div class="eqn">(3.12)</div>
+</div>
+<p>
+e o movimento harmónico no eixo dos <math id="eqn54" display="inline"><mrow><mi>x</mi></mrow></math> que é a componente <math id="eqn55" display="inline"><mrow><mi>x</mi></mrow></math> desse
+vetor é igual a:
+</p>
+<div id="eq:MHS_cos" class="eqnalign">
+<math id="eqn56" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><mspace width="0.167em" /><mi>cos</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>+</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.13)</div>
+</div>
+<p>
+Como tal, o movimento harmónico pode ser representado por uma função
+seno ou cosseno, com fases iniciais diferentes. Também é possível
+fazer com que a fase inicial seja nula, mudando a origem da variável
+<math id="eqn57" display="inline"><mrow><mi>t</mi></mrow></math>. No caso da equação (<a href="#eq:x_MHS">3.5</a>), se <math id="eqn58" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math> for escolhido como
+o instante em que <math id="eqn59" display="inline"><mrow><mi>x</mi></mrow></math> é igual a zero e está a aumentar, então
+<math id="eqn60" display="inline"><mrow><msub><mi>φ</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></math>; e no caso da equação (<a href="#eq:MHS_cos">3.13</a>), se <math id="eqn61" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math> for o
+instante em que <math id="eqn62" display="inline"><mrow><mi>x</mi></mrow></math> tem o seu valor máximo, <math id="eqn63" display="inline"><mrow><msub><mi>θ</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></math>.
+</p>
+</section>
+<section>
+<h2>3.5. Sobreposição de movimentos harmónicos perpendiculares</h2>
+<p>
+Consideremos uma partícula que se desloca no plano <math id="eqn64" display="inline"><mrow><mi>x</mi><mi>y</mi></mrow></math> de forma que
+as duas componentes <math id="eqn65" display="inline"><mrow><mi>x</mi></mrow></math> e <math id="eqn66" display="inline"><mrow><mi>y</mi></mrow></math> da posição são ambas funções
+harmónicas. Começaremos por considerar ambas funções com a mesma
+frequência angular <math id="eqn67" display="inline"><mrow><mi>ω</mi></mrow></math>, mas com amplitudes <math id="eqn68" display="inline"><mrow><mi>A</mi></mrow></math> e <math id="eqn69" display="inline"><mrow><mi>B</mi></mrow></math>
+diferentes. O tempo pode ser contado a partir do instante em que <math id="eqn70" display="inline"><mrow><mi>x</mi></mrow></math>
+tem o seu valor máximo, e nesse instante admitimos que <math id="eqn71" display="inline"><mrow><mi>y</mi></mrow></math> não tem o
+seu valor máximo. Assim, as coordenadas da posição da partícula em
+função do tempo são:
+</p>
+<div id="eq:MHS_perpendiculares" class="eqnalign">
+<math id="eqn72" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><mspace width="0.167em" /><mi>cos</mi><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mspace width="2em" /><mi>y</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>B</mi><mspace width="0.167em" /><mi>cos</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>+</mo><mi>δ</mi><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.14)</div>
+</div>
+<p>
+Vejamos como será a trajetória da partícula para alguns valores do
+desfasamento <math id="eqn73" display="inline"><mrow><mi>δ</mi></mrow></math> entre os dois movimentos harmónicos.
+</p>
+<p>
+<b>1</b>. Quando os dois movimentos estão em fase, <math id="eqn74" display="inline"><mrow><mi>δ</mi><mo>=</mo><mn>0</mn></mrow></math>, a
+relação entre as componentes <math id="eqn75" display="inline"><mrow><mi>y</mi></mrow></math> e <math id="eqn76" display="inline"><mrow><mi>x</mi></mrow></math> é constante e igual à relação
+entre as amplitudes:
+</p>
+<div class="eqnalign">
+<math id="eqn77" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>y</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>B</mi></mrow><mrow><mi>A</mi></mrow></mfrac></mstyle><mspace width="0.167em" /><mi>x</mi></mstyle></mrow></math>
+<div class="eqn">(3.15)</div>
+</div>
+<p>
+que é a equação de uma reta que passa pela origem, com declive
+positivo <math id="eqn78" display="inline"><mrow><mi>B</mi><mo>/</mo><mi>A</mi></mrow></math>. Mas como <math id="eqn79" display="inline"><mrow><mi>x</mi></mrow></math> varia entre <math id="eqn80" display="inline"><mrow><mo>−</mo><mi>A</mi></mrow></math> e <math id="eqn81" display="inline"><mrow><mi>A</mi></mrow></math>, a trajetória é um
+segmento de reta entre os pontos <math id="eqn82" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mo>−</mo><mi>A</mi><mo>,</mo><mo>−</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></math> e <math id="eqn83" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></math>.
+</p>
+<p>
+<b>2</b>. Quando o desfasamento é <math id="eqn84" display="inline"><mrow><mi>δ</mi><mo>=</mo><mrow><mi mathvariant="normal">π</mi></mrow><mo>/</mo><mn>2</mn></mrow></math>, a componente <math id="eqn85" display="inline"><mrow><mi>y</mi></mrow></math>
+é:
+</p>
+<div class="eqnalign">
+<math id="eqn86" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>y</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>B</mi><mspace width="0.167em" /><mi>cos</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">π</mi></mrow></mrow><mrow><mn>2</mn></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mo>−</mo><mi>B</mi><mspace width="0.167em" /><mi>sin</mi><mi>ω</mi><mspace width="0.167em" /><mi>t</mi></mstyle></mrow></math>
+<div class="eqn">(3.16)</div>
+</div>
+<p>
+e obtemos a seguinte relação:
+</p>
+<div class="eqnalign">
+<math id="eqn87" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msup><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>x</mi></mrow><mrow><mi>A</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>y</mi></mrow><mrow><mi>B</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>1</mn></mstyle></mrow></math>
+<div class="eqn">(3.17)</div>
+</div>
+<p>
+que é a equação de uma elipse. A trajetória da partícula é uma elipse,
+com centro na origem e semieixos de comprimentos <math id="eqn88" display="inline"><mrow><mi>A</mi></mrow></math> e <math id="eqn89" display="inline"><mrow><mi>B</mi></mrow></math>, nas
+direções <math id="eqn90" display="inline"><mrow><mi>x</mi></mrow></math> e <math id="eqn91" display="inline"><mrow><mi>y</mi></mrow></math>.
+</p>
+<p>
+Em <math id="eqn92" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>, <math id="eqn93" display="inline"><mrow><mi>x</mi></mrow></math> tem o seu valor máximo <math id="eqn94" display="inline"><mrow><mi>A</mi></mrow></math> e <math id="eqn95" display="inline"><mrow><mi>y</mi></mrow></math> é igual a zero; a
+partícula encontra-se no semieixo positivo <math id="eqn96" display="inline"><mrow><mi>x</mi></mrow></math>. Um instante mais
+tarde tanto <math id="eqn97" display="inline"><mrow><mi>x</mi></mrow></math> como <math id="eqn98" display="inline"><mrow><mi>y</mi></mrow></math> diminuem. Como tal, a partícula passa para o
+quarto quadrante. Isso indica que a elipse é percorrida no sentido dos
+ponteiros do relógio.
+</p>
+<p>
+<b>3</b>. Se <math id="eqn99" display="inline"><mrow><mn>0</mn><mo><</mo><mi>δ</mi><mo><</mo><mrow><mi mathvariant="normal">π</mi></mrow><mo>/</mo><mn>2</mn></mrow></math>, as coordenadas cartesianas da
+posição são dadas pela equação (<a href="#eq:MHS_perpendiculares">3.14</a>).
+Usaremos o método dos vetores de rotação para determinar a
+trajetória. A figura <a href="#fig:lissajous1">3.4</a> mostra os vetores de rotação
+dos dois movimentos, com módulos <math id="eqn100" display="inline"><mrow><mi>A</mi></mrow></math> e <math id="eqn101" display="inline"><mrow><mi>B</mi></mrow></math>, em oito instantes <math id="eqn102" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub></mrow></math>,
+<math id="eqn103" display="inline"><mrow><msub><mi>t</mi><mn>1</mn></msub></mrow></math>,&hellip;, <math id="eqn104" display="inline"><mrow><msub><mi>t</mi><mn>7</mn></msub></mrow></math>.
+</p>
+<figure class="center" id="fig:lissajous1">
+<img class="fig" src="img/lissajous1.png" style="width:32.424em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 3.4:</b>  Sobreposição de movimentos harmónicos perpendiculares.
+</figcaption>
+</figure>
+<p>
+No instante inicial, <math id="eqn105" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub></mrow></math>, o vetor correspondente à coordenada <math id="eqn106" display="inline"><mrow><mi>x</mi></mrow></math>
+encontra-se na sua posição máxima, enquanto que o vetor
+correspondente à coordenada <math id="eqn107" display="inline"><mrow><mi>y</mi></mrow></math> já rodou um ângulo <math id="eqn108" display="inline"><mrow><mi>δ</mi></mrow></math> em relação
+à sua posição máxima; a partícula encontra-se no ponto
+<math id="eqn109" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>0</mn></msub></mrow></math>, de coordenadas <math id="eqn110" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>A</mi></mrow></math> e <math id="eqn111" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>B</mi><mi>cos</mi><mi>δ</mi></mrow></math>.
+</p>
+<p>
+Em <math id="eqn112" display="inline"><mrow><msub><mi>t</mi><mn>1</mn></msub></mrow></math>, passa pelo ponto <math id="eqn113" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>1</mn></msub></mrow></math> com coordenadas
+<math id="eqn114" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>A</mi><mi>sin</mi><mi>δ</mi></mrow></math> e <math id="eqn115" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math>, no semieixo positivo <math id="eqn116" display="inline"><mrow><mi>x</mi></mrow></math>. Assim
+sucessivamente, até chegarmos ao instante <math id="eqn117" display="inline"><mrow><msub><mi>t</mi><mn>6</mn></msub></mrow></math> em que a partícula
+atravessa o semieixo positivo <math id="eqn118" display="inline"><mrow><mi>y</mi></mrow></math>; nesse instante, <math id="eqn119" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math> e a
+coordenada <math id="eqn120" display="inline"><mrow><mi>y</mi></mrow></math> onde a partícula cruza o semieixo <math id="eqn121" display="inline"><mrow><mi>y</mi></mrow></math> positivo é
+<math id="eqn122" display="inline"><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>=</mo><mi>B</mi><mi>sin</mi><mi>δ</mi></mrow></math>. Em <math id="eqn123" display="inline"><mrow><msub><mi>t</mi><mn>7</mn></msub></mrow></math>, a coordenada <math id="eqn124" display="inline"><mrow><mi>y</mi></mrow></math> da partícula tem o seu
+valor máximo <math id="eqn125" display="inline"><mrow><msub><mi>y</mi><mtext>máx</mtext></msub><mo>=</mo><mi>B</mi></mrow></math>. Comparando as coordenadas <math id="eqn126" display="inline"><mrow><mi>y</mi></mrow></math> dos
+pontos <math id="eqn127" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>6</mn></msub></mrow></math> e <math id="eqn128" display="inline"><mrow><msub><mrow><mi mathvariant="normal">P</mi></mrow><mn>7</mn></msub></mrow></math>, temos que
+<math id="eqn129" display="inline"><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>/</mo><msub><mi>y</mi><mtext>máx</mtext></msub><mo>=</mo><mi>sin</mi><mi>δ</mi></mrow></math>. Como tal, o desfasamento entre os dois
+movimentos harmónicos pode ser determinado a partir da relação entre
+<math id="eqn130" display="inline"><mrow><msub><mi>y</mi><mn>0</mn></msub></mrow></math> e <math id="eqn131" display="inline"><mrow><msub><mi>y</mi><mtext>máx</mtext></msub></mrow></math>:
+</p>
+<div id="eq:desfasamento1" class="eqnalign">
+<math id="eqn132" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>δ</mi><mo>=</mo><mi>arcsin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>y</mi><mn>0</mn></msub></mrow><mrow><msub><mi>y</mi><mtext>máx</mtext></msub></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.18)</div>
+</div>
+<p>
+<b>4</b>. Se <math id="eqn133" display="inline"><mrow><mrow><mi mathvariant="normal">π</mi></mrow><mo>/</mo><mn>2</mn><mo><</mo><mi>δ</mi><mo><</mo><mrow><mi mathvariant="normal">π</mi></mrow></mrow></math>, obtém-se uma trajetória
+elíptica semelhante à da figura <a href="#fig:lissajous1">3.4</a>, mas inclinada de
+forma que o eixo maior tem declive negativo, e a elipse é percorrida
+no sentido oposto ao movimento dos ponteiros do relógio. Em função da
+coordenada <math id="eqn134" display="inline"><mrow><msub><mi>y</mi><mn>0</mn></msub></mrow></math>, onde a partícula atravessa o semieixo <math id="eqn135" display="inline"><mrow><mi>y</mi></mrow></math> positivo,
+e o valor máximo da coordenada <math id="eqn136" display="inline"><mrow><mi>y</mi></mrow></math>, o ângulo de desfasamento é igual
+a:
+</p>
+<div id="eq:desfasamento2" class="eqnalign">
+<math id="eqn137" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>δ</mi><mo>=</mo><mrow><mi mathvariant="normal">π</mi></mrow><mo>−</mo><mi>arcsin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>y</mi><mn>0</mn></msub></mrow><mrow><msub><mi>y</mi><mtext>máx</mtext></msub></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.19)</div>
+</div>
+<p>
+Quando as frequências dos dois movimentos harmónicos são diferentes,
+mas a relação entre elas é um número racional, a trajetória da
+partícula é uma curva conhecida como <span class="concept">figura de Lissajous</span>. O
+exercício <a href="#exe:Lissajous">3.3</a> mostra uma dessa figuras, no caso em que
+uma das frequências é o dobro da outra.
+</p>
+</section>
+<section>
+<h2>3.6. Dinâmica do movimento harmónico simples</h2>
+<p>
+A expressão da aceleração correspondente ao movimento harmónico simples
+(<a href="#eq:x_MHS">3.5</a>) é a derivada da expressão (<a href="#eq:v_MHS">3.6</a>) da
+velocidade, que conduz a:
+</p>
+</p>
+<div id="eq:a_MHS" class="eqnalign">
+<math id="eqn138" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>a</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mi>A</mi><mspace width="0.167em" /><msup><mi>ω</mi><mn>2</mn></msup><mspace width="0.167em" /><mi>sin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>+</mo><msub><mi>φ</mi><mn>0</mn></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.20)</div>
+</div>
+<p>
+Esta é a mesma função <math id="eqn139" display="inline"><mrow><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math> da posição, multiplicada por uma
+constante:
+</p>
+</p>
+<div id="eq:a_vs_x" class="eqnalign">
+<math id="eqn140" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>a</mi><mo>=</mo><mo>−</mo><msup><mi>ω</mi><mn>2</mn></msup><mi>x</mi></mstyle></mrow></math>
+<div class="eqn">(3.21)</div>
+</div>
+<p>
+Como a aceleração é a segunda derivada da posição <math id="eqn141" display="inline"><mrow><mi>x</mi></mrow></math> em ordem ao
+tempo, esta expressão da aceleração implica a seguinte equação
+diferencial:
+</p>
+</p>
+<div id="eq:edo_MHS" class="eqnalign">
+<span class="boxed" style="padding-bottom:12pt;padding-top:8pt">
+<math id="eqn142" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>x</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>=</mo><mo>−</mo><msup><mi>ω</mi><mn>2</mn></msup><mi>x</mi></mstyle></mrow></math>
+</span>
+<div class="eqn">(3.22)</div>
+</div>
+<p>
+A solução geral desta equação diferencial é a função (<a href="#eq:x_MHS">3.5</a>),
+com duas constante <math id="eqn143" display="inline"><mrow><mi>A</mi></mrow></math> e <math id="eqn144" display="inline"><mrow><mi>φ</mi></mrow></math> que dependem das condições
+iniciais, de acordo com as equações (<a href="#eq:amplitude">3.8</a>) e
+(<a href="#eq:fase">3.9</a>).
+</p>
+<p>
+Usando a segunda lei de Newton, para produzir a aceleração
+(<a href="#eq:a_vs_x">3.21</a>) a força resultante sobre o objeto deverá ser:
+</p>
+</p>
+<div id="eq:f_MHS" class="eqnalign">
+<span class="boxed">
+<math id="eqn145" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>F</mi><mo>=</mo><mo>−</mo><mi>m</mi><mspace width="0.167em" /><msup><mi>ω</mi><mn>2</mn></msup><mi>x</mi></mstyle></mrow></math>
+</span>
+<div class="eqn">(3.23)</div>
+</div>
+<p>
+onde <math id="eqn146" display="inline"><mrow><mi>m</mi></mrow></math> é a massa do objeto. Este tipo de força é conhecida como
+<span class="concept">força restauradora</span>. A posição <math id="eqn147" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math> corresponde a um ponto de
+equilíbrio estável. Como a força resultante é nula nesse ponto, o
+objeto pode permanecer em repouso nessa posição. Se o objeto se
+afastar desse ponto, no sentido positivo de <math id="eqn148" display="inline"><mrow><mi>x</mi></mrow></math>, a força no sentido
+oposto faz com que regresse à posição <math id="eqn149" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>. E se o objeto se afastar
+no sentido negativo de <math id="eqn150" display="inline"><mrow><mi>x</mi></mrow></math>, a força será então no sentido positivo
+fazendo novamente com que o objeto regresse à posição de equilíbrio.
+</p>
+<p>
+Em qualquer sistema em que a força resultante for da forma
+(<a href="#eq:f_MHS">3.23</a>), o movimento será harmónico simples, com frequência
+angular <math id="eqn151" display="inline"><mrow><mi>ω</mi></mrow></math>. E qualquer sistema em que existe uma função do tempo
+que verifica uma equação da forma da equação diferencial
+(<a href="#eq:edo_MHS">3.22</a>), essa função será uma oscilação harmónica simples
+com frequência angular <math id="eqn152" display="inline"><mrow><mi>ω</mi></mrow></math>.
+</p>
+</section>
+<section>
+<h2>3.7. Molas elásticas</h2>
+<p>
+Uma mola elástica, quando tem o seu comprimento normal, não exerce
+nenhuma força. Quando a mola é comprimida ou distendida, esta exerce uma força
+diretamente proporcional à distância que foi comprimida ou distendida,
+e essa força é no sentido que faz a mola recuperar o seu comprimento
+normal.
+</p>
+<p>
+A figura <a href="#fig:mola_e_massa">3.5</a> mostra uma mola que foi pendurada de
+um suporte fixo. Se definirmos o eixo <math id="eqn153" display="inline"><mrow><mi>y</mi></mrow></math> na direção vertical, no
+sentido para cima, e com origem na posição em que o extremo livre da
+mola está na posição em que a mola tem o seu comprimento normal, a
+força exercida pela mola é na direção do eixo <math id="eqn154" display="inline"><mrow><mi>y</mi></mrow></math> e com valor:
+</p>
+<div id="eq:f_mola" class="eqnalign">
+<math id="eqn155" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>F</mi><mo>=</mo><mo>−</mo><mi>k</mi><mspace width="0.167em" /><mi>y</mi></mstyle></mrow></math>
+<div class="eqn">(3.24)</div>
+</div>
+<p>
+onde <math id="eqn156" display="inline"><mrow><mi>y</mi></mrow></math> é a posição do extremo livre da mola, e <math id="eqn157" display="inline"><mrow><mi>k</mi></mrow></math> é a
+<span class="concept">constante elástica</span> da mola.
+</p>
+<figure class="center" id="fig:mola_e_massa">
+<img class="fig" src="img/mola_e_massa.png" style="width:50%;height:auto">
+<figcaption>
+<b>Figure 3.5:</b>  Massa pendurada de uma mola elástica.
+</figcaption>
+</figure>
+<p>
+A seguir, penduramos um pequeno cilindro de massa <math id="eqn158" display="inline"><mrow><mi>m</mi></mrow></math> do extremo livre
+da mola. Sobre o cilindro atuam duas forcas, o seu peso <math id="eqn159" display="inline"><mrow><mi>m</mi><mspace width="0.167em" /><mi>g</mi></mrow></math>,
+no sentido negativo do eixo <math id="eqn160" display="inline"><mrow><mi>y</mi></mrow></math> (para baixo) e a força exercida pela mola:
+</p>
+</p>
+<div id="eq:f_mola_e_massa" class="eqnalign">
+<math id="eqn161" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>F</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mi>m</mi><mspace width="0.167em" /><mi>g</mi><mo>−</mo><mi>k</mi><mspace width="0.167em" /><mi>y</mi></mstyle></mrow></math>
+<div class="eqn">(3.25)</div>
+</div>
+<p>
+A posição de equilíbrio, em que o cilindro pode permanecer em repouso,
+corresponde ao valor <math id="eqn162" display="inline"><mrow><msub><mi>y</mi><mrow><mi mathvariant="normal">e</mi></mrow></msub></mrow></math> que faz com que a força
+(<a href="#eq:f_mola_e_massa">3.25</a>) seja nula:
+</p>
+<div id="eq:pos_equil" class="eqnalign">
+<math id="eqn163" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>y</mi><mrow><mi mathvariant="normal">e</mi></mrow></msub><mo>=</mo><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>m</mi><mspace width="0.167em" /><mi>g</mi></mrow><mrow><mi>k</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(3.26)</div>
+</div>
+<p>
+O sinal negativo indica que a mola está esticada e o seu extremo
+desceu da posição em que a mola tem o seu comprimento normal. Para que
+o ponto de equilíbrio esteja na origem da coordenada de posição,
+introduzimos uma variável <math id="eqn164" display="inline"><mrow><mi>x</mi></mrow></math>, medida também na vertical e para cima,
+definida por:
+</p>
+<div id="eq:pos_equilibrio" class="eqnalign">
+<math id="eqn165" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>x</mi><mo>=</mo><mi>y</mi><mo>−</mo><msub><mi>y</mi><mrow><mi mathvariant="normal">e</mi></mrow></msub><mo>=</mo><mi>y</mi><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>m</mi><mspace width="0.167em" /><mi>g</mi></mrow><mrow><mi>k</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(3.27)</div>
+</div>
+<p>
+e com essa substituição de variável, a força resultante
+(<a href="#eq:f_mola_e_massa">3.25</a>) fica igual a:
+</p>
+<div id="eq:f_mola_MHS" class="eqnalign">
+<math id="eqn166" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mi>k</mi><mspace width="0.167em" /><mi>x</mi></mstyle></mrow></math>
+<div class="eqn">(3.28)</div>
+</div>
+<p>
+Esta força tem a forma geral da força restauradora (<a href="#eq:f_MHS">3.23</a>), em
+que a frequência angular é:
+</p>
+</p>
+<div id="eq:w_mola" class="eqnalign">
+<math id="eqn167" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>ω</mi><mo>=</mo><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>k</mi></mrow><mrow><mi>m</mi></mrow></mfrac></mstyle></mrow></msqrt></mstyle></mrow></math>
+<div class="eqn">(3.29)</div>
+</div>
+<p>
+Se o cilindro for deslocado da sua posição de equilíbrio, <math id="eqn168" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>,
+começará a oscilar com movimento harmónico simples:
+</p>
+<div id="eq:x_mola" class="eqnalign">
+<math id="eqn169" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><mspace width="0.167em" /><mi>cos</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>+</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.30)</div>
+</div>
+</section>
+<section>
+<h2>3.8. O pêndulo simples</h2>
+<p>
+Um pêndulo simples é um pequeno objeto de massa <math id="eqn170" display="inline"><mrow><mi>m</mi></mrow></math>, pendurado de um
+fio de comprimento <math id="eqn171" display="inline"><mrow><mi>ℓ</mi></mrow></math>, que pode oscilar num plano vertical (figura
+<a href="#fig:pendulo">3.6</a>).
+</p>
+<figure class="center" id="fig:pendulo">
+<img class="fig" src="img/pendulo.png" style="width:24.990em;max-width:100%;height:auto">
+<figcaption>
+<b>Figure 3.6:</b>  Pêndulo simples e diagrama de forças.
+</figcaption>
+</figure>
+<p>
+Desprezando a resistência do ar e a massa do fio, as duas forças que
+atuam sobre o objeto de massa <math id="eqn172" display="inline"><mrow><mi>m</mi></mrow></math> são o seu peso e a tensão no fio. O
+lado direito da figura <a href="#fig:pendulo">3.6</a> mostra essas duas forças e a
+direção tangente à trajetória, que é circular e de raio <math id="eqn173" display="inline"><mrow><mi>ℓ</mi></mrow></math>. A
+única força na direção tangencial é a componente do peso nessa
+direção, <math id="eqn174" display="inline"><mrow><mi>m</mi><mspace width="0.167em" /><mi>g</mi><mi>sin</mi><mi>θ</mi></mrow></math>, em que <math id="eqn175" display="inline"><mrow><mi>θ</mi></mrow></math> é o ângulo que o fio do
+pêndulo faz com a vertical.
+</p>
+<p>
+No movimento circular, o módulo da velocidade é igual ao raio, <math id="eqn176" display="inline"><mrow><mi>ℓ</mi></mrow></math>,
+vezes a velocidade angular <math id="eqn177" display="inline"><mrow><mi>Ω</mi></mrow></math>, que é a derivada do ângulo
+<math id="eqn178" display="inline"><mrow><mi>θ</mi></mrow></math> em ordem ao tempo:
+</p>
+<div id="eq:v_tangencial" class="eqnalign">
+<math id="eqn179" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>v</mi><mo>=</mo><mi>ℓ</mi><mspace width="0.167em" /><mi>Ω</mi><mo>=</mo><mi>ℓ</mi><mspace width="0.167em" /><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>θ</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(3.31)</div>
+</div>
+<p>
+A aceleração tangencial é igual à derivada do módulo da velocidade
+em ordem ao tempo:
+</p>
+<div id="eq:at" class="eqnalign">
+<math id="eqn180" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>a</mi><mrow><mi mathvariant="normal">t</mi></mrow></msub><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>v</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mi>ℓ</mi><mspace width="0.167em" /><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>θ</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mstyle></mrow></math>
+<div class="eqn">(3.32)</div>
+</div>
+<p>
+E a segunda lei de Newton implica que a aceleração tangencial também
+deverá ser igual à força tangencial dividida pela massa:
+</p>
+<div id="eq:Ft_sobre_m" class="eqnalign">
+<math id="eqn181" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>a</mi><mrow><mi mathvariant="normal">t</mi></mrow></msub><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>F</mi><mrow><mi mathvariant="normal">t</mi></mrow></msub></mrow><mrow><mi>m</mi></mrow></mfrac></mstyle><mo>=</mo><mo>−</mo><mi>g</mi><mi>sin</mi><mi>θ</mi></mstyle></mrow></math>
+<div class="eqn">(3.33)</div>
+</div>
+<p>
+onde o sinal negativo é porque se <math id="eqn182" display="inline"><mrow><mi>θ</mi></mrow></math> for positivo, <math id="eqn183" display="inline"><mrow><mi>sin</mi><mi>θ</mi></mrow></math>
+também será positivo e a componente tangencial do peso faz diminuir
+<math id="eqn184" display="inline"><mrow><mi>θ</mi></mrow></math> (ver figura <a href="#fig:pendulo">3.6</a>); e se <math id="eqn185" display="inline"><mrow><mi>θ</mi></mrow></math> for negativo,
+<math id="eqn186" display="inline"><mrow><mi>sin</mi><mi>θ</mi></mrow></math> também será negativo e a componente tangencial do peso faz
+aumentar <math id="eqn187" display="inline"><mrow><mi>θ</mi></mrow></math>.
+</p>
+<p>
+Igualando as duas expressões (<a href="#eq:at">3.32</a>) e (<a href="#eq:Ft_sobre_m">3.33</a>),
+obtemos a equação diferencial do pêndulo:
+</p>
+<div id="eq:pêndulo" class="eqnalign">
+<math id="eqn188" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>θ</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>=</mo><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>g</mi></mrow><mrow><mi>ℓ</mi></mrow></mfrac></mstyle><mi>sin</mi><mi>θ</mi></mstyle></mrow></math>
+<div class="eqn">(3.34)</div>
+</div>
+<p>
+Se o ângulo <math id="eqn189" display="inline"><mrow><mi>θ</mi></mrow></math>, em radianos, for suficientemente pequeno,
+<math id="eqn190" display="inline"><mrow><mi>sin</mi><mi>θ</mi></mrow></math> será aproximadamente igual a <math id="eqn191" display="inline"><mrow><mi>θ</mi></mrow></math>; por exemplo, a
+diferença entre <math id="eqn192" display="inline"><mrow><mi>sin</mi><mi>θ</mi></mrow></math> e <math id="eqn193" display="inline"><mrow><mi>θ</mi></mrow></math> é de 0.5% se
+<math id="eqn194" display="inline"><mrow><mi>θ</mi><mo>=</mo><msup><mn>10</mn><mo>∘</mo></msup></mrow></math>, de 2% se <math id="eqn195" display="inline"><mrow><mi>θ</mi><mo>=</mo><msup><mn>20</mn><mo>∘</mo></msup></mrow></math>, e de 4.5% se
+<math id="eqn196" display="inline"><mrow><mi>θ</mi><mo>=</mo><msup><mn>30</mn><mo>∘</mo></msup></mrow></math>. Com essa aproximação, a equação (<a href="#eq:pêndulo">3.34</a>)
+pode ser escrita:
+</p>
+<div id="eq:teta_MHS" class="eqnalign">
+<math id="eqn197" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>θ</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>=</mo><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>g</mi></mrow><mrow><mi>ℓ</mi></mrow></mfrac></mstyle><mspace width="0.167em" /><mi>θ</mi></mstyle></mrow></math>
+<div class="eqn">(3.35)</div>
+</div>
+<p>
+que é a equação diferencial (<a href="#eq:edo_MHS">3.22</a>) de um oscilador
+harmónico simples com frequência angular:
+</p>
+<div id="eq:w_pêndulo" class="eqnalign">
+<math id="eqn198" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>ω</mi><mo>=</mo><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>g</mi></mrow><mrow><mi>ℓ</mi></mrow></mfrac></mstyle></mrow></msqrt></mstyle></mrow></math>
+<div class="eqn">(3.36)</div>
+</div>
+<p>
+A solução para o ângulo <math id="eqn199" display="inline"><mrow><mi>θ</mi></mrow></math> em função do tempo é então a expressão
+do oscilador harmónico simples:
+</p>
+<div id="eq:sol_pêndulo" class="eqnalign">
+<math id="eqn200" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>θ</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>θ</mi><mtext>máx</mtext></msub><mspace width="0.167em" /><mi>cos</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>+</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+<div class="eqn">(3.37)</div>
+</div>
+<p>
+O período do pêndulo simples é:
+</p>
+<div id="eq:T_pêndulo" class="eqnalign">
+<math id="eqn201" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>T</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow><mrow><mi>ω</mi></mrow></mfrac></mstyle><mo>=</mo><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>ℓ</mi></mrow><mrow><mi>g</mi></mrow></mfrac></mstyle></mrow></msqrt></mstyle></mrow></math>
+<div class="eqn">(3.38)</div>
+</div>
+<p>
+Como o valor <math id="eqn202" display="inline"><mrow><mi>g</mi></mrow></math> da aceleração da gravidade é diferente em diferentes
+locais, usaremos aqui o seu <span class="concept">valor padrão</span>, com 4 algarismos
+significativos:
+</p>
+<div id="eq:g_standard" class="eqnalign">
+<math id="eqn203" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>g</mi><mo>=</mo><mn>9.807</mn><mspace width="0.278em" /><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi mathvariant="normal">m</mi></mrow><mrow><msup><mi mathvariant="normal">s</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mstyle></mrow></math>
+<div class="eqn">(3.39)</div>
+</div>
+<p>
+que é uma boa aproximação ao valor real de <math id="eqn204" display="inline"><mrow><mi>g</mi></mrow></math> em latitudes próximas
+de <math id="eqn205" display="inline"><mrow><msup><mn>40</mn><mo>∘</mo></msup></mrow></math>.
+</p>
+</section>
+<section>
+<h2>Exercícios resolvidos</h2>
+<p>
+<b>3.1.</b> Um ponto luminoso no ecrã de um osciloscópio oscila na vertical,
+  com movimento harmónico simples de frequência 1.5 Hz. O comprimento
+  do segmento vertical que o ponto descreve é 10 cm. Determine:
+  (<i>a</i>) a sua frequência angular, (<i>b</i>) o seu período e
+  (<i>c</i>) a sua velocidade máxima.
+</p>
+<p>
+  <b>Resolução</b>. (<i>a</i>) A frequência angular é igual a
+  <math id="eqn206" display="inline"><mrow><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow></math> vezes a frequência:
+</p>
+<div class="eqnalign">
+<math id="eqn207" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>ω</mi><mo>=</mo><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow><mi>×</mi><mn>1.5</mn><mo>=</mo><mn>3</mn><mrow><mi mathvariant="normal">π</mi></mrow><mspace width="0.278em" /><mrow><mi mathvariant="normal">r</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">d</mi><mo>/</mo><mi mathvariant="normal">s</mi></mrow><mo>≈</mo><mn>9.425</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">r</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">d</mi><mo>/</mo><mi mathvariant="normal">s</mi></mrow></mstyle></mrow></math>
+</div>
+<p>
+  (<i>b</i>) O período é o inverso da frequência:
+</p>
+<div class="eqnalign">
+<math id="eqn208" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>T</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>1.5</mn></mrow></mfrac></mstyle><mo>=</mo><mn>0.667</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">s</mi></mrow></mstyle></mrow></math>
+</div>
+<p>
+  (<i>c</i>) A amplitude do movimento é 5 cm, e a velocidade máxima é
+  igual à amplitude vezes a frequência angular:
+</p>
+<div class="eqnalign">
+<math id="eqn209" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>v</mi><mtext>máx</mtext></msub><mo>=</mo><mn>5</mn><mi>×</mi><mn>9.425</mn><mo>=</mo><mn>47.1</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">m</mi><mo>/</mo><mi mathvariant="normal">s</mi></mrow></mstyle></mrow></math>
+</div>
+<p>
+<b>3.2.</b> Quando um cilindro de 50 g é pendurado duma mola elástica, tal
+  como na figura <a href="#fig:mola_e_massa">3.5</a>, a mola alonga-se 16
+  cm. (<i>a</i>) Determine a constante elástica da mola. (<i>b</i>)
+  Calcule o período de oscilação do sistema. (<i>c</i>) Se o cilindro
+  é deslocado 5 cm por baixo da posição de equilíbrio e a seguir
+  deixa-se oscilar livremente, determine a velocidade máxima no seu
+  movimento oscilatório.
+</p>
+<p>
+  <b>Resolução</b>. (<i>a</i>) Na posição de equilíbrio, o peso do cilindro,
+  <math id="eqn210" display="inline"><mrow><mi>m</mi><mspace width="0.167em" /><mi>g</mi><mo>=</mo><mn>0.050</mn><mi>×</mi><mn>9.807</mn></mrow></math> N, é igual à força elástica da mola,
+  <math id="eqn211" display="inline"><mrow><mi>k</mi><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>y</mi></mrow></math>, onde <math id="eqn212" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>y</mi><mo>=</mo><mn>0.16</mn></mrow></math> m é o alongamento da mola. Como
+  tal, a constante elástica é:
+</p>
+<div class="eqnalign">
+<math id="eqn213" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>k</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>m</mi><mspace width="0.167em" /><mi>g</mi></mrow><mrow><mrow><mi mathvariant="normal">Δ</mi></mrow><mtext> </mtext><mi>y</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>0.050</mn><mi>×</mi><mn>9.807</mn></mrow><mrow><mn>0.16</mn></mrow></mfrac></mstyle><mo>=</mo><mn>3.0647</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">N</mi><mo>/</mo><mi mathvariant="normal">m</mi></mrow></mstyle></mrow></math>
+</div>
+<p>
+  (<i>b</i>) O período de oscilação é:
+</p>
+<div class="eqnalign">
+<math id="eqn214" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>T</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow><mrow><mi>ω</mi></mrow></mfrac></mstyle><mo>=</mo><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>m</mi></mrow><mrow><mi>k</mi></mrow></mfrac></mstyle></mrow></msqrt><mo>=</mo><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>0.050</mn></mrow><mrow><mn>3.0647</mn></mrow></mfrac></mstyle></mrow></msqrt><mo>=</mo><mn>0.803</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">s</mi></mrow></mstyle></mrow></math>
+</div>
+<p>
+  (<i>c</i>) A expressão da posição em função do tempo, em unidades SI, é:
+</p>
+<div class="eqnalign">
+<math id="eqn215" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>y</mi><mo>=</mo><mn>0.05</mn><mspace width="0.167em" /><mi>cos</mi><mo stretchy="false">(</mo><mn>3.0647</mn><mspace width="0.167em" /><mi>t</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+</div>
+<p>
+  e a expressão da velocidade é a derivada em ordem a <math id="eqn216" display="inline"><mrow><mi>t</mi></mrow></math>:
+</p>
+<div class="eqnalign">
+<math id="eqn217" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>v</mi><mo>=</mo><mo>−</mo><mn>0.15324</mn><mspace width="0.167em" /><mi>sin</mi><mo stretchy="false">(</mo><mn>3.0647</mn><mspace width="0.167em" /><mi>t</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+</div>
+<p>
+  a velocidade máxima é 15.3 cm/s.
+</p>
+<p>
+<b id="exe:Lissajous">3.3.</b> Trace a figura de Lissajous correspondente
+  aos movimentos harmónicos:
+</p>
+<div class="eqnalign">
+<math id="eqn218" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>x</mi><mo>=</mo><mn>10</mn><mspace width="0.167em" /><mi>cos</mi><mo stretchy="false">(</mo><mn>5</mn><mrow><mi mathvariant="normal">π</mi></mrow><mspace width="0.167em" /><mi>t</mi><mo stretchy="false">)</mo><mspace width="2em" /><mi>y</mi><mo>=</mo><mn>10</mn><mspace width="0.167em" /><mi>cos</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mn>10</mn><mrow><mi mathvariant="normal">π</mi></mrow><mspace width="0.167em" /><mi>t</mi><mo>+</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mrow><mi mathvariant="normal">π</mi></mrow></mrow><mrow><mn>3</mn></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</div>
+<p>
+  <b>Resolução</b>. Os períodos dos dois movimentos harmónicos são:
+</p>
+<div class="eqnalign">
+<math id="eqn219" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>T</mi><mi>x</mi></msub><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow><mrow><mn>5</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow></mfrac></mstyle><mo>=</mo><mn>0.4</mn><mspace width="2em" /><msub><mi>T</mi><mi>y</mi></msub><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow><mrow><mn>10</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow></mfrac></mstyle><mo>=</mo><mn>0.2</mn></mstyle></mrow></math>
+</div>
+<p>
+  O período da trajetória é então 0.4 s. A seguinte tabela mostra os
+  valores calculados de <math id="eqn220" display="inline"><mrow><mi>x</mi></mrow></math> e <math id="eqn221" display="inline"><mrow><mi>y</mi></mrow></math> para <math id="eqn222" display="inline"><mrow><mi>t</mi></mrow></math> entre 0 e <math id="eqn223" display="inline"><mrow><mn>0.4</mn></mrow></math>, com
+  intervalos de <math id="eqn224" display="inline"><mrow><mn>0.04</mn></mrow></math>:
+</p>
+<img class="fig center">
+<p>
+  Com essas coordenadas <math id="eqn225" display="inline"><mrow><mi>x</mi></mrow></math> e <math id="eqn226" display="inline"><mrow><mi>y</mi></mrow></math>, e tendo em conta que os valores
+  mínimos de <math id="eqn227" display="inline"><mrow><mi>x</mi></mrow></math> e <math id="eqn228" display="inline"><mrow><mi>y</mi></mrow></math> devem ser <math id="eqn229" display="inline"><mrow><mo>−</mo><mn>10</mn></mrow></math> e os valores máximos 10,
+  obtém-se o seguinte gráfico:
+</p>
+<img class="fig center" src="img/lissajous2.png" style="width:20.706em;max-width:100%;height:auto">
+<p>
+<b>3.4.</b> Uma partícula move-se de tal forma que as suas coordenadas como
+  funções do tempo são dadas por <math id="eqn230" display="inline"><mrow><mi>x</mi><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mi>t</mi></mrow></math> e
+  <math id="eqn231" display="inline"><mrow><mi>y</mi><mo>=</mo><msub><mi>y</mi><mn>0</mn></msub><mi>sin</mi><mi>ω</mi><mspace width="0.167em" /><mi>t</mi></mrow></math>. (<i>a</i>) Represente graficamente a
+  trajetória da partícula. (<i>b</i>) Que força é necessária para
+  produzir este movimento? (<i>c</i>) Calcule os valores da velocidade
+  e da aceleração como funções do tempo.
+</p>
+<p>
+  <b>Resolução</b>. (<i>a</i>) A trajetória da partícula é o gráfico
+  de <math id="eqn232" display="inline"><mrow><mi>y</mi></mrow></math> em função de <math id="eqn233" display="inline"><mrow><mi>x</mi></mrow></math>. Substituindo <math id="eqn234" display="inline"><mrow><mi>t</mi><mo>=</mo><mi>x</mi><mo>/</mo><msub><mi>v</mi><mn>0</mn></msub></mrow></math> na expressão de <math id="eqn235" display="inline"><mrow><mi>y</mi></mrow></math>
+  obtemos:
+</p>
+<div class="eqnalign">
+<math id="eqn236" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>y</mi><mo>=</mo><msub><mi>y</mi><mn>0</mn></msub><mi>sin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>ω</mi><mspace width="0.167em" /><mi>x</mi></mrow><mrow><msub><mi>v</mi><mn>0</mn></msub></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</div>
+<p>
+  O gráfico seguinte mostra essa trajetória, entre <math id="eqn237" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math> e <math id="eqn238" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>3</mn><mrow><mi mathvariant="normal">π</mi></mrow><mi>r</mi></mrow></math>, onde <math id="eqn239" display="inline"><mrow><mi>r</mi><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mo>/</mo><mi>ω</mi></mrow></math>.
+<img class="fig center" src="img/prob_movimento.png" style="width:24.108em;max-width:100%;height:auto">
+<p>
+  (<i>b</i>) As componentes da velocidade, derivadas das coordenadas
+  <math id="eqn240" display="inline"><mrow><mi>x</mi></mrow></math> e <math id="eqn241" display="inline"><mrow><mi>y</mi></mrow></math> em ordem ao tempo, são:
+</p>
+<div class="eqnalign">
+<math id="eqn242" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>v</mi><mi>x</mi></msub><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mspace width="2em" /><msub><mi>v</mi><mi>y</mi></msub><mo>=</mo><msub><mi>y</mi><mn>0</mn></msub><mi>ω</mi><mi>cos</mi><mi>ω</mi><mspace width="0.167em" /><mi>t</mi></mstyle></mrow></math>
+</div>
+<p>
+  e as componentes da aceleração, derivadas das componentes da
+  velocidade em ordem ao tempo, são:
+</p>
+<div class="eqnalign">
+<math id="eqn243" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>a</mi><mi>x</mi></msub><mo>=</mo><mn>0</mn><mspace width="2em" /><msub><mi>a</mi><mi>y</mi></msub><mo>=</mo><mo>−</mo><msub><mi>y</mi><mn>0</mn></msub><msup><mi>ω</mi><mn>2</mn></msup><mi>sin</mi><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>=</mo><mo>−</mo><msup><mi>ω</mi><mn>2</mn></msup><mi>y</mi></mstyle></mrow></math>
+</div>
+<p>
+  A força tem unicamente componente <math id="eqn244" display="inline"><mrow><mi>y</mi></mrow></math>, igual à massa <math id="eqn245" display="inline"><mrow><mi>m</mi></mrow></math> vezes a
+  componente <math id="eqn246" display="inline"><mrow><mi>y</mi></mrow></math> da aceleração. A expressão vetorial da força é então:
+</p>
+<div class="eqnalign">
+<math id="eqn247" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mover><mrow><mi>F</mi></mrow><mo stretchy="false">→</mo></mover><mo>=</mo><mo>−</mo><mi>m</mi><msup><mi>ω</mi><mn>2</mn></msup><mi>y</mi><mspace width="0.167em" /><mover><mrow><mi>ȷ</mi></mrow><mo stretchy="false">^</mo></mover></mstyle></mrow></math>
+</div>
+<p>
+  (<i>c</i>) O valor da velocidade é a raiz quadrada da soma dos
+  quadrados das componentes da velocidade. Usando as expressões
+  obtidas na alínea anterior,
+</p>
+<div class="eqnalign">
+<math id="eqn248" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>v</mi><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mi>y</mi><mn>2</mn></msubsup></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mi>o</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>y</mi><mn>0</mn><mn>2</mn></msubsup><msup><mi>ω</mi><mn>2</mn></msup><msup><mi>cos</mi><mn>2</mn></msup><mi>ω</mi><mspace width="0.167em" /><mi>t</mi></mrow></msqrt></mstyle></mrow></math>
+</div>
+<p>
+  Como a aceleração tem apenas componente <math id="eqn249" display="inline"><mrow><mi>y</mi></mrow></math>, o seu valor é igual à
+  componente <math id="eqn250" display="inline"><mrow><msub><mi>a</mi><mi>y</mi></msub></mrow></math> encontrada na alínea anterior:
+</p>
+<div class="eqnalign">
+<math id="eqn251" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>a</mi><mo>=</mo><mo>−</mo><msub><mi>y</mi><mn>0</mn></msub><msup><mi>ω</mi><mn>2</mn></msup><mi>sin</mi><mi>ω</mi><mspace width="0.167em" /><mi>t</mi></mstyle></mrow></math>
+</div>
+<p>
+<b>3.5.</b> Um pêndulo simples com 30 cm de comprimento é afastado 5 cm da
+  sua posição vertical, deixando que comece a oscilar
+  livremente. Determine: (<i>a</i>) O período de
+  oscilação. (<i>b</i>) A expressão do ângulo que o pêndulo faz com a
+  vertical, em função do tempo. (<i>c</i>) A expressão da velocidade
+  angular do pêndulo em função do tempo.
+</p>
+<p>
+  <b>Resolução</b>. (<i>a</i>) Usando a expressão
+  (<a href="#eq:T_pêndulo">3.38</a>), o período é:
+</p>
+<div class="eqnalign">
+<math id="eqn252" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>T</mi><mo>=</mo><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>ℓ</mi></mrow><mrow><mi>g</mi></mrow></mfrac></mstyle></mrow></msqrt><mo>=</mo><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>0.3</mn></mrow><mrow><mn>9.807</mn></mrow></mfrac></mstyle></mrow></msqrt><mo>=</mo><mn>1.10</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">s</mi></mrow></mstyle></mrow></math>
+</div>
+<p>
+  (<i>b</i>) O ângulo que o pêndulo foi afastado da vertical foi:
+</p>
+<div class="eqnalign">
+<math id="eqn253" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>θ</mi><mn>0</mn></msub><mo>=</mo><mi>arcsin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>5</mn></mrow><mrow><mn>30</mn></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mo>=</mo><mn>0.1674</mn><mspace width="0.278em" /><mtext>rad</mtext></mstyle></mrow></math>
+</div>
+<p>
+  que é aproximadamente <math id="eqn254" display="inline"><mrow><msup><mn>9.6</mn><mo>∘</mo></msup></mrow></math>. A frequência angular é,
+</p>
+<div class="eqnalign">
+<math id="eqn255" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>ω</mi><mo>=</mo><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>g</mi></mrow><mrow><mi>ℓ</mi></mrow></mfrac></mstyle></mrow></msqrt><mo>=</mo><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>9.807</mn></mrow><mrow><mn>0.3</mn></mrow></mfrac></mstyle></mrow></msqrt><mo>=</mo><mn>5.718</mn></mstyle></mrow></math>
+</div>
+<p>
+  em rad/s se o tempo estiver em segundos. Como o pêndulo parte do
+  repouso, a expressão do ângulo com a vertical é (unidades SI):
+</p>
+<div class="eqnalign">
+<math id="eqn256" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>θ</mi><mo>=</mo><msub><mi>θ</mi><mn>0</mn></msub><mi>cos</mi><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>=</mo><mn>0.1674</mn><mi>cos</mi><mo stretchy="false">(</mo><mn>5.718</mn><mspace width="0.167em" /><mi>t</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+</div>
+<p>
+  (<i>c</i>) A velocidade angular é:
+</p>
+<div class="eqnalign">
+<math id="eqn257" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>ω</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>θ</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mo>−</mo><mn>0.957</mn><mi>sin</mi><mo stretchy="false">(</mo><mn>5.718</mn><mspace width="0.167em" /><mi>t</mi><mo stretchy="false">)</mo></mstyle></mrow></math>
+</div>
+<p>
+<b>3.6.</b> Uma plataforma de 4000 kg vai ser usada para determinar o peso
+  de camiões. A plataforma será colocada sobre três molas idênticas
+  de constante elástica <math id="eqn258" display="inline"><mrow><mi>k</mi></mrow></math>. Admita que o peso do camião
+  distribui-se por igual nas três molas. (<i>a</i>) Determine o
+  valor máximo que poderá ter <math id="eqn259" display="inline"><mrow><mi>k</mi></mrow></math>, para que a frequência de
+  oscilação da plataforma, quando não houver nenhum camião por cima,
+  não ultrapasse 3 oscilações por segundo. (<i>b</i>) Se as molas
+  tiverem a constante elástica calculada na alínea anterior,
+  determine a frequência de oscilação da plataforma, quando sobre
+  ela estiver um camião de 12000 kg. (<i>c</i>) Que distância desce
+  a plataforma quando o camião entra nela?
+<img class="fig center" src="img/balanca_camiao.png" style="width:33.306em;max-width:100%;height:auto">
+<p>
+  <b>Resolução</b>. (<i>a</i>) Cada mola é um oscilador harmónico com massa
+  igual à massa total (4000 kg) dividida por 3. Substituindo os
+  valores da frequência e massa na expressão da frequência do
+  oscilador harmónico obtemos:
+</p>
+<div class="eqnalign">
+<math id="eqn260" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mn>3</mn><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow></mfrac></mstyle><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>k</mi></mrow><mrow><mn>4000</mn><mo>/</mo><mn>3</mn></mrow></mfrac></mstyle></mrow></msqrt><mspace width="2em" /><mi>⟹</mi><mspace width="2em" /><mi>k</mi><mo>=</mo><mn>473.74</mn><mtext> </mtext><mspace width="0.278em" /><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">N</mi><mo>/</mo><mi mathvariant="normal">m</mi></mrow></mstyle></mrow></math>
+</div>
+<p>
+  (<i>b</i>) a frequência é:
+</p>
+<div class="eqnalign">
+<math id="eqn261" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>f</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow></mfrac></mstyle><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>473.74</mn><mi>×</mi><msup><mn>10</mn><mrow><mn>3</mn></mrow></msup></mrow><mrow><mn>16000</mn><mo>/</mo><mn>3</mn></mrow></mfrac></mstyle></mrow></msqrt><mo>=</mo><mn>1.50</mn><mtext> </mtext><mspace width="0.278em" /><mrow><mi mathvariant="normal">H</mi><mi mathvariant="normal">z</mi></mrow></mstyle></mrow></math>
+</div>
+<p>
+  (<i>c</i>) Sem o camião a distância que cada mola desce, devido ao
+  peso da plataforma é dada pela lei de Hooke:
+</p>
+<div class="eqnalign">
+<math id="eqn262" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>y</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo stretchy="false">(</mo><mn>4000</mn><mo>/</mo><mn>3</mn><mo stretchy="false">)</mo><mi>×</mi><mn>9.807</mn></mrow><mrow><mn>473.74</mn><mi>×</mi><msup><mn>10</mn><mrow><mn>3</mn></mrow></msup></mrow></mfrac></mstyle><mo>=</mo><mn>2.76</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">m</mi></mrow></mstyle></mrow></math>
+</div>
+<p>
+  Quando o camião estiver sobre a plataforma, o alongamento de cada
+  mola é:
+</p>
+<div class="eqnalign">
+<math id="eqn263" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>y</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo stretchy="false">(</mo><mn>16000</mn><mo>/</mo><mn>3</mn><mo stretchy="false">)</mo><mi>×</mi><mn>9.807</mn></mrow><mrow><mn>473.74</mn><mi>×</mi><msup><mn>10</mn><mrow><mn>3</mn></mrow></msup></mrow></mfrac></mstyle><mo>=</mo><mn>11.04</mn><mspace width="0.278em" /><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">m</mi></mrow></mstyle></mrow></math>
+</div>
+<p>
+  A distância que a plataforma desce é a diferença desses dois
+  alongamentos, igual a 8.28 cm.
+</p>
+<p>
+<b>3.7.</b> Um cilindro com base circular de área <math id="eqn264" display="inline"><mrow><mi>A</mi></mrow></math>, altura <math id="eqn265" display="inline"><mrow><mi>h</mi></mrow></math> e massa
+  <math id="eqn266" display="inline"><mrow><mi>m</mi></mrow></math> flutua num líquido com densidade <math id="eqn267" display="inline"><mrow><mi>ρ</mi></mrow></math>, ficando com uma parte
+  de altura <math id="eqn268" display="inline"><mrow><mi>y</mi></mrow></math> fora do líquido, como mostra a figura. (<i>a</i>)
+  Determine o valor de <math id="eqn269" display="inline"><mrow><mi>y</mi></mrow></math> quando o cilindro estiver em
+  equilíbrio. (<i>b</i>) Se o cilindro for empurrado ligeiramente para
+  baixo, diminuindo a altura <math id="eqn270" display="inline"><mrow><mi>y</mi></mrow></math> fora do líquido, mostre que começará
+  a oscilar em torno da posição de equilíbrio e determine o período de
+  oscilação (ignore a resistência do líquido ao movimento e as
+  correntes que possam ser criadas dentro do líquido).
+<img class="fig center" src="img/cilindro_a_flutuar.png" style="width:17.535em;max-width:100%;height:auto">
+<p>
+  <b>Resolução</b>. (<i>a</i>) No cilindro atuam duas forças
+  verticais: o peso <math id="eqn271" display="inline"><mrow><mi>m</mi><mi>g</mi></mrow></math>, para baixo, e a impulsão <math id="eqn272" display="inline"><mrow><mi>I</mi></mrow></math>, para
+  cima. Se o eixo <math id="eqn273" display="inline"><mrow><mi>y</mi></mrow></math> for vertical e para cima, a força resultante é
+  na direção <math id="eqn274" display="inline"><mrow><mi>y</mi></mrow></math> e com valor:
+</p>
+<div class="eqnalign">
+<math id="eqn275" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>F</mi><mo>=</mo><mi>I</mi><mo>−</mo><mi>m</mi><mspace width="0.167em" /><mi>g</mi></mstyle></mrow></math>
+</div>
+<p>
+  Pelo princípio de Arquimedes, a impulsão <math id="eqn276" display="inline"><mrow><mi>I</mi></mrow></math> é igual ao peso do
+  volume de fluído deslocado. E esse peso é <math id="eqn277" display="inline"><mrow><mi>g</mi></mrow></math> vezes a massa de
+  fluído deslocado, que é o volume da parte submersa do cilindro,
+  <math id="eqn278" display="inline"><mrow><mi>A</mi><mo stretchy="false">(</mo><mi>h</mi><mo>−</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math>, vezes a densidade do fluído. Assim, a força resultante em
+  função de <math id="eqn279" display="inline"><mrow><mi>y</mi></mrow></math> é:
+</p>
+<div class="eqnalign">
+<math id="eqn280" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>F</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><mspace width="0.167em" /><mi>ρ</mi><mspace width="0.167em" /><mi>g</mi><mo stretchy="false">(</mo><mi>h</mi><mo>−</mo><mi>y</mi><mo stretchy="false">)</mo><mo>−</mo><mi>m</mi><mspace width="0.167em" /><mi>g</mi></mstyle></mrow></math>
+</div>
+<p>
+  A posição de equilíbrio do cilindro será:
+</p>
+<div class="eqnalign">
+<math id="eqn281" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>y</mi><mrow><mi mathvariant="normal">e</mi></mrow></msub><mo>=</mo><mi>h</mi><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>m</mi></mrow><mrow><mi>A</mi><mspace width="0.167em" /><mi>ρ</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+   A massa <math id="eqn282" display="inline"><mrow><mi>m</mi></mrow></math> do cilindro é igual ao produto da sua densidade
+   <math id="eqn283" display="inline"><mrow><msub><mi>ρ</mi><mrow><mi mathvariant="normal">c</mi></mrow></msub></mrow></math>, e do seu volume, <math id="eqn284" display="inline"><mrow><mi>A</mi><mspace width="0.167em" /><mi>h</mi></mrow></math>. Como tal, a posição de
+   equilíbrio pode ser escrita como:
+</p>
+<div class="eqnalign">
+<math id="eqn285" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>y</mi><mrow><mi mathvariant="normal">e</mi></mrow></msub><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><msub><mi>ρ</mi><mrow><mi mathvariant="normal">c</mi></mrow></msub></mrow><mrow><mi>ρ</mi></mrow></mfrac></mstyle><mo stretchy="true" fence="true" form="postfix">)</mo></mrow><mi>h</mi></mstyle></mrow></math>
+</div>
+<p>
+  esta resposta é válida unicamente se o cilindro for menos denso do
+  que o fluido (<math id="eqn286" display="inline"><mrow><msub><mi>ρ</mi><mrow><mi mathvariant="normal">c</mi></mrow></msub><mo><</mo><mi>ρ</mi></mrow></math>). Se o cilindro fosse mais
+  denso do que o fluido, a impulsão não seria suficiente para
+  equilibrar o peso, e em vez de ficar em equilíbrio na superfície, o
+  cilindro descia até o fundo do fluido.
+</p>
+<p>
+  (<i>b</i>) Introduzindo a mudança de variável:
+</p>
+<div class="eqnalign">
+<math id="eqn287" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>x</mi><mo>=</mo><mi>y</mi><mo>−</mo><msub><mi>y</mi><mrow><mi mathvariant="normal">e</mi></mrow></msub><mspace width="1em" /><mi>⟹</mi><mspace width="1em" /><mi>y</mi><mo>=</mo><mi>x</mi><mo>+</mo><mi>h</mi><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>m</mi></mrow><mrow><mi>A</mi><mspace width="0.167em" /><mi>ρ</mi></mrow></mfrac></mstyle></mstyle></mrow></math>
+</div>
+<p>
+  a força resultante em função de <math id="eqn288" display="inline"><mrow><mi>x</mi></mrow></math> é:
+</p>
+<div class="eqnalign">
+<math id="eqn289" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mi>A</mi><mspace width="0.167em" /><mi>ρ</mi><mspace width="0.167em" /><mi>g</mi><mspace width="0.167em" /><mi>x</mi></mstyle></mrow></math>
+</div>
+<p>
+  que tem a forma da força restauradora (<a href="#eq:f_MHS">3.23</a>), com frequência
+  angular:
+</p>
+<div class="eqnalign">
+<math id="eqn290" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>ω</mi><mo>=</mo><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>A</mi><mspace width="0.167em" /><mi>ρ</mi><mspace width="0.167em" /><mi>g</mi></mrow><mrow><mi>m</mi></mrow></mfrac></mstyle></mrow></msqrt></mstyle></mrow></math>
+</div>
+<p>
+  A posição <math id="eqn291" display="inline"><mrow><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math> tem então a forma da expressão (<a href="#eq:x_MHS">3.5</a>):
+</p>
+<div class="eqnalign">
+<math id="eqn292" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>x</mi><mtext>máx</mtext></msub><mspace width="0.167em" /><mi>sin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>+</mo><msub><mi>φ</mi><mn>0</mn></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</div>
+<p>
+  A altura do cilindro fora do líquido é:
+</p>
+<div class="eqnalign">
+<math id="eqn293" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>y</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>+</mo><msub><mi>y</mi><mrow><mi mathvariant="normal">e</mi></mrow></msub><mo>=</mo><msub><mi>y</mi><mrow><mi mathvariant="normal">e</mi></mrow></msub><mo>+</mo><msub><mi>x</mi><mtext>máx</mtext></msub><mspace width="0.167em" /><mi>sin</mi><mrow><mo stretchy="true" fence="true" form="prefix">(</mo><mi>ω</mi><mspace width="0.167em" /><mi>t</mi><mo>+</mo><msub><mi>φ</mi><mn>0</mn></msub><mo stretchy="true" fence="true" form="postfix">)</mo></mrow></mstyle></mrow></math>
+</div>
+<p>
+  que corresponde a uma oscilação com frequência angular <math id="eqn294" display="inline"><mrow><mi>ω</mi></mrow></math>. O
+  período de oscilação é:
+</p>
+<div class="eqnalign">
+<math id="eqn295" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>T</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow></mrow><mrow><mi>ω</mi></mrow></mfrac></mstyle><mo>=</mo><mn>2</mn><mrow><mi mathvariant="normal">π</mi></mrow><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>m</mi></mrow><mrow><mi>A</mi><mi>ρ</mi><mi>g</mi></mrow></mfrac></mstyle></mrow></msqrt></mstyle></mrow></math>
+</div>
+</section>
+<section>
+<h2>Exercícios adicionais</h2>
+<p>
+<b>3.8.</b> Determine o comprimento que deverá ter um pêndulo simples para
+  que o seu período seja de 1 segundo.
+</p>
+<p>
+<b>3.9.</b> Quando um homem com 80 kg sobe para uma tábua horizontal apoiada
+  em dois suportes, a tábua deforma-se, descendo 2.5 cm na posição
+  onde está o homem. Se o homem dobra ligeiramente os joelhos e volta
+  a esticá-los, a tábua começa a oscilar. Determine a frequência de
+  oscilação da tábua, admitindo que a massa da tábua é desprezável
+  comparada com a massa do homem.
+<img class="fig center" src="img/homem_tabua.png" style="width:22.785em;max-width:100%;height:auto">
+</p>
+</section>
+<section>
+<h2>Respostas dos exercícios adicionais</h2>
+<p><b>3.8.</b> 24.8 cm.</p>
+<p><b>3.9.</b> 3.15 Hz.</p>
+</section>
+<footer>
+<p>&copy; 2025, Jaime E. Villate</p>
+<p>Publicado nos termos da <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/">Licença
+Creative Commons Attribuição-Partilha</a> (versão 4.0).</p>
+<span>Última modificação: 2025/12/02 09:10:40 UTC</span>
+</footer>
+</body>
+</html>
