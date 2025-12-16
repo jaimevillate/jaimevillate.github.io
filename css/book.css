@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-10-30
+   Version: 2025-12-16
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 
@@ -784,8 +784,9 @@ figure {
     pre span.maxp { color: #c33; }
     pre span.maxi { color: #009; }
     div.example {
-        background-color: #bcd;
-        color: black
+        border: 1px solid black;
+        background-color: #789;
+        color: #eee;
     }
     svg text, svg rect { fill: #eee }
     div.example svg text, div.example svg rect { fill: black }
