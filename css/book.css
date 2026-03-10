@@ -1,6 +1,6 @@
 /*
    Copyright, 2018-2026. Jaime E. Villate
-   Version: 2026-03-09
+   Version: 2026-03-10
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 
@@ -64,8 +64,8 @@ a:link {
 }
 a:visited { color: #90e }
 a:hover, span.button:hover {
-    background-color: #eee;
-    color: #555;
+    background-color: #fffff0;
+    color: #9932cc;
 }
 .clearfix:after, main:after, section:after, header:after, div.site-map::before, div.site-map:after, div.example:after, div.eqnalign:after {
     content: "";

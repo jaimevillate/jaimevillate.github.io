@@ -1,6 +1,6 @@
 /*
-   Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-09-30
+   Copyright, 2018-2026. Jaime E. Villate
+   Version: 2026-03-10
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 */
@@ -12,8 +12,8 @@ a:link {
 }
 a:visited { color: #90e }
 a:hover, span.button:hover {
-    background-color: #eee;
-    color: #555;
+    background-color: #fffff0;
+    color: #9932cc;
 }
 .clearfix:after, main:after, section:after, header:after, div.site-map::before, div.site-map:after, div.example:after {
     content: "";
@@ -396,11 +396,11 @@ div.content-items {
     padding: 6px 15px 4px 15px;
     z-index: 1;
 }
-div.content-items a {
+div.content-items a:link {
     color: #33a;
     text-decoration: none;
 }
-div.content-items a:hover { color: #f9f1e4; }
+div.content-items a:hover { color: #66f; }
 div.content:hover div.content-items { display: block; }
 div.content-items ol, div.content-items ul {
     list-style-position: inside;
@@ -440,10 +440,11 @@ div.maxima {
 }
 pre {
     border: 1px solid #334669;
-    line-height: 1.5em;
-    padding: 0.5em;
+    line-height: 1em;
+    padding: 1em 0.5em;
     background-color: #fdf6e3;
     border-radius: 10px;
+    overflow-x: auto;
 }
 pre.prog {
     border: 1px solid #29639e;
@@ -452,6 +453,7 @@ pre.prog {
     background-color: #def;
     border-radius: 0px;
     counter-reset: line;
+    overflow-x: auto;
 }
 pre.prog span.line { counter-increment: line; }
 pre.prog span.line::before {
@@ -728,6 +730,7 @@ figure {
         border-top: 1px solid  black;
         background-color: #303030
     }
+    div.content-items a:hover { color: #fffff0; }
     a:link { color: #9df }
     a:visited {color: #bcf }
     a:hover, span.button:hover {
