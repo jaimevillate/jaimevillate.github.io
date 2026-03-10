@@ -17,21 +17,36 @@ background-position:right center">
 <p>Jaime E. Villate.<br>
 Universidade do Porto, Portugal, 2026.</p>
 </header>
-<div class="menu">
-<button class="menubtn">&#9776;</button>
-<div class="menu-content">
-<a href="../pt/index.html">Início</a>
-<a href="../pt/books.html">Livros livres</a>
+<nav>
+<a href="../pt/index.html">Início</a><span>&rarr;</span>
+<a href="../pt/books.html">Livros livres</a><span>&rarr;</span>
 <a href="index.html">Mecânica Quântica</a>
+</nav>
+<div class="content">
+<span class="button">&#9776;</span>
+<div class="content-items">
+<ul style="list-style-type: none">
+<li><a href="#sec1">1. Introdução</a></li>
+<li><a href="#sec1.1">1.1. Síntese de mecânica analítica</a></li>
+<li><a href="#sec1.1.1">1.1.1. Movimento no espaço de fase</a></li>
+<li><a href="#sec1.1.2">1.1.2. O oscilador harmónico simples</a></li>
+<li><a href="#sec1.1.3">1.1.3. Função hamiltoniana</a></li>
+<li><a href="#sec1.1.4">1.1.4. Parênteses de Poisson</a></li>
+<li><a href="#sec1.2">1.2. Números complexos</a></li>
+<li><a href="#sec1.3">1.3. Teoria das probabilidades</a></li>
+<li><a href="#probs">Exercícios</a></li>
+</ul>
 </div>
 </div>
-<section>
-<h1>1. Introdução</h1>
+<section id="sec1" class="opening">
+<h2>1. Introdução</h2>
 <p>
 Neste capítulo apresentam-se alguns elementos importantes para o
 desenvolvimento da teoria da mecânica quântica. Começaremos com um
 sumário de mecânica clássica, seguido de alguns conceitos matemáticos.
 </p>
+</section>
+<section id="sec1.1">
 <h2>1.1. Síntese de mecânica analítica</h2>
 <p>
 A mecânica clássica é uma área muito extensa, desenvolvida a partir do
@@ -43,6 +58,7 @@ postulados básicos da Mecânica Quântica é necessário conhecer os
 conceitos de mecânica analítica que vamos abordar nas secções
 seguintes.
 </p>
+<div id="sec1.1.1">
 <h3>1.1.1. Movimento no espaço de fase</h3>
 <p>
 Na mecânica clássica, o movimento de uma partícula determina-se a
@@ -183,6 +199,8 @@ movimento oscilatório, em que os valores da posição e da velocidade
 repetem-se periodicamente. Na secção seguinte veremos um exemplo
 muito importante.
 </p>
+</div>
+<div id="sec1.1.2">
 <h3>1.1.2. O oscilador harmónico simples</h3>
 <p>
 A figura <a href="#fig:mola_e_massa">1.4</a> mostra um cilindro de massa <math id="eqn52" display="inline"><mrow><mi>m</mi></mrow></math>
@@ -292,6 +310,8 @@ frequência:
 <math id="eqn80" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>f</mi><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>ω</mi></mrow><mrow><mn>2</mn><mspace width="0.167em" /><mrow><mi mathvariant="normal">π</mi></mrow></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mspace width="0.167em" /><mrow><mi mathvariant="normal">π</mi></mrow></mrow></mfrac></mstyle><msqrt><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>k</mi></mrow><mrow><mi>m</mi></mrow></mfrac></mstyle></mrow></msqrt></mstyle></mrow></math>
 <div class="eqn">(1.14)</div>
 </div>
+</div>
+<div id="sec1.1.3">
 <h3>1.1.3. Função hamiltoniana</h3>
 <p>
 Nos sistemas em que a força resultante depende apenas da posição e é
@@ -350,6 +370,8 @@ e as duas equações de Hamilton são:
 <math id="eqn94" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>y</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mi>p</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>p</mi></mrow><mrow><mi>m</mi></mrow></mfrac></mstyle><mspace width="2em" /><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>d</mi><mspace width="0.167em" /><mi>p</mi></mrow><mrow><mi>d</mi><mspace width="0.167em" /><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mo>−</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mo>∂</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mi>y</mi></mrow></mfrac></mstyle><mo>=</mo><mo>−</mo><mi>m</mi><mspace width="0.167em" /><mi>g</mi><mo>−</mo><mi>k</mi><mspace width="0.167em" /><mi>y</mi></mstyle></mrow></math>
 <div class="eqn">(1.20)</div>
 </div>
+</div>
+<div id="sec1.1.4">
 <h3>1.1.4. Parênteses de Poisson</h3>
 <p>
 Num sistema com variáveis de estado (<math id="eqn95" display="inline"><mrow><mi>s</mi></mrow></math>, <math id="eqn96" display="inline"><mrow><mi>p</mi></mrow></math>), definem-se os
@@ -427,8 +449,9 @@ A função hamiltoniana é também uma função das <math id="eqn120" display="i
 estado, e a derivada temporal de qualquer função de estado é igual aos
 parênteses de Poisson da função com a função hamiltoniana.
 </p>
+</div>
 </section>
-<section>
+<section id="sec1.2">
 <h2>1.2. Números complexos</h2>
 <p>
 A forma retangular dum número complexo <math id="eqn121" display="inline"><mrow><mi>z</mi></mrow></math> é
@@ -603,7 +626,7 @@ módulo ao quadrado:
 </li>
 </ol>
 </section>
-<section>
+<section id="sec1.3">
 <h2>1.3. Teoria das probabilidades</h2>
 <p>
 Uma experiência é dita <span class="concept">aleatória</span>, se não conseguirmos prever
@@ -690,7 +713,7 @@ e o <span class="concept">desvio padrão</span> é a raiz quadrada da variança:
 <div class="eqn">(1.46)</div>
 </div>
 </section>
-<section>
+<section id="probs">
 <h2>Exercícios</h2>
 <div class="example">
 <p>
@@ -921,7 +944,7 @@ deverá descontar <math id="eqn255" display="inline"><mrow><mn>0.25</mn></mrow><
 <p>Publicado nos termos da <a rel="license"
 href="http://creativecommons.org/licenses/by-sa/4.0/">Licença
 Creative Commons Attribuição-Partilha</a> (versão 4.0).</p>
-<span>Última modificação: 2026/03/09 22:31:29 UTC</span>
+<span>Última modificação: 2026/03/10 13:03:44 UTC</span>
 </footer>
 </body>
 </html>

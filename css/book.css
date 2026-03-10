@@ -1,6 +1,6 @@
 /*
-   Copyright, 2018-2025. Jaime E. Villate
-   Version: 2025-12-16
+   Copyright, 2018-2026. Jaime E. Villate
+   Version: 2026-03-09
    License: public domain: use it and modify it as you wish
    Based on the HTML and CSS tutorials at https://www.w3schools.com
 
@@ -108,6 +108,13 @@ header a:visited { color: #bef; }
     display: inline-block;
     float: left;
 }
+div.content {
+    position: sticky;
+    position: -webkit-sticky;
+    float: left;
+    top: 2em;
+    display: block;
+}
 .menu-content {
     display: none;
     position: absolute;
@@ -117,20 +124,39 @@ header a:visited { color: #bef; }
     box-shadow: 0px 0.3em 0.6em 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
+div.content-items {
+    display: none;
+    position: absolute;
+    background-color:  #dee7f5;
+    min-width: 20em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 6px 15px 4px 15px;
+    z-index: 1;
+}
 .menu-content a:link {
     color: black;
     padding: 0.5em 1em;
     text-decoration: none;
     display: block;
 }
+div.content-items a:link {
+    color: #33a;
+    text-decoration: none;
+}
 .menu-content a:hover {
     background-color: #a4b7d8;
     color: #33a;
 }
+div.content-items a:hover { color: #66f; }
 .menu:hover .menu-content { display: block; }
 .menu:hover .menubtn {
     background-color: #546284;
     color: #bcf;
+}
+div.content:hover div.content-items { display: block; }
+div.content-items ol, div.content-items ul {
+    list-style-position: inside;
+    padding-left: 10px;
 }
 .note-content {
     display:none;
@@ -161,7 +187,10 @@ section.opening {
     padding: 10px 20px;
     background-color: #f2f1f0;
 }
-section.opening h2 {text-align: center}
+section.opening h2 {
+    font-size: 1.8em;
+    text-align: center;
+}
 footer {
     margin: 0;
     width: 100%;
@@ -445,32 +474,6 @@ span.right {
 .center { text-align: center; }
 .left   { text-align: left; }
 .right  { text-align: right; }
-div.content {
-    position: -webkit-sticky;
-    position: sticky;
-    float: left;
-    top: 2em;
-    display: block;
-}
-div.content-items {
-    display: none;
-    position: absolute;
-    background-color:  #dee7f5;
-    min-width: 400px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 6px 15px 4px 15px;
-    z-index: 1;
-}
-div.content-items a:link {
-    color: #33a;
-    text-decoration: none;
-}
-div.content-items a:hover { color: #66f; }
-div.content:hover div.content-items { display: block; }
-div.content-items ol, div.content-items ul {
-    list-style-position: inside;
-    padding-left: 10px;
-}
 div.bottom {
     position: -webkit-sticky;
     position: sticky;
@@ -507,43 +510,28 @@ span.example_heading {
     border-radius: 10px 10px 0 0;
 }
 div.example p { padding: 0.5em 1em; }
-div.maxima {
-    font-family: Helvetica, Arial, sans-serif;
+pre.maxima {
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: calc(9px + 0.36vw);
     border: 1px solid #000099;
-    line-height: 2em;
-    word-wrap: break-word;
-    background-color:  #faf2dc;
+    line-height: 1em;
+    padding: 1em 0.5em;
+    overflow-x: auto;
+    background-color: #fffaee;
     border-radius: 10px;
-    padding: 0.5em;
 }
 pre.prog {
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: calc(9px + 0.36vw);
     border: 1px solid #29639e;
-    line-height: 1.5em;
-    padding: 0;
+    line-height: 1em;
+    padding: 1em 0.5em;
+    overflow-x: auto;
     background-color: #ddeeff;
-    border-radius: 0px;
-    counter-reset: line;
-    white-space: pre-wrap;
-}
-pre.prog span.line { counter-increment: line; }
-pre.prog span.line::before {
-    content: counter(line);
-    color: #777;
-    background-color: #dfdfdf;
-    padding-left: 5px;
-    width: 2em;
-    display: inline-block;
-    border-right: 1px solid black;
+    border-radius: 10px;
 }
 pre {
-    border: 1px solid #29639e;
-    font-family: Monospace;
-    font-size: 1em;
-    line-height: 1em;
-    white-space: pre-wrap;
-    padding: 0.5em;
-    background-color:  #faf2dc;
-    border-radius: 10px;
+    font-family: DejaVu Sans Mono, monospace;
 }
 div.eqn { float: right; }
 div.eqnalign {

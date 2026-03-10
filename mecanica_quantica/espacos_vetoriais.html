@@ -17,16 +17,39 @@ background-position:right center">
 <p>Jaime E. Villate.<br>
 Universidade do Porto, Portugal, 2026.</p>
 </header>
-<div class="menu">
-<button class="menubtn">&#9776;</button>
-<div class="menu-content">
-<a href="../pt/index.html">Início</a>
-<a href="../pt/books.html">Livros livres</a>
+<nav>
+<a href="../pt/index.html">Início</a><span>&rarr;</span>
+<a href="../pt/books.html">Livros livres</a><span>&rarr;</span>
 <a href="index.html">Mecânica Quântica</a>
+</nav>
+<div class="content">
+<span class="button">&#9776;</span>
+<div class="content-items">
+<ul style="list-style-type: none">
+<li><a href="#sec3">3. Espaços vetoriais com coeficientes complexos</a></li>
+<li><a href="#sec3.1">3.1. Definição</a></li>
+<li><a href="#sec3.2">3.2. Produto interno</a></li>
+<li><a href="#sec3.3">3.3. Combinações lineares</a></li>
+<li><a href="#sec3.4">3.4. Independência linear</a></li>
+<li><a href="#sec3.5">3.5. Bases</a></li>
+<li><a href="#sec3.5.1">3.5.1. Bases ortonormais</a></li>
+<li><a href="#sec3.5.2">3.5.2. Procedimento de Gram-Schmidt</a></li>
+<li><a href="#sec3.6">3.6. Componentes</a></li>
+<li><a href="#sec3.7">3.7. Funções lineares</a></li>
+<li><a href="#sec3.8">3.8. Dualidade</a></li>
+<li><a href="#sec3.9">3.9. Operadores lineares</a></li>
+<li><a href="#sec3.9.1">3.9.1. Operador adjunto</a></li>
+<li><a href="#sec3.9.2">3.9.2. Operadores hermíticos</a></li>
+<li><a href="#sec3.10">3.10. Representação matricial</a></li>
+<li><a href="#sec3.11">3.11. Valores e vetores próprios</a></li>
+<li><a href="#probs">Exercícios</a></li>
+</ul>
 </div>
 </div>
-<section>
-<h1>3. Espaços vetoriais com coeficientes complexos</h1>
+<section id="sec3" class="opening">
+<h2>3. Espaços vetoriais com coeficientes complexos</h2>
+</section>
+<section id="sec3.1">
 <h2>3.1. Definição</h2>
 <p>
 Um espaço vetorial com coeficientes complexos é um conjunto de
@@ -117,7 +140,7 @@ Algumas consequências desses axiomas são as seguintes:
 </li>
 </ol>
 </section>
-<section>
+<section id="sec3.2">
 <h2>3.2. Produto interno</h2>
 <p>
 Admitiremos que no espaço dos kets, para além das duas operações que o
@@ -206,7 +229,7 @@ da sua norma. Se <math id="eqn52" display="inline"><mrow><mo stretchy="false">|<
 <div class="eqn">(3.4)</div>
 </div>
 </section>
-<section>
+<section id="sec3.3">
 <h2>3.3. Combinações lineares</h2>
 <p>
 Dados <math id="eqn55" display="inline"><mrow><mi>n</mi></mrow></math> kets diferentes, <math id="eqn56" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ψ</mi></mrow><mn>1</mn></msub><mi>⟩</mi></mrow></math>, <math id="eqn57" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">Ψ</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mrow></math>, &hellip;,
@@ -224,7 +247,7 @@ de kets nesse conjunto, e os produto de um desses ket por qualquer
 complexo, é também uma combinação linear dos mesmos kets.
 </p>
 </section>
-<section>
+<section id="sec3.4">
 <h2>3.4. Independência linear</h2>
 <p>
 O ket nulo <math id="eqn64" display="inline"><mrow><mo stretchy="false">|</mo><mn>0</mn><mi>⟩</mi></mrow></math> está incluído em qualquer combinação
@@ -254,7 +277,7 @@ linearmente independente, se a equação:
 tem uma única solução <math id="eqn80" display="inline"><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>=</mo><msub><mi>z</mi><mn>2</mn></msub><mo>=</mo><mo>⋯</mo><mo>=</mo><msub><mi>z</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow></math>.
 </p>
 </section>
-<section>
+<section id="sec3.5">
 <h2>3.5. Bases</h2>
 <p>
 Uma base de um espaço vetorial de dimensão <math id="eqn81" display="inline"><mrow><mi>n</mi></mrow></math> é um conjunto de <math id="eqn82" display="inline"><mrow><mi>n</mi></mrow></math>
@@ -274,6 +297,7 @@ combinação linear dos kets da base:
 sub-espaço <math id="eqn90" display="inline"><mrow><msub><mi>z</mi><mn>1</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">B</mi></mrow><mn>1</mn></msub><mi>⟩</mi><mo>+</mo><msub><mi>z</mi><mn>2</mn></msub><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">B</mi></mrow><mn>2</mn></msub><mi>⟩</mi></mrow></math>, e assim
 sucessivamente até gerar toro o espaço.
 </p>
+<div id="sec3.5.1">
 <h3>3.5.1. Bases ortonormais</h3>
 <p>
 Uma base ortonormal <math id="eqn91" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi><mo stretchy="false">}</mo></mrow></math> é uma base em que todos os kets
@@ -292,6 +316,8 @@ iguais, onde <math id="eqn96" display="inline"><mrow><msub><mi>δ</mi><mrow><mi>
 <math id="eqn97" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mrow><mo stretchy="true" fence="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left"><mn>0</mn><mo>,</mo></mtd><mtd columnalign="left"><mi>i</mi><mo>≠</mo><mi>j</mi></mtd></mtr><mtr><mtd columnalign="left"><mn>1</mn><mo>,</mo></mtd><mtd columnalign="left"><mi>i</mi><mo>=</mo><mi>j</mi></mtd></mtr></mtable></mrow></mstyle></mrow></math>
 <div class="eqn">(3.9)</div>
 </div>
+</div>
+<div id="sec3.5.2">
 <h3>3.5.2. Procedimento de Gram-Schmidt</h3>
 <p>
 Para transformar uma base <math id="eqn98" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">B</mi></mrow><mi>i</mi></msub><mi>⟩</mi><mo stretchy="false">}</mo></mrow></math> numa base ortonormal
@@ -338,8 +364,9 @@ e o terceiro ket da base ortonormal é:
 Procede-se de fomra semelhante até se obter o último elemento da
 base, <math id="eqn113" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>n</mi></msub><mi>⟩</mi></mrow></math>.
 </p>
+</div>
 </section>
-<section>
+<section id="sec3.6">
 <h2>3.6. Componentes</h2>
 <p>
 Dada uma base ortonormal <math id="eqn114" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">e</mi></mrow><mi>i</mi></msub><mi>⟩</mi><mo stretchy="false">}</mo></mrow></math>, qualquer ket <math id="eqn115" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> pode
@@ -395,7 +422,7 @@ um ket:
 <div class="eqn">(3.20)</div>
 </div>
 </section>
-<section>
+<section id="sec3.7">
 <h2>3.7. Funções lineares</h2>
 <p>
 Uma função <math id="eqn129" display="inline"><mrow><mi>F</mi></mrow></math> no espaço dos kets associa a cada ket <math id="eqn130" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math> um
@@ -468,7 +495,7 @@ em que o ket <math id="eqn155" display="inline"><mrow><mo stretchy="false">|</mo
 <div class="eqn">(3.28)</div>
 </div>
 </section>
-<section>
+<section id="sec3.8">
 <h2>3.8. Dualidade</h2>
 <p>
 A expressão (<a href="#eq:ket_função">3.28</a>) mostra que para cada função linear
@@ -583,7 +610,7 @@ O bracket de um ket com si próprio é igual à sua norma ao quadrado:
 <div class="eqn">(3.37)</div>
 </div>
 </section>
-<section>
+<section id="sec3.9">
 <h2>3.9. Operadores lineares</h2>
 <p>
 Um operador <math id="eqn191" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> no espaço dos kets associa a cada ket
@@ -650,7 +677,8 @@ operador <math id="eqn218" display="inline"><mrow><mover><mrow><mrow><mi mathvar
 <math id="eqn220" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>⟩</mi><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">|</mo><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi><mo>=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>Ψ</mi><mi>i</mi><mo>⋆</mo></msubsup><msub><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>Ψ</mi><mi>j</mi></msub></mstyle></mrow></math>
 <div class="eqn">(3.44)</div>
 </div>
-<h3>3.9.3. Operador adjunto</h3>
+<div id="sec3.9.1">
+<h3>3.9.1. Operador adjunto</h3>
 <p>
 A cada operador linear <math id="eqn221" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> associa-se um outro operador
 <span class="concept">adjunto</span>, denotado por <math id="eqn222" display="inline"><mrow><msup><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup></mrow></math>, que verifica a
@@ -683,7 +711,9 @@ operador original é:
 <math id="eqn230" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><msubsup><mi>Ω</mi><mrow><mi>j</mi><mi>i</mi></mrow><mi>†</mi></msubsup><mo>=</mo><msubsup><mi>Ω</mi><mrow><mi>i</mi><mi>j</mi></mrow><mo>⋆</mo></msubsup></mstyle></mrow></math>
 <div class="eqn">(3.47)</div>
 </div>
-<h3>3.9.4. Operadores hermíticos</h3>
+</div>
+<div id="sec3.9.2">
+<h3>3.9.2. Operadores hermíticos</h3>
 <p>
 Um operador hermítico é um operador que é igual ao seu operador
 adjunto:
@@ -704,8 +734,9 @@ obtém-se:
 isto é, o valor esperado de um operador hermítico, em qualquer ket
 <math id="eqn233" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mi>⟩</mi></mrow></math>, é sempre um valor real.
 </p>
+</div>
 </section>
-<section>
+<section id="sec3.10">
 <h2>3.10. Representação matricial</h2>
 <p>
 Uma forma útil de trabalhar com kets, bras e brackets consiste em
@@ -769,7 +800,7 @@ como:
 <div class="eqn">(3.55)</div>
 </div>
 </section>
-<section>
+<section id="sec3.11">
 <h2>3.11. Valores e vetores próprios</h2>
 <p>
 Os vetores próprios de um operador <math id="eqn248" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">Ω</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> são todos os kets
@@ -853,7 +884,7 @@ operador hermítico, normalizados, constituem assim uma base ortonormal
 do espaço vetorial.
 </p>
 </section>
-<section>
+<section id="probs">
 <h2>Exercícios</h2>
 <div class="example">
 <p>
@@ -1210,13 +1241,14 @@ E a probabilidade é:
 <p>
 O primeiro método é muito mais fácil neste problema, mas em outros
 problemas pode ser mais conveniente usar o segundo método.
+</p>
 </section>
 <footer>
 <p>&copy; 2026, Jaime E. Villate</p>
 <p>Publicado nos termos da <a rel="license"
 href="http://creativecommons.org/licenses/by-sa/4.0/">Licença
 Creative Commons Attribuição-Partilha</a> (versão 4.0).</p>
-<span>Última modificação: 2026/03/09 22:29:18 UTC</span>
+<span>Última modificação: 2026/03/10 13:06:53 UTC</span>
 </footer>
 </body>
 </html>

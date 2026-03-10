@@ -17,16 +17,30 @@ background-position:right center">
 <p>Jaime E. Villate.<br>
 Universidade do Porto, Portugal, 2026.</p>
 </header>
-<div class="menu">
-<button class="menubtn">&#9776;</button>
-<div class="menu-content">
-<a href="../pt/index.html">Início</a>
-<a href="../pt/books.html">Livros livres</a>
+<nav>
+<a href="../pt/index.html">Início</a><span>&rarr;</span>
+<a href="../pt/books.html">Livros livres</a><span>&rarr;</span>
 <a href="index.html">Mecânica Quântica</a>
+</nav>
+<div class="content">
+<span class="button">&#9776;</span>
+<div class="content-items">
+<ul style="list-style-type: none">
+<li><a href="#sec4">4. Postulados da mecânica quântica</a></li>
+<li><a href="#sec4.1">4.1. Comutadores</a></li>
+<li><a href="#sec4.2">4.2. Operadores unitários</a></li>
+<li><a href="#sec4.3">4.3. Postulados da mecânica quântica</a></li>
+<li><a href="#sec4.4">4.4. Evolução temporal do estado quântico</a></li>
+<li><a href="#sec4.4.1">4.4.1. Descrição de Schrödinger</a></li>
+<li><a href="#sec4.4.2">4.4.2. Descrição de Heisenberg</a></li>
+<li><a href="#probs">Exercícios</a></li>
+</ul>
 </div>
 </div>
-<section>
-<h1>4. Postulados da mecânica quântica</h1>
+<section id="sec4" class="opening">
+<h2>4. Postulados da mecânica quântica</h2>
+</section>
+<section id="sec4.1">
 <h2>4.1. Comutadores</h2>
 <p>
 O produto entre matrizes não é comutativo. A ordem em que forem
@@ -94,7 +108,7 @@ ou seja, podemos trocar a ordem de dois operadore, se adicionarmos
 também o comutador entre eles.
 </p>
 </section>
-<section>
+<section id="sec4.2">
 <h2>4.2. Operadores unitários</h2>
 <p>
 Diz-se que um operador <math id="eqn15" display="inline"><mrow><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover></mrow></math> é unitário, se quando multiplicado pelo seu
@@ -148,7 +162,7 @@ igual a <math id="eqn34" display="inline"><mrow><mi>⟨</mi><msub><mi>e</mi><mi>
 1, se <math id="eqn37" display="inline"><mrow><mi>i</mi><mo>=</mo><mi>j</mi></mrow></math>.
 </p>
 </section>
-<section>
+<section id="sec4.3">
 <h2>4.3. Postulados da mecânica quântica</h2>
 <p>
 A mecânica quântica é construída a partir dos seguintes
@@ -241,7 +255,7 @@ e se o resultado da medição for <math id="eqn76" display="inline"><mrow><msub>
 <math id="eqn77" display="inline"><mrow><mo stretchy="false">|</mo><msub><mrow><mi mathvariant="normal">F</mi></mrow><mn>4</mn></msub><mi>⟩</mi></mrow></math>.
 </p>
 </section>
-<section>
+<section id="sec4.4">
 <h2>4.4. Evolução temporal do estado quântico</h2>
 <p>
 A mecânica quântica foi desenvolvida de forma independente por
@@ -252,6 +266,7 @@ método usado por Heisenberg é baseado na álgebra de matrizes. Mais tarde
 ficou claro que as duas abordagens são duas formas diferentes de
 estudar o mesmo problema.
 </p>
+<div id="sec4.4.1">
 <h3>4.4.1. Descrição de Schrödinger</h3>
 <p>
 Na descrição de Schrödinger, os operadores correspondentes a
@@ -291,6 +306,8 @@ O valor esperado de um observável <math id="eqn86" display="inline"><mrow><move
 <math id="eqn88" display="inline"><mrow><mstyle displaystyle="true" scriptlevel="0"><mi>⟨</mi><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><msub><mi>⟩</mi><mrow><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi></mrow></msub><mo>=</mo><mi>⟨</mi><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">|</mo><msup><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mi>†</mi></msup><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mover><mrow><mrow><mi mathvariant="normal">F</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mspace width="0.167em" /><mover><mrow><mrow><mi mathvariant="normal">U</mi></mrow></mrow><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi></mrow><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Ψ</mi></mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mi>⟩</mi></mstyle></mrow></math>
 <div class="eqn">(4.13)</div>
 </div>
+</div>
+<div id="sec4.4.2">
 <h3>4.4.2. Descrição de Heisenberg</h3>
 <p>
 Na descrição de Heisenberg o estado do sistema não depende do tempo,
@@ -414,8 +431,9 @@ posição, <math id="eqn139" display="inline"><mrow><mover><mrow><mrow><mi mathv
 </span>
 <div class="eqn">(4.23)</div>
 </div>
+</div>
 </section>
-<section>
+<section id="probs">
 <h2>Exercícios</h2>
 <div class="example">
 <p>
@@ -647,7 +665,7 @@ E, de forma análoga,
 <p>Publicado nos termos da <a rel="license"
 href="http://creativecommons.org/licenses/by-sa/4.0/">Licença
 Creative Commons Attribuição-Partilha</a> (versão 4.0).</p>
-<span>Última modificação: 2026/03/09 23:08:08 UTC</span>
+<span>Última modificação: 2026/03/10 13:10:50 UTC</span>
 </footer>
 </body>
 </html>
